@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Project pages for SpatiaOS research work." />
+    <title>SpatiaOS</title>
+    <style>
+      :root { color-scheme: light dark; }
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        background: #0b0e14;
+        color: #e6e8ee;
+        display: flex;
+        min-height: 100vh;
+        align-items: center;
+        justify-content: center;
+      }
+      main { max-width: 640px; padding: 48px 24px; }
+      h1 { font-size: 2rem; margin: 0 0 8px; letter-spacing: 0.02em; }
+      p.tagline { color: #9aa3b2; margin: 0 0 32px; }
+      ul { list-style: none; padding: 0; margin: 0; }
+      li { margin-bottom: 16px; }
+      a.card {
+        display: block;
+        padding: 16px 20px;
+        border: 1px solid #2a3142;
+        border-radius: 10px;
+        text-decoration: none;
+        color: inherit;
+        transition: border-color 0.15s ease, background 0.15s ease;
+      }
+      a.card:hover { border-color: #4c8dff; background: #11151f; }
+      a.card .name { font-weight: 600; color: #7fb3ff; }
+      a.card .desc { display: block; margin-top: 4px; font-size: 0.9rem; color: #9aa3b2; }
+      footer { margin-top: 40px; font-size: 0.85rem; color: #5d6678; }
+      footer a { color: #7fb3ff; text-decoration: none; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>SpatiaOS</h1>
+      <p class="tagline">Project pages for SpatiaOS research work.</p>
+      <ul>
+        <li>
+          <a class="card" href="/projects/p3d-bench/">
+            <span class="name">P3D-Bench</span>
+            <span class="desc">Benchmarking MLLMs for parametric 3D generation — Text-to-3D, Image-to-3D, Assembly-3D.</span>
+          </a>
+        </li>
+      </ul>
+      <footer>
+        <a href="https://github.com/SpatiaOS">github.com/SpatiaOS</a>
+      </footer>
+    </main>
+  </body>
+</html>
