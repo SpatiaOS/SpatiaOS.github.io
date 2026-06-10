@@ -1,0 +1,25 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0012/00126691",
+  "model": "kimi_k26-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Start with the main reference slab as a rectangular solid length 0.5, width 0.75, height 0.016667, with main extrusion depth 0.0167. Add an upper-side solid rectangular feature with footprint 0.5 by 0.5, flush to the left, right, and back edges of the base and offset 0.25 from the front edge; its reach from the base datum is 0.2334. Add two upper-side solid narrow rectangular edge strips over this rear region, each with footprint 0.0083 by 0.5 and main extrusion depth 0.0083; one strip is flush with the left edge and offset 0.4917 from the right edge, and the other is flush with the right edge and offset 0.4917 from the left edge, with both offset 0.25 from the front and flush with the back. Add the thin upper-side transverse solid feature with footprint 0.5 by 0.250819, flush to the left and right edges, offset 0.24922 from the front edge and 0.249961 from the back edge; its own thickness is 0.0021 and its total reach from the base datum is 0.335265. Preserve the closed internal profile in the added material as a real open void through that local solid. For the aligned stepped portion, treat the upper pad depth as 0.1 and the deeper continuation below it as a separate solid continuation with own depth 0.2167; the deeper footprint is contained within the shallow footprint, shares the left, front, and back edges, and its reach is measured from the same shoulder rather than added end-to-end.",
+  "metrics": {
+    "chamfer_distance": 0.000606,
+    "hausdorff_distance": 0.138824,
+    "f_score_005": 0.9107,
+    "f_score_001": 0.3372,
+    "normal_consistency": 0.8812,
+    "iou_csg": 0.0611,
+    "iou_voxel": 0.0974,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// Parameters\nbase_len   = 0.5;       \nbase_wid   = 0.75;      \nbase_hgt   = 0.016667;  \n\n// First feature (stepped rear block)\nfeat1_y_off   = 0.25;      // offset from front edge\nfeat1_y_size  = 0.5;       // Y footprint (flush to back)\nshoulder_z    = 0.2334;    // common shoulder / top datum\npad_depth     = 0.1;       // shallow upper-pad depth from shoulder\ndeep_depth    = 0.2167;    // deeper continuation depth from shoulder\ndeep_width    = 0.4917;    // inferred: flush left, inset from right by strip width\n\n// Narrow edge strips\nstrip_w = 0.0083;\nstrip_d = 0.5;\nstrip_h = 0.0083;\n\n// Thin transverse feature\ntrans_y_off  = 0.24922;\ntrans_y_size = 0.250819;\ntrans_thick  = 0.0021;\ntrans_reach  = 0.335265;\ntrans_z      = trans_reach - trans_thick;   // bottom Z of transverse slab\n\n// Internal void wall thickness for transverse feature\nwall_thick = 0.0083;\n\n$fn = 100;\n\n// Main reference slab\nmodule base_slab() {\n    cube([base_len, base_wid, base_hgt]);\n}\n\n// Stepped rear feature: shallow pad + deeper continuation, both measured from shoulder\nmodule stepped_feature() {\n    // Shallow upper pad: full 0.5 x 0.5 footprint\n    translate([0, feat1_y_off, shoulder_z - pad_depth])\n        cube([base_len, feat1_y_size, pad_depth]);\n    \n    // Deeper continuation: contained within pad, shares left/front/back edges\n    translate([0, feat1_y_off, base_hgt])\n        cube([deep_width, feat1_y_size, shoulder_z - base_hgt]);\n}\n\n// Narrow rectangular edge strips on the shoulder of the rear region\nmodule edge_strips() {\n    // Left strip, flush to left edge\n    translate([0, feat1_y_off, shoulder_z])\n        cube([strip_w, strip_d, strip_h]);\n    \n    // Right strip, flush to right edge\n    translate([base_len - strip_w, feat1_y_off, shoulder_z])\n        cube([strip_w, strip_d, strip_h]);\n}\n\n// Transverse thin solid with preserved closed internal profile as through void\nmodule transverse_feature() {\n    difference() {\n        // Outer solid\n        translate([0, trans_y_off, trans_z])\n            cube([base_len, trans_y_size, trans_thick]);\n        \n        // Open void: closed internal profile inset by wall thickness on all sides\n        translate([wall_thick, trans_y_off + wall_thick, trans_z - 0.005])\n            cube([base_len - 2*wall_thick, trans_y_size - 2*wall_thick, trans_thick + 0.01]);\n    }\n}\n\n// Assembly\nunion() {\n    base_slab();\n    stepped_feature();\n    edge_strips();\n    transverse_feature();\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

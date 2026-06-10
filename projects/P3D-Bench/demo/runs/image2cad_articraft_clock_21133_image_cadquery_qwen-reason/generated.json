@@ -1,0 +1,24 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "image2cad",
+  "case_id": "articraft/clock_21133",
+  "model": "qwen-reason",
+  "input_spec": "image",
+  "output_format": "cadquery",
+  "valid": true,
+  "condition": "Reference image: clock.",
+  "metrics": {
+    "chamfer_distance": 0.000596,
+    "hausdorff_distance": 0.068315,
+    "f_score_005": 0.9981,
+    "f_score_001": 0.0754,
+    "normal_consistency": 0.7147,
+    "iou_voxel": 0.4596,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "cadquery",
+    "source": "import cadquery as cq\nimport math\n\n# Parameters\nouter_radius = 50.0\nrim_width = 8.0\ntotal_height = 12.0\nrecess_depth = 3.0\nhub_radius = 8.0\nhub_height = 2.0\npin_radius = 2.0\npin_height = 2.5  # Height of the central pivot pin\nhand_thickness = 1.0\nnumeral_radius = 32.0\nnumeral_height = 1.5\nnumeral_fontsize = 6.0\nminute_hand_length = 32.0\nminute_hand_width = 1.5\nhour_hand_length = 22.0\nhour_hand_width = 2.0\n\n# 1. Create Base and Recess\n# Create the main cylinder\nbase_wp = cq.Workplane(\"XY\").circle(outer_radius).extrude(total_height)\n\n# Cut the recessed face\n# We perform the cut and extract the solid to ensure 'result' has a solid on stack.\n# This fixes the \"Workplane object must have at least one solid on the stack\" error.\nbase_solid = (\n    base_wp\n    .faces(\">Z\")\n    .workplane()\n    .circle(outer_radius - rim_width)\n    .cutBlind(-recess_depth)\n    .val()\n)\nresult = cq.Workplane(\"XY\").newObject([base_solid])\n\n# 2. Center Hub\nface_z = total_height - recess_depth\nhub = (\n    cq.Workplane(\"XY\")\n    .circle(hub_radius)\n    .extrude(hub_height)\n    .translate((0, 0, face_z))\n)\nresult = result.union(hub)\n\n# 3. Clock Hands\nhub_top_z = face_z + hub_height\n\n# Hour Hand (Shorter, points near 12)\n# Positioned at hub top (slightly overlapping to ensure union)\nhour_hand = (\n    cq.Workplane(\"XY\")\n    .rect(hour_hand_width, hour_hand_length)\n    .extrude(hand_thickness)\n    .translate((0, hour_hand_length / 2, 0)) # Pivot at one end\n    .rotate((0, 0, 0), (0, 0, 1), -5) # Slightly past 12 (approx 12:10)\n    .translate((0, 0, hub_top_z - 0.01))\n)\nresult = result.union(hour_hand)\n\n# Minute Hand (Longer, points to 2)\n# Positioned on top of hour hand (slightly overlapping)\nminute_hand = (\n    cq.Workplane(\"XY\")\n    .rect(minute_hand_width, minute_hand_length)\n    .extrude(hand_thickness)\n    .translate((0, minute_hand_length / 2, 0))\n    .rotate((0, 0, 0), (0, 0, 1), -60) # Points to 2 (30 degrees from 12)\n    .translate((0, 0, hub_top_z + hand_thickness - 0.01))\n)\nresult = result.union(minute_hand)\n\n# 4. Center Pin (Pivot)\n# Sits on hub, extends above hands to hold them.\n# Overlaps with hub and hands to ensure boolean union works.\npin = (\n    cq.Workplane(\"XY\")\n    .circle(pin_radius)\n    .extrude(pin_height + 0.2) \n    .translate((0, 0, hub_top_z - 0.1))\n)\nresult = result.union(pin)\n\n# 5. Numerals\nnumerals = [\"XII\", \"I\", \"II\", \"III\", \"IV\", \"V\", \"VI\", \"VII\", \"VIII\", \"IX\", \"X\", \"XI\"]\n# Angles in degrees (Standard math: 0=East, 90=North). \n# Clock positions: 12->90, 1->60, 2->30, 3->0, ...\nangles = [90, 60, 30, 0, 330, 300, 270, 240, 210, 180, 150, 120]\n\nfor i, num in enumerate(numerals):\n    angle = angles[i]\n    rad = math.radians(angle)\n    \n    x = numeral_radius * math.cos(rad)\n    y = numeral_radius * math.sin(rad)\n    \n    # Text rotation to keep numerals upright relative to clock face\n    # 12 (90 deg) -> 0 deg (upright)\n    # 3 (0 deg) -> -90 deg\n    text_angle = angle - 90\n    \n    txt = (\n        cq.Workplane(\"XY\")\n        .moveTo(x, y)\n        .rotate((0, 0, 0), (x, y, 0), text_angle)\n        .text(\n            num,\n            fontsize=numeral_fontsize,\n            distance=numeral_height,\n            halign=\"center\",\n            valign=\"center\"\n        )\n        .translate((0, 0, face_z))\n    )\n    result = result.union(txt)\n\n# The variable 'result' holds the final model"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

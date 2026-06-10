@@ -1,0 +1,25 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0084/00847302",
+  "model": "mimo_v25-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Use a 0.75 by 0.625 by 0.55 outside rectangular body as the main reference, with the main solid reach height set to 0.55 from the base datum. Form it as an open-top hollow rectangular enclosure with straight vertical walls and a rectangular inner void, not as a filled block. Treat the outer wall material as joined solid sections sharing the same 0.75 by 0.625 outer footprint and the same 0.55 height. On the front side, remove a horizontal rectangular wall cut that is 0.5 long, centered with 0.125 margin to the left and 0.125 margin to the right; it occupies the vertical band from 0.25 to 0.45 above the underside and cuts inward from the front face by 0.075. On the left side, remove a vertical rectangular side opening that cuts inward by 0.075 from the left face, leaves 0.675 to the right edge, spans 0.225 along the side with 0.2 front margin and 0.2 back margin, and runs vertically from the underside up to 0.5. Add or retain a thin internal rectangular ledge along the front inside region, 0.5 long by 0.1 wide with 0.125 side margins; make this ledge a solid shallow tier with 0.0125 thickness, distinct from the deeper 0.075 wall cuts.",
+  "metrics": {
+    "chamfer_distance": 0.002195,
+    "hausdorff_distance": 0.274202,
+    "f_score_005": 0.806,
+    "f_score_001": 0.0786,
+    "normal_consistency": 0.7848,
+    "iou_csg": 0.3642,
+    "iou_voxel": 0.3806,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// Parametric Design - Main Reference Dimensions\nouter_width = 0.75;      // X dimension\nouter_depth = 0.625;     // Y dimension  \nouter_height = 0.55;     // Z dimension (base to top)\nwall_thickness = 0.075;  // Wall thickness (derived from cuts)\n\n// Front Cut Parameters\nfront_cut_length = 0.5;\nfront_cut_margin = 0.125;\nfront_cut_bottom = 0.25;\nfront_cut_top = 0.45;\nfront_cut_depth = 0.075;\n\n// Left Cut Parameters  \nleft_cut_length = 0.225;\nleft_cut_front_margin = 0.2;\nleft_cut_back_margin = 0.2;\nleft_cut_bottom = 0;\nleft_cut_top = 0.5;\nleft_cut_depth = 0.075;\n\n// Internal Ledge Parameters\nledge_length = 0.5;\nledge_width = 0.1;\nledge_thickness = 0.0125;\nledge_side_margin = 0.125;\n\n// Resolution\n$fn = 100;\n\n// Module: Main hollow enclosure\nmodule main_enclosure() {\n    difference() {\n        // Outer solid block\n        cube([outer_width, outer_depth, outer_height]);\n        \n        // Inner void (open top)\n        translate([wall_thickness, wall_thickness, wall_thickness])\n            cube([\n                outer_width - 2*wall_thickness,\n                outer_depth - 2*wall_thickness,\n                outer_height  // Open top - cut through entire height\n            ]);\n    }\n}\n\n// Module: Front horizontal cut\nmodule front_cut() {\n    // Calculate X position (centered with margins)\n    front_cut_x = front_cut_margin;\n    \n    // Position and create cut\n    translate([front_cut_x, 0, front_cut_bottom])\n        cube([front_cut_length, front_cut_depth, front_cut_top - front_cut_bottom]);\n}\n\n// Module: Left vertical cut  \nmodule left_cut() {\n    // Calculate Y position (centered with margins)\n    left_cut_y = left_cut_front_margin;\n    \n    // Position and create cut\n    translate([0, left_cut_y, left_cut_bottom])\n        cube([left_cut_depth, left_cut_length, left_cut_top - left_cut_bottom]);\n}\n\n// Module: Internal ledge\nmodule internal_ledge() {\n    // Calculate X position (centered with margins)\n    ledge_x = ledge_side_margin;\n    \n    // Position ledge on front inside wall\n    translate([ledge_x, wall_thickness, 0])\n        cube([ledge_length, ledge_width, ledge_thickness]);\n}\n\n// Main assembly\ndifference() {\n    // Create main hollow enclosure\n    main_enclosure();\n    \n    // Subtract front cut\n    front_cut();\n    \n    // Subtract left cut\n    left_cut();\n}\n\n// Add internal ledge (separate solid addition)\ninternal_ledge();"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}
