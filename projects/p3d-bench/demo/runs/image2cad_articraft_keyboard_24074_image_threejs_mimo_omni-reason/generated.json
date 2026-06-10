@@ -1,0 +1,24 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "image2cad",
+  "case_id": "articraft/keyboard_24074",
+  "model": "mimo_omni-reason",
+  "input_spec": "image",
+  "output_format": "threejs",
+  "valid": true,
+  "condition": "Reference image: keyboard.",
+  "metrics": {
+    "chamfer_distance": 0.000849,
+    "hausdorff_distance": 0.08056,
+    "f_score_005": 0.8608,
+    "f_score_001": 0.3941,
+    "normal_consistency": 0.668,
+    "iou_voxel": 0.1363,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "threejs",
+    "source": "// Parameters for the keyboard model\nconst baseLength = 40;   // Length of the keyboard base (x-axis)\nconst baseWidth = 10;    // Width of the keyboard base (z-axis)\nconst baseHeight = 1;    // Height of the keyboard base (y-axis)\nconst keyHeight = 0.2;   // Height of individual keys (y-axis)\nconst keySize = 1;       // Size of small keys (x and z axes)\nconst spaceBarLength = 10; // Length of the space bar (x-axis)\nconst spaceBarWidth = 1;  // Width of the space bar (z-axis)\nconst roundedRadius = 1;  // Radius of the curved front-left corner\n\n// Create the 2D base shape with a rounded front-left corner\nconst baseShape = new THREE.Shape();\nbaseShape.moveTo(0, 0);          // Start at the front-left corner\nbaseShape.lineTo(baseLength, 0); // Draw right to the front-right corner\nbaseShape.lineTo(baseLength, baseWidth); // Draw up to the back-right corner\nbaseShape.lineTo(0, baseWidth);  // Draw left to the back-left corner\nbaseShape.lineTo(0, 0);          // Close the shape\n// Add a rounded corner at the front-left (0,0) with radius roundedRadius\nbaseShape.absarc(0, 0, roundedRadius, Math.PI / 2, 3 * Math.PI / 2, false);\n\n// Extrude the 2D shape to create the 3D base\nconst baseGeometry = new THREE.ExtrudeGeometry(baseShape, {\n  depth: baseHeight,\n  bevelEnabled: false // Disable bevel for a sharp edge\n});\nconst baseMaterial = new THREE.MeshStandardMaterial({ color: 0x808080 }); // Gray base\nconst base = new THREE.Mesh(baseGeometry, baseMaterial);\nscene.add(base);\n\n// Create keys on top of the base\nconst numRows = 5;  // Number of key rows (z-axis)\nconst numCols = 15; // Number of key columns (x-axis)\n\nfor (let row = 0; row < numRows; row++) {\n  for (let col = 0; col < numCols; col++) {\n    // Check if this is the space bar (last row, columns 5–14)\n    if (row === numRows - 1 && col >= 5 && col <= 14) {\n      // Space bar: longer in x, same width as small keys\n      const keyGeometry = new THREE.BoxGeometry(spaceBarLength, keyHeight, spaceBarWidth);\n      const keyMaterial = new THREE.MeshStandardMaterial({ color: 0x404040 }); // Darker gray keys\n      const key = new THREE.Mesh(keyGeometry, keyMaterial);\n      // Position the space bar to span columns 5–14\n      key.position.x = 5 * keySize + spaceBarLength / 2;\n      key.position.z = row * keySize + spaceBarWidth / 2;\n      key.position.y = baseHeight + keyHeight / 2; // Place on top of the base\n      scene.add(key);\n    } else {\n      // Regular small key\n      const keyGeometry = new THREE.BoxGeometry(keySize, keyHeight, keySize);\n      const keyMaterial = new THREE.MeshStandardMaterial({ color: 0x404040 });\n      const key = new THREE.Mesh(keyGeometry, keyMaterial);\n      // Center the key in its column and row\n      key.position.x = col * keySize + keySize / 2;\n      key.position.z = row * keySize + keySize / 2;\n      key.position.y = baseHeight + keyHeight / 2;\n      scene.add(key);\n    }\n  }\n}\n\n// Adjust camera to view the keyboard\ncamera.position.set(30, 20, 20);\ncamera.lookAt(20, 0, 5); // Focus on the center of the keyboard"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

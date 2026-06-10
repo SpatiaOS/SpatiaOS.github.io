@@ -1,0 +1,25 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0030/00309628",
+  "model": "mimo_v25-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Start with the main rectangular base as the reference: length 0.75, width 0.625, and height 0.00625, with the base solid extending 0.0062 upward from the base datum. Add one solid upright wall along the left edge of the base; its footprint is 0.0063 by 0.625, flush with the front and back edges, with left offset 0 and right offset 0.7437, and it rises 0.1875 above the plate as a solid strip with total reach 0.1938 from the base datum. Cut a lower rectangular opening through the wall thickness, spanning 0.081103 along the wall and 0.111891 high, with front offset 0.4447 and back offset 0.0992; its vertical band runs from 0 to 0.1119 relative to the base underside and its through reach is 0.0062. Cut a circular through-hole in the wall with radius 0.0432; place its axis on the wall plane at left offset 0 and front offset 0.2948, with the circular height band from 0.0631 to 0.1495 relative to the base underside, and use a cut reach of 0.0625. Cut a smaller rectangular through opening in the wall, 0.043521 along the wall by 0.044108 high, with front offset 0.091 and back offset 0.4905; its vertical band runs from 0.0992 to 0.1433 relative to the base underside and its cut reach is 0.0625. Cut the horizontal base with a rectangular through opening 0.264669 by 0.40625, offset 0.3125 from the left edge, 0.1728 from the right edge, 0.2073 from the front edge, and 0.0115 from the back edge; its removal band runs from -0.0562 to 0.0063 relative to the base underside, so it fully passes through the thin plate.",
+  "metrics": {
+    "chamfer_distance": 0.000367,
+    "hausdorff_distance": 0.132161,
+    "f_score_005": 0.9524,
+    "f_score_001": 0.7415,
+    "normal_consistency": 0.8821,
+    "iou_csg": 0.5849,
+    "iou_voxel": 0.6896,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// Parameters\nbase_length = 0.75;\nbase_width = 0.625;\nbase_height = 0.00625;\nbase_elevation = 0.0062;\n\nwall_thickness = 0.0063;\nwall_height_above_plate = 0.1875;\nwall_total_height = 0.1938;\n\n// Wall cut parameters\nlower_rect_cut_width = 0.081103;\nlower_rect_cut_height = 0.111891;\nlower_rect_front_offset = 0.4447;\nlower_rect_back_offset = 0.0992;\n\n// Circular hole parameters\nhole_radius = 0.0432;\nhole_front_offset = 0.2948;\nhole_height_min = 0.0631;\nhole_height_max = 0.1495;\nhole_cut_reach = 0.0625;\n\n// Small rectangular cut parameters\nsmall_rect_width = 0.043521;\nsmall_rect_height = 0.044108;\nsmall_rect_front_offset = 0.091;\nsmall_rect_back_offset = 0.4905;\nsmall_rect_height_min = 0.0992;\nsmall_rect_height_max = 0.1433;\nsmall_rect_cut_reach = 0.0625;\n\n// Base cut parameters\nbase_cut_width = 0.264669;\nbase_cut_depth = 0.40625;\nbase_cut_left_offset = 0.3125;\nbase_cut_right_offset = 0.1728;\nbase_cut_front_offset = 0.2073;\nbase_cut_back_offset = 0.0115;\nbase_cut_height_min = -0.0562;\nbase_cut_height_max = 0.0063;\n\n$fn = 100;\n\n// Main model\ndifference() {\n    // Solid base and wall\n    union() {\n        // Main rectangular base\n        translate([0, 0, base_elevation - base_height])\n            cube([base_length, base_width, base_height]);\n        \n        // Upright wall along left edge\n        translate([0, 0, 0])\n            cube([wall_thickness, base_width, wall_total_height]);\n    }\n    \n    // Cut lower rectangular opening through wall\n    translate([0, lower_rect_front_offset, 0])\n        cube([wall_thickness + 0.001, \n              base_width - lower_rect_front_offset - lower_rect_back_offset, \n              lower_rect_cut_height]);\n    \n    // Cut circular through-hole in wall\n    translate([wall_thickness/2, hole_front_offset, (hole_height_min + hole_height_max)/2])\n        rotate([0, 90, 0])\n            cylinder(h = hole_cut_reach, r = hole_radius, center = true);\n    \n    // Cut smaller rectangular opening in wall\n    translate([0, small_rect_front_offset, small_rect_height_min])\n        cube([small_rect_cut_reach + 0.001, \n              base_width - small_rect_front_offset - small_rect_back_offset, \n              small_rect_height_max - small_rect_height_min]);\n    \n    // Cut rectangular through opening in base\n    translate([base_cut_left_offset, base_cut_front_offset, base_cut_height_min])\n        cube([base_length - base_cut_left_offset - base_cut_right_offset,\n              base_width - base_cut_front_offset - base_cut_back_offset,\n              base_cut_height_max - base_cut_height_min]);\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

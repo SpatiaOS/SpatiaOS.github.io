@@ -1,0 +1,25 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0013/00134405",
+  "model": "mimo-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Use the main base declared size as the first reference: length 0.75, width 0.75, height 0.05625; main extrusion depth 0.0281. Build the main base as a concentric circular annulus, not as a rectangular plate: the outer circular profile has radius 0.375 and the inner circular opening has radius 0.3375, with the shared axis 0.375 from the left edge and 0.375 from the front edge; this base spans from -0.0281 to 0.0281 relative to the base underside reference. Add a centered solid annular collar within a 0.15 by 0.15 footprint, offset 0.3 from the left, right, front, and back edges, keeping its inner profile open as a real through void; this collar spans from -0.0234 to 0.0234 from the same underside reference. Add the rounded radial rib web as solid attached material inside the rim, using arc-based outlines and leaving the intervening elongated slot-like openings open; its bounding footprint is 0.6184 by 0.521 with edge offsets left 0.0658, right 0.0658, front 0.0387, and back 0.1903, and its modeled length, width, and height are 0.618448, 0.521035, and 0.028125. The rib web spans from -0.0141 to 0.0141 from the same underside reference, so these vertical values are shared-reach tiers rather than stacked segment heights. Keep all circular profiles coaxial and concentric with the main annulus and central collar.",
+  "metrics": {
+    "chamfer_distance": 0.000589,
+    "hausdorff_distance": 0.089597,
+    "f_score_005": 0.846,
+    "f_score_001": 0.26,
+    "normal_consistency": 0.7299,
+    "iou_csg": 0.3433,
+    "iou_voxel": 0.2873,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// Parameters\nbase_length = 0.75;\nbase_width = 0.75;\nbase_height = 0.05625;\nbase_outer_radius = 0.375;\nbase_inner_radius = 0.3375;\nbase_center_x = 0.375;\nbase_center_y = 0.375;\n\ncollar_footprint = 0.15;\ncollar_outer_radius = collar_footprint / 2;\ncollar_inner_radius = 0.05; // Assumed inner radius\ncollar_offset = 0.3;\ncollar_height = 0.0468; // Total height from -0.0234 to 0.0234\n\nrib_length = 0.618448;\nrib_width = 0.521035;\nrib_height = 0.028125;\nrib_offset_left = 0.0658;\nrib_offset_front = 0.0387;\nrib_corner_radius = 0.005; // For rounding corners\n\n$fn = 100; // Smooth circles\n\n// Module for rounded rectangle\nmodule rounded_rect(length, width, height, corner_r) {\n    minkowski() {\n        cube([length - 2*corner_r, width - 2*corner_r, height/2], center=true);\n        cylinder(r=corner_r, h=height/2, center=true);\n    }\n}\n\n// Main base annulus\ntranslate([base_center_x, base_center_y, 0])\ndifference() {\n    cylinder(h=base_height, r=base_outer_radius, center=true);\n    cylinder(h=base_height+1, r=base_inner_radius, center=true);\n}\n\n// Central collar annulus\ntranslate([base_center_x, base_center_y, 0])\ndifference() {\n    cylinder(h=collar_height, r=collar_outer_radius, center=true);\n    cylinder(h=collar_height+1, r=collar_inner_radius, center=true);\n}\n\n// Rib web (approximated as rounded rectangle)\nrib_center_x = rib_offset_left + rib_length/2;\nrib_center_y = rib_offset_front + rib_width/2;\ntranslate([rib_center_x, rib_center_y, 0])\nrounded_rect(rib_length, rib_width, rib_height, rib_corner_radius);"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

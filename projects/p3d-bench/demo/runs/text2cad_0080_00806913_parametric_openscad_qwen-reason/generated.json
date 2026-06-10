@@ -1,0 +1,23 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0080/00806913",
+  "model": "qwen-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Build the part within an overall length of 0.75, width of 0.220587, and height of 0.147058, with the main solid thickness extruded 0.1471 upward from the underside datum. Form the base footprint as a rounded link: use two equal end lobes of radius 0.1103 with centers at 0.1103 from the left edge and 0.1103 from the front edge, and at 0.6397 from the left edge and 0.1103 from the front edge, joined by straight tangent side runs so the outer shape remains rounded at both ends. At each lobe center include the concentric circular layout with radius 0.1103 for the outside lobe, radius 0.0956 for the larger internal stepped circular boundary, and radius 0.0294 for the centered bore; treat these as circular/annular features at the two axes, not as one filled rectangular pad. Cut the centered bore at radius 0.0294 through the end lobe, and add the larger annular circular recess at radius 0.0956 from the underside/base plane up to a reach of 0.0882, leaving the full body height above that stepped lower cut. Add the middle rectangular slot as removed material on the side web: its length is 0.191175, its vertical opening height is 0.023529, its left and right offsets are both 0.2794, and its vertical band runs from 0.0618 to 0.0853 above the underside. Cut this slot from the front side through the body with a reach of 0.7353, starting at the front edge and overcutting past the back side so the opening passes fully through rather than forming a blind surface recess.",
+  "metrics": {
+    "chamfer_distance": 0.000399,
+    "hausdorff_distance": 0.083943,
+    "f_score_005": 0.9411,
+    "f_score_001": 0.473,
+    "normal_consistency": 0.7735,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "$fn = 100;\n\n// Parameters\nOVERALL_LEN = 0.75;\nOVERALL_WID = 0.220587;\nOVERALL_HT = 0.147058;\nEXTRUDE_HT = 0.1471;\nLOBE_R = 0.1103;\nLOBE1_CX = 0.1103;\nLOBE1_CY = 0.1103;\nLOBE2_CX = 0.6397;\nLOBE2_CY = 0.1103;\nBORE_R = 0.0294;\nRECESS_R = 0.0956;\nRECESS_HT = 0.0882;\nSLOT_LEN = 0.191175;\nSLOT_HT = 0.023529;\nSLOT_X_OFF = 0.2794;\nSLOT_Z_START = 0.0618;\nSLOT_REACH = 0.7353;\n\n// Base footprint module: rounded link shape\nmodule base_footprint() {\n    hull() {\n        translate([LOBE1_CX, LOBE1_CY]) circle(r = LOBE_R);\n        translate([LOBE2_CX, LOBE2_CY]) circle(r = LOBE_R);\n    }\n}\n\n// Lobe cut module: through bore and annular recess\nmodule lobe_cuts(cx, cy) {\n    // Centered through bore\n    translate([cx, cy, -0.01])\n        cylinder(h = EXTRUDE_HT + 0.02, r = BORE_R);\n    // Stepped annular recess from base\n    translate([cx, cy, 0])\n        cylinder(h = RECESS_HT, r = RECESS_R);\n}\n\n// Middle slot module: rectangular through-cut on side web\nmodule middle_slot() {\n    translate([SLOT_X_OFF, 0, SLOT_Z_START])\n        cube([SLOT_LEN, SLOT_REACH, SLOT_HT]);\n}\n\n// Main model construction\ndifference() {\n    // Extrude base footprint to full thickness\n    linear_extrude(height = EXTRUDE_HT)\n        base_footprint();\n\n    // Apply concentric cuts at both end lobes\n    lobe_cuts(LOBE1_CX, LOBE1_CY);\n    lobe_cuts(LOBE2_CX, LOBE2_CY);\n\n    // Remove middle rectangular slot\n    middle_slot();\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

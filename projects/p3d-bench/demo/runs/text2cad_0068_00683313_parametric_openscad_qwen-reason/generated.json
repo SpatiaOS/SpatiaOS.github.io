@@ -1,0 +1,25 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0068/00683313",
+  "model": "qwen-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Start with the main rectangular base as the reference: length 0.5, width 0.4375, height 0.09375, with the main base extrusion depth 0.0938. In the base section, include the circular profile centered 0.25 from the left edge and 0.1875 from the front edge, radius 0.0938, as a true void/opening in the solid rather than added material. Add a full-length rectangular solid strip along the back edge with footprint 0.5 by 0.0625, flush to the left and right edges, front offset 0.375 and back offset 0; this underside solid starts at the base underside and reaches 0.25 below it. Add the other back-edge solid over the same 0.5 by 0.0625 footprint, spanning from 0.5 below the base underside to 0.25 above it, and include the coincident circular void profiles centered 0.125 from the left edge and 0.4375 from the front edge with radius 0.05; do not treat these circular profiles as a filled rectangular pad. On the upper side, add a concentric annular collar centered 0.2501 from the left edge and 0.1876 from the front edge, with outer radius 0.0938 and inner radius 0.05, extending 0.0625 from the base datum; its circular bounding span is 0.1876 by 0.1876 with offsets left 0.1563, right 0.1561, front 0.0938, and back 0.1561.",
+  "metrics": {
+    "chamfer_distance": 0.00018,
+    "hausdorff_distance": 0.075968,
+    "f_score_005": 0.9667,
+    "f_score_001": 0.5524,
+    "normal_consistency": 0.8856,
+    "iou_csg": 0.8339,
+    "iou_voxel": 0.8764,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "$fn = 100;\n\n// Parameters\nbase_len = 0.5;\nbase_wid = 0.4375;\nbase_ht  = 0.09375;\n\nbase_void_x = 0.25;\nbase_void_y = 0.1875;\nbase_void_r = 0.0938;\n\nstrip_len = 0.5;\nstrip_wid = 0.0625;\nstrip_y   = base_wid - strip_wid;\n\nstrip1_z_min = -0.25;\nstrip1_z_max = 0.0;\n\nstrip2_z_min = -0.5;\nstrip2_z_max = 0.25;\n\nstrip2_void_x = 0.125;\nstrip2_void_y = 0.4375;\nstrip2_void_r = 0.05;\n\ncollar_x = 0.2501;\ncollar_y = 0.1876;\ncollar_r_out = 0.0938;\ncollar_r_in  = 0.05;\ncollar_h     = 0.0625;\ncollar_z     = base_ht;\n\n// Modules\nmodule base_solid() {\n    cube([base_len, base_wid, base_ht]);\n}\n\nmodule back_strips() {\n    translate([0, strip_y, strip1_z_min])\n        cube([strip_len, strip_wid, strip1_z_max - strip1_z_min]);\n    translate([0, strip_y, strip2_z_min])\n        cube([strip_len, strip_wid, strip2_z_max - strip2_z_min]);\n}\n\nmodule collar_solid() {\n    translate([collar_x, collar_y, collar_z])\n        difference() {\n            cylinder(h=collar_h, r=collar_r_out);\n            translate([0, 0, -0.01])\n                cylinder(h=collar_h + 0.02, r=collar_r_in);\n        }\n}\n\nmodule all_voids() {\n    translate([base_void_x, base_void_y, -0.01])\n        cylinder(h=base_ht + 0.02, r=base_void_r);\n    translate([strip2_void_x, strip2_void_y, strip2_z_min - 0.01])\n        cylinder(h=strip2_z_max - strip2_z_min + 0.02, r=strip2_void_r);\n}\n\n// Assembly\ndifference() {\n    union() {\n        base_solid();\n        back_strips();\n        collar_solid();\n    }\n    all_voids();\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

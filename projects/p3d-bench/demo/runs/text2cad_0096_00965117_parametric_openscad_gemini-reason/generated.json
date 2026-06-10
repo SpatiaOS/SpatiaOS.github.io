@@ -1,0 +1,25 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0096/00965117",
+  "model": "gemini-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Use a main rectangular plate as the reference body, length 0.225, width 0.75, and thickness 0.0375. Through this thin plate, make two separate circular openings of radius 0.0281, centered at left-offset 0.1125 with front-offsets 0.0375 and 0.7125; these are individual through holes near the two ends, not a filled pad between them. Add a central upper rectangular solid over the full 0.225 length with a 0.5625 width, front offset 0.0938 and back offset 0.0937, rising 0.1125 from the base datum. Add the matching central underside rectangular solid on the same 0.225 by 0.5625 footprint, starting at the plate underside and extending 0.375 downward, giving an asymmetric total span of 0.4875 across that shared profile direction. On the upper central area, place a round stepped boss centered across the 0.225 length: the lower wide round section is annular, with outer radius 0.1078 and inner radius 0.0563, centered at left-offset 0.1125 and front-offset 0.4687, with its own height 0.0938 above the rectangular shoulder and a top reach of 0.2063 from the base datum. Add the upper solid circular pin on the same axis, using radius 0.0563, recorded at left-offset 0.1126 and front-offset 0.4688, with height 0.1594 above the same shoulder and top reach 0.2719 from the base datum. Keep the annular collar as a hollow ring section, with only the smaller upper pin treated as solid round material.",
+  "metrics": {
+    "chamfer_distance": 5.7e-05,
+    "hausdorff_distance": 0.050444,
+    "f_score_005": 0.9985,
+    "f_score_001": 0.678,
+    "normal_consistency": 0.9362,
+    "iou_csg": 0.9939,
+    "iou_voxel": 0.9991,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// Resolution for curved surfaces\n$fn = 100;\n\n// --- Parameters ---\n\n// Base plate dimensions\nplate_length = 0.225;\nplate_width = 0.75;\nplate_thickness = 0.0375;\n\n// Through hole dimensions and positions\nhole_radius = 0.0281;\nhole_left_offset = 0.1125;\nhole_front_offset_1 = 0.0375;\nhole_front_offset_2 = 0.7125;\n\n// Central rectangular solid dimensions\nrect_length = 0.225;\nrect_width = 0.5625;\nrect_front_offset = 0.0938;\nrect_upper_height = 0.1125;\nrect_lower_depth = 0.375;\n\n// Annular collar (stepped boss) dimensions\nboss_radius_outer = 0.1078;\nboss_radius_inner = 0.0563;\nboss_height = 0.0938;\nboss_x_offset = 0.1125;\nboss_y_offset = 0.4687;\n\n// Solid circular pin dimensions\npin_radius = 0.0563;\npin_height = 0.1594;\npin_x_offset = 0.1126;\npin_y_offset = 0.4688;\n\n// --- Geometry ---\n\nunion() {\n    // Main base plate with separate through holes near ends\n    difference() {\n        cube([plate_length, plate_width, plate_thickness]);\n\n        // Front through hole\n        translate([hole_left_offset, hole_front_offset_1, -0.01])\n            cylinder(h = plate_thickness + 0.02, r = hole_radius);\n\n        // Back through hole\n        translate([hole_left_offset, hole_front_offset_2, -0.01])\n            cylinder(h = plate_thickness + 0.02, r = hole_radius);\n    }\n\n    // Central upper rectangular solid\n    translate([0, rect_front_offset, 0])\n        cube([rect_length, rect_width, rect_upper_height]);\n\n    // Central underside rectangular solid\n    translate([0, rect_front_offset, -rect_lower_depth])\n        cube([rect_length, rect_width, rect_lower_depth]);\n\n    // Round stepped boss (hollow annular collar)\n    translate([boss_x_offset, boss_y_offset, rect_upper_height])\n        difference() {\n            cylinder(h = boss_height, r = boss_radius_outer);\n            // Inner cutout to make it an annular ring\n            translate([0, 0, -0.01])\n                cylinder(h = boss_height + 0.02, r = boss_radius_inner);\n        }\n\n    // Upper solid circular pin\n    translate([pin_x_offset, pin_y_offset, rect_upper_height])\n        cylinder(h = pin_height, r = pin_radius);\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

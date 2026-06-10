@@ -1,0 +1,25 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0096/00965117",
+  "model": "mimo_v25-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Use a main rectangular plate as the reference body, length 0.225, width 0.75, and thickness 0.0375. Through this thin plate, make two separate circular openings of radius 0.0281, centered at left-offset 0.1125 with front-offsets 0.0375 and 0.7125; these are individual through holes near the two ends, not a filled pad between them. Add a central upper rectangular solid over the full 0.225 length with a 0.5625 width, front offset 0.0938 and back offset 0.0937, rising 0.1125 from the base datum. Add the matching central underside rectangular solid on the same 0.225 by 0.5625 footprint, starting at the plate underside and extending 0.375 downward, giving an asymmetric total span of 0.4875 across that shared profile direction. On the upper central area, place a round stepped boss centered across the 0.225 length: the lower wide round section is annular, with outer radius 0.1078 and inner radius 0.0563, centered at left-offset 0.1125 and front-offset 0.4687, with its own height 0.0938 above the rectangular shoulder and a top reach of 0.2063 from the base datum. Add the upper solid circular pin on the same axis, using radius 0.0563, recorded at left-offset 0.1126 and front-offset 0.4688, with height 0.1594 above the same shoulder and top reach 0.2719 from the base datum. Keep the annular collar as a hollow ring section, with only the smaller upper pin treated as solid round material.",
+  "metrics": {
+    "chamfer_distance": 5.6e-05,
+    "hausdorff_distance": 0.050577,
+    "f_score_005": 0.9991,
+    "f_score_001": 0.6845,
+    "normal_consistency": 0.9371,
+    "iou_csg": 0.9986,
+    "iou_voxel": 0.9997,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// === Parametric Dimensions ===\n\n// Main rectangular plate\nplate_length = 0.225;\nplate_width  = 0.75;\nplate_thick  = 0.0375;\n\n// Through-hole parameters\nhole_radius  = 0.0281;\nhole_x       = 0.1125;     // Centered in X\nhole_y1      = 0.0375;     // Front hole\nhole_y2      = 0.7125;     // Back hole\n\n// Central upper rectangular solid\nupper_width  = 0.5625;\nupper_y_off  = 0.0938;     // Front offset (back = 0.0937)\nupper_height = 0.1125;     // Rises from base datum\n\n// Central underside rectangular solid (same footprint)\nlower_width  = 0.5625;\nlower_height = 0.375;      // Extends downward\n\n// Annular collar (hollow ring above shoulder)\ncollar_or     = 0.1078;    // Outer radius\ncollar_ir     = 0.0563;    // Inner radius\ncollar_cx     = 0.1125;\ncollar_cy     = 0.4687;\ncollar_height = 0.0938;\n\n// Solid circular pin (above shoulder)\npin_r      = 0.0563;\npin_cx     = 0.1126;\npin_cy     = 0.4688;\npin_height = 0.1594;\n\n$fn = 100;\n\n// === Main Assembly ===\ndifference() {\n    union() {\n        // 1. Main rectangular plate at base datum z=0\n        cube([plate_length, plate_width, plate_thick]);\n\n        // 2. Central upper solid rising from base datum\n        translate([0, upper_y_off, 0])\n            cube([plate_length, upper_width, upper_height]);\n\n        // 3. Central underside solid extending downward\n        translate([0, upper_y_off, -lower_height])\n            cube([plate_length, lower_width, lower_height]);\n\n        // 4. Annular collar (hollow ring) above the shoulder\n        translate([collar_cx, collar_cy, upper_height])\n            difference() {\n                cylinder(h=collar_height, r=collar_or);\n                translate([0, 0, -0.001])\n                    cylinder(h=collar_height + 0.002, r=collar_ir);\n            }\n\n        // 5. Solid circular pin above the shoulder\n        translate([pin_cx, pin_cy, upper_height])\n            cylinder(h=pin_height, r=pin_r);\n    }\n\n    // 6. Front through-hole in plate\n    translate([hole_x, hole_y1, -1])\n        cylinder(h=2, r=hole_radius);\n\n    // 7. Back through-hole in plate\n    translate([hole_x, hole_y2, -1])\n        cylinder(h=2, r=hole_radius);\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

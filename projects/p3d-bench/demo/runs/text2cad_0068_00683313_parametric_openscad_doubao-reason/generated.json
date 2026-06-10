@@ -1,0 +1,28 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0068/00683313",
+  "model": "doubao-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Start with the main rectangular base as the reference: length 0.5, width 0.4375, height 0.09375, with the main base extrusion depth 0.0938. In the base section, include the circular profile centered 0.25 from the left edge and 0.1875 from the front edge, radius 0.0938, as a true void/opening in the solid rather than added material. Add a full-length rectangular solid strip along the back edge with footprint 0.5 by 0.0625, flush to the left and right edges, front offset 0.375 and back offset 0; this underside solid starts at the base underside and reaches 0.25 below it. Add the other back-edge solid over the same 0.5 by 0.0625 footprint, spanning from 0.5 below the base underside to 0.25 above it, and include the coincident circular void profiles centered 0.125 from the left edge and 0.4375 from the front edge with radius 0.05; do not treat these circular profiles as a filled rectangular pad. On the upper side, add a concentric annular collar centered 0.2501 from the left edge and 0.1876 from the front edge, with outer radius 0.0938 and inner radius 0.05, extending 0.0625 from the base datum; its circular bounding span is 0.1876 by 0.1876 with offsets left 0.1563, right 0.1561, front 0.0938, and back 0.1561.",
+  "metrics": {
+    "chamfer_distance": 0.000179,
+    "hausdorff_distance": 0.07464,
+    "f_score_005": 0.9698,
+    "f_score_001": 0.5307,
+    "normal_consistency": 0.8824,
+    "iou_csg": 0.8322,
+    "iou_voxel": 0.8732,
+    "pred_open_edge_ratio": 0.0,
+    "qa_overall": 0.9167,
+    "qa_semantic": 0.75,
+    "qa_parametric": 1.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// Global Resolution Setting\n$fn = 64;\n\n// ==============================\n// Parameter Definitions\n// ==============================\n// Main Base Dimensions\nbase_length = 0.5;      // Left-right (X) dimension\nbase_width = 0.4375;    // Front-back (Y) dimension\nbase_height = 0.09375;  // Vertical (Z) thickness\n\n// Base Void Parameters\nbase_hole_x = 0.25;     // X position from left edge\nbase_hole_y = 0.1875;   // Y position from front edge\nbase_hole_r = 0.0938;   // Radius of through hole\n\n// Back Strip Shared Parameters\nback_strip_width = 0.0625;\nback_strip_front_offset = 0.375; // Y start position from front edge\n\n// Lower Underside Back Strip\nlower_strip_z_min = -0.25;\nlower_strip_z_max = 0; // Aligned to base underside\n\n// Tall Back Edge Strip\ntall_strip_z_min = -0.5;\ntall_strip_z_max = 0.25;\ntall_strip_hole_x = 0.125;\ntall_strip_hole_y = 0.4375;\ntall_strip_hole_r = 0.05;\n\n// Upper Annular Collar Parameters\ncollar_x = 0.2501;\ncollar_y = 0.1876;\ncollar_outer_r = 0.0938;\ncollar_inner_r = 0.05;\ncollar_height = 0.0625;\n\n// ==============================\n// Main Model Construction\n// ==============================\ndifference() {\n    // Union of all solid components\n    union() {\n        // Main base plate\n        cube([base_length, base_width, base_height]);\n\n        // Lower underside back strip\n        translate([0, back_strip_front_offset, lower_strip_z_min])\n        cube([base_length, back_strip_width, lower_strip_z_max - lower_strip_z_min]);\n\n        // Tall back edge strip\n        translate([0, back_strip_front_offset, tall_strip_z_min])\n        cube([base_length, back_strip_width, tall_strip_z_max - tall_strip_z_min]);\n\n        // Upper annular collar outer wall\n        translate([collar_x, collar_y, base_height])\n        cylinder(h=collar_height, r=collar_outer_r);\n    }\n\n    // All void/hole cuts\n    // Base plate through hole\n    translate([base_hole_x, base_hole_y, -0.005])\n    cylinder(h=base_height + 0.01, r=base_hole_r);\n\n    // Tall back strip through hole\n    translate([tall_strip_hole_x, tall_strip_hole_y, tall_strip_z_min - 0.01])\n    cylinder(h=tall_strip_z_max - tall_strip_z_min + 0.02, r=tall_strip_hole_r);\n\n    // Collar inner hole\n    translate([collar_x, collar_y, base_height - 0.005])\n    cylinder(h=collar_height + 0.01, r=collar_inner_r);\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

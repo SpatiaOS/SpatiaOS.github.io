@@ -1,0 +1,25 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0004/00040376",
+  "model": "deepseek_v4pro-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Use a main base reference span of length 0.75, width 0.421875, and height 0.191921, with the lower base extrusion extending 0.1919 upward from the base datum. Form this lower base from separate rounded profiles within the full 0.75 by 0.4218 span rather than as a filled rectangular plate: place one circular profile with its axis 0.2109 from the left edge and 0.2109 from the front edge, radius 0.2109, and place a second concentric circular group with its axis 0.6094 from the left edge and 0.2109 from the front edge, using radius 0.1406 with an inner radius of 0.1055 for the opening. Preserve the additional curved and slot-like profile portions in the lower sketch as rounded cut or boundary shapes, so the openings remain true voids rather than surface markings. Add the taller circular solid section over the left-side circular axis within a 0.4218 by 0.4218 footprint, offset 0 from the left edge, 0.3282 from the right edge, and 0 from both front and back edges; this upper-side material reaches 0.4424 from the same base datum, making it a taller continuation above the shallow base rather than an added segment stacked on top of the base height. Keep the upper circular section hollow/annular where the inner loop is present, including the rounded slot-like interruptions in the opening. Add a separate solid rectangular upright tab with length 0.041188, width 0.070313, and height 0.441346; position it with left offset 0.0703, right offset 0.6385, front offset 0.1758, and back offset 0.1757, and extrude it upward 0.4413 from the base datum.",
+  "metrics": {
+    "chamfer_distance": 0.000578,
+    "hausdorff_distance": 0.112767,
+    "f_score_005": 0.8989,
+    "f_score_001": 0.4564,
+    "normal_consistency": 0.8516,
+    "iou_csg": 0.7333,
+    "iou_voxel": 0.7495,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// Parametric CAD model\n// Based on specified dimensions and geometry\n\n// Parameters\n$fn = 100;  // Smooth curved surfaces\n\n// Base plate overall span\nspan_length = 0.75;\nspan_width  = 0.421875;\nbase_height = 0.191921;  // Lower base extrusion height from datum\n\n// Left circular profile (axis and radius)\nleft_axis_x = 0.2109;\nleft_axis_y = 0.2109;\nleft_radius = 0.2109;\n\n// Right circular concentric group\nright_axis_x = 0.6094;\nright_axis_y = 0.2109;\nright_outer_radius = 0.1406;\nright_inner_radius = 0.1055;   // opening radius\n\n// Assumed inner hole radius for left circle (same as right inner)\ninner_hole_radius = 0.1055;\n\n// Taller upper circular section (left boss)\nupper_section_height = 0.4424;   // from base datum\n\n// Rectangular upright tab\ntab_length = 0.041188;\ntab_width  = 0.070313;\ntab_height = 0.441346;           // from base datum\ntab_left_offset  = 0.0703;       // x position\ntab_front_offset = 0.1758;       // y position\n\n// ---- 2D Profiles (used as cross sections) ----\n\n// Outer shape of the lower base: hull of left solid circle and right outer circle\nmodule outer_base_profile() {\n    hull() {\n        translate([left_axis_x, left_axis_y])\n            circle(r = left_radius);\n        translate([right_axis_x, right_axis_y])\n            circle(r = right_outer_radius);\n    }\n}\n\n// Inner cutout (combined slot and holes): hull of the two inner circles\nmodule inner_cutout() {\n    hull() {\n        translate([left_axis_x, left_axis_y])\n            circle(r = inner_hole_radius);\n        translate([right_axis_x, right_axis_y])\n            circle(r = inner_hole_radius);\n    }\n}\n\n// ---- Solid components ----\n\n// Lower base plate (extruded from 0 to base_height)\nmodule lower_base() {\n    linear_extrude(height = base_height)\n    difference() {\n        outer_base_profile();\n        inner_cutout();\n    }\n}\n\n// Upper circular boss (left side, taller)\nmodule upper_circular_section() {\n    linear_extrude(height = upper_section_height)\n    difference() {\n        // Outer circle of the left boss\n        translate([left_axis_x, left_axis_y])\n            circle(r = left_radius);\n        inner_cutout();   // subtract the slot + holes (opens the right side)\n    }\n}\n\n// Rectangular tab\nmodule upright_tab() {\n    translate([tab_left_offset, tab_front_offset, 0])\n        cube([tab_length, tab_width, tab_height]);\n}\n\n// ---- Main assembly: union all components ----\nunion() {\n    lower_base();\n    upper_circular_section();\n    upright_tab();\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

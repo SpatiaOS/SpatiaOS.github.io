@@ -1,0 +1,23 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "image2cad",
+  "case_id": "articraft/shock_absorber_127964",
+  "model": "doubao-reason",
+  "input_spec": "image",
+  "output_format": "threejs",
+  "valid": true,
+  "condition": "Reference image: shock absorber.",
+  "metrics": {
+    "chamfer_distance": 0.000666,
+    "hausdorff_distance": 0.100441,
+    "f_score_005": 0.9307,
+    "f_score_001": 0.2298,
+    "normal_consistency": 0.5819,
+    "pred_open_edge_ratio": 0.004175
+  },
+  "program": {
+    "language": "threejs",
+    "source": "// Shock Absorber Parameters\nconst totalHeight = 22;\nconst mainRodRadius = 1.2;\nconst mainRodHeight = 13;\nconst springOuterRadius = 3;\nconst springWireRadius = 0.6;\nconst springTurns = 5.5;\nconst springHeight = 8.2;\nconst gearOuterRadius = 4;\nconst gearInnerRadius = 3;\nconst gearTeeth = 10;\nconst gearThickness = 0.8;\nconst endPlateRadius = 3.5;\nconst endPlateThickness = 0.5;\nconst mountRadius = 1.8;\nconst mountHeight = 2;\nconst mountLugRadius = 1.2;\nconst mountHoleRadius = 0.6;\n\n// Shared metal material\nconst metalMat = new THREE.MeshStandardMaterial({\n  color: 0xb8b8b8,\n  metalness: 0.7,\n  roughness: 0.3\n});\nconst holeMat = new THREE.MeshStandardMaterial({\n  color: 0x333333,\n  roughness: 0.5\n});\n\n// 1. Central piston rod\nconst rodGeom = new THREE.CylinderGeometry(mainRodRadius, mainRodRadius, mainRodHeight, 16);\nconst rod = new THREE.Mesh(rodGeom, metalMat);\nscene.add(rod);\n\n// 2. Helical spring\nclass HelixCurve extends THREE.Curve {\n  constructor(rad, height, turns) {\n    super();\n    this.rad = rad;\n    this.height = height;\n    this.turns = turns;\n  }\n  getPoint(t) {\n    const angle = t * Math.PI * 2 * this.turns;\n    const y = -springHeight/2 + this.height * t;\n    return new THREE.Vector3(\n      Math.cos(angle) * this.rad,\n      y,\n      Math.sin(angle) * this.rad\n    );\n  }\n}\nconst helixPath = new HelixCurve(springOuterRadius, springHeight, springTurns);\nconst springGeom = new THREE.TubeGeometry(helixPath, 128, springWireRadius, 12, false);\nconst spring = new THREE.Mesh(springGeom, metalMat);\nscene.add(spring);\n\n// 3. Upper adjustment gear (star shape)\nconst gearShape = new THREE.Shape();\nfor (let i = 0; i < gearTeeth * 2; i++) {\n  const angle = (i / (gearTeeth * 2)) * Math.PI * 2;\n  const r = i % 2 === 0 ? gearOuterRadius : gearInnerRadius;\n  const x = Math.cos(angle) * r;\n  const y = Math.sin(angle) * r;\n  i === 0 ? gearShape.moveTo(x, y) : gearShape.lineTo(x, y);\n}\ngearShape.lineTo(Math.cos(0) * gearInnerRadius, Math.sin(0) * gearInnerRadius);\nconst gearExtrudeSettings = { depth: gearThickness, bevelEnabled: false };\nconst gearGeom = new THREE.ExtrudeGeometry(gearShape, gearExtrudeSettings);\nconst gear = new THREE.Mesh(gearGeom, metalMat);\ngear.rotation.x = Math.PI / 2;\ngear.position.y = springHeight/2 + gearThickness/2 + 0.2;\nscene.add(gear);\n\n// 4. Upper spring retainer plate\nconst upperPlateGeom = new THREE.CylinderGeometry(endPlateRadius, endPlateRadius, endPlateThickness, 16);\nconst upperPlate = new THREE.Mesh(upperPlateGeom, metalMat);\nupperPlate.position.y = springHeight/2 + endPlateThickness/2;\nscene.add(upperPlate);\n\n// 5. Lower spring retainer plate\nconst lowerPlateGeom = new THREE.CylinderGeometry(endPlateRadius, endPlateRadius, endPlateThickness, 16);\nconst lowerPlate = new THREE.Mesh(lowerPlateGeom, metalMat);\nlowerPlate.position.y = -springHeight/2 - endPlateThickness/2;\nscene.add(lowerPlate);\n\n// Helper function to create end mounts (top and bottom identical)\nfunction createMount(yPos) {\n  // Mount body\n  const bodyGeom = new THREE.CylinderGeometry(mountRadius, mountRadius, mountHeight, 16);\n  const body = new THREE.Mesh(bodyGeom, metalMat);\n  body.position.y = yPos;\n  scene.add(body);\n\n  // Side lugs\n  const lugGeom = new THREE.CylinderGeometry(mountLugRadius, mountLugRadius, 0.7, 16);\n  lugGeom.rotateY(Math.PI / 2);\n  const lugLeft = new THREE.Mesh(lugGeom, metalMat);\n  lugLeft.position.set(-mountRadius, yPos, 0);\n  scene.add(lugLeft);\n  const lugRight = new THREE.Mesh(lugGeom, metalMat);\n  lugRight.position.set(mountRadius, yPos, 0);\n  scene.add(lugRight);\n\n  // Mount hole\n  const holeGeom = new THREE.CylinderGeometry(mountHoleRadius, mountHoleRadius, mountRadius * 2 + 2, 12);\n  holeGeom.rotateY(Math.PI / 2);\n  const hole = new THREE.Mesh(holeGeom, holeMat);\n  hole.position.y = yPos;\n  scene.add(hole);\n}\n\n// Create top and bottom mounts\ncreateMount(totalHeight/2 - mountHeight/2);\ncreateMount(-totalHeight/2 + mountHeight/2);\n\n// Adjust camera position\ncamera.position.set(18, 12, 18);\ncamera.lookAt(0, 0, 0);"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

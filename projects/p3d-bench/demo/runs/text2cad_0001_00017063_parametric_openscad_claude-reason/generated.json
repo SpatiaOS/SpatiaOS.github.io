@@ -1,0 +1,25 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0001/00017063",
+  "model": "claude-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Use a main base declared size of length 0.75, width 0.21875, and height 0.28125, with main extrusion depth 0.2812. Form the base as one solid upper-side extrusion from the base datum, filling the footprint to the left, right, front, and back edges with offsets of 0, and keep the side outline arched rather than reducing it to a rectangular notch. Add one remove-material feature made only from 2 separate circular profiles, not a connected slot or rectangular pocket. Place one circular axis 0.0717 from the left edge and 0.0625 from the front edge, and place the other circular axis 0.6692 from the left edge and 0.0625 from the front edge; each circular profile has radius 0.0312. Cut from the upper side with the removed band running from 0.1081 to 0.1705 above the base underside, using cut depth 0.0625. Treat the 0.6599 by 0.0625 span only as the envelope of the circular pattern, leaving the surrounding and intervening material solid.",
+  "metrics": {
+    "chamfer_distance": 0.001446,
+    "hausdorff_distance": 0.114898,
+    "f_score_005": 0.7105,
+    "f_score_001": 0.1405,
+    "normal_consistency": 0.5672,
+    "iou_csg": 0.4381,
+    "iou_voxel": 0.4629,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// === Parameters ===\n// Main base dimensions\nbase_length  = 0.75;      // extent along X (left-right)\nbase_width   = 0.21875;   // extent along Y (front-back)\nbase_height  = 0.28125;   // peak height along Z\next_depth    = 0.2812;    // extrusion depth (~base_height)\n\n// Circular hole parameters\nhole1_x      = 0.0717;    // first hole center from left edge\nhole1_y      = 0.0625;    // first hole center from front edge\nhole2_x      = 0.6692;    // second hole center from left edge\nhole2_y      = 0.0625;    // second hole center from front edge\nhole_r       = 0.0312;    // radius of each circular profile\n\n// Cut band Z-range (above base underside)\ncut_z_bot    = 0.1081;    // bottom of removed band\ncut_z_top    = 0.1705;    // top of removed band\ncut_depth    = 0.0625;    // vertical thickness of cut\n\n// Resolution\n$fn = 120;\n\n// === Modules ===\n\n// Semi-elliptical arch profile (2D, in local XY)\n// X spans [0, w], Y spans [0, h]; flat base along X axis\nmodule arch_profile_2d(w, h) {\n    a = w / 2;   // half-width (horizontal semi-axis)\n    b = h;       // full height (vertical semi-axis)\n    n = $fn;\n    points = [\n        for (i = [0 : n])\n            let(theta = 180 * i / n)\n            [a + a * cos(theta), b * sin(theta)]\n    ];\n    polygon(points);\n}\n\n// Arched base: semi-elliptical cross-section extruded along length\n// rotate(120,[1,1,1]) cyclically remaps local X->global Y,\n// local Y->global Z, local Z (extrusion)->global X\nmodule arched_base() {\n    rotate(120, [1, 1, 1])\n        linear_extrude(height = base_length)\n            arch_profile_2d(base_width, base_height);\n}\n\n// Two separate circular cuts — no slot or pocket connecting them\nmodule circular_cuts() {\n    h_cut = cut_z_top - cut_z_bot;\n    eps   = 0.001;  // small clearance for clean boolean\n\n    // Circle 1: near the left end\n    translate([hole1_x, hole1_y, cut_z_bot - eps])\n        cylinder(h = h_cut + 2 * eps, r = hole_r);\n\n    // Circle 2: near the right end\n    translate([hole2_x, hole2_y, cut_z_bot - eps])\n        cylinder(h = h_cut + 2 * eps, r = hole_r);\n}\n\n// === Final Assembly ===\n// Subtract the two circular holes from the arched base\ndifference() {\n    arched_base();\n    circular_cuts();\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

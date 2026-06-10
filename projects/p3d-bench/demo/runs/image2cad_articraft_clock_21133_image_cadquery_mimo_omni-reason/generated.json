@@ -1,0 +1,24 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "image2cad",
+  "case_id": "articraft/clock_21133",
+  "model": "mimo_omni-reason",
+  "input_spec": "image",
+  "output_format": "cadquery",
+  "valid": true,
+  "condition": "Reference image: clock.",
+  "metrics": {
+    "chamfer_distance": 0.000504,
+    "hausdorff_distance": 0.109481,
+    "f_score_005": 0.9836,
+    "f_score_001": 0.0749,
+    "normal_consistency": 0.7646,
+    "iou_voxel": 0.5656,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "cadquery",
+    "source": "import cadquery as cq\nimport math\n\n# Parameters\nouter_diameter = 100.0\nouter_thickness = 10.0\ninner_diameter = 80.0\ninner_depth = 2.0\ncenter_diameter = 20.0\ncenter_thickness = 5.0\nhour_hand_length = 30.0\nminute_hand_length = 40.0\nhand_width = 2.0\nhand_thickness = 1.0\nnumeral_width = 5.0\nnumeral_thickness = 2.0\nnumeral_height = 10.0\nnumeral_radius = inner_diameter / 2 - numeral_height / 2  # Distance from center to numeral center\n\n# Create outer disk (circular base)\nresult = cq.Workplane(\"XY\").circle(outer_diameter / 2).extrude(outer_thickness)\n\n# Create inner recess (subtract a cylinder from the top face)\nresult = result.faces(\">Z\").workplane().circle(inner_diameter / 2).cutBlind(-inner_depth)\n\n# Create center circle (add a cylinder on top of the recess)\nresult = result.faces(\">Z\").workplane().circle(center_diameter / 2).extrude(center_thickness)\n\n# Create hour hand (shorter, pointing at XII - positive Y direction)\nhour_hand = result.faces(\">Z\").workplane().rect(hand_width, hour_hand_length).extrude(hand_thickness)\nresult = result.union(hour_hand)\n\n# Create minute hand (longer, pointing at XI - 330 degrees from X-axis)\nminute_hand = result.faces(\">Z\").workplane().rect(hand_width, minute_hand_length).rotate((0, 0, 0), (0, 0, 1), -30).extrude(hand_thickness)\nresult = result.union(minute_hand)\n\n# Create Roman numerals (12 positions, 30 degrees apart)\nnumeral_angles = [90, 60, 30, 0, -30, -60, -90, -120, -150, -180, -210, -240]\nnumeral_texts = [\"XII\", \"I\", \"II\", \"III\", \"IV\", \"V\", \"VI\", \"VII\", \"VIII\", \"IX\", \"X\", \"XI\"]\n\n# Simplified numeral creation (using rectangles for demonstration)\nfor i, (angle, text) in enumerate(zip(numeral_angles, numeral_texts)):\n    # Calculate numeral position (x, y, z)\n    x = numeral_radius * math.cos(math.radians(angle))\n    y = numeral_radius * math.sin(math.radians(angle))\n    z = outer_thickness - inner_depth\n    \n    # Create a simple numeral shape (adjust based on text)\n    # Example: I is a single rectangle, II is two, etc.\n    # For simplicity, create a rectangle for each numeral (adjust width/height as needed)\n    numeral = cq.Workplane(\"XY\").rect(numeral_width, numeral_height).extrude(numeral_thickness)\n    \n    # Translate and rotate the numeral to the correct position and angle\n    numeral = numeral.translate((x, y, z)).rotate((0, 0, 0), (0, 0, 1), angle)\n    \n    # Add the numeral to the result\n    result = result.union(numeral)\n\n# Final result\nresult = result"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

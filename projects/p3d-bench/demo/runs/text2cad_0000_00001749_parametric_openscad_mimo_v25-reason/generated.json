@@ -1,0 +1,23 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0000/00001749",
+  "model": "mimo_v25-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Use the main base declared size as the first reference: length 0.395255, width 0.60219, height 0.109489, with a main extrusion depth of 0.1095. Form the primary body as a solid D-shaped frame contained in a 0.3953 by 0.6022 footprint, starting flush from the left, right, front, and back reference edges, with curved outer and inner outlines and one continuous inner through-opening. Keep the main frame as the full-depth solid, extending 0.1095 from the underside reference, with the straight rear and side portions tied into the rounded arc wall. Add a shallower solid round protrusion attached outside the frame: its overall added footprint is length 0.259658, width 0.197373, height 0.054745, with edge offsets left 0, right 0.1356, front -0.1478, and back 0.5526 relative to the main base footprint. The round portion of this added solid is a separate circular profile with its axis left-offset 0.0942 and front-offset -0.0821, radius 0.0657, and it extends only 0.0547 from the underside reference. Cut a concentric circular opening through that same shallow band, using the shared axis at left-offset 0.0942 and front-offset -0.0821 with radius 0.0285; the cut has a circular bounding span of length 0.056934 and width 0.056934 and removes material from vertical band 0 to 0.0547 relative to the underside reference. Keep all circular profiles coaxial, so the outer round tab and the smaller cut share one centerline rather than being offset from each other.",
+  "metrics": {
+    "chamfer_distance": 0.001384,
+    "hausdorff_distance": 0.172521,
+    "f_score_005": 0.8158,
+    "f_score_001": 0.2908,
+    "normal_consistency": 0.6453,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// D-Shaped Frame with Protrusion and Circular Cut\n\n// Main base reference dimensions\nmain_length = 0.395255;\nmain_width  = 0.60219;\nmain_height = 0.109489;\nextrusion_depth = 0.1095;\n\n// D-shape footprint (flush with main base edges)\nd_length = 0.3953;\nd_width  = 0.6022;\n\n// Frame wall thickness\nwall_t = 0.025;\n\n// Protrusion bounding box (edge offsets from main base)\nprot_x0 = 0;\nprot_x1 = d_length - 0.1356;   // 0.2597\nprot_y0 = -0.1478;             // extends beyond front\nprot_y1 = d_width - 0.5526;    // 0.0496\nprot_h  = 0.054745;\n\n// Coaxial circular profile\ncirc_cx      = 0.0942;\ncirc_cy      = -0.0821;\ncirc_r_outer = 0.0657;\ncirc_r_cut   = 0.0285;\ncirc_h       = 0.0547;\n\n$fn = 120;\n\n// D-shape 2D profile: flat back at high y, semicircular front at low y\nmodule d_shape_2d(len, wid, inset=0) {\n    r  = len/2 - inset;\n    cx = len/2;\n    cy = len/2;\n    union() {\n        // Straight rectangle (sides + back)\n        translate([inset, cy])\n            square([len - 2*inset, wid - cy - inset]);\n        // Lower semicircle (curved front wall)\n        translate([cx, cy])\n            intersection() {\n                circle(r = r);\n                translate([-(r+1), -(r+1)])\n                    square([2*(r+1), r+1]);\n            }\n    }\n}\n\n// Main assembly\ndifference() {\n    union() {\n        // D-shaped frame body\n        linear_extrude(height = extrusion_depth)\n            d_shape_2d(d_length, d_width);\n        // Shallow protrusion block attached to frame front\n        translate([prot_x0, prot_y0, 0])\n            cube([prot_x1 - prot_x0,\n                  prot_y1 - prot_y0,\n                  prot_h]);\n    }\n    // Inner through-opening (continuous through frame and protrusion)\n    translate([0, 0, -0.001])\n        linear_extrude(height = extrusion_depth + 0.002)\n            d_shape_2d(d_length, d_width, wall_t);\n    // Concentric circular cut through protrusion band\n    translate([circ_cx, circ_cy, -0.001])\n        cylinder(h = circ_h + 0.002, r = circ_r_cut);\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

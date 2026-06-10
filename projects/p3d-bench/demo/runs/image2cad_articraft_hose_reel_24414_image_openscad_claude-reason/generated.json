@@ -1,0 +1,23 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "image2cad",
+  "case_id": "articraft/hose_reel_24414",
+  "model": "claude-reason",
+  "input_spec": "image",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Reference image: hose reel.",
+  "metrics": {
+    "chamfer_distance": 0.005512,
+    "hausdorff_distance": 0.398412,
+    "f_score_005": 0.7379,
+    "f_score_001": 0.181,
+    "normal_consistency": 0.4923,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// Wall-mounted hose reel with inlet valve and outlet faucet\n// Parameters (mm)\n$fn = 64;\n\n// Reel drum\nflange_dia    = 220;\nflange_thk    = 6;\ndrum_dia      = 130;\ndrum_width    = 110;     // distance between flanges\nhose_dia      = 10;      // wound hose cross-section\nhose_turns    = 9;\n\n// Mounting holes on flange\nmount_hole_d  = 6;\nmount_offset  = 35;      // from center\n\n// Inlet pipe (top)\ninlet_pipe_d  = 14;\ninlet_pipe_h  = 280;\ninlet_valve_d = 28;\n\n// Outlet pipe (bottom) with faucet\noutlet_pipe_d = 14;\noutlet_pipe_h = 180;\nfaucet_body_d = 26;\n\n// ---------- Modules ----------\nmodule flange() {\n    cylinder(h=flange_thk, d=flange_dia);\n}\n\nmodule drum_core() {\n    cylinder(h=drum_width, d=drum_dia);\n}\n\nmodule wound_hose() {\n    // Stack of toroidal hose loops along the drum axis\n    coil_d = drum_dia + hose_dia;\n    for (i = [0 : hose_turns-1]) {\n        translate([0, 0, hose_dia/2 + i*hose_dia])\n            rotate_extrude()\n                translate([coil_d/2, 0, 0])\n                    circle(d=hose_dia);\n    }\n}\n\nmodule reel() {\n    // Reel oriented along Y axis (axle horizontal)\n    rotate([90, 0, 0]) {\n        // Back flange\n        flange();\n        // Front flange\n        translate([0, 0, drum_width + flange_thk]) flange();\n        // Drum core\n        translate([0, 0, flange_thk]) drum_core();\n        // Hose coil on drum\n        translate([0, 0, flange_thk]) wound_hose();\n    }\n}\n\nmodule flange_mount_holes() {\n    // Four small holes in a square pattern on the front flange\n    rotate([90, 0, 0])\n    translate([0, 0, drum_width + 2*flange_thk - 1])\n        for (x = [-1, 1], z = [-1, 1])\n            translate([x*mount_offset/2, z*mount_offset/2, 0])\n                cylinder(h=flange_thk+2, d=mount_hole_d);\n}\n\nmodule valve_handle() {\n    // Hex-ish valve body on top\n    cylinder(h=18, d=inlet_valve_d, $fn=6);\n    translate([0, 0, 18]) cylinder(h=6, d=inlet_valve_d*0.6);\n}\n\nmodule inlet_assembly() {\n    // Comes off the back-top of the reel, curves up to wall valve\n    translate([-flange_dia/2 + 10, 0, 0]) {\n        // Vertical pipe\n        cylinder(h=inlet_pipe_h, d=inlet_pipe_d);\n        // Curved elbow at bottom going toward reel\n        translate([0, 0, 0])\n            rotate([90, 0, 0])\n                rotate_extrude(angle=90)\n                    translate([20, 0, 0]) circle(d=inlet_pipe_d);\n        // Valve at top\n        translate([0, 0, inlet_pipe_h]) valve_handle();\n    }\n}\n\nmodule faucet() {\n    // Faucet body\n    sphere(d=faucet_body_d);\n    // Spout pointing down\n    translate([0, 0, -faucet_body_d/2])\n        cylinder(h=35, d1=faucet_body_d*0.7, d2=faucet_body_d*0.4);\n    // Lever handle\n    translate([-faucet_body_d/2, 0, 0])\n        rotate([0, -20, 0])\n            translate([-25, 0, 0])\n                cube([50, 5, 8], center=true);\n}\n\nmodule outlet_assembly() {\n    // Drops from bottom of reel down to faucet\n    translate([0, 0, -flange_dia/2 + 10]) {\n        cylinder(h=-outlet_pipe_h, d=outlet_pipe_d);\n        translate([0, 0, -outlet_pipe_h - faucet_body_d/2])\n            faucet();\n    }\n}\n\n// ---------- Assembly ----------\ndifference() {\n    union() {\n        reel();\n        inlet_assembly();\n        outlet_assembly();\n    }\n    flange_mount_holes();\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

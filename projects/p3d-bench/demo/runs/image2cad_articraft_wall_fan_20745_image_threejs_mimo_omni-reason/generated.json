@@ -1,0 +1,23 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "image2cad",
+  "case_id": "articraft/wall_fan_20745",
+  "model": "mimo_omni-reason",
+  "input_spec": "image",
+  "output_format": "threejs",
+  "valid": true,
+  "condition": "Reference image: wall fan.",
+  "metrics": {
+    "chamfer_distance": 0.006456,
+    "hausdorff_distance": 0.299714,
+    "f_score_005": 0.6231,
+    "f_score_001": 0.1119,
+    "normal_consistency": 0.5249,
+    "pred_open_edge_ratio": 0.043656
+  },
+  "program": {
+    "language": "threejs",
+    "source": "// Parameters (interpreted from the image's proportions)\nconst baseRadius = 10;\nconst baseHeight = 2;\nconst numFins = 36; // Radial fins for the base grille\nconst finWidth = 0.2;\nconst finHeight = 1.5;\nconst finDepth = 0.1;\n\nconst centralRadius = 3;\nconst centralHeight = 5;\n\nconst armLength = 8;\nconst armWidth = 1;\nconst armHeight = 1;\n\nconst armEndRadius = 0.5;\nconst armEndHeight = 1;\n\n// Horn profile (flared shape via LatheGeometry)\nconst hornProfile = [\n  new THREE.Vector2(armEndRadius, 0), // Start at arm end (radius, y)\n  new THREE.Vector2(5, 5)             // End at horn tip (radius, y)\n];\n\n// Base (cylinder + radial fins)\nconst baseGeometry = new THREE.CylinderGeometry(baseRadius, baseRadius, baseHeight, 32);\nconst baseMaterial = new THREE.MeshStandardMaterial({ color: 0x888888 });\nconst base = new THREE.Mesh(baseGeometry, baseMaterial);\nscene.add(base);\n\n// Add radial fins to the base\nfor (let i = 0; i < numFins; i++) {\n  const angle = (i * 2 * Math.PI) / numFins;\n  const finGeometry = new THREE.BoxGeometry(finWidth, finHeight, finDepth);\n  const fin = new THREE.Mesh(finGeometry, baseMaterial);\n  fin.position.set(\n    Math.cos(angle) * baseRadius,\n    baseHeight / 2, // Middle of base height\n    Math.sin(angle) * baseRadius\n  );\n  fin.rotation.y = angle; // Align fin with radial direction\n  scene.add(fin);\n}\n\n// Central cylinder (housing)\nconst centralGeometry = new THREE.CylinderGeometry(centralRadius, centralRadius, centralHeight, 32);\nconst centralMaterial = new THREE.MeshStandardMaterial({ color: 0x666666 });\nconst central = new THREE.Mesh(centralGeometry, centralMaterial);\ncentral.position.set(0, baseHeight + centralHeight / 2, 0); // Center on base\nscene.add(central);\n\n// Arm (connecting cylinder to horn)\nconst armGeometry = new THREE.BoxGeometry(armLength, armWidth, armHeight);\nconst armMaterial = new THREE.MeshStandardMaterial({ color: 0x777777 });\nconst arm = new THREE.Mesh(armGeometry, armMaterial);\narm.position.set(centralRadius, baseHeight + centralHeight, 0); // Attach to central cylinder\nscene.add(arm);\n\n// Bolt detail on the arm\nconst boltRadius = 0.2;\nconst boltHeight = 0.5;\nconst boltGeometry = new THREE.CylinderGeometry(boltRadius, boltRadius, boltHeight, 16);\nconst boltMaterial = new THREE.MeshStandardMaterial({ color: 0x555555 });\nconst bolt = new THREE.Mesh(boltGeometry, boltMaterial);\nbolt.position.set(\n  centralRadius + armLength / 2, // Middle of arm\n  baseHeight + centralHeight + boltHeight / 2, // On top of arm\n  0\n);\nscene.add(bolt);\n\n// Arm end cylinder (transition to horn)\nconst armEndGeometry = new THREE.CylinderGeometry(armEndRadius, armEndRadius, armEndHeight, 32);\nconst armEndMaterial = new THREE.MeshStandardMaterial({ color: 0x777777 });\nconst armEnd = new THREE.Mesh(armEndGeometry, armEndMaterial);\narmEnd.position.set(centralRadius + armLength, baseHeight + centralHeight, 0);\nscene.add(armEnd);\n\n// Horn (flared shape via LatheGeometry)\nconst hornGeometry = new THREE.LatheGeometry(hornProfile, 32);\nconst hornMaterial = new THREE.MeshStandardMaterial({ color: 0x999999 });\nconst horn = new THREE.Mesh(hornGeometry, hornMaterial);\nhorn.rotation.y = Math.PI / 2; // Align with arm (x-axis)\nhorn.position.set(centralRadius + armLength, baseHeight + centralHeight, 0);\nscene.add(horn);\n\n// Adjust camera to view the model\ncamera.position.set(20, 20, 20);\ncamera.lookAt(0, 0, 0);"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

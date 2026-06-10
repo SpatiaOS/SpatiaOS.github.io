@@ -1,0 +1,25 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0001/00017063",
+  "model": "gemini-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Use a main base declared size of length 0.75, width 0.21875, and height 0.28125, with main extrusion depth 0.2812. Form the base as one solid upper-side extrusion from the base datum, filling the footprint to the left, right, front, and back edges with offsets of 0, and keep the side outline arched rather than reducing it to a rectangular notch. Add one remove-material feature made only from 2 separate circular profiles, not a connected slot or rectangular pocket. Place one circular axis 0.0717 from the left edge and 0.0625 from the front edge, and place the other circular axis 0.6692 from the left edge and 0.0625 from the front edge; each circular profile has radius 0.0312. Cut from the upper side with the removed band running from 0.1081 to 0.1705 above the base underside, using cut depth 0.0625. Treat the 0.6599 by 0.0625 span only as the envelope of the circular pattern, leaving the surrounding and intervening material solid.",
+  "metrics": {
+    "chamfer_distance": 0.001839,
+    "hausdorff_distance": 0.123552,
+    "f_score_005": 0.7708,
+    "f_score_001": 0.2335,
+    "normal_consistency": 0.55,
+    "iou_csg": 0.424,
+    "iou_voxel": 0.4561,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// CAD Model: Base with two internal cylindrical voids\n// All dimensions are in inches/mm as per the provided unitless values.\n\n$fn = 100; // High resolution for smooth circular profiles\n\n// --- Parameters ---\n\n// Main base dimensions\nbase_length = 0.75;\nbase_width = 0.21875;\nbase_height = 0.28125;\n\n// Remove-material feature parameters\nhole_radius = 0.0312;\nhole1_x = 0.0717;      // Distance from left edge for first axis\nhole2_x = 0.6692;      // Distance from left edge for second axis\nhole_y = 0.0625;       // Distance from front edge for both axes\n\n// Cut height parameters (Z-axis)\ncut_z_start = 0.1081;  // Bottom of the removed band\ncut_z_end = 0.1705;    // Top of the removed band\ncut_depth = cut_z_end - cut_z_start; // ~0.0624 (matches the 0.0625 declared depth)\n\n// --- Modules ---\n\n// Module for the main rectangular base\nmodule main_base() {\n    // Formed as one solid upper-side extrusion from the base datum (z=0),\n    // filling the footprint to the left, right, front, and back edges.\n    cube([base_length, base_width, base_height]);\n}\n\n// Module for the subtractive features\nmodule removed_features() {\n    // Feature made only from 2 separate circular profiles\n    // The intervening material is left solid (not a connected slot)\n    \n    // First circular profile (Left)\n    translate([hole1_x, hole_y, cut_z_start])\n        cylinder(h=cut_depth, r=hole_radius);\n        \n    // Second circular profile (Right)\n    translate([hole2_x, hole_y, cut_z_start])\n        cylinder(h=cut_depth, r=hole_radius);\n}\n\n// --- Main Assembly ---\n\n// Subtract the circular profiles from the main base\ndifference() {\n    main_base();\n    removed_features();\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

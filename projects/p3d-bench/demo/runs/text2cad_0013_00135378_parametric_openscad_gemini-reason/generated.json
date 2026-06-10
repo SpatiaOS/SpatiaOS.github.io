@@ -1,0 +1,25 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0013/00135378",
+  "model": "gemini-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Start with a rounded, slot-like rectangular base footprint measuring length 0.75 and width 0.45, with base height 0.05625 and main depth 0.0562. Use a single central vertical axis located 0.375 from the left edge and 0.225 from the front edge for every circular feature. On that axis, include the base-level concentric circular profile set with radii 0.225, 0.1875, 0.1875, 0.0937, 0.0937, 0.0562, and 0.0562, using the paired inner loops as real openings or hollow boundaries rather than filled disks. Add a coaxial outer annular collar centered on the same axis, with outer radius 0.225 and inner radius 0.1875; it occupies the central 0.45 by 0.45 circular span of the base and reaches 0.1687 upward from the common shoulder datum. Add the smaller coaxial annular section with outer radius 0.0937 and inner radius 0.0562, positioned with offsets left 0.2812, right 0.2814, front 0.1312, and back 0.1314 to its circular span, and have it reach 0.0937 from the same shoulder datum. Add the innermost solid circular section with radius 0.0562, centered on the same axis, with circular span offsets left 0.3188, right 0.3188, front 0.1688, and back 0.1688; this solid round section has length 0.1125, width 0.1125, height 0.075, and reaches 0.075 from the same shoulder datum. Treat the coaxial reach depths 0.0562, 0.075, 0.0937, and 0.1687 as absolute distances from the shared shoulder face, not as stacked segment heights.",
+  "metrics": {
+    "chamfer_distance": 0.000255,
+    "hausdorff_distance": 0.070858,
+    "f_score_005": 0.9427,
+    "f_score_001": 0.5865,
+    "normal_consistency": 0.7565,
+    "iou_csg": 0.6734,
+    "iou_voxel": 0.6748,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// CAD Model: Rounded slot-like base with concentric collars and core\n// The model is centered at the origin (0,0,0). \n// The left edge is at X = -0.375 and front edge is at Y = -0.225,\n// which places the requested central axis exactly at the origin.\n\n// --- Parameters ---\n\n// Base footprint dimensions\nbase_length = 0.75;\nbase_width = 0.45;\nbase_height = 0.05625; // Nominal base height from description\nbase_depth = 0.0562;   // Absolute reach depth for the base\n\n// Concentric feature radii\nr_collar1_out = 0.225;\nr_collar1_in  = 0.1875;\nr_collar2_out = 0.0937;\nr_collar2_in  = 0.0562;\nr_core        = 0.0562;\n\n// Concentric feature absolute reach depths (from Z=0 shared shoulder datum)\ndepth_collar1 = 0.1687;\ndepth_collar2 = 0.0937;\ndepth_core    = 0.075;\n\n// Resolution for smooth curves\n$fn = 100;\n\n// --- Modules ---\n\n// Module for the rounded, slot-like rectangular base (stadium shape)\nmodule base_footprint(h) {\n    // Distance between centers of the two semi-circles\n    center_dist = base_length - base_width;\n    \n    hull() {\n        translate([-center_dist/2, 0, 0]) \n            cylinder(h=h, r=base_width/2);\n        translate([center_dist/2, 0, 0]) \n            cylinder(h=h, r=base_width/2);\n    }\n}\n\n// --- Main Geometry ---\n\nunion() {\n    // 1. Base footprint with the specified central annular opening\n    difference() {\n        base_footprint(base_depth);\n        \n        // Annular opening between r=0.1875 and r=0.0937\n        // Created by subtracting a hollow tube to leave the innermost base solid intact\n        difference() {\n            translate([0, 0, -1]) \n                cylinder(h=base_depth + 2, r=r_collar1_in);\n            translate([0, 0, -2]) \n                cylinder(h=base_depth + 4, r=r_collar2_out);\n        }\n    }\n    \n    // 2. Outer annular collar (occupies the central 0.45 circular span)\n    difference() {\n        cylinder(h=depth_collar1, r=r_collar1_out);\n        translate([0, 0, -1]) \n            cylinder(h=depth_collar1 + 2, r=r_collar1_in);\n    }\n    \n    // 3. Smaller coaxial annular section (Inner collar)\n    difference() {\n        cylinder(h=depth_collar2, r=r_collar2_out);\n        translate([0, 0, -1]) \n            cylinder(h=depth_collar2 + 2, r=r_collar2_in);\n    }\n    \n    // 4. Innermost solid circular section (Core)\n    cylinder(h=depth_core, r=r_core);\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

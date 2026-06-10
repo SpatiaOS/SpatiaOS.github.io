@@ -1,0 +1,25 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0059/00590932",
+  "model": "gpt55-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Start with the main base as a rectangular solid 0.165891 long by 0.325401 wide by 0.408347 high, with the main extrusion depth 0.4083. From the top of this base, cut a square recess 0.089326 by 0.089326, centered across the length with 0.0383 left and right edge offsets, set 0.0191 from the front edge and 0.217 from the back edge; this recess occupies the vertical band from 0.319 to 0.4083, giving it a depth of 0.0893 from the top. Cut a lower rectangular opening 0.076565 by 0.132416 through the vertical band from 0 to 0.319, with 0.0447 left offset, 0.0446 right offset, a front offset of -0.0303 so it breaks out beyond the front face, and 0.2233 remaining to the back. Cut away the upper back strip across the full 0.165891 length and 0.114848 width, leaving 0.2106 in front of it; this removed band runs from 0.2807 to 0.4083 with a cut depth of 0.1276, forming the high-to-low step. Add a shallow solid base-level section extending 0.0383 high with a 0.4339 by 0.1148 plan span, projecting 0.134 beyond both left and right sides of the main base and occupying the front 0.1148 of the width. In that shallow added section, include two circular through openings of radius 0.0255, both on the same front offset line 0.0574 from the front edge, with axes at left offsets -0.069 and 0.2349 relative to the main base left edge.",
+  "metrics": {
+    "chamfer_distance": 3.1e-05,
+    "hausdorff_distance": 0.038073,
+    "f_score_005": 0.9948,
+    "f_score_001": 0.5206,
+    "normal_consistency": 0.9291,
+    "iou_csg": 0.9784,
+    "iou_voxel": 0.984,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// Parameters\n$fn = 96;\neps = 0.0001;\n\n// Main base dimensions\nmain_length = 0.165891;\nmain_width  = 0.325401;\nmain_height = 0.408347;\nmain_nominal_top = 0.4083;\n\n// Top square recess\nrecess_size_x = 0.089326;\nrecess_size_y = 0.089326;\nrecess_left_offset = 0.0383;\nrecess_front_offset = 0.0191;\nrecess_bottom_z = 0.319;\n\n// Lower rectangular opening\nlower_opening_x = 0.076565;\nlower_opening_y = 0.132416;\nlower_left_offset = 0.0447;\nlower_front_offset = -0.0303;\nlower_bottom_z = 0;\nlower_top_z = 0.319;\n\n// Upper rear step cut\nstep_front_remaining = 0.2106;\nstep_back_width = 0.114848;\nstep_bottom_z = 0.2807;\nstep_cut_depth = 0.1276;\n\n// Shallow front base section\nfront_base_length = 0.4339;\nfront_base_width = 0.1148;\nfront_base_height = 0.0383;\nfront_base_left_projection = 0.134;\n\n// Circular openings in shallow section\nhole_radius = 0.0255;\nhole_front_offset = 0.0574;\nhole_x_positions = [-0.069, 0.2349];\n\n// Helper: cube from minimum corner\nmodule box_at(pos, size) {\n    translate(pos)\n        cube(size, center=false);\n}\n\n// Main rectangular base\nmodule main_base() {\n    box_at([0, 0, 0], [main_length, main_width, main_height]);\n}\n\n// Added shallow front base section\nmodule shallow_front_base() {\n    box_at(\n        [-front_base_left_projection, 0, 0],\n        [front_base_length, front_base_width, front_base_height]\n    );\n}\n\n// Top square recess cutter\nmodule top_square_recess_cut() {\n    box_at(\n        [recess_left_offset, recess_front_offset, recess_bottom_z],\n        [recess_size_x, recess_size_y, main_height - recess_bottom_z + eps]\n    );\n}\n\n// Lower rectangular opening cutter\nmodule lower_rectangular_opening_cut() {\n    box_at(\n        [lower_left_offset, lower_front_offset, lower_bottom_z - eps],\n        [lower_opening_x, lower_opening_y, lower_top_z - lower_bottom_z + 2*eps]\n    );\n}\n\n// Upper rear step cutter\nmodule upper_back_step_cut() {\n    box_at(\n        [-eps, step_front_remaining, step_bottom_z],\n        [main_length + 2*eps, step_back_width + eps, step_cut_depth + 2*eps]\n    );\n}\n\n// Vertical circular through-hole cutter for front base\nmodule front_base_hole_cut(xpos) {\n    translate([xpos, hole_front_offset, -eps])\n        cylinder(h=front_base_height + 2*eps, r=hole_radius, center=false);\n}\n\n// Final model\ndifference() {\n    union() {\n        main_base();\n        shallow_front_base();\n    }\n\n    // Recess from top face\n    top_square_recess_cut();\n\n    // Lower front opening\n    lower_rectangular_opening_cut();\n\n    // Rear high-to-low step\n    upper_back_step_cut();\n\n    // Through holes in shallow front base\n    for (xpos = hole_x_positions)\n        front_base_hole_cut(xpos);\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

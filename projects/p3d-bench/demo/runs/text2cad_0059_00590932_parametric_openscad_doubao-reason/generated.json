@@ -1,0 +1,28 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0059/00590932",
+  "model": "doubao-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Start with the main base as a rectangular solid 0.165891 long by 0.325401 wide by 0.408347 high, with the main extrusion depth 0.4083. From the top of this base, cut a square recess 0.089326 by 0.089326, centered across the length with 0.0383 left and right edge offsets, set 0.0191 from the front edge and 0.217 from the back edge; this recess occupies the vertical band from 0.319 to 0.4083, giving it a depth of 0.0893 from the top. Cut a lower rectangular opening 0.076565 by 0.132416 through the vertical band from 0 to 0.319, with 0.0447 left offset, 0.0446 right offset, a front offset of -0.0303 so it breaks out beyond the front face, and 0.2233 remaining to the back. Cut away the upper back strip across the full 0.165891 length and 0.114848 width, leaving 0.2106 in front of it; this removed band runs from 0.2807 to 0.4083 with a cut depth of 0.1276, forming the high-to-low step. Add a shallow solid base-level section extending 0.0383 high with a 0.4339 by 0.1148 plan span, projecting 0.134 beyond both left and right sides of the main base and occupying the front 0.1148 of the width. In that shallow added section, include two circular through openings of radius 0.0255, both on the same front offset line 0.0574 from the front edge, with axes at left offsets -0.069 and 0.2349 relative to the main base left edge.",
+  "metrics": {
+    "chamfer_distance": 2.5e-05,
+    "hausdorff_distance": 0.014853,
+    "f_score_005": 1.0,
+    "f_score_001": 0.5213,
+    "normal_consistency": 0.9442,
+    "iou_csg": 0.9945,
+    "iou_voxel": 1.0,
+    "pred_open_edge_ratio": 0.0,
+    "qa_overall": 1.0,
+    "qa_semantic": 1.0,
+    "qa_parametric": 1.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// Global Resolution Setting\n$fn = 64;\n\n// --------------------------\n// Base Dimension Parameters\n// --------------------------\nbase_length = 0.165891;    // X-axis span of main base\nbase_width = 0.325401;     // Y-axis span of main base\nbase_height = 0.408347;    // Total Z height of main base\nmain_extrusion_depth = 0.4083; // Working Z height for cut references\n\n// --------------------------\n// Top Square Recess Params\n// --------------------------\nrecess_side = 0.089326;\nrecess_left_offset = 0.0383;\nrecess_front_offset = 0.0191;\nrecess_bottom_z = 0.319;\nrecess_top_z = main_extrusion_depth;\nrecess_depth = recess_top_z - recess_bottom_z;\n\n// --------------------------\n// Lower Opening Params\n// --------------------------\nlower_opening_width = 0.076565;\nlower_opening_depth = 0.132416;\nlower_opening_left_offset = 0.0447;\nlower_opening_front_offset = -0.0303;\nlower_opening_top_z = 0.319;\n\n// --------------------------\n// Upper Back Strip Cut Params\n// --------------------------\nback_strip_width = 0.114848;\nback_strip_front_gap = 0.2106;\nback_strip_bottom_z = 0.2807;\nback_strip_top_z = main_extrusion_depth;\n\n// --------------------------\n// Shallow Base Section Params\n// --------------------------\nshallow_height = 0.0383;\nshallow_total_width = 0.4339;\nshallow_depth = 0.1148;\nshallow_side_projection = 0.134;\n\n// --------------------------\n// Shallow Section Hole Params\n// --------------------------\nhole_radius = 0.0255;\nhole_front_offset = 0.0574;\nhole1_x = -0.069;\nhole2_x = 0.2349;\n\n// --------------------------\n// Main Model Assembly\n// --------------------------\nunion() {\n    // Main base with all cut features\n    difference() {\n        // Base solid\n        cube([base_length, base_width, main_extrusion_depth]);\n\n        // Cut top square recess\n        translate([recess_left_offset, recess_front_offset, recess_bottom_z])\n        cube([recess_side, recess_side, recess_depth + 0.001]); // Small oversize ensures clean cut\n\n        // Cut lower through opening\n        translate([lower_opening_left_offset, lower_opening_front_offset, 0])\n        cube([lower_opening_width, lower_opening_depth, lower_opening_top_z + 0.001]);\n\n        // Cut upper back step strip\n        translate([0, back_strip_front_gap, back_strip_bottom_z])\n        cube([base_length, back_strip_width, (back_strip_top_z - back_strip_bottom_z) + 0.001]);\n    }\n\n    // Shallow front base extension with mounting holes\n    difference() {\n        // Shallow section solid\n        translate([-shallow_side_projection, 0, 0])\n        cube([shallow_total_width, shallow_depth, shallow_height]);\n\n        // Cut left mounting hole\n        translate([hole1_x, hole_front_offset, -0.001])\n        cylinder(h = shallow_height + 0.002, r = hole_radius);\n\n        // Cut right mounting hole\n        translate([hole2_x, hole_front_offset, -0.001])\n        cylinder(h = shallow_height + 0.002, r = hole_radius);\n    }\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

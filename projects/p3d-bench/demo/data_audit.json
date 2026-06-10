@@ -1,0 +1,1418 @@
+{
+  "schema_version": 1,
+  "notes": [
+    "This file reports source-data coverage for the public static demo.",
+    "It intentionally omits private absolute paths and raw production logs."
+  ],
+  "text_image2cad_source": {
+    "available": true,
+    "external_sources_used": false,
+    "source_formats": [
+      "cadquery",
+      "openscad"
+    ],
+    "source_model_count": 8,
+    "source_models": [
+      "gpt55-reason",
+      "gemini-reason",
+      "claude-reason",
+      "kimi_k26-reason",
+      "glm_5v_turbo-reason",
+      "doubao-reason",
+      "qwen-reason",
+      "mimo_omni-reason"
+    ],
+    "source_case_count": 13,
+    "source_run_count": 203,
+    "selected_case_count": 13,
+    "selected_run_count": 170,
+    "complete_run_summary": {
+      "cadquery": 68,
+      "openscad": 102
+    },
+    "incomplete_run_count": 33,
+    "cases": [
+      {
+        "case_id": "textimage2cad/107234_d484742b",
+        "selected": true,
+        "source_formats": [
+          "cadquery",
+          "openscad"
+        ],
+        "source_model_count": 8,
+        "source_models": [
+          "gpt55-reason",
+          "gemini-reason",
+          "claude-reason",
+          "kimi_k26-reason",
+          "glm_5v_turbo-reason",
+          "doubao-reason",
+          "qwen-reason",
+          "mimo_omni-reason"
+        ],
+        "complete_run_count": 13,
+        "model_count": 8,
+        "models": [
+          "gpt55-reason",
+          "gemini-reason",
+          "claude-reason",
+          "kimi_k26-reason",
+          "glm_5v_turbo-reason",
+          "doubao-reason",
+          "qwen-reason",
+          "mimo_omni-reason"
+        ],
+        "formats": {
+          "cadquery": 5,
+          "openscad": 8
+        },
+        "input_reference": true,
+        "incomplete_runs": [
+          {
+            "model": "glm_5v_turbo-reason",
+            "format": "cadquery",
+            "missing": [
+              "model_aligned.stl",
+              "pred_render_aligned.png"
+            ]
+          },
+          {
+            "model": "doubao-reason",
+            "format": "cadquery",
+            "missing": [
+              "model_aligned.stl",
+              "pred_render_aligned.png"
+            ]
+          },
+          {
+            "model": "mimo_omni-reason",
+            "format": "cadquery",
+            "missing": [
+              "model_aligned.stl",
+              "pred_render_aligned.png"
+            ]
+          }
+        ]
+      },
+      {
+        "case_id": "textimage2cad/111151_7c7f89f6",
+        "selected": true,
+        "source_formats": [
+          "cadquery",
+          "openscad"
+        ],
+        "source_model_count": 8,
+        "source_models": [
+          "gpt55-reason",
+          "gemini-reason",
+          "claude-reason",
+          "kimi_k26-reason",
+          "glm_5v_turbo-reason",
+          "doubao-reason",
+          "qwen-reason",
+          "mimo_omni-reason"
+        ],
+        "complete_run_count": 12,
+        "model_count": 8,
+        "models": [
+          "gpt55-reason",
+          "gemini-reason",
+          "claude-reason",
+          "kimi_k26-reason",
+          "glm_5v_turbo-reason",
+          "doubao-reason",
+          "qwen-reason",
+          "mimo_omni-reason"
+        ],
+        "formats": {
+          "cadquery": 4,
+          "openscad": 8
+        },
+        "input_reference": true,
+        "incomplete_runs": [
+          {
+            "model": "kimi_k26-reason",
+            "format": "cadquery",
+            "missing": [
+              "model_aligned.stl",
+              "pred_render_aligned.png"
+            ]
+          },
+          {
+            "model": "doubao-reason",
+            "format": "cadquery",
+            "missing": [
+              "model_aligned.stl",
+              "pred_render_aligned.png"
+            ]
+          },
+          {
+            "model": "qwen-reason",
+            "format": "cadquery",
+            "missing": [
+              "model_aligned.stl",
+              "pred_render_aligned.png"
+            ]
+          },
+          {
+            "model": "mimo_omni-reason",
+            "format": "cadquery",
+            "missing": [
+              "model_aligned.stl",
+              "pred_render_aligned.png"
+            ]
+          }
+        ]
+      },
+      {
+        "case_id": "textimage2cad/113856_e7484fa7",
+        "selected": true,
+        "source_formats": [
+          "cadquery",
+          "openscad"
+        ],
+        "source_model_count": 8,
+        "source_models": [
+          "gpt55-reason",
+          "gemini-reason",
+          "claude-reason",
+          "kimi_k26-reason",
+          "glm_5v_turbo-reason",
+          "doubao-reason",
+          "qwen-reason",
+          "mimo_omni-reason"
+        ],
+        "complete_run_count": 12,
+        "model_count": 8,
+        "models": [
+          "gpt55-reason",
+          "gemini-reason",
+          "claude-reason",
+          "kimi_k26-reason",
+          "glm_5v_turbo-reason",
+          "doubao-reason",
+          "qwen-reason",
+          "mimo_omni-reason"
+        ],
+        "formats": {
+          "cadquery": 4,
+          "openscad": 8
+        },
+        "input_reference": true,
+        "incomplete_runs": [
+          {
+            "model": "glm_5v_turbo-reason",
+            "format": "cadquery",
+            "missing": [
+              "model_aligned.stl",
+              "pred_render_aligned.png"
+            ]
+          },
+          {
+            "model": "qwen-reason",
+            "format": "cadquery",
+            "missing": [
+              "model_aligned.stl",
+              "pred_render_aligned.png"
+            ]
+          }
+        ]
+      },
+      {
+        "case_id": "textimage2cad/117698_aca36590",
+        "selected": true,
+        "source_formats": [
+          "cadquery",
+          "openscad"
+        ],
+        "source_model_count": 8,
+        "source_models": [
+          "gpt55-reason",
+          "gemini-reason",
+          "claude-reason",
+          "kimi_k26-reason",
+          "glm_5v_turbo-reason",
+          "doubao-reason",
+          "qwen-reason",
+          "mimo_omni-reason"
+        ],
+        "complete_run_count": 14,
+        "model_count": 8,
+        "models": [
+          "gpt55-reason",
+          "gemini-reason",
+          "claude-reason",
+          "kimi_k26-reason",
+          "glm_5v_turbo-reason",
+          "doubao-reason",
+          "qwen-reason",
+          "mimo_omni-reason"
+        ],
+        "formats": {
+          "cadquery": 6,
+          "openscad": 8
+        },
+        "input_reference": true,
+        "incomplete_runs": [
+          {
+            "model": "doubao-reason",
+            "format": "cadquery",
+            "missing": [
+              "model_aligned.stl",
+              "pred_render_aligned.png"
+            ]
+          },
+          {
+            "model": "qwen-reason",
+            "format": "cadquery",
+            "missing": [
+              "model_aligned.stl",
+              "pred_render_aligned.png"
+            ]
+          }
+        ]
+      },
+      {
+        "case_id": "textimage2cad/120712_92f373b4",
+        "selected": true,
+        "source_formats": [
+          "cadquery",
+          "openscad"
+        ],
+        "source_model_count": 8,
+        "source_models": [
+          "gpt55-reason",
+          "gemini-reason",
+          "claude-reason",
+          "kimi_k26-reason",
+          "glm_5v_turbo-reason",
+          "doubao-reason",
+          "qwen-reason",
+          "mimo_omni-reason"
+        ],
+        "complete_run_count": 15,
+        "model_count": 8,
+        "models": [
+          "gpt55-reason",
+          "gemini-reason",
+          "claude-reason",
+          "kimi_k26-reason",
+          "glm_5v_turbo-reason",
+          "doubao-reason",
+          "qwen-reason",
+          "mimo_omni-reason"
+        ],
+        "formats": {
+          "cadquery": 7,
+          "openscad": 8
+        },
+        "input_reference": true,
+        "incomplete_runs": [
+          {
+            "model": "qwen-reason",
+            "format": "cadquery",
+            "missing": [
+              "model_aligned.stl",
+              "pred_render_aligned.png"
+            ]
+          }
+        ]
+      },
+      {
+        "case_id": "textimage2cad/127967_a1740148",
+        "selected": true,
+        "source_formats": [
+          "cadquery",
+          "openscad"
+        ],
+        "source_model_count": 8,
+        "source_models": [
+          "gpt55-reason",
+          "gemini-reason",
+          "claude-reason",
+          "kimi_k26-reason",
+          "glm_5v_turbo-reason",
+          "doubao-reason",
+          "qwen-reason",
+          "mimo_omni-reason"
+        ],
+        "complete_run_count": 12,
+        "model_count": 8,
+        "models": [
+          "gpt55-reason",
+          "gemini-reason",
+          "claude-reason",
+          "kimi_k26-reason",
+          "glm_5v_turbo-reason",
+          "doubao-reason",
+          "qwen-reason",
+          "mimo_omni-reason"
+        ],
+        "formats": {
+          "cadquery": 4,
+          "openscad": 8
+        },
+        "input_reference": true,
+        "incomplete_runs": [
+          {
+            "model": "glm_5v_turbo-reason",
+            "format": "cadquery",
+            "missing": [
+              "model_aligned.stl",
+              "pred_render_aligned.png"
+            ]
+          },
+          {
+            "model": "doubao-reason",
+            "format": "cadquery",
+            "missing": [
+              "model_aligned.stl",
+              "pred_render_aligned.png"
+            ]
+          },
+          {
+            "model": "qwen-reason",
+            "format": "cadquery",
+            "missing": [
+              "model_aligned.stl",
+              "pred_render_aligned.png"
+            ]
+          },
+          {
+            "model": "mimo_omni-reason",
+            "format": "cadquery",
+            "missing": [
+              "model_aligned.stl",
+              "pred_render_aligned.png"
+            ]
+          }
+        ]
+      },
+      {
+        "case_id": "textimage2cad/135295_38f19234",
+        "selected": true,
+        "source_formats": [
+          "cadquery",
+          "openscad"
+        ],
+        "source_model_count": 8,
+        "source_models": [
+          "gpt55-reason",
+          "gemini-reason",
+          "claude-reason",
+          "kimi_k26-reason",
+          "glm_5v_turbo-reason",
+          "doubao-reason",
+          "qwen-reason",
+          "mimo_omni-reason"
+        ],
+        "complete_run_count": 13,
+        "model_count": 8,
+        "models": [
+          "gpt55-reason",
+          "gemini-reason",
+          "claude-reason",
+          "kimi_k26-reason",
+          "glm_5v_turbo-reason",
+          "doubao-reason",
+          "qwen-reason",
+          "mimo_omni-reason"
+        ],
+        "formats": {
+          "cadquery": 5,
+          "openscad": 8
+        },
+        "input_reference": true,
+        "incomplete_runs": [
+          {
+            "model": "glm_5v_turbo-reason",
+            "format": "cadquery",
+            "missing": [
+              "model_aligned.stl",
+              "pred_render_aligned.png"
+            ]
+          },
+          {
+            "model": "doubao-reason",
+            "format": "cadquery",
+            "missing": [
+              "model_aligned.stl",
+              "pred_render_aligned.png"
+            ]
+          }
+        ]
+      },
+      {
+        "case_id": "textimage2cad/142503_1fd94cd7",
+        "selected": true,
+        "source_formats": [
+          "cadquery",
+          "openscad"
+        ],
+        "source_model_count": 8,
+        "source_models": [
+          "gpt55-reason",
+          "gemini-reason",
+          "claude-reason",
+          "kimi_k26-reason",
+          "glm_5v_turbo-reason",
+          "doubao-reason",
+          "qwen-reason",
+          "mimo_omni-reason"
+        ],
+        "complete_run_count": 13,
+        "model_count": 8,
+        "models": [
+          "gpt55-reason",
+          "gemini-reason",
+          "claude-reason",
+          "kimi_k26-reason",
+          "glm_5v_turbo-reason",
+          "doubao-reason",
+          "qwen-reason",
+          "mimo_omni-reason"
+        ],
+        "formats": {
+          "cadquery": 6,
+          "openscad": 7
+        },
+        "input_reference": true,
+        "incomplete_runs": [
+          {
+            "model": "glm_5v_turbo-reason",
+            "format": "cadquery",
+            "missing": [
+              "model_aligned.stl",
+              "pred_render_aligned.png"
+            ]
+          },
+          {
+            "model": "claude-reason",
+            "format": "openscad",
+            "missing": [
+              "model_aligned.stl",
+              "pred_render_aligned.png"
+            ]
+          }
+        ]
+      },
+      {
+        "case_id": "textimage2cad/144940_885193da",
+        "selected": true,
+        "source_formats": [
+          "cadquery",
+          "openscad"
+        ],
+        "source_model_count": 8,
+        "source_models": [
+          "gpt55-reason",
+          "gemini-reason",
+          "claude-reason",
+          "kimi_k26-reason",
+          "glm_5v_turbo-reason",
+          "doubao-reason",
+          "qwen-reason",
+          "mimo_omni-reason"
+        ],
+        "complete_run_count": 13,
+        "model_count": 8,
+        "models": [
+          "gpt55-reason",
+          "gemini-reason",
+          "claude-reason",
+          "kimi_k26-reason",
+          "glm_5v_turbo-reason",
+          "doubao-reason",
+          "qwen-reason",
+          "mimo_omni-reason"
+        ],
+        "formats": {
+          "cadquery": 5,
+          "openscad": 8
+        },
+        "input_reference": true,
+        "incomplete_runs": [
+          {
+            "model": "doubao-reason",
+            "format": "cadquery",
+            "missing": [
+              "model_aligned.stl",
+              "pred_render_aligned.png"
+            ]
+          },
+          {
+            "model": "mimo_omni-reason",
+            "format": "cadquery",
+            "missing": [
+              "model_aligned.stl",
+              "pred_render_aligned.png"
+            ]
+          }
+        ]
+      },
+      {
+        "case_id": "textimage2cad/20260_4a01a99d",
+        "selected": true,
+        "source_formats": [
+          "cadquery",
+          "openscad"
+        ],
+        "source_model_count": 8,
+        "source_models": [
+          "gpt55-reason",
+          "gemini-reason",
+          "claude-reason",
+          "kimi_k26-reason",
+          "glm_5v_turbo-reason",
+          "doubao-reason",
+          "qwen-reason",
+          "mimo_omni-reason"
+        ],
+        "complete_run_count": 12,
+        "model_count": 8,
+        "models": [
+          "gpt55-reason",
+          "gemini-reason",
+          "claude-reason",
+          "kimi_k26-reason",
+          "glm_5v_turbo-reason",
+          "doubao-reason",
+          "qwen-reason",
+          "mimo_omni-reason"
+        ],
+        "formats": {
+          "cadquery": 5,
+          "openscad": 7
+        },
+        "input_reference": true,
+        "incomplete_runs": [
+          {
+            "model": "glm_5v_turbo-reason",
+            "format": "cadquery",
+            "missing": [
+              "model_aligned.stl",
+              "pred_render_aligned.png"
+            ]
+          },
+          {
+            "model": "doubao-reason",
+            "format": "cadquery",
+            "missing": [
+              "model_aligned.stl",
+              "pred_render_aligned.png"
+            ]
+          },
+          {
+            "model": "qwen-reason",
+            "format": "cadquery",
+            "missing": [
+              "model_aligned.stl",
+              "pred_render_aligned.png"
+            ]
+          },
+          {
+            "model": "gpt55-reason",
+            "format": "openscad",
+            "missing": [
+              "model_aligned.stl",
+              "pred_render_aligned.png"
+            ]
+          }
+        ]
+      },
+      {
+        "case_id": "textimage2cad/32211_8a51dfa6",
+        "selected": true,
+        "source_formats": [
+          "cadquery",
+          "openscad"
+        ],
+        "source_model_count": 8,
+        "source_models": [
+          "gpt55-reason",
+          "gemini-reason",
+          "claude-reason",
+          "kimi_k26-reason",
+          "glm_5v_turbo-reason",
+          "doubao-reason",
+          "qwen-reason",
+          "mimo_omni-reason"
+        ],
+        "complete_run_count": 15,
+        "model_count": 8,
+        "models": [
+          "gpt55-reason",
+          "gemini-reason",
+          "claude-reason",
+          "kimi_k26-reason",
+          "glm_5v_turbo-reason",
+          "doubao-reason",
+          "qwen-reason",
+          "mimo_omni-reason"
+        ],
+        "formats": {
+          "cadquery": 7,
+          "openscad": 8
+        },
+        "input_reference": true,
+        "incomplete_runs": [
+          {
+            "model": "glm_5v_turbo-reason",
+            "format": "cadquery",
+            "missing": [
+              "model_aligned.stl",
+              "pred_render_aligned.png"
+            ]
+          }
+        ]
+      },
+      {
+        "case_id": "textimage2cad/32216_06401c17",
+        "selected": true,
+        "source_formats": [
+          "cadquery",
+          "openscad"
+        ],
+        "source_model_count": 8,
+        "source_models": [
+          "gpt55-reason",
+          "gemini-reason",
+          "claude-reason",
+          "kimi_k26-reason",
+          "glm_5v_turbo-reason",
+          "doubao-reason",
+          "qwen-reason",
+          "mimo_omni-reason"
+        ],
+        "complete_run_count": 12,
+        "model_count": 8,
+        "models": [
+          "gpt55-reason",
+          "gemini-reason",
+          "claude-reason",
+          "kimi_k26-reason",
+          "glm_5v_turbo-reason",
+          "doubao-reason",
+          "qwen-reason",
+          "mimo_omni-reason"
+        ],
+        "formats": {
+          "cadquery": 4,
+          "openscad": 8
+        },
+        "input_reference": true,
+        "incomplete_runs": [
+          {
+            "model": "glm_5v_turbo-reason",
+            "format": "cadquery",
+            "missing": [
+              "model_aligned.stl",
+              "pred_render_aligned.png"
+            ]
+          },
+          {
+            "model": "doubao-reason",
+            "format": "cadquery",
+            "missing": [
+              "model_aligned.stl",
+              "pred_render_aligned.png"
+            ]
+          },
+          {
+            "model": "qwen-reason",
+            "format": "cadquery",
+            "missing": [
+              "model_aligned.stl",
+              "pred_render_aligned.png"
+            ]
+          },
+          {
+            "model": "mimo_omni-reason",
+            "format": "cadquery",
+            "missing": [
+              "model_aligned.stl",
+              "pred_render_aligned.png"
+            ]
+          }
+        ]
+      },
+      {
+        "case_id": "textimage2cad/33528_10e28c4c",
+        "selected": true,
+        "source_formats": [
+          "cadquery",
+          "openscad"
+        ],
+        "source_model_count": 8,
+        "source_models": [
+          "gpt55-reason",
+          "gemini-reason",
+          "claude-reason",
+          "kimi_k26-reason",
+          "glm_5v_turbo-reason",
+          "doubao-reason",
+          "qwen-reason",
+          "mimo_omni-reason"
+        ],
+        "complete_run_count": 14,
+        "model_count": 8,
+        "models": [
+          "gpt55-reason",
+          "gemini-reason",
+          "claude-reason",
+          "kimi_k26-reason",
+          "glm_5v_turbo-reason",
+          "doubao-reason",
+          "qwen-reason",
+          "mimo_omni-reason"
+        ],
+        "formats": {
+          "cadquery": 6,
+          "openscad": 8
+        },
+        "input_reference": true,
+        "incomplete_runs": [
+          {
+            "model": "qwen-reason",
+            "format": "cadquery",
+            "missing": [
+              "model_aligned.stl",
+              "pred_render_aligned.png"
+            ]
+          },
+          {
+            "model": "mimo_omni-reason",
+            "format": "cadquery",
+            "missing": [
+              "model_aligned.stl",
+              "pred_render_aligned.png"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "image2cad_articraft_source": {
+    "available": true,
+    "external_sources_used": false,
+    "input_thumbnail_source": "provided_bundle_gt_render",
+    "paper_native_formats": [
+      "cadquery",
+      "openscad",
+      "threejs"
+    ],
+    "source_model_count": 8,
+    "source_models": [
+      "gpt55-reason",
+      "gemini-reason",
+      "claude-reason",
+      "kimi_k26-reason",
+      "glm_5v_turbo-reason",
+      "doubao-reason",
+      "qwen-reason",
+      "mimo_omni-reason"
+    ],
+    "source_case_count": 17,
+    "selected_case_count": 17,
+    "selected_run_count": 372,
+    "native_format_summary": {
+      "cadquery": 17,
+      "openscad": 17,
+      "threejs": 17
+    },
+    "complete_run_summary": {
+      "cadquery": 101,
+      "openscad": 136,
+      "threejs": 135
+    },
+    "missing_native_formats": [],
+    "incomplete_run_count": 0,
+    "cases": [
+      {
+        "case_id": "articraft/toy_robot_20546",
+        "selected": true,
+        "complete_run_count": 23,
+        "model_count": 8,
+        "models": [
+          "claude-reason",
+          "doubao-reason",
+          "gemini-reason",
+          "glm_5v_turbo-reason",
+          "gpt55-reason",
+          "kimi_k26-reason",
+          "mimo_omni-reason",
+          "qwen-reason"
+        ],
+        "formats": {
+          "cadquery": 7,
+          "openscad": 8,
+          "threejs": 8
+        },
+        "missing_native_formats": [],
+        "missing_model_format_pairs": [
+          {
+            "model": "doubao-reason",
+            "format": "cadquery"
+          }
+        ],
+        "input_image": true,
+        "incomplete_runs": []
+      },
+      {
+        "case_id": "articraft/guitar_20636",
+        "selected": true,
+        "complete_run_count": 23,
+        "model_count": 8,
+        "models": [
+          "claude-reason",
+          "doubao-reason",
+          "gemini-reason",
+          "glm_5v_turbo-reason",
+          "gpt55-reason",
+          "kimi_k26-reason",
+          "mimo_omni-reason",
+          "qwen-reason"
+        ],
+        "formats": {
+          "cadquery": 7,
+          "openscad": 8,
+          "threejs": 8
+        },
+        "missing_native_formats": [],
+        "missing_model_format_pairs": [
+          {
+            "model": "qwen-reason",
+            "format": "cadquery"
+          }
+        ],
+        "input_image": true,
+        "incomplete_runs": []
+      },
+      {
+        "case_id": "articraft/wall_fan_20745",
+        "selected": true,
+        "complete_run_count": 22,
+        "model_count": 8,
+        "models": [
+          "claude-reason",
+          "doubao-reason",
+          "gemini-reason",
+          "glm_5v_turbo-reason",
+          "gpt55-reason",
+          "kimi_k26-reason",
+          "mimo_omni-reason",
+          "qwen-reason"
+        ],
+        "formats": {
+          "cadquery": 6,
+          "openscad": 8,
+          "threejs": 8
+        },
+        "missing_native_formats": [],
+        "missing_model_format_pairs": [
+          {
+            "model": "claude-reason",
+            "format": "cadquery"
+          },
+          {
+            "model": "doubao-reason",
+            "format": "cadquery"
+          }
+        ],
+        "input_image": true,
+        "incomplete_runs": []
+      },
+      {
+        "case_id": "articraft/clock_21133",
+        "selected": true,
+        "complete_run_count": 24,
+        "model_count": 8,
+        "models": [
+          "claude-reason",
+          "doubao-reason",
+          "gemini-reason",
+          "glm_5v_turbo-reason",
+          "gpt55-reason",
+          "kimi_k26-reason",
+          "mimo_omni-reason",
+          "qwen-reason"
+        ],
+        "formats": {
+          "cadquery": 8,
+          "openscad": 8,
+          "threejs": 8
+        },
+        "missing_native_formats": [],
+        "missing_model_format_pairs": [],
+        "input_image": true,
+        "incomplete_runs": []
+      },
+      {
+        "case_id": "articraft/hand_plane_23751",
+        "selected": true,
+        "complete_run_count": 22,
+        "model_count": 8,
+        "models": [
+          "claude-reason",
+          "doubao-reason",
+          "gemini-reason",
+          "glm_5v_turbo-reason",
+          "gpt55-reason",
+          "kimi_k26-reason",
+          "mimo_omni-reason",
+          "qwen-reason"
+        ],
+        "formats": {
+          "cadquery": 6,
+          "openscad": 8,
+          "threejs": 8
+        },
+        "missing_native_formats": [],
+        "missing_model_format_pairs": [
+          {
+            "model": "doubao-reason",
+            "format": "cadquery"
+          },
+          {
+            "model": "qwen-reason",
+            "format": "cadquery"
+          }
+        ],
+        "input_image": true,
+        "incomplete_runs": []
+      },
+      {
+        "case_id": "articraft/piston_24012",
+        "selected": true,
+        "complete_run_count": 21,
+        "model_count": 8,
+        "models": [
+          "claude-reason",
+          "doubao-reason",
+          "gemini-reason",
+          "glm_5v_turbo-reason",
+          "gpt55-reason",
+          "kimi_k26-reason",
+          "mimo_omni-reason",
+          "qwen-reason"
+        ],
+        "formats": {
+          "cadquery": 5,
+          "openscad": 8,
+          "threejs": 8
+        },
+        "missing_native_formats": [],
+        "missing_model_format_pairs": [
+          {
+            "model": "glm_5v_turbo-reason",
+            "format": "cadquery"
+          },
+          {
+            "model": "doubao-reason",
+            "format": "cadquery"
+          },
+          {
+            "model": "qwen-reason",
+            "format": "cadquery"
+          }
+        ],
+        "input_image": true,
+        "incomplete_runs": []
+      },
+      {
+        "case_id": "articraft/keyboard_24074",
+        "selected": true,
+        "complete_run_count": 23,
+        "model_count": 8,
+        "models": [
+          "claude-reason",
+          "doubao-reason",
+          "gemini-reason",
+          "glm_5v_turbo-reason",
+          "gpt55-reason",
+          "kimi_k26-reason",
+          "mimo_omni-reason",
+          "qwen-reason"
+        ],
+        "formats": {
+          "cadquery": 7,
+          "openscad": 8,
+          "threejs": 8
+        },
+        "missing_native_formats": [],
+        "missing_model_format_pairs": [
+          {
+            "model": "mimo_omni-reason",
+            "format": "cadquery"
+          }
+        ],
+        "input_image": true,
+        "incomplete_runs": []
+      },
+      {
+        "case_id": "articraft/hose_reel_24414",
+        "selected": true,
+        "complete_run_count": 22,
+        "model_count": 8,
+        "models": [
+          "claude-reason",
+          "doubao-reason",
+          "gemini-reason",
+          "glm_5v_turbo-reason",
+          "gpt55-reason",
+          "kimi_k26-reason",
+          "mimo_omni-reason",
+          "qwen-reason"
+        ],
+        "formats": {
+          "cadquery": 6,
+          "openscad": 8,
+          "threejs": 8
+        },
+        "missing_native_formats": [],
+        "missing_model_format_pairs": [
+          {
+            "model": "doubao-reason",
+            "format": "cadquery"
+          },
+          {
+            "model": "mimo_omni-reason",
+            "format": "cadquery"
+          }
+        ],
+        "input_image": true,
+        "incomplete_runs": []
+      },
+      {
+        "case_id": "articraft/engine_24547",
+        "selected": true,
+        "complete_run_count": 21,
+        "model_count": 8,
+        "models": [
+          "claude-reason",
+          "doubao-reason",
+          "gemini-reason",
+          "glm_5v_turbo-reason",
+          "gpt55-reason",
+          "kimi_k26-reason",
+          "mimo_omni-reason",
+          "qwen-reason"
+        ],
+        "formats": {
+          "cadquery": 6,
+          "openscad": 8,
+          "threejs": 7
+        },
+        "missing_native_formats": [],
+        "missing_model_format_pairs": [
+          {
+            "model": "gpt55-reason",
+            "format": "threejs"
+          },
+          {
+            "model": "kimi_k26-reason",
+            "format": "cadquery"
+          },
+          {
+            "model": "doubao-reason",
+            "format": "cadquery"
+          }
+        ],
+        "input_image": true,
+        "incomplete_runs": []
+      },
+      {
+        "case_id": "articraft/shuttlecock_25809",
+        "selected": true,
+        "complete_run_count": 21,
+        "model_count": 8,
+        "models": [
+          "claude-reason",
+          "doubao-reason",
+          "gemini-reason",
+          "glm_5v_turbo-reason",
+          "gpt55-reason",
+          "kimi_k26-reason",
+          "mimo_omni-reason",
+          "qwen-reason"
+        ],
+        "formats": {
+          "cadquery": 5,
+          "openscad": 8,
+          "threejs": 8
+        },
+        "missing_native_formats": [],
+        "missing_model_format_pairs": [
+          {
+            "model": "kimi_k26-reason",
+            "format": "cadquery"
+          },
+          {
+            "model": "doubao-reason",
+            "format": "cadquery"
+          },
+          {
+            "model": "mimo_omni-reason",
+            "format": "cadquery"
+          }
+        ],
+        "input_image": true,
+        "incomplete_runs": []
+      },
+      {
+        "case_id": "articraft/coffee_grinder_26917",
+        "selected": true,
+        "complete_run_count": 23,
+        "model_count": 8,
+        "models": [
+          "claude-reason",
+          "doubao-reason",
+          "gemini-reason",
+          "glm_5v_turbo-reason",
+          "gpt55-reason",
+          "kimi_k26-reason",
+          "mimo_omni-reason",
+          "qwen-reason"
+        ],
+        "formats": {
+          "cadquery": 7,
+          "openscad": 8,
+          "threejs": 8
+        },
+        "missing_native_formats": [],
+        "missing_model_format_pairs": [
+          {
+            "model": "doubao-reason",
+            "format": "cadquery"
+          }
+        ],
+        "input_image": true,
+        "incomplete_runs": []
+      },
+      {
+        "case_id": "articraft/loader_34338",
+        "selected": true,
+        "complete_run_count": 22,
+        "model_count": 8,
+        "models": [
+          "claude-reason",
+          "doubao-reason",
+          "gemini-reason",
+          "glm_5v_turbo-reason",
+          "gpt55-reason",
+          "kimi_k26-reason",
+          "mimo_omni-reason",
+          "qwen-reason"
+        ],
+        "formats": {
+          "cadquery": 6,
+          "openscad": 8,
+          "threejs": 8
+        },
+        "missing_native_formats": [],
+        "missing_model_format_pairs": [
+          {
+            "model": "qwen-reason",
+            "format": "cadquery"
+          },
+          {
+            "model": "mimo_omni-reason",
+            "format": "cadquery"
+          }
+        ],
+        "input_image": true,
+        "incomplete_runs": []
+      },
+      {
+        "case_id": "articraft/speaker_36189",
+        "selected": true,
+        "complete_run_count": 20,
+        "model_count": 8,
+        "models": [
+          "claude-reason",
+          "doubao-reason",
+          "gemini-reason",
+          "glm_5v_turbo-reason",
+          "gpt55-reason",
+          "kimi_k26-reason",
+          "mimo_omni-reason",
+          "qwen-reason"
+        ],
+        "formats": {
+          "openscad": 8,
+          "threejs": 8,
+          "cadquery": 4
+        },
+        "missing_native_formats": [],
+        "missing_model_format_pairs": [
+          {
+            "model": "gpt55-reason",
+            "format": "cadquery"
+          },
+          {
+            "model": "doubao-reason",
+            "format": "cadquery"
+          },
+          {
+            "model": "qwen-reason",
+            "format": "cadquery"
+          },
+          {
+            "model": "mimo_omni-reason",
+            "format": "cadquery"
+          }
+        ],
+        "input_image": true,
+        "incomplete_runs": []
+      },
+      {
+        "case_id": "articraft/shock_absorber_127964",
+        "selected": true,
+        "complete_run_count": 20,
+        "model_count": 8,
+        "models": [
+          "claude-reason",
+          "doubao-reason",
+          "gemini-reason",
+          "glm_5v_turbo-reason",
+          "gpt55-reason",
+          "kimi_k26-reason",
+          "mimo_omni-reason",
+          "qwen-reason"
+        ],
+        "formats": {
+          "cadquery": 4,
+          "openscad": 8,
+          "threejs": 8
+        },
+        "missing_native_formats": [],
+        "missing_model_format_pairs": [
+          {
+            "model": "gemini-reason",
+            "format": "cadquery"
+          },
+          {
+            "model": "glm_5v_turbo-reason",
+            "format": "cadquery"
+          },
+          {
+            "model": "doubao-reason",
+            "format": "cadquery"
+          },
+          {
+            "model": "mimo_omni-reason",
+            "format": "cadquery"
+          }
+        ],
+        "input_image": true,
+        "incomplete_runs": []
+      },
+      {
+        "case_id": "articraft/pc_fan_128372",
+        "selected": true,
+        "complete_run_count": 23,
+        "model_count": 8,
+        "models": [
+          "claude-reason",
+          "doubao-reason",
+          "gemini-reason",
+          "glm_5v_turbo-reason",
+          "gpt55-reason",
+          "kimi_k26-reason",
+          "mimo_omni-reason",
+          "qwen-reason"
+        ],
+        "formats": {
+          "cadquery": 7,
+          "openscad": 8,
+          "threejs": 8
+        },
+        "missing_native_formats": [],
+        "missing_model_format_pairs": [
+          {
+            "model": "qwen-reason",
+            "format": "cadquery"
+          }
+        ],
+        "input_image": true,
+        "incomplete_runs": []
+      },
+      {
+        "case_id": "articraft/shed_146853",
+        "selected": true,
+        "complete_run_count": 21,
+        "model_count": 8,
+        "models": [
+          "claude-reason",
+          "doubao-reason",
+          "gemini-reason",
+          "glm_5v_turbo-reason",
+          "gpt55-reason",
+          "kimi_k26-reason",
+          "mimo_omni-reason",
+          "qwen-reason"
+        ],
+        "formats": {
+          "cadquery": 5,
+          "openscad": 8,
+          "threejs": 8
+        },
+        "missing_native_formats": [],
+        "missing_model_format_pairs": [
+          {
+            "model": "claude-reason",
+            "format": "cadquery"
+          },
+          {
+            "model": "doubao-reason",
+            "format": "cadquery"
+          },
+          {
+            "model": "mimo_omni-reason",
+            "format": "cadquery"
+          }
+        ],
+        "input_image": true,
+        "incomplete_runs": []
+      },
+      {
+        "case_id": "articraft/crt_tv_146890",
+        "selected": true,
+        "complete_run_count": 21,
+        "model_count": 8,
+        "models": [
+          "claude-reason",
+          "doubao-reason",
+          "gemini-reason",
+          "glm_5v_turbo-reason",
+          "gpt55-reason",
+          "kimi_k26-reason",
+          "mimo_omni-reason",
+          "qwen-reason"
+        ],
+        "formats": {
+          "cadquery": 5,
+          "openscad": 8,
+          "threejs": 8
+        },
+        "missing_native_formats": [],
+        "missing_model_format_pairs": [
+          {
+            "model": "kimi_k26-reason",
+            "format": "cadquery"
+          },
+          {
+            "model": "doubao-reason",
+            "format": "cadquery"
+          },
+          {
+            "model": "qwen-reason",
+            "format": "cadquery"
+          }
+        ],
+        "input_image": true,
+        "incomplete_runs": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0023/00239752",
+  "model": "doubao-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Start with a rectangular base solid of length 0.28896, width 0.75, and height 0.028846; use a main extrusion depth of 0.0288 from the base datum. On the upper face add two separate solid rectangular lengthwise ribs running the full 0.75 width direction; treat them as two ribs, not as one filled rectangular pad. The paired rib layout has an overall outside footprint of 0.162037 by 0.75, centered with left and right edge offsets of 0.0635, and the ribs rise 0.017308 above the base with extrusion depth 0.0173. Create three separate stepped circular removed features normal to the base, using axes offset from the left and front edges as follows: radius 0.013 at left offset 0.0352 and front offset 0.7072, radius 0.0173 at left offset 0.1433 and front offset 0.0577, and radius 0.013 at left offset 0.2538 and front offset 0.7072. These circular features are individual holes/recesses, not a rectangular pocket or plate; their pattern envelope is only a bounding span. Include an upper circular recess stage on the same axes occupying the vertical band from 0.0057 to 0.0288 above the base underside, with cut depth 0.0231. Include the deeper aligned circular cut stage on the same axes extending from 0.0288 down to -0.1154 relative to the base underside, with main cut depth 0.1442, so the deeper openings pass beyond the base underside while the shallow recesses stop above it.",
+  "metrics": {
+    "chamfer_distance": 4.6e-05,
+    "hausdorff_distance": 0.024899,
+    "f_score_005": 1.0,
+    "f_score_001": 0.8061,
+    "normal_consistency": 0.8406,
+    "iou_csg": 0.787,
+    "iou_voxel": 0.892,
+    "pred_open_edge_ratio": 0.0,
+    "qa_overall": 0.75,
+    "qa_semantic": 0.75,
+    "qa_parametric": 0.75
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// ==============================================\n// Parameters (all dimensions as specified)\n// ==============================================\n// Base dimensions (X: length, Y: width, Z: height, underside at Z=0)\nbase_length = 0.28896;\nbase_width = 0.75;\nbase_height = 0.028846;\nbase_extrusion_depth = 0.0288;\n\n// Rib parameters\nrib_outside_span = 0.162037;  // Total X span of paired ribs\nrib_edge_offset = 0.0635;     // Offset from base edges to outer rib edges\nrib_height = 0.017308;        // Height above base top face\nrib_extrusion_depth = 0.0173;\nrib_width = rib_outside_span / 3;  // Equal width ribs + equal gap between them\nrib_gap = rib_width;\n\n// Stepped hole parameters\nupper_recess_top_z = 0.0288;\nupper_recess_bottom_z = 0.0057;\nupper_recess_depth = upper_recess_top_z - upper_recess_bottom_z; // 0.0231 as specified\ndeep_cut_top_z = 0.0288;\ndeep_cut_bottom_z = -0.1154;\ndeep_cut_depth = deep_cut_top_z - deep_cut_bottom_z; // 0.1442 as specified\n\n// Hole position definitions (X = left offset, Y = front offset)\nhole_1_r = 0.013;  hole_1_x = 0.0352;  hole_1_y = 0.7072;\nhole_2_r = 0.0173; hole_2_x = 0.1433;  hole_2_y = 0.0577;\nhole_3_r = 0.013;  hole_3_x = 0.2538;  hole_3_y = 0.7072;\n\n// Curved surface resolution\n$fn = 64;\n\n// ==============================================\n// Module Definitions\n// ==============================================\n// Base solid\nmodule base_solid() {\n    cube([base_length, base_width, base_height]);\n}\n\n// Two separate lengthwise ribs\nmodule lengthwise_ribs() {\n    // Left rib\n    translate([rib_edge_offset, 0, base_height])\n        cube([rib_width, base_width, rib_height]);\n    // Right rib\n    translate([rib_edge_offset + rib_width + rib_gap, 0, base_height])\n        cube([rib_width, base_width, rib_height]);\n}\n\n// Reusable stepped hole cutout\nmodule stepped_hole(r, x_pos, y_pos) {\n    translate([x_pos, y_pos, 0]) {\n        // Upper shallow recess stage\n        translate([0, 0, upper_recess_bottom_z + upper_recess_depth/2])\n            cylinder(h=upper_recess_depth, r=r, center=true);\n        // Deeper through cut stage\n        translate([0, 0, deep_cut_bottom_z + deep_cut_depth/2])\n            cylinder(h=deep_cut_depth, r=r, center=true);\n    }\n}\n\n// ==============================================\n// Main Model Assembly\n// ==============================================\ndifference() {\n    // Merge base and ribs\n    union() {\n        base_solid();\n        lengthwise_ribs();\n    }\n\n    // Cut all three stepped holes\n    stepped_hole(hole_1_r, hole_1_x, hole_1_y);\n    stepped_hole(hole_2_r, hole_2_x, hole_2_y);\n    stepped_hole(hole_3_r, hole_3_x, hole_3_y);\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

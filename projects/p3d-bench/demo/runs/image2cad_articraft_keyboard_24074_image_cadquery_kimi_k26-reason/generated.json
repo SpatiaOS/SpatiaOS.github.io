@@ -1,0 +1,24 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "image2cad",
+  "case_id": "articraft/keyboard_24074",
+  "model": "kimi_k26-reason",
+  "input_spec": "image",
+  "output_format": "cadquery",
+  "valid": true,
+  "condition": "Reference image: keyboard.",
+  "metrics": {
+    "chamfer_distance": 7.7e-05,
+    "hausdorff_distance": 0.039878,
+    "f_score_005": 1.0,
+    "f_score_001": 0.7615,
+    "normal_consistency": 0.7694,
+    "iou_voxel": 0.5923,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "cadquery",
+    "source": "import cadquery as cq\n\n# =============================================================================\n# Keyboard Parameters\n# =============================================================================\n\n# Overall chassis dimensions (mm)\nkbd_length = 280.0\nkbd_width = 120.0\nbase_thickness = 4.0\ncorner_fillet = 3.0\n\n# Left-side cylindrical battery / hinge compartment\ncyl_diameter = 5.0\ncyl_length = kbd_width\n\n# Key parameters\nkey_pitch = 18.0            # Center-to-center distance (1U)\nkey_gap = 1.5               # Visual gap between adjacent caps\nkey_cap_y = key_pitch - key_gap   # Key depth (front-to-back)\nkey_height = 2.5            # How far keys protrude above the base\n\n# =============================================================================\n# Key Layout Definition\n# =============================================================================\n# Each row is defined by its Y position and a list of key widths in \"units\".\n# The layout approximates a compact 78-key keyboard (no numpad).\n# Positive Y points toward the back edge.\n\nkey_layout = [\n    # Row 0: Function keys (Esc, F1-F12, Eject)\n    (45.0, [1.0] * 14),\n\n    # Row 1: Number row (` through Backspace)\n    (27.0, [1.0] * 13 + [2.0]),\n\n    # Row 2: QWERTY row (Tab through \\)\n    (9.0, [1.5] + [1.0] * 12 + [1.5]),\n\n    # Row 3: Home row (Caps Lock through Enter)\n    (-9.0, [1.75] + [1.0] * 11 + [2.25]),\n\n    # Row 4: Lower alpha row (Left Shift through Right Shift)\n    (-27.0, [2.25] + [1.0] * 10 + [2.75]),\n\n    # Row 5: Bottom row (modifiers + spacebar)\n    (-45.0, [1.0, 1.0, 1.0, 1.25, 6.0, 1.25, 1.0, 1.0, 1.0]),\n]\n\n# =============================================================================\n# Base Chassis\n# =============================================================================\n# Create a thin rounded rectangular slab for the keyboard body.\n\nbase = (\n    cq.Workplane(\"XY\")\n    .box(kbd_length, kbd_width, base_thickness)\n    .edges(\"|Z\")\n    .fillet(corner_fillet)\n)\n\n# =============================================================================\n# Left-Side Cylindrical Compartment\n# =============================================================================\n# The image shows a distinct tube along the left edge that acts as a battery\n# housing / foot. It is positioned flush with the bottom face.\n\ncylinder = (\n    cq.Workplane(\"XZ\")\n    .cylinder(cyl_length, cyl_diameter / 2, centered=True)\n    .translate((-kbd_length / 2, 0, -base_thickness / 2 + cyl_diameter / 2))\n)\n\n# Merge the cylinder into the main chassis\nkeyboard = base.union(cylinder)\n\n# =============================================================================\n# Key Caps\n# =============================================================================\n# Generate each key cap as a rectangular prism, center it in its allocated\n# unit slot, and place it on top of the chassis.\n\nall_keys = None\n\nfor y_pos, key_widths in key_layout:\n    # Center the entire row horizontally on the chassis\n    row_width = sum(key_widths) * key_pitch\n    x_pos = -row_width / 2\n\n    for w in key_widths:\n        # Actual key cap width after accounting for the gap\n        cap_x = w * key_pitch - key_gap\n\n        # Build the key cap centered at the origin, then translate into place\n        cap = (\n            cq.Workplane(\"XY\")\n            .box(cap_x, key_cap_y, key_height)\n            .translate((\n                x_pos + (w * key_pitch) / 2,\n                y_pos,\n                base_thickness / 2 + key_height / 2\n            ))\n        )\n\n        # Slight top-edge chamfer for a realistic low-profile key appearance\n        cap = cap.faces(\">Z\").edges().chamfer(0.2)\n\n        # Accumulate keys into a single solid\n        if all_keys is None:\n            all_keys = cap\n        else:\n            all_keys = all_keys.union(cap)\n\n        # Advance to the next key slot\n        x_pos += w * key_pitch\n\n# =============================================================================\n# Final Assembly\n# =============================================================================\nresult = keyboard.union(all_keys)"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

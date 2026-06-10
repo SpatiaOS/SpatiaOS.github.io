@@ -1,0 +1,160 @@
+{
+  "parts": {
+    "part_1_base_slab": {
+      "coordinate_system": {
+        "Euler Angles": [0.0, 0.0, 0.0],
+        "Translation Vector": [0.0, 0.0, 0.0]
+      },
+      "sketch": {
+        "face_1": {
+          "loop_1_rounded_rectangle": {
+            "line_1_bottom_edge": {
+              "Start Point": [-70.0, -30.0],
+              "End Point": [70.0, -30.0]
+            },
+            "arc_1_right_round_end": {
+              "Start Point": [70.0, -30.0],
+              "Mid Point": [90.0, 0.0],
+              "End Point": [70.0, 30.0]
+            },
+            "line_2_top_edge": {
+              "Start Point": [70.0, 30.0],
+              "End Point": [-70.0, 30.0]
+            },
+            "arc_2_left_round_end": {
+              "Start Point": [-70.0, 30.0],
+              "Mid Point": [-90.0, 0.0],
+              "End Point": [-70.0, -30.0]
+            }
+          }
+        }
+      },
+      "extrusion": {
+        "extrude_depth_towards_normal": 10.0,
+        "extrude_depth_opposite_normal": 0.0,
+        "sketch_scale": 1.0,
+        "operation": "NewBodyFeatureOperation"
+      }
+    },
+    "part_2_base_through_holes": {
+      "coordinate_system": {
+        "Euler Angles": [0.0, 0.0, 0.0],
+        "Translation Vector": [0.0, 0.0, 0.0]
+      },
+      "sketch": {
+        "face_1": {
+          "loop_1_right_hole": {
+            "circle_1_right": {
+              "Center": [70.0, 0.0],
+              "Radius": 10.0
+            }
+          },
+          "loop_2_left_hole": {
+            "circle_2_left": {
+              "Center": [-70.0, 0.0],
+              "Radius": 10.0
+            }
+          }
+        }
+      },
+      "extrusion": {
+        "extrude_depth_towards_normal": 10.0,
+        "extrude_depth_opposite_normal": 0.0,
+        "sketch_scale": 1.0,
+        "operation": "CutFeatureOperation"
+      }
+    },
+    "part_3_upright_body": {
+      "coordinate_system": {
+        "Euler Angles": [0.0, 0.0, 0.0],
+        "Translation Vector": [0.0, 0.0, 10.0]
+      },
+      "sketch": {
+        "face_1": {
+          "loop_1_upright_profile": {
+            "line_1_lower_bottom_edge": {
+              "Start Point": [-60.0, -20.0],
+              "End Point": [60.0, -20.0]
+            },
+            "line_2_right_side": {
+              "Start Point": [60.0, -20.0],
+              "End Point": [60.0, 70.0]
+            },
+            "arc_1_curved_crown": {
+              "Start Point": [60.0, 70.0],
+              "Mid Point": [0.0, 90.0],
+              "End Point": [-60.0, 70.0]
+            },
+            "line_3_left_side": {
+              "Start Point": [-60.0, 70.0],
+              "End Point": [-60.0, -20.0]
+            }
+          }
+        }
+      },
+      "extrusion": {
+        "extrude_depth_towards_normal": 40.0,
+        "extrude_depth_opposite_normal": 0.0,
+        "sketch_scale": 1.0,
+        "operation": "JoinFeatureOperation"
+      }
+    },
+    "part_4_upright_through_hole": {
+      "coordinate_system": {
+        "Euler Angles": [90.0, 0.0, 0.0],
+        "Translation Vector": [0.0, 0.0, 40.0]
+      },
+      "sketch": {
+        "face_1": {
+          "loop_1_cross_passage": {
+            "circle_1_passage": {
+              "Center": [0.0, 25.0],
+              "Radius": 15.0
+            }
+          }
+        }
+      },
+      "extrusion": {
+        "extrude_depth_towards_normal": 40.0,
+        "extrude_depth_opposite_normal": 40.0,
+        "sketch_scale": 1.0,
+        "operation": "CutFeatureOperation"
+      }
+    },
+    "part_5_upper_relief_cut": {
+      "coordinate_system": {
+        "Euler Angles": [0.0, 0.0, 0.0],
+        "Translation Vector": [0.0, 0.0, 10.0]
+      },
+      "sketch": {
+        "face_1": {
+          "loop_1_relief_profile": {
+            "arc_1_relief_curve": {
+              "Start Point": [-60.0, 65.0],
+              "Mid Point": [0.0, 75.0],
+              "End Point": [60.0, 65.0]
+            },
+            "line_1_relief_bottom": {
+              "Start Point": [60.0, 65.0],
+              "End Point": [60.0, 70.0]
+            },
+            "line_2_relief_top_right": {
+              "Start Point": [60.0, 70.0],
+              "End Point": [-60.0, 70.0]
+            },
+            "line_3_relief_top_left": {
+              "Start Point": [-60.0, 70.0],
+              "End Point": [-60.0, 65.0]
+            }
+          }
+        }
+      },
+      "extrusion": {
+        "extrude_depth_towards_normal": 10.0,
+        "extrude_depth_opposite_normal": 0.0,
+        "sketch_scale": 1.0,
+        "operation": "CutFeatureOperation"
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "image2cad",
+  "case_id": "articraft/shuttlecock_25809",
+  "model": "mimo_omni-reason",
+  "input_spec": "image",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Reference image: shuttlecock.",
+  "metrics": {
+    "chamfer_distance": 0.010472,
+    "hausdorff_distance": 0.251215,
+    "f_score_005": 0.3721,
+    "f_score_001": 0.0382,
+    "normal_consistency": 0.7578,
+    "iou_voxel": 0.0401,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// Parameters\nL = 100;          // Total length of the object\nL_back = 10;      // Length of the back cylindrical part\nL_front = L - L_back; // Length of the front frustum part\nD_back = 50;      // Diameter of the back cylinder\nD_front = 40;     // Diameter of the front of the frustum\nt = 2;            // Wall thickness\nN = 8;            // Number of segments (for pattern repetition)\n$fn = 100;        // Smoothness for curved surfaces\n\n// Helper module: Rectangular slot (length, width, height)\nmodule rect_slot(l, w, h) {\n    cube([l, w, h], center = false);\n}\n\n// Helper module: Circular hole (diameter, height)\nmodule circ_hole(d, h) {\n    cylinder(h = h, d = d, center = false);\n}\n\n// Helper module: Slanted slot (length, width, slant_angle, height)\nmodule slant_slot(l, w, a, h) {\n    rotate([a, 0, 0])  // Slant around x-axis\n    cube([l, w, h], center = false);\n}\n\n// Module to place a slot at a specific (theta, z_slot) position\nmodule slot_at(theta, z_slot, slot_type, params) {\n    // Calculate radius at z_slot\n    if (z_slot <= L_back) {\n        // Back cylindrical part: radius is D_back/2\n        r = D_back / 2;\n    } else {\n        // Front frustum: radius interpolates between D_back/2 and D_front/2\n        r = D_back/2 + (D_front/2 - D_back/2) * ((z_slot - L_back) / L_front);\n    }\n    // Translate to (r*cos(theta), r*sin(theta), z_slot)\n    translate([r * cos(theta), r * sin(theta), z_slot])\n    // Rotate around z-axis to align tangent with x-axis\n    rotate([0, 0, theta])\n    if (slot_type == \"rect\") {\n        // params: [length, width, height]\n        rect_slot(params[0], params[1], params[2]);\n    } else if (slot_type == \"circ\") {\n        // params: [diameter, height]\n        circ_hole(params[0], params[1]);\n    } else if (slot_type == \"slant\") {\n        // params: [length, width, slant_angle, height]\n        slant_slot(params[0], params[1], params[2], params[3]);\n    }\n}\n\n// Module for the pattern in one segment (angle_step = 360/N)\nmodule segment_pattern(segment_index) {\n    angle_step = 360 / N;\n    theta_start = segment_index * angle_step;\n    // Place slots at various theta offsets within the segment\n    for (theta_offset = [5, 15, 25, 35]) {  // 4 slots per segment\n        theta = theta_start + theta_offset;\n        // Back cylindrical part (z=5)\n        slot_at(theta, 5, \"rect\", [3, 1, 2]);\n        // Back cylindrical part (z=10)\n        slot_at(theta, 10, \"rect\", [5, 1, 2]);\n        // Front frustum (z=30)\n        slot_at(theta, 30, \"circ\", [3, 2]);\n        // Front frustum (z=50)\n        slot_at(theta, 50, \"slant\", [5, 1, 45, 2]);\n        // Front frustum (z=70)\n        slot_at(theta, 70, \"rect\", [10, 1, 2]);\n        // Front frustum (z=90)\n        slot_at(theta, 90, \"circ\", [3, 2]);\n    }\n}\n\n// Full pattern: union of all segment patterns\nmodule full_pattern() {\n    for (i = [0 : N-1]) {\n        segment_pattern(i);\n    }\n}\n\n// Outer body: back cylinder + front frustum\nmodule outer_body() {\n    union() {\n        // Back cylinder\n        cylinder(h = L_back, d = D_back, center = false);\n        // Front frustum\n        translate([0, 0, L_back])\n        cylinder(h = L_front, r1 = D_back/2, r2 = D_front/2, center = false);\n    }\n}\n\n// Inner body: back cylinder + front frustum (smaller dimensions)\nmodule inner_body() {\n    translate([0, 0, -0.1])  // Offset to avoid z-fighting\n    union() {\n        // Back cylinder (inner)\n        cylinder(h = L_back + 0.2, d = D_back - 2*t, center = false);\n        // Front frustum (inner)\n        translate([0, 0, L_back])\n        cylinder(h = L_front + 0.2, r1 = D_back/2 - t, r2 = D_front/2 - t, center = false);\n    }\n}\n\n// Main shell: outer - inner\nmodule main_shell() {\n    difference() {\n        outer_body();\n        inner_body();\n    }\n}\n\n// Main model: shell minus pattern\nmodule main_model() {\n    difference() {\n        main_shell();\n        full_pattern();\n    }\n}\n\n// Render the main model\nmain_model();"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

@@ -1,0 +1,25 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0013/00135378",
+  "model": "claude-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Start with a rounded, slot-like rectangular base footprint measuring length 0.75 and width 0.45, with base height 0.05625 and main depth 0.0562. Use a single central vertical axis located 0.375 from the left edge and 0.225 from the front edge for every circular feature. On that axis, include the base-level concentric circular profile set with radii 0.225, 0.1875, 0.1875, 0.0937, 0.0937, 0.0562, and 0.0562, using the paired inner loops as real openings or hollow boundaries rather than filled disks. Add a coaxial outer annular collar centered on the same axis, with outer radius 0.225 and inner radius 0.1875; it occupies the central 0.45 by 0.45 circular span of the base and reaches 0.1687 upward from the common shoulder datum. Add the smaller coaxial annular section with outer radius 0.0937 and inner radius 0.0562, positioned with offsets left 0.2812, right 0.2814, front 0.1312, and back 0.1314 to its circular span, and have it reach 0.0937 from the same shoulder datum. Add the innermost solid circular section with radius 0.0562, centered on the same axis, with circular span offsets left 0.3188, right 0.3188, front 0.1688, and back 0.1688; this solid round section has length 0.1125, width 0.1125, height 0.075, and reaches 0.075 from the same shoulder datum. Treat the coaxial reach depths 0.0562, 0.075, 0.0937, and 0.1687 as absolute distances from the shared shoulder face, not as stacked segment heights.",
+  "metrics": {
+    "chamfer_distance": 0.000353,
+    "hausdorff_distance": 0.071279,
+    "f_score_005": 0.9066,
+    "f_score_001": 0.2669,
+    "normal_consistency": 0.7942,
+    "iou_csg": 0.6571,
+    "iou_voxel": 0.6459,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// ===== Parameters =====\nbase_length      = 0.75;     // X dimension of slot base\nbase_width       = 0.45;     // Y dimension of slot base\nbase_height      = 0.05625;  // Slot base thickness (shoulder datum at top)\n\n// Common central axis (slot is rounded with radius = base_width/2)\ncx = base_length/2;          // 0.375\ncy = base_width/2;           // 0.225\n\n// Outer annular collar\ncollar_or        = 0.225;\ncollar_ir        = 0.1875;\ncollar_h         = 0.1687;\n\n// Middle annular section\nmid_or           = 0.0937;\nmid_ir           = 0.0562;\nmid_h            = 0.0937;\n\n// Inner solid cylinder\ninner_r          = 0.0562;\ninner_h          = 0.075;\n\n$fn = 120;\n\n// ===== Modules =====\n\n// Rounded slot base footprint (2D)\nmodule slot_profile(L, W) {\n    hull() {\n        translate([ W/2,        W/2, 0]) circle(r = W/2);\n        translate([ L - W/2,    W/2, 0]) circle(r = W/2);\n    }\n}\n\n// Slot base solid\nmodule slot_base() {\n    linear_extrude(height = base_height)\n        slot_profile(base_length, base_width);\n}\n\n// Annular ring extruded to a given height\nmodule ring(or, ir, h) {\n    linear_extrude(height = h)\n        difference() {\n            circle(r = or);\n            circle(r = ir);\n        }\n}\n\n// ===== Assembly =====\n\nunion() {\n    // Step 1: Rounded slot-like base\n    slot_base();\n\n    // Step 2: Outer annular collar (OR 0.225, IR 0.1875), reaches 0.1687 from shoulder\n    translate([cx, cy, base_height])\n        ring(collar_or, collar_ir, collar_h);\n\n    // Step 3: Middle annular section (OR 0.0937, IR 0.0562), reaches 0.0937 from shoulder\n    translate([cx, cy, base_height])\n        ring(mid_or, mid_ir, mid_h);\n\n    // Step 4: Inner solid cylinder (R 0.0562), reaches 0.075 from shoulder\n    translate([cx, cy, base_height])\n        cylinder(h = inner_h, r = inner_r);\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}
