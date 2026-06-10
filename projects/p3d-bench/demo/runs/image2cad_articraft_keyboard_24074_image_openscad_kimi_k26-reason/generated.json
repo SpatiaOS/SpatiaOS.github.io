@@ -1,0 +1,24 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "image2cad",
+  "case_id": "articraft/keyboard_24074",
+  "model": "kimi_k26-reason",
+  "input_spec": "image",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Reference image: keyboard.",
+  "metrics": {
+    "chamfer_distance": 6.4e-05,
+    "hausdorff_distance": 0.043535,
+    "f_score_005": 1.0,
+    "f_score_001": 0.8616,
+    "normal_consistency": 0.8233,
+    "iou_voxel": 0.6966,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// ==========================================\n// Parametric Compact Keyboard Model\n// ==========================================\n// Recreation of a slim, compact wireless keyboard \n// with laptop-style flat keycaps and a front lip detail.\n\n// Resolution for curved surfaces\n$fn = 50;\n\n// --- Overall Keyboard Dimensions ---\nkb_width = 265;          // Overall width (mm)\nkb_depth = 110;          // Overall depth (mm)\nkb_thickness = 3.5;      // Base chassis thickness (mm)\ncorner_radius = 4;       // Corner radius of the chassis\nlip_radius = 1.2;        // Front edge lip radius\n\n// --- Key Parameters ---\nunit = 15.5;             // Key spacing unit (center-to-center, mm)\nkey_gap = 2.0;           // Total gap between adjacent keys (mm)\nkey_height = 1.5;        // Keycap height above base (mm)\n\n// --- Layout Margins ---\n// Center the 15-unit wide layout horizontally\nmargin_x = (kb_width - 15 * unit) / 2;\n// Center the 6-row layout vertically\nmargin_y = (kb_depth - 6 * unit) / 2;\n\n// --- Key Layout (widths in key units) ---\n// Approximate 65% compact ANSI-like layout with inverted-T arrow cluster\nlayout_rows = [\n    // Row 0: Bottom row (modifiers, spacebar, arrows)\n    [1.25, 1.25, 1.25, 6.25, 1, 1, 1, 1, 1],\n    // Row 1: ZXCV row + Up arrow above right-shift\n    [2.25, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1.75, 1],\n    // Row 2: Home row (ASDF)\n    [1.75, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2.25],\n    // Row 3: QWERTY row\n    [1.5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1.5],\n    // Row 4: Number row\n    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],\n    // Row 5: Function row (15 uniform keys)\n    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]\n];\n\n// ==========================================\n// Modules\n// ==========================================\n\n// Flat, stepped keycap resembling scissor-switch laptop keys\nmodule keycap(w, d, h = key_height) {\n    // Lower tier (full size, sits flush with base)\n    translate([0, 0, h * 0.35 / 2])\n        cube([w, d, h * 0.35], center = true);\n    \n    // Upper tier (slightly smaller, creates subtle edge reveal)\n    translate([0, 0, h * 0.35 + h * 0.65 / 2])\n        cube([w * 0.88, d * 0.88, h * 0.65], center = true);\n}\n\n// Recursively iterate through a row array and place keycaps\nmodule build_row(row_data, y_pos, index = 0, x_offset = 0) {\n    if (index < len(row_data)) {\n        w = row_data[index];\n        \n        // Keycap dimensions: fill the unit cell minus uniform gap\n        key_w = w * unit - key_gap;\n        key_d = unit - key_gap;\n        \n        // Place keycap centered within its allocated unit width\n        translate([x_offset + w * unit / 2, y_pos, kb_thickness])\n            keycap(key_w, key_d);\n        \n        // Recurse to next key, advancing X by this key's unit width\n        build_row(row_data, y_pos, index + 1, x_offset + w * unit);\n    }\n}\n\n// Keyboard chassis: thin rounded slab with front lip\nmodule keyboard_chassis() {\n    union() {\n        // Main base slab with rounded corners\n        // Positioned so front edge sits at Y = 0\n        translate([0, corner_radius, 0])\n            linear_extrude(height = kb_thickness)\n                offset(r = corner_radius)\n                    square([kb_width - 2 * corner_radius, kb_depth - 2 * corner_radius]);\n        \n        // Front lip: rounded edge along front-bottom edge\n        translate([corner_radius, 0, 0])\n            rotate([0, 90, 0])\n                cylinder(h = kb_width - 2 * corner_radius, r = lip_radius, $fn = 30);\n        \n        // End caps for the lip to blend with rounded corners\n        translate([corner_radius, 0, 0])\n            sphere(r = lip_radius, $fn = 30);\n        translate([kb_width - corner_radius, 0, 0])\n            sphere(r = lip_radius, $fn = 30);\n    }\n}\n\n// ==========================================\n// Main Assembly\n// ==========================================\n\n// Base chassis\ncolor(\"Gray\")\nkeyboard_chassis();\n\n// Key cluster\ncolor(\"DarkSlateGray\")\nfor (i = [0 : len(layout_rows) - 1]) {\n    // Compute row center Y (front to back)\n    y_pos = margin_y + unit / 2 + i * unit;\n    build_row(layout_rows[i], y_pos);\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

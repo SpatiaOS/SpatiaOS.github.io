@@ -1,0 +1,25 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0023/00239752",
+  "model": "gpt55-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Start with a rectangular base solid of length 0.28896, width 0.75, and height 0.028846; use a main extrusion depth of 0.0288 from the base datum. On the upper face add two separate solid rectangular lengthwise ribs running the full 0.75 width direction; treat them as two ribs, not as one filled rectangular pad. The paired rib layout has an overall outside footprint of 0.162037 by 0.75, centered with left and right edge offsets of 0.0635, and the ribs rise 0.017308 above the base with extrusion depth 0.0173. Create three separate stepped circular removed features normal to the base, using axes offset from the left and front edges as follows: radius 0.013 at left offset 0.0352 and front offset 0.7072, radius 0.0173 at left offset 0.1433 and front offset 0.0577, and radius 0.013 at left offset 0.2538 and front offset 0.7072. These circular features are individual holes/recesses, not a rectangular pocket or plate; their pattern envelope is only a bounding span. Include an upper circular recess stage on the same axes occupying the vertical band from 0.0057 to 0.0288 above the base underside, with cut depth 0.0231. Include the deeper aligned circular cut stage on the same axes extending from 0.0288 down to -0.1154 relative to the base underside, with main cut depth 0.1442, so the deeper openings pass beyond the base underside while the shallow recesses stop above it.",
+  "metrics": {
+    "chamfer_distance": 2.8e-05,
+    "hausdorff_distance": 0.016435,
+    "f_score_005": 1.0,
+    "f_score_001": 0.8764,
+    "normal_consistency": 0.8752,
+    "iou_csg": 0.9103,
+    "iou_voxel": 0.9546,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// Parameters\n$fn = 96;\neps = 0.0001;\n\n// Base\nbase_length = 0.28896;\nbase_width = 0.75;\nbase_height = 0.028846;\nbase_extrude_depth = 0.0288;\n\n// Lengthwise rib pair\nrib_pair_span_x = 0.162037;\nrib_pair_span_y = base_width;\nrib_edge_offset = 0.0635;\nrib_pair_x0 = (base_length - rib_pair_span_x) / 2;\nrib_width_x = base_extrude_depth;\nrib_gap_x = rib_pair_span_x - 2 * rib_width_x;\nrib_rise = 0.017308;\nrib_extrude_depth = 0.0173;\nrib_overlap = eps;\n\n// Stepped circular cuts\ncut_top_z = base_extrude_depth;\ntop_cut_overlap = max(eps, base_height - cut_top_z + eps);\nbottom_cut_overlap = eps;\n\nupper_recess_depth = 0.0231;\nupper_recess_bottom_z = cut_top_z - upper_recess_depth;\n\ndeep_cut_depth = 0.1442;\ndeep_cut_bottom_z = cut_top_z - deep_cut_depth;\n\ndeep_opening_radius_scale = 0.60;\n\ncircular_features = [\n    [0.0352, 0.7072, 0.013],\n    [0.1433, 0.0577, 0.0173],\n    [0.2538, 0.7072, 0.013]\n];\n\n// Base solid\nmodule base_plate() {\n    cube([base_length, base_width, base_height], center=false);\n}\n\n// One full-width lengthwise rib\nmodule lengthwise_rib(x0) {\n    translate([x0, 0, base_height - rib_overlap])\n        cube([rib_width_x, rib_pair_span_y, rib_rise + rib_overlap], center=false);\n}\n\n// Two separate ribs inside the paired footprint\nmodule rib_pair() {\n    lengthwise_rib(rib_pair_x0);\n    lengthwise_rib(rib_pair_x0 + rib_width_x + rib_gap_x);\n}\n\n// Uncut solid body\nmodule solid_body() {\n    union() {\n        base_plate();\n        rib_pair();\n    }\n}\n\n// One stepped circular removed feature\nmodule stepped_circular_cutter(x0, y0, recess_r) {\n    through_r = recess_r * deep_opening_radius_scale;\n\n    union() {\n        // Upper circular recess: z 0.0057 to 0.0288\n        translate([x0, y0, upper_recess_bottom_z])\n            cylinder(h=upper_recess_depth + top_cut_overlap, r=recess_r, center=false);\n\n        // Deeper aligned cut: z -0.1154 to 0.0288\n        translate([x0, y0, deep_cut_bottom_z - bottom_cut_overlap])\n            cylinder(h=deep_cut_depth + top_cut_overlap + bottom_cut_overlap, r=through_r, center=false);\n    }\n}\n\n// All circular feature cutters\nmodule circular_cutters() {\n    union() {\n        for (f = circular_features)\n            stepped_circular_cutter(f[0], f[1], f[2]);\n    }\n}\n\n// Main model\ndifference() {\n    solid_body();\n    circular_cutters();\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

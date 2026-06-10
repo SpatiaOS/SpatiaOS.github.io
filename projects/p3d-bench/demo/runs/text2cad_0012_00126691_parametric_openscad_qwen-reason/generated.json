@@ -1,0 +1,25 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0012/00126691",
+  "model": "qwen-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Start with the main reference slab as a rectangular solid length 0.5, width 0.75, height 0.016667, with main extrusion depth 0.0167. Add an upper-side solid rectangular feature with footprint 0.5 by 0.5, flush to the left, right, and back edges of the base and offset 0.25 from the front edge; its reach from the base datum is 0.2334. Add two upper-side solid narrow rectangular edge strips over this rear region, each with footprint 0.0083 by 0.5 and main extrusion depth 0.0083; one strip is flush with the left edge and offset 0.4917 from the right edge, and the other is flush with the right edge and offset 0.4917 from the left edge, with both offset 0.25 from the front and flush with the back. Add the thin upper-side transverse solid feature with footprint 0.5 by 0.250819, flush to the left and right edges, offset 0.24922 from the front edge and 0.249961 from the back edge; its own thickness is 0.0021 and its total reach from the base datum is 0.335265. Preserve the closed internal profile in the added material as a real open void through that local solid. For the aligned stepped portion, treat the upper pad depth as 0.1 and the deeper continuation below it as a separate solid continuation with own depth 0.2167; the deeper footprint is contained within the shallow footprint, shares the left, front, and back edges, and its reach is measured from the same shoulder rather than added end-to-end.",
+  "metrics": {
+    "chamfer_distance": 0.002162,
+    "hausdorff_distance": 0.173916,
+    "f_score_005": 0.7649,
+    "f_score_001": 0.1413,
+    "normal_consistency": 0.7659,
+    "iou_csg": 0.0497,
+    "iou_voxel": 0.0809,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "$fn = 100;\n\n// === Parametric Variables ===\n// Base Slab\nbase_len = 0.5;\nbase_wid = 0.75;\nbase_ht = 0.016667;\n\n// Upper Rectangular Pad\npad_len = 0.5;\npad_wid = 0.5;\npad_reach_z = 0.2334;\npad_y_offset = 0.25;\n\n// Narrow Edge Strips\nstrip_len = 0.0083;\nstrip_wid = 0.5;\nstrip_ht = 0.0083;\n\n// Transverse Feature\ntrans_len = 0.5;\ntrans_wid = 0.250819;\ntrans_ht = 0.0021;\ntrans_reach_z = 0.335265;\ntrans_y_offset = 0.24922;\n\n// Stepped Portion\nstep_upper_ht = 0.1;\nstep_lower_ht = 0.2167;\nstep_shallow_len = 0.18;\nstep_deep_len = 0.14;\nstep_wid = 0.5;\n\n// Internal Void\nvoid_radius = 0.035;\n\n// === Module Definitions ===\n\n// Base reference slab\nmodule base_slab() {\n    cube([base_len, base_wid, base_ht]);\n}\n\n// Upper-side rectangular pad (sits on base)\nmodule upper_pad() {\n    h = pad_reach_z - base_ht;\n    translate([0, pad_y_offset, base_ht]) {\n        cube([pad_len, pad_wid, h]);\n    }\n}\n\n// Narrow edge strips over rear region\nmodule edge_strips() {\n    translate([0, pad_y_offset, base_ht]) {\n        cube([strip_len, strip_wid, strip_ht]);\n    }\n    translate([base_len - strip_len, pad_y_offset, base_ht]) {\n        cube([strip_len, strip_wid, strip_ht]);\n    }\n}\n\n// Thin transverse feature (positioned at specified reach)\nmodule transverse_feature() {\n    z_pos = trans_reach_z - trans_ht;\n    translate([0, trans_y_offset, z_pos]) {\n        cube([trans_len, trans_wid, trans_ht]);\n    }\n}\n\n// Aligned stepped portion (shares shoulder, left, front, back edges)\nmodule stepped_portion() {\n    // Shared shoulder aligned with base top\n    shoulder_z = base_ht;\n    // Shallow upper pad\n    translate([0, 0, shoulder_z - step_upper_ht]) {\n        cube([step_shallow_len, step_wid, step_upper_ht]);\n    }\n    // Deeper continuation below, contained within shallow footprint\n    translate([0, 0, shoulder_z - step_lower_ht]) {\n        cube([step_deep_len, step_wid, step_lower_ht]);\n    }\n}\n\n// Internal void cutting through the upper pad\nmodule internal_void() {\n    h_cut = pad_reach_z - base_ht + 0.02;\n    translate([pad_len/2, pad_y_offset + pad_wid/2, base_ht - 0.01]) {\n        cylinder(h=h_cut, r=void_radius, center=true);\n    }\n}\n\n// === Main Assembly ===\ndifference() {\n    union() {\n        base_slab();\n        upper_pad();\n        edge_strips();\n        transverse_feature();\n        // Place stepped portion aligned to front-left region\n        translate([0, 0, 0]) stepped_portion();\n    }\n    internal_void();\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

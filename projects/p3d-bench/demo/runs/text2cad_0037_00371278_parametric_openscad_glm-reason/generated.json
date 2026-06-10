@@ -1,0 +1,25 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0037/00371278",
+  "model": "glm-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Start with the main rectangular base as the reference: length 0.73913, width 0.543478, height 0.016304, made as an upper-side solid with extrusion depth 0.0163. Cut four separate circular through openings in the base plate, each radius 0.0163: centers offset 0.0272 from the left edge and 0.1848 from the front edge, 0.0272 from the left edge and 0.4565 from the front edge, 0.5761 from the left edge and 0.0272 from the front edge, and 0.587 from the left edge and 0.5163 from the front edge. Add the main raised rail group on the upper face as separate solid rectangular rib outlines, not as a filled rectangular pad; its overall occupied span is 0.5109 by 0.5217, with offsets 0.0435 from the left edge, 0.1847 from the right edge, 0.0109 from the front edge, and 0.0109 from the back edge, and its raised depth above the base tier is 0.0978. Add a shallow rectangular solid tab on the upper face with footprint 0.0435 by 0.0761, offsets 0.7065 from the left edge, -0.0109 from the right edge, 0.0978 from the front edge, and 0.3696 from the back edge, with extrusion depth 0.0163. Add the deeper side solid block with footprint 0.1413 by 0.087, offsets 0.5978 from the left edge, 0 from the right edge, 0.413 from the front edge, and 0.0435 from the back edge; use length 0.086957, width 0.125, height 0.141304, and extrusion depth 0.1413. This deeper block includes one circular through opening of radius 0.0326, centered on the same reference plane at left-edge offset 0.7391 and front-edge offset 0.4548; treat this as an opening through the block, not as a circular pad.",
+  "metrics": {
+    "chamfer_distance": 0.000274,
+    "hausdorff_distance": 0.088994,
+    "f_score_005": 0.9624,
+    "f_score_001": 0.2124,
+    "normal_consistency": 0.8146,
+    "iou_csg": 0.3094,
+    "iou_voxel": 0.4306,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// === Parametric Variables ===\n\n// Base plate\nbase_length = 0.73913;\nbase_width = 0.543478;\nbase_height = 0.016304;\n\n// Through holes in base plate\nhole_radius = 0.0163;\nhole1_pos = [0.0272, 0.1848];\nhole2_pos = [0.0272, 0.4565];\nhole3_pos = [0.5761, 0.0272];\nhole4_pos = [0.587, 0.5163];\n\n// Raised rail group (rectangular frame outline)\nrail_left_offset = 0.0435;\nrail_right_offset = 0.1847;\nrail_front_offset = 0.0109;\nrail_back_offset = 0.0109;\nrail_raise = 0.0978;\nrail_wall = 0.0163; // assumed rib wall thickness\n\n// Shallow rectangular tab\ntab_left_offset = 0.7065;\ntab_right_offset = -0.0109;  // negative = extends beyond base right edge\ntab_front_offset = 0.0978;\ntab_back_offset = 0.3696;\ntab_height = 0.0163;\n\n// Deeper side block\nblock_left_offset = 0.5978;\nblock_right_offset = 0;\nblock_front_offset = 0.413;\nblock_back_offset = 0.0435;\nblock_height = 0.141304;\n\n// Hole through deeper block\nblock_hole_radius = 0.0326;\nblock_hole_x = 0.7391;\nblock_hole_y = 0.4548;\n\n$fn = 100;\n\n// === Derived Positions ===\nrail_x0 = rail_left_offset;\nrail_x1 = base_length - rail_right_offset;\nrail_y0 = rail_front_offset;\nrail_y1 = base_width - rail_back_offset;\n\ntab_x0 = tab_left_offset;\ntab_x1 = base_length - tab_right_offset;\ntab_y0 = tab_front_offset;\ntab_y1 = base_width - tab_back_offset;\n\nblk_x0 = block_left_offset;\nblk_x1 = base_length - block_right_offset;\nblk_y0 = block_front_offset;\nblk_y1 = base_width - block_back_offset;\n\n// === Main Assembly ===\nunion() {\n\n    // --- Base plate with four through holes ---\n    difference() {\n        cube([base_length, base_width, base_height]);\n\n        for (p = [hole1_pos, hole2_pos, hole3_pos, hole4_pos]) {\n            translate([p[0], p[1], -0.001])\n                cylinder(h=base_height + 0.002, r=hole_radius);\n        }\n    }\n\n    // --- Raised rail group: rectangular rib outline (frame) ---\n    translate([rail_x0, rail_y0, base_height])\n    difference() {\n        // Outer rectangular profile\n        cube([rail_x1 - rail_x0, rail_y1 - rail_y0, rail_raise]);\n        // Hollow interior\n        translate([rail_wall, rail_wall, -0.001])\n            cube([\n                rail_x1 - rail_x0 - 2 * rail_wall,\n                rail_y1 - rail_y0 - 2 * rail_wall,\n                rail_raise + 0.002\n            ]);\n    }\n\n    // --- Shallow rectangular tab ---\n    translate([tab_x0, tab_y0, base_height])\n        cube([tab_x1 - tab_x0, tab_y1 - tab_y0, tab_height]);\n\n    // --- Deeper side block with through hole ---\n    translate([blk_x0, blk_y0, base_height])\n    difference() {\n        cube([blk_x1 - blk_x0, blk_y1 - blk_y0, block_height]);\n        // Circular through opening in block\n        translate([block_hole_x - blk_x0, block_hole_y - blk_y0, -0.001])\n            cylinder(h=block_height + 0.002, r=block_hole_radius);\n    }\n\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

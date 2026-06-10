@@ -1,0 +1,25 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0072/00723748",
+  "model": "mimo_v25-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Start with the main rectangular base as the reference: length 0.703125, width 0.75, height 0.013125, with the base extrusion depth 0.0131. In this base plate, make one circular through-opening with its axis 0.075 from the left edge and 0.6562 from the front edge, radius 0.0328. Add the main rectangular block on the upper side of the base with length 0.646875, width 0.50625, and height 0.645; place its footprint with left offset 0.0563, right offset -0.0001, front offset 0.0844, and back offset 0.1594. On the block top, add two separate annular collars, not a connecting pad: each collar has outer radius 0.0656, inner radius 0.0328, and height 0.0375, with axes at left offset 0.2062 and front offsets 0.1968 and 0.4781. Cut two shallow rectangular recesses into the top face of the block; their combined bounding span is length 0.473437 by width 0.39375, positioned with left offset 0.1734, right offset 0.0563, front offset 0.1406, and back offset 0.2157. These rectangular recesses remove only the top band from 0.6581 down to 0.6544 relative to the base underside, giving a cut depth of 0.0037, so they are blind recesses rather than through-cuts. Also keep the collar centers open with circular cuts of radius 0.0328 at left offset 0.2062 and front offsets 0.1969 and 0.4781; these openings pass through the 0.0375 collar height and continue only through the same shallow top band, not through the full 0.645 block. The 0.0375 collar tier sits above the main block top, while the 0.645 rectangular block is the deeper continuation down to the top of the 0.0131 base plate.",
+  "metrics": {
+    "chamfer_distance": 0.000117,
+    "hausdorff_distance": 0.057634,
+    "f_score_005": 0.9944,
+    "f_score_001": 0.4087,
+    "normal_consistency": 0.9429,
+    "iou_csg": 0.9868,
+    "iou_voxel": 0.995,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// Parameters - Base Plate\nbase_length = 0.703125;\nbase_width = 0.75;\nbase_height = 0.013125;\n\n// Parameters - Through-opening in base\nhole_x = 0.075;\nhole_y = 0.6562;\nhole_radius = 0.0328;\n\n// Parameters - Main Rectangular Block\nblock_length = 0.646875;\nblock_width = 0.50625;\nblock_height = 0.645;\nblock_left_offset = 0.0563;\nblock_front_offset = 0.0844;\n\n// Parameters - Annular Collars\ncollar_outer_r = 0.0656;\ncollar_inner_r = 0.0328;\ncollar_height = 0.0375;\ncollar_left_offset = 0.2062;\ncollar_front_offset_1 = 0.1968;\ncollar_front_offset_2 = 0.4781;\n\n// Parameters - Shallow Rectangular Recesses\nrecess_length = 0.473437;\nrecess_width = 0.39375;\nrecess_left_offset = 0.1734;\nrecess_front_offset = 0.1406;\nrecess_depth = 0.0037;\n\n// Derived positions\nblock_x = block_left_offset;\nblock_y = block_front_offset;\nblock_top_z = base_height + block_height;\n\n// Resolution\n$fn = 100;\n\n// Main Assembly\ndifference() {\n    union() {\n        // Step 1: Base plate\n        cube([base_length, base_width, base_height]);\n\n        // Step 2: Main rectangular block on top of base\n        translate([block_x, block_y, base_height])\n            cube([block_length, block_width, block_height]);\n\n        // Step 3: Two annular collars on block top\n        // Collar 1\n        translate([collar_left_offset, collar_front_offset_1, block_top_z])\n            difference() {\n                cylinder(h=collar_height, r=collar_outer_r);\n                cylinder(h=collar_height, r=collar_inner_r);\n            }\n        // Collar 2\n        translate([collar_left_offset, collar_front_offset_2, block_top_z])\n            difference() {\n                cylinder(h=collar_height, r=collar_outer_r);\n                cylinder(h=collar_height, r=collar_inner_r);\n            }\n    }\n\n    // Step 4: Circular through-opening in base plate\n    translate([hole_x, hole_y, 0])\n        cylinder(h=base_height, r=hole_radius);\n\n    // Step 5: Shallow rectangular recesses in block top\n    // Cuts from block_top_z - recess_depth to block_top_z\n    translate([recess_left_offset, recess_front_offset, block_top_z - recess_depth])\n        cube([recess_length, recess_width, recess_depth]);\n\n    // Step 6: Circular cuts through collar centers\n    // Extends through collar height plus recess depth into top band\n    translate([collar_left_offset, collar_front_offset_1, block_top_z - recess_depth])\n        cylinder(h=recess_depth + collar_height, r=hole_radius);\n    translate([collar_left_offset, collar_front_offset_2, block_top_z - recess_depth])\n        cylinder(h=recess_depth + collar_height, r=hole_radius);\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

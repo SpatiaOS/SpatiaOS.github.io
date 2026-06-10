@@ -1,0 +1,25 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0009/00099014",
+  "model": "mimo-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Create a solid rectangular base as the reference body, length 0.75, width 0.669426, and height 0.150979, with main depth 0.151. Use the base plan edges as left, right, front, and back references. Add four solid rectangular pads to the underside, each starting at the base underside and extending 0.151 below it: one pad 0.156427 by 0.090313 with offsets left 0.5351, right 0.0585, front 0.109, back 0.4701; one pad 0.202932 by 0.128382 with offsets left 0.0568, right 0.4903, front 0.0294, back 0.5116; one pad 0.207237 by 0.111076 with offsets left 0.5157, right 0.0271, front 0.5131, back 0.0452; and one pad 0.235324 by 0.115862 with offsets left 0.0893, right 0.4254, front 0.5088, back 0.0447. Add a deeper solid rectangular continuation below each shallow pad with own depth 0.302; these deeper sections start 0.1509 below the base underside and reach 0.4529 below the base underside. The continuation below the 0.202932 by 0.128382 pad is 0.101466 by 0.128382, with offsets left 0.0568, right 0.5917, front 0.0294, back 0.5116, sharing the shallow pad left, front, and back edges. The continuation below the 0.156427 by 0.090313 pad is 0.078214 by 0.090313, with offsets left 0.6133, right 0.0585, front 0.109, back 0.4701, sharing the shallow pad right, front, and back edges. The continuation below the 0.207237 by 0.111076 pad is 0.103619 by 0.111076, with offsets left 0.6193, right 0.0271, front 0.5131, back 0.0452, sharing the shallow pad right, front, and back edges. The continuation below the 0.235324 by 0.115862 pad is 0.117662 by 0.115862, with offsets left 0.0893, right 0.543, front 0.5088, back 0.0447, sharing the shallow pad left, front, and back edges. All listed rectangular underside features are solid additions, with no internal loops, cutouts, recesses, or through openings.",
+  "metrics": {
+    "chamfer_distance": 8.7e-05,
+    "hausdorff_distance": 0.0301,
+    "f_score_005": 1.0,
+    "f_score_001": 0.4808,
+    "normal_consistency": 0.9436,
+    "iou_csg": 0.9965,
+    "iou_voxel": 0.99,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// Parameters\nbase_length = 0.75;\nbase_width = 0.669426;\nbase_height = 0.150979;\nmain_depth = 0.151;\n\n// Shallow pad parameters\nshallow_depth = 0.151;\npad1_size = [0.156427, 0.090313];\npad1_offsets = [0.5351, 0.0585, 0.109, 0.4701]; // left, right, front, back\npad2_size = [0.202932, 0.128382];\npad2_offsets = [0.0568, 0.4903, 0.0294, 0.5116];\npad3_size = [0.207237, 0.111076];\npad3_offsets = [0.5157, 0.0271, 0.5131, 0.0452];\npad4_size = [0.235324, 0.115862];\npad4_offsets = [0.0893, 0.4254, 0.5088, 0.0447];\n\n// Deep continuation parameters\ndeep_depth = 0.302;\ndeep_start_offset = 0.1509;\ncont1_size = [0.078214, 0.090313];\ncont1_offsets = [0.6133, 0.0585, 0.109, 0.4701];\ncont2_size = [0.101466, 0.128382];\ncont2_offsets = [0.0568, 0.5917, 0.0294, 0.5116];\ncont3_size = [0.103619, 0.111076];\ncont3_offsets = [0.6193, 0.0271, 0.5131, 0.0452];\ncont4_size = [0.117662, 0.115862];\ncont4_offsets = [0.0893, 0.543, 0.5088, 0.0447];\n\n$fn = 100;\n\n// Main base module\nmodule base() {\n    cube([base_length, base_width, base_height], center = false);\n}\n\n// Pad module - creates rectangular pad at specified position\nmodule pad(size, offsets, depth) {\n    translate([offsets[0], offsets[2], -depth])\n        cube([size[0], size[1], depth], center = false);\n}\n\n// Continuation module - creates deeper section below shallow pad\nmodule continuation(size, offsets, depth, start_offset) {\n    translate([offsets[0], offsets[2], -start_offset - depth])\n        cube([size[0], size[1], depth], center = false);\n}\n\n// Main model assembly\nunion() {\n    // Create base\n    base();\n    \n    // Add shallow pads to underside\n    pad(pad1_size, pad1_offsets, shallow_depth);\n    pad(pad2_size, pad2_offsets, shallow_depth);\n    pad(pad3_size, pad3_offsets, shallow_depth);\n    pad(pad4_size, pad4_offsets, shallow_depth);\n    \n    // Add deep continuations below shallow pads\n    continuation(cont1_size, cont1_offsets, deep_depth, deep_start_offset);\n    continuation(cont2_size, cont2_offsets, deep_depth, deep_start_offset);\n    continuation(cont3_size, cont3_offsets, deep_depth, deep_start_offset);\n    continuation(cont4_size, cont4_offsets, deep_depth, deep_start_offset);\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

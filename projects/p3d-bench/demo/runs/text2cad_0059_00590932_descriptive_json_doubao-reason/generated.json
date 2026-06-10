@@ -1,0 +1,160 @@
+{
+  "metadata": {
+    "parameters": {
+      "main_body_width": 100.0,
+      "main_body_depth": 80.0,
+      "main_body_height": 120.0,
+      "step_cut_height": 30.0,
+      "step_cut_depth": 40.0,
+      "square_recess_side": 30.0,
+      "square_recess_depth": 10.0,
+      "front_slot_width": 50.0,
+      "front_slot_height": 20.0,
+      "tab_thickness": 10.0,
+      "tab_protrusion": 25.0,
+      "hole_radius": 4.0
+    },
+    "descriptions": {
+      "part_1": "Main base rectangular solid as new body",
+      "part_2": "Cut rear upper step to create lower rear section",
+      "part_3": "Cut non-through square recess into highest top face",
+      "part_4": "Cut lower front through slot creating undercut below upper mass",
+      "part_5": "Join thin protruding tab to base level",
+      "part_6": "Cut through circular voids in front tab"
+    }
+  },
+  "parts": {
+    "part_1": {
+      "coordinate_system": {
+        "Euler Angles": [0.0, 0.0, 0.0],
+        "Translation Vector": [0.0, 0.0, 0.0]
+      },
+      "sketch": {
+        "face_1": {
+          "loop_1": {
+            "line_1": {"Start Point": [0.0, 0.0], "End Point": [100.0, 0.0]},
+            "line_2": {"Start Point": [100.0, 0.0], "End Point": [100.0, 80.0]},
+            "line_3": {"Start Point": [100.0, 80.0], "End Point": [0.0, 80.0]},
+            "line_4": {"Start Point": [0.0, 80.0], "End Point": [0.0, 0.0]}
+          }
+        }
+      },
+      "extrusion": {
+        "extrude_depth_towards_normal": 120.0,
+        "extrude_depth_opposite_normal": 0.0,
+        "sketch_scale": 1.0,
+        "operation": "NewBodyFeatureOperation"
+      }
+    },
+    "part_2": {
+      "coordinate_system": {
+        "Euler Angles": [0.0, 0.0, 0.0],
+        "Translation Vector": [0.0, 0.0, 120.0]
+      },
+      "sketch": {
+        "face_1": {
+          "loop_1": {
+            "line_1": {"Start Point": [0.0, 40.0], "End Point": [100.0, 40.0]},
+            "line_2": {"Start Point": [100.0, 40.0], "End Point": [100.0, 80.0]},
+            "line_3": {"Start Point": [100.0, 80.0], "End Point": [0.0, 80.0]},
+            "line_4": {"Start Point": [0.0, 80.0], "End Point": [0.0, 40.0]}
+          }
+        }
+      },
+      "extrusion": {
+        "extrude_depth_towards_normal": 0.0,
+        "extrude_depth_opposite_normal": 30.0,
+        "sketch_scale": 1.0,
+        "operation": "CutFeatureOperation"
+      }
+    },
+    "part_3": {
+      "coordinate_system": {
+        "Euler Angles": [0.0, 0.0, 0.0],
+        "Translation Vector": [0.0, 0.0, 120.0]
+      },
+      "sketch": {
+        "face_1": {
+          "loop_1": {
+            "line_1": {"Start Point": [35.0, 5.0], "End Point": [65.0, 5.0]},
+            "line_2": {"Start Point": [65.0, 5.0], "End Point": [65.0, 35.0]},
+            "line_3": {"Start Point": [65.0, 35.0], "End Point": [35.0, 35.0]},
+            "line_4": {"Start Point": [35.0, 35.0], "End Point": [35.0, 5.0]}
+          }
+        }
+      },
+      "extrusion": {
+        "extrude_depth_towards_normal": 0.0,
+        "extrude_depth_opposite_normal": 10.0,
+        "sketch_scale": 1.0,
+        "operation": "CutFeatureOperation"
+      }
+    },
+    "part_4": {
+      "coordinate_system": {
+        "Euler Angles": [0.0, 1.5708, 0.0],
+        "Translation Vector": [0.0, 0.0, 0.0]
+      },
+      "sketch": {
+        "face_1": {
+          "loop_1": {
+            "line_1": {"Start Point": [25.0, 0.0], "End Point": [75.0, 0.0]},
+            "line_2": {"Start Point": [75.0, 0.0], "End Point": [75.0, 20.0]},
+            "line_3": {"Start Point": [75.0, 20.0], "End Point": [25.0, 20.0]},
+            "line_4": {"Start Point": [25.0, 20.0], "End Point": [25.0, 0.0]}
+          }
+        }
+      },
+      "extrusion": {
+        "extrude_depth_towards_normal": 80.0,
+        "extrude_depth_opposite_normal": 0.0,
+        "sketch_scale": 1.0,
+        "operation": "CutFeatureOperation"
+      }
+    },
+    "part_5": {
+      "coordinate_system": {
+        "Euler Angles": [0.0, 0.0, 0.0],
+        "Translation Vector": [0.0, 0.0, 0.0]
+      },
+      "sketch": {
+        "face_1": {
+          "loop_1": {
+            "line_1": {"Start Point": [25.0, -25.0], "End Point": [75.0, -25.0]},
+            "line_2": {"Start Point": [75.0, -25.0], "End Point": [75.0, 0.0]},
+            "line_3": {"Start Point": [75.0, 0.0], "End Point": [25.0, 0.0]},
+            "line_4": {"Start Point": [25.0, 0.0], "End Point": [25.0, -25.0]}
+          }
+        }
+      },
+      "extrusion": {
+        "extrude_depth_towards_normal": 10.0,
+        "extrude_depth_opposite_normal": 0.0,
+        "sketch_scale": 1.0,
+        "operation": "JoinFeatureOperation"
+      }
+    },
+    "part_6": {
+      "coordinate_system": {
+        "Euler Angles": [0.0, 0.0, 0.0],
+        "Translation Vector": [0.0, 0.0, 0.0]
+      },
+      "sketch": {
+        "face_1": {
+          "loop_1": {
+            "circle_1": {"Center": [40.0, -12.5], "Radius": 4.0}
+          },
+          "loop_2": {
+            "circle_2": {"Center": [60.0, -12.5], "Radius": 4.0}
+          }
+        }
+      },
+      "extrusion": {
+        "extrude_depth_towards_normal": 10.0,
+        "extrude_depth_opposite_normal": 0.0,
+        "sketch_scale": 1.0,
+        "operation": "CutFeatureOperation"
+      }
+    }
+  }
+}

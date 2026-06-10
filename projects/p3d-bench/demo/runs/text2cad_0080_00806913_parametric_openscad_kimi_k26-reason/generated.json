@@ -1,0 +1,23 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0080/00806913",
+  "model": "kimi_k26-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Build the part within an overall length of 0.75, width of 0.220587, and height of 0.147058, with the main solid thickness extruded 0.1471 upward from the underside datum. Form the base footprint as a rounded link: use two equal end lobes of radius 0.1103 with centers at 0.1103 from the left edge and 0.1103 from the front edge, and at 0.6397 from the left edge and 0.1103 from the front edge, joined by straight tangent side runs so the outer shape remains rounded at both ends. At each lobe center include the concentric circular layout with radius 0.1103 for the outside lobe, radius 0.0956 for the larger internal stepped circular boundary, and radius 0.0294 for the centered bore; treat these as circular/annular features at the two axes, not as one filled rectangular pad. Cut the centered bore at radius 0.0294 through the end lobe, and add the larger annular circular recess at radius 0.0956 from the underside/base plane up to a reach of 0.0882, leaving the full body height above that stepped lower cut. Add the middle rectangular slot as removed material on the side web: its length is 0.191175, its vertical opening height is 0.023529, its left and right offsets are both 0.2794, and its vertical band runs from 0.0618 to 0.0853 above the underside. Cut this slot from the front side through the body with a reach of 0.7353, starting at the front edge and overcutting past the back side so the opening passes fully through rather than forming a blind surface recess.",
+  "metrics": {
+    "chamfer_distance": 0.000383,
+    "hausdorff_distance": 0.084951,
+    "f_score_005": 0.943,
+    "f_score_001": 0.4834,
+    "normal_consistency": 0.7796,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// Parameters\n$fn = 100;\n\noverall_length = 0.75;\noverall_width = 0.220587;\noverall_height = 0.147058;\n\nlobe_radius = 0.1103;\nlobe1_x = 0.1103;\nlobe2_x = 0.6397;\nlobe_y = 0.1103;\n\nbore_r = 0.0294;\nrecess_r = 0.0956;\nrecess_h = 0.0882;\n\nslot_length = 0.191175;\nslot_height = 0.023529;\nslot_left = 0.2794;\nslot_z = 0.0618;\nslot_reach = 0.7353;\n\neps = 0.001;\n\n// Rounded link footprint from two end lobes\nmodule link_profile() {\n    hull() {\n        translate([lobe1_x, lobe_y]) circle(r = lobe_radius);\n        translate([lobe2_x, lobe_y]) circle(r = lobe_radius);\n    }\n}\n\n// Main solid extruded from underside datum\nmodule base() {\n    linear_extrude(height = overall_height) link_profile();\n}\n\n// Concentric bore and annular recess at each lobe axis\nmodule lobe_cuts() {\n    translate([lobe1_x, lobe_y, -eps]) {\n        cylinder(h = recess_h + eps, r = recess_r);\n        cylinder(h = overall_height + 2*eps, r = bore_r);\n    }\n    translate([lobe2_x, lobe_y, -eps]) {\n        cylinder(h = recess_h + eps, r = recess_r);\n        cylinder(h = overall_height + 2*eps, r = bore_r);\n    }\n}\n\n// Middle web slot cut from front face through body\nmodule slot() {\n    translate([slot_left, -eps, slot_z])\n        cube([slot_length, slot_reach + eps, slot_height]);\n}\n\n// Final part\ndifference() {\n    base();\n    lobe_cuts();\n    slot();\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

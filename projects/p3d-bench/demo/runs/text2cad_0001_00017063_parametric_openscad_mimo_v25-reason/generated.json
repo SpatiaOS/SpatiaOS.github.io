@@ -1,0 +1,25 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0001/00017063",
+  "model": "mimo_v25-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Use a main base declared size of length 0.75, width 0.21875, and height 0.28125, with main extrusion depth 0.2812. Form the base as one solid upper-side extrusion from the base datum, filling the footprint to the left, right, front, and back edges with offsets of 0, and keep the side outline arched rather than reducing it to a rectangular notch. Add one remove-material feature made only from 2 separate circular profiles, not a connected slot or rectangular pocket. Place one circular axis 0.0717 from the left edge and 0.0625 from the front edge, and place the other circular axis 0.6692 from the left edge and 0.0625 from the front edge; each circular profile has radius 0.0312. Cut from the upper side with the removed band running from 0.1081 to 0.1705 above the base underside, using cut depth 0.0625. Treat the 0.6599 by 0.0625 span only as the envelope of the circular pattern, leaving the surrounding and intervening material solid.",
+  "metrics": {
+    "chamfer_distance": 0.001839,
+    "hausdorff_distance": 0.123642,
+    "f_score_005": 0.7707,
+    "f_score_001": 0.2335,
+    "normal_consistency": 0.5491,
+    "iou_csg": 0.4242,
+    "iou_voxel": 0.4561,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// Parameters\nlength = 0.75;\nwidth = 0.21875;\nheight = 0.28125;\nextrusion_depth = 0.2812;\n\n// Circular cutout parameters\ncircle_radius = 0.0312;\nleft_circle_x = 0.0717;\nright_circle_x = 0.6692;\ncircle_y = 0.0625;\n\n// Cut band parameters\ncut_band_bottom = 0.1081;\ncut_band_top = 0.1705;\ncut_depth = 0.0625;\n\n// Resolution\n$fn = 100;\n\n// Main base block\nmodule base_block() {\n    cube([length, width, height]);\n}\n\n// Circular cutout feature\nmodule circular_cutouts() {\n    // Left circular cutout\n    translate([left_circle_x, circle_y, cut_band_bottom])\n        cylinder(h = cut_depth, r = circle_radius, center = false);\n    \n    // Right circular cutout\n    translate([right_circle_x, circle_y, cut_band_bottom])\n        cylinder(h = cut_depth, r = circle_radius, center = false);\n}\n\n// Final model with cutouts removed from base\ndifference() {\n    base_block();\n    circular_cutouts();\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

@@ -1,0 +1,23 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0000/00001749",
+  "model": "mimo-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Use the main base declared size as the first reference: length 0.395255, width 0.60219, height 0.109489, with a main extrusion depth of 0.1095. Form the primary body as a solid D-shaped frame contained in a 0.3953 by 0.6022 footprint, starting flush from the left, right, front, and back reference edges, with curved outer and inner outlines and one continuous inner through-opening. Keep the main frame as the full-depth solid, extending 0.1095 from the underside reference, with the straight rear and side portions tied into the rounded arc wall. Add a shallower solid round protrusion attached outside the frame: its overall added footprint is length 0.259658, width 0.197373, height 0.054745, with edge offsets left 0, right 0.1356, front -0.1478, and back 0.5526 relative to the main base footprint. The round portion of this added solid is a separate circular profile with its axis left-offset 0.0942 and front-offset -0.0821, radius 0.0657, and it extends only 0.0547 from the underside reference. Cut a concentric circular opening through that same shallow band, using the shared axis at left-offset 0.0942 and front-offset -0.0821 with radius 0.0285; the cut has a circular bounding span of length 0.056934 and width 0.056934 and removes material from vertical band 0 to 0.0547 relative to the underside reference. Keep all circular profiles coaxial, so the outer round tab and the smaller cut share one centerline rather than being offset from each other.",
+  "metrics": {
+    "chamfer_distance": 0.003276,
+    "hausdorff_distance": 0.193732,
+    "f_score_005": 0.5484,
+    "f_score_001": 0.12,
+    "normal_consistency": 0.5188,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// Parametric D-Frame with Round Protrusion\n// All dimensions in millimeters\n\n// Main frame parameters\nframe_length = 0.395255;\nframe_width = 0.60219;\nframe_height = 0.109489;\nextrusion_depth = 0.1095;\n\n// Round protrusion parameters\nprotrusion_length = 0.259658;\nprotrusion_width = 0.197373;\nprotrusion_height = 0.054745;\nprotrusion_left_offset = 0;\nprotrusion_right_offset = 0.1356;\nprotrusion_front_offset = -0.1478;\nprotrusion_back_offset = 0.5526;\n\n// Round tab parameters\ntab_axis_left = 0.0942;\ntab_axis_front = -0.0821;\ntab_radius = 0.0657;\ntab_height = 0.0547;\n\n// Cut parameters\ncut_radius = 0.0285;\ncut_bounding_length = 0.056934;\ncut_bounding_width = 0.056934;\ncut_z_start = 0;\ncut_z_end = 0.0547;\n\n// Resolution\n$fn = 100;\n\n// Helper module: D-shaped frame\nmodule d_frame() {\n    difference() {\n        // Outer D-shape\n        hull() {\n            // Straight rear section\n            translate([frame_length/2, frame_width, 0])\n                cube([frame_length, 0.0001, extrusion_depth], center=true);\n            // Rounded front arc\n            translate([frame_length/2, frame_width*0.25, 0])\n                cylinder(h=extrusion_depth, r=frame_width*0.45, center=true);\n        }\n        \n        // Inner through-opening\n        hull() {\n            translate([frame_length/2, frame_width, 0])\n                cube([frame_length*0.7, 0.0001, extrusion_depth+1], center=true);\n            translate([frame_length/2, frame_width*0.25, 0])\n                cylinder(h=extrusion_depth+1, r=frame_width*0.35, center=true);\n        }\n    }\n}\n\n// Helper module: Round protrusion base\nmodule protrusion_base() {\n    translate([protrusion_left_offset, protrusion_front_offset, 0])\n        cube([protrusion_length, protrusion_width, protrusion_height]);\n}\n\n// Helper module: Round tab\nmodule round_tab() {\n    translate([tab_axis_left, tab_axis_front, 0])\n        cylinder(h=tab_height, r=tab_radius);\n}\n\n// Helper module: Concentric cut\nmodule concentric_cut() {\n    translate([tab_axis_left, tab_axis_front, cut_z_start])\n        cylinder(h=cut_z_end - cut_z_start, r=cut_radius);\n}\n\n// Main assembly\nunion() {\n    // Main D-shaped frame\n    d_frame();\n    \n    // Round protrusion with tab\n    difference() {\n        union() {\n            protrusion_base();\n            round_tab();\n        }\n        concentric_cut();\n    }\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

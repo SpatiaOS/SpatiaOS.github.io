@@ -1,0 +1,25 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0007/00073878",
+  "model": "mimo_v25-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Begin with the main reference size as length 0.375, width 0.375, and height 0.25, using a main extrusion depth of 0.25. Form the main annular cylinder as a circular upper-side solid centered 0.1875 from the left edge and 0.1875 from the front edge, with outer radius 0.1875 and a central through bore radius 0.075; its circular footprint occupies the 0.375 by 0.375 span and is not a rectangular plate. Add the shallow attached annular tab as an upper-side solid with bounding span 0.375 by 0.5625, edge offsets left 0, right 0, front -0.375, and back 0.1875 relative to the same reference. Its circular outer profile is centered 0.1875 from the left edge and -0.1875 from the front edge with radius 0.1875, and it has a centered through opening of radius 0.05; give this added section height 0.05 from the same underside datum so it remains lower than the 0.25 tall sleeve. The resulting radial wall thicknesses are 0.1125 for the main sleeve and 0.1375 for the shallow tab. Include a removed underside recess/cut associated with the main bore, with bounded footprint 0.2557 by 0.2884 and offsets left 0.0597, right 0.0596, front 0.0433, and back 0.0433. Center that circular cut profile on the main axis at 0.1875 from the left edge and 0.1875 from the front edge, use radius 0.075, and let the removed band run from 0 to 0.125 measured upward from the base underside.",
+  "metrics": {
+    "chamfer_distance": 0.000129,
+    "hausdorff_distance": 0.077649,
+    "f_score_005": 0.9807,
+    "f_score_001": 0.6802,
+    "normal_consistency": 0.8832,
+    "iou_csg": 0.834,
+    "iou_voxel": 0.8461,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// =============================================\n// Parameters\n// =============================================\n\n// Main reference dimensions\nmain_length = 0.375;      // Overall X span\nmain_width  = 0.375;      // Overall Y span\nmain_height = 0.25;       // Main sleeve height (Z)\n\n// Main annular cylinder (sleeve)\nmain_cx = 0.1875;         // Center X from left edge\nmain_cy = 0.1875;         // Center Y from front edge\nmain_R  = 0.1875;         // Outer radius\nmain_r  = 0.075;          // Through-bore radius (on main axis)\n// Radial wall thickness: 0.1875 - 0.075 = 0.1125\n\n// Shallow annular tab\ntab_cx = 0.1875;          // Center X from left edge\ntab_cy = -0.1875;         // Center Y (extends forward of reference)\ntab_R  = 0.1875;          // Outer radius\ntab_r  = 0.05;            // Through-opening radius\ntab_h  = 0.05;            // Height from base datum\n// Radial wall thickness: 0.1875 - 0.05 = 0.1375\n\n// Underside recess (rectangular pocket from base)\n// Bounded footprint: 0.2557 x 0.2884\nrecess_off_l = 0.0597;    // Left edge offset from reference\nrecess_off_r = 0.0596;    // Right edge offset from reference\nrecess_off_f = 0.0433;    // Front edge offset from reference\nrecess_off_b = 0.0433;    // Back edge offset from reference\nrecess_w = main_length - recess_off_l - recess_off_r;  // 0.2557\nrecess_d = main_width  - recess_off_f - recess_off_b;   // 0.2884\nrecess_h = 0.125;         // Recess depth (z=0 to z=0.125)\n\n// Resolution\n$fn  = 100;\neps  = 0.001;\n\n// =============================================\n// Main Model\n// =============================================\n\ndifference() {\n    union() {\n        // Main annular cylinder (sleeve)\n        translate([main_cx, main_cy, 0])\n            difference() {\n                cylinder(h = main_height, r = main_R);\n                translate([0, 0, -eps])\n                    cylinder(h = main_height + 2 * eps, r = main_r);\n            }\n\n        // Shallow annular tab (attached forward of sleeve)\n        translate([tab_cx, tab_cy, 0])\n            difference() {\n                cylinder(h = tab_h, r = tab_R);\n                translate([0, 0, -eps])\n                    cylinder(h = tab_h + 2 * eps, r = tab_r);\n            }\n    }\n\n    // Underside rectangular recess (counterbore pocket from base)\n    translate([recess_off_l, recess_off_f, -eps])\n        cube([recess_w, recess_d, recess_h + eps]);\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

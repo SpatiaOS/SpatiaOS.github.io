@@ -1,0 +1,24 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "image2cad",
+  "case_id": "articraft/pc_fan_128372",
+  "model": "doubao-reason",
+  "input_spec": "image",
+  "output_format": "cadquery",
+  "valid": true,
+  "condition": "Reference image: pc fan.",
+  "metrics": {
+    "chamfer_distance": 0.001443,
+    "hausdorff_distance": 0.148012,
+    "f_score_005": 0.8493,
+    "f_score_001": 0.0832,
+    "normal_consistency": 0.6495,
+    "iou_voxel": 0.2198,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "cadquery",
+    "source": "import cadquery as cq\n\n# ---------------------- PARAMETERS (standard 80mm axial PC fan) ----------------------\nfan_outer_size = 80.0          # Square outer dimension of fan frame\nfan_thickness = 25.0           # Total height/thickness of the fan\nframe_corner_radius = 6.0      # Rounded corner radius of outer frame\nmounting_hole_pitch = 71.5     # Center-to-center distance between opposite mounting holes\nmounting_hole_dia = 4.4        # Diameter of through-hole for mounting screws\nframe_flange_thickness = 2.0   # Thickness of top and bottom outer frame flanges\nshroud_outer_dia = 72.0        # Outer diameter of the inner air duct/shroud\nshroud_wall_thickness = 1.5    # Wall thickness of the inner air duct\nhub_dia = 30.0                 # Diameter of central motor hub\nnum_blades = 7                 # Number of fan impeller blades\nblade_thickness = 1.6          # Thickness of each fan blade\nsupport_post_dia = 4.0         # Diameter of corner support posts connecting flanges\n\n# ---------------------- MODELING STEPS ----------------------\n# 1. Create top and bottom outer frame flanges (fillet solid edges instead of sketch vertices to fix solid not found error)\ntop_flange = (\n    cq.Workplane(\"XY\")\n    .rect(fan_outer_size, fan_outer_size)\n    .extrude(frame_flange_thickness)\n    .edges(\"|Z\")  # Select all vertical edges parallel to Z axis for fillet\n    .fillet(frame_corner_radius)\n)\nbottom_flange = top_flange.translate((0, 0, fan_thickness - frame_flange_thickness))\nfan = top_flange.union(bottom_flange)\n\n# 2. Add corner support posts connecting the two flanges\ncorner_posts = (\n    cq.Workplane(\"XY\", origin=(0, 0, frame_flange_thickness))\n    .rect(mounting_hole_pitch, mounting_hole_pitch, forConstruction=True)\n    .vertices()\n    .circle(support_post_dia / 2)\n    .extrude(fan_thickness - 2 * frame_flange_thickness)\n)\nfan = fan.union(corner_posts)\n\n# 3. Create hollow inner air shroud\nshroud_outer = cq.Workplane(\"XY\").circle(shroud_outer_dia / 2).extrude(fan_thickness)\nshroud_inner = cq.Workplane(\"XY\").circle((shroud_outer_dia - 2*shroud_wall_thickness)/2).extrude(fan_thickness)\nshroud = shroud_outer.cut(shroud_inner)\nfan = fan.union(shroud)\n\n# 4. Cut through mounting holes in all four corners\nfan = (\n    fan.faces(\">Z\").workplane()\n    .rect(mounting_hole_pitch, mounting_hole_pitch, forConstruction=True)\n    .vertices()\n    .circle(mounting_hole_dia / 2)\n    .cutThruAll()\n)\n\n# 5. Create central motor hub\nhub = (\n    cq.Workplane(\"XY\")\n    .circle(hub_dia / 2)\n    .extrude(fan_thickness * 0.8)\n    .translate((0, 0, fan_thickness * 0.1))\n    .faces(\">Z\").fillet(2.0)\n    .faces(\"<Z\").fillet(2.0)\n)\n\n# 6. Create single fan blade with simplified curved profile\nsingle_blade = (\n    cq.Workplane(\"XZ\", origin=(hub_dia/2 + 1, 0, fan_thickness/2))\n    # Simplified airfoil profile shape\n    .moveTo(0, -fan_thickness*0.3)\n    .lineTo(shroud_outer_dia/2 - 2.5, -fan_thickness*0.25)\n    .lineTo(shroud_outer_dia/2 - 2.5, fan_thickness*0.25)\n    .lineTo(0, fan_thickness*0.3)\n    .close()\n    .extrude(blade_thickness)\n    .rotate((0,0,0), (0,0,1), -18)  # Add blade angle of attack\n)\n\n# 7. Circular pattern blades around the hub\nblades = single_blade\nfor blade_idx in range(1, num_blades):\n    rotated_blade = single_blade.rotate((0,0,0), (0,0,1), (360/num_blades)*blade_idx)\n    blades = blades.union(rotated_blade)\n\n# Combine all components into final model\nresult = fan.union(hub).union(blades)"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

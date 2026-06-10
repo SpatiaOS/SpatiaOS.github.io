@@ -1,0 +1,25 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0030/00309628",
+  "model": "kimi_k26-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Start with the main rectangular base as the reference: length 0.75, width 0.625, and height 0.00625, with the base solid extending 0.0062 upward from the base datum. Add one solid upright wall along the left edge of the base; its footprint is 0.0063 by 0.625, flush with the front and back edges, with left offset 0 and right offset 0.7437, and it rises 0.1875 above the plate as a solid strip with total reach 0.1938 from the base datum. Cut a lower rectangular opening through the wall thickness, spanning 0.081103 along the wall and 0.111891 high, with front offset 0.4447 and back offset 0.0992; its vertical band runs from 0 to 0.1119 relative to the base underside and its through reach is 0.0062. Cut a circular through-hole in the wall with radius 0.0432; place its axis on the wall plane at left offset 0 and front offset 0.2948, with the circular height band from 0.0631 to 0.1495 relative to the base underside, and use a cut reach of 0.0625. Cut a smaller rectangular through opening in the wall, 0.043521 along the wall by 0.044108 high, with front offset 0.091 and back offset 0.4905; its vertical band runs from 0.0992 to 0.1433 relative to the base underside and its cut reach is 0.0625. Cut the horizontal base with a rectangular through opening 0.264669 by 0.40625, offset 0.3125 from the left edge, 0.1728 from the right edge, 0.2073 from the front edge, and 0.0115 from the back edge; its removal band runs from -0.0562 to 0.0063 relative to the base underside, so it fully passes through the thin plate.",
+  "metrics": {
+    "chamfer_distance": 0.000366,
+    "hausdorff_distance": 0.132944,
+    "f_score_005": 0.9532,
+    "f_score_001": 0.7349,
+    "normal_consistency": 0.8816,
+    "iou_csg": 0.5767,
+    "iou_voxel": 0.6851,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// Resolution for curved surfaces\n$fn = 100;\n\n// Small tolerance to ensure clean through-cuts\neps = 0.001;\n\n// --- Base plate dimensions ---\nbase_length = 0.75;\nbase_width  = 0.625;\nbase_height = 0.00625;      // solid extends upward from base datum (z=0)\n\n// --- Left upright wall dimensions ---\nwall_thickness = 0.0063;    // footprint x-dimension\nwall_height    = 0.1938;    // total reach from base datum (z=0)\n\n// --- Lower rectangular opening through wall ---\nopen1_y_span   = 0.081103;\nopen1_height   = 0.111891;\nopen1_front_offset = 0.4447;    // distance from front edge (y=0)\nopen1_z_bottom = 0;             // relative to base underside\nopen1_reach    = 0.0062;        // nominal through reach\n\n// --- Circular through-hole in wall ---\nhole_radius    = 0.0432;\nhole_front_offset = 0.2948;     // axis location in y\nhole_z_bottom  = 0.0631;\nhole_z_top     = 0.1495;\nhole_reach     = 0.0625;        // cut depth along x\nhole_z_center  = (hole_z_bottom + hole_z_top) / 2;\n\n// --- Smaller rectangular through opening in wall ---\nopen3_y_span   = 0.043521;\nopen3_height   = 0.044108;\nopen3_front_offset = 0.091;\nopen3_z_bottom = 0.0992;\nopen3_reach    = 0.0625;\n\n// --- Rectangular through opening in base plate ---\nbasecut_x_span = 0.264669;\nbasecut_y_span = 0.40625;\nbasecut_left_offset  = 0.3125;\nbasecut_front_offset = 0.2073;\nbasecut_z_bottom = -0.0562;\nbasecut_z_top    = 0.0063;\n\n// Main model\ndifference() {\n    union() {\n        // Base plate sitting on datum\n        cube([base_length, base_width, base_height]);\n\n        // Left wall flush with front/back edges, rising from datum\n        cube([wall_thickness, base_width, wall_height]);\n    }\n\n    // 1) Lower rectangular opening through wall thickness\n    // Starts at wall plane x=0; depth expanded to wall_thickness+eps to ensure\n    // a clean through cut (nominal reach 0.0062 is slightly less than wall thickness)\n    translate([0, open1_front_offset, open1_z_bottom])\n        cube([wall_thickness + eps, open1_y_span, open1_height]);\n\n    // 2) Circular through-hole\n    // Axis placed on wall plane (x=0) at specified front offset and vertical center\n    translate([0, hole_front_offset, hole_z_center])\n        rotate([0, 90, 0])\n            cylinder(h = hole_reach, r = hole_radius, center = false);\n\n    // 3) Smaller rectangular through opening\n    // Anchored to wall plane x=0 and cutting inward\n    translate([0, open3_front_offset, open3_z_bottom])\n        cube([open3_reach, open3_y_span, open3_height]);\n\n    // 4) Base plate rectangular through opening\n    // Positioned by edge offsets, removal band fully passes through thin plate\n    translate([basecut_left_offset, basecut_front_offset, basecut_z_bottom])\n        cube([basecut_x_span, basecut_y_span, basecut_z_top - basecut_z_bottom]);\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

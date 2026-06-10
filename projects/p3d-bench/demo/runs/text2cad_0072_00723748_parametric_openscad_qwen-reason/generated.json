@@ -1,0 +1,25 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0072/00723748",
+  "model": "qwen-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Start with the main rectangular base as the reference: length 0.703125, width 0.75, height 0.013125, with the base extrusion depth 0.0131. In this base plate, make one circular through-opening with its axis 0.075 from the left edge and 0.6562 from the front edge, radius 0.0328. Add the main rectangular block on the upper side of the base with length 0.646875, width 0.50625, and height 0.645; place its footprint with left offset 0.0563, right offset -0.0001, front offset 0.0844, and back offset 0.1594. On the block top, add two separate annular collars, not a connecting pad: each collar has outer radius 0.0656, inner radius 0.0328, and height 0.0375, with axes at left offset 0.2062 and front offsets 0.1968 and 0.4781. Cut two shallow rectangular recesses into the top face of the block; their combined bounding span is length 0.473437 by width 0.39375, positioned with left offset 0.1734, right offset 0.0563, front offset 0.1406, and back offset 0.2157. These rectangular recesses remove only the top band from 0.6581 down to 0.6544 relative to the base underside, giving a cut depth of 0.0037, so they are blind recesses rather than through-cuts. Also keep the collar centers open with circular cuts of radius 0.0328 at left offset 0.2062 and front offsets 0.1969 and 0.4781; these openings pass through the 0.0375 collar height and continue only through the same shallow top band, not through the full 0.645 block. The 0.0375 collar tier sits above the main block top, while the 0.645 rectangular block is the deeper continuation down to the top of the 0.0131 base plate.",
+  "metrics": {
+    "chamfer_distance": 0.000116,
+    "hausdorff_distance": 0.059355,
+    "f_score_005": 0.9947,
+    "f_score_001": 0.4133,
+    "normal_consistency": 0.9456,
+    "iou_csg": 0.986,
+    "iou_voxel": 0.9945,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// Parameters\n$fn = 80;\n\nbase_len = 0.703125;\nbase_wid = 0.75;\nbase_ht = 0.013125;\n\nbase_hole_r = 0.0328;\nbase_hole_x = 0.075;\nbase_hole_y = 0.6562;\n\nblock_len = 0.646875;\nblock_wid = 0.50625;\nblock_ht = 0.645;\nblock_x = 0.0563;\nblock_y = 0.0844;\n\ncollar_out_r = 0.0656;\ncollar_in_r = 0.0328;\ncollar_ht = 0.0375;\ncollar_x = 0.2062;\ncollar_y1 = 0.1968;\ncollar_y2 = 0.4781;\n\nrec_len = 0.473437;\nrec_wid = 0.39375;\nrec_x = 0.1734;\nrec_y = 0.1406;\nrec_depth = 0.0037;\n\ncollar_cut_r = 0.0328;\ncollar_cut_y1 = 0.1969;\ncollar_cut_y2 = 0.4781;\n\n// Derived Z levels\ntop_base = base_ht;\ntop_block = top_base + block_ht;\ntop_collar = top_block + collar_ht;\ncut_bottom = top_block - rec_depth;\ncollar_cut_h = collar_ht + rec_depth;\n\n// Base plate module\nmodule base_plate() {\n    cube([base_len, base_wid, base_ht]);\n}\n\n// Main block module\nmodule main_block() {\n    translate([block_x, block_y, top_base])\n        cube([block_len, block_wid, block_ht]);\n}\n\n// Annular collar module\nmodule annular_collar(cx, cy) {\n    translate([cx, cy, top_block])\n        difference() {\n            cylinder(h=collar_ht, r=collar_out_r);\n            cylinder(h=collar_ht + 0.01, r=collar_in_r);\n        }\n}\n\n// Subtractive cuts module\nmodel_cuts() {\n    // Base through-hole\n    translate([base_hole_x, base_hole_y, -0.001])\n        cylinder(h=base_ht + 0.002, r=base_hole_r);\n\n    // Combined shallow rectangular recesses\n    translate([rec_x, rec_y, cut_bottom])\n        cube([rec_len, rec_wid, rec_depth + 0.001]);\n\n    // Collar center openings\n    for (cy = [collar_cut_y1, collar_cut_y2]) {\n        translate([collar_x, cy, cut_bottom])\n            cylinder(h=collar_cut_h + 0.001, r=collar_cut_r);\n    }\n}\n\n// Final assembly\ndifference() {\n    union() {\n        base_plate();\n        main_block();\n        annular_collar(collar_x, collar_y1);\n        annular_collar(collar_x, collar_y2);\n    }\n    model_cuts();\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

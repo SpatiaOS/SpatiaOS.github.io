@@ -1,0 +1,25 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0046/00460772",
+  "model": "qwen-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Use the main base as the first reference with length 0.341352, width 0.199422, height 0.065029, and main extrusion depth 0.065. Form this low rounded annular section on the upper side from concentric circular profiles centered 0.2416 from the left edge and 0.0997 from the front edge, with outer radius 0.0997 and inner radius 0.0434; keep the inner profile open through the 0.065 thickness. Add the taller hollow sleeve as a concentric annular cylinder with a 0.2602 by 0.2602 circular span, edge offsets left -0.2135, right 0.2946, front -0.0303, and back -0.0305; its center is offset -0.0834 from the left reference and 0.0998 from the front reference, with outer radius 0.1301, inner radius 0.0867, and upward reach 0.2601 from the base datum. Add the projecting straight-sided arm section with length 0.325145, width 0.260116, height 0.130058, edge offsets left -0.4086, right 0.4248, front -0.0303, and back -0.0304, extending upward 0.1301 from the base datum. In that same arm footprint, cut away the lower band from the underside over the vertical range 0 to 0.065 relative to the base underside, leaving the arm as a raised stepped tier rather than a full-depth solid. Add the narrow triangular web on the upper side with a plan run of 0.108382 and material thickness 0.0217, placed between left offsets 0.0466 and 0.1863 and front/back offsets 0.0781 and 0.0996; its side profile rises across a 0.195087 span and reaches toward the 0.2601 upper sleeve tier.",
+  "metrics": {
+    "chamfer_distance": 0.001719,
+    "hausdorff_distance": 0.167576,
+    "f_score_005": 0.7652,
+    "f_score_001": 0.1706,
+    "normal_consistency": 0.4583,
+    "iou_csg": 0.2208,
+    "iou_voxel": 0.2469,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// OpenSCAD Parametric Model\n$fn = 100;\n\n// Base dimensions\nbase_len = 0.341352;\nbase_wid = 0.199422;\nbase_hgt = 0.065029;\n\n// Annular section parameters\nann_cx = 0.2416;\nann_cy = 0.0997;\nann_r_out = 0.0997;\nann_r_in = 0.0434;\nann_hgt = 0.015;\n\n// Sleeve parameters\nslv_cx = -0.0834;\nslv_cy = 0.0998;\nslv_r_out = 0.1301;\nslv_r_in = 0.0867;\nslv_hgt = 0.2601;\n\n// Arm parameters\narm_len = 0.325145;\narm_wid = 0.260116;\narm_hgt = 0.1301;\narm_cx = 0.0081;\narm_cy = -0.03035;\narm_z_start = 0.065;\n\n// Web parameters\nweb_x1 = 0.0466; web_x2 = 0.1863;\nweb_y1 = 0.0781; web_y2 = 0.0996;\nweb_z_start = 0.065;\nweb_z_end = 0.2601;\n\n// Module: Main base block\nmodule base_block() {\n    cube([base_len, base_wid, base_hgt]);\n}\n\n// Module: Low annular ring on upper surface\nmodule annulus() {\n    translate([ann_cx, ann_cy, base_hgt])\n        cylinder(h=ann_hgt, r=ann_r_out);\n}\n\n// Module: Tall outer sleeve\nmodule sleeve_outer() {\n    translate([slv_cx, slv_cy, 0])\n        cylinder(h=slv_hgt, r=slv_r_out);\n}\n\n// Module: Projecting stepped arm tier\nmodule arm_tier() {\n    translate([arm_cx, arm_cy, arm_z_start])\n        cube([arm_len, arm_wid, arm_hgt - arm_z_start], center=true);\n}\n\n// Module: Triangular web rib\nmodule web_rib() {\n    translate([0, 0, web_z_start])\n        linear_extrude(height=web_z_end - web_z_start)\n            polygon(points=[[web_x1, web_y1], [web_x2, web_y1], [web_x2, web_y2]]);\n}\n\n// Module: Full assembly with subtractive features\nmodule model() {\n    difference() {\n        union() {\n            base_block();\n            annulus();\n            sleeve_outer();\n            arm_tier();\n            web_rib();\n        }\n        // Through-hole for annular section\n        translate([ann_cx, ann_cy, -1])\n            cylinder(h=base_hgt + ann_hgt + 2, r=ann_r_in);\n        // Hollow core for sleeve\n        translate([slv_cx, slv_cy, -1])\n            cylinder(h=slv_hgt + 2, r=slv_r_in);\n    }\n}\n\n// Render model\nmodel();"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

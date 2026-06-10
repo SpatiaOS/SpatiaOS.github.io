@@ -1,0 +1,25 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0096/00965117",
+  "model": "qwen-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Use a main rectangular plate as the reference body, length 0.225, width 0.75, and thickness 0.0375. Through this thin plate, make two separate circular openings of radius 0.0281, centered at left-offset 0.1125 with front-offsets 0.0375 and 0.7125; these are individual through holes near the two ends, not a filled pad between them. Add a central upper rectangular solid over the full 0.225 length with a 0.5625 width, front offset 0.0938 and back offset 0.0937, rising 0.1125 from the base datum. Add the matching central underside rectangular solid on the same 0.225 by 0.5625 footprint, starting at the plate underside and extending 0.375 downward, giving an asymmetric total span of 0.4875 across that shared profile direction. On the upper central area, place a round stepped boss centered across the 0.225 length: the lower wide round section is annular, with outer radius 0.1078 and inner radius 0.0563, centered at left-offset 0.1125 and front-offset 0.4687, with its own height 0.0938 above the rectangular shoulder and a top reach of 0.2063 from the base datum. Add the upper solid circular pin on the same axis, using radius 0.0563, recorded at left-offset 0.1126 and front-offset 0.4688, with height 0.1594 above the same shoulder and top reach 0.2719 from the base datum. Keep the annular collar as a hollow ring section, with only the smaller upper pin treated as solid round material.",
+  "metrics": {
+    "chamfer_distance": 5.6e-05,
+    "hausdorff_distance": 0.050541,
+    "f_score_005": 0.9991,
+    "f_score_001": 0.6832,
+    "normal_consistency": 0.9367,
+    "iou_csg": 0.9988,
+    "iou_voxel": 0.9996,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// Parameters\n$fn = 100;\n\n// Main plate dimensions\nplate_len = 0.225;\nplate_wid = 0.75;\nplate_thk = 0.0375;\n\n// Through holes\nhole_rad = 0.0281;\nhole_x = 0.1125;\nhole_y1 = 0.0375;\nhole_y2 = 0.7125;\n\n// Upper central rectangular solid\nupper_h = 0.1125;\nupper_w = 0.5625;\nupper_front_off = 0.0938;\n\n// Lower central rectangular solid\nlower_h = 0.375;\n\n// Annular boss (lower stepped section)\nboss_r_out = 0.1078;\nboss_r_in = 0.0563;\nboss_h = 0.0938;\nboss_x = 0.1125;\nboss_y = 0.4687;\n\n// Solid pin (upper stepped section)\npin_r = 0.0563;\npin_h = 0.1594;\npin_x = 0.1126;\npin_y = 0.4688;\n\n// Derived reference values\nshoulder_z = upper_h;\ncenter_y = upper_front_off + upper_w / 2;\n\n// Module: Base plate\nmodule main_plate() {\n    translate([plate_len/2, plate_wid/2, plate_thk/2])\n        cube([plate_len, plate_wid, plate_thk], center=true);\n}\n\n// Module: Upper rectangular solid\nmodule upper_rect() {\n    translate([plate_len/2, center_y, upper_h/2])\n        cube([plate_len, upper_w, upper_h], center=true);\n}\n\n// Module: Lower rectangular solid\nmodule lower_rect() {\n    translate([plate_len/2, center_y, -lower_h/2])\n        cube([plate_len, upper_w, lower_h], center=true);\n}\n\n// Module: Annular boss (hollow ring)\nmodule annular_boss() {\n    translate([boss_x, boss_y, shoulder_z])\n        difference() {\n            cylinder(h=boss_h, r=boss_r_out, center=false);\n            cylinder(h=boss_h + 0.01, r=boss_r_in, center=false);\n        }\n}\n\n// Module: Solid pin\nmodule solid_pin() {\n    translate([pin_x, pin_y, shoulder_z])\n        cylinder(h=pin_h, r=pin_r, center=false);\n}\n\n// Module: Plate through-holes\nmodule through_holes() {\n    translate([hole_x, hole_y1, plate_thk/2])\n        cylinder(h=plate_thk + 0.02, r=hole_rad, center=true);\n    translate([hole_x, hole_y2, plate_thk/2])\n        cylinder(h=plate_thk + 0.02, r=hole_rad, center=true);\n}\n\n// Main assembly\ndifference() {\n    union() {\n        main_plate();\n        upper_rect();\n        lower_rect();\n        annular_boss();\n        solid_pin();\n    }\n    through_holes();\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

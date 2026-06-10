@@ -1,0 +1,24 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "image2cad",
+  "case_id": "articraft/engine_24547",
+  "model": "mimo_omni-reason",
+  "input_spec": "image",
+  "output_format": "cadquery",
+  "valid": true,
+  "condition": "Reference image: engine.",
+  "metrics": {
+    "chamfer_distance": 0.005138,
+    "hausdorff_distance": 0.278213,
+    "f_score_005": 0.5453,
+    "f_score_001": 0.075,
+    "normal_consistency": 0.487,
+    "iou_voxel": 0.1182,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "cadquery",
+    "source": "import cadquery as cq\nimport math\n\n# ----------------------\n# Parameter Definitions (all in millimeters)\n# ----------------------\n# Base dimensions\nbase_lower_length = 120.0\nbase_lower_width = 80.0\nbase_lower_height = 8.0\nbase_upper_length = 100.0\nbase_upper_width = 60.0\nbase_upper_height = 15.0\n\n# Flywheel parameters\nflywheel_outer_dia = 100.0\nflywheel_thickness = 10.0\nflywheel_hub_dia = 20.0\nflywheel_hole_dia = 25.0\nflywheel_hole_count = 4\n\n# Central shaft parameters\nshaft_main_dia = 18.0\nshaft_main_length = 140.0\nshaft_small_dia = 12.0\nshaft_small_length = 20.0\n\n# Motor/coil assembly parameters\nmotor_outer_dia = 60.0\nmotor_length = 80.0\nmotor_cap_dia = 65.0\nmotor_cap_height = 5.0\nmotor_rib_count = 20\nmotor_rib_depth = 2.0\n\n# ----------------------\n# Build the base assembly\n# ----------------------\n# Lower base plate\nbase = (\n    cq.Workplane(\"XY\")\n    .box(base_lower_length, base_lower_width, base_lower_height)\n    .edges(\"|Z\").fillet(2.0)  # Fillet base edges\n)\n# Upper raised platform\nbase = (\n    base\n    .workplane(offset=base_lower_height)\n    .box(base_upper_length, base_upper_width, base_upper_height)\n    .edges(\"|Z\").fillet(1.5)\n    .combine()\n)\n\n# ----------------------\n# Build the flywheels (two identical)\n# ----------------------\ndef make_flywheel():\n    # Create main wheel body\n    wheel = (\n        cq.Workplane(\"XZ\")\n        .circle(flywheel_outer_dia/2)\n        .circle(flywheel_hub_dia/2)\n        .extrude(flywheel_thickness)\n    )\n    # Add 4 cutout holes, evenly spaced\n    hole_angle_step = 360 / flywheel_hole_count\n    for i in range(flywheel_hole_count):\n        angle = math.radians(i * hole_angle_step)\n        x_pos = (flywheel_outer_dia/2 - flywheel_hole_dia/2 - 5) * math.cos(angle)\n        y_pos = (flywheel_outer_dia/2 - flywheel_hole_dia/2 - 5) * math.sin(angle)\n        wheel = (\n            wheel\n            .workplane(offset=flywheel_thickness/2)\n            .center(x_pos, y_pos)\n            .hole(flywheel_hole_dia)\n        )\n    return wheel\n\n# Position first flywheel\nflywheel_1 = make_flywheel().translate((-shaft_main_length/2 + 10, 0, base_lower_height + base_upper_height + flywheel_thickness/2))\n# Position second flywheel\nflywheel_2 = make_flywheel().translate((shaft_main_length/2 - 10, 0, base_lower_height + base_upper_height + flywheel_thickness/2))\n\n# ----------------------\n# Build the central shaft\n# ----------------------\nshaft = (\n    cq.Workplane(\"XZ\")\n    .circle(shaft_main_dia/2)\n    .extrude(shaft_main_length)\n    .translate((-shaft_main_length/2, 0, base_lower_height + base_upper_height + flywheel_thickness/2))\n)\n# Add smaller end shaft\nshaft = (\n    shaft\n    .workplane(offset=shaft_main_length/2)\n    .circle(shaft_small_dia/2)\n    .extrude(shaft_small_length)\n    .combine()\n)\n\n# ----------------------\n# Build the motor/coil assembly\n# ----------------------\n# Main motor coil body\nmotor = (\n    cq.Workplane(\"XZ\")\n    .circle(motor_outer_dia/2)\n    .extrude(motor_length)\n    .translate((-shaft_main_length/2 - motor_length/2 + 15, 0, base_lower_height + base_upper_height + flywheel_thickness/2))\n)\n\n# Add ribbed texture using extruded rings instead of cutThruAll\n# Create a thin ring profile for the groove\nfor i in range(motor_rib_count):\n    groove_pos = -motor_length/2 + (i+1)*(motor_length/(motor_rib_count+1))\n    # Create a thin ring (annulus) that will be cut from the motor\n    groove_ring = (\n        cq.Workplane(\"XZ\")\n        .circle(motor_outer_dia/2)\n        .circle(motor_outer_dia/2 - motor_rib_depth)\n        .extrude(1.0)  # Thin extrusion for the groove\n        .translate((groove_pos, 0, 0))\n    )\n    # Cut the groove ring from the motor\n    motor = motor.cut(groove_ring)\n\n# Add top cap\nmotor = (\n    motor\n    .workplane(offset=motor_length/2)\n    .circle(motor_cap_dia/2)\n    .extrude(motor_cap_height)\n    .combine()\n)\n\n# ----------------------\n# Combine all parts into final result\n# ----------------------\nresult = (\n    base\n    .add(flywheel_1)\n    .add(flywheel_2)\n    .add(shaft)\n    .add(motor)\n    .combine()\n)"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

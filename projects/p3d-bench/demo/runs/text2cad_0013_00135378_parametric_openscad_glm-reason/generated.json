@@ -1,0 +1,25 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0013/00135378",
+  "model": "glm-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Start with a rounded, slot-like rectangular base footprint measuring length 0.75 and width 0.45, with base height 0.05625 and main depth 0.0562. Use a single central vertical axis located 0.375 from the left edge and 0.225 from the front edge for every circular feature. On that axis, include the base-level concentric circular profile set with radii 0.225, 0.1875, 0.1875, 0.0937, 0.0937, 0.0562, and 0.0562, using the paired inner loops as real openings or hollow boundaries rather than filled disks. Add a coaxial outer annular collar centered on the same axis, with outer radius 0.225 and inner radius 0.1875; it occupies the central 0.45 by 0.45 circular span of the base and reaches 0.1687 upward from the common shoulder datum. Add the smaller coaxial annular section with outer radius 0.0937 and inner radius 0.0562, positioned with offsets left 0.2812, right 0.2814, front 0.1312, and back 0.1314 to its circular span, and have it reach 0.0937 from the same shoulder datum. Add the innermost solid circular section with radius 0.0562, centered on the same axis, with circular span offsets left 0.3188, right 0.3188, front 0.1688, and back 0.1688; this solid round section has length 0.1125, width 0.1125, height 0.075, and reaches 0.075 from the same shoulder datum. Treat the coaxial reach depths 0.0562, 0.075, 0.0937, and 0.1687 as absolute distances from the shared shoulder face, not as stacked segment heights.",
+  "metrics": {
+    "chamfer_distance": 0.000338,
+    "hausdorff_distance": 0.071754,
+    "f_score_005": 0.9156,
+    "f_score_001": 0.4191,
+    "normal_consistency": 0.7749,
+    "iou_csg": 0.6785,
+    "iou_voxel": 0.681,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// === Parametric Dimensions ===\nbase_length = 0.75;           // Base footprint length\nbase_width = 0.45;            // Base footprint width\nbase_height = 0.05625;        // Base height (shoulder datum)\nmain_depth = 0.0562;          // Main depth (≈ base_height)\n\n// Center axis position from left and front edges\ncx = 0.375;                   // 0.375 from left edge\ncy = 0.225;                   // 0.225 from front edge\n\n// Concentric circular radii (outer to inner)\nr_collar_outer = 0.225;       // Outer collar outer radius\nr_collar_inner = 0.1875;      // Outer collar inner radius (opening)\nr_middle_outer = 0.0937;      // Middle annular section outer radius\nr_middle_inner = 0.0562;      // Middle annular section inner radius (opening)\nr_center = 0.0562;            // Innermost solid section radius\n\n// Heights measured from shared shoulder datum (top of base)\nh_collar = 0.1687;            // Collar reaches 0.1687 from shoulder\nh_middle = 0.0937;            // Middle section reaches 0.0937 from shoulder\nh_center = 0.075;             // Center post reaches 0.075 from shoulder\n\nshoulder_z = base_height;     // Z position of shoulder datum\n\n$fn = 120;\n\n// Stadium (capsule/slot) shape module for the rounded rectangular base\nmodule stadium(l, w, h) {\n    r = w / 2;\n    hull() {\n        translate([r, r, 0])\n            cylinder(r=r, h=h);\n        translate([l - r, r, 0])\n            cylinder(r=r, h=h);\n    }\n}\n\n// Annular ring module (tube with hollow center = real opening)\nmodule annular_ring(outer_r, inner_r, height) {\n    difference() {\n        cylinder(r=outer_r, h=height);\n        translate([0, 0, -0.001])\n            cylinder(r=inner_r, h=height + 0.002);\n    }\n}\n\n// === Main Assembly ===\nunion() {\n    // Rounded slot-like rectangular base\n    stadium(base_length, base_width, base_height);\n\n    // Outer annular collar: occupies central 0.45 x 0.45 span\n    // Outer radius 0.225, inner radius 0.1875 (hollow opening)\n    translate([cx, cy, shoulder_z])\n        annular_ring(r_collar_outer, r_collar_inner, h_collar);\n\n    // Smaller coaxial annular section\n    // Outer radius 0.0937, inner radius 0.0562 (hollow opening)\n    // Offsets: left 0.2812, right 0.2814, front 0.1312, back 0.1314\n    translate([cx, cy, shoulder_z])\n        annular_ring(r_middle_outer, r_middle_inner, h_middle);\n\n    // Innermost solid circular section\n    // Radius 0.0562, length 0.1125, width 0.1125, height 0.075\n    // Offsets: left 0.3188, right 0.3188, front 0.1688, back 0.1688\n    translate([cx, cy, shoulder_z])\n        cylinder(r=r_center, h=h_center);\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

@@ -1,0 +1,25 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0084/00847302",
+  "model": "mimo-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Use a 0.75 by 0.625 by 0.55 outside rectangular body as the main reference, with the main solid reach height set to 0.55 from the base datum. Form it as an open-top hollow rectangular enclosure with straight vertical walls and a rectangular inner void, not as a filled block. Treat the outer wall material as joined solid sections sharing the same 0.75 by 0.625 outer footprint and the same 0.55 height. On the front side, remove a horizontal rectangular wall cut that is 0.5 long, centered with 0.125 margin to the left and 0.125 margin to the right; it occupies the vertical band from 0.25 to 0.45 above the underside and cuts inward from the front face by 0.075. On the left side, remove a vertical rectangular side opening that cuts inward by 0.075 from the left face, leaves 0.675 to the right edge, spans 0.225 along the side with 0.2 front margin and 0.2 back margin, and runs vertically from the underside up to 0.5. Add or retain a thin internal rectangular ledge along the front inside region, 0.5 long by 0.1 wide with 0.125 side margins; make this ledge a solid shallow tier with 0.0125 thickness, distinct from the deeper 0.075 wall cuts.",
+  "metrics": {
+    "chamfer_distance": 0.002257,
+    "hausdorff_distance": 0.275192,
+    "f_score_005": 0.8015,
+    "f_score_001": 0.0968,
+    "normal_consistency": 0.7827,
+    "iou_csg": 0.3666,
+    "iou_voxel": 0.3981,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// Parametric OpenSCAD Model - Rectangular Enclosure with Cuts and Ledge\n// All dimensions in inches\n\n// === PARAMETERS ===\n// Main body dimensions\nouter_width = 0.75;      // X dimension\nouter_depth = 0.625;     // Y dimension\nouter_height = 0.55;     // Z dimension\nwall_thickness = 0.075;  // Wall material thickness\n\n// Front wall cut dimensions\nfront_cut_length = 0.5;\nfront_cut_margin = 0.125;\nfront_cut_z_start = 0.25;\nfront_cut_z_end = 0.45;\nfront_cut_depth = 0.075;\n\n// Left side opening dimensions\nleft_cut_depth = 0.075;\nleft_cut_y_span = 0.225;\nleft_cut_y_front_margin = 0.2;\nleft_cut_z_max = 0.5;\n\n// Internal ledge dimensions\nledge_length = 0.5;\nledge_width = 0.1;\nledge_thickness = 0.0125;\nledge_margin_x = 0.125;\n\n// Resolution\n$fn = 100;\n\n// === MODULES ===\n// Main hollow enclosure module\nmodule hollow_enclosure() {\n    difference() {\n        // Outer solid block\n        cube([outer_width, outer_depth, outer_height]);\n        \n        // Inner void (open top hollow)\n        translate([wall_thickness, wall_thickness, wall_thickness])\n        cube([outer_width - 2*wall_thickness, \n              outer_depth - 2*wall_thickness, \n              outer_height]);\n    }\n}\n\n// Front horizontal wall cut\nmodule front_wall_cut() {\n    // Position: centered on front face (Y=0)\n    translate([front_cut_margin, 0, front_cut_z_start])\n    cube([front_cut_length, front_cut_depth, \n          front_cut_z_end - front_cut_z_start]);\n}\n\n// Left side vertical opening\nmodule left_side_opening() {\n    // Position: on left face (X=0)\n    translate([0, left_cut_y_front_margin, 0])\n    cube([left_cut_depth, left_cut_y_span, left_cut_z_max]);\n}\n\n// Internal ledge\nmodule internal_ledge() {\n    // Position: inside front wall, above base\n    translate([ledge_margin_x, wall_thickness, wall_thickness])\n    cube([ledge_length, ledge_width, ledge_thickness]);\n}\n\n// === MAIN MODEL ===\ndifference() {\n    // Start with hollow enclosure\n    hollow_enclosure();\n    \n    // Subtract front wall cut\n    front_wall_cut();\n    \n    // Subtract left side opening\n    left_side_opening();\n}\n\n// Add internal ledge\ninternal_ledge();"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

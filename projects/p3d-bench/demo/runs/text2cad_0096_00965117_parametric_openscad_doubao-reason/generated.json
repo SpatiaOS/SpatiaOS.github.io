@@ -1,0 +1,28 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0096/00965117",
+  "model": "doubao-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Use a main rectangular plate as the reference body, length 0.225, width 0.75, and thickness 0.0375. Through this thin plate, make two separate circular openings of radius 0.0281, centered at left-offset 0.1125 with front-offsets 0.0375 and 0.7125; these are individual through holes near the two ends, not a filled pad between them. Add a central upper rectangular solid over the full 0.225 length with a 0.5625 width, front offset 0.0938 and back offset 0.0937, rising 0.1125 from the base datum. Add the matching central underside rectangular solid on the same 0.225 by 0.5625 footprint, starting at the plate underside and extending 0.375 downward, giving an asymmetric total span of 0.4875 across that shared profile direction. On the upper central area, place a round stepped boss centered across the 0.225 length: the lower wide round section is annular, with outer radius 0.1078 and inner radius 0.0563, centered at left-offset 0.1125 and front-offset 0.4687, with its own height 0.0938 above the rectangular shoulder and a top reach of 0.2063 from the base datum. Add the upper solid circular pin on the same axis, using radius 0.0563, recorded at left-offset 0.1126 and front-offset 0.4688, with height 0.1594 above the same shoulder and top reach 0.2719 from the base datum. Keep the annular collar as a hollow ring section, with only the smaller upper pin treated as solid round material.",
+  "metrics": {
+    "chamfer_distance": 5.6e-05,
+    "hausdorff_distance": 0.050202,
+    "f_score_005": 0.999,
+    "f_score_001": 0.6843,
+    "normal_consistency": 0.9368,
+    "iou_csg": 0.9966,
+    "iou_voxel": 0.9995,
+    "pred_open_edge_ratio": 0.0,
+    "qa_overall": 1.0,
+    "qa_semantic": 1.0,
+    "qa_parametric": 1.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// Global resolution setting for smooth curved surfaces\n$fn = 100;\n\n// --------------------------\n// All Parameter Definitions\n// --------------------------\n// Main base plate dimensions (units consistent with spec)\nplate_length = 0.225;      // X-axis dimension\nplate_width = 0.75;        // Y-axis dimension\nplate_thickness = 0.0375;  // Z-axis dimension, base datum = Z=0 at plate bottom\n\n// Through hole parameters\nhole_radius = 0.0281;\nhole_center_x = 0.1125;    // Common X center for both holes\nhole_y_positions = [0.0375, 0.7125]; // Y positions of the two end holes\n\n// Central rectangular block parameters\ncentral_rect_length = 0.225;    // Full length of plate\ncentral_rect_width = 0.5625;\ncentral_rect_y_start = 0.0938;  // Front offset from plate edge\ncentral_rect_y_end = plate_width - 0.0937; // Back offset from plate edge\nupper_rect_top_z = 0.1125;      // Top Z height from base datum\nlower_rect_depth = 0.375;       // Downward extension from plate bottom\n\n// Annular hollow boss parameters\nboss_outer_r = 0.1078;\nboss_inner_r = 0.0563;\nboss_center_x = 0.1125;\nboss_center_y = 0.4687;\nboss_height = 0.0938;           // Height above upper rectangular shoulder\n\n// Upper solid pin parameters\npin_r = 0.0563;\npin_center_x = 0.1126;\npin_center_y = 0.4688;\npin_height = 0.1594;            // Height above upper rectangular shoulder\n\n// --------------------------\n// Main Model Construction\n// --------------------------\ndifference() {\n    union() {\n        // 1. Base plate\n        cube([plate_length, plate_width, plate_thickness]);\n\n        // 2. Upper central rectangular solid\n        translate([0, central_rect_y_start, plate_thickness])\n        cube([\n            central_rect_length, \n            central_rect_width, \n            upper_rect_top_z - plate_thickness\n        ]);\n\n        // 3. Lower central rectangular solid\n        translate([0, central_rect_y_start, -lower_rect_depth])\n        cube([central_rect_length, central_rect_width, lower_rect_depth]);\n\n        // 4. Annular hollow stepped boss\n        translate([boss_center_x, boss_center_y, upper_rect_top_z])\n        difference() {\n            cylinder(h=boss_height, r=boss_outer_r, center=false);\n            // Slightly taller inner cut to ensure full through hole\n            cylinder(h=boss_height + 0.005, r=boss_inner_r, center=false);\n        }\n\n        // 5. Upper solid circular pin\n        translate([pin_center_x, pin_center_y, upper_rect_top_z])\n        cylinder(h=pin_height, r=pin_r, center=false);\n    }\n\n    // Cut through holes in the end sections of the base plate\n    for (y_pos = hole_y_positions) {\n        translate([hole_center_x, y_pos, -0.005])\n        // Slightly taller cylinder to guarantee full through cut\n        cylinder(h=plate_thickness + 0.01, r=hole_radius, center=false);\n    }\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

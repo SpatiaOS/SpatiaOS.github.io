@@ -1,0 +1,25 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0037/00371278",
+  "model": "qwen-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Start with the main rectangular base as the reference: length 0.73913, width 0.543478, height 0.016304, made as an upper-side solid with extrusion depth 0.0163. Cut four separate circular through openings in the base plate, each radius 0.0163: centers offset 0.0272 from the left edge and 0.1848 from the front edge, 0.0272 from the left edge and 0.4565 from the front edge, 0.5761 from the left edge and 0.0272 from the front edge, and 0.587 from the left edge and 0.5163 from the front edge. Add the main raised rail group on the upper face as separate solid rectangular rib outlines, not as a filled rectangular pad; its overall occupied span is 0.5109 by 0.5217, with offsets 0.0435 from the left edge, 0.1847 from the right edge, 0.0109 from the front edge, and 0.0109 from the back edge, and its raised depth above the base tier is 0.0978. Add a shallow rectangular solid tab on the upper face with footprint 0.0435 by 0.0761, offsets 0.7065 from the left edge, -0.0109 from the right edge, 0.0978 from the front edge, and 0.3696 from the back edge, with extrusion depth 0.0163. Add the deeper side solid block with footprint 0.1413 by 0.087, offsets 0.5978 from the left edge, 0 from the right edge, 0.413 from the front edge, and 0.0435 from the back edge; use length 0.086957, width 0.125, height 0.141304, and extrusion depth 0.1413. This deeper block includes one circular through opening of radius 0.0326, centered on the same reference plane at left-edge offset 0.7391 and front-edge offset 0.4548; treat this as an opening through the block, not as a circular pad.",
+  "metrics": {
+    "chamfer_distance": 0.000292,
+    "hausdorff_distance": 0.09351,
+    "f_score_005": 0.957,
+    "f_score_001": 0.3461,
+    "normal_consistency": 0.8179,
+    "iou_csg": 0.4399,
+    "iou_voxel": 0.524,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// Global resolution\n$fn = 100;\n\n// Base parameters\nbase_len = 0.73913;\nbase_wid = 0.543478;\nbase_ht = 0.016304;\n\n// Base hole parameters\nhole_r = 0.0163;\nhole_pos = [\n    [0.0272, 0.1848],\n    [0.0272, 0.4565],\n    [0.5761, 0.0272],\n    [0.5870, 0.5163]\n];\n\n// Rail parameters\nrail_span_x = 0.5109;\nrail_span_y = 0.5217;\nrail_off_x = 0.0435;\nrail_off_y = 0.0109;\nrail_ht = 0.0978;\nrail_wall = 0.015; // Wall thickness for rib outline\n\n// Tab parameters\ntab_len = 0.0435;\ntab_wid = 0.0761;\ntab_ht = 0.0163;\ntab_off_x = 0.7065;\ntab_off_y = 0.0978;\n\n// Deep block parameters\nblk_len = 0.1413;   // Derived from footprint to match right-edge constraint\nblk_wid = 0.087;    // Derived from footprint\nblk_ht = 0.1413;\nblk_off_x = 0.5978;\nblk_off_y = 0.413;\n\n// Deep block hole parameters\nblk_hole_r = 0.0326;\nblk_hole_x = 0.7391;\nblk_hole_y = 0.4548;\n\n// Main geometry assembly\ndifference() {\n    union() {\n        // Base plate\n        cube([base_len, base_wid, base_ht]);\n\n        // Raised rail outline (hollow rectangular frame)\n        translate([rail_off_x, rail_off_y, base_ht]) {\n            difference() {\n                cube([rail_span_x, rail_span_y, rail_ht]);\n                translate([rail_wall, rail_wall, -0.5])\n                    cube([rail_span_x - 2*rail_wall, rail_span_y - 2*rail_wall, rail_ht + 1]);\n            }\n        }\n\n        // Shallow tab\n        translate([tab_off_x, tab_off_y, base_ht])\n            cube([tab_len, tab_wid, tab_ht]);\n\n        // Deeper side block\n        translate([blk_off_x, blk_off_y, base_ht])\n            cube([blk_len, blk_wid, blk_ht]);\n    }\n\n    // Through holes in base plate\n    for (p = hole_pos) {\n        translate([p[0], p[1], -1])\n            cylinder(r=hole_r, h=base_ht + 2);\n    }\n\n    // Through hole in deeper side block\n    translate([blk_hole_x, blk_hole_y, base_ht - 1])\n        cylinder(r=blk_hole_r, h=blk_ht + 2);\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

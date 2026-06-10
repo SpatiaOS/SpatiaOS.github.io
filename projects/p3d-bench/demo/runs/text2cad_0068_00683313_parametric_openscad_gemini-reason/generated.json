@@ -1,0 +1,25 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0068/00683313",
+  "model": "gemini-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Start with the main rectangular base as the reference: length 0.5, width 0.4375, height 0.09375, with the main base extrusion depth 0.0938. In the base section, include the circular profile centered 0.25 from the left edge and 0.1875 from the front edge, radius 0.0938, as a true void/opening in the solid rather than added material. Add a full-length rectangular solid strip along the back edge with footprint 0.5 by 0.0625, flush to the left and right edges, front offset 0.375 and back offset 0; this underside solid starts at the base underside and reaches 0.25 below it. Add the other back-edge solid over the same 0.5 by 0.0625 footprint, spanning from 0.5 below the base underside to 0.25 above it, and include the coincident circular void profiles centered 0.125 from the left edge and 0.4375 from the front edge with radius 0.05; do not treat these circular profiles as a filled rectangular pad. On the upper side, add a concentric annular collar centered 0.2501 from the left edge and 0.1876 from the front edge, with outer radius 0.0938 and inner radius 0.05, extending 0.0625 from the base datum; its circular bounding span is 0.1876 by 0.1876 with offsets left 0.1563, right 0.1561, front 0.0938, and back 0.1561.",
+  "metrics": {
+    "chamfer_distance": 0.000177,
+    "hausdorff_distance": 0.074922,
+    "f_score_005": 0.9701,
+    "f_score_001": 0.5272,
+    "normal_consistency": 0.8845,
+    "iou_csg": 0.8282,
+    "iou_voxel": 0.8737,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// Resolution for smooth curved surfaces\n$fn = 100;\n\n// Small epsilon value for clean boolean operations (prevents z-fighting)\neps = 0.001;\n\n// --- Parameters ---\n\n// Main Base Dimensions\nbase_length = 0.5;\nbase_width = 0.4375;\nbase_height = 0.09375;\n\n// Main Base Void\nbase_void_x = 0.25;\nbase_void_y = 0.1875;\nbase_void_r = 0.0938;\n\n// Back-edge Solids Footprint\nback_solid_length = 0.5;\nback_solid_width = 0.0625;\nback_solid_y_offset = 0.375;\n\n// Underside Strip Z-span\nunder_strip_z_min = -0.25;\nunder_strip_z_max = 0;\n\n// Main Back-edge Solid Z-span\nback_solid_z_min = -0.5;\nback_solid_z_max = 0.25;\n\n// Back-edge Void (Semi-circular notch on the back face)\nback_void_x = 0.125;\nback_void_y = 0.4375;\nback_void_r = 0.05;\n\n// Upper Concentric Annular Collar\ncollar_x = 0.2501;\ncollar_y = 0.1876;\ncollar_outer_r = 0.0938;\ncollar_inner_r = 0.05;\ncollar_height = 0.0625;\n\n\n// --- Geometry ---\n\ndifference() {\n    // 1. Positive Geometry (Additive)\n    union() {\n        // Main rectangular base\n        cube([base_length, base_width, base_height]);\n        \n        // Underside solid strip along the back edge\n        translate([0, back_solid_y_offset, under_strip_z_min])\n            cube([back_solid_length, back_solid_width, under_strip_z_max - under_strip_z_min]);\n            \n        // Other back-edge solid (overlaps and extends the underside strip)\n        translate([0, back_solid_y_offset, back_solid_z_min])\n            cube([back_solid_length, back_solid_width, back_solid_z_max - back_solid_z_min]);\n            \n        // Upper concentric annular collar (outer solid boundary)\n        translate([collar_x, collar_y, base_height])\n            cylinder(h=collar_height, r=collar_outer_r);\n    }\n    \n    // 2. Negative Geometry (Subtractive)\n    \n    // Main base circular void\n    translate([base_void_x, base_void_y, -eps])\n        cylinder(h=base_height + 2*eps, r=base_void_r);\n        \n    // Collar inner circular void\n    translate([collar_x, collar_y, base_height - eps])\n        cylinder(h=collar_height + 2*eps, r=collar_inner_r);\n        \n    // Back-edge solid circular void (coincident profile cutting through the back edge)\n    translate([back_void_x, back_void_y, back_solid_z_min - eps])\n        cylinder(h=(back_solid_z_max - back_solid_z_min) + 2*eps, r=back_void_r);\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

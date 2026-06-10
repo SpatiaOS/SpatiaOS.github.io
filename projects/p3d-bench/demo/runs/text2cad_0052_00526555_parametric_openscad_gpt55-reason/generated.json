@@ -1,0 +1,25 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0052/00526555",
+  "model": "gpt55-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Create the main solid as the shown stepped, line-profiled block within an overall length of 0.75, width of 0.714286, and height of 0.25, with the main extrusion depth 0.25 from the base datum. Include the upper through-opening as a circular inner profile with its axis 0.375 from the left edge and 0.5357 from the front edge, radius 0.0893, cutting through the main solid height. Add a pair of separate circular removed features on the front side face: one axis 0.0893 from the left edge and the other axis 0.6607 from the left edge, both starting at the front edge, each with radius 0.0491. These two side features are blind cylindrical cuts into the body with cut depth 0.1071, not a shared rectangular slot; their circular band runs from 0.0759 to 0.1741 above the base underside.",
+  "metrics": {
+    "chamfer_distance": 0.001964,
+    "hausdorff_distance": 0.215292,
+    "f_score_005": 0.8629,
+    "f_score_001": 0.3264,
+    "normal_consistency": 0.7314,
+    "iou_csg": 0.6252,
+    "iou_voxel": 0.6309,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// Parameters\n$fn = 96;\n\npart_length = 0.75;\npart_width  = 0.714286;\npart_height = 0.25;\n\nfront_block_depth = 0.357143;\nrear_side_inset   = 0.214286;\n\nupper_hole_x = 0.375;\nupper_hole_y = 0.5357;\nupper_hole_r = 0.0893;\n\nfront_cut_x_positions = [0.0893, 0.6607];\nfront_cut_r     = 0.0491;\nfront_cut_depth = 0.1071;\nfront_cut_z_min = 0.0759;\nfront_cut_z_max = 0.1741;\nfront_cut_z     = (front_cut_z_min + front_cut_z_max) / 2;\n\neps = 0.002;\n\n// Stepped line profile in plan view\nmodule stepped_profile_2d() {\n    polygon(points=[\n        [0, 0],\n        [part_length, 0],\n        [part_length, front_block_depth],\n        [part_length - rear_side_inset, front_block_depth],\n        [part_length - rear_side_inset, part_width],\n        [rear_side_inset, part_width],\n        [rear_side_inset, front_block_depth],\n        [0, front_block_depth]\n    ]);\n}\n\n// Main extruded solid from base datum\nmodule main_block() {\n    linear_extrude(height=part_height, convexity=10)\n        stepped_profile_2d();\n}\n\n// Vertical through-opening\nmodule upper_through_hole() {\n    translate([upper_hole_x, upper_hole_y, -eps])\n        cylinder(h=part_height + 2*eps, r=upper_hole_r);\n}\n\n// Separate blind cylindrical cut from the front face\nmodule front_blind_cut(xpos) {\n    translate([xpos, -eps, front_cut_z])\n        rotate([-90, 0, 0])\n            cylinder(h=front_cut_depth + eps, r=front_cut_r);\n}\n\n// Final model\ndifference() {\n    main_block();\n\n    // Upper circular through-opening\n    upper_through_hole();\n\n    // Two independent front blind cylindrical removals\n    for (xpos = front_cut_x_positions)\n        front_blind_cut(xpos);\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

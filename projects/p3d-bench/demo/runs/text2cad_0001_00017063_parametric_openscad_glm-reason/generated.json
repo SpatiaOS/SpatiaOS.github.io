@@ -1,0 +1,25 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0001/00017063",
+  "model": "glm-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Use a main base declared size of length 0.75, width 0.21875, and height 0.28125, with main extrusion depth 0.2812. Form the base as one solid upper-side extrusion from the base datum, filling the footprint to the left, right, front, and back edges with offsets of 0, and keep the side outline arched rather than reducing it to a rectangular notch. Add one remove-material feature made only from 2 separate circular profiles, not a connected slot or rectangular pocket. Place one circular axis 0.0717 from the left edge and 0.0625 from the front edge, and place the other circular axis 0.6692 from the left edge and 0.0625 from the front edge; each circular profile has radius 0.0312. Cut from the upper side with the removed band running from 0.1081 to 0.1705 above the base underside, using cut depth 0.0625. Treat the 0.6599 by 0.0625 span only as the envelope of the circular pattern, leaving the surrounding and intervening material solid.",
+  "metrics": {
+    "chamfer_distance": 0.00183,
+    "hausdorff_distance": 0.122905,
+    "f_score_005": 0.7726,
+    "f_score_001": 0.2388,
+    "normal_consistency": 0.5466,
+    "iou_csg": 0.4233,
+    "iou_voxel": 0.4561,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// === Parametric Dimensions ===\nbase_length = 0.75;            // x-dimension of base footprint\nbase_width = 0.21875;         // y-dimension of base footprint\nbase_height = 0.28125;        // declared z-height of base\nmain_extrusion_depth = 0.2812; // actual extrusion depth (z)\n\n// Circular cutout placement (from left/front edges)\nhole1_x = 0.0717;             // hole 1 center, offset from left edge\nhole1_y = 0.0625;             // hole 1 center, offset from front edge\nhole2_x = 0.6692;             // hole 2 center, offset from left edge\nhole2_y = 0.0625;             // hole 2 center, offset from front edge\nhole_radius = 0.0312;         // radius of each circular profile\n\n// Cut band vertical range (above base underside)\ncut_z_bottom = 0.1081;        // lower bound of removed band\ncut_z_top = 0.1705;           // upper bound of removed band\ncut_depth = 0.0625;           // vertical extent of cut\n\n$fn = 100;                    // curve resolution\n\n// === Base Module ===\nmodule base_block() {\n    // Solid upper-side extrusion from datum, full footprint with zero edge offsets\n    // Side outline kept arched (full extrusion profile, no rectangular notch)\n    cube([base_length, base_width, main_extrusion_depth]);\n}\n\n// === Circular Cutout Module ===\nmodule circular_hole(cx, cy) {\n    // Single circular profile cut from the upper side\n    // Removed band runs from cut_z_bottom to cut_z_top above base underside\n    translate([cx, cy, cut_z_bottom])\n        cylinder(h = cut_depth, r = hole_radius);\n}\n\n// === Main Model ===\ndifference() {\n    base_block();\n\n    // Remove-material feature: two separate circular profiles (not a connected slot)\n    // Envelope span 0.6599 x 0.0625 is bounding box only;\n    // surrounding and intervening material remains solid\n    circular_hole(hole1_x, hole1_y);\n    circular_hole(hole2_x, hole2_y);\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

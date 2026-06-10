@@ -1,0 +1,25 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0007/00073878",
+  "model": "kimi_k26-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Begin with the main reference size as length 0.375, width 0.375, and height 0.25, using a main extrusion depth of 0.25. Form the main annular cylinder as a circular upper-side solid centered 0.1875 from the left edge and 0.1875 from the front edge, with outer radius 0.1875 and a central through bore radius 0.075; its circular footprint occupies the 0.375 by 0.375 span and is not a rectangular plate. Add the shallow attached annular tab as an upper-side solid with bounding span 0.375 by 0.5625, edge offsets left 0, right 0, front -0.375, and back 0.1875 relative to the same reference. Its circular outer profile is centered 0.1875 from the left edge and -0.1875 from the front edge with radius 0.1875, and it has a centered through opening of radius 0.05; give this added section height 0.05 from the same underside datum so it remains lower than the 0.25 tall sleeve. The resulting radial wall thicknesses are 0.1125 for the main sleeve and 0.1375 for the shallow tab. Include a removed underside recess/cut associated with the main bore, with bounded footprint 0.2557 by 0.2884 and offsets left 0.0597, right 0.0596, front 0.0433, and back 0.0433. Center that circular cut profile on the main axis at 0.1875 from the left edge and 0.1875 from the front edge, use radius 0.075, and let the removed band run from 0 to 0.125 measured upward from the base underside.",
+  "metrics": {
+    "chamfer_distance": 0.000129,
+    "hausdorff_distance": 0.077658,
+    "f_score_005": 0.9807,
+    "f_score_001": 0.6818,
+    "normal_consistency": 0.8839,
+    "iou_csg": 0.8335,
+    "iou_voxel": 0.845,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// Main reference footprint\nlength = 0.375;\nwidth = 0.375;\nheight = 0.25;\n\n// Main annular cylinder parameters\nmain_ctr_x = 0.1875;\nmain_ctr_y = 0.1875;\nmain_outer_r = 0.1875;\nmain_bore_r = 0.075;\n\n// Shallow attached tab parameters\ntab_height = 0.05;\ntab_ctr_y = -0.1875; // 0.1875 from front edge in negative direction\ntab_outer_r = 0.1875;\ntab_bore_r = 0.05;\n\n// Underside recess parameters\nrecess_height = 0.125;\nrecess_x = 0.0597;\nrecess_y = 0.0433;\nrecess_w = 0.2557;\nrecess_d = 0.2884;\n\n// Resolution for small curved features\n$fn = 100;\n\n// Main sleeve: tall annular cylinder on underside datum\nmodule main_sleeve() {\n    translate([main_ctr_x, main_ctr_y, 0])\n    difference() {\n        cylinder(h = height, r = main_outer_r);\n        // Central through bore\n        cylinder(h = height, r = main_bore_r);\n    }\n}\n\n// Shallow tab: short annular cylinder attached to front of main sleeve\nmodule shallow_tab() {\n    translate([main_ctr_x, tab_ctr_y, 0])\n    difference() {\n        cylinder(h = tab_height, r = tab_outer_r);\n        // Centered through opening\n        cylinder(h = tab_height, r = tab_bore_r);\n    }\n}\n\n// Underside recess: rectangular pocket cut into bottom of main sleeve,\n// centered on main axis, leaving the central bore wall intact\nmodule underside_recess() {\n    translate([recess_x, recess_y, 0])\n        cube([recess_w, recess_d, recess_height]);\n}\n\n// Combine solids and subtract recess\ndifference() {\n    union() {\n        main_sleeve();\n        shallow_tab();\n    }\n    underside_recess();\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

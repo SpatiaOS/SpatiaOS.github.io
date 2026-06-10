@@ -1,0 +1,25 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0052/00526555",
+  "model": "deepseek_v4pro-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Create the main solid as the shown stepped, line-profiled block within an overall length of 0.75, width of 0.714286, and height of 0.25, with the main extrusion depth 0.25 from the base datum. Include the upper through-opening as a circular inner profile with its axis 0.375 from the left edge and 0.5357 from the front edge, radius 0.0893, cutting through the main solid height. Add a pair of separate circular removed features on the front side face: one axis 0.0893 from the left edge and the other axis 0.6607 from the left edge, both starting at the front edge, each with radius 0.0491. These two side features are blind cylindrical cuts into the body with cut depth 0.1071, not a shared rectangular slot; their circular band runs from 0.0759 to 0.1741 above the base underside.",
+  "metrics": {
+    "chamfer_distance": 0.005477,
+    "hausdorff_distance": 0.218187,
+    "f_score_005": 0.6879,
+    "f_score_001": 0.2113,
+    "normal_consistency": 0.6277,
+    "iou_csg": 0.4425,
+    "iou_voxel": 0.4549,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// Parametric dimensions for the main block\nblock_length = 0.75;\nblock_width  = 0.714286;\nblock_height = 0.25;\n\n// Upper through-hole (circular)\nthrough_hole_radius = 0.0893;\nthrough_hole_x      = 0.375;   // from left edge\nthrough_hole_y      = 0.5357;  // from front edge\n\n// Blind cylindrical cuts on front face (Y=0)\nblind_hole_radius   = 0.0491;\nblind_hole_depth    = 0.1071;   // into the body along Y\nblind_hole_z_center = (0.0759 + 0.1741) / 2;  // 0.125, centered vertically\nblind_hole1_x       = 0.0893;   // from left edge\nblind_hole2_x       = 0.6607;   // from left edge\n\n// Smoothness\n$fn = 100;\n\n// Main solid: rectangular block (base at Z=0, left at X=0, front at Y=0)\nmodule main_block() {\n    cube([block_length, block_width, block_height]);\n}\n\n// Upper through-hole: vertical cylinder removing full height\nmodule through_hole() {\n    translate([through_hole_x, through_hole_y, -0.005])\n        cylinder(h = block_height + 0.01, r = through_hole_radius);\n}\n\n// Single blind hole on the front face, axis along Y\nmodule blind_hole(x_pos) {\n    translate([x_pos, 0, blind_hole_z_center])\n        rotate([0, 90, 0])\n            cylinder(h = blind_hole_depth, r = blind_hole_radius);\n}\n\n// Final model: subtract holes from block\ndifference() {\n    main_block();\n    through_hole();\n    blind_hole(blind_hole1_x);\n    blind_hole(blind_hole2_x);\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

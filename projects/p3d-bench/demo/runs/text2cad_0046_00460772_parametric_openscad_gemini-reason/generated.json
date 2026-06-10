@@ -1,0 +1,25 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0046/00460772",
+  "model": "gemini-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Use the main base as the first reference with length 0.341352, width 0.199422, height 0.065029, and main extrusion depth 0.065. Form this low rounded annular section on the upper side from concentric circular profiles centered 0.2416 from the left edge and 0.0997 from the front edge, with outer radius 0.0997 and inner radius 0.0434; keep the inner profile open through the 0.065 thickness. Add the taller hollow sleeve as a concentric annular cylinder with a 0.2602 by 0.2602 circular span, edge offsets left -0.2135, right 0.2946, front -0.0303, and back -0.0305; its center is offset -0.0834 from the left reference and 0.0998 from the front reference, with outer radius 0.1301, inner radius 0.0867, and upward reach 0.2601 from the base datum. Add the projecting straight-sided arm section with length 0.325145, width 0.260116, height 0.130058, edge offsets left -0.4086, right 0.4248, front -0.0303, and back -0.0304, extending upward 0.1301 from the base datum. In that same arm footprint, cut away the lower band from the underside over the vertical range 0 to 0.065 relative to the base underside, leaving the arm as a raised stepped tier rather than a full-depth solid. Add the narrow triangular web on the upper side with a plan run of 0.108382 and material thickness 0.0217, placed between left offsets 0.0466 and 0.1863 and front/back offsets 0.0781 and 0.0996; its side profile rises across a 0.195087 span and reaches toward the 0.2601 upper sleeve tier.",
+  "metrics": {
+    "chamfer_distance": 0.00135,
+    "hausdorff_distance": 0.163697,
+    "f_score_005": 0.7713,
+    "f_score_001": 0.1703,
+    "normal_consistency": 0.5676,
+    "iou_csg": 0.2812,
+    "iou_voxel": 0.3064,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// --- Parametric Variables ---\n\n// Global resolution for smooth curves\n$fn = 100;\n\n// Base dimensions\nbase_length = 0.341352;\nbase_width = 0.199422;\nbase_height = 0.065029;\n\n// Base rounded annular section (right side)\nring_x = 0.2416;\nring_y = 0.0997;\nring_r_out = 0.0997;\nring_r_in = 0.0434;\n\n// Tall hollow sleeve (left side)\nsleeve_x = -0.0834;\nsleeve_y = 0.0998;\nsleeve_r_out = 0.1301;\nsleeve_r_in = 0.0867;\nsleeve_height = 0.2601;\n\n// Projecting arm section\narm_length = 0.325145;\narm_width = 0.260116;\narm_z_offset = 0.065029; // Floating above the 0 to 0.065 gap\narm_height = 0.130058 - arm_z_offset; \n\n// Triangular web\nweb_run = 0.108382;\nweb_thickness = 0.0217;\nweb_x_start = 0.0466;\nweb_y_center = (0.0781 + 0.0996) / 2; // Centered between front/back offsets\nweb_z_start = 0.065029;\nweb_z_end = 0.2601;\n\n// --- Modules ---\n\n// Main base with the rounded right end and through-hole\nmodule base_solid() {\n    difference() {\n        union() {\n            // Main rectangular body\n            translate([0, 0, 0])\n                cube([ring_x, base_width, base_height]);\n            \n            // Rounded annular section at the right end\n            translate([ring_x, ring_y, 0])\n                cylinder(h=base_height, r=ring_r_out);\n        }\n        // Inner profile kept open through the 0.065 thickness\n        translate([ring_x, ring_y, -0.1])\n            cylinder(h=base_height + 0.2, r=ring_r_in);\n    }\n}\n\n// Solid cylinder for the tall sleeve (hole cut later to clear arm intersection)\nmodule tall_sleeve() {\n    translate([sleeve_x, sleeve_y, 0])\n        cylinder(h=sleeve_height, r=sleeve_r_out);\n}\n\n// Raised stepped tier arm spanning between the sleeve and the base\nmodule projecting_arm() {\n    translate([sleeve_x, sleeve_y - arm_width/2, arm_z_offset])\n        cube([arm_length, arm_width, arm_height]);\n}\n\n// Narrow triangular web connecting the arm to the tall sleeve\nmodule triangular_web() {\n    translate([0, web_y_center, 0])\n        rotate([90, 0, 0])\n        linear_extrude(height=web_thickness, center=true)\n        polygon([\n            [web_x_start, web_z_start],\n            [web_x_start + web_run, web_z_start],\n            [web_x_start, web_z_end]\n        ]);\n}\n\n// --- Main Assembly ---\n\ndifference() {\n    // Combine all solid bodies\n    union() {\n        base_solid();\n        tall_sleeve();\n        projecting_arm();\n        triangular_web();\n    }\n    \n    // Ensure the tall sleeve remains hollow through its entire height,\n    // cutting through any overlapping geometry from the arm or web.\n    translate([sleeve_x, sleeve_y, -0.1])\n        cylinder(h=sleeve_height + 0.2, r=sleeve_r_in);\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

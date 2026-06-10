@@ -1,0 +1,25 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0053/00531353",
+  "model": "mimo-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Start with the main base as a 0.75 long, 0.25 wide, 0.1 thick solid obround slab with straight long sides and rounded ends. Put two vertical through openings through the base thickness, each with radius 0.05; their centers are 0.125 from the front edge and are positioned 0.125 and 0.625 from the left edge. On the upper face add a solid rectangular lower upright with a 0.35 by 0.2 footprint, offset 0.2 from both length ends and 0.025 from both front and back edges, rising 0.2 above the base top so its top is 0.3 above the base underside. Add a solid rounded cap directly over the same footprint, sharing the same left, right, front, and back edges; use a semicircular profile spanning the 0.2 width with 0.1 rise, extruded along the 0.35 length, bringing the crown to 0.4 above the base underside. Cut the horizontal circular through-passage in the upright along the length direction with radius 0.05, centered 0.125 from the base front edge and in the vertical band from 0.25 to 0.35 above the base underside; start the cut at the upright left face 0.2 from the base left edge and give it a 0.444 reach so it exits past the far side, leaving 0.106 to the base right edge. Also make the rounded upper relief as removed material starting from the front side of the upright: its lengthwise span is 0.24 with 0.255 clearance to both base ends, its transverse reach is 0.299 from the front position 0.025 from the base front and over-runs the back by 0.074, and its vertical band is 0.18 to 0.45 above the base underside.",
+  "metrics": {
+    "chamfer_distance": 0.00065,
+    "hausdorff_distance": 0.101451,
+    "f_score_005": 0.8679,
+    "f_score_001": 0.1936,
+    "normal_consistency": 0.6517,
+    "iou_csg": 0.5274,
+    "iou_voxel": 0.5557,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// Parameters\nbase_length = 0.75;\nbase_width = 0.25;\nbase_thickness = 0.1;\nhole_radius = 0.05;\nhole_y = 0.125;\nhole1_x = 0.125;\nhole2_x = 0.625;\n\nupright_length = 0.35;\nupright_width = 0.2;\nupright_height = 0.2;\nupright_x_offset = 0.2;\nupright_y_offset = 0.025;\n\ncap_rise = 0.1;\n\npassage_radius = 0.05;\npassage_y = 0.125;\npassage_z_min = 0.25;\npassage_z_max = 0.35;\npassage_start_x = 0.2;\npassage_reach = 0.444;\n\nrelief_x_span = 0.24;\nrelief_x_clearance = 0.255;\nrelief_y_start_offset = 0.025;\nrelief_y_reach = 0.299;\nrelief_z_min = 0.18;\nrelief_z_max = 0.45;\n\n$fn = 100;\n\n// Main base (obround slab)\nmodule base() {\n    // Create obround: rectangle with semicircular ends\n    hull() {\n        translate([base_width/2, base_width/2, 0])\n            cylinder(h=base_thickness, d=base_width);\n        translate([base_length - base_width/2, base_width/2, 0])\n            cylinder(h=base_thickness, d=base_width);\n    }\n}\n\n// Lower upright (rectangular block)\nmodule upright() {\n    translate([upright_x_offset, upright_y_offset, base_thickness])\n        cube([upright_length, upright_width, upright_height]);\n}\n\n// Rounded cap (semicircular profile extruded along length)\nmodule cap() {\n    translate([upright_x_offset, upright_y_offset, base_thickness + upright_height]) {\n        rotate([90, 0, 90])\n            linear_extrude(height = upright_length)\n                translate([0, 0, 0])\n                    scale([1, cap_rise/(upright_width/2), 1])\n                        circle(d=upright_width);\n    }\n}\n\n// Full model with subtractions\ndifference() {\n    union() {\n        base();\n        upright();\n        cap();\n    }\n    \n    // Vertical through holes in base\n    translate([hole1_x, hole_y, -0.01])\n        cylinder(h=base_thickness + 0.02, r=hole_radius);\n    translate([hole2_x, hole_y, -0.01])\n        cylinder(h=base_thickness + 0.02, r=hole_radius);\n    \n    // Horizontal passage through upright\n    translate([passage_start_x, passage_y, (passage_z_min + passage_z_max)/2])\n        rotate([0, 90, 0])\n            cylinder(h=passage_reach, r=passage_radius);\n    \n    // Upper relief cut from front\n    translate([\n        relief_x_clearance,\n        upright_y_offset,\n        relief_z_min\n    ])\n        cube([\n            relief_x_span,\n            relief_y_reach,\n            relief_z_max - relief_z_min\n        ]);\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

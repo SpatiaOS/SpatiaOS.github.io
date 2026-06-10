@@ -1,0 +1,24 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "image2cad",
+  "case_id": "articraft/clock_21133",
+  "model": "doubao-reason",
+  "input_spec": "image",
+  "output_format": "threejs",
+  "valid": true,
+  "condition": "Reference image: clock.",
+  "metrics": {
+    "chamfer_distance": 0.000208,
+    "hausdorff_distance": 0.040935,
+    "f_score_005": 1.0,
+    "f_score_001": 0.3191,
+    "normal_consistency": 0.8217,
+    "iou_voxel": 0.5786,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "threejs",
+    "source": "// ==================== PARAMETERS ====================\nconst overallDiameter = 10;       // Total size of the clock\nconst baseThickness = 0.8;        // Thickness of the main base disc\nconst rimHeight = 0.3;            // Height difference between outer rim and inner face\nconst rimWidth = 1.0;             // Width of the outer raised rim\nconst innerFaceRadius = (overallDiameter / 2) - rimWidth;\nconst numeralHeight = 0.15;       // Height of raised Roman numerals\nconst numeralSize = 0.6;          // Length of each numeral marker\nconst centerHubRadius = 0.8;      // Radius of the center pivot hub\nconst centerHubHeight = 0.2;      // Height of center hub\nconst handLength = 3.4;           // Length of the clock hand\nconst handWidth = 0.22;           // Width of the clock hand\nconst handThickness = 0.12;       // Thickness of the clock hand\nconst greyMaterial = new THREE.MeshStandardMaterial({ color: 0xb8b8b8, roughness: 0.6, metalness: 0.2 });\n\n// ==================== BASE GEOMETRY ====================\n// Main outer base disc\nconst baseGeometry = new THREE.CylinderGeometry(overallDiameter / 2, overallDiameter / 2, baseThickness, 64);\nconst base = new THREE.Mesh(baseGeometry, greyMaterial);\nbase.position.y = baseThickness / 2;\nscene.add(base);\n\n// Recessed inner clock face\nconst innerFaceGeometry = new THREE.CylinderGeometry(innerFaceRadius, innerFaceRadius, 0.01, 64);\nconst innerFace = new THREE.Mesh(innerFaceGeometry, greyMaterial);\ninnerFace.position.y = baseThickness - rimHeight + 0.005;\nscene.add(innerFace);\n\n// ==================== ROMAN NUMERAL MARKERS ====================\nconst numeralGeometry = new THREE.BoxGeometry(numeralSize, numeralHeight, numeralSize * 0.3);\n// Place 12 numerals around the clock face, 30 degrees apart\nfor (let i = 0; i < 12; i++) {\n  const angle = (i * 30) * Math.PI / 180;\n  const numeral = new THREE.Mesh(numeralGeometry, greyMaterial);\n  // Position around center at radius 80% of inner face\n  numeral.position.x = Math.cos(angle) * (innerFaceRadius * 0.8);\n  numeral.position.z = Math.sin(angle) * (innerFaceRadius * 0.8);\n  numeral.position.y = innerFace.position.y + (numeralHeight / 2);\n  // Rotate numeral to face outward\n  numeral.rotation.y = -angle;\n  scene.add(numeral);\n}\n\n// ==================== CENTER HUB ====================\nconst centerHubGeometry = new THREE.CylinderGeometry(centerHubRadius, centerHubRadius, centerHubHeight, 32);\nconst centerHub = new THREE.Mesh(centerHubGeometry, greyMaterial);\ncenterHub.position.y = innerFace.position.y + (centerHubHeight / 2);\nscene.add(centerHub);\n\n// Small center pivot dot\nconst centerDotGeometry = new THREE.CylinderGeometry(0.2, 0.2, centerHubHeight + 0.02, 16);\nconst centerDot = new THREE.Mesh(centerDotGeometry, greyMaterial);\ncenterDot.position.y = centerHub.position.y;\nscene.add(centerDot);\n\n// ==================== CLOCK HAND ====================\nconst handGeometry = new THREE.BoxGeometry(handLength, handThickness, handWidth);\n// Translate geometry so pivot point is at the center hub\nhandGeometry.translate(handLength / 2, 0, 0);\nconst hand = new THREE.Mesh(handGeometry, greyMaterial);\nhand.position.y = centerHub.position.y + (centerHubHeight / 2) + 0.05;\n// Rotate hand to ~2 o'clock position matching reference image\nhand.rotation.y = -60 * Math.PI / 180;\nscene.add(hand);\n\n// ==================== CAMERA ADJUSTMENT ====================\ncamera.position.set(12, 10, 12);\ncamera.lookAt(0, baseThickness / 2, 0);"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

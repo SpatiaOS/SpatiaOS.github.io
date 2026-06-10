@@ -1,0 +1,25 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0096/00965117",
+  "model": "gpt55-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Use a main rectangular plate as the reference body, length 0.225, width 0.75, and thickness 0.0375. Through this thin plate, make two separate circular openings of radius 0.0281, centered at left-offset 0.1125 with front-offsets 0.0375 and 0.7125; these are individual through holes near the two ends, not a filled pad between them. Add a central upper rectangular solid over the full 0.225 length with a 0.5625 width, front offset 0.0938 and back offset 0.0937, rising 0.1125 from the base datum. Add the matching central underside rectangular solid on the same 0.225 by 0.5625 footprint, starting at the plate underside and extending 0.375 downward, giving an asymmetric total span of 0.4875 across that shared profile direction. On the upper central area, place a round stepped boss centered across the 0.225 length: the lower wide round section is annular, with outer radius 0.1078 and inner radius 0.0563, centered at left-offset 0.1125 and front-offset 0.4687, with its own height 0.0938 above the rectangular shoulder and a top reach of 0.2063 from the base datum. Add the upper solid circular pin on the same axis, using radius 0.0563, recorded at left-offset 0.1126 and front-offset 0.4688, with height 0.1594 above the same shoulder and top reach 0.2719 from the base datum. Keep the annular collar as a hollow ring section, with only the smaller upper pin treated as solid round material.",
+  "metrics": {
+    "chamfer_distance": 6.6e-05,
+    "hausdorff_distance": 0.051392,
+    "f_score_005": 0.9966,
+    "f_score_001": 0.6639,
+    "normal_consistency": 0.9278,
+    "iou_csg": 0.9953,
+    "iou_voxel": 0.9995,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// Parameters\n$fn = 120;\neps = 0.0005;\n\n// Plate\nplate_length = 0.225;\nplate_width = 0.750;\nplate_thickness = 0.0375;\n\n// Plate through holes\nhole_radius = 0.0281;\nhole_x = 0.1125;\nhole_y_positions = [0.0375, 0.7125];\n\n// Central rectangular body\ncenter_body_length = 0.225;\ncenter_body_width = 0.5625;\ncenter_body_front_offset = 0.0938;\ncenter_body_back_offset = 0.0937;\ncenter_body_top_z = 0.1125;\ncenter_body_down_depth = 0.375;\ncenter_body_total_height = center_body_top_z + center_body_down_depth;\n\n// Stepped boss\nboss_axis_x = plate_length / 2;\nboss_axis_y = 0.46875;\n\ncollar_outer_radius = 0.1078;\ncollar_inner_radius = 0.0563;\ncollar_height = 0.0938;\ncollar_top_z = center_body_top_z + collar_height;\n\npin_radius = 0.0563;\npin_height = 0.1594;\npin_top_z = center_body_top_z + pin_height;\n\n// Helper: rectangular prism by offsets\nmodule offset_box(x0, y0, z0, sx, sy, sz) {\n    translate([x0, y0, z0])\n        cube([sx, sy, sz], center=false);\n}\n\n// Helper: vertical through hole\nmodule vertical_hole(x, y, z0, h, r) {\n    translate([x, y, z0 + h / 2])\n        cylinder(h=h + 2 * eps, r=r, center=true);\n}\n\n// Helper: annular cylinder\nmodule annular_cylinder(outer_r, inner_r, h) {\n    difference() {\n        cylinder(h=h, r=outer_r, center=false);\n        translate([0, 0, -eps])\n            cylinder(h=h + 2 * eps, r=inner_r, center=false);\n    }\n}\n\n// Main plate with two individual through openings\nmodule holed_plate() {\n    difference() {\n        offset_box(0, 0, 0, plate_length, plate_width, plate_thickness);\n\n        for (hy = hole_y_positions)\n            vertical_hole(hole_x, hy, 0, plate_thickness, hole_radius);\n    }\n}\n\n// Central upper and underside rectangular solids on shared footprint\nmodule central_body() {\n    offset_box(\n        0,\n        center_body_front_offset,\n        -center_body_down_depth,\n        center_body_length,\n        center_body_width,\n        center_body_total_height\n    );\n}\n\n// Upper annular collar and solid pin\nmodule stepped_boss() {\n    translate([boss_axis_x, boss_axis_y, center_body_top_z])\n        annular_cylinder(collar_outer_radius, collar_inner_radius, collar_height);\n\n    translate([boss_axis_x, boss_axis_y, center_body_top_z])\n        cylinder(h=pin_height, r=pin_radius, center=false);\n}\n\n// Complete model\nunion() {\n    holed_plate();\n    central_body();\n    stepped_boss();\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

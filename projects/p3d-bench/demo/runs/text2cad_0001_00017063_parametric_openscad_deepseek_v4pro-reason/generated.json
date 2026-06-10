@@ -1,0 +1,25 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0001/00017063",
+  "model": "deepseek_v4pro-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Use a main base declared size of length 0.75, width 0.21875, and height 0.28125, with main extrusion depth 0.2812. Form the base as one solid upper-side extrusion from the base datum, filling the footprint to the left, right, front, and back edges with offsets of 0, and keep the side outline arched rather than reducing it to a rectangular notch. Add one remove-material feature made only from 2 separate circular profiles, not a connected slot or rectangular pocket. Place one circular axis 0.0717 from the left edge and 0.0625 from the front edge, and place the other circular axis 0.6692 from the left edge and 0.0625 from the front edge; each circular profile has radius 0.0312. Cut from the upper side with the removed band running from 0.1081 to 0.1705 above the base underside, using cut depth 0.0625. Treat the 0.6599 by 0.0625 span only as the envelope of the circular pattern, leaving the surrounding and intervening material solid.",
+  "metrics": {
+    "chamfer_distance": 0.002242,
+    "hausdorff_distance": 0.126835,
+    "f_score_005": 0.4454,
+    "f_score_001": 0.0638,
+    "normal_consistency": 0.5061,
+    "iou_csg": 0.3267,
+    "iou_voxel": 0.3448,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// Parameters – all dimensions in inches\nlength         = 0.75;\nwidth          = 0.21875;\ntotal_height   = 0.28125;\narch_radius    = width / 2;                // 0.109375\nwall_height    = total_height - arch_radius; // 0.171875\n\n// Hole parameters\nhole1_x        = 0.0717;\nhole2_x        = 0.6692;\nhole_y         = 0.0625;\nhole_bottom_z  = 0.1081;\nhole_height    = 0.0625;   // 0.1705 – 0.1081\nhole_radius    = 0.03125;  // diameter = 0.0625\n\n$fn = 100;  // smooth curves\n\n// -------------------------------------------------------------------\n// Base geometry: rectangular lower block + arched top\nmodule base() {\n    union() {\n        // Lower rectangular block (full footprint)\n        cube([length, width, wall_height]);\n        \n        // Arched top – half‑cylinder placed along the X‑axis\n        difference() {\n            // Full horizontal cylinder\n            translate([0, width/2, total_height])\n                rotate([0, 90, 0])\n                    cylinder(h = length, r = arch_radius, center = false);\n            // Remove the portion below the wall top (Z = 0 … wall_height)\n            translate([-0.1, -0.1, -0.1])\n                cube([length + 0.2, width + 0.2, wall_height + 0.1]);\n        }\n    }\n}\n\n// -------------------------------------------------------------------\n// Main model – subtract two vertical blind holes\ndifference() {\n    base();\n    // Hole 1\n    translate([hole1_x, hole_y, hole_bottom_z])\n        cylinder(h = hole_height, r = hole_radius);\n    // Hole 2\n    translate([hole2_x, hole_y, hole_bottom_z])\n        cylinder(h = hole_height, r = hole_radius);\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

@@ -1,0 +1,25 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0004/00040376",
+  "model": "kimi_k26-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Use a main base reference span of length 0.75, width 0.421875, and height 0.191921, with the lower base extrusion extending 0.1919 upward from the base datum. Form this lower base from separate rounded profiles within the full 0.75 by 0.4218 span rather than as a filled rectangular plate: place one circular profile with its axis 0.2109 from the left edge and 0.2109 from the front edge, radius 0.2109, and place a second concentric circular group with its axis 0.6094 from the left edge and 0.2109 from the front edge, using radius 0.1406 with an inner radius of 0.1055 for the opening. Preserve the additional curved and slot-like profile portions in the lower sketch as rounded cut or boundary shapes, so the openings remain true voids rather than surface markings. Add the taller circular solid section over the left-side circular axis within a 0.4218 by 0.4218 footprint, offset 0 from the left edge, 0.3282 from the right edge, and 0 from both front and back edges; this upper-side material reaches 0.4424 from the same base datum, making it a taller continuation above the shallow base rather than an added segment stacked on top of the base height. Keep the upper circular section hollow/annular where the inner loop is present, including the rounded slot-like interruptions in the opening. Add a separate solid rectangular upright tab with length 0.041188, width 0.070313, and height 0.441346; position it with left offset 0.0703, right offset 0.6385, front offset 0.1758, and back offset 0.1757, and extrude it upward 0.4413 from the base datum.",
+  "metrics": {
+    "chamfer_distance": 0.000366,
+    "hausdorff_distance": 0.099471,
+    "f_score_005": 0.9349,
+    "f_score_001": 0.5158,
+    "normal_consistency": 0.8716,
+    "iou_csg": 0.7458,
+    "iou_voxel": 0.7733,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// Base datum envelope\nbase_length = 0.75;\nbase_width = 0.421875;\nbase_height = 0.1919;\n\n// Left circular profile (solid disk)\nleft_cx = 0.2109;\nleft_cy = 0.2109;\nleft_r = 0.2109;\n\n// Right concentric circular group (annulus)\nright_cx = 0.6094;\nright_cy = 0.2109;\nright_outer_r = 0.1406;\nright_inner_r = 0.1055;\n\n// Upper taller circular section over left-side axis\nupper_height = 0.4424;\nupper_footprint_w = 0.4218;\nupper_footprint_d = 0.4218;\nupper_left = 0;\nupper_right = 0.3282;\nupper_front = 0;\nupper_back = 0;\nupper_inner_r = right_inner_r; // inner loop void preserved through full height\n\n// Rectangular upright tab\ntab_length = 0.041188;\ntab_width = 0.070313;\ntab_height = 0.441346;\ntab_left = 0.0703;\ntab_front = 0.1758;\n\n// Curved surface resolution\n$fn = 100;\n\n// Lower base 2D sketch formed from separate rounded profiles\nmodule lower_profile() {\n    union() {\n        // Left solid circular profile within full span\n        translate([left_cx, left_cy])\n            circle(r = left_r);\n\n        // Right annular profile group (outer boundary with true inner void)\n        difference() {\n            translate([right_cx, right_cy])\n                circle(r = right_outer_r);\n            translate([right_cx, right_cy])\n                circle(r = right_inner_r);\n        }\n    }\n}\n\n// Upper section 2D profile bounded by explicit footprint\nmodule upper_profile() {\n    intersection() {\n        translate([upper_left, upper_front])\n            square([upper_footprint_w, upper_footprint_d]);\n        translate([left_cx, left_cy])\n            circle(r = left_r);\n    }\n}\n\n// Rounded slot-like interruptions for annular openings\nmodule opening_slots(h) {\n    // Radial slot cuts intersecting the inner loop\n    for (a = [45 : 90 : 315])\n        rotate([0, 0, a])\n            translate([left_cx + upper_inner_r, left_cy, h / 2])\n                rotate([0, 90, 0])\n                    cylinder(h = 0.06, r = 0.025, center = true, $fn = $fn);\n}\n\n// Main assembly\nunion() {\n    // Lower base extruded from base datum\n    linear_extrude(height = base_height, convexity = 4)\n        lower_profile();\n\n    // Upper circular section: taller continuation from same datum\n    difference() {\n        linear_extrude(height = upper_height, convexity = 4)\n            upper_profile();\n\n        // Inner loop void making section annular where present\n        translate([left_cx, left_cy, -0.01])\n            cylinder(h = upper_height + 0.02, r = upper_inner_r, $fn = $fn);\n\n        // Rounded slot-like interruptions preserved as true voids\n        opening_slots(upper_height);\n    }\n\n    // Separate solid rectangular upright tab\n    translate([tab_left, tab_front, 0])\n        cube([tab_length, tab_width, tab_height]);\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

@@ -1,0 +1,25 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0096/00965117",
+  "model": "claude-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Use a main rectangular plate as the reference body, length 0.225, width 0.75, and thickness 0.0375. Through this thin plate, make two separate circular openings of radius 0.0281, centered at left-offset 0.1125 with front-offsets 0.0375 and 0.7125; these are individual through holes near the two ends, not a filled pad between them. Add a central upper rectangular solid over the full 0.225 length with a 0.5625 width, front offset 0.0938 and back offset 0.0937, rising 0.1125 from the base datum. Add the matching central underside rectangular solid on the same 0.225 by 0.5625 footprint, starting at the plate underside and extending 0.375 downward, giving an asymmetric total span of 0.4875 across that shared profile direction. On the upper central area, place a round stepped boss centered across the 0.225 length: the lower wide round section is annular, with outer radius 0.1078 and inner radius 0.0563, centered at left-offset 0.1125 and front-offset 0.4687, with its own height 0.0938 above the rectangular shoulder and a top reach of 0.2063 from the base datum. Add the upper solid circular pin on the same axis, using radius 0.0563, recorded at left-offset 0.1126 and front-offset 0.4688, with height 0.1594 above the same shoulder and top reach 0.2719 from the base datum. Keep the annular collar as a hollow ring section, with only the smaller upper pin treated as solid round material.",
+  "metrics": {
+    "chamfer_distance": 5.6e-05,
+    "hausdorff_distance": 0.051537,
+    "f_score_005": 0.9988,
+    "f_score_001": 0.6815,
+    "normal_consistency": 0.939,
+    "iou_csg": 0.9942,
+    "iou_voxel": 0.9992,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// === Parameters ===\n\n// Main plate\nplate_length   = 0.225;    // X dimension\nplate_width    = 0.75;     // Y dimension\nplate_thick    = 0.0375;   // Z dimension (base at Z=0, top at Z=0.0375)\n\n// Through holes (two, near each end of width)\nhole_radius    = 0.0281;\nhole_x         = 0.1125;   // centered in X\nhole_y1        = 0.0375;   // near front end\nhole_y2        = 0.7125;   // near back end\n\n// Central upper rectangular block\nupper_block_length  = 0.225;\nupper_block_width   = 0.5625;\nupper_block_y_off   = 0.0938;   // front offset from Y=0\nupper_block_top_z   = 0.1125;   // top reach from base datum\nupper_block_height  = upper_block_top_z - plate_thick; // 0.075\n\n// Central underside rectangular block\nlower_block_length  = 0.225;\nlower_block_width   = 0.5625;\nlower_block_y_off   = 0.0938;\nlower_block_depth   = 0.375;    // extends downward from Z=0\n\n// Stepped boss — annular collar (hollow ring)\nboss_x              = 0.1125;\nboss_y              = 0.4687;\ncollar_outer_r      = 0.1078;\ncollar_inner_r      = 0.0563;\ncollar_base_z       = upper_block_top_z;          // 0.1125 (shoulder)\ncollar_top_z        = 0.2063;\ncollar_height       = collar_top_z - collar_base_z; // 0.0938\n\n// Stepped boss — upper solid pin\npin_x               = 0.1126;\npin_y               = 0.4688;\npin_radius          = 0.0563;\npin_top_z           = 0.2719;\npin_height          = pin_top_z - collar_base_z;    // 0.1594\n\n// Resolution\n$fn = 100;\n\n// === Modules ===\n\n// Main plate with two through holes\nmodule main_plate() {\n    difference() {\n        // Base plate sitting on Z=0\n        cube([plate_length, plate_width, plate_thick]);\n\n        // Hole near front end\n        translate([hole_x, hole_y1, -0.01])\n            cylinder(h = plate_thick + 0.02, r = hole_radius);\n\n        // Hole near back end\n        translate([hole_x, hole_y2, -0.01])\n            cylinder(h = plate_thick + 0.02, r = hole_radius);\n    }\n}\n\n// Central upper rectangular solid above the plate\nmodule upper_block() {\n    translate([0, upper_block_y_off, plate_thick])\n        cube([upper_block_length, upper_block_width, upper_block_height]);\n}\n\n// Central underside rectangular solid below the plate\nmodule lower_block() {\n    translate([0, lower_block_y_off, -lower_block_depth])\n        cube([lower_block_length, lower_block_width, lower_block_depth]);\n}\n\n// Annular collar — hollow ring on the shoulder\nmodule annular_collar() {\n    translate([boss_x, boss_y, collar_base_z])\n        difference() {\n            cylinder(h = collar_height, r = collar_outer_r);\n            translate([0, 0, -0.01])\n                cylinder(h = collar_height + 0.02, r = collar_inner_r);\n        }\n}\n\n// Solid upper pin on the same axis\nmodule solid_pin() {\n    translate([pin_x, pin_y, collar_base_z])\n        cylinder(h = pin_height, r = pin_radius);\n}\n\n// === Assembly ===\nunion() {\n    main_plate();\n    upper_block();\n    lower_block();\n    annular_collar();\n    solid_pin();\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

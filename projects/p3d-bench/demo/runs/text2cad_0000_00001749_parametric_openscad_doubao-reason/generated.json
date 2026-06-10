@@ -1,0 +1,26 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0000/00001749",
+  "model": "doubao-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Use the main base declared size as the first reference: length 0.395255, width 0.60219, height 0.109489, with a main extrusion depth of 0.1095. Form the primary body as a solid D-shaped frame contained in a 0.3953 by 0.6022 footprint, starting flush from the left, right, front, and back reference edges, with curved outer and inner outlines and one continuous inner through-opening. Keep the main frame as the full-depth solid, extending 0.1095 from the underside reference, with the straight rear and side portions tied into the rounded arc wall. Add a shallower solid round protrusion attached outside the frame: its overall added footprint is length 0.259658, width 0.197373, height 0.054745, with edge offsets left 0, right 0.1356, front -0.1478, and back 0.5526 relative to the main base footprint. The round portion of this added solid is a separate circular profile with its axis left-offset 0.0942 and front-offset -0.0821, radius 0.0657, and it extends only 0.0547 from the underside reference. Cut a concentric circular opening through that same shallow band, using the shared axis at left-offset 0.0942 and front-offset -0.0821 with radius 0.0285; the cut has a circular bounding span of length 0.056934 and width 0.056934 and removes material from vertical band 0 to 0.0547 relative to the underside reference. Keep all circular profiles coaxial, so the outer round tab and the smaller cut share one centerline rather than being offset from each other.",
+  "metrics": {
+    "chamfer_distance": 0.003296,
+    "hausdorff_distance": 0.175949,
+    "f_score_005": 0.5067,
+    "f_score_001": 0.0894,
+    "normal_consistency": 0.5479,
+    "pred_open_edge_ratio": 0.0,
+    "qa_overall": 0.75,
+    "qa_semantic": 0.75,
+    "qa_parametric": 0.75
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// Global Settings\n$fn = 100; // Smooth curve resolution\n\n// Main Base & Frame Parameters\nmain_length = 0.395255;\nmain_width = 0.60219;\nmain_height = 0.1095;\nframe_thickness = 0.05; // Uniform frame wall thickness\nd_straight_length = 0.0942; // Length of straight portion of D shape (matches protrusion center offset)\n\n// Shallow Protrusion Parameters\nprotrusion_height = 0.054745;\nprotrusion_x_min = 0;\nprotrusion_x_max = 0.1356;\nprotrusion_y_min = -0.1478;\nprotrusion_y_max = 0.5526;\nround_tab_center = [0.0942, -0.0821]; // Shared center for tab and hole\nround_tab_outer_r = 0.0657;\nround_tab_hole_r = 0.0285;\n\n// 2D D Shape Module (fits exactly in main footprint)\nmodule d_shape_2d() {\n    union() {\n        // Straight rectangular portion of D\n        square([d_straight_length, main_width]);\n        // Semicircular curved portion of D\n        translate([d_straight_length, main_width/2])\n        scale([1, 1, 0]) // Force 2D\n        sphere(r=main_width/2);\n    }\n}\n\n// Main D Frame Module\nmodule main_d_frame() {\n    difference() {\n        // Outer solid D shape\n        linear_extrude(height=main_height)\n        d_shape_2d();\n        // Inner cutout for through opening\n        linear_extrude(height=main_height + 0.1, center=true)\n        offset(r=-frame_thickness)\n        d_shape_2d();\n    }\n}\n\n// Shallow Protrusion with through hole Module\nmodule shallow_protrusion() {\n    difference() {\n        union() {\n            // Rectangular base of protrusion\n            linear_extrude(height=protrusion_height)\n            square([\n                protrusion_x_max - protrusion_x_min,\n                protrusion_y_max - protrusion_y_min\n            ]);\n            // Rounded tab portion\n            translate(round_tab_center)\n            linear_extrude(height=protrusion_height)\n            circle(r=round_tab_outer_r);\n        }\n        // Concentric through hole in tab\n        translate(round_tab_center)\n        linear_extrude(height=protrusion_height + 0.1, center=true)\n        circle(r=round_tab_hole_r);\n    }\n}\n\n// Final Assembly\nunion() {\n    main_d_frame();\n    shallow_protrusion();\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

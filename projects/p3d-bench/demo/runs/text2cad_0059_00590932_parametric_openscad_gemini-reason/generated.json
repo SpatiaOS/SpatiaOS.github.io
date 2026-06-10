@@ -1,0 +1,25 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0059/00590932",
+  "model": "gemini-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Start with the main base as a rectangular solid 0.165891 long by 0.325401 wide by 0.408347 high, with the main extrusion depth 0.4083. From the top of this base, cut a square recess 0.089326 by 0.089326, centered across the length with 0.0383 left and right edge offsets, set 0.0191 from the front edge and 0.217 from the back edge; this recess occupies the vertical band from 0.319 to 0.4083, giving it a depth of 0.0893 from the top. Cut a lower rectangular opening 0.076565 by 0.132416 through the vertical band from 0 to 0.319, with 0.0447 left offset, 0.0446 right offset, a front offset of -0.0303 so it breaks out beyond the front face, and 0.2233 remaining to the back. Cut away the upper back strip across the full 0.165891 length and 0.114848 width, leaving 0.2106 in front of it; this removed band runs from 0.2807 to 0.4083 with a cut depth of 0.1276, forming the high-to-low step. Add a shallow solid base-level section extending 0.0383 high with a 0.4339 by 0.1148 plan span, projecting 0.134 beyond both left and right sides of the main base and occupying the front 0.1148 of the width. In that shallow added section, include two circular through openings of radius 0.0255, both on the same front offset line 0.0574 from the front edge, with axes at left offsets -0.069 and 0.2349 relative to the main base left edge.",
+  "metrics": {
+    "chamfer_distance": 3.1e-05,
+    "hausdorff_distance": 0.038249,
+    "f_score_005": 0.9949,
+    "f_score_001": 0.5203,
+    "normal_consistency": 0.9313,
+    "iou_csg": 0.9801,
+    "iou_voxel": 0.984,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// Parameters\n\n// Main base dimensions\nbase_length = 0.165891;\nbase_width = 0.325401;\nbase_height = 0.408347;\n\n// Recess 1 (Top square cut)\nrecess1_length = 0.089326;\nrecess1_width = 0.089326;\nrecess1_x_offset = 0.0383;\nrecess1_y_offset = 0.0191;\nrecess1_z_start = 0.319;\n\n// Recess 2 (Lower rectangular opening)\nrecess2_length = 0.076565;\nrecess2_width = 0.132416;\nrecess2_x_offset = 0.0447;\nrecess2_y_offset = -0.0303;\nrecess2_z_start = 0;\nrecess2_z_end = 0.319;\n\n// Recess 3 (Upper back strip cut)\nrecess3_width = 0.114848;\nrecess3_y_offset = 0.2106;\nrecess3_z_start = 0.2807;\n\n// Shallow solid base addition\nadd_length = 0.4339;\nadd_width = 0.1148;\nadd_height = 0.0383;\nadd_x_offset = -0.134;\n\n// Through holes\nhole_radius = 0.0255;\nhole_y_offset = 0.0574;\nhole1_x_offset = -0.069;\nhole2_x_offset = 0.2349;\n\n// Resolution and epsilon for clean boolean operations\n$fn = 100;\neps = 0.001;\n\n// Reusable module for the entire part\nmodule main_model() {\n    difference() {\n        // Combine main base and shallow addition\n        union() {\n            // Main rectangular base\n            cube([base_length, base_width, base_height]);\n            \n            // Shallow solid base addition at the front\n            translate([add_x_offset, 0, 0])\n                cube([add_length, add_width, add_height]);\n        }\n        \n        // Cut 1: Top square recess\n        translate([recess1_x_offset, recess1_y_offset, recess1_z_start])\n            cube([recess1_length, recess1_width, base_height - recess1_z_start + eps]);\n            \n        // Cut 2: Lower rectangular opening breaking out the front face\n        translate([recess2_x_offset, recess2_y_offset, recess2_z_start - eps])\n            cube([recess2_length, recess2_width, recess2_z_end - recess2_z_start + eps]);\n            \n        // Cut 3: Upper back strip cut\n        translate([-eps, recess3_y_offset, recess3_z_start])\n            cube([base_length + 2*eps, recess3_width + eps, base_height - recess3_z_start + eps]);\n            \n        // Cut 4: Circular through hole 1 in the shallow addition\n        translate([hole1_x_offset, hole_y_offset, -eps])\n            cylinder(h=add_height + 2*eps, r=hole_radius);\n            \n        // Cut 5: Circular through hole 2 in the shallow addition\n        translate([hole2_x_offset, hole_y_offset, -eps])\n            cylinder(h=add_height + 2*eps, r=hole_radius);\n    }\n}\n\n// Render the geometry\nmain_model();"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

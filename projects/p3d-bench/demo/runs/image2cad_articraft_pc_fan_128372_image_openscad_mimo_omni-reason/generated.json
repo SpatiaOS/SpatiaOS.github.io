@@ -1,0 +1,24 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "image2cad",
+  "case_id": "articraft/pc_fan_128372",
+  "model": "mimo_omni-reason",
+  "input_spec": "image",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Reference image: pc fan.",
+  "metrics": {
+    "chamfer_distance": 0.002322,
+    "hausdorff_distance": 0.137541,
+    "f_score_005": 0.6867,
+    "f_score_001": 0.0653,
+    "normal_consistency": 0.6159,
+    "iou_voxel": 0.2091,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// Computer Fan 3D Model (OpenSCAD)\n// Parametric design with estimated dimensions based on standard 120mm fan\n\n// ---------------------- Parameters ----------------------\nouter_side = 120;      // Outer square side length (mm)\nthickness = 25;        // Overall thickness (mm)\ninner_diameter = 100;  // Inner circular frame outer diameter (mm)\nhub_diameter = 40;     // Central hub diameter (mm)\nblade_count = 5;       // Number of fan blades\nblade_thickness = 2;   // Blade thickness (mm)\nmount_hole_dia = 4;    // Mounting hole diameter (mm)\ncounterbore_dia = 6;   // Counterbore diameter (mm)\ncounterbore_depth = 2; // Counterbore depth (mm)\nstrut_width = 5;       // Width of struts connecting outer to inner (mm)\ncorner_radius = 5;     // Radius of rounded corners on outer frame (mm)\n$fn = 100;             // Smoothness for curved surfaces\n\n// ---------------------- Modules ----------------------\n\n// Module: Outer frame with rounded corners and mounting holes\nmodule outer_frame() {\n    difference() {\n        // Rounded square (outer frame)\n        minkowski() {\n            cube([outer_side - 2*corner_radius, outer_side - 2*corner_radius, thickness], center=true);\n            sphere(corner_radius, $fn=50);\n        }\n        // Mounting holes (4 corners)\n        for (i = [0:3]) {  // Fixed syntax: added brackets around range\n            angle = i * 90; // 0°, 90°, 180°, 270°\n            x = (outer_side/2 - corner_radius) * cos(angle);\n            y = (outer_side/2 - corner_radius) * sin(angle);\n            translate([x, y, 0]) {\n                // Counterbore (recessed hole for screw head)\n                cylinder(h=counterbore_depth, d=counterbore_dia, center=true);\n                // Through hole (for screw shaft)\n                cylinder(h=thickness + 2, d=mount_hole_dia, center=true);\n            }\n        }\n    }\n}\n\n// Module: Inner circular frame (ring)\nmodule inner_frame() {\n    difference() {\n        // Outer cylinder of inner frame\n        cylinder(h=thickness, d=inner_diameter, center=true);\n        // Inner hole (to form a ring)\n        cylinder(h=thickness + 2, d=inner_diameter - 2*strut_width, center=true);\n    }\n}\n\n// Module: Struts (connect outer frame to inner frame)\nmodule struts() {\n    for (i = [0:3]) {  // Fixed syntax: added brackets around range\n        angle = i * 90; // 0°, 90°, 180°, 270°\n        // Outer frame corner position\n        x_outer = (outer_side/2 - corner_radius) * cos(angle);\n        y_outer = (outer_side/2 - corner_radius) * sin(angle);\n        // Inner frame edge position (radius = inner_diameter/2)\n        x_inner = (inner_diameter/2) * cos(angle);\n        y_inner = (inner_diameter/2) * sin(angle);\n        // Strut length (distance between outer and inner points)\n        dx = x_inner - x_outer;\n        dy = y_inner - y_outer;\n        length = sqrt(dx*dx + dy*dy);\n        // Strut: rectangular prism, centered at midpoint\n        translate([x_outer, y_outer, 0]) {\n            rotate([0, 0, angle]) {\n                cube([length, strut_width, thickness], center=true);\n            }\n        }\n    }\n}\n\n// Module: Central hub\nmodule hub() {\n    cylinder(h=thickness, d=hub_diameter, center=true);\n}\n\n// Module: Fan blades (curved blades attached to hub)\nmodule blades() {\n    for (i = [0:blade_count-1]) {  // Fixed syntax: added brackets around range\n        angle = i * (360/blade_count); // Evenly spaced blades\n        rotate([0, 0, angle]) {\n            // Blade shape: 2D polygon with curved edges (using offset)\n            linear_extrude(height=blade_thickness, center=true) {\n                offset(r=2, chamfer=true) { // Chamfer for blade edge smoothness\n                    polygon([\n                        [0, 0],          // Hub center\n                        [hub_diameter/2, 0], // Edge of hub\n                        [inner_diameter/2, 10], // Blade tip (curved)\n                        [hub_diameter/2, 20], // Back of blade\n                        [0, 0]           // Close polygon\n                    ]);\n                }\n            }\n        }\n    }\n}\n\n// ---------------------- Main Assembly ----------------------\nunion() {\n    outer_frame();\n    inner_frame();\n    struts();\n    hub();\n    blades();\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

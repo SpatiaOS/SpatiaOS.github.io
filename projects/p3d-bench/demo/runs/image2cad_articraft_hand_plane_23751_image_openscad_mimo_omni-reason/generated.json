@@ -1,0 +1,23 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "image2cad",
+  "case_id": "articraft/hand_plane_23751",
+  "model": "mimo_omni-reason",
+  "input_spec": "image",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Reference image: hand plane.",
+  "metrics": {
+    "chamfer_distance": 0.002815,
+    "hausdorff_distance": 0.179892,
+    "f_score_005": 0.6804,
+    "f_score_001": 0.1589,
+    "normal_consistency": 0.4691,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// OpenSCAD code for the mechanical assembly (simplified approximation)\n// Parameters (adjustable for different sizes)\n$fn = 100;  // Smoothness for curved surfaces\n\n// Base dimensions\nbase_length = 100;    // Length of the main base\nbase_width = 50;      // Width of the main base\nbase_thickness = 10;  // Thickness of the base\n\n// Sphere knobs (two on either end)\nsphere_diameter = 20;    // Diameter of the spherical knobs\nsphere_base_dia = 15;    // Diameter of the sphere's cylindrical base\nsphere_base_height = 5;  // Height of the sphere's base\n\n// Central mechanism\ncentral_guide_height = 30;  // Height of the vertical guide cylinder\ncentral_guide_dia = 10;     // Diameter of the central guide\nscrew_diameter = 5;         // Diameter of the screw (threaded part)\nscrew_length = 40;          // Length of the screw\nknob_diameter = 15;         // Diameter of the screw's knob\nknob_height = 10;           // Height of the screw's knob\n\n// Mounting holes\nmount_hole_dia = 8;  // Diameter of mounting holes\n\n\n// Module: Base with rounded edges and central cutout\nmodule base_plate() {\n    // 2D shape for the base (rounded rectangle)\n    base_2d = [\n        [0, 0], [base_length, 0], [base_length, base_width], [0, base_width]\n    ];\n    // 2D shape for the central cutout (rounded rectangle)\n    cutout_2d = [\n        [10, 10], [base_length - 10, 10], [base_length - 10, base_width - 10], [10, base_width - 10]\n    ];\n    // Extrude the base with rounded edges\n    linear_extrude(base_thickness, center=true) {\n        difference() {\n            // Rounded base\n            offset(r=5) {\n                polygon(base_2d);\n            }\n            // Rounded central cutout\n            offset(r=5) {\n                polygon(cutout_2d);\n            }\n        }\n    }\n    // Add mounting holes (through holes)\n    for (x = [10, base_length - 10], y = [10, base_width - 10]) {\n        translate([x, y, 0]) {\n            cylinder(h=base_thickness + 1, d=mount_hole_dia, center=true);\n        }\n    }\n    // Central hole for the mechanism\n    translate([base_length/2, base_width/2, 0]) {\n        cylinder(h=base_thickness + 1, d=central_guide_dia, center=true);\n    }\n}\n\n// Module: Sphere knob with base and top hole\nmodule sphere_knob(d, base_d, base_h) {\n    // Sphere with a top hole (detail)\n    difference() {\n        sphere(d=d, $fn=100);\n        // Top hole (small cylinder)\n        translate([0, 0, d/2 - 2]) {\n            cylinder(h=2, d=d/5, center=true);\n        }\n    }\n    // Cylindrical base for the sphere\n    translate([0, 0, -base_h]) {\n        cylinder(h=base_h, d=base_d, center=true);\n    }\n}\n\n// Module: Central mechanism (guide, screw, knob)\nmodule central_mechanism() {\n    // Vertical guide cylinder\n    cylinder(h=central_guide_height, d=central_guide_dia, center=true);\n    // Screw (threaded, represented as a cylinder)\n    translate([0, 0, central_guide_height/2]) {\n        cylinder(h=screw_length, d=screw_diameter, center=true);\n    }\n    // Knob on the screw (hexagonal for knurling effect)\n    translate([0, 0, central_guide_height/2 + screw_length/2]) {\n        rotate([0, 0, 30]) {\n            cylinder(h=knob_height, d=knob_diameter, center=true, $fn=6);\n        }\n    }\n    // Clamp around the guide (simplified)\n    translate([0, 0, 0]) {\n        cylinder(h=central_guide_height/2, d=central_guide_dia + 10, center=true);\n    }\n}\n\n\n// Main assembly: Union of all components\nunion() {\n    // Base plate\n    base_plate();\n    \n    // Sphere knobs on either end\n    translate([10, base_width/2, base_thickness/2 + sphere_base_height]) {\n        sphere_knob(sphere_diameter, sphere_base_dia, sphere_base_height);\n    }\n    translate([base_length - 10, base_width/2, base_thickness/2 + sphere_base_height]) {\n        sphere_knob(sphere_diameter, sphere_base_dia, sphere_base_height);\n    }\n    \n    // Central mechanism\n    translate([base_length/2, base_width/2, base_thickness/2 + central_guide_height/2]) {\n        central_mechanism();\n    }\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

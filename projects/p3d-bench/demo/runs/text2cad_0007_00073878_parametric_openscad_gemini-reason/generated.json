@@ -1,0 +1,25 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0007/00073878",
+  "model": "gemini-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Begin with the main reference size as length 0.375, width 0.375, and height 0.25, using a main extrusion depth of 0.25. Form the main annular cylinder as a circular upper-side solid centered 0.1875 from the left edge and 0.1875 from the front edge, with outer radius 0.1875 and a central through bore radius 0.075; its circular footprint occupies the 0.375 by 0.375 span and is not a rectangular plate. Add the shallow attached annular tab as an upper-side solid with bounding span 0.375 by 0.5625, edge offsets left 0, right 0, front -0.375, and back 0.1875 relative to the same reference. Its circular outer profile is centered 0.1875 from the left edge and -0.1875 from the front edge with radius 0.1875, and it has a centered through opening of radius 0.05; give this added section height 0.05 from the same underside datum so it remains lower than the 0.25 tall sleeve. The resulting radial wall thicknesses are 0.1125 for the main sleeve and 0.1375 for the shallow tab. Include a removed underside recess/cut associated with the main bore, with bounded footprint 0.2557 by 0.2884 and offsets left 0.0597, right 0.0596, front 0.0433, and back 0.0433. Center that circular cut profile on the main axis at 0.1875 from the left edge and 0.1875 from the front edge, use radius 0.075, and let the removed band run from 0 to 0.125 measured upward from the base underside.",
+  "metrics": {
+    "chamfer_distance": 8.2e-05,
+    "hausdorff_distance": 0.047397,
+    "f_score_005": 0.9943,
+    "f_score_001": 0.691,
+    "normal_consistency": 0.9015,
+    "iou_csg": 0.8884,
+    "iou_voxel": 0.9038,
+    "pred_open_edge_ratio": 0.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// ==========================================\n// Parametric Variables\n// ==========================================\n\n// Main Reference Dimensions\nmain_length = 0.375;\nmain_width = 0.375;\nmain_height = 0.25;\n\n// Main Annular Cylinder\nmain_cx = 0.1875;\nmain_cy = 0.1875;\nmain_outer_r = 0.1875;\nmain_bore_r = 0.075;\n\n// Shallow Attached Annular Tab\ntab_cx = 0.1875;\ntab_cy = -0.1875;\ntab_outer_r = 0.1875;\ntab_bore_r = 0.05;\ntab_height = 0.05;\n\n// Underside Recess / Cut\nrecess_w = 0.2557; // X dimension footprint\nrecess_l = 0.2884; // Y dimension footprint\nrecess_h = 0.125;  // Height of the removed band from underside\n\n// Resolution for smooth curves\n$fn = 100;\n\n// ==========================================\n// Module Definitions\n// ==========================================\n\n// Module for the complete annular assembly\nmodule annular_assembly() {\n    difference() {\n        // 1. Combine solid bodies\n        union() {\n            // Main annular cylinder\n            // Centered at (0.1875, 0.1875) with height 0.25\n            translate([main_cx, main_cy, 0])\n                cylinder(h=main_height, r=main_outer_r);\n\n            // Shallow attached annular tab\n            // A straight rectangular body connecting the tab center to the main cylinder center\n            // Bounding span: X from 0 to 0.375, Y from -0.1875 to 0.1875\n            translate([0, tab_cy, 0])\n                cube([main_length, main_cy - tab_cy, tab_height]);\n\n            // Circular outer profile of the tab\n            // Centered at (0.1875, -0.1875) with height 0.05\n            translate([tab_cx, tab_cy, 0])\n                cylinder(h=tab_height, r=tab_outer_r);\n        }\n\n        // 2. Subtractive operations (Holes and Recesses)\n        \n        // Main central through bore\n        // Extended slightly in Z to ensure clean manifold cuts\n        translate([main_cx, main_cy, -0.01])\n            cylinder(h=main_height + 0.02, r=main_bore_r);\n\n        // Tab central through opening\n        translate([tab_cx, tab_cy, -0.01])\n            cylinder(h=tab_height + 0.02, r=tab_bore_r);\n\n        // Removed underside recess/cut\n        // Bounded footprint 0.2557 by 0.2884, centered on the main axis\n        translate([main_cx, main_cy, 0])\n            translate([-recess_w/2, -recess_l/2, -0.01])\n                cube([recess_w, recess_l, recess_h + 0.01]);\n\n        // Circular cut profile band associated with the main bore\n        // Runs from 0 to 0.125 measured upward from the base underside\n        translate([main_cx, main_cy, -0.01])\n            cylinder(h=recess_h + 0.01, r=main_bore_r);\n    }\n}\n\n// ==========================================\n// Main Execution\n// ==========================================\n\n// Instantiate the modeled component\ncolor(\"steelblue\")\n    annular_assembly();"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}
