@@ -1,0 +1,14 @@
+.rt-metric {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.rt-cell.best {
+  color: var(--ink);
+  font-weight: 900;
+}
+
+.rt-cell.second {
+  color: var(--ink);
+  font-weight: 800;
+}
