@@ -15,7 +15,10 @@
     "normal_consistency": 0.8812,
     "iou_csg": 0.0611,
     "iou_voxel": 0.0974,
-    "pred_open_edge_ratio": 0.0
+    "pred_open_edge_ratio": 0.0,
+    "qa_semantic": 0.75,
+    "qa_parametric": 0.625,
+    "qa_overall": 0.6667
   },
   "program": {
     "language": "openscad",
