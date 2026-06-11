@@ -1,0 +1,12 @@
+{
+  "task": "text2cad",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "model": "qwen-reason",
+  "case_id": "0046/00460772",
+  "metrics": {},
+  "generated": {
+    "language": "openscad",
+    "source": "// OpenSCAD Parametric Model\n$fn = 100;\n\n// Base dimensions\nbase_len = 0.341352;\nbase_wid = 0.199422;\nbase_hgt = 0.065029;\n\n// Annular section parameters\nann_cx = 0.2416;\nann_cy = 0.0997;\nann_r_out = 0.0997;\nann_r_in = 0.0434;\nann_hgt = 0.015;\n\n// Sleeve parameters\nslv_cx = -0.0834;\nslv_cy = 0.0998;\nslv_r_out = 0.1301;\nslv_r_in = 0.0867;\nslv_hgt = 0.2601;\n\n// Arm parameters\narm_len = 0.325145;\narm_wid = 0.260116;\narm_hgt = 0.1301;\narm_cx = 0.0081;\narm_cy = -0.03035;\narm_z_start = 0.065;\n\n// Web parameters\nweb_x1 = 0.0466; web_x2 = 0.1863;\nweb_y1 = 0.0781; web_y2 = 0.0996;\nweb_z_start = 0.065;\nweb_z_end = 0.2601;\n\n// Module: Main base block\nmodule base_block() {\n    cube([base_len, base_wid, base_hgt]);\n}\n\n// Module: Low annular ring on upper surface\nmodule annulus() {\n    translate([ann_cx, ann_cy, base_hgt])\n        cylinder(h=ann_hgt, r=ann_r_out);\n}\n\n// Module: Tall outer sleeve\nmodule sleeve_outer() {\n    translate([slv_cx, slv_cy, 0])\n        cylinder(h=slv_hgt, r=slv_r_out);\n}\n\n// Module: Projecting stepped arm tier\nmodule arm_tier() {\n    translate([arm_cx, arm_cy, arm_z_start])\n        cube([arm_len, arm_wid, arm_hgt - arm_z_start], center=true);\n}\n\n// Module: Triangular web rib\nmodule web_rib() {\n    translate([0, 0, web_z_start])\n        linear_extrude(height=web_z_end - web_z_start)\n            polygon(points=[[web_x1, web_y1], [web_x2, web_y1], [web_x2, web_y2]]);\n}\n\n// Module: Full assembly with subtractive features\nmodule model() {\n    difference() {\n        union() {\n            base_block();\n            annulus();\n            sleeve_outer();\n            arm_tier();\n            web_rib();\n        }\n        // Through-hole for annular section\n        translate([ann_cx, ann_cy, -1])\n            cylinder(h=base_hgt + ann_hgt + 2, r=ann_r_in);\n        // Hollow core for sleeve\n        translate([slv_cx, slv_cy, -1])\n            cylinder(h=slv_hgt + 2, r=slv_r_in);\n    }\n}\n\n// Render model\nmodel();"
+  }
+}
