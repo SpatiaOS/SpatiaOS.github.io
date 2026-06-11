@@ -1,0 +1,336 @@
+{
+  "parts": {
+    "part_1": {
+      "coordinate_system": {
+        "Euler Angles": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Translation Vector": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "sketch": {
+        "face_1": {
+          "loop_1": {
+            "line_1": {
+              "Start Point": [
+                0.0,
+                0.0
+              ],
+              "End Point": [
+                0.75,
+                0.0
+              ]
+            },
+            "line_2": {
+              "Start Point": [
+                0.75,
+                0.0
+              ],
+              "End Point": [
+                0.75,
+                0.625
+              ]
+            },
+            "line_3": {
+              "Start Point": [
+                0.75,
+                0.625
+              ],
+              "End Point": [
+                0.0,
+                0.625
+              ]
+            },
+            "line_4": {
+              "Start Point": [
+                0.0,
+                0.625
+              ],
+              "End Point": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "loop_2": {
+            "line_1": {
+              "Start Point": [
+                0.075,
+                0.075
+              ],
+              "End Point": [
+                0.675,
+                0.075
+              ]
+            },
+            "line_2": {
+              "Start Point": [
+                0.675,
+                0.075
+              ],
+              "End Point": [
+                0.675,
+                0.55
+              ]
+            },
+            "line_3": {
+              "Start Point": [
+                0.675,
+                0.55
+              ],
+              "End Point": [
+                0.075,
+                0.55
+              ]
+            },
+            "line_4": {
+              "Start Point": [
+                0.075,
+                0.55
+              ],
+              "End Point": [
+                0.075,
+                0.075
+              ]
+            }
+          }
+        }
+      },
+      "extrusion": {
+        "extrude_depth_towards_normal": 0.55,
+        "extrude_depth_opposite_normal": 0.0,
+        "sketch_scale": 1.0,
+        "operation": "NewBodyFeatureOperation"
+      }
+    },
+    "part_2": {
+      "coordinate_system": {
+        "Euler Angles": [
+          90.0,
+          0.0,
+          90.0
+        ],
+        "Translation Vector": [
+          0.0,
+          0.625,
+          0.0
+        ]
+      },
+      "sketch": {
+        "face_1": {
+          "loop_1": {
+            "line_1": {
+              "Start Point": [
+                0.125,
+                0.25
+              ],
+              "End Point": [
+                0.625,
+                0.25
+              ]
+            },
+            "line_2": {
+              "Start Point": [
+                0.625,
+                0.25
+              ],
+              "End Point": [
+                0.625,
+                0.45
+              ]
+            },
+            "line_3": {
+              "Start Point": [
+                0.625,
+                0.45
+              ],
+              "End Point": [
+                0.125,
+                0.45
+              ]
+            },
+            "line_4": {
+              "Start Point": [
+                0.125,
+                0.45
+              ],
+              "End Point": [
+                0.125,
+                0.25
+              ]
+            }
+          }
+        }
+      },
+      "extrusion": {
+        "extrude_depth_towards_normal": 0.0,
+        "extrude_depth_opposite_normal": 0.075,
+        "sketch_scale": 1.0,
+        "operation": "CutFeatureOperation"
+      }
+    },
+    "part_3": {
+      "coordinate_system": {
+        "Euler Angles": [
+          90.0,
+          -90.0,
+          0.0
+        ],
+        "Translation Vector": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "sketch": {
+        "face_1": {
+          "loop_1": {
+            "line_1": {
+              "Start Point": [
+                0.2,
+                0.0
+              ],
+              "End Point": [
+                0.425,
+                0.0
+              ]
+            },
+            "line_2": {
+              "Start Point": [
+                0.425,
+                0.0
+              ],
+              "End Point": [
+                0.425,
+                0.5
+              ]
+            },
+            "line_3": {
+              "Start Point": [
+                0.425,
+                0.5
+              ],
+              "End Point": [
+                0.2,
+                0.5
+              ]
+            },
+            "line_4": {
+              "Start Point": [
+                0.2,
+                0.5
+              ],
+              "End Point": [
+                0.2,
+                0.0
+              ]
+            }
+          }
+        }
+      },
+      "extrusion": {
+        "extrude_depth_towards_normal": 0.0,
+        "extrude_depth_opposite_normal": 0.075,
+        "sketch_scale": 1.0,
+        "operation": "CutFeatureOperation"
+      }
+    },
+    "part_4": {
+      "coordinate_system": {
+        "Euler Angles": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Translation Vector": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "sketch": {
+        "face_1": {
+          "loop_1": {
+            "line_1": {
+              "Start Point": [
+                0.125,
+                0.45
+              ],
+              "End Point": [
+                0.625,
+                0.45
+              ]
+            },
+            "line_2": {
+              "Start Point": [
+                0.625,
+                0.45
+              ],
+              "End Point": [
+                0.625,
+                0.55
+              ]
+            },
+            "line_3": {
+              "Start Point": [
+                0.625,
+                0.55
+              ],
+              "End Point": [
+                0.125,
+                0.55
+              ]
+            },
+            "line_4": {
+              "Start Point": [
+                0.125,
+                0.55
+              ],
+              "End Point": [
+                0.125,
+                0.45
+              ]
+            }
+          }
+        }
+      },
+      "extrusion": {
+        "extrude_depth_towards_normal": 0.0125,
+        "extrude_depth_opposite_normal": 0.0,
+        "sketch_scale": 1.0,
+        "operation": "JoinFeatureOperation"
+      }
+    }
+  },
+  "_p3d_demo_metadata": {
+    "schema": "p3d.demo.generated_output.v1",
+    "task": "text2cad",
+    "case_id": "0084/00847302",
+    "model": "mimo_v25-reason",
+    "input_spec": "parametric",
+    "output_format": "json",
+    "valid": true,
+    "condition": "Use a 0.75 by 0.625 by 0.55 outside rectangular body as the main reference, with the main solid reach height set to 0.55 from the base datum. Form it as an open-top hollow rectangular enclosure with straight vertical walls and a rectangular inner void, not as a filled block. Treat the outer wall material as joined solid sections sharing the same 0.75 by 0.625 outer footprint and the same 0.55 height. On the front side, remove a horizontal rectangular wall cut that is 0.5 long, centered with 0.125 margin to the left and 0.125 margin to the right; it occupies the vertical band from 0.25 to 0.45 above the underside and cuts inward from the front face by 0.075. On the left side, remove a vertical rectangular side opening that cuts inward by 0.075 from the left face, leaves 0.675 to the right edge, spans 0.225 along the side with 0.2 front margin and 0.2 back margin, and runs vertically from the underside up to 0.5. Add or retain a thin internal rectangular ledge along the front inside region, 0.5 long by 0.1 wide with 0.125 side margins; make this ledge a solid shallow tier with 0.0125 thickness, distinct from the deeper 0.075 wall cuts.",
+    "metrics": {
+      "chamfer_distance": 0.000927,
+      "hausdorff_distance": 0.126825,
+      "f_score_005": 0.8315,
+      "f_score_001": 0.0315,
+      "normal_consistency": 0.7981,
+      "iou_csg": 0.3675,
+      "iou_voxel": 0.4027,
+      "pred_open_edge_ratio": 0.0,
+      "acc_cmd": 0.5135,
+      "acc_param": 0.1408,
+      "qa_semantic": 1.0,
+      "qa_parametric": 0.875,
+      "qa_overall": 0.9167
+    },
+    "note": "Copied from local evaluated Text-to-CAD result; no evaluation was rerun."
+  }
+}

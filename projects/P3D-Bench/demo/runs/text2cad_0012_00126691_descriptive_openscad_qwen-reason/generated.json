@@ -1,0 +1,16 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0012/00126691",
+  "model": "qwen-reason",
+  "input_spec": "descriptive",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "The model is built from a thin rectangular base slab with all other visible features added as solid material rather than cut away from it. A larger raised rectangular portion occupies the rear area of the base, leaving a front strip of the base exposed. Narrow raised strips run along the left and right sides of that raised area, and a very thin transverse added feature spans across the width with a real internal opening rather than a surface mark. The vertical extents are stepped: some added material is shallow while one aligned continuation reaches deeper from the same shoulder, so the underside is not a single flat level.",
+  "metrics": {
+    "qa_semantic": 0.75,
+    "judge_semantic": 8
+  },
+  "program": "// Resolution control for smooth curves\n$fn = 64;\n\n// Base slab dimensions\nbase_width = 100;\nbase_depth = 80;\nbase_thickness = 3;\n\n// Rear raised portion dimensions\nrear_width = 80;\nrear_depth = 50;\nrear_height = 15;\n\n// Side strip dimensions\nstrip_width = 8;\nstrip_height = 5;\n\n// Transverse feature dimensions\ntrans_width = base_width;\ntrans_depth = 8;\ntrans_height = 12;\nhole_diameter = 6;\ntrans_y_pos = base_depth * 0.4;\n\n// Stepped feature dimensions\nstep_width = 30;\nstep_depth = 15;\nshallow_height = 4;\ndeep_extension = 8;\nstep_y_pos = base_depth - rear_depth - 5;\n\n// Module: Base slab\nmodule base_slab() {\n    cube([base_width, base_depth, base_thickness]);\n}\n\n// Module: Rear raised block\nmodule rear_block() {\n    translate([(base_width - rear_width)/2, base_depth - rear_depth, base_thickness])\n        cube([rear_width, rear_depth, rear_height]);\n}\n\n// Module: Left and right side strips\nmodule side_strips() {\n    translate([0, base_depth - rear_depth, base_thickness])\n        cube([strip_width, rear_depth, strip_height]);\n    translate([base_width - strip_width, base_depth - rear_depth, base_thickness])\n        cube([strip_width, rear_depth, strip_height]);\n}\n\n// Module: Transverse feature with internal opening\nmodule transverse_feature() {\n    difference() {\n        translate([0, trans_y_pos, base_thickness])\n            cube([trans_width, trans_depth, trans_height]);\n        // Through-hole spanning the width\n        translate([base_width/2, trans_y_pos + trans_depth/2, base_thickness + trans_height/2])\n            rotate([0, 90, 0])\n            cylinder(h=trans_width + 4, d=hole_diameter, center=true);\n    }\n}\n\n// Module: Stepped vertical extents\nmodule stepped_feature() {\n    // Shallow addition on top of base shoulder\n    translate([(base_width - step_width)/2, step_y_pos, base_thickness])\n        cube([step_width, step_depth, shallow_height]);\n    // Aligned continuation extending deeper below base level\n    translate([(base_width - step_width)/2, step_y_pos, -deep_extension])\n        cube([step_width, step_depth, base_thickness + deep_extension]);\n}\n\n// Main assembly: additive construction\nunion() {\n    base_slab();\n    rear_block();\n    side_strips();\n    transverse_feature();\n    stepped_feature();\n}",
+  "note": "Copied from local evaluated Text-to-CAD result; no evaluation was rerun."
+}

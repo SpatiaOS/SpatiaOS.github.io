@@ -1,0 +1,16 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0084/00847302",
+  "model": "kimi_k26-reason",
+  "input_spec": "descriptive",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "The part is a straight-sided rectangular enclosure with an open top and a visible wall rim around a hollow interior. The outer body remains full height, while the side features are removed material rather than raised panels. One side includes a centered horizontal rectangular recess or opening set above the lower edge, and an adjacent side has a taller vertical through opening rising from the underside region. Inside the box there is a very thin solid ledge or shelf-like rib along one wall, creating a shallow stepped tier compared with the deeper wall cuts.",
+  "metrics": {
+    "qa_semantic": 0.75,
+    "judge_semantic": 10
+  },
+  "program": "// Parametric Enclosure with Open Top, Side Cutouts, and Interior Ledge\n// All dimensions in millimeters\n\n// --- Main Envelope ---\nwidth = 80;\ndepth = 60;\nheight = 40;\n\n// --- Wall and Floor Thickness ---\nwall_thick = 3;\nfloor_thick = 3;\n\n// --- Front Face Horizontal Recess (blind pocket) ---\nho_width = 30;      // horizontal span\nho_height = 8;      // vertical span\nho_elev = 8;        // bottom edge above base\nho_depth = 2;       // depth into wall (blind recess)\n\n// --- Right Face Vertical Through Opening ---\nvo_width = 8;       // span along Y\nvo_height = 25;     // span along Z\nvo_elev = 2;        // bottom edge above base\n\n// --- Interior Shelf-Like Rib on Left Wall ---\nledge_length = 40;      // span along Y\nledge_protrusion = 2;   // how far it extends into the cavity\nledge_thick = 1;        // vertical thickness\nledge_elev = 2;         // height above interior floor\n\n$fn = 50;\n\n// Main solid body with hollow interior and side features removed\ndifference() {\n    // Outer rectangular block\n    cube([width, depth, height]);\n\n    // Hollow interior (open top)\n    translate([wall_thick, wall_thick, floor_thick])\n        cube([width - 2*wall_thick, depth - 2*wall_thick, height - floor_thick + 0.5]);\n\n    // Front face centered horizontal recess (blind cut)\n    translate([(width - ho_width)/2, -0.5, ho_elev])\n        cube([ho_width, ho_depth + 0.5, ho_height]);\n\n    // Right face centered vertical through opening\n    translate([width - wall_thick - 0.5, (depth - vo_width)/2, vo_elev])\n        cube([wall_thick + 1, vo_width, vo_height]);\n}\n\n// Interior ledge on left wall (added after hollowing to create internal step)\ntranslate([wall_thick - 0.01, (depth - ledge_length)/2, floor_thick + ledge_elev])\n    cube([ledge_protrusion + 0.01, ledge_length, ledge_thick]);",
+  "note": "Copied from local evaluated Text-to-CAD result; no evaluation was rerun."
+}

@@ -1,0 +1,16 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0084/00847302",
+  "model": "glm-reason",
+  "input_spec": "descriptive",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "The part is a straight-sided rectangular enclosure with an open top and a visible wall rim around a hollow interior. The outer body remains full height, while the side features are removed material rather than raised panels. One side includes a centered horizontal rectangular recess or opening set above the lower edge, and an adjacent side has a taller vertical through opening rising from the underside region. Inside the box there is a very thin solid ledge or shelf-like rib along one wall, creating a shallow stepped tier compared with the deeper wall cuts.",
+  "metrics": {
+    "qa_semantic": 0.75,
+    "judge_semantic": 8
+  },
+  "program": "// Enclosure outer dimensions\nouter_length = 80;\nouter_width = 60;\nouter_height = 40;\n\n// Wall and bottom thickness\nwall_thickness = 3;\nbottom_thickness = 3;\n\n// Front face: centered horizontal recess above lower edge\nfront_recess_width = 30;\nfront_recess_height = 10;\nfront_recess_depth = 1.5;\nfront_recess_z_offset = 10;\n\n// Right face: taller vertical through-opening from underside region\nright_opening_width = 15;\nright_opening_height = 25;\nright_opening_z_offset = bottom_thickness;\n\n// Interior ledge along back wall\nledge_depth = 6;\nledge_thickness = 1.5;\nledge_z = bottom_thickness + 5;\n\n$fn = 100;\n\n// Main enclosure body with subtractions\ndifference() {\n    // Solid outer block\n    cube([outer_length, outer_width, outer_height]);\n\n    // Hollow interior — open top, leaves wall rim\n    translate([wall_thickness, wall_thickness, bottom_thickness])\n        cube([\n            outer_length - 2 * wall_thickness,\n            outer_width - 2 * wall_thickness,\n            outer_height - bottom_thickness + 1\n        ]);\n\n    // Front recess: centered horizontally, above lower edge\n    // Subtracted material on the Y-minus face\n    translate([\n        (outer_length - front_recess_width) / 2,\n        -1,\n        front_recess_z_offset\n    ])\n        cube([front_recess_width, front_recess_depth + 1, front_recess_height]);\n\n    // Right through-opening: taller vertical cut from underside region\n    // Subtracted material on the X-plus face\n    translate([\n        outer_length - 1,\n        (outer_width - right_opening_width) / 2,\n        right_opening_z_offset\n    ])\n        cube([wall_thickness + 2, right_opening_width, right_opening_height]);\n}\n\n// Interior ledge: thin shelf rib along back wall\n// Creates a shallow stepped tier inside the enclosure\ntranslate([\n    wall_thickness,\n    outer_width - wall_thickness - ledge_depth,\n    ledge_z\n])\n    cube([\n        outer_length - 2 * wall_thickness,\n        ledge_depth,\n        ledge_thickness\n    ]);",
+  "note": "Copied from local evaluated Text-to-CAD result; no evaluation was rerun."
+}

@@ -1,0 +1,16 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0084/00847302",
+  "model": "mimo_v25-reason",
+  "input_spec": "descriptive",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "The part is a straight-sided rectangular enclosure with an open top and a visible wall rim around a hollow interior. The outer body remains full height, while the side features are removed material rather than raised panels. One side includes a centered horizontal rectangular recess or opening set above the lower edge, and an adjacent side has a taller vertical through opening rising from the underside region. Inside the box there is a very thin solid ledge or shelf-like rib along one wall, creating a shallow stepped tier compared with the deeper wall cuts.",
+  "metrics": {
+    "qa_semantic": 1.0,
+    "judge_semantic": 10
+  },
+  "program": "// Parameters\nouter_width = 80;\nouter_depth = 60;\nouter_height = 50;\nwall_thickness = 3;\nrim_height = 4;\nrim_thickness = 2;\n\n// Horizontal recess parameters\nrecess_width = 40;\nrecess_height = 12;\nrecess_offset_from_bottom = 15;\n\n// Vertical opening parameters\nvertical_opening_width = 25;\nvertical_opening_height = 35;\n\n// Internal ledge parameters\nledge_thickness = 1.5;\nledge_depth = 4;\nledge_height = 25;\n\n// Resolution\n$fn = 100;\n\n// Main enclosure body\nmodule enclosure_body() {\n    difference() {\n        // Outer shell\n        cube([outer_width, outer_depth, outer_height]);\n        \n        // Hollow interior\n        translate([wall_thickness, wall_thickness, 0])\n            cube([outer_width - 2*wall_thickness, \n                  outer_depth - 2*wall_thickness, \n                  outer_height - rim_height]);\n        \n        // Rim recess (creates thicker top edge)\n        translate([wall_thickness - rim_thickness, wall_thickness - rim_thickness, outer_height - rim_height])\n            cube([outer_width - 2*wall_thickness + 2*rim_thickness, \n                  outer_depth - 2*wall_thickness + 2*rim_thickness, \n                  rim_height]);\n    }\n}\n\n// Horizontal recess on front face\nmodule horizontal_recess() {\n    translate([(outer_width - recess_width)/2, -0.1, recess_offset_from_bottom])\n        cube([recess_width, wall_thickness + 0.2, recess_height]);\n}\n\n// Vertical through opening on right face\nmodule vertical_opening() {\n    translate([outer_width - wall_thickness - 0.1, \n               (outer_depth - vertical_opening_width)/2, \n               -0.1])\n        cube([wall_thickness + 0.2, vertical_opening_width, vertical_opening_height]);\n}\n\n// Internal ledge/rib\nmodule internal_ledge() {\n    translate([wall_thickness, wall_thickness, ledge_height])\n        cube([outer_width - 2*wall_thickness, ledge_depth, ledge_thickness]);\n}\n\n// Final assembly\ndifference() {\n    union() {\n        enclosure_body();\n    }\n    \n    // Subtract features\n    horizontal_recess();\n    vertical_opening();\n}\n\n// Add internal ledge\ninternal_ledge();",
+  "note": "Copied from local evaluated Text-to-CAD result; no evaluation was rerun."
+}
