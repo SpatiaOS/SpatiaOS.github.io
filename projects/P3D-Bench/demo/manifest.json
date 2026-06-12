@@ -123,8 +123,8 @@
       "task": "text2cad"
     },
     {
-      "id": "0013/00134405",
-      "title": "The object is a flat circular annular rim with an open center area, not a filled...",
+      "id": "0005/00051572",
+      "title": "The model has a flat rectangular base with raised long side walls, leaving an open channel rather than a filled block...",
       "task": "text2cad"
     },
     {
@@ -7997,7 +7997,10 @@
         "normal_consistency": 0.9253,
         "iou_csg": 0.9571,
         "iou_voxel": 0.9616,
-        "pred_open_edge_ratio": 0
+        "pred_open_edge_ratio": 0,
+        "qa_overall": 1,
+        "qa_semantic": 1,
+        "qa_parametric": 1
       }
     },
     {
@@ -8025,7 +8028,10 @@
         "normal_consistency": 0.9371,
         "iou_csg": 0.9784,
         "iou_voxel": 0.9805,
-        "pred_open_edge_ratio": 0
+        "pred_open_edge_ratio": 0,
+        "qa_overall": 1,
+        "qa_semantic": 1,
+        "qa_parametric": 1
       }
     },
     {
@@ -8053,7 +8059,10 @@
         "normal_consistency": 0.9371,
         "iou_csg": 0.9784,
         "iou_voxel": 0.9805,
-        "pred_open_edge_ratio": 0
+        "pred_open_edge_ratio": 0,
+        "qa_overall": 0.916667,
+        "qa_semantic": 0.75,
+        "qa_parametric": 1
       }
     },
     {
@@ -8849,7 +8858,10 @@
         "normal_consistency": 0.6258,
         "iou_csg": 0.3485,
         "iou_voxel": 0.3741,
-        "pred_open_edge_ratio": 0
+        "pred_open_edge_ratio": 0,
+        "qa_overall": 0.833333,
+        "qa_semantic": 0.75,
+        "qa_parametric": 0.875
       }
     },
     {
@@ -8877,7 +8889,10 @@
         "normal_consistency": 0.6258,
         "iou_csg": 0.3485,
         "iou_voxel": 0.3741,
-        "pred_open_edge_ratio": 0
+        "pred_open_edge_ratio": 0,
+        "qa_overall": 0.833333,
+        "qa_semantic": 0.75,
+        "qa_parametric": 0.875
       }
     },
     {
@@ -8998,7 +9013,10 @@
         "normal_consistency": 0.6474,
         "iou_csg": 0.3933,
         "iou_voxel": 0.4152,
-        "pred_open_edge_ratio": 0
+        "pred_open_edge_ratio": 0,
+        "qa_overall": 0.333333,
+        "qa_semantic": 0.25,
+        "qa_parametric": 0.375
       }
     },
     {
@@ -9516,7 +9534,7 @@
         "pred_open_edge_ratio": 0,
         "qa_semantic": 0.75,
         "qa_parametric": 0.875,
-        "qa_overall": 0.8333
+        "qa_overall": 0.833333
       }
     },
     {
@@ -9578,7 +9596,7 @@
         "pred_open_edge_ratio": 0,
         "qa_semantic": 0.75,
         "qa_parametric": 0.625,
-        "qa_overall": 0.6667
+        "qa_overall": 0.666667
       }
     },
     {
@@ -9671,7 +9689,7 @@
         "pred_open_edge_ratio": 0,
         "qa_semantic": 0.25,
         "qa_parametric": 0.125,
-        "qa_overall": 0.1667
+        "qa_overall": 0.166667
       }
     },
     {
@@ -9702,7 +9720,7 @@
         "pred_open_edge_ratio": 0,
         "qa_semantic": 0.5,
         "qa_parametric": 0.375,
-        "qa_overall": 0.4167
+        "qa_overall": 0.416667
       }
     },
     {
@@ -9765,8 +9783,8 @@
         "acc_cmd": 0.6571,
         "acc_param": 0.3162,
         "qa_semantic": 0.25,
-        "qa_parametric": 0.375,
-        "qa_overall": 0.3333
+        "qa_parametric": 0.75,
+        "qa_overall": 0.583333
       }
     },
     {
@@ -9830,9 +9848,9 @@
         "pred_open_edge_ratio": 0,
         "acc_cmd": 0.6571,
         "acc_param": 0.2868,
-        "qa_semantic": 0.75,
+        "qa_semantic": 0.25,
         "qa_parametric": 0.625,
-        "qa_overall": 0.6667
+        "qa_overall": 0.5
       }
     },
     {
@@ -9865,7 +9883,7 @@
         "acc_param": 0.3065,
         "qa_semantic": 0.5,
         "qa_parametric": 0.625,
-        "qa_overall": 0.5833
+        "qa_overall": 0.583333
       }
     },
     {
@@ -9898,7 +9916,7 @@
         "acc_param": 0.2868,
         "qa_semantic": 0.5,
         "qa_parametric": 0.625,
-        "qa_overall": 0.5833
+        "qa_overall": 0.583333
       }
     },
     {
@@ -9964,7 +9982,7 @@
         "acc_param": 0.2727,
         "qa_semantic": 0.75,
         "qa_parametric": 0.625,
-        "qa_overall": 0.6667
+        "qa_overall": 0.666667
       }
     },
     {
@@ -10285,7 +10303,8 @@
       },
       "metrics": {
         "qa_semantic": 0.75,
-        "judge_semantic": 3
+        "judge_semantic": 3,
+        "qa_overall": 0.75
       }
     },
     {
@@ -10307,7 +10326,8 @@
       },
       "metrics": {
         "qa_semantic": 1,
-        "judge_semantic": 10
+        "judge_semantic": 10,
+        "qa_overall": 1
       }
     },
     {
@@ -10329,7 +10349,8 @@
       },
       "metrics": {
         "qa_semantic": 1,
-        "judge_semantic": 9
+        "judge_semantic": 9,
+        "qa_overall": 1
       }
     },
     {
@@ -10351,7 +10372,8 @@
       },
       "metrics": {
         "qa_semantic": 1,
-        "judge_semantic": 10
+        "judge_semantic": 10,
+        "qa_overall": 1
       }
     },
     {
@@ -10373,7 +10395,8 @@
       },
       "metrics": {
         "qa_semantic": 1,
-        "judge_semantic": 10
+        "judge_semantic": 10,
+        "qa_overall": 1
       }
     },
     {
@@ -10395,7 +10418,8 @@
       },
       "metrics": {
         "qa_semantic": 1,
-        "judge_semantic": 3
+        "judge_semantic": 3,
+        "qa_overall": 1
       }
     },
     {
@@ -10417,7 +10441,8 @@
       },
       "metrics": {
         "qa_semantic": 1,
-        "judge_semantic": 9
+        "judge_semantic": 9,
+        "qa_overall": 1
       }
     },
     {
@@ -10439,7 +10464,8 @@
       },
       "metrics": {
         "qa_semantic": 0.75,
-        "judge_semantic": 8
+        "judge_semantic": 8,
+        "qa_overall": 0.75
       }
     },
     {
@@ -10461,818 +10487,748 @@
       },
       "metrics": {
         "qa_semantic": 0.25,
-        "judge_semantic": 10
+        "judge_semantic": 10,
+        "qa_overall": 0.25
       }
     },
     {
-      "id": "text2cad_0013_00134405_descriptive_json_gpt55-reason",
+      "id": "text2cad_0005_00051572_descriptive_json_gpt55-reason",
       "task": "text2cad",
-      "case_id": "0013/00134405",
+      "case_id": "0005/00051572",
       "spec": "descriptive",
       "format": "json",
       "model": "gpt55-reason",
       "valid": true,
-      "condition": "The object is a flat circular annular rim with an open center area, not a filled circular plate. A concentric hollow collar is added at the middle and shares the same axis as the outer ring, with its center left open. Solid radial ribs run from the collar toward the outer rim, leaving rounded slot-like window spaces between them rather than surface markings. The added collar and rib web use shallower depth tiers than the main outer ring, so the part has stepped faces and underside relief instead of one uniform thickness.",
+      "condition": "The model has a flat rectangular base with raised long side walls, leaving an open channel rather than a filled block. A short rectangular added wall or tab sits at one end inside the side-wall outline and is lower than the tallest raised portions. Inside the channel is a centered row of annular cylindrical posts; these are added ring-shaped solids with real central openings, not floor cutouts. The posts and the taller rectangular build rise from the upper face of the base, while another rectangular addition stops at a lower level, so the top heights are stepped.",
       "assets": {
-        "generated": "runs/text2cad_0013_00134405_descriptive_json_gpt55-reason/generated.json",
-        "generated_json": "runs/text2cad_0013_00134405_descriptive_json_gpt55-reason/generated.json",
-        "mesh": "runs/text2cad_0013_00134405_descriptive_json_gpt55-reason/model.stl",
-        "pred_render": "runs/text2cad_0013_00134405_descriptive_json_gpt55-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0013_00134405.stl",
-        "gt_render": "gt_renders/text2cad_0013_00134405.png"
+        "generated": "runs/text2cad_0005_00051572_descriptive_json_gpt55-reason/generated.json",
+        "mesh": "runs/text2cad_0005_00051572_descriptive_json_gpt55-reason/model.stl",
+        "pred_render": "runs/text2cad_0005_00051572_descriptive_json_gpt55-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0005_00051572.stl",
+        "gt_render": "gt_renders/text2cad_0005_00051572.png",
+        "generated_json": "runs/text2cad_0005_00051572_descriptive_json_gpt55-reason/generated.json"
       },
       "metrics": {
-        "acc_cmd": 0.2727,
-        "acc_param": 0.012,
-        "qa_overall": 0,
-        "qa_semantic": 0,
-        "qa_parametric": 0,
-        "judge_semantic": 1
+        "qa_overall": 1,
+        "qa_semantic": 1,
+        "judge_semantic": 9
       }
     },
     {
-      "id": "text2cad_0013_00134405_descriptive_json_gemini-reason",
+      "id": "text2cad_0005_00051572_descriptive_json_gemini-reason",
       "task": "text2cad",
-      "case_id": "0013/00134405",
+      "case_id": "0005/00051572",
       "spec": "descriptive",
       "format": "json",
       "model": "gemini-reason",
       "valid": true,
-      "condition": "The object is a flat circular annular rim with an open center area, not a filled circular plate. A concentric hollow collar is added at the middle and shares the same axis as the outer ring, with its center left open. Solid radial ribs run from the collar toward the outer rim, leaving rounded slot-like window spaces between them rather than surface markings. The added collar and rib web use shallower depth tiers than the main outer ring, so the part has stepped faces and underside relief instead of one uniform thickness.",
+      "condition": "The model has a flat rectangular base with raised long side walls, leaving an open channel rather than a filled block. A short rectangular added wall or tab sits at one end inside the side-wall outline and is lower than the tallest raised portions. Inside the channel is a centered row of annular cylindrical posts; these are added ring-shaped solids with real central openings, not floor cutouts. The posts and the taller rectangular build rise from the upper face of the base, while another rectangular addition stops at a lower level, so the top heights are stepped.",
       "assets": {
-        "generated": "runs/text2cad_0013_00134405_descriptive_json_gemini-reason/generated.json",
-        "generated_json": "runs/text2cad_0013_00134405_descriptive_json_gemini-reason/generated.json",
-        "mesh": "runs/text2cad_0013_00134405_descriptive_json_gemini-reason/model.stl",
-        "pred_render": "runs/text2cad_0013_00134405_descriptive_json_gemini-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0013_00134405.stl",
-        "gt_render": "gt_renders/text2cad_0013_00134405.png"
+        "generated": "runs/text2cad_0005_00051572_descriptive_json_gemini-reason/generated.json",
+        "mesh": "runs/text2cad_0005_00051572_descriptive_json_gemini-reason/model.stl",
+        "pred_render": "runs/text2cad_0005_00051572_descriptive_json_gemini-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0005_00051572.stl",
+        "gt_render": "gt_renders/text2cad_0005_00051572.png",
+        "generated_json": "runs/text2cad_0005_00051572_descriptive_json_gemini-reason/generated.json"
       },
       "metrics": {
-        "acc_cmd": 0.3939,
-        "acc_param": 0.0411,
         "qa_overall": 1,
         "qa_semantic": 1,
-        "qa_parametric": 0,
         "judge_semantic": 10
       }
     },
     {
-      "id": "text2cad_0013_00134405_descriptive_json_claude-reason",
+      "id": "text2cad_0005_00051572_descriptive_json_claude-reason",
       "task": "text2cad",
-      "case_id": "0013/00134405",
+      "case_id": "0005/00051572",
       "spec": "descriptive",
       "format": "json",
       "model": "claude-reason",
       "valid": true,
-      "condition": "The object is a flat circular annular rim with an open center area, not a filled circular plate. A concentric hollow collar is added at the middle and shares the same axis as the outer ring, with its center left open. Solid radial ribs run from the collar toward the outer rim, leaving rounded slot-like window spaces between them rather than surface markings. The added collar and rib web use shallower depth tiers than the main outer ring, so the part has stepped faces and underside relief instead of one uniform thickness.",
+      "condition": "The model has a flat rectangular base with raised long side walls, leaving an open channel rather than a filled block. A short rectangular added wall or tab sits at one end inside the side-wall outline and is lower than the tallest raised portions. Inside the channel is a centered row of annular cylindrical posts; these are added ring-shaped solids with real central openings, not floor cutouts. The posts and the taller rectangular build rise from the upper face of the base, while another rectangular addition stops at a lower level, so the top heights are stepped.",
       "assets": {
-        "generated": "runs/text2cad_0013_00134405_descriptive_json_claude-reason/generated.json",
-        "generated_json": "runs/text2cad_0013_00134405_descriptive_json_claude-reason/generated.json",
-        "mesh": "runs/text2cad_0013_00134405_descriptive_json_claude-reason/model.stl",
-        "pred_render": "runs/text2cad_0013_00134405_descriptive_json_claude-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0013_00134405.stl",
-        "gt_render": "gt_renders/text2cad_0013_00134405.png"
+        "generated": "runs/text2cad_0005_00051572_descriptive_json_claude-reason/generated.json",
+        "mesh": "runs/text2cad_0005_00051572_descriptive_json_claude-reason/model.stl",
+        "pred_render": "runs/text2cad_0005_00051572_descriptive_json_claude-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0005_00051572.stl",
+        "gt_render": "gt_renders/text2cad_0005_00051572.png",
+        "generated_json": "runs/text2cad_0005_00051572_descriptive_json_claude-reason/generated.json"
       },
       "metrics": {
-        "acc_cmd": 0.3478,
-        "acc_param": 0.0464,
         "qa_overall": 1,
         "qa_semantic": 1,
-        "qa_parametric": 0,
-        "judge_semantic": 10
+        "judge_semantic": 9
       }
     },
     {
-      "id": "text2cad_0013_00134405_descriptive_json_kimi_k26-reason",
+      "id": "text2cad_0005_00051572_descriptive_json_kimi_k26-reason",
       "task": "text2cad",
-      "case_id": "0013/00134405",
+      "case_id": "0005/00051572",
       "spec": "descriptive",
       "format": "json",
       "model": "kimi_k26-reason",
       "valid": true,
-      "condition": "The object is a flat circular annular rim with an open center area, not a filled circular plate. A concentric hollow collar is added at the middle and shares the same axis as the outer ring, with its center left open. Solid radial ribs run from the collar toward the outer rim, leaving rounded slot-like window spaces between them rather than surface markings. The added collar and rib web use shallower depth tiers than the main outer ring, so the part has stepped faces and underside relief instead of one uniform thickness.",
+      "condition": "The model has a flat rectangular base with raised long side walls, leaving an open channel rather than a filled block. A short rectangular added wall or tab sits at one end inside the side-wall outline and is lower than the tallest raised portions. Inside the channel is a centered row of annular cylindrical posts; these are added ring-shaped solids with real central openings, not floor cutouts. The posts and the taller rectangular build rise from the upper face of the base, while another rectangular addition stops at a lower level, so the top heights are stepped.",
       "assets": {
-        "generated": "runs/text2cad_0013_00134405_descriptive_json_kimi_k26-reason/generated.json",
-        "generated_json": "runs/text2cad_0013_00134405_descriptive_json_kimi_k26-reason/generated.json",
-        "mesh": "runs/text2cad_0013_00134405_descriptive_json_kimi_k26-reason/model.stl",
-        "pred_render": "runs/text2cad_0013_00134405_descriptive_json_kimi_k26-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0013_00134405.stl",
-        "gt_render": "gt_renders/text2cad_0013_00134405.png"
+        "generated": "runs/text2cad_0005_00051572_descriptive_json_kimi_k26-reason/generated.json",
+        "mesh": "runs/text2cad_0005_00051572_descriptive_json_kimi_k26-reason/model.stl",
+        "pred_render": "runs/text2cad_0005_00051572_descriptive_json_kimi_k26-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0005_00051572.stl",
+        "gt_render": "gt_renders/text2cad_0005_00051572.png",
+        "generated_json": "runs/text2cad_0005_00051572_descriptive_json_kimi_k26-reason/generated.json"
       },
       "metrics": {
-        "acc_cmd": 0.3939,
-        "acc_param": 0.0649,
         "qa_overall": 1,
         "qa_semantic": 1,
-        "qa_parametric": 0,
         "judge_semantic": 10
       }
     },
     {
-      "id": "text2cad_0013_00134405_descriptive_json_deepseek_v4pro-reason",
+      "id": "text2cad_0005_00051572_descriptive_json_glm-reason",
       "task": "text2cad",
-      "case_id": "0013/00134405",
-      "spec": "descriptive",
-      "format": "json",
-      "model": "deepseek_v4pro-reason",
-      "valid": true,
-      "condition": "The object is a flat circular annular rim with an open center area, not a filled circular plate. A concentric hollow collar is added at the middle and shares the same axis as the outer ring, with its center left open. Solid radial ribs run from the collar toward the outer rim, leaving rounded slot-like window spaces between them rather than surface markings. The added collar and rib web use shallower depth tiers than the main outer ring, so the part has stepped faces and underside relief instead of one uniform thickness.",
-      "assets": {
-        "generated": "runs/text2cad_0013_00134405_descriptive_json_deepseek_v4pro-reason/generated.json",
-        "generated_json": "runs/text2cad_0013_00134405_descriptive_json_deepseek_v4pro-reason/generated.json",
-        "mesh": "runs/text2cad_0013_00134405_descriptive_json_deepseek_v4pro-reason/model.stl",
-        "pred_render": "runs/text2cad_0013_00134405_descriptive_json_deepseek_v4pro-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0013_00134405.stl",
-        "gt_render": "gt_renders/text2cad_0013_00134405.png"
-      },
-      "metrics": {
-        "acc_cmd": 0.5455,
-        "acc_param": 0.0127,
-        "qa_overall": 0.25,
-        "qa_semantic": 0.25,
-        "qa_parametric": 0,
-        "judge_semantic": 7
-      }
-    },
-    {
-      "id": "text2cad_0013_00134405_descriptive_json_qwen-reason",
-      "task": "text2cad",
-      "case_id": "0013/00134405",
-      "spec": "descriptive",
-      "format": "json",
-      "model": "qwen-reason",
-      "valid": true,
-      "condition": "The object is a flat circular annular rim with an open center area, not a filled circular plate. A concentric hollow collar is added at the middle and shares the same axis as the outer ring, with its center left open. Solid radial ribs run from the collar toward the outer rim, leaving rounded slot-like window spaces between them rather than surface markings. The added collar and rib web use shallower depth tiers than the main outer ring, so the part has stepped faces and underside relief instead of one uniform thickness.",
-      "assets": {
-        "generated": "runs/text2cad_0013_00134405_descriptive_json_qwen-reason/generated.json",
-        "generated_json": "runs/text2cad_0013_00134405_descriptive_json_qwen-reason/generated.json",
-        "mesh": "runs/text2cad_0013_00134405_descriptive_json_qwen-reason/model.stl",
-        "pred_render": "runs/text2cad_0013_00134405_descriptive_json_qwen-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0013_00134405.stl",
-        "gt_render": "gt_renders/text2cad_0013_00134405.png"
-      },
-      "metrics": {
-        "acc_cmd": 0.3636,
-        "acc_param": 0.0137,
-        "qa_overall": 0.25,
-        "qa_semantic": 0.25,
-        "qa_parametric": 0,
-        "judge_semantic": 4
-      }
-    },
-    {
-      "id": "text2cad_0013_00134405_descriptive_json_mimo_v25-reason",
-      "task": "text2cad",
-      "case_id": "0013/00134405",
-      "spec": "descriptive",
-      "format": "json",
-      "model": "mimo_v25-reason",
-      "valid": true,
-      "condition": "The object is a flat circular annular rim with an open center area, not a filled circular plate. A concentric hollow collar is added at the middle and shares the same axis as the outer ring, with its center left open. Solid radial ribs run from the collar toward the outer rim, leaving rounded slot-like window spaces between them rather than surface markings. The added collar and rib web use shallower depth tiers than the main outer ring, so the part has stepped faces and underside relief instead of one uniform thickness.",
-      "assets": {
-        "generated": "runs/text2cad_0013_00134405_descriptive_json_mimo_v25-reason/generated.json",
-        "generated_json": "runs/text2cad_0013_00134405_descriptive_json_mimo_v25-reason/generated.json",
-        "mesh": "runs/text2cad_0013_00134405_descriptive_json_mimo_v25-reason/model.stl",
-        "pred_render": "runs/text2cad_0013_00134405_descriptive_json_mimo_v25-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0013_00134405.stl",
-        "gt_render": "gt_renders/text2cad_0013_00134405.png"
-      },
-      "metrics": {
-        "acc_cmd": 0.3636,
-        "acc_param": 0.0274,
-        "qa_overall": 1,
-        "qa_semantic": 1,
-        "qa_parametric": 0,
-        "judge_semantic": 10
-      }
-    },
-    {
-      "id": "text2cad_0013_00134405_descriptive_json_doubao-reason",
-      "task": "text2cad",
-      "case_id": "0013/00134405",
-      "spec": "descriptive",
-      "format": "json",
-      "model": "doubao-reason",
-      "valid": true,
-      "condition": "The object is a flat circular annular rim with an open center area, not a filled circular plate. A concentric hollow collar is added at the middle and shares the same axis as the outer ring, with its center left open. Solid radial ribs run from the collar toward the outer rim, leaving rounded slot-like window spaces between them rather than surface markings. The added collar and rib web use shallower depth tiers than the main outer ring, so the part has stepped faces and underside relief instead of one uniform thickness.",
-      "assets": {
-        "generated": "runs/text2cad_0013_00134405_descriptive_json_doubao-reason/generated.json",
-        "generated_json": "runs/text2cad_0013_00134405_descriptive_json_doubao-reason/generated.json",
-        "mesh": "runs/text2cad_0013_00134405_descriptive_json_doubao-reason/model.stl",
-        "pred_render": "runs/text2cad_0013_00134405_descriptive_json_doubao-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0013_00134405.stl",
-        "gt_render": "gt_renders/text2cad_0013_00134405.png"
-      },
-      "metrics": {
-        "acc_cmd": 0.4545,
-        "acc_param": 0.0329,
-        "qa_overall": 1,
-        "qa_semantic": 1,
-        "qa_parametric": 0,
-        "judge_semantic": 10
-      }
-    },
-    {
-      "id": "text2cad_0013_00134405_descriptive_json_glm-reason",
-      "task": "text2cad",
-      "case_id": "0013/00134405",
+      "case_id": "0005/00051572",
       "spec": "descriptive",
       "format": "json",
       "model": "glm-reason",
       "valid": true,
-      "condition": "The object is a flat circular annular rim with an open center area, not a filled circular plate. A concentric hollow collar is added at the middle and shares the same axis as the outer ring, with its center left open. Solid radial ribs run from the collar toward the outer rim, leaving rounded slot-like window spaces between them rather than surface markings. The added collar and rib web use shallower depth tiers than the main outer ring, so the part has stepped faces and underside relief instead of one uniform thickness.",
+      "condition": "The model has a flat rectangular base with raised long side walls, leaving an open channel rather than a filled block. A short rectangular added wall or tab sits at one end inside the side-wall outline and is lower than the tallest raised portions. Inside the channel is a centered row of annular cylindrical posts; these are added ring-shaped solids with real central openings, not floor cutouts. The posts and the taller rectangular build rise from the upper face of the base, while another rectangular addition stops at a lower level, so the top heights are stepped.",
       "assets": {
-        "generated": "runs/text2cad_0013_00134405_descriptive_json_glm-reason/generated.json",
-        "generated_json": "runs/text2cad_0013_00134405_descriptive_json_glm-reason/generated.json",
-        "mesh": "runs/text2cad_0013_00134405_descriptive_json_glm-reason/model.stl",
-        "pred_render": "runs/text2cad_0013_00134405_descriptive_json_glm-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0013_00134405.stl",
-        "gt_render": "gt_renders/text2cad_0013_00134405.png"
+        "generated": "runs/text2cad_0005_00051572_descriptive_json_glm-reason/generated.json",
+        "mesh": "runs/text2cad_0005_00051572_descriptive_json_glm-reason/model.stl",
+        "pred_render": "runs/text2cad_0005_00051572_descriptive_json_glm-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0005_00051572.stl",
+        "gt_render": "gt_renders/text2cad_0005_00051572.png",
+        "generated_json": "runs/text2cad_0005_00051572_descriptive_json_glm-reason/generated.json"
       },
       "metrics": {
-        "chamfer_distance": 0.813304,
-        "hausdorff_distance": 1.66503,
-        "f_score_005": 0,
-        "f_score_001": 0,
-        "normal_consistency": 0.3223,
-        "iou_csg": 0,
-        "iou_voxel": 0,
-        "pred_open_edge_ratio": 0,
-        "acc_cmd": 0.5152,
-        "acc_param": 0.0187,
         "qa_overall": 1,
         "qa_semantic": 1,
-        "qa_parametric": 0,
         "judge_semantic": 10
       }
     },
     {
-      "id": "text2cad_0013_00134405_descriptive_openscad_gpt55-reason",
+      "id": "text2cad_0005_00051572_descriptive_json_doubao-reason",
       "task": "text2cad",
-      "case_id": "0013/00134405",
+      "case_id": "0005/00051572",
+      "spec": "descriptive",
+      "format": "json",
+      "model": "doubao-reason",
+      "valid": true,
+      "condition": "The model has a flat rectangular base with raised long side walls, leaving an open channel rather than a filled block. A short rectangular added wall or tab sits at one end inside the side-wall outline and is lower than the tallest raised portions. Inside the channel is a centered row of annular cylindrical posts; these are added ring-shaped solids with real central openings, not floor cutouts. The posts and the taller rectangular build rise from the upper face of the base, while another rectangular addition stops at a lower level, so the top heights are stepped.",
+      "assets": {
+        "generated": "runs/text2cad_0005_00051572_descriptive_json_doubao-reason/generated.json",
+        "mesh": "runs/text2cad_0005_00051572_descriptive_json_doubao-reason/model.stl",
+        "pred_render": "runs/text2cad_0005_00051572_descriptive_json_doubao-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0005_00051572.stl",
+        "gt_render": "gt_renders/text2cad_0005_00051572.png",
+        "generated_json": "runs/text2cad_0005_00051572_descriptive_json_doubao-reason/generated.json"
+      },
+      "metrics": {
+        "qa_overall": 1,
+        "qa_semantic": 1,
+        "judge_semantic": 10
+      }
+    },
+    {
+      "id": "text2cad_0005_00051572_descriptive_json_deepseek_v4pro-reason",
+      "task": "text2cad",
+      "case_id": "0005/00051572",
+      "spec": "descriptive",
+      "format": "json",
+      "model": "deepseek_v4pro-reason",
+      "valid": true,
+      "condition": "The model has a flat rectangular base with raised long side walls, leaving an open channel rather than a filled block. A short rectangular added wall or tab sits at one end inside the side-wall outline and is lower than the tallest raised portions. Inside the channel is a centered row of annular cylindrical posts; these are added ring-shaped solids with real central openings, not floor cutouts. The posts and the taller rectangular build rise from the upper face of the base, while another rectangular addition stops at a lower level, so the top heights are stepped.",
+      "assets": {
+        "generated": "runs/text2cad_0005_00051572_descriptive_json_deepseek_v4pro-reason/generated.json",
+        "mesh": "runs/text2cad_0005_00051572_descriptive_json_deepseek_v4pro-reason/model.stl",
+        "pred_render": "runs/text2cad_0005_00051572_descriptive_json_deepseek_v4pro-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0005_00051572.stl",
+        "gt_render": "gt_renders/text2cad_0005_00051572.png",
+        "generated_json": "runs/text2cad_0005_00051572_descriptive_json_deepseek_v4pro-reason/generated.json"
+      },
+      "metrics": {
+        "qa_overall": 1,
+        "qa_semantic": 1,
+        "judge_semantic": 10
+      }
+    },
+    {
+      "id": "text2cad_0005_00051572_descriptive_json_qwen-reason",
+      "task": "text2cad",
+      "case_id": "0005/00051572",
+      "spec": "descriptive",
+      "format": "json",
+      "model": "qwen-reason",
+      "valid": true,
+      "condition": "The model has a flat rectangular base with raised long side walls, leaving an open channel rather than a filled block. A short rectangular added wall or tab sits at one end inside the side-wall outline and is lower than the tallest raised portions. Inside the channel is a centered row of annular cylindrical posts; these are added ring-shaped solids with real central openings, not floor cutouts. The posts and the taller rectangular build rise from the upper face of the base, while another rectangular addition stops at a lower level, so the top heights are stepped.",
+      "assets": {
+        "generated": "runs/text2cad_0005_00051572_descriptive_json_qwen-reason/generated.json",
+        "mesh": "runs/text2cad_0005_00051572_descriptive_json_qwen-reason/model.stl",
+        "pred_render": "runs/text2cad_0005_00051572_descriptive_json_qwen-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0005_00051572.stl",
+        "gt_render": "gt_renders/text2cad_0005_00051572.png",
+        "generated_json": "runs/text2cad_0005_00051572_descriptive_json_qwen-reason/generated.json"
+      },
+      "metrics": {
+        "qa_overall": 0.5,
+        "qa_semantic": 0.5,
+        "judge_semantic": 3
+      }
+    },
+    {
+      "id": "text2cad_0005_00051572_descriptive_json_mimo_v25-reason",
+      "task": "text2cad",
+      "case_id": "0005/00051572",
+      "spec": "descriptive",
+      "format": "json",
+      "model": "mimo_v25-reason",
+      "valid": true,
+      "condition": "The model has a flat rectangular base with raised long side walls, leaving an open channel rather than a filled block. A short rectangular added wall or tab sits at one end inside the side-wall outline and is lower than the tallest raised portions. Inside the channel is a centered row of annular cylindrical posts; these are added ring-shaped solids with real central openings, not floor cutouts. The posts and the taller rectangular build rise from the upper face of the base, while another rectangular addition stops at a lower level, so the top heights are stepped.",
+      "assets": {
+        "generated": "runs/text2cad_0005_00051572_descriptive_json_mimo_v25-reason/generated.json",
+        "mesh": "runs/text2cad_0005_00051572_descriptive_json_mimo_v25-reason/model.stl",
+        "pred_render": "runs/text2cad_0005_00051572_descriptive_json_mimo_v25-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0005_00051572.stl",
+        "gt_render": "gt_renders/text2cad_0005_00051572.png",
+        "generated_json": "runs/text2cad_0005_00051572_descriptive_json_mimo_v25-reason/generated.json"
+      },
+      "metrics": {
+        "qa_overall": 1,
+        "qa_semantic": 1,
+        "judge_semantic": 10
+      }
+    },
+    {
+      "id": "text2cad_0005_00051572_descriptive_openscad_gpt55-reason",
+      "task": "text2cad",
+      "case_id": "0005/00051572",
       "spec": "descriptive",
       "format": "openscad",
       "model": "gpt55-reason",
       "valid": true,
-      "condition": "The object is a flat circular annular rim with an open center area, not a filled circular plate. A concentric hollow collar is added at the middle and shares the same axis as the outer ring, with its center left open. Solid radial ribs run from the collar toward the outer rim, leaving rounded slot-like window spaces between them rather than surface markings. The added collar and rib web use shallower depth tiers than the main outer ring, so the part has stepped faces and underside relief instead of one uniform thickness.",
+      "condition": "The model has a flat rectangular base with raised long side walls, leaving an open channel rather than a filled block. A short rectangular added wall or tab sits at one end inside the side-wall outline and is lower than the tallest raised portions. Inside the channel is a centered row of annular cylindrical posts; these are added ring-shaped solids with real central openings, not floor cutouts. The posts and the taller rectangular build rise from the upper face of the base, while another rectangular addition stops at a lower level, so the top heights are stepped.",
       "assets": {
-        "generated": "runs/text2cad_0013_00134405_descriptive_openscad_gpt55-reason/generated.scad",
-        "generated_json": "runs/text2cad_0013_00134405_descriptive_openscad_gpt55-reason/generated.json",
-        "mesh": "runs/text2cad_0013_00134405_descriptive_openscad_gpt55-reason/model.stl",
-        "pred_render": "runs/text2cad_0013_00134405_descriptive_openscad_gpt55-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0013_00134405.stl",
-        "gt_render": "gt_renders/text2cad_0013_00134405.png"
+        "generated": "runs/text2cad_0005_00051572_descriptive_openscad_gpt55-reason/generated.scad",
+        "mesh": "runs/text2cad_0005_00051572_descriptive_openscad_gpt55-reason/model.stl",
+        "pred_render": "runs/text2cad_0005_00051572_descriptive_openscad_gpt55-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0005_00051572.stl",
+        "gt_render": "gt_renders/text2cad_0005_00051572.png"
       },
       "metrics": {
         "qa_overall": 1,
         "qa_semantic": 1,
-        "qa_parametric": 0,
         "judge_semantic": 10
       }
     },
     {
-      "id": "text2cad_0013_00134405_descriptive_openscad_gemini-reason",
+      "id": "text2cad_0005_00051572_descriptive_openscad_gemini-reason",
       "task": "text2cad",
-      "case_id": "0013/00134405",
+      "case_id": "0005/00051572",
       "spec": "descriptive",
       "format": "openscad",
       "model": "gemini-reason",
       "valid": true,
-      "condition": "The object is a flat circular annular rim with an open center area, not a filled circular plate. A concentric hollow collar is added at the middle and shares the same axis as the outer ring, with its center left open. Solid radial ribs run from the collar toward the outer rim, leaving rounded slot-like window spaces between them rather than surface markings. The added collar and rib web use shallower depth tiers than the main outer ring, so the part has stepped faces and underside relief instead of one uniform thickness.",
+      "condition": "The model has a flat rectangular base with raised long side walls, leaving an open channel rather than a filled block. A short rectangular added wall or tab sits at one end inside the side-wall outline and is lower than the tallest raised portions. Inside the channel is a centered row of annular cylindrical posts; these are added ring-shaped solids with real central openings, not floor cutouts. The posts and the taller rectangular build rise from the upper face of the base, while another rectangular addition stops at a lower level, so the top heights are stepped.",
       "assets": {
-        "generated": "runs/text2cad_0013_00134405_descriptive_openscad_gemini-reason/generated.scad",
-        "generated_json": "runs/text2cad_0013_00134405_descriptive_openscad_gemini-reason/generated.json",
-        "mesh": "runs/text2cad_0013_00134405_descriptive_openscad_gemini-reason/model.stl",
-        "pred_render": "runs/text2cad_0013_00134405_descriptive_openscad_gemini-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0013_00134405.stl",
-        "gt_render": "gt_renders/text2cad_0013_00134405.png"
+        "generated": "runs/text2cad_0005_00051572_descriptive_openscad_gemini-reason/generated.scad",
+        "mesh": "runs/text2cad_0005_00051572_descriptive_openscad_gemini-reason/model.stl",
+        "pred_render": "runs/text2cad_0005_00051572_descriptive_openscad_gemini-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0005_00051572.stl",
+        "gt_render": "gt_renders/text2cad_0005_00051572.png"
       },
       "metrics": {
         "qa_overall": 1,
         "qa_semantic": 1,
-        "qa_parametric": 0,
         "judge_semantic": 10
       }
     },
     {
-      "id": "text2cad_0013_00134405_descriptive_openscad_claude-reason",
+      "id": "text2cad_0005_00051572_descriptive_openscad_claude-reason",
       "task": "text2cad",
-      "case_id": "0013/00134405",
+      "case_id": "0005/00051572",
       "spec": "descriptive",
       "format": "openscad",
       "model": "claude-reason",
       "valid": true,
-      "condition": "The object is a flat circular annular rim with an open center area, not a filled circular plate. A concentric hollow collar is added at the middle and shares the same axis as the outer ring, with its center left open. Solid radial ribs run from the collar toward the outer rim, leaving rounded slot-like window spaces between them rather than surface markings. The added collar and rib web use shallower depth tiers than the main outer ring, so the part has stepped faces and underside relief instead of one uniform thickness.",
+      "condition": "The model has a flat rectangular base with raised long side walls, leaving an open channel rather than a filled block. A short rectangular added wall or tab sits at one end inside the side-wall outline and is lower than the tallest raised portions. Inside the channel is a centered row of annular cylindrical posts; these are added ring-shaped solids with real central openings, not floor cutouts. The posts and the taller rectangular build rise from the upper face of the base, while another rectangular addition stops at a lower level, so the top heights are stepped.",
       "assets": {
-        "generated": "runs/text2cad_0013_00134405_descriptive_openscad_claude-reason/generated.scad",
-        "generated_json": "runs/text2cad_0013_00134405_descriptive_openscad_claude-reason/generated.json",
-        "mesh": "runs/text2cad_0013_00134405_descriptive_openscad_claude-reason/model.stl",
-        "pred_render": "runs/text2cad_0013_00134405_descriptive_openscad_claude-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0013_00134405.stl",
-        "gt_render": "gt_renders/text2cad_0013_00134405.png"
+        "generated": "runs/text2cad_0005_00051572_descriptive_openscad_claude-reason/generated.scad",
+        "mesh": "runs/text2cad_0005_00051572_descriptive_openscad_claude-reason/model.stl",
+        "pred_render": "runs/text2cad_0005_00051572_descriptive_openscad_claude-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0005_00051572.stl",
+        "gt_render": "gt_renders/text2cad_0005_00051572.png"
       },
       "metrics": {
         "qa_overall": 1,
         "qa_semantic": 1,
-        "qa_parametric": 0,
         "judge_semantic": 10
       }
     },
     {
-      "id": "text2cad_0013_00134405_descriptive_openscad_kimi_k26-reason",
+      "id": "text2cad_0005_00051572_descriptive_openscad_kimi_k26-reason",
       "task": "text2cad",
-      "case_id": "0013/00134405",
+      "case_id": "0005/00051572",
       "spec": "descriptive",
       "format": "openscad",
       "model": "kimi_k26-reason",
       "valid": true,
-      "condition": "The object is a flat circular annular rim with an open center area, not a filled circular plate. A concentric hollow collar is added at the middle and shares the same axis as the outer ring, with its center left open. Solid radial ribs run from the collar toward the outer rim, leaving rounded slot-like window spaces between them rather than surface markings. The added collar and rib web use shallower depth tiers than the main outer ring, so the part has stepped faces and underside relief instead of one uniform thickness.",
+      "condition": "The model has a flat rectangular base with raised long side walls, leaving an open channel rather than a filled block. A short rectangular added wall or tab sits at one end inside the side-wall outline and is lower than the tallest raised portions. Inside the channel is a centered row of annular cylindrical posts; these are added ring-shaped solids with real central openings, not floor cutouts. The posts and the taller rectangular build rise from the upper face of the base, while another rectangular addition stops at a lower level, so the top heights are stepped.",
       "assets": {
-        "generated": "runs/text2cad_0013_00134405_descriptive_openscad_kimi_k26-reason/generated.scad",
-        "generated_json": "runs/text2cad_0013_00134405_descriptive_openscad_kimi_k26-reason/generated.json",
-        "mesh": "runs/text2cad_0013_00134405_descriptive_openscad_kimi_k26-reason/model.stl",
-        "pred_render": "runs/text2cad_0013_00134405_descriptive_openscad_kimi_k26-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0013_00134405.stl",
-        "gt_render": "gt_renders/text2cad_0013_00134405.png"
+        "generated": "runs/text2cad_0005_00051572_descriptive_openscad_kimi_k26-reason/generated.scad",
+        "mesh": "runs/text2cad_0005_00051572_descriptive_openscad_kimi_k26-reason/model.stl",
+        "pred_render": "runs/text2cad_0005_00051572_descriptive_openscad_kimi_k26-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0005_00051572.stl",
+        "gt_render": "gt_renders/text2cad_0005_00051572.png"
       },
       "metrics": {
         "qa_overall": 1,
         "qa_semantic": 1,
-        "qa_parametric": 0,
         "judge_semantic": 10
       }
     },
     {
-      "id": "text2cad_0013_00134405_descriptive_openscad_deepseek_v4pro-reason",
+      "id": "text2cad_0005_00051572_descriptive_openscad_glm-reason",
       "task": "text2cad",
-      "case_id": "0013/00134405",
+      "case_id": "0005/00051572",
+      "spec": "descriptive",
+      "format": "openscad",
+      "model": "glm-reason",
+      "valid": true,
+      "condition": "The model has a flat rectangular base with raised long side walls, leaving an open channel rather than a filled block. A short rectangular added wall or tab sits at one end inside the side-wall outline and is lower than the tallest raised portions. Inside the channel is a centered row of annular cylindrical posts; these are added ring-shaped solids with real central openings, not floor cutouts. The posts and the taller rectangular build rise from the upper face of the base, while another rectangular addition stops at a lower level, so the top heights are stepped.",
+      "assets": {
+        "generated": "runs/text2cad_0005_00051572_descriptive_openscad_glm-reason/generated.scad",
+        "mesh": "runs/text2cad_0005_00051572_descriptive_openscad_glm-reason/model.stl",
+        "pred_render": "runs/text2cad_0005_00051572_descriptive_openscad_glm-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0005_00051572.stl",
+        "gt_render": "gt_renders/text2cad_0005_00051572.png"
+      },
+      "metrics": {
+        "qa_overall": 1,
+        "qa_semantic": 1,
+        "judge_semantic": 10
+      }
+    },
+    {
+      "id": "text2cad_0005_00051572_descriptive_openscad_doubao-reason",
+      "task": "text2cad",
+      "case_id": "0005/00051572",
+      "spec": "descriptive",
+      "format": "openscad",
+      "model": "doubao-reason",
+      "valid": true,
+      "condition": "The model has a flat rectangular base with raised long side walls, leaving an open channel rather than a filled block. A short rectangular added wall or tab sits at one end inside the side-wall outline and is lower than the tallest raised portions. Inside the channel is a centered row of annular cylindrical posts; these are added ring-shaped solids with real central openings, not floor cutouts. The posts and the taller rectangular build rise from the upper face of the base, while another rectangular addition stops at a lower level, so the top heights are stepped.",
+      "assets": {
+        "generated": "runs/text2cad_0005_00051572_descriptive_openscad_doubao-reason/generated.scad",
+        "mesh": "runs/text2cad_0005_00051572_descriptive_openscad_doubao-reason/model.stl",
+        "pred_render": "runs/text2cad_0005_00051572_descriptive_openscad_doubao-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0005_00051572.stl",
+        "gt_render": "gt_renders/text2cad_0005_00051572.png"
+      },
+      "metrics": {
+        "qa_overall": 1,
+        "qa_semantic": 1,
+        "judge_semantic": 10
+      }
+    },
+    {
+      "id": "text2cad_0005_00051572_descriptive_openscad_deepseek_v4pro-reason",
+      "task": "text2cad",
+      "case_id": "0005/00051572",
       "spec": "descriptive",
       "format": "openscad",
       "model": "deepseek_v4pro-reason",
       "valid": true,
-      "condition": "The object is a flat circular annular rim with an open center area, not a filled circular plate. A concentric hollow collar is added at the middle and shares the same axis as the outer ring, with its center left open. Solid radial ribs run from the collar toward the outer rim, leaving rounded slot-like window spaces between them rather than surface markings. The added collar and rib web use shallower depth tiers than the main outer ring, so the part has stepped faces and underside relief instead of one uniform thickness.",
+      "condition": "The model has a flat rectangular base with raised long side walls, leaving an open channel rather than a filled block. A short rectangular added wall or tab sits at one end inside the side-wall outline and is lower than the tallest raised portions. Inside the channel is a centered row of annular cylindrical posts; these are added ring-shaped solids with real central openings, not floor cutouts. The posts and the taller rectangular build rise from the upper face of the base, while another rectangular addition stops at a lower level, so the top heights are stepped.",
       "assets": {
-        "generated": "runs/text2cad_0013_00134405_descriptive_openscad_deepseek_v4pro-reason/generated.scad",
-        "generated_json": "runs/text2cad_0013_00134405_descriptive_openscad_deepseek_v4pro-reason/generated.json",
-        "mesh": "runs/text2cad_0013_00134405_descriptive_openscad_deepseek_v4pro-reason/model.stl",
-        "pred_render": "runs/text2cad_0013_00134405_descriptive_openscad_deepseek_v4pro-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0013_00134405.stl",
-        "gt_render": "gt_renders/text2cad_0013_00134405.png"
-      },
-      "metrics": {
-        "qa_overall": 0.5,
-        "qa_semantic": 0.5,
-        "qa_parametric": 0,
-        "judge_semantic": 10
-      }
-    },
-    {
-      "id": "text2cad_0013_00134405_descriptive_openscad_qwen-reason",
-      "task": "text2cad",
-      "case_id": "0013/00134405",
-      "spec": "descriptive",
-      "format": "openscad",
-      "model": "qwen-reason",
-      "valid": true,
-      "condition": "The object is a flat circular annular rim with an open center area, not a filled circular plate. A concentric hollow collar is added at the middle and shares the same axis as the outer ring, with its center left open. Solid radial ribs run from the collar toward the outer rim, leaving rounded slot-like window spaces between them rather than surface markings. The added collar and rib web use shallower depth tiers than the main outer ring, so the part has stepped faces and underside relief instead of one uniform thickness.",
-      "assets": {
-        "generated": "runs/text2cad_0013_00134405_descriptive_openscad_qwen-reason/generated.scad",
-        "generated_json": "runs/text2cad_0013_00134405_descriptive_openscad_qwen-reason/generated.json",
-        "mesh": "runs/text2cad_0013_00134405_descriptive_openscad_qwen-reason/model.stl",
-        "pred_render": "runs/text2cad_0013_00134405_descriptive_openscad_qwen-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0013_00134405.stl",
-        "gt_render": "gt_renders/text2cad_0013_00134405.png"
+        "generated": "runs/text2cad_0005_00051572_descriptive_openscad_deepseek_v4pro-reason/generated.scad",
+        "mesh": "runs/text2cad_0005_00051572_descriptive_openscad_deepseek_v4pro-reason/model.stl",
+        "pred_render": "runs/text2cad_0005_00051572_descriptive_openscad_deepseek_v4pro-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0005_00051572.stl",
+        "gt_render": "gt_renders/text2cad_0005_00051572.png"
       },
       "metrics": {
         "qa_overall": 1,
         "qa_semantic": 1,
-        "qa_parametric": 0,
         "judge_semantic": 10
       }
     },
     {
-      "id": "text2cad_0013_00134405_descriptive_openscad_mimo_v25-reason",
+      "id": "text2cad_0005_00051572_descriptive_openscad_qwen-reason",
       "task": "text2cad",
-      "case_id": "0013/00134405",
+      "case_id": "0005/00051572",
       "spec": "descriptive",
       "format": "openscad",
-      "model": "mimo_v25-reason",
+      "model": "qwen-reason",
       "valid": true,
-      "condition": "The object is a flat circular annular rim with an open center area, not a filled circular plate. A concentric hollow collar is added at the middle and shares the same axis as the outer ring, with its center left open. Solid radial ribs run from the collar toward the outer rim, leaving rounded slot-like window spaces between them rather than surface markings. The added collar and rib web use shallower depth tiers than the main outer ring, so the part has stepped faces and underside relief instead of one uniform thickness.",
+      "condition": "The model has a flat rectangular base with raised long side walls, leaving an open channel rather than a filled block. A short rectangular added wall or tab sits at one end inside the side-wall outline and is lower than the tallest raised portions. Inside the channel is a centered row of annular cylindrical posts; these are added ring-shaped solids with real central openings, not floor cutouts. The posts and the taller rectangular build rise from the upper face of the base, while another rectangular addition stops at a lower level, so the top heights are stepped.",
       "assets": {
-        "generated": "runs/text2cad_0013_00134405_descriptive_openscad_mimo_v25-reason/generated.scad",
-        "generated_json": "runs/text2cad_0013_00134405_descriptive_openscad_mimo_v25-reason/generated.json",
-        "mesh": "runs/text2cad_0013_00134405_descriptive_openscad_mimo_v25-reason/model.stl",
-        "pred_render": "runs/text2cad_0013_00134405_descriptive_openscad_mimo_v25-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0013_00134405.stl",
-        "gt_render": "gt_renders/text2cad_0013_00134405.png"
+        "generated": "runs/text2cad_0005_00051572_descriptive_openscad_qwen-reason/generated.scad",
+        "mesh": "runs/text2cad_0005_00051572_descriptive_openscad_qwen-reason/model.stl",
+        "pred_render": "runs/text2cad_0005_00051572_descriptive_openscad_qwen-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0005_00051572.stl",
+        "gt_render": "gt_renders/text2cad_0005_00051572.png"
       },
       "metrics": {
-        "qa_overall": 0.5,
-        "qa_semantic": 0.5,
-        "qa_parametric": 0,
+        "qa_overall": 1,
+        "qa_semantic": 1,
         "judge_semantic": 8
       }
     },
     {
-      "id": "text2cad_0013_00134405_descriptive_openscad_doubao-reason",
+      "id": "text2cad_0005_00051572_descriptive_openscad_mimo_v25-reason",
       "task": "text2cad",
-      "case_id": "0013/00134405",
+      "case_id": "0005/00051572",
       "spec": "descriptive",
       "format": "openscad",
-      "model": "doubao-reason",
+      "model": "mimo_v25-reason",
       "valid": true,
-      "condition": "The object is a flat circular annular rim with an open center area, not a filled circular plate. A concentric hollow collar is added at the middle and shares the same axis as the outer ring, with its center left open. Solid radial ribs run from the collar toward the outer rim, leaving rounded slot-like window spaces between them rather than surface markings. The added collar and rib web use shallower depth tiers than the main outer ring, so the part has stepped faces and underside relief instead of one uniform thickness.",
+      "condition": "The model has a flat rectangular base with raised long side walls, leaving an open channel rather than a filled block. A short rectangular added wall or tab sits at one end inside the side-wall outline and is lower than the tallest raised portions. Inside the channel is a centered row of annular cylindrical posts; these are added ring-shaped solids with real central openings, not floor cutouts. The posts and the taller rectangular build rise from the upper face of the base, while another rectangular addition stops at a lower level, so the top heights are stepped.",
       "assets": {
-        "generated": "runs/text2cad_0013_00134405_descriptive_openscad_doubao-reason/generated.scad",
-        "generated_json": "runs/text2cad_0013_00134405_descriptive_openscad_doubao-reason/generated.json",
-        "mesh": "runs/text2cad_0013_00134405_descriptive_openscad_doubao-reason/model.stl",
-        "pred_render": "runs/text2cad_0013_00134405_descriptive_openscad_doubao-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0013_00134405.stl",
-        "gt_render": "gt_renders/text2cad_0013_00134405.png"
-      },
-      "metrics": {
-        "qa_overall": 0.5,
-        "qa_semantic": 0.5,
-        "qa_parametric": 0,
-        "judge_semantic": 4
-      }
-    },
-    {
-      "id": "text2cad_0013_00134405_descriptive_openscad_glm-reason",
-      "task": "text2cad",
-      "case_id": "0013/00134405",
-      "spec": "descriptive",
-      "format": "openscad",
-      "model": "glm-reason",
-      "valid": true,
-      "condition": "The object is a flat circular annular rim with an open center area, not a filled circular plate. A concentric hollow collar is added at the middle and shares the same axis as the outer ring, with its center left open. Solid radial ribs run from the collar toward the outer rim, leaving rounded slot-like window spaces between them rather than surface markings. The added collar and rib web use shallower depth tiers than the main outer ring, so the part has stepped faces and underside relief instead of one uniform thickness.",
-      "assets": {
-        "generated": "runs/text2cad_0013_00134405_descriptive_openscad_glm-reason/generated.scad",
-        "generated_json": "runs/text2cad_0013_00134405_descriptive_openscad_glm-reason/generated.json",
-        "mesh": "runs/text2cad_0013_00134405_descriptive_openscad_glm-reason/model.stl",
-        "pred_render": "runs/text2cad_0013_00134405_descriptive_openscad_glm-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0013_00134405.stl",
-        "gt_render": "gt_renders/text2cad_0013_00134405.png"
+        "generated": "runs/text2cad_0005_00051572_descriptive_openscad_mimo_v25-reason/generated.scad",
+        "mesh": "runs/text2cad_0005_00051572_descriptive_openscad_mimo_v25-reason/model.stl",
+        "pred_render": "runs/text2cad_0005_00051572_descriptive_openscad_mimo_v25-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0005_00051572.stl",
+        "gt_render": "gt_renders/text2cad_0005_00051572.png"
       },
       "metrics": {
         "qa_overall": 1,
         "qa_semantic": 1,
-        "qa_parametric": 0,
         "judge_semantic": 10
       }
     },
     {
-      "id": "text2cad_0013_00134405_parametric_json_gpt55-reason",
+      "id": "text2cad_0005_00051572_parametric_json_gpt55-reason",
       "task": "text2cad",
-      "case_id": "0013/00134405",
+      "case_id": "0005/00051572",
       "spec": "parametric",
       "format": "json",
       "model": "gpt55-reason",
       "valid": true,
-      "condition": "Use the main base declared size as the first reference: length 0.75, width 0.75, height 0.05625; main extrusion depth 0.0281. Build the main base as a concentric circular annulus, not as a rectangular plate: the outer circular profile has radius 0.375 and the inner circular opening has radius 0.3375, with the shared axis 0.375 from the left edge and 0.375 from the front edge; this base spans from -0.0281 to 0.0281 relative to the base underside reference. Add a centered solid annular collar within a 0.15 by 0.15 footprint, offset 0.3 from the left, right, front, and back edges, keeping its inner profile open as a real through void; this collar spans from -0.0234 to 0.0234 from the same underside reference. Add the rounded radial rib web as solid attached material inside the rim, using arc-based outlines and leaving the intervening elongated slot-like openings open; its bounding footprint is 0.6184 by 0.521 with edge offsets left 0.0658, right 0.0658, front 0.0387, and back 0.1903, and its modeled length, width, and height are 0.618448, 0.521035, and 0.028125. The rib web spans from -0.0141 to 0.0141 from the same underside reference, so these vertical values are shared-reach tiers rather than stacked segment heights. Keep all circular profiles coaxial and concentric with the main annulus and central collar.",
+      "condition": "Build the main reference as a rectangular base with length 0.75, width 0.375, and height 0.0375, using a main extrusion depth of 0.0375. Add the raised rectangular upper material with outer footprint 0.75 by 0.375, flush to the left, right, front, and back edges of the base; it starts from the upper side of the base and reaches 0.1312 from the base datum, with extrusion depth 0.0937. Keep the visible channel interior open between the raised wall material rather than filling it with a separate rectangular pad above the base. Add one narrower rectangular solid at the left end with footprint 0.0319 by 0.3094, left edge offset 0, right edge offset 0.7181, front offset 0.0281, and back offset 0.0375; it starts on the upper side of the base at 0.0375 and reaches 0.0937 from the base datum, with height 0.05625 and extrusion depth 0.0562. Place four separate annular cylindrical posts on the upper face of the base, all centered across the width at front offset 0.1875, with axes at left offsets 0.15, 0.3, 0.45, and 0.6. The post outer radii are 0.0469, 0.0469, 0.0562, and 0.0562 respectively, and the matching through central opening radii are 0.0188, 0.0197, 0.0216, and 0.0234. Each annular post spans from 0.0375 to 0.1312 relative to the base reference plane, using extrusion depth 0.0937, and the posts remain separate cylinders with no rectangular filled plate connecting their footprint envelope.",
       "assets": {
-        "generated": "runs/text2cad_0013_00134405_parametric_json_gpt55-reason/generated.json",
-        "generated_json": "runs/text2cad_0013_00134405_parametric_json_gpt55-reason/generated.json",
-        "mesh": "runs/text2cad_0013_00134405_parametric_json_gpt55-reason/model.stl",
-        "pred_render": "runs/text2cad_0013_00134405_parametric_json_gpt55-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0013_00134405.stl",
-        "gt_render": "gt_renders/text2cad_0013_00134405.png"
+        "generated": "runs/text2cad_0005_00051572_parametric_json_gpt55-reason/generated.json",
+        "mesh": "runs/text2cad_0005_00051572_parametric_json_gpt55-reason/model.stl",
+        "pred_render": "runs/text2cad_0005_00051572_parametric_json_gpt55-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0005_00051572.stl",
+        "gt_render": "gt_renders/text2cad_0005_00051572.png",
+        "generated_json": "runs/text2cad_0005_00051572_parametric_json_gpt55-reason/generated.json"
       },
       "metrics": {
-        "chamfer_distance": 0.000152,
-        "hausdorff_distance": 0.057763,
-        "f_score_005": 0.9824,
-        "f_score_001": 0.4907,
-        "normal_consistency": 0.8841,
-        "iou_csg": 1,
-        "iou_voxel": 0.9485,
+        "chamfer_distance": 0.000006,
+        "hausdorff_distance": 0.020542,
+        "f_score_005": 1,
+        "f_score_001": 0.9606,
+        "normal_consistency": 0.9918,
+        "iou_csg": 0.9991,
+        "iou_voxel": 0.9995,
         "pred_open_edge_ratio": 0,
-        "acc_cmd": 0.3939,
-        "acc_param": 0.0714,
-        "qa_overall": 0.6667,
-        "qa_semantic": 0,
+        "qa_overall": 1,
+        "qa_semantic": 1,
         "qa_parametric": 1
       }
     },
     {
-      "id": "text2cad_0013_00134405_parametric_json_gemini-reason",
+      "id": "text2cad_0005_00051572_parametric_json_gemini-reason",
       "task": "text2cad",
-      "case_id": "0013/00134405",
+      "case_id": "0005/00051572",
       "spec": "parametric",
       "format": "json",
       "model": "gemini-reason",
       "valid": true,
-      "condition": "Use the main base declared size as the first reference: length 0.75, width 0.75, height 0.05625; main extrusion depth 0.0281. Build the main base as a concentric circular annulus, not as a rectangular plate: the outer circular profile has radius 0.375 and the inner circular opening has radius 0.3375, with the shared axis 0.375 from the left edge and 0.375 from the front edge; this base spans from -0.0281 to 0.0281 relative to the base underside reference. Add a centered solid annular collar within a 0.15 by 0.15 footprint, offset 0.3 from the left, right, front, and back edges, keeping its inner profile open as a real through void; this collar spans from -0.0234 to 0.0234 from the same underside reference. Add the rounded radial rib web as solid attached material inside the rim, using arc-based outlines and leaving the intervening elongated slot-like openings open; its bounding footprint is 0.6184 by 0.521 with edge offsets left 0.0658, right 0.0658, front 0.0387, and back 0.1903, and its modeled length, width, and height are 0.618448, 0.521035, and 0.028125. The rib web spans from -0.0141 to 0.0141 from the same underside reference, so these vertical values are shared-reach tiers rather than stacked segment heights. Keep all circular profiles coaxial and concentric with the main annulus and central collar.",
+      "condition": "Build the main reference as a rectangular base with length 0.75, width 0.375, and height 0.0375, using a main extrusion depth of 0.0375. Add the raised rectangular upper material with outer footprint 0.75 by 0.375, flush to the left, right, front, and back edges of the base; it starts from the upper side of the base and reaches 0.1312 from the base datum, with extrusion depth 0.0937. Keep the visible channel interior open between the raised wall material rather than filling it with a separate rectangular pad above the base. Add one narrower rectangular solid at the left end with footprint 0.0319 by 0.3094, left edge offset 0, right edge offset 0.7181, front offset 0.0281, and back offset 0.0375; it starts on the upper side of the base at 0.0375 and reaches 0.0937 from the base datum, with height 0.05625 and extrusion depth 0.0562. Place four separate annular cylindrical posts on the upper face of the base, all centered across the width at front offset 0.1875, with axes at left offsets 0.15, 0.3, 0.45, and 0.6. The post outer radii are 0.0469, 0.0469, 0.0562, and 0.0562 respectively, and the matching through central opening radii are 0.0188, 0.0197, 0.0216, and 0.0234. Each annular post spans from 0.0375 to 0.1312 relative to the base reference plane, using extrusion depth 0.0937, and the posts remain separate cylinders with no rectangular filled plate connecting their footprint envelope.",
       "assets": {
-        "generated": "runs/text2cad_0013_00134405_parametric_json_gemini-reason/generated.json",
-        "generated_json": "runs/text2cad_0013_00134405_parametric_json_gemini-reason/generated.json",
-        "mesh": "runs/text2cad_0013_00134405_parametric_json_gemini-reason/model.stl",
-        "pred_render": "runs/text2cad_0013_00134405_parametric_json_gemini-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0013_00134405.stl",
-        "gt_render": "gt_renders/text2cad_0013_00134405.png"
+        "generated": "runs/text2cad_0005_00051572_parametric_json_gemini-reason/generated.json",
+        "mesh": "runs/text2cad_0005_00051572_parametric_json_gemini-reason/model.stl",
+        "pred_render": "runs/text2cad_0005_00051572_parametric_json_gemini-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0005_00051572.stl",
+        "gt_render": "gt_renders/text2cad_0005_00051572.png",
+        "generated_json": "runs/text2cad_0005_00051572_parametric_json_gemini-reason/generated.json"
       },
       "metrics": {
-        "chamfer_distance": 0.000304,
-        "hausdorff_distance": 0.077453,
-        "f_score_005": 0.932,
-        "f_score_001": 0.1836,
-        "normal_consistency": 0.8986,
-        "iou_csg": 1,
-        "iou_voxel": 0.8295,
-        "pred_open_edge_ratio": 0,
-        "acc_cmd": 0.1818,
-        "acc_param": 0.0694,
-        "qa_overall": 0.4167,
-        "qa_semantic": 0,
-        "qa_parametric": 0.625
-      }
-    },
-    {
-      "id": "text2cad_0013_00134405_parametric_json_claude-reason",
-      "task": "text2cad",
-      "case_id": "0013/00134405",
-      "spec": "parametric",
-      "format": "json",
-      "model": "claude-reason",
-      "valid": true,
-      "condition": "Use the main base declared size as the first reference: length 0.75, width 0.75, height 0.05625; main extrusion depth 0.0281. Build the main base as a concentric circular annulus, not as a rectangular plate: the outer circular profile has radius 0.375 and the inner circular opening has radius 0.3375, with the shared axis 0.375 from the left edge and 0.375 from the front edge; this base spans from -0.0281 to 0.0281 relative to the base underside reference. Add a centered solid annular collar within a 0.15 by 0.15 footprint, offset 0.3 from the left, right, front, and back edges, keeping its inner profile open as a real through void; this collar spans from -0.0234 to 0.0234 from the same underside reference. Add the rounded radial rib web as solid attached material inside the rim, using arc-based outlines and leaving the intervening elongated slot-like openings open; its bounding footprint is 0.6184 by 0.521 with edge offsets left 0.0658, right 0.0658, front 0.0387, and back 0.1903, and its modeled length, width, and height are 0.618448, 0.521035, and 0.028125. The rib web spans from -0.0141 to 0.0141 from the same underside reference, so these vertical values are shared-reach tiers rather than stacked segment heights. Keep all circular profiles coaxial and concentric with the main annulus and central collar.",
-      "assets": {
-        "generated": "runs/text2cad_0013_00134405_parametric_json_claude-reason/generated.json",
-        "generated_json": "runs/text2cad_0013_00134405_parametric_json_claude-reason/generated.json",
-        "mesh": "runs/text2cad_0013_00134405_parametric_json_claude-reason/model.stl",
-        "pred_render": "runs/text2cad_0013_00134405_parametric_json_claude-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0013_00134405.stl",
-        "gt_render": "gt_renders/text2cad_0013_00134405.png"
-      },
-      "metrics": {
-        "chamfer_distance": 0.000082,
-        "hausdorff_distance": 0.03455,
+        "chamfer_distance": 0.000006,
+        "hausdorff_distance": 0.020542,
         "f_score_005": 1,
-        "f_score_001": 0.5305,
-        "normal_consistency": 0.923,
-        "pred_open_edge_ratio": 0.047076,
-        "acc_cmd": 0.2727,
-        "acc_param": 0.0517,
-        "qa_overall": 0.6667,
-        "qa_semantic": 0,
+        "f_score_001": 0.9606,
+        "normal_consistency": 0.9918,
+        "iou_csg": 0.9991,
+        "iou_voxel": 0.9995,
+        "pred_open_edge_ratio": 0,
+        "qa_overall": 0.916667,
+        "qa_semantic": 0.75,
         "qa_parametric": 1
       }
     },
     {
-      "id": "text2cad_0013_00134405_parametric_json_kimi_k26-reason",
+      "id": "text2cad_0005_00051572_parametric_json_claude-reason",
       "task": "text2cad",
-      "case_id": "0013/00134405",
+      "case_id": "0005/00051572",
       "spec": "parametric",
       "format": "json",
-      "model": "kimi_k26-reason",
+      "model": "claude-reason",
       "valid": true,
-      "condition": "Use the main base declared size as the first reference: length 0.75, width 0.75, height 0.05625; main extrusion depth 0.0281. Build the main base as a concentric circular annulus, not as a rectangular plate: the outer circular profile has radius 0.375 and the inner circular opening has radius 0.3375, with the shared axis 0.375 from the left edge and 0.375 from the front edge; this base spans from -0.0281 to 0.0281 relative to the base underside reference. Add a centered solid annular collar within a 0.15 by 0.15 footprint, offset 0.3 from the left, right, front, and back edges, keeping its inner profile open as a real through void; this collar spans from -0.0234 to 0.0234 from the same underside reference. Add the rounded radial rib web as solid attached material inside the rim, using arc-based outlines and leaving the intervening elongated slot-like openings open; its bounding footprint is 0.6184 by 0.521 with edge offsets left 0.0658, right 0.0658, front 0.0387, and back 0.1903, and its modeled length, width, and height are 0.618448, 0.521035, and 0.028125. The rib web spans from -0.0141 to 0.0141 from the same underside reference, so these vertical values are shared-reach tiers rather than stacked segment heights. Keep all circular profiles coaxial and concentric with the main annulus and central collar.",
+      "condition": "Build the main reference as a rectangular base with length 0.75, width 0.375, and height 0.0375, using a main extrusion depth of 0.0375. Add the raised rectangular upper material with outer footprint 0.75 by 0.375, flush to the left, right, front, and back edges of the base; it starts from the upper side of the base and reaches 0.1312 from the base datum, with extrusion depth 0.0937. Keep the visible channel interior open between the raised wall material rather than filling it with a separate rectangular pad above the base. Add one narrower rectangular solid at the left end with footprint 0.0319 by 0.3094, left edge offset 0, right edge offset 0.7181, front offset 0.0281, and back offset 0.0375; it starts on the upper side of the base at 0.0375 and reaches 0.0937 from the base datum, with height 0.05625 and extrusion depth 0.0562. Place four separate annular cylindrical posts on the upper face of the base, all centered across the width at front offset 0.1875, with axes at left offsets 0.15, 0.3, 0.45, and 0.6. The post outer radii are 0.0469, 0.0469, 0.0562, and 0.0562 respectively, and the matching through central opening radii are 0.0188, 0.0197, 0.0216, and 0.0234. Each annular post spans from 0.0375 to 0.1312 relative to the base reference plane, using extrusion depth 0.0937, and the posts remain separate cylinders with no rectangular filled plate connecting their footprint envelope.",
       "assets": {
-        "generated": "runs/text2cad_0013_00134405_parametric_json_kimi_k26-reason/generated.json",
-        "generated_json": "runs/text2cad_0013_00134405_parametric_json_kimi_k26-reason/generated.json",
-        "mesh": "runs/text2cad_0013_00134405_parametric_json_kimi_k26-reason/model.stl",
-        "pred_render": "runs/text2cad_0013_00134405_parametric_json_kimi_k26-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0013_00134405.stl",
-        "gt_render": "gt_renders/text2cad_0013_00134405.png"
+        "generated": "runs/text2cad_0005_00051572_parametric_json_claude-reason/generated.json",
+        "mesh": "runs/text2cad_0005_00051572_parametric_json_claude-reason/model.stl",
+        "pred_render": "runs/text2cad_0005_00051572_parametric_json_claude-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0005_00051572.stl",
+        "gt_render": "gt_renders/text2cad_0005_00051572.png",
+        "generated_json": "runs/text2cad_0005_00051572_parametric_json_claude-reason/generated.json"
       },
       "metrics": {
-        "chamfer_distance": 0.000427,
-        "hausdorff_distance": 0.080872,
-        "f_score_005": 0.9536,
-        "f_score_001": 0.1444,
-        "normal_consistency": 0.7174,
-        "iou_csg": 0.5749,
-        "iou_voxel": 0.4888,
+        "chamfer_distance": 0.000096,
+        "hausdorff_distance": 0.093076,
+        "f_score_005": 0.9854,
+        "f_score_001": 0.775,
+        "normal_consistency": 0.9248,
+        "iou_csg": 0.9163,
+        "iou_voxel": 0.9614,
         "pred_open_edge_ratio": 0,
-        "acc_cmd": 0.2727,
-        "acc_param": 0.0268,
-        "qa_overall": 0.8333,
+        "qa_overall": 0.833333,
         "qa_semantic": 0.75,
         "qa_parametric": 0.875
       }
     },
     {
-      "id": "text2cad_0013_00134405_parametric_json_deepseek_v4pro-reason",
+      "id": "text2cad_0005_00051572_parametric_json_kimi_k26-reason",
       "task": "text2cad",
-      "case_id": "0013/00134405",
+      "case_id": "0005/00051572",
       "spec": "parametric",
       "format": "json",
-      "model": "deepseek_v4pro-reason",
+      "model": "kimi_k26-reason",
       "valid": true,
-      "condition": "Use the main base declared size as the first reference: length 0.75, width 0.75, height 0.05625; main extrusion depth 0.0281. Build the main base as a concentric circular annulus, not as a rectangular plate: the outer circular profile has radius 0.375 and the inner circular opening has radius 0.3375, with the shared axis 0.375 from the left edge and 0.375 from the front edge; this base spans from -0.0281 to 0.0281 relative to the base underside reference. Add a centered solid annular collar within a 0.15 by 0.15 footprint, offset 0.3 from the left, right, front, and back edges, keeping its inner profile open as a real through void; this collar spans from -0.0234 to 0.0234 from the same underside reference. Add the rounded radial rib web as solid attached material inside the rim, using arc-based outlines and leaving the intervening elongated slot-like openings open; its bounding footprint is 0.6184 by 0.521 with edge offsets left 0.0658, right 0.0658, front 0.0387, and back 0.1903, and its modeled length, width, and height are 0.618448, 0.521035, and 0.028125. The rib web spans from -0.0141 to 0.0141 from the same underside reference, so these vertical values are shared-reach tiers rather than stacked segment heights. Keep all circular profiles coaxial and concentric with the main annulus and central collar.",
+      "condition": "Build the main reference as a rectangular base with length 0.75, width 0.375, and height 0.0375, using a main extrusion depth of 0.0375. Add the raised rectangular upper material with outer footprint 0.75 by 0.375, flush to the left, right, front, and back edges of the base; it starts from the upper side of the base and reaches 0.1312 from the base datum, with extrusion depth 0.0937. Keep the visible channel interior open between the raised wall material rather than filling it with a separate rectangular pad above the base. Add one narrower rectangular solid at the left end with footprint 0.0319 by 0.3094, left edge offset 0, right edge offset 0.7181, front offset 0.0281, and back offset 0.0375; it starts on the upper side of the base at 0.0375 and reaches 0.0937 from the base datum, with height 0.05625 and extrusion depth 0.0562. Place four separate annular cylindrical posts on the upper face of the base, all centered across the width at front offset 0.1875, with axes at left offsets 0.15, 0.3, 0.45, and 0.6. The post outer radii are 0.0469, 0.0469, 0.0562, and 0.0562 respectively, and the matching through central opening radii are 0.0188, 0.0197, 0.0216, and 0.0234. Each annular post spans from 0.0375 to 0.1312 relative to the base reference plane, using extrusion depth 0.0937, and the posts remain separate cylinders with no rectangular filled plate connecting their footprint envelope.",
       "assets": {
-        "generated": "runs/text2cad_0013_00134405_parametric_json_deepseek_v4pro-reason/generated.json",
-        "generated_json": "runs/text2cad_0013_00134405_parametric_json_deepseek_v4pro-reason/generated.json",
-        "mesh": "runs/text2cad_0013_00134405_parametric_json_deepseek_v4pro-reason/model.stl",
-        "pred_render": "runs/text2cad_0013_00134405_parametric_json_deepseek_v4pro-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0013_00134405.stl",
-        "gt_render": "gt_renders/text2cad_0013_00134405.png"
+        "generated": "runs/text2cad_0005_00051572_parametric_json_kimi_k26-reason/generated.json",
+        "mesh": "runs/text2cad_0005_00051572_parametric_json_kimi_k26-reason/model.stl",
+        "pred_render": "runs/text2cad_0005_00051572_parametric_json_kimi_k26-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0005_00051572.stl",
+        "gt_render": "gt_renders/text2cad_0005_00051572.png",
+        "generated_json": "runs/text2cad_0005_00051572_parametric_json_kimi_k26-reason/generated.json"
       },
       "metrics": {
-        "chamfer_distance": 0.000082,
-        "hausdorff_distance": 0.04921,
-        "f_score_005": 0.9987,
-        "f_score_001": 0.5545,
-        "normal_consistency": 0.9206,
-        "iou_csg": 0.747,
-        "iou_voxel": 0.9946,
+        "chamfer_distance": 0.000527,
+        "hausdorff_distance": 0.094983,
+        "f_score_005": 0.8621,
+        "f_score_001": 0.5145,
+        "normal_consistency": 0.7682,
+        "iou_csg": 0.4866,
+        "iou_voxel": 0.5452,
         "pred_open_edge_ratio": 0,
-        "acc_cmd": 0.2727,
-        "acc_param": 0.08,
-        "qa_overall": 0.6667,
+        "qa_overall": 0.583333,
         "qa_semantic": 0,
-        "qa_parametric": 1
-      }
-    },
-    {
-      "id": "text2cad_0013_00134405_parametric_json_qwen-reason",
-      "task": "text2cad",
-      "case_id": "0013/00134405",
-      "spec": "parametric",
-      "format": "json",
-      "model": "qwen-reason",
-      "valid": true,
-      "condition": "Use the main base declared size as the first reference: length 0.75, width 0.75, height 0.05625; main extrusion depth 0.0281. Build the main base as a concentric circular annulus, not as a rectangular plate: the outer circular profile has radius 0.375 and the inner circular opening has radius 0.3375, with the shared axis 0.375 from the left edge and 0.375 from the front edge; this base spans from -0.0281 to 0.0281 relative to the base underside reference. Add a centered solid annular collar within a 0.15 by 0.15 footprint, offset 0.3 from the left, right, front, and back edges, keeping its inner profile open as a real through void; this collar spans from -0.0234 to 0.0234 from the same underside reference. Add the rounded radial rib web as solid attached material inside the rim, using arc-based outlines and leaving the intervening elongated slot-like openings open; its bounding footprint is 0.6184 by 0.521 with edge offsets left 0.0658, right 0.0658, front 0.0387, and back 0.1903, and its modeled length, width, and height are 0.618448, 0.521035, and 0.028125. The rib web spans from -0.0141 to 0.0141 from the same underside reference, so these vertical values are shared-reach tiers rather than stacked segment heights. Keep all circular profiles coaxial and concentric with the main annulus and central collar.",
-      "assets": {
-        "generated": "runs/text2cad_0013_00134405_parametric_json_qwen-reason/generated.json",
-        "generated_json": "runs/text2cad_0013_00134405_parametric_json_qwen-reason/generated.json",
-        "mesh": "runs/text2cad_0013_00134405_parametric_json_qwen-reason/model.stl",
-        "pred_render": "runs/text2cad_0013_00134405_parametric_json_qwen-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0013_00134405.stl",
-        "gt_render": "gt_renders/text2cad_0013_00134405.png"
-      },
-      "metrics": {
-        "chamfer_distance": 0.000975,
-        "hausdorff_distance": 0.123225,
-        "f_score_005": 0.7516,
-        "f_score_001": 0.0272,
-        "normal_consistency": 0.7919,
-        "iou_csg": 0.4783,
-        "iou_voxel": 0.379,
-        "pred_open_edge_ratio": 0,
-        "acc_cmd": 0.1818,
-        "acc_param": 0.0694,
-        "qa_overall": 0,
-        "qa_semantic": 0,
-        "qa_parametric": 0
-      }
-    },
-    {
-      "id": "text2cad_0013_00134405_parametric_json_mimo_v25-reason",
-      "task": "text2cad",
-      "case_id": "0013/00134405",
-      "spec": "parametric",
-      "format": "json",
-      "model": "mimo_v25-reason",
-      "valid": true,
-      "condition": "Use the main base declared size as the first reference: length 0.75, width 0.75, height 0.05625; main extrusion depth 0.0281. Build the main base as a concentric circular annulus, not as a rectangular plate: the outer circular profile has radius 0.375 and the inner circular opening has radius 0.3375, with the shared axis 0.375 from the left edge and 0.375 from the front edge; this base spans from -0.0281 to 0.0281 relative to the base underside reference. Add a centered solid annular collar within a 0.15 by 0.15 footprint, offset 0.3 from the left, right, front, and back edges, keeping its inner profile open as a real through void; this collar spans from -0.0234 to 0.0234 from the same underside reference. Add the rounded radial rib web as solid attached material inside the rim, using arc-based outlines and leaving the intervening elongated slot-like openings open; its bounding footprint is 0.6184 by 0.521 with edge offsets left 0.0658, right 0.0658, front 0.0387, and back 0.1903, and its modeled length, width, and height are 0.618448, 0.521035, and 0.028125. The rib web spans from -0.0141 to 0.0141 from the same underside reference, so these vertical values are shared-reach tiers rather than stacked segment heights. Keep all circular profiles coaxial and concentric with the main annulus and central collar.",
-      "assets": {
-        "generated": "runs/text2cad_0013_00134405_parametric_json_mimo_v25-reason/generated.json",
-        "generated_json": "runs/text2cad_0013_00134405_parametric_json_mimo_v25-reason/generated.json",
-        "mesh": "runs/text2cad_0013_00134405_parametric_json_mimo_v25-reason/model.stl",
-        "pred_render": "runs/text2cad_0013_00134405_parametric_json_mimo_v25-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0013_00134405.stl",
-        "gt_render": "gt_renders/text2cad_0013_00134405.png"
-      },
-      "metrics": {
-        "chamfer_distance": 0.000341,
-        "hausdorff_distance": 0.049517,
-        "f_score_005": 0.9064,
-        "f_score_001": 0.1197,
-        "normal_consistency": 0.9358,
-        "iou_csg": 1,
-        "iou_voxel": 0.8618,
-        "pred_open_edge_ratio": 0,
-        "acc_cmd": 0.0909,
-        "acc_param": 0.0694,
-        "qa_overall": 0.75,
-        "qa_semantic": 0.5,
         "qa_parametric": 0.875
       }
     },
     {
-      "id": "text2cad_0013_00134405_parametric_json_doubao-reason",
+      "id": "text2cad_0005_00051572_parametric_json_glm-reason",
       "task": "text2cad",
-      "case_id": "0013/00134405",
+      "case_id": "0005/00051572",
+      "spec": "parametric",
+      "format": "json",
+      "model": "glm-reason",
+      "valid": true,
+      "condition": "Build the main reference as a rectangular base with length 0.75, width 0.375, and height 0.0375, using a main extrusion depth of 0.0375. Add the raised rectangular upper material with outer footprint 0.75 by 0.375, flush to the left, right, front, and back edges of the base; it starts from the upper side of the base and reaches 0.1312 from the base datum, with extrusion depth 0.0937. Keep the visible channel interior open between the raised wall material rather than filling it with a separate rectangular pad above the base. Add one narrower rectangular solid at the left end with footprint 0.0319 by 0.3094, left edge offset 0, right edge offset 0.7181, front offset 0.0281, and back offset 0.0375; it starts on the upper side of the base at 0.0375 and reaches 0.0937 from the base datum, with height 0.05625 and extrusion depth 0.0562. Place four separate annular cylindrical posts on the upper face of the base, all centered across the width at front offset 0.1875, with axes at left offsets 0.15, 0.3, 0.45, and 0.6. The post outer radii are 0.0469, 0.0469, 0.0562, and 0.0562 respectively, and the matching through central opening radii are 0.0188, 0.0197, 0.0216, and 0.0234. Each annular post spans from 0.0375 to 0.1312 relative to the base reference plane, using extrusion depth 0.0937, and the posts remain separate cylinders with no rectangular filled plate connecting their footprint envelope.",
+      "assets": {
+        "generated": "runs/text2cad_0005_00051572_parametric_json_glm-reason/generated.json",
+        "mesh": "runs/text2cad_0005_00051572_parametric_json_glm-reason/model.stl",
+        "pred_render": "runs/text2cad_0005_00051572_parametric_json_glm-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0005_00051572.stl",
+        "gt_render": "gt_renders/text2cad_0005_00051572.png",
+        "generated_json": "runs/text2cad_0005_00051572_parametric_json_glm-reason/generated.json"
+      },
+      "metrics": {
+        "chamfer_distance": 0.000096,
+        "hausdorff_distance": 0.093076,
+        "f_score_005": 0.9854,
+        "f_score_001": 0.775,
+        "normal_consistency": 0.9248,
+        "iou_csg": 0.9163,
+        "iou_voxel": 0.9614,
+        "pred_open_edge_ratio": 0,
+        "qa_overall": 0.833333,
+        "qa_semantic": 0.75,
+        "qa_parametric": 0.875
+      }
+    },
+    {
+      "id": "text2cad_0005_00051572_parametric_json_doubao-reason",
+      "task": "text2cad",
+      "case_id": "0005/00051572",
       "spec": "parametric",
       "format": "json",
       "model": "doubao-reason",
       "valid": true,
-      "condition": "Use the main base declared size as the first reference: length 0.75, width 0.75, height 0.05625; main extrusion depth 0.0281. Build the main base as a concentric circular annulus, not as a rectangular plate: the outer circular profile has radius 0.375 and the inner circular opening has radius 0.3375, with the shared axis 0.375 from the left edge and 0.375 from the front edge; this base spans from -0.0281 to 0.0281 relative to the base underside reference. Add a centered solid annular collar within a 0.15 by 0.15 footprint, offset 0.3 from the left, right, front, and back edges, keeping its inner profile open as a real through void; this collar spans from -0.0234 to 0.0234 from the same underside reference. Add the rounded radial rib web as solid attached material inside the rim, using arc-based outlines and leaving the intervening elongated slot-like openings open; its bounding footprint is 0.6184 by 0.521 with edge offsets left 0.0658, right 0.0658, front 0.0387, and back 0.1903, and its modeled length, width, and height are 0.618448, 0.521035, and 0.028125. The rib web spans from -0.0141 to 0.0141 from the same underside reference, so these vertical values are shared-reach tiers rather than stacked segment heights. Keep all circular profiles coaxial and concentric with the main annulus and central collar.",
+      "condition": "Build the main reference as a rectangular base with length 0.75, width 0.375, and height 0.0375, using a main extrusion depth of 0.0375. Add the raised rectangular upper material with outer footprint 0.75 by 0.375, flush to the left, right, front, and back edges of the base; it starts from the upper side of the base and reaches 0.1312 from the base datum, with extrusion depth 0.0937. Keep the visible channel interior open between the raised wall material rather than filling it with a separate rectangular pad above the base. Add one narrower rectangular solid at the left end with footprint 0.0319 by 0.3094, left edge offset 0, right edge offset 0.7181, front offset 0.0281, and back offset 0.0375; it starts on the upper side of the base at 0.0375 and reaches 0.0937 from the base datum, with height 0.05625 and extrusion depth 0.0562. Place four separate annular cylindrical posts on the upper face of the base, all centered across the width at front offset 0.1875, with axes at left offsets 0.15, 0.3, 0.45, and 0.6. The post outer radii are 0.0469, 0.0469, 0.0562, and 0.0562 respectively, and the matching through central opening radii are 0.0188, 0.0197, 0.0216, and 0.0234. Each annular post spans from 0.0375 to 0.1312 relative to the base reference plane, using extrusion depth 0.0937, and the posts remain separate cylinders with no rectangular filled plate connecting their footprint envelope.",
       "assets": {
-        "generated": "runs/text2cad_0013_00134405_parametric_json_doubao-reason/generated.json",
-        "generated_json": "runs/text2cad_0013_00134405_parametric_json_doubao-reason/generated.json",
-        "mesh": "runs/text2cad_0013_00134405_parametric_json_doubao-reason/model.stl",
-        "pred_render": "runs/text2cad_0013_00134405_parametric_json_doubao-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0013_00134405.stl",
-        "gt_render": "gt_renders/text2cad_0013_00134405.png"
+        "generated": "runs/text2cad_0005_00051572_parametric_json_doubao-reason/generated.json",
+        "mesh": "runs/text2cad_0005_00051572_parametric_json_doubao-reason/model.stl",
+        "pred_render": "runs/text2cad_0005_00051572_parametric_json_doubao-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0005_00051572.stl",
+        "gt_render": "gt_renders/text2cad_0005_00051572.png",
+        "generated_json": "runs/text2cad_0005_00051572_parametric_json_doubao-reason/generated.json"
       },
       "metrics": {
-        "chamfer_distance": 0.000194,
-        "hausdorff_distance": 0.078303,
-        "f_score_005": 0.9695,
-        "f_score_001": 0.4517,
-        "normal_consistency": 0.8962,
-        "iou_csg": 1,
-        "iou_voxel": 0.9271,
+        "chamfer_distance": 0.000127,
+        "hausdorff_distance": 0.037262,
+        "f_score_005": 1,
+        "f_score_001": 0.5074,
+        "normal_consistency": 0.8224,
+        "iou_csg": 0.7631,
+        "iou_voxel": 0.7304,
         "pred_open_edge_ratio": 0,
-        "acc_cmd": 0.1212,
-        "acc_param": 0.0608,
+        "qa_overall": 0.833333,
+        "qa_semantic": 1,
+        "qa_parametric": 0.75
+      }
+    },
+    {
+      "id": "text2cad_0005_00051572_parametric_json_deepseek_v4pro-reason",
+      "task": "text2cad",
+      "case_id": "0005/00051572",
+      "spec": "parametric",
+      "format": "json",
+      "model": "deepseek_v4pro-reason",
+      "valid": true,
+      "condition": "Build the main reference as a rectangular base with length 0.75, width 0.375, and height 0.0375, using a main extrusion depth of 0.0375. Add the raised rectangular upper material with outer footprint 0.75 by 0.375, flush to the left, right, front, and back edges of the base; it starts from the upper side of the base and reaches 0.1312 from the base datum, with extrusion depth 0.0937. Keep the visible channel interior open between the raised wall material rather than filling it with a separate rectangular pad above the base. Add one narrower rectangular solid at the left end with footprint 0.0319 by 0.3094, left edge offset 0, right edge offset 0.7181, front offset 0.0281, and back offset 0.0375; it starts on the upper side of the base at 0.0375 and reaches 0.0937 from the base datum, with height 0.05625 and extrusion depth 0.0562. Place four separate annular cylindrical posts on the upper face of the base, all centered across the width at front offset 0.1875, with axes at left offsets 0.15, 0.3, 0.45, and 0.6. The post outer radii are 0.0469, 0.0469, 0.0562, and 0.0562 respectively, and the matching through central opening radii are 0.0188, 0.0197, 0.0216, and 0.0234. Each annular post spans from 0.0375 to 0.1312 relative to the base reference plane, using extrusion depth 0.0937, and the posts remain separate cylinders with no rectangular filled plate connecting their footprint envelope.",
+      "assets": {
+        "generated": "runs/text2cad_0005_00051572_parametric_json_deepseek_v4pro-reason/generated.json",
+        "mesh": "runs/text2cad_0005_00051572_parametric_json_deepseek_v4pro-reason/model.stl",
+        "pred_render": "runs/text2cad_0005_00051572_parametric_json_deepseek_v4pro-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0005_00051572.stl",
+        "gt_render": "gt_renders/text2cad_0005_00051572.png",
+        "generated_json": "runs/text2cad_0005_00051572_parametric_json_deepseek_v4pro-reason/generated.json"
+      },
+      "metrics": {
+        "chamfer_distance": 0.000527,
+        "hausdorff_distance": 0.094983,
+        "f_score_005": 0.8621,
+        "f_score_001": 0.5145,
+        "normal_consistency": 0.7682,
+        "iou_csg": 0.4866,
+        "iou_voxel": 0.5452,
+        "pred_open_edge_ratio": 0,
+        "qa_overall": 0.083333,
+        "qa_semantic": 0,
+        "qa_parametric": 0.125
+      }
+    },
+    {
+      "id": "text2cad_0005_00051572_parametric_json_qwen-reason",
+      "task": "text2cad",
+      "case_id": "0005/00051572",
+      "spec": "parametric",
+      "format": "json",
+      "model": "qwen-reason",
+      "valid": true,
+      "condition": "Build the main reference as a rectangular base with length 0.75, width 0.375, and height 0.0375, using a main extrusion depth of 0.0375. Add the raised rectangular upper material with outer footprint 0.75 by 0.375, flush to the left, right, front, and back edges of the base; it starts from the upper side of the base and reaches 0.1312 from the base datum, with extrusion depth 0.0937. Keep the visible channel interior open between the raised wall material rather than filling it with a separate rectangular pad above the base. Add one narrower rectangular solid at the left end with footprint 0.0319 by 0.3094, left edge offset 0, right edge offset 0.7181, front offset 0.0281, and back offset 0.0375; it starts on the upper side of the base at 0.0375 and reaches 0.0937 from the base datum, with height 0.05625 and extrusion depth 0.0562. Place four separate annular cylindrical posts on the upper face of the base, all centered across the width at front offset 0.1875, with axes at left offsets 0.15, 0.3, 0.45, and 0.6. The post outer radii are 0.0469, 0.0469, 0.0562, and 0.0562 respectively, and the matching through central opening radii are 0.0188, 0.0197, 0.0216, and 0.0234. Each annular post spans from 0.0375 to 0.1312 relative to the base reference plane, using extrusion depth 0.0937, and the posts remain separate cylinders with no rectangular filled plate connecting their footprint envelope.",
+      "assets": {
+        "generated": "runs/text2cad_0005_00051572_parametric_json_qwen-reason/generated.json",
+        "mesh": "runs/text2cad_0005_00051572_parametric_json_qwen-reason/model.stl",
+        "pred_render": "runs/text2cad_0005_00051572_parametric_json_qwen-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0005_00051572.stl",
+        "gt_render": "gt_renders/text2cad_0005_00051572.png",
+        "generated_json": "runs/text2cad_0005_00051572_parametric_json_qwen-reason/generated.json"
+      },
+      "metrics": {
+        "chamfer_distance": 0.00042,
+        "hausdorff_distance": 0.067298,
+        "f_score_005": 0.9293,
+        "f_score_001": 0.2008,
+        "normal_consistency": 0.6487,
+        "iou_csg": 0.4253,
+        "iou_voxel": 0.5026,
+        "pred_open_edge_ratio": 0,
+        "qa_overall": 0.416667,
+        "qa_semantic": 0,
+        "qa_parametric": 0.625
+      }
+    },
+    {
+      "id": "text2cad_0005_00051572_parametric_json_mimo_v25-reason",
+      "task": "text2cad",
+      "case_id": "0005/00051572",
+      "spec": "parametric",
+      "format": "json",
+      "model": "mimo_v25-reason",
+      "valid": true,
+      "condition": "Build the main reference as a rectangular base with length 0.75, width 0.375, and height 0.0375, using a main extrusion depth of 0.0375. Add the raised rectangular upper material with outer footprint 0.75 by 0.375, flush to the left, right, front, and back edges of the base; it starts from the upper side of the base and reaches 0.1312 from the base datum, with extrusion depth 0.0937. Keep the visible channel interior open between the raised wall material rather than filling it with a separate rectangular pad above the base. Add one narrower rectangular solid at the left end with footprint 0.0319 by 0.3094, left edge offset 0, right edge offset 0.7181, front offset 0.0281, and back offset 0.0375; it starts on the upper side of the base at 0.0375 and reaches 0.0937 from the base datum, with height 0.05625 and extrusion depth 0.0562. Place four separate annular cylindrical posts on the upper face of the base, all centered across the width at front offset 0.1875, with axes at left offsets 0.15, 0.3, 0.45, and 0.6. The post outer radii are 0.0469, 0.0469, 0.0562, and 0.0562 respectively, and the matching through central opening radii are 0.0188, 0.0197, 0.0216, and 0.0234. Each annular post spans from 0.0375 to 0.1312 relative to the base reference plane, using extrusion depth 0.0937, and the posts remain separate cylinders with no rectangular filled plate connecting their footprint envelope.",
+      "assets": {
+        "generated": "runs/text2cad_0005_00051572_parametric_json_mimo_v25-reason/generated.json",
+        "mesh": "runs/text2cad_0005_00051572_parametric_json_mimo_v25-reason/model.stl",
+        "pred_render": "runs/text2cad_0005_00051572_parametric_json_mimo_v25-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0005_00051572.stl",
+        "gt_render": "gt_renders/text2cad_0005_00051572.png",
+        "generated_json": "runs/text2cad_0005_00051572_parametric_json_mimo_v25-reason/generated.json"
+      },
+      "metrics": {
+        "chamfer_distance": 0.000182,
+        "hausdorff_distance": 0.093231,
+        "f_score_005": 0.9682,
+        "f_score_001": 0.565,
+        "normal_consistency": 0.8054,
+        "iou_csg": 0.5741,
+        "iou_voxel": 0.5452,
+        "pred_open_edge_ratio": 0,
         "qa_overall": 0.5,
         "qa_semantic": 0,
         "qa_parametric": 0.75
       }
     },
     {
-      "id": "text2cad_0013_00134405_parametric_json_glm-reason",
+      "id": "text2cad_0005_00051572_parametric_openscad_gpt55-reason",
       "task": "text2cad",
-      "case_id": "0013/00134405",
-      "spec": "parametric",
-      "format": "json",
-      "model": "glm-reason",
-      "valid": true,
-      "condition": "Use the main base declared size as the first reference: length 0.75, width 0.75, height 0.05625; main extrusion depth 0.0281. Build the main base as a concentric circular annulus, not as a rectangular plate: the outer circular profile has radius 0.375 and the inner circular opening has radius 0.3375, with the shared axis 0.375 from the left edge and 0.375 from the front edge; this base spans from -0.0281 to 0.0281 relative to the base underside reference. Add a centered solid annular collar within a 0.15 by 0.15 footprint, offset 0.3 from the left, right, front, and back edges, keeping its inner profile open as a real through void; this collar spans from -0.0234 to 0.0234 from the same underside reference. Add the rounded radial rib web as solid attached material inside the rim, using arc-based outlines and leaving the intervening elongated slot-like openings open; its bounding footprint is 0.6184 by 0.521 with edge offsets left 0.0658, right 0.0658, front 0.0387, and back 0.1903, and its modeled length, width, and height are 0.618448, 0.521035, and 0.028125. The rib web spans from -0.0141 to 0.0141 from the same underside reference, so these vertical values are shared-reach tiers rather than stacked segment heights. Keep all circular profiles coaxial and concentric with the main annulus and central collar.",
-      "assets": {
-        "generated": "runs/text2cad_0013_00134405_parametric_json_glm-reason/generated.json",
-        "generated_json": "runs/text2cad_0013_00134405_parametric_json_glm-reason/generated.json",
-        "mesh": "runs/text2cad_0013_00134405_parametric_json_glm-reason/model.stl",
-        "pred_render": "runs/text2cad_0013_00134405_parametric_json_glm-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0013_00134405.stl",
-        "gt_render": "gt_renders/text2cad_0013_00134405.png"
-      },
-      "metrics": {
-        "chamfer_distance": 0.000293,
-        "hausdorff_distance": 0.066685,
-        "f_score_005": 0.9337,
-        "f_score_001": 0.2424,
-        "normal_consistency": 0.8981,
-        "iou_csg": 1,
-        "iou_voxel": 0.8776,
-        "pred_open_edge_ratio": 0,
-        "acc_cmd": 0.303,
-        "acc_param": 0.089,
-        "qa_overall": 0.4167,
-        "qa_semantic": 0,
-        "qa_parametric": 0.625
-      }
-    },
-    {
-      "id": "text2cad_0013_00134405_parametric_openscad_gpt55-reason",
-      "task": "text2cad",
-      "case_id": "0013/00134405",
+      "case_id": "0005/00051572",
       "spec": "parametric",
       "format": "openscad",
       "model": "gpt55-reason",
       "valid": true,
-      "condition": "Use the main base declared size as the first reference: length 0.75, width 0.75, height 0.05625; main extrusion depth 0.0281. Build the main base as a concentric circular annulus, not as a rectangular plate: the outer circular profile has radius 0.375 and the inner circular opening has radius 0.3375, with the shared axis 0.375 from the left edge and 0.375 from the front edge; this base spans from -0.0281 to 0.0281 relative to the base underside reference. Add a centered solid annular collar within a 0.15 by 0.15 footprint, offset 0.3 from the left, right, front, and back edges, keeping its inner profile open as a real through void; this collar spans from -0.0234 to 0.0234 from the same underside reference. Add the rounded radial rib web as solid attached material inside the rim, using arc-based outlines and leaving the intervening elongated slot-like openings open; its bounding footprint is 0.6184 by 0.521 with edge offsets left 0.0658, right 0.0658, front 0.0387, and back 0.1903, and its modeled length, width, and height are 0.618448, 0.521035, and 0.028125. The rib web spans from -0.0141 to 0.0141 from the same underside reference, so these vertical values are shared-reach tiers rather than stacked segment heights. Keep all circular profiles coaxial and concentric with the main annulus and central collar.",
+      "condition": "Build the main reference as a rectangular base with length 0.75, width 0.375, and height 0.0375, using a main extrusion depth of 0.0375. Add the raised rectangular upper material with outer footprint 0.75 by 0.375, flush to the left, right, front, and back edges of the base; it starts from the upper side of the base and reaches 0.1312 from the base datum, with extrusion depth 0.0937. Keep the visible channel interior open between the raised wall material rather than filling it with a separate rectangular pad above the base. Add one narrower rectangular solid at the left end with footprint 0.0319 by 0.3094, left edge offset 0, right edge offset 0.7181, front offset 0.0281, and back offset 0.0375; it starts on the upper side of the base at 0.0375 and reaches 0.0937 from the base datum, with height 0.05625 and extrusion depth 0.0562. Place four separate annular cylindrical posts on the upper face of the base, all centered across the width at front offset 0.1875, with axes at left offsets 0.15, 0.3, 0.45, and 0.6. The post outer radii are 0.0469, 0.0469, 0.0562, and 0.0562 respectively, and the matching through central opening radii are 0.0188, 0.0197, 0.0216, and 0.0234. Each annular post spans from 0.0375 to 0.1312 relative to the base reference plane, using extrusion depth 0.0937, and the posts remain separate cylinders with no rectangular filled plate connecting their footprint envelope.",
       "assets": {
-        "generated": "runs/text2cad_0013_00134405_parametric_openscad_gpt55-reason/generated.scad",
-        "generated_json": "runs/text2cad_0013_00134405_parametric_openscad_gpt55-reason/generated.json",
-        "mesh": "runs/text2cad_0013_00134405_parametric_openscad_gpt55-reason/model.stl",
-        "pred_render": "runs/text2cad_0013_00134405_parametric_openscad_gpt55-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0013_00134405.stl",
-        "gt_render": "gt_renders/text2cad_0013_00134405.png"
+        "generated": "runs/text2cad_0005_00051572_parametric_openscad_gpt55-reason/generated.scad",
+        "mesh": "runs/text2cad_0005_00051572_parametric_openscad_gpt55-reason/model.stl",
+        "pred_render": "runs/text2cad_0005_00051572_parametric_openscad_gpt55-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0005_00051572.stl",
+        "gt_render": "gt_renders/text2cad_0005_00051572.png"
       },
       "metrics": {
-        "chamfer_distance": 0.001889,
-        "hausdorff_distance": 0.129783,
-        "f_score_005": 0.6398,
-        "f_score_001": 0.1712,
-        "normal_consistency": 0.4502,
-        "iou_csg": 0.1135,
-        "iou_voxel": 0.147,
+        "chamfer_distance": 0.000042,
+        "hausdorff_distance": 0.021591,
+        "f_score_005": 1,
+        "f_score_001": 0.7339,
+        "normal_consistency": 0.9424,
+        "iou_csg": 0.9972,
+        "iou_voxel": 0.9992,
         "pred_open_edge_ratio": 0,
-        "qa_overall": 0.9167,
-        "qa_semantic": 0.75,
+        "qa_overall": 1,
+        "qa_semantic": 1,
         "qa_parametric": 1
       }
     },
     {
-      "id": "text2cad_0013_00134405_parametric_openscad_gemini-reason",
+      "id": "text2cad_0005_00051572_parametric_openscad_gemini-reason",
       "task": "text2cad",
-      "case_id": "0013/00134405",
+      "case_id": "0005/00051572",
       "spec": "parametric",
       "format": "openscad",
       "model": "gemini-reason",
       "valid": true,
-      "condition": "Use the main base declared size as the first reference: length 0.75, width 0.75, height 0.05625; main extrusion depth 0.0281. Build the main base as a concentric circular annulus, not as a rectangular plate: the outer circular profile has radius 0.375 and the inner circular opening has radius 0.3375, with the shared axis 0.375 from the left edge and 0.375 from the front edge; this base spans from -0.0281 to 0.0281 relative to the base underside reference. Add a centered solid annular collar within a 0.15 by 0.15 footprint, offset 0.3 from the left, right, front, and back edges, keeping its inner profile open as a real through void; this collar spans from -0.0234 to 0.0234 from the same underside reference. Add the rounded radial rib web as solid attached material inside the rim, using arc-based outlines and leaving the intervening elongated slot-like openings open; its bounding footprint is 0.6184 by 0.521 with edge offsets left 0.0658, right 0.0658, front 0.0387, and back 0.1903, and its modeled length, width, and height are 0.618448, 0.521035, and 0.028125. The rib web spans from -0.0141 to 0.0141 from the same underside reference, so these vertical values are shared-reach tiers rather than stacked segment heights. Keep all circular profiles coaxial and concentric with the main annulus and central collar.",
+      "condition": "Build the main reference as a rectangular base with length 0.75, width 0.375, and height 0.0375, using a main extrusion depth of 0.0375. Add the raised rectangular upper material with outer footprint 0.75 by 0.375, flush to the left, right, front, and back edges of the base; it starts from the upper side of the base and reaches 0.1312 from the base datum, with extrusion depth 0.0937. Keep the visible channel interior open between the raised wall material rather than filling it with a separate rectangular pad above the base. Add one narrower rectangular solid at the left end with footprint 0.0319 by 0.3094, left edge offset 0, right edge offset 0.7181, front offset 0.0281, and back offset 0.0375; it starts on the upper side of the base at 0.0375 and reaches 0.0937 from the base datum, with height 0.05625 and extrusion depth 0.0562. Place four separate annular cylindrical posts on the upper face of the base, all centered across the width at front offset 0.1875, with axes at left offsets 0.15, 0.3, 0.45, and 0.6. The post outer radii are 0.0469, 0.0469, 0.0562, and 0.0562 respectively, and the matching through central opening radii are 0.0188, 0.0197, 0.0216, and 0.0234. Each annular post spans from 0.0375 to 0.1312 relative to the base reference plane, using extrusion depth 0.0937, and the posts remain separate cylinders with no rectangular filled plate connecting their footprint envelope.",
       "assets": {
-        "generated": "runs/text2cad_0013_00134405_parametric_openscad_gemini-reason/generated.scad",
-        "generated_json": "runs/text2cad_0013_00134405_parametric_openscad_gemini-reason/generated.json",
-        "mesh": "runs/text2cad_0013_00134405_parametric_openscad_gemini-reason/model.stl",
-        "pred_render": "runs/text2cad_0013_00134405_parametric_openscad_gemini-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0013_00134405.stl",
-        "gt_render": "gt_renders/text2cad_0013_00134405.png"
+        "generated": "runs/text2cad_0005_00051572_parametric_openscad_gemini-reason/generated.scad",
+        "mesh": "runs/text2cad_0005_00051572_parametric_openscad_gemini-reason/model.stl",
+        "pred_render": "runs/text2cad_0005_00051572_parametric_openscad_gemini-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0005_00051572.stl",
+        "gt_render": "gt_renders/text2cad_0005_00051572.png"
       },
       "metrics": {
-        "chamfer_distance": 0.000594,
-        "hausdorff_distance": 0.08724,
-        "f_score_005": 0.8464,
-        "f_score_001": 0.2259,
-        "normal_consistency": 0.648,
-        "iou_csg": 0.2542,
-        "iou_voxel": 0.2397,
+        "chamfer_distance": 0.000046,
+        "hausdorff_distance": 0.020794,
+        "f_score_005": 1,
+        "f_score_001": 0.7096,
+        "normal_consistency": 0.925,
+        "iou_csg": 0.9811,
+        "iou_voxel": 0.998,
         "pred_open_edge_ratio": 0,
         "qa_overall": 1,
         "qa_semantic": 1,
@@ -11280,61 +11236,59 @@
       }
     },
     {
-      "id": "text2cad_0013_00134405_parametric_openscad_claude-reason",
+      "id": "text2cad_0005_00051572_parametric_openscad_claude-reason",
       "task": "text2cad",
-      "case_id": "0013/00134405",
+      "case_id": "0005/00051572",
       "spec": "parametric",
       "format": "openscad",
       "model": "claude-reason",
       "valid": true,
-      "condition": "Use the main base declared size as the first reference: length 0.75, width 0.75, height 0.05625; main extrusion depth 0.0281. Build the main base as a concentric circular annulus, not as a rectangular plate: the outer circular profile has radius 0.375 and the inner circular opening has radius 0.3375, with the shared axis 0.375 from the left edge and 0.375 from the front edge; this base spans from -0.0281 to 0.0281 relative to the base underside reference. Add a centered solid annular collar within a 0.15 by 0.15 footprint, offset 0.3 from the left, right, front, and back edges, keeping its inner profile open as a real through void; this collar spans from -0.0234 to 0.0234 from the same underside reference. Add the rounded radial rib web as solid attached material inside the rim, using arc-based outlines and leaving the intervening elongated slot-like openings open; its bounding footprint is 0.6184 by 0.521 with edge offsets left 0.0658, right 0.0658, front 0.0387, and back 0.1903, and its modeled length, width, and height are 0.618448, 0.521035, and 0.028125. The rib web spans from -0.0141 to 0.0141 from the same underside reference, so these vertical values are shared-reach tiers rather than stacked segment heights. Keep all circular profiles coaxial and concentric with the main annulus and central collar.",
+      "condition": "Build the main reference as a rectangular base with length 0.75, width 0.375, and height 0.0375, using a main extrusion depth of 0.0375. Add the raised rectangular upper material with outer footprint 0.75 by 0.375, flush to the left, right, front, and back edges of the base; it starts from the upper side of the base and reaches 0.1312 from the base datum, with extrusion depth 0.0937. Keep the visible channel interior open between the raised wall material rather than filling it with a separate rectangular pad above the base. Add one narrower rectangular solid at the left end with footprint 0.0319 by 0.3094, left edge offset 0, right edge offset 0.7181, front offset 0.0281, and back offset 0.0375; it starts on the upper side of the base at 0.0375 and reaches 0.0937 from the base datum, with height 0.05625 and extrusion depth 0.0562. Place four separate annular cylindrical posts on the upper face of the base, all centered across the width at front offset 0.1875, with axes at left offsets 0.15, 0.3, 0.45, and 0.6. The post outer radii are 0.0469, 0.0469, 0.0562, and 0.0562 respectively, and the matching through central opening radii are 0.0188, 0.0197, 0.0216, and 0.0234. Each annular post spans from 0.0375 to 0.1312 relative to the base reference plane, using extrusion depth 0.0937, and the posts remain separate cylinders with no rectangular filled plate connecting their footprint envelope.",
       "assets": {
-        "generated": "runs/text2cad_0013_00134405_parametric_openscad_claude-reason/generated.scad",
-        "generated_json": "runs/text2cad_0013_00134405_parametric_openscad_claude-reason/generated.json",
-        "mesh": "runs/text2cad_0013_00134405_parametric_openscad_claude-reason/model.stl",
-        "pred_render": "runs/text2cad_0013_00134405_parametric_openscad_claude-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0013_00134405.stl",
-        "gt_render": "gt_renders/text2cad_0013_00134405.png"
+        "generated": "runs/text2cad_0005_00051572_parametric_openscad_claude-reason/generated.scad",
+        "mesh": "runs/text2cad_0005_00051572_parametric_openscad_claude-reason/model.stl",
+        "pred_render": "runs/text2cad_0005_00051572_parametric_openscad_claude-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0005_00051572.stl",
+        "gt_render": "gt_renders/text2cad_0005_00051572.png"
       },
       "metrics": {
-        "chamfer_distance": 0.001585,
-        "hausdorff_distance": 0.137161,
-        "f_score_005": 0.6897,
-        "f_score_001": 0.1779,
-        "normal_consistency": 0.5064,
-        "iou_csg": 0.1161,
-        "iou_voxel": 0.1459,
+        "chamfer_distance": 0.000114,
+        "hausdorff_distance": 0.092943,
+        "f_score_005": 0.9884,
+        "f_score_001": 0.6355,
+        "normal_consistency": 0.8615,
+        "iou_csg": 0.8797,
+        "iou_voxel": 0.9317,
         "pred_open_edge_ratio": 0,
-        "qa_overall": 1,
-        "qa_semantic": 1,
+        "qa_overall": 0.916667,
+        "qa_semantic": 0.75,
         "qa_parametric": 1
       }
     },
     {
-      "id": "text2cad_0013_00134405_parametric_openscad_kimi_k26-reason",
+      "id": "text2cad_0005_00051572_parametric_openscad_kimi_k26-reason",
       "task": "text2cad",
-      "case_id": "0013/00134405",
+      "case_id": "0005/00051572",
       "spec": "parametric",
       "format": "openscad",
       "model": "kimi_k26-reason",
       "valid": true,
-      "condition": "Use the main base declared size as the first reference: length 0.75, width 0.75, height 0.05625; main extrusion depth 0.0281. Build the main base as a concentric circular annulus, not as a rectangular plate: the outer circular profile has radius 0.375 and the inner circular opening has radius 0.3375, with the shared axis 0.375 from the left edge and 0.375 from the front edge; this base spans from -0.0281 to 0.0281 relative to the base underside reference. Add a centered solid annular collar within a 0.15 by 0.15 footprint, offset 0.3 from the left, right, front, and back edges, keeping its inner profile open as a real through void; this collar spans from -0.0234 to 0.0234 from the same underside reference. Add the rounded radial rib web as solid attached material inside the rim, using arc-based outlines and leaving the intervening elongated slot-like openings open; its bounding footprint is 0.6184 by 0.521 with edge offsets left 0.0658, right 0.0658, front 0.0387, and back 0.1903, and its modeled length, width, and height are 0.618448, 0.521035, and 0.028125. The rib web spans from -0.0141 to 0.0141 from the same underside reference, so these vertical values are shared-reach tiers rather than stacked segment heights. Keep all circular profiles coaxial and concentric with the main annulus and central collar.",
+      "condition": "Build the main reference as a rectangular base with length 0.75, width 0.375, and height 0.0375, using a main extrusion depth of 0.0375. Add the raised rectangular upper material with outer footprint 0.75 by 0.375, flush to the left, right, front, and back edges of the base; it starts from the upper side of the base and reaches 0.1312 from the base datum, with extrusion depth 0.0937. Keep the visible channel interior open between the raised wall material rather than filling it with a separate rectangular pad above the base. Add one narrower rectangular solid at the left end with footprint 0.0319 by 0.3094, left edge offset 0, right edge offset 0.7181, front offset 0.0281, and back offset 0.0375; it starts on the upper side of the base at 0.0375 and reaches 0.0937 from the base datum, with height 0.05625 and extrusion depth 0.0562. Place four separate annular cylindrical posts on the upper face of the base, all centered across the width at front offset 0.1875, with axes at left offsets 0.15, 0.3, 0.45, and 0.6. The post outer radii are 0.0469, 0.0469, 0.0562, and 0.0562 respectively, and the matching through central opening radii are 0.0188, 0.0197, 0.0216, and 0.0234. Each annular post spans from 0.0375 to 0.1312 relative to the base reference plane, using extrusion depth 0.0937, and the posts remain separate cylinders with no rectangular filled plate connecting their footprint envelope.",
       "assets": {
-        "generated": "runs/text2cad_0013_00134405_parametric_openscad_kimi_k26-reason/generated.scad",
-        "generated_json": "runs/text2cad_0013_00134405_parametric_openscad_kimi_k26-reason/generated.json",
-        "mesh": "runs/text2cad_0013_00134405_parametric_openscad_kimi_k26-reason/model.stl",
-        "pred_render": "runs/text2cad_0013_00134405_parametric_openscad_kimi_k26-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0013_00134405.stl",
-        "gt_render": "gt_renders/text2cad_0013_00134405.png"
+        "generated": "runs/text2cad_0005_00051572_parametric_openscad_kimi_k26-reason/generated.scad",
+        "mesh": "runs/text2cad_0005_00051572_parametric_openscad_kimi_k26-reason/model.stl",
+        "pred_render": "runs/text2cad_0005_00051572_parametric_openscad_kimi_k26-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0005_00051572.stl",
+        "gt_render": "gt_renders/text2cad_0005_00051572.png"
       },
       "metrics": {
-        "chamfer_distance": 0.000635,
-        "hausdorff_distance": 0.088535,
-        "f_score_005": 0.8291,
-        "f_score_001": 0.2409,
-        "normal_consistency": 0.659,
-        "iou_csg": 0.2585,
-        "iou_voxel": 0.2425,
+        "chamfer_distance": 0.000046,
+        "hausdorff_distance": 0.02222,
+        "f_score_005": 1,
+        "f_score_001": 0.7096,
+        "normal_consistency": 0.925,
+        "iou_csg": 0.9929,
+        "iou_voxel": 0.9989,
         "pred_open_edge_ratio": 0,
         "qa_overall": 1,
         "qa_semantic": 1,
@@ -11342,157 +11296,152 @@
       }
     },
     {
-      "id": "text2cad_0013_00134405_parametric_openscad_deepseek_v4pro-reason",
+      "id": "text2cad_0005_00051572_parametric_openscad_glm-reason",
       "task": "text2cad",
-      "case_id": "0013/00134405",
-      "spec": "parametric",
-      "format": "openscad",
-      "model": "deepseek_v4pro-reason",
-      "valid": true,
-      "condition": "Use the main base declared size as the first reference: length 0.75, width 0.75, height 0.05625; main extrusion depth 0.0281. Build the main base as a concentric circular annulus, not as a rectangular plate: the outer circular profile has radius 0.375 and the inner circular opening has radius 0.3375, with the shared axis 0.375 from the left edge and 0.375 from the front edge; this base spans from -0.0281 to 0.0281 relative to the base underside reference. Add a centered solid annular collar within a 0.15 by 0.15 footprint, offset 0.3 from the left, right, front, and back edges, keeping its inner profile open as a real through void; this collar spans from -0.0234 to 0.0234 from the same underside reference. Add the rounded radial rib web as solid attached material inside the rim, using arc-based outlines and leaving the intervening elongated slot-like openings open; its bounding footprint is 0.6184 by 0.521 with edge offsets left 0.0658, right 0.0658, front 0.0387, and back 0.1903, and its modeled length, width, and height are 0.618448, 0.521035, and 0.028125. The rib web spans from -0.0141 to 0.0141 from the same underside reference, so these vertical values are shared-reach tiers rather than stacked segment heights. Keep all circular profiles coaxial and concentric with the main annulus and central collar.",
-      "assets": {
-        "generated": "runs/text2cad_0013_00134405_parametric_openscad_deepseek_v4pro-reason/generated.scad",
-        "generated_json": "runs/text2cad_0013_00134405_parametric_openscad_deepseek_v4pro-reason/generated.json",
-        "mesh": "runs/text2cad_0013_00134405_parametric_openscad_deepseek_v4pro-reason/model.stl",
-        "pred_render": "runs/text2cad_0013_00134405_parametric_openscad_deepseek_v4pro-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0013_00134405.stl",
-        "gt_render": "gt_renders/text2cad_0013_00134405.png"
-      },
-      "metrics": {
-        "chamfer_distance": 0.002375,
-        "hausdorff_distance": 0.13703,
-        "f_score_005": 0.6111,
-        "f_score_001": 0.1784,
-        "normal_consistency": 0.4716,
-        "iou_csg": 0.0877,
-        "iou_voxel": 0.1251,
-        "pred_open_edge_ratio": 0,
-        "qa_overall": 0.9167,
-        "qa_semantic": 0.75,
-        "qa_parametric": 1
-      }
-    },
-    {
-      "id": "text2cad_0013_00134405_parametric_openscad_qwen-reason",
-      "task": "text2cad",
-      "case_id": "0013/00134405",
-      "spec": "parametric",
-      "format": "openscad",
-      "model": "qwen-reason",
-      "valid": true,
-      "condition": "Use the main base declared size as the first reference: length 0.75, width 0.75, height 0.05625; main extrusion depth 0.0281. Build the main base as a concentric circular annulus, not as a rectangular plate: the outer circular profile has radius 0.375 and the inner circular opening has radius 0.3375, with the shared axis 0.375 from the left edge and 0.375 from the front edge; this base spans from -0.0281 to 0.0281 relative to the base underside reference. Add a centered solid annular collar within a 0.15 by 0.15 footprint, offset 0.3 from the left, right, front, and back edges, keeping its inner profile open as a real through void; this collar spans from -0.0234 to 0.0234 from the same underside reference. Add the rounded radial rib web as solid attached material inside the rim, using arc-based outlines and leaving the intervening elongated slot-like openings open; its bounding footprint is 0.6184 by 0.521 with edge offsets left 0.0658, right 0.0658, front 0.0387, and back 0.1903, and its modeled length, width, and height are 0.618448, 0.521035, and 0.028125. The rib web spans from -0.0141 to 0.0141 from the same underside reference, so these vertical values are shared-reach tiers rather than stacked segment heights. Keep all circular profiles coaxial and concentric with the main annulus and central collar.",
-      "assets": {
-        "generated": "runs/text2cad_0013_00134405_parametric_openscad_qwen-reason/generated.scad",
-        "generated_json": "runs/text2cad_0013_00134405_parametric_openscad_qwen-reason/generated.json",
-        "mesh": "runs/text2cad_0013_00134405_parametric_openscad_qwen-reason/model.stl",
-        "pred_render": "runs/text2cad_0013_00134405_parametric_openscad_qwen-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0013_00134405.stl",
-        "gt_render": "gt_renders/text2cad_0013_00134405.png"
-      },
-      "metrics": {
-        "chamfer_distance": 0.00061,
-        "hausdorff_distance": 0.089039,
-        "f_score_005": 0.8398,
-        "f_score_001": 0.2529,
-        "normal_consistency": 0.7072,
-        "iou_csg": 0.2959,
-        "iou_voxel": 0.2604,
-        "pred_open_edge_ratio": 0,
-        "qa_overall": 0.9167,
-        "qa_semantic": 0.75,
-        "qa_parametric": 1
-      }
-    },
-    {
-      "id": "text2cad_0013_00134405_parametric_openscad_mimo_v25-reason",
-      "task": "text2cad",
-      "case_id": "0013/00134405",
-      "spec": "parametric",
-      "format": "openscad",
-      "model": "mimo_v25-reason",
-      "valid": true,
-      "condition": "Use the main base declared size as the first reference: length 0.75, width 0.75, height 0.05625; main extrusion depth 0.0281. Build the main base as a concentric circular annulus, not as a rectangular plate: the outer circular profile has radius 0.375 and the inner circular opening has radius 0.3375, with the shared axis 0.375 from the left edge and 0.375 from the front edge; this base spans from -0.0281 to 0.0281 relative to the base underside reference. Add a centered solid annular collar within a 0.15 by 0.15 footprint, offset 0.3 from the left, right, front, and back edges, keeping its inner profile open as a real through void; this collar spans from -0.0234 to 0.0234 from the same underside reference. Add the rounded radial rib web as solid attached material inside the rim, using arc-based outlines and leaving the intervening elongated slot-like openings open; its bounding footprint is 0.6184 by 0.521 with edge offsets left 0.0658, right 0.0658, front 0.0387, and back 0.1903, and its modeled length, width, and height are 0.618448, 0.521035, and 0.028125. The rib web spans from -0.0141 to 0.0141 from the same underside reference, so these vertical values are shared-reach tiers rather than stacked segment heights. Keep all circular profiles coaxial and concentric with the main annulus and central collar.",
-      "assets": {
-        "generated": "runs/text2cad_0013_00134405_parametric_openscad_mimo_v25-reason/generated.scad",
-        "generated_json": "runs/text2cad_0013_00134405_parametric_openscad_mimo_v25-reason/generated.json",
-        "mesh": "runs/text2cad_0013_00134405_parametric_openscad_mimo_v25-reason/model.stl",
-        "pred_render": "runs/text2cad_0013_00134405_parametric_openscad_mimo_v25-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0013_00134405.stl",
-        "gt_render": "gt_renders/text2cad_0013_00134405.png"
-      },
-      "metrics": {
-        "chamfer_distance": 0.000599,
-        "hausdorff_distance": 0.088405,
-        "f_score_005": 0.8407,
-        "f_score_001": 0.2425,
-        "normal_consistency": 0.6814,
-        "iou_csg": 0.3052,
-        "iou_voxel": 0.2655,
-        "pred_open_edge_ratio": 0,
-        "qa_overall": 0.9167,
-        "qa_semantic": 0.75,
-        "qa_parametric": 1
-      }
-    },
-    {
-      "id": "text2cad_0013_00134405_parametric_openscad_doubao-reason",
-      "task": "text2cad",
-      "case_id": "0013/00134405",
-      "spec": "parametric",
-      "format": "openscad",
-      "model": "doubao-reason",
-      "valid": true,
-      "condition": "Use the main base declared size as the first reference: length 0.75, width 0.75, height 0.05625; main extrusion depth 0.0281. Build the main base as a concentric circular annulus, not as a rectangular plate: the outer circular profile has radius 0.375 and the inner circular opening has radius 0.3375, with the shared axis 0.375 from the left edge and 0.375 from the front edge; this base spans from -0.0281 to 0.0281 relative to the base underside reference. Add a centered solid annular collar within a 0.15 by 0.15 footprint, offset 0.3 from the left, right, front, and back edges, keeping its inner profile open as a real through void; this collar spans from -0.0234 to 0.0234 from the same underside reference. Add the rounded radial rib web as solid attached material inside the rim, using arc-based outlines and leaving the intervening elongated slot-like openings open; its bounding footprint is 0.6184 by 0.521 with edge offsets left 0.0658, right 0.0658, front 0.0387, and back 0.1903, and its modeled length, width, and height are 0.618448, 0.521035, and 0.028125. The rib web spans from -0.0141 to 0.0141 from the same underside reference, so these vertical values are shared-reach tiers rather than stacked segment heights. Keep all circular profiles coaxial and concentric with the main annulus and central collar.",
-      "assets": {
-        "generated": "runs/text2cad_0013_00134405_parametric_openscad_doubao-reason/generated.scad",
-        "generated_json": "runs/text2cad_0013_00134405_parametric_openscad_doubao-reason/generated.json",
-        "mesh": "runs/text2cad_0013_00134405_parametric_openscad_doubao-reason/model.stl",
-        "pred_render": "runs/text2cad_0013_00134405_parametric_openscad_doubao-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0013_00134405.stl",
-        "gt_render": "gt_renders/text2cad_0013_00134405.png"
-      },
-      "metrics": {
-        "chamfer_distance": 0.002376,
-        "hausdorff_distance": 0.136854,
-        "f_score_005": 0.6115,
-        "f_score_001": 0.1814,
-        "normal_consistency": 0.459,
-        "iou_csg": 0.0907,
-        "iou_voxel": 0.1271,
-        "pred_open_edge_ratio": 0,
-        "qa_overall": 0.5833,
-        "qa_semantic": 0.25,
-        "qa_parametric": 0.75
-      }
-    },
-    {
-      "id": "text2cad_0013_00134405_parametric_openscad_glm-reason",
-      "task": "text2cad",
-      "case_id": "0013/00134405",
+      "case_id": "0005/00051572",
       "spec": "parametric",
       "format": "openscad",
       "model": "glm-reason",
       "valid": true,
-      "condition": "Use the main base declared size as the first reference: length 0.75, width 0.75, height 0.05625; main extrusion depth 0.0281. Build the main base as a concentric circular annulus, not as a rectangular plate: the outer circular profile has radius 0.375 and the inner circular opening has radius 0.3375, with the shared axis 0.375 from the left edge and 0.375 from the front edge; this base spans from -0.0281 to 0.0281 relative to the base underside reference. Add a centered solid annular collar within a 0.15 by 0.15 footprint, offset 0.3 from the left, right, front, and back edges, keeping its inner profile open as a real through void; this collar spans from -0.0234 to 0.0234 from the same underside reference. Add the rounded radial rib web as solid attached material inside the rim, using arc-based outlines and leaving the intervening elongated slot-like openings open; its bounding footprint is 0.6184 by 0.521 with edge offsets left 0.0658, right 0.0658, front 0.0387, and back 0.1903, and its modeled length, width, and height are 0.618448, 0.521035, and 0.028125. The rib web spans from -0.0141 to 0.0141 from the same underside reference, so these vertical values are shared-reach tiers rather than stacked segment heights. Keep all circular profiles coaxial and concentric with the main annulus and central collar.",
+      "condition": "Build the main reference as a rectangular base with length 0.75, width 0.375, and height 0.0375, using a main extrusion depth of 0.0375. Add the raised rectangular upper material with outer footprint 0.75 by 0.375, flush to the left, right, front, and back edges of the base; it starts from the upper side of the base and reaches 0.1312 from the base datum, with extrusion depth 0.0937. Keep the visible channel interior open between the raised wall material rather than filling it with a separate rectangular pad above the base. Add one narrower rectangular solid at the left end with footprint 0.0319 by 0.3094, left edge offset 0, right edge offset 0.7181, front offset 0.0281, and back offset 0.0375; it starts on the upper side of the base at 0.0375 and reaches 0.0937 from the base datum, with height 0.05625 and extrusion depth 0.0562. Place four separate annular cylindrical posts on the upper face of the base, all centered across the width at front offset 0.1875, with axes at left offsets 0.15, 0.3, 0.45, and 0.6. The post outer radii are 0.0469, 0.0469, 0.0562, and 0.0562 respectively, and the matching through central opening radii are 0.0188, 0.0197, 0.0216, and 0.0234. Each annular post spans from 0.0375 to 0.1312 relative to the base reference plane, using extrusion depth 0.0937, and the posts remain separate cylinders with no rectangular filled plate connecting their footprint envelope.",
       "assets": {
-        "generated": "runs/text2cad_0013_00134405_parametric_openscad_glm-reason/generated.scad",
-        "generated_json": "runs/text2cad_0013_00134405_parametric_openscad_glm-reason/generated.json",
-        "mesh": "runs/text2cad_0013_00134405_parametric_openscad_glm-reason/model.stl",
-        "pred_render": "runs/text2cad_0013_00134405_parametric_openscad_glm-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0013_00134405.stl",
-        "gt_render": "gt_renders/text2cad_0013_00134405.png"
+        "generated": "runs/text2cad_0005_00051572_parametric_openscad_glm-reason/generated.scad",
+        "mesh": "runs/text2cad_0005_00051572_parametric_openscad_glm-reason/model.stl",
+        "pred_render": "runs/text2cad_0005_00051572_parametric_openscad_glm-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0005_00051572.stl",
+        "gt_render": "gt_renders/text2cad_0005_00051572.png"
       },
       "metrics": {
-        "chamfer_distance": 0.000572,
-        "hausdorff_distance": 0.088023,
-        "f_score_005": 0.8516,
-        "f_score_001": 0.2489,
-        "normal_consistency": 0.6844,
-        "iou_csg": 0.2957,
-        "iou_voxel": 0.2668,
+        "chamfer_distance": 0.000087,
+        "hausdorff_distance": 0.056672,
+        "f_score_005": 0.9928,
+        "f_score_001": 0.6012,
+        "normal_consistency": 0.8937,
+        "iou_csg": 0.8372,
+        "iou_voxel": 0.8896,
+        "pred_open_edge_ratio": 0,
+        "qa_overall": 0.916667,
+        "qa_semantic": 1,
+        "qa_parametric": 0.875
+      }
+    },
+    {
+      "id": "text2cad_0005_00051572_parametric_openscad_doubao-reason",
+      "task": "text2cad",
+      "case_id": "0005/00051572",
+      "spec": "parametric",
+      "format": "openscad",
+      "model": "doubao-reason",
+      "valid": true,
+      "condition": "Build the main reference as a rectangular base with length 0.75, width 0.375, and height 0.0375, using a main extrusion depth of 0.0375. Add the raised rectangular upper material with outer footprint 0.75 by 0.375, flush to the left, right, front, and back edges of the base; it starts from the upper side of the base and reaches 0.1312 from the base datum, with extrusion depth 0.0937. Keep the visible channel interior open between the raised wall material rather than filling it with a separate rectangular pad above the base. Add one narrower rectangular solid at the left end with footprint 0.0319 by 0.3094, left edge offset 0, right edge offset 0.7181, front offset 0.0281, and back offset 0.0375; it starts on the upper side of the base at 0.0375 and reaches 0.0937 from the base datum, with height 0.05625 and extrusion depth 0.0562. Place four separate annular cylindrical posts on the upper face of the base, all centered across the width at front offset 0.1875, with axes at left offsets 0.15, 0.3, 0.45, and 0.6. The post outer radii are 0.0469, 0.0469, 0.0562, and 0.0562 respectively, and the matching through central opening radii are 0.0188, 0.0197, 0.0216, and 0.0234. Each annular post spans from 0.0375 to 0.1312 relative to the base reference plane, using extrusion depth 0.0937, and the posts remain separate cylinders with no rectangular filled plate connecting their footprint envelope.",
+      "assets": {
+        "generated": "runs/text2cad_0005_00051572_parametric_openscad_doubao-reason/generated.scad",
+        "mesh": "runs/text2cad_0005_00051572_parametric_openscad_doubao-reason/model.stl",
+        "pred_render": "runs/text2cad_0005_00051572_parametric_openscad_doubao-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0005_00051572.stl",
+        "gt_render": "gt_renders/text2cad_0005_00051572.png"
+      },
+      "metrics": {
+        "chamfer_distance": 0.000085,
+        "hausdorff_distance": 0.055854,
+        "f_score_005": 0.9938,
+        "f_score_001": 0.6107,
+        "normal_consistency": 0.9023,
+        "iou_csg": 0.8466,
+        "iou_voxel": 0.8963,
         "pred_open_edge_ratio": 0,
         "qa_overall": 1,
         "qa_semantic": 1,
+        "qa_parametric": 1
+      }
+    },
+    {
+      "id": "text2cad_0005_00051572_parametric_openscad_deepseek_v4pro-reason",
+      "task": "text2cad",
+      "case_id": "0005/00051572",
+      "spec": "parametric",
+      "format": "openscad",
+      "model": "deepseek_v4pro-reason",
+      "valid": true,
+      "condition": "Build the main reference as a rectangular base with length 0.75, width 0.375, and height 0.0375, using a main extrusion depth of 0.0375. Add the raised rectangular upper material with outer footprint 0.75 by 0.375, flush to the left, right, front, and back edges of the base; it starts from the upper side of the base and reaches 0.1312 from the base datum, with extrusion depth 0.0937. Keep the visible channel interior open between the raised wall material rather than filling it with a separate rectangular pad above the base. Add one narrower rectangular solid at the left end with footprint 0.0319 by 0.3094, left edge offset 0, right edge offset 0.7181, front offset 0.0281, and back offset 0.0375; it starts on the upper side of the base at 0.0375 and reaches 0.0937 from the base datum, with height 0.05625 and extrusion depth 0.0562. Place four separate annular cylindrical posts on the upper face of the base, all centered across the width at front offset 0.1875, with axes at left offsets 0.15, 0.3, 0.45, and 0.6. The post outer radii are 0.0469, 0.0469, 0.0562, and 0.0562 respectively, and the matching through central opening radii are 0.0188, 0.0197, 0.0216, and 0.0234. Each annular post spans from 0.0375 to 0.1312 relative to the base reference plane, using extrusion depth 0.0937, and the posts remain separate cylinders with no rectangular filled plate connecting their footprint envelope.",
+      "assets": {
+        "generated": "runs/text2cad_0005_00051572_parametric_openscad_deepseek_v4pro-reason/generated.scad",
+        "mesh": "runs/text2cad_0005_00051572_parametric_openscad_deepseek_v4pro-reason/model.stl",
+        "pred_render": "runs/text2cad_0005_00051572_parametric_openscad_deepseek_v4pro-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0005_00051572.stl",
+        "gt_render": "gt_renders/text2cad_0005_00051572.png"
+      },
+      "metrics": {
+        "chamfer_distance": 0.00012,
+        "hausdorff_distance": 0.093125,
+        "f_score_005": 0.9861,
+        "f_score_001": 0.6491,
+        "normal_consistency": 0.8878,
+        "iou_csg": 0.8764,
+        "iou_voxel": 0.928,
+        "pred_open_edge_ratio": 0,
+        "qa_overall": 0.833333,
+        "qa_semantic": 0.5,
+        "qa_parametric": 1
+      }
+    },
+    {
+      "id": "text2cad_0005_00051572_parametric_openscad_qwen-reason",
+      "task": "text2cad",
+      "case_id": "0005/00051572",
+      "spec": "parametric",
+      "format": "openscad",
+      "model": "qwen-reason",
+      "valid": true,
+      "condition": "Build the main reference as a rectangular base with length 0.75, width 0.375, and height 0.0375, using a main extrusion depth of 0.0375. Add the raised rectangular upper material with outer footprint 0.75 by 0.375, flush to the left, right, front, and back edges of the base; it starts from the upper side of the base and reaches 0.1312 from the base datum, with extrusion depth 0.0937. Keep the visible channel interior open between the raised wall material rather than filling it with a separate rectangular pad above the base. Add one narrower rectangular solid at the left end with footprint 0.0319 by 0.3094, left edge offset 0, right edge offset 0.7181, front offset 0.0281, and back offset 0.0375; it starts on the upper side of the base at 0.0375 and reaches 0.0937 from the base datum, with height 0.05625 and extrusion depth 0.0562. Place four separate annular cylindrical posts on the upper face of the base, all centered across the width at front offset 0.1875, with axes at left offsets 0.15, 0.3, 0.45, and 0.6. The post outer radii are 0.0469, 0.0469, 0.0562, and 0.0562 respectively, and the matching through central opening radii are 0.0188, 0.0197, 0.0216, and 0.0234. Each annular post spans from 0.0375 to 0.1312 relative to the base reference plane, using extrusion depth 0.0937, and the posts remain separate cylinders with no rectangular filled plate connecting their footprint envelope.",
+      "assets": {
+        "generated": "runs/text2cad_0005_00051572_parametric_openscad_qwen-reason/generated.scad",
+        "mesh": "runs/text2cad_0005_00051572_parametric_openscad_qwen-reason/model.stl",
+        "pred_render": "runs/text2cad_0005_00051572_parametric_openscad_qwen-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0005_00051572.stl",
+        "gt_render": "gt_renders/text2cad_0005_00051572.png"
+      },
+      "metrics": {
+        "chamfer_distance": 0.000535,
+        "hausdorff_distance": 0.095029,
+        "f_score_005": 0.808,
+        "f_score_001": 0.5243,
+        "normal_consistency": 0.7654,
+        "iou_csg": 0.493,
+        "iou_voxel": 0.5452,
+        "pred_open_edge_ratio": 0,
+        "qa_overall": 0.583333,
+        "qa_semantic": 0,
+        "qa_parametric": 0.875
+      }
+    },
+    {
+      "id": "text2cad_0005_00051572_parametric_openscad_mimo_v25-reason",
+      "task": "text2cad",
+      "case_id": "0005/00051572",
+      "spec": "parametric",
+      "format": "openscad",
+      "model": "mimo_v25-reason",
+      "valid": true,
+      "condition": "Build the main reference as a rectangular base with length 0.75, width 0.375, and height 0.0375, using a main extrusion depth of 0.0375. Add the raised rectangular upper material with outer footprint 0.75 by 0.375, flush to the left, right, front, and back edges of the base; it starts from the upper side of the base and reaches 0.1312 from the base datum, with extrusion depth 0.0937. Keep the visible channel interior open between the raised wall material rather than filling it with a separate rectangular pad above the base. Add one narrower rectangular solid at the left end with footprint 0.0319 by 0.3094, left edge offset 0, right edge offset 0.7181, front offset 0.0281, and back offset 0.0375; it starts on the upper side of the base at 0.0375 and reaches 0.0937 from the base datum, with height 0.05625 and extrusion depth 0.0562. Place four separate annular cylindrical posts on the upper face of the base, all centered across the width at front offset 0.1875, with axes at left offsets 0.15, 0.3, 0.45, and 0.6. The post outer radii are 0.0469, 0.0469, 0.0562, and 0.0562 respectively, and the matching through central opening radii are 0.0188, 0.0197, 0.0216, and 0.0234. Each annular post spans from 0.0375 to 0.1312 relative to the base reference plane, using extrusion depth 0.0937, and the posts remain separate cylinders with no rectangular filled plate connecting their footprint envelope.",
+      "assets": {
+        "generated": "runs/text2cad_0005_00051572_parametric_openscad_mimo_v25-reason/generated.scad",
+        "mesh": "runs/text2cad_0005_00051572_parametric_openscad_mimo_v25-reason/model.stl",
+        "pred_render": "runs/text2cad_0005_00051572_parametric_openscad_mimo_v25-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0005_00051572.stl",
+        "gt_render": "gt_renders/text2cad_0005_00051572.png"
+      },
+      "metrics": {
+        "chamfer_distance": 0.000113,
+        "hausdorff_distance": 0.092932,
+        "f_score_005": 0.9873,
+        "f_score_001": 0.6352,
+        "normal_consistency": 0.8596,
+        "iou_csg": 0.8925,
+        "iou_voxel": 0.9413,
+        "pred_open_edge_ratio": 0,
+        "qa_overall": 0.916667,
+        "qa_semantic": 0.75,
         "qa_parametric": 1
       }
     }

@@ -1,0 +1,370 @@
+{
+  "parts": {
+    "part_1": {
+      "coordinate_system": {
+        "Euler Angles": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Translation Vector": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "sketch": {
+        "face_1": {
+          "loop_1": {
+            "line_1": {
+              "Start Point": [
+                0.0,
+                0.0
+              ],
+              "End Point": [
+                0.75,
+                0.0
+              ]
+            },
+            "line_2": {
+              "Start Point": [
+                0.75,
+                0.0
+              ],
+              "End Point": [
+                0.75,
+                0.375
+              ]
+            },
+            "line_3": {
+              "Start Point": [
+                0.75,
+                0.375
+              ],
+              "End Point": [
+                0.0,
+                0.375
+              ]
+            },
+            "line_4": {
+              "Start Point": [
+                0.0,
+                0.375
+              ],
+              "End Point": [
+                0.0,
+                0.0
+              ]
+            }
+          }
+        }
+      },
+      "extrusion": {
+        "extrude_depth_towards_normal": 0.0375,
+        "extrude_depth_opposite_normal": 0.0,
+        "sketch_scale": 1.0,
+        "operation": "NewBodyFeatureOperation"
+      }
+    },
+    "part_2": {
+      "coordinate_system": {
+        "Euler Angles": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Translation Vector": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "sketch": {
+        "face_1": {
+          "loop_1": {
+            "line_1": {
+              "Start Point": [
+                0.0,
+                0.0
+              ],
+              "End Point": [
+                0.75,
+                0.0
+              ]
+            },
+            "line_2": {
+              "Start Point": [
+                0.75,
+                0.0
+              ],
+              "End Point": [
+                0.75,
+                0.375
+              ]
+            },
+            "line_3": {
+              "Start Point": [
+                0.75,
+                0.375
+              ],
+              "End Point": [
+                0.0,
+                0.375
+              ]
+            },
+            "line_4": {
+              "Start Point": [
+                0.0,
+                0.375
+              ],
+              "End Point": [
+                0.0,
+                0.0
+              ]
+            }
+          }
+        }
+      },
+      "extrusion": {
+        "extrude_depth_towards_normal": 0.0937,
+        "extrude_depth_opposite_normal": 0.0,
+        "sketch_scale": 1.0,
+        "operation": "JoinFeatureOperation"
+      }
+    },
+    "part_3": {
+      "coordinate_system": {
+        "Euler Angles": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Translation Vector": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "sketch": {
+        "face_1": {
+          "loop_1": {
+            "line_1": {
+              "Start Point": [
+                0.0,
+                0.0281
+              ],
+              "End Point": [
+                0.0319,
+                0.0281
+              ]
+            },
+            "line_2": {
+              "Start Point": [
+                0.0319,
+                0.0281
+              ],
+              "End Point": [
+                0.0319,
+                0.3375
+              ]
+            },
+            "line_3": {
+              "Start Point": [
+                0.0319,
+                0.3375
+              ],
+              "End Point": [
+                0.0,
+                0.3375
+              ]
+            },
+            "line_4": {
+              "Start Point": [
+                0.0,
+                0.3375
+              ],
+              "End Point": [
+                0.0,
+                0.0281
+              ]
+            }
+          }
+        }
+      },
+      "extrusion": {
+        "extrude_depth_towards_normal": 0.0562,
+        "extrude_depth_opposite_normal": 0.0,
+        "sketch_scale": 1.0,
+        "operation": "JoinFeatureOperation"
+      }
+    },
+    "part_4": {
+      "coordinate_system": {
+        "Euler Angles": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Translation Vector": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "sketch": {
+        "face_1": {
+          "loop_1": {
+            "circle_1": {
+              "Center": [
+                0.15,
+                0.1875
+              ],
+              "Radius": 0.0469
+            }
+          },
+          "loop_2": {
+            "circle_2": {
+              "Center": [
+                0.15,
+                0.1875
+              ],
+              "Radius": 0.0188
+            }
+          }
+        }
+      },
+      "extrusion": {
+        "extrude_depth_towards_normal": 0.0937,
+        "extrude_depth_opposite_normal": 0.0,
+        "sketch_scale": 1.0,
+        "operation": "JoinFeatureOperation"
+      }
+    },
+    "part_5": {
+      "coordinate_system": {
+        "Euler Angles": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Translation Vector": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "sketch": {
+        "face_1": {
+          "loop_1": {
+            "circle_1": {
+              "Center": [
+                0.3,
+                0.1875
+              ],
+              "Radius": 0.0469
+            }
+          },
+          "loop_2": {
+            "circle_2": {
+              "Center": [
+                0.3,
+                0.1875
+              ],
+              "Radius": 0.0197
+            }
+          }
+        }
+      },
+      "extrusion": {
+        "extrude_depth_towards_normal": 0.0937,
+        "extrude_depth_opposite_normal": 0.0,
+        "sketch_scale": 1.0,
+        "operation": "JoinFeatureOperation"
+      }
+    },
+    "part_6": {
+      "coordinate_system": {
+        "Euler Angles": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Translation Vector": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "sketch": {
+        "face_1": {
+          "loop_1": {
+            "circle_1": {
+              "Center": [
+                0.45,
+                0.1875
+              ],
+              "Radius": 0.0562
+            }
+          },
+          "loop_2": {
+            "circle_2": {
+              "Center": [
+                0.45,
+                0.1875
+              ],
+              "Radius": 0.0216
+            }
+          }
+        }
+      },
+      "extrusion": {
+        "extrude_depth_towards_normal": 0.0937,
+        "extrude_depth_opposite_normal": 0.0,
+        "sketch_scale": 1.0,
+        "operation": "JoinFeatureOperation"
+      }
+    },
+    "part_7": {
+      "coordinate_system": {
+        "Euler Angles": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Translation Vector": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "sketch": {
+        "face_1": {
+          "loop_1": {
+            "circle_1": {
+              "Center": [
+                0.6,
+                0.1875
+              ],
+              "Radius": 0.0562
+            }
+          },
+          "loop_2": {
+            "circle_2": {
+              "Center": [
+                0.6,
+                0.1875
+              ],
+              "Radius": 0.0234
+            }
+          }
+        }
+      },
+      "extrusion": {
+        "extrude_depth_towards_normal": 0.0937,
+        "extrude_depth_opposite_normal": 0.0,
+        "sketch_scale": 1.0,
+        "operation": "JoinFeatureOperation"
+      }
+    }
+  }
+}
