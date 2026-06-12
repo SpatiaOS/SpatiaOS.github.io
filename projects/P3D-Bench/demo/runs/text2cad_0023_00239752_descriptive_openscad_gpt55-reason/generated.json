@@ -1,0 +1,21 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0023/00239752",
+  "model": "gpt55-reason",
+  "input_spec": "descriptive",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "The part is a thin rectangular base with a pair of solid raised ribs running lengthwise along the top face. The ribs are added material, while the round features are removed cuts rather than bosses or pads. Three separate circular openings are laid out near the ends of the plate, with shallow upper recesses and deeper aligned openings below them. The lower portions of the circular cuts continue farther than the shallow top recesses, giving the holes a stepped-depth relationship through the base.",
+  "metrics": {
+    "qa_overall": 1.0,
+    "qa_semantic": 1.0,
+    "qa_parametric": 0.0,
+    "judge_semantic": 10
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// Parameters\n$fn = 96;\neps = 0.02;\n\n// Base plate\nplate_length = 100;\nplate_width = 42;\nplate_thickness = 4;\n\n// Raised lengthwise ribs\nrib_length = 84;\nrib_width = 4;\nrib_height = 3;\nrib_center_spacing = 27;\n\n// Stepped circular cuts\nhole_through_diameter = 5;\nhole_recess_diameter = 10;\nhole_recess_depth = 1.6;\nhole_end_offset = 14;\nhole_pair_spacing = 12;\n\n// Hole layout: two near one end, one near the other\nhole_x = plate_length / 2 - hole_end_offset;\nhole_centers = [\n    [-hole_x, -hole_pair_spacing / 2],\n    [-hole_x,  hole_pair_spacing / 2],\n    [ hole_x,  0]\n];\n\n// Base plate solid\nmodule base_plate() {\n    translate([0, 0, plate_thickness / 2])\n        cube([plate_length, plate_width, plate_thickness], center=true);\n}\n\n// One raised rib on the top face\nmodule raised_rib(y_pos) {\n    translate([0, y_pos, plate_thickness + rib_height / 2])\n        cube([rib_length, rib_width, rib_height], center=true);\n}\n\n// Pair of raised lengthwise ribs\nmodule raised_ribs() {\n    for (y_pos = [-rib_center_spacing / 2, rib_center_spacing / 2])\n        raised_rib(y_pos);\n}\n\n// Stepped circular opening: shallow top recess plus deeper through cut\nmodule stepped_hole(x_pos, y_pos) {\n    translate([x_pos, y_pos, plate_thickness / 2])\n        cylinder(h=plate_thickness + 2 * eps, d=hole_through_diameter, center=true);\n\n    translate([x_pos, y_pos, plate_thickness - hole_recess_depth / 2 + eps / 2])\n        cylinder(h=hole_recess_depth + eps, d=hole_recess_diameter, center=true);\n}\n\n// All circular cuts\nmodule all_stepped_holes() {\n    for (p = hole_centers)\n        stepped_hole(p[0], p[1]);\n}\n\n// Main model\ndifference() {\n    union() {\n        base_plate();\n        raised_ribs();\n    }\n\n    all_stepped_holes();\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

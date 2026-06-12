@@ -1,0 +1,21 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0009/00099014",
+  "model": "claude-reason",
+  "input_spec": "descriptive",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "The model is a rectangular slab with only added rectangular solids attached to its underside. Four shallow underside pads sit near the perimeter, and each pad carries a narrower, deeper rectangular continuation below it, producing a two-tier underside protrusion pattern. The deeper continuation in each pair is contained within the shallow pad footprint and shares either the left or right vertical edge along with the front and back edges. Treat all of these underside features as solid added material; there are no holes, cut-throughs, recesses, or engraved top-face details.",
+  "metrics": {
+    "qa_overall": 1.0,
+    "qa_semantic": 1.0,
+    "qa_parametric": 0.0,
+    "judge_semantic": 10
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// === Parameters ===\n\n// Main slab dimensions\nslab_width  = 120;   // X dimension of slab\nslab_depth  = 80;    // Y dimension of slab\nslab_height = 6;     // Z thickness of slab\n\n// Shallow underside pad dimensions\npad_width   = 24;    // X dimension of each pad\npad_depth   = 16;    // Y dimension of each pad\npad_height  = 3;     // Z depth (shallow tier)\n\n// Deep continuation dimensions (narrower, taller)\ncont_width  = 14;    // X dimension (must be <= pad_width)\ncont_height = 8;     // Z depth below the pad (deep tier)\n\n// Pad inset from slab perimeter edges\ninset_x = 8;         // distance from slab left/right edges to pad\ninset_y = 8;         // distance from slab front/back edges to pad\n\n// Resolution\n$fn = 32;\n\n// === Derived positions ===\n// Stack order (bottom to top): deep cont -> shallow pad -> slab\n// Z origins for each layer\nz_cont = 0;\nz_pad  = cont_height;\nz_slab = cont_height + pad_height;\n\n// Pad X positions (left pair and right pair)\npad_x_left  = inset_x;\npad_x_right = slab_width - inset_x - pad_width;\n\n// Pad Y positions (front pair and back pair)\npad_y_front = inset_y;\npad_y_back  = slab_depth - inset_y - pad_depth;\n\n// === Modules ===\n\n// Two-tier underside protrusion\n// align_right: if true, deep part shares right edge with pad;\n//              if false, deep part shares left edge with pad.\nmodule underside_protrusion(align_right = false) {\n    // Shallow pad (upper tier, directly under slab)\n    translate([0, 0, z_pad])\n        cube([pad_width, pad_depth, pad_height]);\n\n    // Deep continuation (lower tier)\n    // Shares front & back edges (same Y, same pad_depth)\n    // Shares left or right X edge depending on align_right\n    cont_x_offset = align_right ? (pad_width - cont_width) : 0;\n    translate([cont_x_offset, 0, z_cont])\n        cube([cont_width, pad_depth, cont_height]);\n}\n\n// === Main Assembly ===\nunion() {\n    // Main rectangular slab (top layer)\n    translate([0, 0, z_slab])\n        cube([slab_width, slab_depth, slab_height]);\n\n    // Front-left pad: deep part aligned to LEFT (outward edge)\n    translate([pad_x_left, pad_y_front, 0])\n        underside_protrusion(align_right = false);\n\n    // Front-right pad: deep part aligned to RIGHT (outward edge)\n    translate([pad_x_right, pad_y_front, 0])\n        underside_protrusion(align_right = true);\n\n    // Back-left pad: deep part aligned to LEFT (outward edge)\n    translate([pad_x_left, pad_y_back, 0])\n        underside_protrusion(align_right = false);\n\n    // Back-right pad: deep part aligned to RIGHT (outward edge)\n    translate([pad_x_right, pad_y_back, 0])\n        underside_protrusion(align_right = true);\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

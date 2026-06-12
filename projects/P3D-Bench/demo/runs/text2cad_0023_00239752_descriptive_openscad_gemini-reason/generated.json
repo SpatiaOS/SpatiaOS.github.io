@@ -1,0 +1,21 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0023/00239752",
+  "model": "gemini-reason",
+  "input_spec": "descriptive",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "The part is a thin rectangular base with a pair of solid raised ribs running lengthwise along the top face. The ribs are added material, while the round features are removed cuts rather than bosses or pads. Three separate circular openings are laid out near the ends of the plate, with shallow upper recesses and deeper aligned openings below them. The lower portions of the circular cuts continue farther than the shallow top recesses, giving the holes a stepped-depth relationship through the base.",
+  "metrics": {
+    "qa_overall": 1.0,
+    "qa_semantic": 1.0,
+    "qa_parametric": 0.0,
+    "judge_semantic": 10
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// Parameters\nbase_length = 120;\nbase_width = 50;\nbase_thickness = 5;\n\nrib_width = 4;\nrib_height = 4;\nrib_spacing = 26;\n\ncbore_diameter = 12;\ncbore_depth = 2.5;\nthrough_diameter = 6;\n\nhole_inset = 15;\nhole_spread = 12;\n\n$fn = 100;\n\n// Main Model\ndifference() {\n    // Additive features: Base plate and raised ribs\n    union() {\n        // Main rectangular base plate\n        translate([0, 0, base_thickness / 2])\n            cube([base_length, base_width, base_thickness], center=true);\n        \n        // Front lengthwise rib\n        translate([0, rib_spacing / 2, base_thickness + (rib_height / 2)])\n            cube([base_length, rib_width, rib_height], center=true);\n            \n        // Back lengthwise rib\n        translate([0, -rib_spacing / 2, base_thickness + (rib_height / 2)])\n            cube([base_length, rib_width, rib_height], center=true);\n    }\n    \n    // Subtractive features: Three stepped circular openings near the ends\n    // Hole 1: Single hole centered at the left end\n    stepped_hole(-(base_length / 2) + hole_inset, 0);\n    \n    // Hole 2: Offset hole at the right end (front)\n    stepped_hole((base_length / 2) - hole_inset, hole_spread);\n    \n    // Hole 3: Offset hole at the right end (back)\n    stepped_hole((base_length / 2) - hole_inset, -hole_spread);\n}\n\n// Helper module for a stepped circular cut (counterbored hole)\nmodule stepped_hole(x, y) {\n    translate([x, y, 0]) {\n        // Shallow upper recess (cuts through top face and any intersecting ribs)\n        translate([0, 0, base_thickness - cbore_depth])\n            cylinder(h=cbore_depth + rib_height + 1, d=cbore_diameter, center=false);\n            \n        // Deeper aligned opening (cuts entirely through the lower base)\n        translate([0, 0, -1])\n            cylinder(h=base_thickness + 2, d=through_diameter, center=false);\n    }\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

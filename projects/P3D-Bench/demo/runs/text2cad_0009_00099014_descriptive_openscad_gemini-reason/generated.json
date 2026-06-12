@@ -1,0 +1,21 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0009/00099014",
+  "model": "gemini-reason",
+  "input_spec": "descriptive",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "The model is a rectangular slab with only added rectangular solids attached to its underside. Four shallow underside pads sit near the perimeter, and each pad carries a narrower, deeper rectangular continuation below it, producing a two-tier underside protrusion pattern. The deeper continuation in each pair is contained within the shallow pad footprint and shares either the left or right vertical edge along with the front and back edges. Treat all of these underside features as solid added material; there are no holes, cut-throughs, recesses, or engraved top-face details.",
+  "metrics": {
+    "qa_overall": 1.0,
+    "qa_semantic": 1.0,
+    "qa_parametric": 0.0,
+    "judge_semantic": 10
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// Parameters\nslab_width = 120;       // Overall width of the main rectangular slab\nslab_depth = 80;        // Overall depth of the main rectangular slab\nslab_thickness = 5;     // Thickness of the main rectangular slab\n\npad_width = 20;         // Width of the shallow underside pad (Tier 1)\npad_depth = 15;         // Depth of the shallow underside pad (Tier 1)\npad_thickness = 4;      // Thickness (downward extrusion) of the shallow pad\n\nleg_width = 8;          // Width of the deeper continuation (Tier 2)\nleg_thickness = 10;     // Additional thickness (downward extrusion) of the deeper continuation\n\npad_offset_x = 8;       // Distance from the left/right edge of the slab to the pad\npad_offset_y = 8;       // Distance from the front/back edge of the slab to the pad\n\neps = 0.01;             // Small overlap value to ensure valid manifold geometry\n$fn = 100;              // Resolution for any future curved additions\n\n// Reusable module for the two-tier underside protrusion\nmodule underside_feature(is_left) {\n    union() {\n        // Tier 1: Shallow underside pad\n        // Positioned below the slab, slightly overlapping upwards for manifoldness\n        translate([0, 0, -pad_thickness/2 + eps/2])\n            cube([pad_width, pad_depth, pad_thickness + eps], center=true);\n\n        // Tier 2: Deeper continuation (leg)\n        // Aligned to share the front and back edges (same depth) and either the left or right edge\n        leg_x_offset = is_left ? -(pad_width - leg_width)/2 : (pad_width - leg_width)/2;\n        \n        // Positioned below the pad, slightly overlapping upwards\n        translate([leg_x_offset, 0, -pad_thickness - leg_thickness/2 + eps/2])\n            cube([leg_width, pad_depth, leg_thickness + eps], center=true);\n    }\n}\n\n// Main model construction\nunion() {\n    // Main rectangular slab\n    // Base is at z=0, grows upwards to z=slab_thickness\n    translate([0, 0, slab_thickness/2])\n        cube([slab_width, slab_depth, slab_thickness], center=true);\n\n    // Generate the four underside features\n    for (x_sign = [-1, 1]) {\n        for (y_sign = [-1, 1]) {\n            // Calculate absolute positions relative to the center\n            x_pos = x_sign * (slab_width/2 - pad_offset_x - pad_width/2);\n            y_pos = y_sign * (slab_depth/2 - pad_offset_y - pad_depth/2);\n            \n            // Determine if the pad is on the left side to align the leg correctly\n            is_left = (x_sign == -1);\n\n            // Place the dual-tier pad at the correct corner\n            translate([x_pos, y_pos, 0])\n                underside_feature(is_left);\n        }\n    }\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

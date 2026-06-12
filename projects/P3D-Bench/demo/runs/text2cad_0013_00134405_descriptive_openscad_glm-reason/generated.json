@@ -1,0 +1,21 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0013/00134405",
+  "model": "glm-reason",
+  "input_spec": "descriptive",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "The object is a flat circular annular rim with an open center area, not a filled circular plate. A concentric hollow collar is added at the middle and shares the same axis as the outer ring, with its center left open. Solid radial ribs run from the collar toward the outer rim, leaving rounded slot-like window spaces between them rather than surface markings. The added collar and rib web use shallower depth tiers than the main outer ring, so the part has stepped faces and underside relief instead of one uniform thickness.",
+  "metrics": {
+    "qa_overall": 1.0,
+    "qa_semantic": 1.0,
+    "qa_parametric": 0.0,
+    "judge_semantic": 10
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// ============================================================\n// Annular Rim with Collar, Radial Ribs & Stepped Profile\n// ============================================================\n\n// --- Outer Rim (tallest tier) ---\nouter_r         = 42;      // Outer radius of the rim\nrim_width       = 10;      // Radial width of the outer rim wall\nrim_height      = 14;      // Full height of outer rim\n\n// --- Central Collar (shorter tier) ---\ncollar_outer_r  = 18;      // Outer radius of the collar\ncollar_inner_r  = 10;      // Center bore radius (open center)\ncollar_height   = 7;       // Height of collar (shorter than rim)\n\n// --- Radial Ribs (shorter tier, same as collar) ---\nnum_ribs        = 6;        // Number of radial ribs\nrib_angular_w   = 16;       // Angular width of each rib (degrees)\nrib_height      = 7;        // Height of rib web (matches collar tier)\n\n// --- Window Slot Corner Radius ---\nslot_corner_r   = 2.5;      // Corner radius on rib edges / window slots\n\n// --- Resolution ---\n$fn = 120;\n\n// Derived: inner edge of the outer rim\nrim_inner_r = outer_r - rim_width;\n\n// ---------------------------------------------------------\n// Module: 2D rib profile with rounded corners\n// Creates a sector-like shape spanning from r_in to r_out\n// with the given angular width and corner radius.\n// The rounded corners produce the slot-like window spaces\n// between adjacent ribs.\n// ---------------------------------------------------------\nmodule rib_profile(r_in, r_out, ang_width, cr) {\n    half_aw = ang_width / 2;\n    hull() {\n        for (r = [r_in, r_out]) {\n            for (a = [-half_aw, half_aw]) {\n                translate([r * cos(a), r * sin(a)])\n                    circle(r = cr, $fn = 36);\n            }\n        }\n    }\n}\n\n// ---------------------------------------------------------\n// Main Model Assembly\n// ---------------------------------------------------------\nunion() {\n    // 1) Outer rim — tall annular ring, open center\n    difference() {\n        cylinder(r = outer_r, h = rim_height);\n        translate([0, 0, -0.05])\n            cylinder(r = rim_inner_r, h = rim_height + 0.1);\n    }\n\n    // 2) Central collar — shorter concentric annular ring, open bore\n    difference() {\n        cylinder(r = collar_outer_r, h = collar_height);\n        translate([0, 0, -0.05])\n            cylinder(r = collar_inner_r, h = collar_height + 0.1);\n    }\n\n    // 3) Radial ribs — connect collar to rim at the shorter tier\n    //    Rounded corners on the rib profiles create the rounded\n    //    slot-like window spaces between adjacent ribs.\n    for (i = [0 : num_ribs - 1]) {\n        rotate([0, 0, i * 360 / num_ribs])\n            linear_extrude(height = rib_height)\n                rib_profile(\n                    r_in      = collar_outer_r,\n                    r_out     = rim_inner_r,\n                    ang_width = rib_angular_w,\n                    cr        = slot_corner_r\n                );\n    }\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

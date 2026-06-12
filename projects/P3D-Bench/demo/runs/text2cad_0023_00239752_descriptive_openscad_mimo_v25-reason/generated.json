@@ -1,0 +1,21 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0023/00239752",
+  "model": "mimo_v25-reason",
+  "input_spec": "descriptive",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "The part is a thin rectangular base with a pair of solid raised ribs running lengthwise along the top face. The ribs are added material, while the round features are removed cuts rather than bosses or pads. Three separate circular openings are laid out near the ends of the plate, with shallow upper recesses and deeper aligned openings below them. The lower portions of the circular cuts continue farther than the shallow top recesses, giving the holes a stepped-depth relationship through the base.",
+  "metrics": {
+    "qa_overall": 0.75,
+    "qa_semantic": 0.75,
+    "qa_parametric": 0.0,
+    "judge_semantic": 10
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// ============================================\n// Stepped-Depth Hole Plate with Raised Ribs\n// ============================================\n\n// --- Base Plate Parameters ---\nbase_length    = 120;   // Length of base plate (X)\nbase_width     = 60;    // Width of base plate (Y)\nbase_thickness = 8;     // Thickness of base plate (Z)\n\n// --- Rib Parameters ---\nrib_height     = 6;     // Height of raised ribs above base top surface\nrib_width      = 4;     // Width of each rib (Y)\nrib_offset     = 18;    // Distance from plate centerline to rib centerline\n\n// --- Circular Opening Parameters ---\n// Upper recess (shallow counterbore from top)\nrecess_diameter = 18;   // Diameter of upper recess\nrecess_depth    = 3;    // Depth of upper recess from top surface\n\n// Lower through hole (deeper cut, smaller diameter)\nthrough_diameter = 10;  // Diameter of lower through-hole\n\n// --- Hole Layout Parameters ---\nhole_spacing   = 36;    // X-distance from center to end holes\nhole_y_offset  = 0;     // Y-offset for hole row (centered)\n\n// --- Resolution ---\n$fn = 100;\n\n// ============================================\n// Module: stepped_hole\n// Creates a single stepped-depth hole cut\n// ============================================\nmodule stepped_hole() {\n    // Upper shallow recess (counterbore)\n    translate([0, 0, base_thickness/2 - recess_depth])\n        cylinder(h = recess_depth + 1, d = recess_diameter);\n    \n    // Lower through hole (full depth)\n    translate([0, 0, -base_thickness/2 - 1])\n        cylinder(h = base_thickness + 2, d = through_diameter);\n}\n\n// ============================================\n// Module: rib_pair\n// Creates two symmetric raised ribs on top face\n// ============================================\nmodule rib_pair() {\n    for (side = [-1, 1]) {\n        translate([\n            -base_length / 2,\n            side * rib_offset - rib_width / 2,\n            base_thickness / 2\n        ])\n            cube([base_length, rib_width, rib_height]);\n    }\n}\n\n// ============================================\n// Main Assembly\n// ============================================\ndifference() {\n    // --- Additive: Base plate + Ribs ---\n    union() {\n        // Base plate (centered)\n        cube([base_length, base_width, base_thickness], center = true);\n        \n        // Raised ribs on top surface\n        rib_pair();\n    }\n    \n    // --- Subtractive: Three stepped holes ---\n    // Left end hole\n    translate([-hole_spacing, hole_y_offset, 0])\n        stepped_hole();\n    \n    // Center hole\n    translate([0, hole_y_offset, 0])\n        stepped_hole();\n    \n    // Right end hole\n    translate([hole_spacing, hole_y_offset, 0])\n        stepped_hole();\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

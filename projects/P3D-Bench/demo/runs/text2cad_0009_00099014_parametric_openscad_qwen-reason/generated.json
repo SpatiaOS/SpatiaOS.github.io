@@ -1,0 +1,28 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0009/00099014",
+  "model": "qwen-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Create a solid rectangular base as the reference body, length 0.75, width 0.669426, and height 0.150979, with main depth 0.151. Use the base plan edges as left, right, front, and back references. Add four solid rectangular pads to the underside, each starting at the base underside and extending 0.151 below it: one pad 0.156427 by 0.090313 with offsets left 0.5351, right 0.0585, front 0.109, back 0.4701; one pad 0.202932 by 0.128382 with offsets left 0.0568, right 0.4903, front 0.0294, back 0.5116; one pad 0.207237 by 0.111076 with offsets left 0.5157, right 0.0271, front 0.5131, back 0.0452; and one pad 0.235324 by 0.115862 with offsets left 0.0893, right 0.4254, front 0.5088, back 0.0447. Add a deeper solid rectangular continuation below each shallow pad with own depth 0.302; these deeper sections start 0.1509 below the base underside and reach 0.4529 below the base underside. The continuation below the 0.202932 by 0.128382 pad is 0.101466 by 0.128382, with offsets left 0.0568, right 0.5917, front 0.0294, back 0.5116, sharing the shallow pad left, front, and back edges. The continuation below the 0.156427 by 0.090313 pad is 0.078214 by 0.090313, with offsets left 0.6133, right 0.0585, front 0.109, back 0.4701, sharing the shallow pad right, front, and back edges. The continuation below the 0.207237 by 0.111076 pad is 0.103619 by 0.111076, with offsets left 0.6193, right 0.0271, front 0.5131, back 0.0452, sharing the shallow pad right, front, and back edges. The continuation below the 0.235324 by 0.115862 pad is 0.117662 by 0.115862, with offsets left 0.0893, right 0.543, front 0.5088, back 0.0447, sharing the shallow pad left, front, and back edges. All listed rectangular underside features are solid additions, with no internal loops, cutouts, recesses, or through openings.",
+  "metrics": {
+    "chamfer_distance": 8.7e-05,
+    "hausdorff_distance": 0.030122,
+    "f_score_005": 1.0,
+    "f_score_001": 0.4822,
+    "normal_consistency": 0.9433,
+    "iou_csg": 0.9969,
+    "iou_voxel": 0.9934,
+    "pred_open_edge_ratio": 0.0,
+    "qa_overall": 1.0,
+    "qa_semantic": 1.0,
+    "qa_parametric": 1.0
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// OpenSCAD Parametric Model\n$fn = 64;\n\n// Base Dimensions\nbase_length = 0.75;\nbase_width  = 0.669426;\nbase_height = 0.150979;\n\n// Feature Depths\nshallow_depth = 0.151;\ndeep_depth    = 0.302;\ndeep_start_z  = -0.1509; // Offset below base underside (Z=0)\n\n// Shallow Pad Parameters: [x_size, y_size, left_offset, front_offset]\ns1 = [0.156427, 0.090313, 0.5351, 0.109];\ns2 = [0.202932, 0.128382, 0.0568, 0.0294];\ns3 = [0.207237, 0.111076, 0.5157, 0.5131];\ns4 = [0.235324, 0.115862, 0.0893, 0.5088];\n\n// Deep Continuation Parameters: [x_size, y_size, left_offset, front_offset]\nd1 = [0.101466, 0.128382, 0.0568, 0.0294]; // Below s2\nd2 = [0.078214, 0.090313, 0.6133, 0.109];   // Below s1\nd3 = [0.103619, 0.111076, 0.6193, 0.5131];  // Below s3\nd4 = [0.117662, 0.115862, 0.0893, 0.5088];  // Below s4\n\n// Reusable Pad Module\nmodule rect_pad(x, y, h, z_top, lx, fy) {\n    translate([lx, fy, z_top - h])\n        cube([x, y, h]);\n}\n\n// Main Assembly\nunion() {\n    // Solid rectangular base\n    cube([base_length, base_width, base_height]);\n\n    // Shallow pads (extend from Z=0 to Z=-0.151)\n    rect_pad(s1[0], s1[1], shallow_depth, 0, s1[2], s1[3]);\n    rect_pad(s2[0], s2[1], shallow_depth, 0, s2[2], s2[3]);\n    rect_pad(s3[0], s3[1], shallow_depth, 0, s3[2], s3[3]);\n    rect_pad(s4[0], s4[1], shallow_depth, 0, s4[2], s4[3]);\n\n    // Deep continuations (extend from Z=-0.1509 to Z=-0.4529)\n    rect_pad(d1[0], d1[1], deep_depth, deep_start_z, d1[2], d1[3]);\n    rect_pad(d2[0], d2[1], deep_depth, deep_start_z, d2[2], d2[3]);\n    rect_pad(d3[0], d3[1], deep_depth, deep_start_z, d3[2], d3[3]);\n    rect_pad(d4[0], d4[1], deep_depth, deep_start_z, d4[2], d4[3]);\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

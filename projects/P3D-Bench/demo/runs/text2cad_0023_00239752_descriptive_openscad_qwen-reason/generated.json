@@ -1,0 +1,21 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0023/00239752",
+  "model": "qwen-reason",
+  "input_spec": "descriptive",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "The part is a thin rectangular base with a pair of solid raised ribs running lengthwise along the top face. The ribs are added material, while the round features are removed cuts rather than bosses or pads. Three separate circular openings are laid out near the ends of the plate, with shallow upper recesses and deeper aligned openings below them. The lower portions of the circular cuts continue farther than the shallow top recesses, giving the holes a stepped-depth relationship through the base.",
+  "metrics": {
+    "qa_overall": 0.75,
+    "qa_semantic": 0.75,
+    "qa_parametric": 0.0,
+    "judge_semantic": 9
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// Parameters\n$fn = 64;\n\n// Base Plate Dimensions (mm)\nplate_length = 120;\nplate_width  = 60;\nplate_thick  = 6;\n\n// Rib Dimensions (mm)\nrib_height   = 4;\nrib_width    = 10;\nrib_offset_y = 15;\n\n// Stepped Hole Dimensions (mm)\nhole_x_positions = [-plate_length/2 + 15, 0, plate_length/2 - 15];\nhole_y_position  = 0;\nrecess_diameter  = 16;\nrecess_depth     = 2;\nbore_diameter    = 10;\nbore_depth       = 4;\n\n// Reusable Modules\nmodule base_plate(len, wid, thk) {\n    cube([len, wid, thk], center=true);\n}\n\nmodule pair_of_ribs(len, w, h, y_off) {\n    translate([0, y_off, 0]) cube([len, w, h], center=true);\n    translate([0, -y_off, 0]) cube([len, w, h], center=true);\n}\n\nmodule stepped_hole(x, y, top_z, r_d, r_h, b_d, b_h) {\n    translate([x, y, top_z - r_h/2])\n        cylinder(h=r_h, d=r_d, center=true);\n    translate([x, y, top_z - r_h - b_h/2])\n        cylinder(h=b_h, d=b_d, center=true);\n}\n\n// Main Assembly\ndifference() {\n    union() {\n        base_plate(plate_length, plate_width, plate_thick);\n        translate([0, 0, plate_thick + rib_height/2])\n            pair_of_ribs(plate_length, rib_width, rib_height, rib_offset_y);\n    }\n\n    for (x = hole_x_positions) {\n        stepped_hole(x, hole_y_position, plate_thick,\n                     recess_diameter, recess_depth,\n                     bore_diameter, bore_depth);\n    }\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}

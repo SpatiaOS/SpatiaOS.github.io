@@ -1,0 +1,21 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0009/00099014",
+  "model": "qwen-reason",
+  "input_spec": "descriptive",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "The model is a rectangular slab with only added rectangular solids attached to its underside. Four shallow underside pads sit near the perimeter, and each pad carries a narrower, deeper rectangular continuation below it, producing a two-tier underside protrusion pattern. The deeper continuation in each pair is contained within the shallow pad footprint and shares either the left or right vertical edge along with the front and back edges. Treat all of these underside features as solid added material; there are no holes, cut-throughs, recesses, or engraved top-face details.",
+  "metrics": {
+    "qa_overall": 0.75,
+    "qa_semantic": 0.75,
+    "qa_parametric": 0.0,
+    "judge_semantic": 8
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// Parameters (all dimensions in mm)\nslab_width = 120;\nslab_depth = 80;\nslab_height = 15;\n\npad_width = 30;\npad_depth = 20;\npad_height = 5;\n\ncont_width = 14;\ncont_height = 8;\n\nedge_margin = 12;\nalign_left = true;\n\n$fn = 64;\n\n// Derived reference for slab bottom face\nz_slab_bottom = -slab_height / 2;\n\n// Main Assembly\nunion() {\n    // Centered main rectangular slab\n    cube([slab_width, slab_depth, slab_height], center=true);\n\n    // Instantiate four corner underside features\n    underside_feature( 1,  1);\n    underside_feature(-1,  1);\n    underside_feature( 1, -1);\n    underside_feature(-1, -1);\n}\n\n// Module: Two-tier underside protrusion\nmodule underside_feature(sx, sy) {\n    // Calculate pad center coordinates relative to slab edges\n    px = sx * (slab_width / 2 - edge_margin - pad_width / 2);\n    py = sy * (slab_depth / 2 - edge_margin - pad_depth / 2);\n\n    // Calculate continuation X offset to share left or right edge with pad\n    edge_shift = (pad_width - cont_width) / 2;\n    cx = px + (align_left ? -edge_shift : edge_shift);\n\n    // Shallow tier: pad attached directly to slab bottom\n    translate([px, py, z_slab_bottom])\n        cube([pad_width, pad_depth, pad_height]);\n\n    // Deeper tier: continuation attached below the pad, sharing front/back edges\n    translate([cx, py, z_slab_bottom - pad_height])\n        cube([cont_width, pad_depth, cont_height]);\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}
