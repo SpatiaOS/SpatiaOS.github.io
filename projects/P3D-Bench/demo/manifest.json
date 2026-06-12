@@ -113,11 +113,6 @@
   ],
   "cases": [
     {
-      "id": "0012/00126691",
-      "title": "The model is built from a thin rectangular base slab with all other visible features added as...",
-      "task": "text2cad"
-    },
-    {
       "id": "0084/00847302",
       "title": "The part is a straight-sided rectangular enclosure with an open top and a visible wall rim...",
       "task": "text2cad"
@@ -126,6 +121,19 @@
       "id": "0005/00051572",
       "title": "The model has a flat rectangular base with raised long side walls, leaving an open channel rather than a filled block...",
       "task": "text2cad"
+    },
+    {
+      "id": "0015/00155951",
+      "task": "text2cad",
+      "title": "Text Case · 00155951",
+      "short_case_id": "0015_00155951",
+      "spec": "parametric",
+      "condition": "Use a main base reference size of length 0.75, width 0.5, and height 0.125. Create the base as a solid upper-side arc-edged plate occupying the full 0.75 by 0.5 footprint with extrusion depth 0.125 from the base datum, and include a central circular through void with axis 0.375 from the left edge and 0.25 from the front edge, radius 0.125. Add a concentric underside annular collar starting at the base underside and reaching 0.0375 below it; the collar is centered on the same axis, has outer radius 0.2125 and inner radius 0.125, and must remain a hollow circular ring rather than a rectangular pad. Add a right-end upper solid rounded tab with plan footprint 0.125 by 0.375, offset 0.625 from the left edge, 0 from the right edge, and 0.0625 from both front and back edges; it rises from the top side to a total reach of 0.5875 from the base datum and contains a through circular opening of radius 0.0937 centered on the tab width axis at left-offset 0.75 and front-offset 0.25. Add the matching left-end upper solid rounded tab with plan footprint 0.125 by 0.375, offset 0 from the left edge, 0.625 from the right edge, and 0.0625 from both front and back edges; it also rises to a total reach of 0.5875 from the base datum and has a through circular opening of radius 0.0937 centered at left-offset 0 and front-offset 0.25. Keep the upright tab outlines rounded or slot-like in elevation, with the openings cut through the tab thickness, and keep the base opening continuous through the base and underside collar.",
+      "input": "Use a main base reference size of length 0.75, width 0.5, and height 0.125. Create the base as a solid upper-side arc-edged plate occupying the full 0.75 by 0.5 footprint with extrusion depth 0.125 from the base datum, and include a central circular through void with axis 0.375 from the left edge and 0.25 from the front edge, radius 0.125. Add a concentric underside annular collar starting at the base underside and reaching 0.0375 below it; the collar is centered on the same axis, has outer radius 0.2125 and inner radius 0.125, and must remain a hollow circular ring rather than a rectangular pad. Add a right-end upper solid rounded tab with plan footprint 0.125 by 0.375, offset 0.625 from the left edge, 0 from the right edge, and 0.0625 from both front and back edges; it rises from the top side to a total reach of 0.5875 from the base datum and contains a through circular opening of radius 0.0937 centered on the tab width axis at left-offset 0.75 and front-offset 0.25. Add the matching left-end upper solid rounded tab with plan footprint 0.125 by 0.375, offset 0 from the left edge, 0.625 from the right edge, and 0.0625 from both front and back edges; it also rises to a total reach of 0.5875 from the base datum and has a through circular opening of radius 0.0937 centered at left-offset 0 and front-offset 0.25. Keep the upright tab outlines rounded or slot-like in elevation, with the openings cut through the tab thickness, and keep the base opening continuous through the base and underside collar.",
+      "assets": {
+        "gt_mesh": "gt_meshes/text2cad_0015_00155951.stl",
+        "gt_render": "gt_renders/text2cad_0015_00155951.png"
+      }
     },
     {
       "id": "0047/00478097",
@@ -9476,1022 +9484,6 @@
       }
     },
     {
-      "id": "text2cad_0012_00126691_parametric_openscad_gpt55-reason",
-      "task": "text2cad",
-      "case_id": "0012/00126691",
-      "spec": "parametric",
-      "format": "openscad",
-      "model": "gpt55-reason",
-      "valid": true,
-      "condition": "Start with the main reference slab as a rectangular solid length 0.5, width 0.75, height 0.016667, with main extrusion depth 0.0167. Add an upper-side solid rectangular feature with footprint 0.5 by 0.5, flush to the left, right, and back edges of the base and offset 0.25 from the front edge; its reach from the base datum is 0.2334. Add two upper-side solid narrow rectangular edge strips over this rear region, each with footprint 0.0083 by 0.5 and main extrusion depth 0.0083; one strip is flush with the left edge and offset 0.4917 from the right edge, and the other is flush with the right edge and offset 0.4917 from the left edge, with both offset 0.25 from the front and flush with the back. Add the thin upper-side transverse solid feature with footprint 0.5 by 0.250819, flush to the left and right edges, offset 0.24922 from the front edge and 0.249961 from the back edge; its own thickness is 0.0021 and its total reach from the base datum is 0.335265. Preserve the closed internal profile in the added material as a real open void through that local solid. For the aligned stepped portion, treat the upper pad depth as 0.1 and the deeper continuation below it as a separate solid continuation with own depth 0.2167; the deeper footprint is contained within the shallow footprint, shares the left, front, and back edges, and its reach is measured from the same shoulder rather than added end-to-end.",
-      "assets": {
-        "generated": "runs/text2cad_0012_00126691_parametric_openscad_gpt55-reason/generated.scad",
-        "generated_json": "runs/text2cad_0012_00126691_parametric_openscad_gpt55-reason/generated.json",
-        "mesh": "runs/text2cad_0012_00126691_parametric_openscad_gpt55-reason/model.stl",
-        "pred_render": "runs/text2cad_0012_00126691_parametric_openscad_gpt55-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0012_00126691.stl",
-        "gt_render": "gt_renders/text2cad_0012_00126691.png"
-      },
-      "metrics": {
-        "chamfer_distance": 0.000888,
-        "hausdorff_distance": 0.150145,
-        "f_score_005": 0.8806,
-        "f_score_001": 0.4059,
-        "normal_consistency": 0.8123,
-        "iou_csg": 0.2529,
-        "iou_voxel": 0.3435,
-        "pred_open_edge_ratio": 0,
-        "qa_semantic": 1,
-        "qa_parametric": 0.625,
-        "qa_overall": 0.75
-      }
-    },
-    {
-      "id": "text2cad_0012_00126691_parametric_openscad_gemini-reason",
-      "task": "text2cad",
-      "case_id": "0012/00126691",
-      "spec": "parametric",
-      "format": "openscad",
-      "model": "gemini-reason",
-      "valid": true,
-      "condition": "Start with the main reference slab as a rectangular solid length 0.5, width 0.75, height 0.016667, with main extrusion depth 0.0167. Add an upper-side solid rectangular feature with footprint 0.5 by 0.5, flush to the left, right, and back edges of the base and offset 0.25 from the front edge; its reach from the base datum is 0.2334. Add two upper-side solid narrow rectangular edge strips over this rear region, each with footprint 0.0083 by 0.5 and main extrusion depth 0.0083; one strip is flush with the left edge and offset 0.4917 from the right edge, and the other is flush with the right edge and offset 0.4917 from the left edge, with both offset 0.25 from the front and flush with the back. Add the thin upper-side transverse solid feature with footprint 0.5 by 0.250819, flush to the left and right edges, offset 0.24922 from the front edge and 0.249961 from the back edge; its own thickness is 0.0021 and its total reach from the base datum is 0.335265. Preserve the closed internal profile in the added material as a real open void through that local solid. For the aligned stepped portion, treat the upper pad depth as 0.1 and the deeper continuation below it as a separate solid continuation with own depth 0.2167; the deeper footprint is contained within the shallow footprint, shares the left, front, and back edges, and its reach is measured from the same shoulder rather than added end-to-end.",
-      "assets": {
-        "generated": "runs/text2cad_0012_00126691_parametric_openscad_gemini-reason/generated.scad",
-        "generated_json": "runs/text2cad_0012_00126691_parametric_openscad_gemini-reason/generated.json",
-        "mesh": "runs/text2cad_0012_00126691_parametric_openscad_gemini-reason/model.stl",
-        "pred_render": "runs/text2cad_0012_00126691_parametric_openscad_gemini-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0012_00126691.stl",
-        "gt_render": "gt_renders/text2cad_0012_00126691.png"
-      },
-      "metrics": {
-        "chamfer_distance": 0.002256,
-        "hausdorff_distance": 0.225961,
-        "f_score_005": 0.7521,
-        "f_score_001": 0.2214,
-        "normal_consistency": 0.7313,
-        "iou_csg": 0.1898,
-        "iou_voxel": 0.2464,
-        "pred_open_edge_ratio": 0,
-        "qa_semantic": 0.75,
-        "qa_parametric": 0.875,
-        "qa_overall": 0.833333
-      }
-    },
-    {
-      "id": "text2cad_0012_00126691_parametric_openscad_claude-reason",
-      "task": "text2cad",
-      "case_id": "0012/00126691",
-      "spec": "parametric",
-      "format": "openscad",
-      "model": "claude-reason",
-      "valid": true,
-      "condition": "Start with the main reference slab as a rectangular solid length 0.5, width 0.75, height 0.016667, with main extrusion depth 0.0167. Add an upper-side solid rectangular feature with footprint 0.5 by 0.5, flush to the left, right, and back edges of the base and offset 0.25 from the front edge; its reach from the base datum is 0.2334. Add two upper-side solid narrow rectangular edge strips over this rear region, each with footprint 0.0083 by 0.5 and main extrusion depth 0.0083; one strip is flush with the left edge and offset 0.4917 from the right edge, and the other is flush with the right edge and offset 0.4917 from the left edge, with both offset 0.25 from the front and flush with the back. Add the thin upper-side transverse solid feature with footprint 0.5 by 0.250819, flush to the left and right edges, offset 0.24922 from the front edge and 0.249961 from the back edge; its own thickness is 0.0021 and its total reach from the base datum is 0.335265. Preserve the closed internal profile in the added material as a real open void through that local solid. For the aligned stepped portion, treat the upper pad depth as 0.1 and the deeper continuation below it as a separate solid continuation with own depth 0.2167; the deeper footprint is contained within the shallow footprint, shares the left, front, and back edges, and its reach is measured from the same shoulder rather than added end-to-end.",
-      "assets": {
-        "generated": "runs/text2cad_0012_00126691_parametric_openscad_claude-reason/generated.scad",
-        "generated_json": "runs/text2cad_0012_00126691_parametric_openscad_claude-reason/generated.json",
-        "mesh": "runs/text2cad_0012_00126691_parametric_openscad_claude-reason/model.stl",
-        "pred_render": "runs/text2cad_0012_00126691_parametric_openscad_claude-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0012_00126691.stl",
-        "gt_render": "gt_renders/text2cad_0012_00126691.png"
-      },
-      "metrics": {
-        "chamfer_distance": 0.001641,
-        "hausdorff_distance": 0.184837,
-        "f_score_005": 0.8055,
-        "f_score_001": 0.1669,
-        "normal_consistency": 0.7737,
-        "iou_csg": 0.1109,
-        "iou_voxel": 0.1799,
-        "pred_open_edge_ratio": 0,
-        "qa_semantic": 1,
-        "qa_parametric": 0.625,
-        "qa_overall": 0.75
-      }
-    },
-    {
-      "id": "text2cad_0012_00126691_parametric_openscad_kimi_k26-reason",
-      "task": "text2cad",
-      "case_id": "0012/00126691",
-      "spec": "parametric",
-      "format": "openscad",
-      "model": "kimi_k26-reason",
-      "valid": true,
-      "condition": "Start with the main reference slab as a rectangular solid length 0.5, width 0.75, height 0.016667, with main extrusion depth 0.0167. Add an upper-side solid rectangular feature with footprint 0.5 by 0.5, flush to the left, right, and back edges of the base and offset 0.25 from the front edge; its reach from the base datum is 0.2334. Add two upper-side solid narrow rectangular edge strips over this rear region, each with footprint 0.0083 by 0.5 and main extrusion depth 0.0083; one strip is flush with the left edge and offset 0.4917 from the right edge, and the other is flush with the right edge and offset 0.4917 from the left edge, with both offset 0.25 from the front and flush with the back. Add the thin upper-side transverse solid feature with footprint 0.5 by 0.250819, flush to the left and right edges, offset 0.24922 from the front edge and 0.249961 from the back edge; its own thickness is 0.0021 and its total reach from the base datum is 0.335265. Preserve the closed internal profile in the added material as a real open void through that local solid. For the aligned stepped portion, treat the upper pad depth as 0.1 and the deeper continuation below it as a separate solid continuation with own depth 0.2167; the deeper footprint is contained within the shallow footprint, shares the left, front, and back edges, and its reach is measured from the same shoulder rather than added end-to-end.",
-      "assets": {
-        "generated": "runs/text2cad_0012_00126691_parametric_openscad_kimi_k26-reason/generated.scad",
-        "generated_json": "runs/text2cad_0012_00126691_parametric_openscad_kimi_k26-reason/generated.json",
-        "mesh": "runs/text2cad_0012_00126691_parametric_openscad_kimi_k26-reason/model.stl",
-        "pred_render": "runs/text2cad_0012_00126691_parametric_openscad_kimi_k26-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0012_00126691.stl",
-        "gt_render": "gt_renders/text2cad_0012_00126691.png"
-      },
-      "metrics": {
-        "chamfer_distance": 0.000606,
-        "hausdorff_distance": 0.138824,
-        "f_score_005": 0.9107,
-        "f_score_001": 0.3372,
-        "normal_consistency": 0.8812,
-        "iou_csg": 0.0611,
-        "iou_voxel": 0.0974,
-        "pred_open_edge_ratio": 0,
-        "qa_semantic": 0.75,
-        "qa_parametric": 0.625,
-        "qa_overall": 0.666667
-      }
-    },
-    {
-      "id": "text2cad_0012_00126691_parametric_openscad_glm-reason",
-      "task": "text2cad",
-      "case_id": "0012/00126691",
-      "spec": "parametric",
-      "format": "openscad",
-      "model": "glm-reason",
-      "valid": true,
-      "condition": "Start with the main reference slab as a rectangular solid length 0.5, width 0.75, height 0.016667, with main extrusion depth 0.0167. Add an upper-side solid rectangular feature with footprint 0.5 by 0.5, flush to the left, right, and back edges of the base and offset 0.25 from the front edge; its reach from the base datum is 0.2334. Add two upper-side solid narrow rectangular edge strips over this rear region, each with footprint 0.0083 by 0.5 and main extrusion depth 0.0083; one strip is flush with the left edge and offset 0.4917 from the right edge, and the other is flush with the right edge and offset 0.4917 from the left edge, with both offset 0.25 from the front and flush with the back. Add the thin upper-side transverse solid feature with footprint 0.5 by 0.250819, flush to the left and right edges, offset 0.24922 from the front edge and 0.249961 from the back edge; its own thickness is 0.0021 and its total reach from the base datum is 0.335265. Preserve the closed internal profile in the added material as a real open void through that local solid. For the aligned stepped portion, treat the upper pad depth as 0.1 and the deeper continuation below it as a separate solid continuation with own depth 0.2167; the deeper footprint is contained within the shallow footprint, shares the left, front, and back edges, and its reach is measured from the same shoulder rather than added end-to-end.",
-      "assets": {
-        "generated": "runs/text2cad_0012_00126691_parametric_openscad_glm-reason/generated.scad",
-        "generated_json": "runs/text2cad_0012_00126691_parametric_openscad_glm-reason/generated.json",
-        "mesh": "runs/text2cad_0012_00126691_parametric_openscad_glm-reason/model.stl",
-        "pred_render": "runs/text2cad_0012_00126691_parametric_openscad_glm-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0012_00126691.stl",
-        "gt_render": "gt_renders/text2cad_0012_00126691.png"
-      },
-      "metrics": {
-        "chamfer_distance": 0.001104,
-        "hausdorff_distance": 0.214539,
-        "f_score_005": 0.8475,
-        "f_score_001": 0.3348,
-        "normal_consistency": 0.8071,
-        "iou_csg": 0.1751,
-        "iou_voxel": 0.2151,
-        "pred_open_edge_ratio": 0,
-        "qa_semantic": 0.25,
-        "qa_parametric": 0.625,
-        "qa_overall": 0.5
-      }
-    },
-    {
-      "id": "text2cad_0012_00126691_parametric_openscad_doubao-reason",
-      "task": "text2cad",
-      "case_id": "0012/00126691",
-      "spec": "parametric",
-      "format": "openscad",
-      "model": "doubao-reason",
-      "valid": true,
-      "condition": "Start with the main reference slab as a rectangular solid length 0.5, width 0.75, height 0.016667, with main extrusion depth 0.0167. Add an upper-side solid rectangular feature with footprint 0.5 by 0.5, flush to the left, right, and back edges of the base and offset 0.25 from the front edge; its reach from the base datum is 0.2334. Add two upper-side solid narrow rectangular edge strips over this rear region, each with footprint 0.0083 by 0.5 and main extrusion depth 0.0083; one strip is flush with the left edge and offset 0.4917 from the right edge, and the other is flush with the right edge and offset 0.4917 from the left edge, with both offset 0.25 from the front and flush with the back. Add the thin upper-side transverse solid feature with footprint 0.5 by 0.250819, flush to the left and right edges, offset 0.24922 from the front edge and 0.249961 from the back edge; its own thickness is 0.0021 and its total reach from the base datum is 0.335265. Preserve the closed internal profile in the added material as a real open void through that local solid. For the aligned stepped portion, treat the upper pad depth as 0.1 and the deeper continuation below it as a separate solid continuation with own depth 0.2167; the deeper footprint is contained within the shallow footprint, shares the left, front, and back edges, and its reach is measured from the same shoulder rather than added end-to-end.",
-      "assets": {
-        "generated": "runs/text2cad_0012_00126691_parametric_openscad_doubao-reason/generated.scad",
-        "generated_json": "runs/text2cad_0012_00126691_parametric_openscad_doubao-reason/generated.json",
-        "mesh": "runs/text2cad_0012_00126691_parametric_openscad_doubao-reason/model.stl",
-        "pred_render": "runs/text2cad_0012_00126691_parametric_openscad_doubao-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0012_00126691.stl",
-        "gt_render": "gt_renders/text2cad_0012_00126691.png"
-      },
-      "metrics": {
-        "chamfer_distance": 0.000865,
-        "hausdorff_distance": 0.14429,
-        "f_score_005": 0.8673,
-        "f_score_001": 0.2041,
-        "normal_consistency": 0.8453,
-        "iou_csg": 0.1212,
-        "iou_voxel": 0.1986,
-        "pred_open_edge_ratio": 0,
-        "qa_overall": 0.75,
-        "qa_semantic": 1,
-        "qa_parametric": 0.625
-      }
-    },
-    {
-      "id": "text2cad_0012_00126691_parametric_openscad_deepseek_v4pro-reason",
-      "task": "text2cad",
-      "case_id": "0012/00126691",
-      "spec": "parametric",
-      "format": "openscad",
-      "model": "deepseek_v4pro-reason",
-      "valid": true,
-      "condition": "Start with the main reference slab as a rectangular solid length 0.5, width 0.75, height 0.016667, with main extrusion depth 0.0167. Add an upper-side solid rectangular feature with footprint 0.5 by 0.5, flush to the left, right, and back edges of the base and offset 0.25 from the front edge; its reach from the base datum is 0.2334. Add two upper-side solid narrow rectangular edge strips over this rear region, each with footprint 0.0083 by 0.5 and main extrusion depth 0.0083; one strip is flush with the left edge and offset 0.4917 from the right edge, and the other is flush with the right edge and offset 0.4917 from the left edge, with both offset 0.25 from the front and flush with the back. Add the thin upper-side transverse solid feature with footprint 0.5 by 0.250819, flush to the left and right edges, offset 0.24922 from the front edge and 0.249961 from the back edge; its own thickness is 0.0021 and its total reach from the base datum is 0.335265. Preserve the closed internal profile in the added material as a real open void through that local solid. For the aligned stepped portion, treat the upper pad depth as 0.1 and the deeper continuation below it as a separate solid continuation with own depth 0.2167; the deeper footprint is contained within the shallow footprint, shares the left, front, and back edges, and its reach is measured from the same shoulder rather than added end-to-end.",
-      "assets": {
-        "generated": "runs/text2cad_0012_00126691_parametric_openscad_deepseek_v4pro-reason/generated.scad",
-        "generated_json": "runs/text2cad_0012_00126691_parametric_openscad_deepseek_v4pro-reason/generated.json",
-        "mesh": "runs/text2cad_0012_00126691_parametric_openscad_deepseek_v4pro-reason/model.stl",
-        "pred_render": "runs/text2cad_0012_00126691_parametric_openscad_deepseek_v4pro-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0012_00126691.stl",
-        "gt_render": "gt_renders/text2cad_0012_00126691.png"
-      },
-      "metrics": {
-        "chamfer_distance": 0.002309,
-        "hausdorff_distance": 0.195575,
-        "f_score_005": 0.7464,
-        "f_score_001": 0.0613,
-        "normal_consistency": 0.7142,
-        "iou_csg": 0.0134,
-        "iou_voxel": 0.0402,
-        "pred_open_edge_ratio": 0,
-        "qa_semantic": 0.25,
-        "qa_parametric": 0.125,
-        "qa_overall": 0.166667
-      }
-    },
-    {
-      "id": "text2cad_0012_00126691_parametric_openscad_qwen-reason",
-      "task": "text2cad",
-      "case_id": "0012/00126691",
-      "spec": "parametric",
-      "format": "openscad",
-      "model": "qwen-reason",
-      "valid": true,
-      "condition": "Start with the main reference slab as a rectangular solid length 0.5, width 0.75, height 0.016667, with main extrusion depth 0.0167. Add an upper-side solid rectangular feature with footprint 0.5 by 0.5, flush to the left, right, and back edges of the base and offset 0.25 from the front edge; its reach from the base datum is 0.2334. Add two upper-side solid narrow rectangular edge strips over this rear region, each with footprint 0.0083 by 0.5 and main extrusion depth 0.0083; one strip is flush with the left edge and offset 0.4917 from the right edge, and the other is flush with the right edge and offset 0.4917 from the left edge, with both offset 0.25 from the front and flush with the back. Add the thin upper-side transverse solid feature with footprint 0.5 by 0.250819, flush to the left and right edges, offset 0.24922 from the front edge and 0.249961 from the back edge; its own thickness is 0.0021 and its total reach from the base datum is 0.335265. Preserve the closed internal profile in the added material as a real open void through that local solid. For the aligned stepped portion, treat the upper pad depth as 0.1 and the deeper continuation below it as a separate solid continuation with own depth 0.2167; the deeper footprint is contained within the shallow footprint, shares the left, front, and back edges, and its reach is measured from the same shoulder rather than added end-to-end.",
-      "assets": {
-        "generated": "runs/text2cad_0012_00126691_parametric_openscad_qwen-reason/generated.scad",
-        "generated_json": "runs/text2cad_0012_00126691_parametric_openscad_qwen-reason/generated.json",
-        "mesh": "runs/text2cad_0012_00126691_parametric_openscad_qwen-reason/model.stl",
-        "pred_render": "runs/text2cad_0012_00126691_parametric_openscad_qwen-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0012_00126691.stl",
-        "gt_render": "gt_renders/text2cad_0012_00126691.png"
-      },
-      "metrics": {
-        "chamfer_distance": 0.002162,
-        "hausdorff_distance": 0.173916,
-        "f_score_005": 0.7649,
-        "f_score_001": 0.1413,
-        "normal_consistency": 0.7659,
-        "iou_csg": 0.0497,
-        "iou_voxel": 0.0809,
-        "pred_open_edge_ratio": 0,
-        "qa_semantic": 0.5,
-        "qa_parametric": 0.375,
-        "qa_overall": 0.416667
-      }
-    },
-    {
-      "id": "text2cad_0012_00126691_parametric_openscad_mimo_v25-reason",
-      "task": "text2cad",
-      "case_id": "0012/00126691",
-      "spec": "parametric",
-      "format": "openscad",
-      "model": "mimo_v25-reason",
-      "valid": true,
-      "condition": "Start with the main reference slab as a rectangular solid length 0.5, width 0.75, height 0.016667, with main extrusion depth 0.0167. Add an upper-side solid rectangular feature with footprint 0.5 by 0.5, flush to the left, right, and back edges of the base and offset 0.25 from the front edge; its reach from the base datum is 0.2334. Add two upper-side solid narrow rectangular edge strips over this rear region, each with footprint 0.0083 by 0.5 and main extrusion depth 0.0083; one strip is flush with the left edge and offset 0.4917 from the right edge, and the other is flush with the right edge and offset 0.4917 from the left edge, with both offset 0.25 from the front and flush with the back. Add the thin upper-side transverse solid feature with footprint 0.5 by 0.250819, flush to the left and right edges, offset 0.24922 from the front edge and 0.249961 from the back edge; its own thickness is 0.0021 and its total reach from the base datum is 0.335265. Preserve the closed internal profile in the added material as a real open void through that local solid. For the aligned stepped portion, treat the upper pad depth as 0.1 and the deeper continuation below it as a separate solid continuation with own depth 0.2167; the deeper footprint is contained within the shallow footprint, shares the left, front, and back edges, and its reach is measured from the same shoulder rather than added end-to-end.",
-      "assets": {
-        "generated": "runs/text2cad_0012_00126691_parametric_openscad_mimo_v25-reason/generated.scad",
-        "generated_json": "runs/text2cad_0012_00126691_parametric_openscad_mimo_v25-reason/generated.json",
-        "mesh": "runs/text2cad_0012_00126691_parametric_openscad_mimo_v25-reason/model.stl",
-        "pred_render": "runs/text2cad_0012_00126691_parametric_openscad_mimo_v25-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0012_00126691.stl",
-        "gt_render": "gt_renders/text2cad_0012_00126691.png"
-      },
-      "metrics": {
-        "chamfer_distance": 0.002138,
-        "hausdorff_distance": 0.133154,
-        "f_score_005": 0.6868,
-        "f_score_001": 0.1266,
-        "normal_consistency": 0.6379,
-        "iou_csg": 0.0632,
-        "iou_voxel": 0.1054,
-        "pred_open_edge_ratio": 0,
-        "qa_semantic": 1,
-        "qa_parametric": 0.625,
-        "qa_overall": 0.75
-      }
-    },
-    {
-      "id": "text2cad_0012_00126691_parametric_json_gpt55-reason",
-      "task": "text2cad",
-      "case_id": "0012/00126691",
-      "spec": "parametric",
-      "format": "json",
-      "model": "gpt55-reason",
-      "valid": true,
-      "condition": "Start with the main reference slab as a rectangular solid length 0.5, width 0.75, height 0.016667, with main extrusion depth 0.0167. Add an upper-side solid rectangular feature with footprint 0.5 by 0.5, flush to the left, right, and back edges of the base and offset 0.25 from the front edge; its reach from the base datum is 0.2334. Add two upper-side solid narrow rectangular edge strips over this rear region, each with footprint 0.0083 by 0.5 and main extrusion depth 0.0083; one strip is flush with the left edge and offset 0.4917 from the right edge, and the other is flush with the right edge and offset 0.4917 from the left edge, with both offset 0.25 from the front and flush with the back. Add the thin upper-side transverse solid feature with footprint 0.5 by 0.250819, flush to the left and right edges, offset 0.24922 from the front edge and 0.249961 from the back edge; its own thickness is 0.0021 and its total reach from the base datum is 0.335265. Preserve the closed internal profile in the added material as a real open void through that local solid. For the aligned stepped portion, treat the upper pad depth as 0.1 and the deeper continuation below it as a separate solid continuation with own depth 0.2167; the deeper footprint is contained within the shallow footprint, shares the left, front, and back edges, and its reach is measured from the same shoulder rather than added end-to-end.",
-      "assets": {
-        "generated": "runs/text2cad_0012_00126691_parametric_json_gpt55-reason/generated.json",
-        "generated_json": "runs/text2cad_0012_00126691_parametric_json_gpt55-reason/generated.json",
-        "mesh": "runs/text2cad_0012_00126691_parametric_json_gpt55-reason/model.stl",
-        "pred_render": "runs/text2cad_0012_00126691_parametric_json_gpt55-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0012_00126691.stl",
-        "gt_render": "gt_renders/text2cad_0012_00126691.png"
-      },
-      "metrics": {
-        "chamfer_distance": 0.000706,
-        "hausdorff_distance": 0.140897,
-        "f_score_005": 0.8786,
-        "f_score_001": 0.2077,
-        "normal_consistency": 0.84,
-        "iou_csg": 0.0971,
-        "iou_voxel": 0.1523,
-        "pred_open_edge_ratio": 0,
-        "acc_cmd": 0.6571,
-        "acc_param": 0.3162,
-        "qa_semantic": 0.25,
-        "qa_parametric": 0.75,
-        "qa_overall": 0.583333
-      }
-    },
-    {
-      "id": "text2cad_0012_00126691_parametric_json_gemini-reason",
-      "task": "text2cad",
-      "case_id": "0012/00126691",
-      "spec": "parametric",
-      "format": "json",
-      "model": "gemini-reason",
-      "valid": true,
-      "condition": "Start with the main reference slab as a rectangular solid length 0.5, width 0.75, height 0.016667, with main extrusion depth 0.0167. Add an upper-side solid rectangular feature with footprint 0.5 by 0.5, flush to the left, right, and back edges of the base and offset 0.25 from the front edge; its reach from the base datum is 0.2334. Add two upper-side solid narrow rectangular edge strips over this rear region, each with footprint 0.0083 by 0.5 and main extrusion depth 0.0083; one strip is flush with the left edge and offset 0.4917 from the right edge, and the other is flush with the right edge and offset 0.4917 from the left edge, with both offset 0.25 from the front and flush with the back. Add the thin upper-side transverse solid feature with footprint 0.5 by 0.250819, flush to the left and right edges, offset 0.24922 from the front edge and 0.249961 from the back edge; its own thickness is 0.0021 and its total reach from the base datum is 0.335265. Preserve the closed internal profile in the added material as a real open void through that local solid. For the aligned stepped portion, treat the upper pad depth as 0.1 and the deeper continuation below it as a separate solid continuation with own depth 0.2167; the deeper footprint is contained within the shallow footprint, shares the left, front, and back edges, and its reach is measured from the same shoulder rather than added end-to-end.",
-      "assets": {
-        "generated": "runs/text2cad_0012_00126691_parametric_json_gemini-reason/generated.json",
-        "generated_json": "runs/text2cad_0012_00126691_parametric_json_gemini-reason/generated.json",
-        "mesh": "runs/text2cad_0012_00126691_parametric_json_gemini-reason/model.stl",
-        "pred_render": "runs/text2cad_0012_00126691_parametric_json_gemini-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0012_00126691.stl",
-        "gt_render": "gt_renders/text2cad_0012_00126691.png"
-      },
-      "metrics": {
-        "chamfer_distance": 0.00072,
-        "hausdorff_distance": 0.143357,
-        "f_score_005": 0.8736,
-        "f_score_001": 0.3777,
-        "normal_consistency": 0.8981,
-        "iou_csg": 0.1477,
-        "iou_voxel": 0.219,
-        "pred_open_edge_ratio": 0,
-        "acc_cmd": 0.5625,
-        "acc_param": 0.3065,
-        "qa_semantic": 0.25,
-        "qa_parametric": 0.625,
-        "qa_overall": 0.5
-      }
-    },
-    {
-      "id": "text2cad_0012_00126691_parametric_json_claude-reason",
-      "task": "text2cad",
-      "case_id": "0012/00126691",
-      "spec": "parametric",
-      "format": "json",
-      "model": "claude-reason",
-      "valid": true,
-      "condition": "Start with the main reference slab as a rectangular solid length 0.5, width 0.75, height 0.016667, with main extrusion depth 0.0167. Add an upper-side solid rectangular feature with footprint 0.5 by 0.5, flush to the left, right, and back edges of the base and offset 0.25 from the front edge; its reach from the base datum is 0.2334. Add two upper-side solid narrow rectangular edge strips over this rear region, each with footprint 0.0083 by 0.5 and main extrusion depth 0.0083; one strip is flush with the left edge and offset 0.4917 from the right edge, and the other is flush with the right edge and offset 0.4917 from the left edge, with both offset 0.25 from the front and flush with the back. Add the thin upper-side transverse solid feature with footprint 0.5 by 0.250819, flush to the left and right edges, offset 0.24922 from the front edge and 0.249961 from the back edge; its own thickness is 0.0021 and its total reach from the base datum is 0.335265. Preserve the closed internal profile in the added material as a real open void through that local solid. For the aligned stepped portion, treat the upper pad depth as 0.1 and the deeper continuation below it as a separate solid continuation with own depth 0.2167; the deeper footprint is contained within the shallow footprint, shares the left, front, and back edges, and its reach is measured from the same shoulder rather than added end-to-end.",
-      "assets": {
-        "generated": "runs/text2cad_0012_00126691_parametric_json_claude-reason/generated.json",
-        "generated_json": "runs/text2cad_0012_00126691_parametric_json_claude-reason/generated.json",
-        "mesh": "runs/text2cad_0012_00126691_parametric_json_claude-reason/model.stl",
-        "pred_render": "runs/text2cad_0012_00126691_parametric_json_claude-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0012_00126691.stl",
-        "gt_render": "gt_renders/text2cad_0012_00126691.png"
-      },
-      "metrics": {
-        "chamfer_distance": 0.000597,
-        "hausdorff_distance": 0.139037,
-        "f_score_005": 0.9138,
-        "f_score_001": 0.3421,
-        "normal_consistency": 0.8889,
-        "iou_csg": 0.0646,
-        "iou_voxel": 0.1162,
-        "pred_open_edge_ratio": 0,
-        "acc_cmd": 0.6571,
-        "acc_param": 0.2868,
-        "qa_semantic": 0.25,
-        "qa_parametric": 0.625,
-        "qa_overall": 0.5
-      }
-    },
-    {
-      "id": "text2cad_0012_00126691_parametric_json_kimi_k26-reason",
-      "task": "text2cad",
-      "case_id": "0012/00126691",
-      "spec": "parametric",
-      "format": "json",
-      "model": "kimi_k26-reason",
-      "valid": true,
-      "condition": "Start with the main reference slab as a rectangular solid length 0.5, width 0.75, height 0.016667, with main extrusion depth 0.0167. Add an upper-side solid rectangular feature with footprint 0.5 by 0.5, flush to the left, right, and back edges of the base and offset 0.25 from the front edge; its reach from the base datum is 0.2334. Add two upper-side solid narrow rectangular edge strips over this rear region, each with footprint 0.0083 by 0.5 and main extrusion depth 0.0083; one strip is flush with the left edge and offset 0.4917 from the right edge, and the other is flush with the right edge and offset 0.4917 from the left edge, with both offset 0.25 from the front and flush with the back. Add the thin upper-side transverse solid feature with footprint 0.5 by 0.250819, flush to the left and right edges, offset 0.24922 from the front edge and 0.249961 from the back edge; its own thickness is 0.0021 and its total reach from the base datum is 0.335265. Preserve the closed internal profile in the added material as a real open void through that local solid. For the aligned stepped portion, treat the upper pad depth as 0.1 and the deeper continuation below it as a separate solid continuation with own depth 0.2167; the deeper footprint is contained within the shallow footprint, shares the left, front, and back edges, and its reach is measured from the same shoulder rather than added end-to-end.",
-      "assets": {
-        "generated": "runs/text2cad_0012_00126691_parametric_json_kimi_k26-reason/generated.json",
-        "generated_json": "runs/text2cad_0012_00126691_parametric_json_kimi_k26-reason/generated.json",
-        "mesh": "runs/text2cad_0012_00126691_parametric_json_kimi_k26-reason/model.stl",
-        "pred_render": "runs/text2cad_0012_00126691_parametric_json_kimi_k26-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0012_00126691.stl",
-        "gt_render": "gt_renders/text2cad_0012_00126691.png"
-      },
-      "metrics": {
-        "chamfer_distance": 0.000674,
-        "hausdorff_distance": 0.138927,
-        "f_score_005": 0.9045,
-        "f_score_001": 0.2414,
-        "normal_consistency": 0.8829,
-        "iou_csg": 0.0953,
-        "iou_voxel": 0.1573,
-        "pred_open_edge_ratio": 0,
-        "acc_cmd": 0.6875,
-        "acc_param": 0.3065,
-        "qa_semantic": 0.5,
-        "qa_parametric": 0.625,
-        "qa_overall": 0.583333
-      }
-    },
-    {
-      "id": "text2cad_0012_00126691_parametric_json_glm-reason",
-      "task": "text2cad",
-      "case_id": "0012/00126691",
-      "spec": "parametric",
-      "format": "json",
-      "model": "glm-reason",
-      "valid": true,
-      "condition": "Start with the main reference slab as a rectangular solid length 0.5, width 0.75, height 0.016667, with main extrusion depth 0.0167. Add an upper-side solid rectangular feature with footprint 0.5 by 0.5, flush to the left, right, and back edges of the base and offset 0.25 from the front edge; its reach from the base datum is 0.2334. Add two upper-side solid narrow rectangular edge strips over this rear region, each with footprint 0.0083 by 0.5 and main extrusion depth 0.0083; one strip is flush with the left edge and offset 0.4917 from the right edge, and the other is flush with the right edge and offset 0.4917 from the left edge, with both offset 0.25 from the front and flush with the back. Add the thin upper-side transverse solid feature with footprint 0.5 by 0.250819, flush to the left and right edges, offset 0.24922 from the front edge and 0.249961 from the back edge; its own thickness is 0.0021 and its total reach from the base datum is 0.335265. Preserve the closed internal profile in the added material as a real open void through that local solid. For the aligned stepped portion, treat the upper pad depth as 0.1 and the deeper continuation below it as a separate solid continuation with own depth 0.2167; the deeper footprint is contained within the shallow footprint, shares the left, front, and back edges, and its reach is measured from the same shoulder rather than added end-to-end.",
-      "assets": {
-        "generated": "runs/text2cad_0012_00126691_parametric_json_glm-reason/generated.json",
-        "generated_json": "runs/text2cad_0012_00126691_parametric_json_glm-reason/generated.json",
-        "mesh": "runs/text2cad_0012_00126691_parametric_json_glm-reason/model.stl",
-        "pred_render": "runs/text2cad_0012_00126691_parametric_json_glm-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0012_00126691.stl",
-        "gt_render": "gt_renders/text2cad_0012_00126691.png"
-      },
-      "metrics": {
-        "chamfer_distance": 0.00156,
-        "hausdorff_distance": 0.227199,
-        "f_score_005": 0.7942,
-        "f_score_001": 0.2508,
-        "normal_consistency": 0.7748,
-        "iou_csg": 0.1282,
-        "iou_voxel": 0.2852,
-        "pred_open_edge_ratio": 0,
-        "acc_cmd": 0.6571,
-        "acc_param": 0.2868,
-        "qa_semantic": 0.5,
-        "qa_parametric": 0.625,
-        "qa_overall": 0.583333
-      }
-    },
-    {
-      "id": "text2cad_0012_00126691_parametric_json_doubao-reason",
-      "task": "text2cad",
-      "case_id": "0012/00126691",
-      "spec": "parametric",
-      "format": "json",
-      "model": "doubao-reason",
-      "valid": true,
-      "condition": "Start with the main reference slab as a rectangular solid length 0.5, width 0.75, height 0.016667, with main extrusion depth 0.0167. Add an upper-side solid rectangular feature with footprint 0.5 by 0.5, flush to the left, right, and back edges of the base and offset 0.25 from the front edge; its reach from the base datum is 0.2334. Add two upper-side solid narrow rectangular edge strips over this rear region, each with footprint 0.0083 by 0.5 and main extrusion depth 0.0083; one strip is flush with the left edge and offset 0.4917 from the right edge, and the other is flush with the right edge and offset 0.4917 from the left edge, with both offset 0.25 from the front and flush with the back. Add the thin upper-side transverse solid feature with footprint 0.5 by 0.250819, flush to the left and right edges, offset 0.24922 from the front edge and 0.249961 from the back edge; its own thickness is 0.0021 and its total reach from the base datum is 0.335265. Preserve the closed internal profile in the added material as a real open void through that local solid. For the aligned stepped portion, treat the upper pad depth as 0.1 and the deeper continuation below it as a separate solid continuation with own depth 0.2167; the deeper footprint is contained within the shallow footprint, shares the left, front, and back edges, and its reach is measured from the same shoulder rather than added end-to-end.",
-      "assets": {
-        "generated": "runs/text2cad_0012_00126691_parametric_json_doubao-reason/generated.json",
-        "generated_json": "runs/text2cad_0012_00126691_parametric_json_doubao-reason/generated.json",
-        "mesh": "runs/text2cad_0012_00126691_parametric_json_doubao-reason/model.stl",
-        "pred_render": "runs/text2cad_0012_00126691_parametric_json_doubao-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0012_00126691.stl",
-        "gt_render": "gt_renders/text2cad_0012_00126691.png"
-      },
-      "metrics": {
-        "chamfer_distance": 0.003276,
-        "hausdorff_distance": 0.228614,
-        "f_score_005": 0.7348,
-        "f_score_001": 0.0811,
-        "normal_consistency": 0.6634,
-        "iou_csg": 0.01,
-        "iou_voxel": 0.0346,
-        "pred_open_edge_ratio": 0,
-        "acc_cmd": 0.6571,
-        "acc_param": 0.2574,
-        "qa_semantic": 0.5,
-        "qa_parametric": 0.5,
-        "qa_overall": 0.5
-      }
-    },
-    {
-      "id": "text2cad_0012_00126691_parametric_json_deepseek_v4pro-reason",
-      "task": "text2cad",
-      "case_id": "0012/00126691",
-      "spec": "parametric",
-      "format": "json",
-      "model": "deepseek_v4pro-reason",
-      "valid": true,
-      "condition": "Start with the main reference slab as a rectangular solid length 0.5, width 0.75, height 0.016667, with main extrusion depth 0.0167. Add an upper-side solid rectangular feature with footprint 0.5 by 0.5, flush to the left, right, and back edges of the base and offset 0.25 from the front edge; its reach from the base datum is 0.2334. Add two upper-side solid narrow rectangular edge strips over this rear region, each with footprint 0.0083 by 0.5 and main extrusion depth 0.0083; one strip is flush with the left edge and offset 0.4917 from the right edge, and the other is flush with the right edge and offset 0.4917 from the left edge, with both offset 0.25 from the front and flush with the back. Add the thin upper-side transverse solid feature with footprint 0.5 by 0.250819, flush to the left and right edges, offset 0.24922 from the front edge and 0.249961 from the back edge; its own thickness is 0.0021 and its total reach from the base datum is 0.335265. Preserve the closed internal profile in the added material as a real open void through that local solid. For the aligned stepped portion, treat the upper pad depth as 0.1 and the deeper continuation below it as a separate solid continuation with own depth 0.2167; the deeper footprint is contained within the shallow footprint, shares the left, front, and back edges, and its reach is measured from the same shoulder rather than added end-to-end.",
-      "assets": {
-        "generated": "runs/text2cad_0012_00126691_parametric_json_deepseek_v4pro-reason/generated.json",
-        "generated_json": "runs/text2cad_0012_00126691_parametric_json_deepseek_v4pro-reason/generated.json",
-        "mesh": "runs/text2cad_0012_00126691_parametric_json_deepseek_v4pro-reason/model.stl",
-        "pred_render": "runs/text2cad_0012_00126691_parametric_json_deepseek_v4pro-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0012_00126691.stl",
-        "gt_render": "gt_renders/text2cad_0012_00126691.png"
-      },
-      "metrics": {
-        "chamfer_distance": 0.001231,
-        "hausdorff_distance": 0.160193,
-        "f_score_005": 0.8212,
-        "f_score_001": 0.2217,
-        "normal_consistency": 0.7648,
-        "iou_csg": 0.0481,
-        "iou_voxel": 0.063,
-        "pred_open_edge_ratio": 0,
-        "acc_cmd": 0.575,
-        "acc_param": 0.2727,
-        "qa_semantic": 0.75,
-        "qa_parametric": 0.625,
-        "qa_overall": 0.666667
-      }
-    },
-    {
-      "id": "text2cad_0012_00126691_parametric_json_qwen-reason",
-      "task": "text2cad",
-      "case_id": "0012/00126691",
-      "spec": "parametric",
-      "format": "json",
-      "model": "qwen-reason",
-      "valid": true,
-      "condition": "Start with the main reference slab as a rectangular solid length 0.5, width 0.75, height 0.016667, with main extrusion depth 0.0167. Add an upper-side solid rectangular feature with footprint 0.5 by 0.5, flush to the left, right, and back edges of the base and offset 0.25 from the front edge; its reach from the base datum is 0.2334. Add two upper-side solid narrow rectangular edge strips over this rear region, each with footprint 0.0083 by 0.5 and main extrusion depth 0.0083; one strip is flush with the left edge and offset 0.4917 from the right edge, and the other is flush with the right edge and offset 0.4917 from the left edge, with both offset 0.25 from the front and flush with the back. Add the thin upper-side transverse solid feature with footprint 0.5 by 0.250819, flush to the left and right edges, offset 0.24922 from the front edge and 0.249961 from the back edge; its own thickness is 0.0021 and its total reach from the base datum is 0.335265. Preserve the closed internal profile in the added material as a real open void through that local solid. For the aligned stepped portion, treat the upper pad depth as 0.1 and the deeper continuation below it as a separate solid continuation with own depth 0.2167; the deeper footprint is contained within the shallow footprint, shares the left, front, and back edges, and its reach is measured from the same shoulder rather than added end-to-end.",
-      "assets": {
-        "generated": "runs/text2cad_0012_00126691_parametric_json_qwen-reason/generated.json",
-        "generated_json": "runs/text2cad_0012_00126691_parametric_json_qwen-reason/generated.json",
-        "mesh": "runs/text2cad_0012_00126691_parametric_json_qwen-reason/model.stl",
-        "pred_render": "runs/text2cad_0012_00126691_parametric_json_qwen-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0012_00126691.stl",
-        "gt_render": "gt_renders/text2cad_0012_00126691.png"
-      },
-      "metrics": {
-        "chamfer_distance": 0.00072,
-        "hausdorff_distance": 0.143357,
-        "f_score_005": 0.8736,
-        "f_score_001": 0.3777,
-        "normal_consistency": 0.8981,
-        "iou_csg": 0.1477,
-        "iou_voxel": 0.219,
-        "pred_open_edge_ratio": 0,
-        "acc_cmd": 0.5625,
-        "acc_param": 0.3065,
-        "qa_semantic": 0.25,
-        "qa_parametric": 0.625,
-        "qa_overall": 0.5
-      }
-    },
-    {
-      "id": "text2cad_0012_00126691_parametric_json_mimo_v25-reason",
-      "task": "text2cad",
-      "case_id": "0012/00126691",
-      "spec": "parametric",
-      "format": "json",
-      "model": "mimo_v25-reason",
-      "valid": true,
-      "condition": "Start with the main reference slab as a rectangular solid length 0.5, width 0.75, height 0.016667, with main extrusion depth 0.0167. Add an upper-side solid rectangular feature with footprint 0.5 by 0.5, flush to the left, right, and back edges of the base and offset 0.25 from the front edge; its reach from the base datum is 0.2334. Add two upper-side solid narrow rectangular edge strips over this rear region, each with footprint 0.0083 by 0.5 and main extrusion depth 0.0083; one strip is flush with the left edge and offset 0.4917 from the right edge, and the other is flush with the right edge and offset 0.4917 from the left edge, with both offset 0.25 from the front and flush with the back. Add the thin upper-side transverse solid feature with footprint 0.5 by 0.250819, flush to the left and right edges, offset 0.24922 from the front edge and 0.249961 from the back edge; its own thickness is 0.0021 and its total reach from the base datum is 0.335265. Preserve the closed internal profile in the added material as a real open void through that local solid. For the aligned stepped portion, treat the upper pad depth as 0.1 and the deeper continuation below it as a separate solid continuation with own depth 0.2167; the deeper footprint is contained within the shallow footprint, shares the left, front, and back edges, and its reach is measured from the same shoulder rather than added end-to-end.",
-      "assets": {
-        "generated": "runs/text2cad_0012_00126691_parametric_json_mimo_v25-reason/generated.json",
-        "generated_json": "runs/text2cad_0012_00126691_parametric_json_mimo_v25-reason/generated.json",
-        "mesh": "runs/text2cad_0012_00126691_parametric_json_mimo_v25-reason/model.stl",
-        "pred_render": "runs/text2cad_0012_00126691_parametric_json_mimo_v25-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0012_00126691.stl",
-        "gt_render": "gt_renders/text2cad_0012_00126691.png"
-      },
-      "metrics": {
-        "chamfer_distance": 0.004854,
-        "hausdorff_distance": 0.310108,
-        "f_score_005": 0.4437,
-        "f_score_001": 0.0419,
-        "normal_consistency": 0.4391,
-        "iou_csg": 0.0527,
-        "iou_voxel": 0.0876,
-        "pred_open_edge_ratio": 0,
-        "acc_cmd": 0.6571,
-        "acc_param": 0.4485,
-        "qa_semantic": 0.5,
-        "qa_parametric": 0.5,
-        "qa_overall": 0.5
-      }
-    },
-    {
-      "id": "text2cad_0012_00126691_descriptive_json_gpt55-reason",
-      "task": "text2cad",
-      "case_id": "0012/00126691",
-      "spec": "descriptive",
-      "format": "json",
-      "model": "gpt55-reason",
-      "valid": true,
-      "condition": "The model is built from a thin rectangular base slab with all other visible features added as solid material rather than cut away from it. A larger raised rectangular portion occupies the rear area of the base, leaving a front strip of the base exposed. Narrow raised strips run along the left and right sides of that raised area, and a very thin transverse added feature spans across the width with a real internal opening rather than a surface mark. The vertical extents are stepped: some added material is shallow while one aligned continuation reaches deeper from the same shoulder, so the underside is not a single flat level.",
-      "assets": {
-        "generated": "runs/text2cad_0012_00126691_descriptive_json_gpt55-reason/generated.json",
-        "generated_json": "runs/text2cad_0012_00126691_descriptive_json_gpt55-reason/generated.json",
-        "mesh": "runs/text2cad_0012_00126691_descriptive_json_gpt55-reason/model.stl",
-        "pred_render": "runs/text2cad_0012_00126691_descriptive_json_gpt55-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0012_00126691.stl",
-        "gt_render": "gt_renders/text2cad_0012_00126691.png"
-      },
-      "metrics": {
-        "acc_cmd": 0.7059,
-        "acc_param": 0.0833,
-        "qa_overall": 1,
-        "qa_semantic": 1,
-        "judge_semantic": 1
-      }
-    },
-    {
-      "id": "text2cad_0012_00126691_descriptive_json_gemini-reason",
-      "task": "text2cad",
-      "case_id": "0012/00126691",
-      "spec": "descriptive",
-      "format": "json",
-      "model": "gemini-reason",
-      "valid": true,
-      "condition": "The model is built from a thin rectangular base slab with all other visible features added as solid material rather than cut away from it. A larger raised rectangular portion occupies the rear area of the base, leaving a front strip of the base exposed. Narrow raised strips run along the left and right sides of that raised area, and a very thin transverse added feature spans across the width with a real internal opening rather than a surface mark. The vertical extents are stepped: some added material is shallow while one aligned continuation reaches deeper from the same shoulder, so the underside is not a single flat level.",
-      "assets": {
-        "generated": "runs/text2cad_0012_00126691_descriptive_json_gemini-reason/generated.json",
-        "generated_json": "runs/text2cad_0012_00126691_descriptive_json_gemini-reason/generated.json",
-        "mesh": "runs/text2cad_0012_00126691_descriptive_json_gemini-reason/model.stl",
-        "pred_render": "runs/text2cad_0012_00126691_descriptive_json_gemini-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0012_00126691.stl",
-        "gt_render": "gt_renders/text2cad_0012_00126691.png"
-      },
-      "metrics": {
-        "acc_cmd": 0.6875,
-        "acc_param": 0.1371,
-        "qa_overall": 0.75,
-        "qa_semantic": 0.75,
-        "judge_semantic": 2
-      }
-    },
-    {
-      "id": "text2cad_0012_00126691_descriptive_json_claude-reason",
-      "task": "text2cad",
-      "case_id": "0012/00126691",
-      "spec": "descriptive",
-      "format": "json",
-      "model": "claude-reason",
-      "valid": true,
-      "condition": "The model is built from a thin rectangular base slab with all other visible features added as solid material rather than cut away from it. A larger raised rectangular portion occupies the rear area of the base, leaving a front strip of the base exposed. Narrow raised strips run along the left and right sides of that raised area, and a very thin transverse added feature spans across the width with a real internal opening rather than a surface mark. The vertical extents are stepped: some added material is shallow while one aligned continuation reaches deeper from the same shoulder, so the underside is not a single flat level.",
-      "assets": {
-        "generated": "runs/text2cad_0012_00126691_descriptive_json_claude-reason/generated.json",
-        "generated_json": "runs/text2cad_0012_00126691_descriptive_json_claude-reason/generated.json",
-        "mesh": "runs/text2cad_0012_00126691_descriptive_json_claude-reason/model.stl",
-        "pred_render": "runs/text2cad_0012_00126691_descriptive_json_claude-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0012_00126691.stl",
-        "gt_render": "gt_renders/text2cad_0012_00126691.png"
-      },
-      "metrics": {
-        "acc_cmd": 0.7059,
-        "acc_param": 0.0909,
-        "qa_overall": 1,
-        "qa_semantic": 1,
-        "judge_semantic": 1
-      }
-    },
-    {
-      "id": "text2cad_0012_00126691_descriptive_json_kimi_k26-reason",
-      "task": "text2cad",
-      "case_id": "0012/00126691",
-      "spec": "descriptive",
-      "format": "json",
-      "model": "kimi_k26-reason",
-      "valid": true,
-      "condition": "The model is built from a thin rectangular base slab with all other visible features added as solid material rather than cut away from it. A larger raised rectangular portion occupies the rear area of the base, leaving a front strip of the base exposed. Narrow raised strips run along the left and right sides of that raised area, and a very thin transverse added feature spans across the width with a real internal opening rather than a surface mark. The vertical extents are stepped: some added material is shallow while one aligned continuation reaches deeper from the same shoulder, so the underside is not a single flat level.",
-      "assets": {
-        "generated": "runs/text2cad_0012_00126691_descriptive_json_kimi_k26-reason/generated.json",
-        "generated_json": "runs/text2cad_0012_00126691_descriptive_json_kimi_k26-reason/generated.json",
-        "mesh": "runs/text2cad_0012_00126691_descriptive_json_kimi_k26-reason/model.stl",
-        "pred_render": "runs/text2cad_0012_00126691_descriptive_json_kimi_k26-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0012_00126691.stl",
-        "gt_render": "gt_renders/text2cad_0012_00126691.png"
-      },
-      "metrics": {
-        "acc_cmd": 0.6875,
-        "acc_param": 0.1371,
-        "qa_overall": 0.75,
-        "qa_semantic": 0.75,
-        "judge_semantic": 1
-      }
-    },
-    {
-      "id": "text2cad_0012_00126691_descriptive_json_glm-reason",
-      "task": "text2cad",
-      "case_id": "0012/00126691",
-      "spec": "descriptive",
-      "format": "json",
-      "model": "glm-reason",
-      "valid": true,
-      "condition": "The model is built from a thin rectangular base slab with all other visible features added as solid material rather than cut away from it. A larger raised rectangular portion occupies the rear area of the base, leaving a front strip of the base exposed. Narrow raised strips run along the left and right sides of that raised area, and a very thin transverse added feature spans across the width with a real internal opening rather than a surface mark. The vertical extents are stepped: some added material is shallow while one aligned continuation reaches deeper from the same shoulder, so the underside is not a single flat level.",
-      "assets": {
-        "generated": "runs/text2cad_0012_00126691_descriptive_json_glm-reason/generated.json",
-        "generated_json": "runs/text2cad_0012_00126691_descriptive_json_glm-reason/generated.json",
-        "mesh": "runs/text2cad_0012_00126691_descriptive_json_glm-reason/model.stl",
-        "pred_render": "runs/text2cad_0012_00126691_descriptive_json_glm-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0012_00126691.stl",
-        "gt_render": "gt_renders/text2cad_0012_00126691.png"
-      },
-      "metrics": {
-        "chamfer_distance": 0.867334,
-        "hausdorff_distance": 2.148932,
-        "f_score_005": 0,
-        "f_score_001": 0,
-        "normal_consistency": 0.4426,
-        "iou_csg": 0.0013,
-        "iou_voxel": 0.0062,
-        "pred_open_edge_ratio": 0,
-        "acc_cmd": 0.7059,
-        "acc_param": 0.1515,
-        "qa_overall": 1,
-        "qa_semantic": 1,
-        "judge_semantic": 10
-      }
-    },
-    {
-      "id": "text2cad_0012_00126691_descriptive_json_doubao-reason",
-      "task": "text2cad",
-      "case_id": "0012/00126691",
-      "spec": "descriptive",
-      "format": "json",
-      "model": "doubao-reason",
-      "valid": true,
-      "condition": "The model is built from a thin rectangular base slab with all other visible features added as solid material rather than cut away from it. A larger raised rectangular portion occupies the rear area of the base, leaving a front strip of the base exposed. Narrow raised strips run along the left and right sides of that raised area, and a very thin transverse added feature spans across the width with a real internal opening rather than a surface mark. The vertical extents are stepped: some added material is shallow while one aligned continuation reaches deeper from the same shoulder, so the underside is not a single flat level.",
-      "assets": {
-        "generated": "runs/text2cad_0012_00126691_descriptive_json_doubao-reason/generated.json",
-        "generated_json": "runs/text2cad_0012_00126691_descriptive_json_doubao-reason/generated.json",
-        "mesh": "runs/text2cad_0012_00126691_descriptive_json_doubao-reason/model.stl",
-        "pred_render": "runs/text2cad_0012_00126691_descriptive_json_doubao-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0012_00126691.stl",
-        "gt_render": "gt_renders/text2cad_0012_00126691.png"
-      },
-      "metrics": {
-        "acc_cmd": 0.6875,
-        "acc_param": 0.1694,
-        "qa_overall": 0.5,
-        "qa_semantic": 0.5,
-        "judge_semantic": 9
-      }
-    },
-    {
-      "id": "text2cad_0012_00126691_descriptive_json_deepseek_v4pro-reason",
-      "task": "text2cad",
-      "case_id": "0012/00126691",
-      "spec": "descriptive",
-      "format": "json",
-      "model": "deepseek_v4pro-reason",
-      "valid": true,
-      "condition": "The model is built from a thin rectangular base slab with all other visible features added as solid material rather than cut away from it. A larger raised rectangular portion occupies the rear area of the base, leaving a front strip of the base exposed. Narrow raised strips run along the left and right sides of that raised area, and a very thin transverse added feature spans across the width with a real internal opening rather than a surface mark. The vertical extents are stepped: some added material is shallow while one aligned continuation reaches deeper from the same shoulder, so the underside is not a single flat level.",
-      "assets": {
-        "generated": "runs/text2cad_0012_00126691_descriptive_json_deepseek_v4pro-reason/generated.json",
-        "generated_json": "runs/text2cad_0012_00126691_descriptive_json_deepseek_v4pro-reason/generated.json",
-        "mesh": "runs/text2cad_0012_00126691_descriptive_json_deepseek_v4pro-reason/model.stl",
-        "pred_render": "runs/text2cad_0012_00126691_descriptive_json_deepseek_v4pro-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0012_00126691.stl",
-        "gt_render": "gt_renders/text2cad_0012_00126691.png"
-      },
-      "metrics": {
-        "acc_cmd": 0.6757,
-        "acc_param": 0.1458,
-        "qa_overall": 0.75,
-        "qa_semantic": 0.75,
-        "judge_semantic": 1
-      }
-    },
-    {
-      "id": "text2cad_0012_00126691_descriptive_json_qwen-reason",
-      "task": "text2cad",
-      "case_id": "0012/00126691",
-      "spec": "descriptive",
-      "format": "json",
-      "model": "qwen-reason",
-      "valid": true,
-      "condition": "The model is built from a thin rectangular base slab with all other visible features added as solid material rather than cut away from it. A larger raised rectangular portion occupies the rear area of the base, leaving a front strip of the base exposed. Narrow raised strips run along the left and right sides of that raised area, and a very thin transverse added feature spans across the width with a real internal opening rather than a surface mark. The vertical extents are stepped: some added material is shallow while one aligned continuation reaches deeper from the same shoulder, so the underside is not a single flat level.",
-      "assets": {
-        "generated": "runs/text2cad_0012_00126691_descriptive_json_qwen-reason/generated.json",
-        "generated_json": "runs/text2cad_0012_00126691_descriptive_json_qwen-reason/generated.json",
-        "mesh": "runs/text2cad_0012_00126691_descriptive_json_qwen-reason/model.stl",
-        "pred_render": "runs/text2cad_0012_00126691_descriptive_json_qwen-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0012_00126691.stl",
-        "gt_render": "gt_renders/text2cad_0012_00126691.png"
-      },
-      "metrics": {
-        "acc_cmd": 0.5625,
-        "acc_param": 0.2258,
-        "qa_overall": 0.5,
-        "qa_semantic": 0.5,
-        "judge_semantic": 1
-      }
-    },
-    {
-      "id": "text2cad_0012_00126691_descriptive_json_mimo_v25-reason",
-      "task": "text2cad",
-      "case_id": "0012/00126691",
-      "spec": "descriptive",
-      "format": "json",
-      "model": "mimo_v25-reason",
-      "valid": true,
-      "condition": "The model is built from a thin rectangular base slab with all other visible features added as solid material rather than cut away from it. A larger raised rectangular portion occupies the rear area of the base, leaving a front strip of the base exposed. Narrow raised strips run along the left and right sides of that raised area, and a very thin transverse added feature spans across the width with a real internal opening rather than a surface mark. The vertical extents are stepped: some added material is shallow while one aligned continuation reaches deeper from the same shoulder, so the underside is not a single flat level.",
-      "assets": {
-        "generated": "runs/text2cad_0012_00126691_descriptive_json_mimo_v25-reason/generated.json",
-        "generated_json": "runs/text2cad_0012_00126691_descriptive_json_mimo_v25-reason/generated.json",
-        "mesh": "runs/text2cad_0012_00126691_descriptive_json_mimo_v25-reason/model.stl",
-        "pred_render": "runs/text2cad_0012_00126691_descriptive_json_mimo_v25-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0012_00126691.stl",
-        "gt_render": "gt_renders/text2cad_0012_00126691.png"
-      },
-      "metrics": {
-        "acc_cmd": 0.6875,
-        "acc_param": 0.1935,
-        "qa_overall": 0,
-        "qa_semantic": 0,
-        "judge_semantic": 1
-      }
-    },
-    {
-      "id": "text2cad_0012_00126691_descriptive_openscad_gpt55-reason",
-      "task": "text2cad",
-      "case_id": "0012/00126691",
-      "spec": "descriptive",
-      "format": "openscad",
-      "model": "gpt55-reason",
-      "valid": true,
-      "condition": "The model is built from a thin rectangular base slab with all other visible features added as solid material rather than cut away from it. A larger raised rectangular portion occupies the rear area of the base, leaving a front strip of the base exposed. Narrow raised strips run along the left and right sides of that raised area, and a very thin transverse added feature spans across the width with a real internal opening rather than a surface mark. The vertical extents are stepped: some added material is shallow while one aligned continuation reaches deeper from the same shoulder, so the underside is not a single flat level.",
-      "assets": {
-        "generated": "runs/text2cad_0012_00126691_descriptive_openscad_gpt55-reason/generated.scad",
-        "generated_json": "runs/text2cad_0012_00126691_descriptive_openscad_gpt55-reason/generated.json",
-        "mesh": "runs/text2cad_0012_00126691_descriptive_openscad_gpt55-reason/model.stl",
-        "pred_render": "runs/text2cad_0012_00126691_descriptive_openscad_gpt55-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0012_00126691.stl",
-        "gt_render": "gt_renders/text2cad_0012_00126691.png"
-      },
-      "metrics": {
-        "qa_semantic": 0.75,
-        "judge_semantic": 3,
-        "qa_overall": 0.75
-      }
-    },
-    {
-      "id": "text2cad_0012_00126691_descriptive_openscad_gemini-reason",
-      "task": "text2cad",
-      "case_id": "0012/00126691",
-      "spec": "descriptive",
-      "format": "openscad",
-      "model": "gemini-reason",
-      "valid": true,
-      "condition": "The model is built from a thin rectangular base slab with all other visible features added as solid material rather than cut away from it. A larger raised rectangular portion occupies the rear area of the base, leaving a front strip of the base exposed. Narrow raised strips run along the left and right sides of that raised area, and a very thin transverse added feature spans across the width with a real internal opening rather than a surface mark. The vertical extents are stepped: some added material is shallow while one aligned continuation reaches deeper from the same shoulder, so the underside is not a single flat level.",
-      "assets": {
-        "generated": "runs/text2cad_0012_00126691_descriptive_openscad_gemini-reason/generated.scad",
-        "generated_json": "runs/text2cad_0012_00126691_descriptive_openscad_gemini-reason/generated.json",
-        "mesh": "runs/text2cad_0012_00126691_descriptive_openscad_gemini-reason/model.stl",
-        "pred_render": "runs/text2cad_0012_00126691_descriptive_openscad_gemini-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0012_00126691.stl",
-        "gt_render": "gt_renders/text2cad_0012_00126691.png"
-      },
-      "metrics": {
-        "qa_semantic": 1,
-        "judge_semantic": 10,
-        "qa_overall": 1
-      }
-    },
-    {
-      "id": "text2cad_0012_00126691_descriptive_openscad_claude-reason",
-      "task": "text2cad",
-      "case_id": "0012/00126691",
-      "spec": "descriptive",
-      "format": "openscad",
-      "model": "claude-reason",
-      "valid": true,
-      "condition": "The model is built from a thin rectangular base slab with all other visible features added as solid material rather than cut away from it. A larger raised rectangular portion occupies the rear area of the base, leaving a front strip of the base exposed. Narrow raised strips run along the left and right sides of that raised area, and a very thin transverse added feature spans across the width with a real internal opening rather than a surface mark. The vertical extents are stepped: some added material is shallow while one aligned continuation reaches deeper from the same shoulder, so the underside is not a single flat level.",
-      "assets": {
-        "generated": "runs/text2cad_0012_00126691_descriptive_openscad_claude-reason/generated.scad",
-        "generated_json": "runs/text2cad_0012_00126691_descriptive_openscad_claude-reason/generated.json",
-        "mesh": "runs/text2cad_0012_00126691_descriptive_openscad_claude-reason/model.stl",
-        "pred_render": "runs/text2cad_0012_00126691_descriptive_openscad_claude-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0012_00126691.stl",
-        "gt_render": "gt_renders/text2cad_0012_00126691.png"
-      },
-      "metrics": {
-        "qa_semantic": 1,
-        "judge_semantic": 9,
-        "qa_overall": 1
-      }
-    },
-    {
-      "id": "text2cad_0012_00126691_descriptive_openscad_kimi_k26-reason",
-      "task": "text2cad",
-      "case_id": "0012/00126691",
-      "spec": "descriptive",
-      "format": "openscad",
-      "model": "kimi_k26-reason",
-      "valid": true,
-      "condition": "The model is built from a thin rectangular base slab with all other visible features added as solid material rather than cut away from it. A larger raised rectangular portion occupies the rear area of the base, leaving a front strip of the base exposed. Narrow raised strips run along the left and right sides of that raised area, and a very thin transverse added feature spans across the width with a real internal opening rather than a surface mark. The vertical extents are stepped: some added material is shallow while one aligned continuation reaches deeper from the same shoulder, so the underside is not a single flat level.",
-      "assets": {
-        "generated": "runs/text2cad_0012_00126691_descriptive_openscad_kimi_k26-reason/generated.scad",
-        "generated_json": "runs/text2cad_0012_00126691_descriptive_openscad_kimi_k26-reason/generated.json",
-        "mesh": "runs/text2cad_0012_00126691_descriptive_openscad_kimi_k26-reason/model.stl",
-        "pred_render": "runs/text2cad_0012_00126691_descriptive_openscad_kimi_k26-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0012_00126691.stl",
-        "gt_render": "gt_renders/text2cad_0012_00126691.png"
-      },
-      "metrics": {
-        "qa_semantic": 1,
-        "judge_semantic": 10,
-        "qa_overall": 1
-      }
-    },
-    {
-      "id": "text2cad_0012_00126691_descriptive_openscad_glm-reason",
-      "task": "text2cad",
-      "case_id": "0012/00126691",
-      "spec": "descriptive",
-      "format": "openscad",
-      "model": "glm-reason",
-      "valid": true,
-      "condition": "The model is built from a thin rectangular base slab with all other visible features added as solid material rather than cut away from it. A larger raised rectangular portion occupies the rear area of the base, leaving a front strip of the base exposed. Narrow raised strips run along the left and right sides of that raised area, and a very thin transverse added feature spans across the width with a real internal opening rather than a surface mark. The vertical extents are stepped: some added material is shallow while one aligned continuation reaches deeper from the same shoulder, so the underside is not a single flat level.",
-      "assets": {
-        "generated": "runs/text2cad_0012_00126691_descriptive_openscad_glm-reason/generated.scad",
-        "generated_json": "runs/text2cad_0012_00126691_descriptive_openscad_glm-reason/generated.json",
-        "mesh": "runs/text2cad_0012_00126691_descriptive_openscad_glm-reason/model.stl",
-        "pred_render": "runs/text2cad_0012_00126691_descriptive_openscad_glm-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0012_00126691.stl",
-        "gt_render": "gt_renders/text2cad_0012_00126691.png"
-      },
-      "metrics": {
-        "qa_semantic": 1,
-        "judge_semantic": 10,
-        "qa_overall": 1
-      }
-    },
-    {
-      "id": "text2cad_0012_00126691_descriptive_openscad_doubao-reason",
-      "task": "text2cad",
-      "case_id": "0012/00126691",
-      "spec": "descriptive",
-      "format": "openscad",
-      "model": "doubao-reason",
-      "valid": true,
-      "condition": "The model is built from a thin rectangular base slab with all other visible features added as solid material rather than cut away from it. A larger raised rectangular portion occupies the rear area of the base, leaving a front strip of the base exposed. Narrow raised strips run along the left and right sides of that raised area, and a very thin transverse added feature spans across the width with a real internal opening rather than a surface mark. The vertical extents are stepped: some added material is shallow while one aligned continuation reaches deeper from the same shoulder, so the underside is not a single flat level.",
-      "assets": {
-        "generated": "runs/text2cad_0012_00126691_descriptive_openscad_doubao-reason/generated.scad",
-        "generated_json": "runs/text2cad_0012_00126691_descriptive_openscad_doubao-reason/generated.json",
-        "mesh": "runs/text2cad_0012_00126691_descriptive_openscad_doubao-reason/model.stl",
-        "pred_render": "runs/text2cad_0012_00126691_descriptive_openscad_doubao-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0012_00126691.stl",
-        "gt_render": "gt_renders/text2cad_0012_00126691.png"
-      },
-      "metrics": {
-        "qa_semantic": 1,
-        "judge_semantic": 3,
-        "qa_overall": 1
-      }
-    },
-    {
-      "id": "text2cad_0012_00126691_descriptive_openscad_deepseek_v4pro-reason",
-      "task": "text2cad",
-      "case_id": "0012/00126691",
-      "spec": "descriptive",
-      "format": "openscad",
-      "model": "deepseek_v4pro-reason",
-      "valid": true,
-      "condition": "The model is built from a thin rectangular base slab with all other visible features added as solid material rather than cut away from it. A larger raised rectangular portion occupies the rear area of the base, leaving a front strip of the base exposed. Narrow raised strips run along the left and right sides of that raised area, and a very thin transverse added feature spans across the width with a real internal opening rather than a surface mark. The vertical extents are stepped: some added material is shallow while one aligned continuation reaches deeper from the same shoulder, so the underside is not a single flat level.",
-      "assets": {
-        "generated": "runs/text2cad_0012_00126691_descriptive_openscad_deepseek_v4pro-reason/generated.scad",
-        "generated_json": "runs/text2cad_0012_00126691_descriptive_openscad_deepseek_v4pro-reason/generated.json",
-        "mesh": "runs/text2cad_0012_00126691_descriptive_openscad_deepseek_v4pro-reason/model.stl",
-        "pred_render": "runs/text2cad_0012_00126691_descriptive_openscad_deepseek_v4pro-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0012_00126691.stl",
-        "gt_render": "gt_renders/text2cad_0012_00126691.png"
-      },
-      "metrics": {
-        "qa_semantic": 1,
-        "judge_semantic": 9,
-        "qa_overall": 1
-      }
-    },
-    {
-      "id": "text2cad_0012_00126691_descriptive_openscad_qwen-reason",
-      "task": "text2cad",
-      "case_id": "0012/00126691",
-      "spec": "descriptive",
-      "format": "openscad",
-      "model": "qwen-reason",
-      "valid": true,
-      "condition": "The model is built from a thin rectangular base slab with all other visible features added as solid material rather than cut away from it. A larger raised rectangular portion occupies the rear area of the base, leaving a front strip of the base exposed. Narrow raised strips run along the left and right sides of that raised area, and a very thin transverse added feature spans across the width with a real internal opening rather than a surface mark. The vertical extents are stepped: some added material is shallow while one aligned continuation reaches deeper from the same shoulder, so the underside is not a single flat level.",
-      "assets": {
-        "generated": "runs/text2cad_0012_00126691_descriptive_openscad_qwen-reason/generated.scad",
-        "generated_json": "runs/text2cad_0012_00126691_descriptive_openscad_qwen-reason/generated.json",
-        "mesh": "runs/text2cad_0012_00126691_descriptive_openscad_qwen-reason/model.stl",
-        "pred_render": "runs/text2cad_0012_00126691_descriptive_openscad_qwen-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0012_00126691.stl",
-        "gt_render": "gt_renders/text2cad_0012_00126691.png"
-      },
-      "metrics": {
-        "qa_semantic": 0.75,
-        "judge_semantic": 8,
-        "qa_overall": 0.75
-      }
-    },
-    {
-      "id": "text2cad_0012_00126691_descriptive_openscad_mimo_v25-reason",
-      "task": "text2cad",
-      "case_id": "0012/00126691",
-      "spec": "descriptive",
-      "format": "openscad",
-      "model": "mimo_v25-reason",
-      "valid": true,
-      "condition": "The model is built from a thin rectangular base slab with all other visible features added as solid material rather than cut away from it. A larger raised rectangular portion occupies the rear area of the base, leaving a front strip of the base exposed. Narrow raised strips run along the left and right sides of that raised area, and a very thin transverse added feature spans across the width with a real internal opening rather than a surface mark. The vertical extents are stepped: some added material is shallow while one aligned continuation reaches deeper from the same shoulder, so the underside is not a single flat level.",
-      "assets": {
-        "generated": "runs/text2cad_0012_00126691_descriptive_openscad_mimo_v25-reason/generated.scad",
-        "generated_json": "runs/text2cad_0012_00126691_descriptive_openscad_mimo_v25-reason/generated.json",
-        "mesh": "runs/text2cad_0012_00126691_descriptive_openscad_mimo_v25-reason/model.stl",
-        "pred_render": "runs/text2cad_0012_00126691_descriptive_openscad_mimo_v25-reason/pred_render.png",
-        "gt_mesh": "gt_meshes/text2cad_0012_00126691.stl",
-        "gt_render": "gt_renders/text2cad_0012_00126691.png"
-      },
-      "metrics": {
-        "qa_semantic": 0.25,
-        "judge_semantic": 10,
-        "qa_overall": 0.25
-      }
-    },
-    {
       "id": "text2cad_0005_00051572_descriptive_json_gpt55-reason",
       "task": "text2cad",
       "case_id": "0005/00051572",
@@ -11443,6 +10435,1050 @@
         "qa_overall": 0.916667,
         "qa_semantic": 0.75,
         "qa_parametric": 1
+      }
+    },
+    {
+      "id": "text2cad_0015_00155951_descriptive_json_gpt55-reason",
+      "task": "text2cad",
+      "case_id": "0015/00155951",
+      "spec": "descriptive",
+      "format": "json",
+      "model": "gpt55-reason",
+      "valid": true,
+      "condition": "The main body is a solid, shallow plate with an arc-based outline and a real through opening at its center. A shallow annular collar is added on the underside around that central opening, so it should be treated as a hollow ring rather than a filled disk or rectangular pad. Tall solid rounded tabs rise from the upper side at the two ends of the plate, and each tab has a through opening passing through its thickness. The added end sections are much taller than the base, while the underside collar is only a shallow lower tier, creating a clear stepped-depth relationship.",
+      "assets": {
+        "generated": "runs/text2cad_0015_00155951_descriptive_json_gpt55-reason/generated.json",
+        "generated_json": "runs/text2cad_0015_00155951_descriptive_json_gpt55-reason/generated.json",
+        "mesh": "runs/text2cad_0015_00155951_descriptive_json_gpt55-reason/model.stl",
+        "pred_render": "runs/text2cad_0015_00155951_descriptive_json_gpt55-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0015_00155951.stl",
+        "gt_render": "gt_renders/text2cad_0015_00155951.png"
+      },
+      "metrics": {
+        "acc_cmd": 0.303,
+        "acc_param": 0.0426,
+        "judge_semantic": 10,
+        "qa_semantic": 1,
+        "qa_overall": 1
+      }
+    },
+    {
+      "id": "text2cad_0015_00155951_descriptive_json_gemini-reason",
+      "task": "text2cad",
+      "case_id": "0015/00155951",
+      "spec": "descriptive",
+      "format": "json",
+      "model": "gemini-reason",
+      "valid": true,
+      "condition": "The main body is a solid, shallow plate with an arc-based outline and a real through opening at its center. A shallow annular collar is added on the underside around that central opening, so it should be treated as a hollow ring rather than a filled disk or rectangular pad. Tall solid rounded tabs rise from the upper side at the two ends of the plate, and each tab has a through opening passing through its thickness. The added end sections are much taller than the base, while the underside collar is only a shallow lower tier, creating a clear stepped-depth relationship.",
+      "assets": {
+        "generated": "runs/text2cad_0015_00155951_descriptive_json_gemini-reason/generated.json",
+        "generated_json": "runs/text2cad_0015_00155951_descriptive_json_gemini-reason/generated.json",
+        "mesh": "runs/text2cad_0015_00155951_descriptive_json_gemini-reason/model.stl",
+        "pred_render": "runs/text2cad_0015_00155951_descriptive_json_gemini-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0015_00155951.stl",
+        "gt_render": "gt_renders/text2cad_0015_00155951.png"
+      },
+      "metrics": {
+        "acc_cmd": 0.0909,
+        "acc_param": 0.0073,
+        "judge_semantic": 8,
+        "qa_semantic": 1,
+        "qa_overall": 1
+      }
+    },
+    {
+      "id": "text2cad_0015_00155951_descriptive_json_kimi_k26-reason",
+      "task": "text2cad",
+      "case_id": "0015/00155951",
+      "spec": "descriptive",
+      "format": "json",
+      "model": "kimi_k26-reason",
+      "valid": true,
+      "condition": "The main body is a solid, shallow plate with an arc-based outline and a real through opening at its center. A shallow annular collar is added on the underside around that central opening, so it should be treated as a hollow ring rather than a filled disk or rectangular pad. Tall solid rounded tabs rise from the upper side at the two ends of the plate, and each tab has a through opening passing through its thickness. The added end sections are much taller than the base, while the underside collar is only a shallow lower tier, creating a clear stepped-depth relationship.",
+      "assets": {
+        "generated": "runs/text2cad_0015_00155951_descriptive_json_kimi_k26-reason/generated.json",
+        "generated_json": "runs/text2cad_0015_00155951_descriptive_json_kimi_k26-reason/generated.json",
+        "mesh": "runs/text2cad_0015_00155951_descriptive_json_kimi_k26-reason/model.stl",
+        "pred_render": "runs/text2cad_0015_00155951_descriptive_json_kimi_k26-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0015_00155951.stl",
+        "gt_render": "gt_renders/text2cad_0015_00155951.png"
+      },
+      "metrics": {
+        "acc_cmd": 0.0909,
+        "acc_param": 0.0073,
+        "judge_semantic": 7,
+        "qa_semantic": 1,
+        "qa_overall": 1
+      }
+    },
+    {
+      "id": "text2cad_0015_00155951_descriptive_json_claude-reason",
+      "task": "text2cad",
+      "case_id": "0015/00155951",
+      "spec": "descriptive",
+      "format": "json",
+      "model": "claude-reason",
+      "valid": true,
+      "condition": "The main body is a solid, shallow plate with an arc-based outline and a real through opening at its center. A shallow annular collar is added on the underside around that central opening, so it should be treated as a hollow ring rather than a filled disk or rectangular pad. Tall solid rounded tabs rise from the upper side at the two ends of the plate, and each tab has a through opening passing through its thickness. The added end sections are much taller than the base, while the underside collar is only a shallow lower tier, creating a clear stepped-depth relationship.",
+      "assets": {
+        "generated": "runs/text2cad_0015_00155951_descriptive_json_claude-reason/generated.json",
+        "generated_json": "runs/text2cad_0015_00155951_descriptive_json_claude-reason/generated.json",
+        "mesh": "runs/text2cad_0015_00155951_descriptive_json_claude-reason/model.stl",
+        "pred_render": "runs/text2cad_0015_00155951_descriptive_json_claude-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0015_00155951.stl",
+        "gt_render": "gt_renders/text2cad_0015_00155951.png"
+      },
+      "metrics": {
+        "acc_cmd": 0.1515,
+        "acc_param": 0.0132,
+        "judge_semantic": 10,
+        "qa_semantic": 1,
+        "qa_overall": 1
+      }
+    },
+    {
+      "id": "text2cad_0015_00155951_descriptive_json_deepseek_v4pro-reason",
+      "task": "text2cad",
+      "case_id": "0015/00155951",
+      "spec": "descriptive",
+      "format": "json",
+      "model": "deepseek_v4pro-reason",
+      "valid": true,
+      "condition": "The main body is a solid, shallow plate with an arc-based outline and a real through opening at its center. A shallow annular collar is added on the underside around that central opening, so it should be treated as a hollow ring rather than a filled disk or rectangular pad. Tall solid rounded tabs rise from the upper side at the two ends of the plate, and each tab has a through opening passing through its thickness. The added end sections are much taller than the base, while the underside collar is only a shallow lower tier, creating a clear stepped-depth relationship.",
+      "assets": {
+        "generated": "runs/text2cad_0015_00155951_descriptive_json_deepseek_v4pro-reason/generated.json",
+        "generated_json": "runs/text2cad_0015_00155951_descriptive_json_deepseek_v4pro-reason/generated.json",
+        "mesh": "runs/text2cad_0015_00155951_descriptive_json_deepseek_v4pro-reason/model.stl",
+        "pred_render": "runs/text2cad_0015_00155951_descriptive_json_deepseek_v4pro-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0015_00155951.stl",
+        "gt_render": "gt_renders/text2cad_0015_00155951.png"
+      },
+      "metrics": {
+        "acc_cmd": 0.0303,
+        "acc_param": 0,
+        "judge_semantic": 6,
+        "qa_semantic": 1,
+        "qa_overall": 1
+      }
+    },
+    {
+      "id": "text2cad_0015_00155951_descriptive_json_qwen-reason",
+      "task": "text2cad",
+      "case_id": "0015/00155951",
+      "spec": "descriptive",
+      "format": "json",
+      "model": "qwen-reason",
+      "valid": true,
+      "condition": "The main body is a solid, shallow plate with an arc-based outline and a real through opening at its center. A shallow annular collar is added on the underside around that central opening, so it should be treated as a hollow ring rather than a filled disk or rectangular pad. Tall solid rounded tabs rise from the upper side at the two ends of the plate, and each tab has a through opening passing through its thickness. The added end sections are much taller than the base, while the underside collar is only a shallow lower tier, creating a clear stepped-depth relationship.",
+      "assets": {
+        "generated": "runs/text2cad_0015_00155951_descriptive_json_qwen-reason/generated.json",
+        "generated_json": "runs/text2cad_0015_00155951_descriptive_json_qwen-reason/generated.json",
+        "mesh": "runs/text2cad_0015_00155951_descriptive_json_qwen-reason/model.stl",
+        "pred_render": "runs/text2cad_0015_00155951_descriptive_json_qwen-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0015_00155951.stl",
+        "gt_render": "gt_renders/text2cad_0015_00155951.png"
+      },
+      "metrics": {
+        "acc_cmd": 0.0909,
+        "acc_param": 0,
+        "judge_semantic": 2,
+        "qa_semantic": 0,
+        "qa_overall": 0
+      }
+    },
+    {
+      "id": "text2cad_0015_00155951_descriptive_json_mimo_v25-reason",
+      "task": "text2cad",
+      "case_id": "0015/00155951",
+      "spec": "descriptive",
+      "format": "json",
+      "model": "mimo_v25-reason",
+      "valid": true,
+      "condition": "The main body is a solid, shallow plate with an arc-based outline and a real through opening at its center. A shallow annular collar is added on the underside around that central opening, so it should be treated as a hollow ring rather than a filled disk or rectangular pad. Tall solid rounded tabs rise from the upper side at the two ends of the plate, and each tab has a through opening passing through its thickness. The added end sections are much taller than the base, while the underside collar is only a shallow lower tier, creating a clear stepped-depth relationship.",
+      "assets": {
+        "generated": "runs/text2cad_0015_00155951_descriptive_json_mimo_v25-reason/generated.json",
+        "generated_json": "runs/text2cad_0015_00155951_descriptive_json_mimo_v25-reason/generated.json",
+        "mesh": "runs/text2cad_0015_00155951_descriptive_json_mimo_v25-reason/model.stl",
+        "pred_render": "runs/text2cad_0015_00155951_descriptive_json_mimo_v25-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0015_00155951.stl",
+        "gt_render": "gt_renders/text2cad_0015_00155951.png"
+      },
+      "metrics": {
+        "acc_cmd": 0.1818,
+        "acc_param": 0.0282,
+        "judge_semantic": 1,
+        "qa_semantic": 0,
+        "qa_overall": 0
+      }
+    },
+    {
+      "id": "text2cad_0015_00155951_descriptive_json_doubao-reason",
+      "task": "text2cad",
+      "case_id": "0015/00155951",
+      "spec": "descriptive",
+      "format": "json",
+      "model": "doubao-reason",
+      "valid": true,
+      "condition": "The main body is a solid, shallow plate with an arc-based outline and a real through opening at its center. A shallow annular collar is added on the underside around that central opening, so it should be treated as a hollow ring rather than a filled disk or rectangular pad. Tall solid rounded tabs rise from the upper side at the two ends of the plate, and each tab has a through opening passing through its thickness. The added end sections are much taller than the base, while the underside collar is only a shallow lower tier, creating a clear stepped-depth relationship.",
+      "assets": {
+        "generated": "runs/text2cad_0015_00155951_descriptive_json_doubao-reason/generated.json",
+        "generated_json": "runs/text2cad_0015_00155951_descriptive_json_doubao-reason/generated.json",
+        "mesh": "runs/text2cad_0015_00155951_descriptive_json_doubao-reason/model.stl",
+        "pred_render": "runs/text2cad_0015_00155951_descriptive_json_doubao-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0015_00155951.stl",
+        "gt_render": "gt_renders/text2cad_0015_00155951.png"
+      },
+      "metrics": {
+        "acc_cmd": 0.2121,
+        "acc_param": 0.0137,
+        "judge_semantic": 9,
+        "qa_semantic": 0.75,
+        "qa_overall": 0.75
+      }
+    },
+    {
+      "id": "text2cad_0015_00155951_descriptive_json_glm-reason",
+      "task": "text2cad",
+      "case_id": "0015/00155951",
+      "spec": "descriptive",
+      "format": "json",
+      "model": "glm-reason",
+      "valid": true,
+      "condition": "The main body is a solid, shallow plate with an arc-based outline and a real through opening at its center. A shallow annular collar is added on the underside around that central opening, so it should be treated as a hollow ring rather than a filled disk or rectangular pad. Tall solid rounded tabs rise from the upper side at the two ends of the plate, and each tab has a through opening passing through its thickness. The added end sections are much taller than the base, while the underside collar is only a shallow lower tier, creating a clear stepped-depth relationship.",
+      "assets": {
+        "generated": "runs/text2cad_0015_00155951_descriptive_json_glm-reason/generated.json",
+        "generated_json": "runs/text2cad_0015_00155951_descriptive_json_glm-reason/generated.json",
+        "mesh": "runs/text2cad_0015_00155951_descriptive_json_glm-reason/model.stl",
+        "pred_render": "runs/text2cad_0015_00155951_descriptive_json_glm-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0015_00155951.stl",
+        "gt_render": "gt_renders/text2cad_0015_00155951.png"
+      },
+      "metrics": {
+        "acc_cmd": 0.2121,
+        "acc_param": 0.0134,
+        "judge_semantic": 8,
+        "qa_semantic": 1,
+        "qa_overall": 1
+      }
+    },
+    {
+      "id": "text2cad_0015_00155951_descriptive_openscad_gpt55-reason",
+      "task": "text2cad",
+      "case_id": "0015/00155951",
+      "spec": "descriptive",
+      "format": "openscad",
+      "model": "gpt55-reason",
+      "valid": true,
+      "condition": "The main body is a solid, shallow plate with an arc-based outline and a real through opening at its center. A shallow annular collar is added on the underside around that central opening, so it should be treated as a hollow ring rather than a filled disk or rectangular pad. Tall solid rounded tabs rise from the upper side at the two ends of the plate, and each tab has a through opening passing through its thickness. The added end sections are much taller than the base, while the underside collar is only a shallow lower tier, creating a clear stepped-depth relationship.",
+      "assets": {
+        "generated": "runs/text2cad_0015_00155951_descriptive_openscad_gpt55-reason/generated.scad",
+        "generated_scad": "runs/text2cad_0015_00155951_descriptive_openscad_gpt55-reason/generated.scad",
+        "mesh": "runs/text2cad_0015_00155951_descriptive_openscad_gpt55-reason/model.stl",
+        "pred_render": "runs/text2cad_0015_00155951_descriptive_openscad_gpt55-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0015_00155951.stl",
+        "gt_render": "gt_renders/text2cad_0015_00155951.png"
+      },
+      "metrics": {
+        "judge_semantic": 6,
+        "qa_semantic": 1,
+        "qa_overall": 1
+      }
+    },
+    {
+      "id": "text2cad_0015_00155951_descriptive_openscad_gemini-reason",
+      "task": "text2cad",
+      "case_id": "0015/00155951",
+      "spec": "descriptive",
+      "format": "openscad",
+      "model": "gemini-reason",
+      "valid": true,
+      "condition": "The main body is a solid, shallow plate with an arc-based outline and a real through opening at its center. A shallow annular collar is added on the underside around that central opening, so it should be treated as a hollow ring rather than a filled disk or rectangular pad. Tall solid rounded tabs rise from the upper side at the two ends of the plate, and each tab has a through opening passing through its thickness. The added end sections are much taller than the base, while the underside collar is only a shallow lower tier, creating a clear stepped-depth relationship.",
+      "assets": {
+        "generated": "runs/text2cad_0015_00155951_descriptive_openscad_gemini-reason/generated.scad",
+        "generated_scad": "runs/text2cad_0015_00155951_descriptive_openscad_gemini-reason/generated.scad",
+        "mesh": "runs/text2cad_0015_00155951_descriptive_openscad_gemini-reason/model.stl",
+        "pred_render": "runs/text2cad_0015_00155951_descriptive_openscad_gemini-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0015_00155951.stl",
+        "gt_render": "gt_renders/text2cad_0015_00155951.png"
+      },
+      "metrics": {
+        "judge_semantic": 7,
+        "qa_semantic": 1,
+        "qa_overall": 1
+      }
+    },
+    {
+      "id": "text2cad_0015_00155951_descriptive_openscad_kimi_k26-reason",
+      "task": "text2cad",
+      "case_id": "0015/00155951",
+      "spec": "descriptive",
+      "format": "openscad",
+      "model": "kimi_k26-reason",
+      "valid": true,
+      "condition": "The main body is a solid, shallow plate with an arc-based outline and a real through opening at its center. A shallow annular collar is added on the underside around that central opening, so it should be treated as a hollow ring rather than a filled disk or rectangular pad. Tall solid rounded tabs rise from the upper side at the two ends of the plate, and each tab has a through opening passing through its thickness. The added end sections are much taller than the base, while the underside collar is only a shallow lower tier, creating a clear stepped-depth relationship.",
+      "assets": {
+        "generated": "runs/text2cad_0015_00155951_descriptive_openscad_kimi_k26-reason/generated.scad",
+        "generated_scad": "runs/text2cad_0015_00155951_descriptive_openscad_kimi_k26-reason/generated.scad",
+        "mesh": "runs/text2cad_0015_00155951_descriptive_openscad_kimi_k26-reason/model.stl",
+        "pred_render": "runs/text2cad_0015_00155951_descriptive_openscad_kimi_k26-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0015_00155951.stl",
+        "gt_render": "gt_renders/text2cad_0015_00155951.png"
+      },
+      "metrics": {
+        "judge_semantic": 10,
+        "qa_semantic": 1,
+        "qa_overall": 1
+      }
+    },
+    {
+      "id": "text2cad_0015_00155951_descriptive_openscad_claude-reason",
+      "task": "text2cad",
+      "case_id": "0015/00155951",
+      "spec": "descriptive",
+      "format": "openscad",
+      "model": "claude-reason",
+      "valid": true,
+      "condition": "The main body is a solid, shallow plate with an arc-based outline and a real through opening at its center. A shallow annular collar is added on the underside around that central opening, so it should be treated as a hollow ring rather than a filled disk or rectangular pad. Tall solid rounded tabs rise from the upper side at the two ends of the plate, and each tab has a through opening passing through its thickness. The added end sections are much taller than the base, while the underside collar is only a shallow lower tier, creating a clear stepped-depth relationship.",
+      "assets": {
+        "generated": "runs/text2cad_0015_00155951_descriptive_openscad_claude-reason/generated.scad",
+        "generated_scad": "runs/text2cad_0015_00155951_descriptive_openscad_claude-reason/generated.scad",
+        "mesh": "runs/text2cad_0015_00155951_descriptive_openscad_claude-reason/model.stl",
+        "pred_render": "runs/text2cad_0015_00155951_descriptive_openscad_claude-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0015_00155951.stl",
+        "gt_render": "gt_renders/text2cad_0015_00155951.png"
+      },
+      "metrics": {
+        "judge_semantic": 10,
+        "qa_semantic": 1,
+        "qa_overall": 1
+      }
+    },
+    {
+      "id": "text2cad_0015_00155951_descriptive_openscad_deepseek_v4pro-reason",
+      "task": "text2cad",
+      "case_id": "0015/00155951",
+      "spec": "descriptive",
+      "format": "openscad",
+      "model": "deepseek_v4pro-reason",
+      "valid": true,
+      "condition": "The main body is a solid, shallow plate with an arc-based outline and a real through opening at its center. A shallow annular collar is added on the underside around that central opening, so it should be treated as a hollow ring rather than a filled disk or rectangular pad. Tall solid rounded tabs rise from the upper side at the two ends of the plate, and each tab has a through opening passing through its thickness. The added end sections are much taller than the base, while the underside collar is only a shallow lower tier, creating a clear stepped-depth relationship.",
+      "assets": {
+        "generated": "runs/text2cad_0015_00155951_descriptive_openscad_deepseek_v4pro-reason/generated.scad",
+        "generated_scad": "runs/text2cad_0015_00155951_descriptive_openscad_deepseek_v4pro-reason/generated.scad",
+        "mesh": "runs/text2cad_0015_00155951_descriptive_openscad_deepseek_v4pro-reason/model.stl",
+        "pred_render": "runs/text2cad_0015_00155951_descriptive_openscad_deepseek_v4pro-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0015_00155951.stl",
+        "gt_render": "gt_renders/text2cad_0015_00155951.png"
+      },
+      "metrics": {
+        "judge_semantic": 8,
+        "qa_semantic": 1,
+        "qa_overall": 1
+      }
+    },
+    {
+      "id": "text2cad_0015_00155951_descriptive_openscad_qwen-reason",
+      "task": "text2cad",
+      "case_id": "0015/00155951",
+      "spec": "descriptive",
+      "format": "openscad",
+      "model": "qwen-reason",
+      "valid": true,
+      "condition": "The main body is a solid, shallow plate with an arc-based outline and a real through opening at its center. A shallow annular collar is added on the underside around that central opening, so it should be treated as a hollow ring rather than a filled disk or rectangular pad. Tall solid rounded tabs rise from the upper side at the two ends of the plate, and each tab has a through opening passing through its thickness. The added end sections are much taller than the base, while the underside collar is only a shallow lower tier, creating a clear stepped-depth relationship.",
+      "assets": {
+        "generated": "runs/text2cad_0015_00155951_descriptive_openscad_qwen-reason/generated.scad",
+        "generated_scad": "runs/text2cad_0015_00155951_descriptive_openscad_qwen-reason/generated.scad",
+        "mesh": "runs/text2cad_0015_00155951_descriptive_openscad_qwen-reason/model.stl",
+        "pred_render": "runs/text2cad_0015_00155951_descriptive_openscad_qwen-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0015_00155951.stl",
+        "gt_render": "gt_renders/text2cad_0015_00155951.png"
+      },
+      "metrics": {
+        "judge_semantic": 10,
+        "qa_semantic": 1,
+        "qa_overall": 1
+      }
+    },
+    {
+      "id": "text2cad_0015_00155951_descriptive_openscad_mimo_v25-reason",
+      "task": "text2cad",
+      "case_id": "0015/00155951",
+      "spec": "descriptive",
+      "format": "openscad",
+      "model": "mimo_v25-reason",
+      "valid": true,
+      "condition": "The main body is a solid, shallow plate with an arc-based outline and a real through opening at its center. A shallow annular collar is added on the underside around that central opening, so it should be treated as a hollow ring rather than a filled disk or rectangular pad. Tall solid rounded tabs rise from the upper side at the two ends of the plate, and each tab has a through opening passing through its thickness. The added end sections are much taller than the base, while the underside collar is only a shallow lower tier, creating a clear stepped-depth relationship.",
+      "assets": {
+        "generated": "runs/text2cad_0015_00155951_descriptive_openscad_mimo_v25-reason/generated.scad",
+        "generated_scad": "runs/text2cad_0015_00155951_descriptive_openscad_mimo_v25-reason/generated.scad",
+        "mesh": "runs/text2cad_0015_00155951_descriptive_openscad_mimo_v25-reason/model.stl",
+        "pred_render": "runs/text2cad_0015_00155951_descriptive_openscad_mimo_v25-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0015_00155951.stl",
+        "gt_render": "gt_renders/text2cad_0015_00155951.png"
+      },
+      "metrics": {
+        "judge_semantic": 10,
+        "qa_semantic": 1,
+        "qa_overall": 1
+      }
+    },
+    {
+      "id": "text2cad_0015_00155951_descriptive_openscad_doubao-reason",
+      "task": "text2cad",
+      "case_id": "0015/00155951",
+      "spec": "descriptive",
+      "format": "openscad",
+      "model": "doubao-reason",
+      "valid": true,
+      "condition": "The main body is a solid, shallow plate with an arc-based outline and a real through opening at its center. A shallow annular collar is added on the underside around that central opening, so it should be treated as a hollow ring rather than a filled disk or rectangular pad. Tall solid rounded tabs rise from the upper side at the two ends of the plate, and each tab has a through opening passing through its thickness. The added end sections are much taller than the base, while the underside collar is only a shallow lower tier, creating a clear stepped-depth relationship.",
+      "assets": {
+        "generated": "runs/text2cad_0015_00155951_descriptive_openscad_doubao-reason/generated.scad",
+        "generated_scad": "runs/text2cad_0015_00155951_descriptive_openscad_doubao-reason/generated.scad",
+        "mesh": "runs/text2cad_0015_00155951_descriptive_openscad_doubao-reason/model.stl",
+        "pred_render": "runs/text2cad_0015_00155951_descriptive_openscad_doubao-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0015_00155951.stl",
+        "gt_render": "gt_renders/text2cad_0015_00155951.png"
+      },
+      "metrics": {
+        "judge_semantic": 8,
+        "qa_semantic": 0.75,
+        "qa_overall": 0.75
+      }
+    },
+    {
+      "id": "text2cad_0015_00155951_descriptive_openscad_glm-reason",
+      "task": "text2cad",
+      "case_id": "0015/00155951",
+      "spec": "descriptive",
+      "format": "openscad",
+      "model": "glm-reason",
+      "valid": true,
+      "condition": "The main body is a solid, shallow plate with an arc-based outline and a real through opening at its center. A shallow annular collar is added on the underside around that central opening, so it should be treated as a hollow ring rather than a filled disk or rectangular pad. Tall solid rounded tabs rise from the upper side at the two ends of the plate, and each tab has a through opening passing through its thickness. The added end sections are much taller than the base, while the underside collar is only a shallow lower tier, creating a clear stepped-depth relationship.",
+      "assets": {
+        "generated": "runs/text2cad_0015_00155951_descriptive_openscad_glm-reason/generated.scad",
+        "generated_scad": "runs/text2cad_0015_00155951_descriptive_openscad_glm-reason/generated.scad",
+        "mesh": "runs/text2cad_0015_00155951_descriptive_openscad_glm-reason/model.stl",
+        "pred_render": "runs/text2cad_0015_00155951_descriptive_openscad_glm-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0015_00155951.stl",
+        "gt_render": "gt_renders/text2cad_0015_00155951.png"
+      },
+      "metrics": {
+        "judge_semantic": 10,
+        "qa_semantic": 1,
+        "qa_overall": 1
+      }
+    },
+    {
+      "id": "text2cad_0015_00155951_parametric_json_gpt55-reason",
+      "task": "text2cad",
+      "case_id": "0015/00155951",
+      "spec": "parametric",
+      "format": "json",
+      "model": "gpt55-reason",
+      "valid": true,
+      "condition": "Use a main base reference size of length 0.75, width 0.5, and height 0.125. Create the base as a solid upper-side arc-edged plate occupying the full 0.75 by 0.5 footprint with extrusion depth 0.125 from the base datum, and include a central circular through void with axis 0.375 from the left edge and 0.25 from the front edge, radius 0.125. Add a concentric underside annular collar starting at the base underside and reaching 0.0375 below it; the collar is centered on the same axis, has outer radius 0.2125 and inner radius 0.125, and must remain a hollow circular ring rather than a rectangular pad. Add a right-end upper solid rounded tab with plan footprint 0.125 by 0.375, offset 0.625 from the left edge, 0 from the right edge, and 0.0625 from both front and back edges; it rises from the top side to a total reach of 0.5875 from the base datum and contains a through circular opening of radius 0.0937 centered on the tab width axis at left-offset 0.75 and front-offset 0.25. Add the matching left-end upper solid rounded tab with plan footprint 0.125 by 0.375, offset 0 from the left edge, 0.625 from the right edge, and 0.0625 from both front and back edges; it also rises to a total reach of 0.5875 from the base datum and has a through circular opening of radius 0.0937 centered at left-offset 0 and front-offset 0.25. Keep the upright tab outlines rounded or slot-like in elevation, with the openings cut through the tab thickness, and keep the base opening continuous through the base and underside collar.",
+      "assets": {
+        "generated": "runs/text2cad_0015_00155951_parametric_json_gpt55-reason/generated.json",
+        "generated_json": "runs/text2cad_0015_00155951_parametric_json_gpt55-reason/generated.json",
+        "mesh": "runs/text2cad_0015_00155951_parametric_json_gpt55-reason/model.stl",
+        "pred_render": "runs/text2cad_0015_00155951_parametric_json_gpt55-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0015_00155951.stl",
+        "gt_render": "gt_renders/text2cad_0015_00155951.png"
+      },
+      "metrics": {
+        "chamfer_distance": 0.000927,
+        "hausdorff_distance": 0.121574,
+        "f_score_005": 0.7819,
+        "f_score_001": 0.2742,
+        "normal_consistency": 0.7211,
+        "iou_csg": 0.6116,
+        "iou_voxel": 0.628,
+        "pred_open_edge_ratio": 0,
+        "pred_inverted_normal_ratio": 0,
+        "pred_non_manifold_edge_ratio": 0,
+        "acc_cmd": 0.2727,
+        "acc_param": 0.1127,
+        "qa_semantic": 0.5,
+        "qa_parametric": 0.75,
+        "qa_overall": 0.6667
+      }
+    },
+    {
+      "id": "text2cad_0015_00155951_parametric_json_gemini-reason",
+      "task": "text2cad",
+      "case_id": "0015/00155951",
+      "spec": "parametric",
+      "format": "json",
+      "model": "gemini-reason",
+      "valid": true,
+      "condition": "Use a main base reference size of length 0.75, width 0.5, and height 0.125. Create the base as a solid upper-side arc-edged plate occupying the full 0.75 by 0.5 footprint with extrusion depth 0.125 from the base datum, and include a central circular through void with axis 0.375 from the left edge and 0.25 from the front edge, radius 0.125. Add a concentric underside annular collar starting at the base underside and reaching 0.0375 below it; the collar is centered on the same axis, has outer radius 0.2125 and inner radius 0.125, and must remain a hollow circular ring rather than a rectangular pad. Add a right-end upper solid rounded tab with plan footprint 0.125 by 0.375, offset 0.625 from the left edge, 0 from the right edge, and 0.0625 from both front and back edges; it rises from the top side to a total reach of 0.5875 from the base datum and contains a through circular opening of radius 0.0937 centered on the tab width axis at left-offset 0.75 and front-offset 0.25. Add the matching left-end upper solid rounded tab with plan footprint 0.125 by 0.375, offset 0 from the left edge, 0.625 from the right edge, and 0.0625 from both front and back edges; it also rises to a total reach of 0.5875 from the base datum and has a through circular opening of radius 0.0937 centered at left-offset 0 and front-offset 0.25. Keep the upright tab outlines rounded or slot-like in elevation, with the openings cut through the tab thickness, and keep the base opening continuous through the base and underside collar.",
+      "assets": {
+        "generated": "runs/text2cad_0015_00155951_parametric_json_gemini-reason/generated.json",
+        "generated_json": "runs/text2cad_0015_00155951_parametric_json_gemini-reason/generated.json",
+        "mesh": "runs/text2cad_0015_00155951_parametric_json_gemini-reason/model.stl",
+        "pred_render": "runs/text2cad_0015_00155951_parametric_json_gemini-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0015_00155951.stl",
+        "gt_render": "gt_renders/text2cad_0015_00155951.png"
+      },
+      "metrics": {
+        "chamfer_distance": 0.001637,
+        "hausdorff_distance": 0.123809,
+        "f_score_005": 0.7251,
+        "f_score_001": 0.084,
+        "normal_consistency": 0.5724,
+        "iou_csg": 0.3858,
+        "iou_voxel": 0.4016,
+        "pred_open_edge_ratio": 0,
+        "pred_inverted_normal_ratio": 0,
+        "pred_non_manifold_edge_ratio": 0,
+        "acc_cmd": 0.2424,
+        "acc_param": 0.0857,
+        "qa_semantic": 0.75,
+        "qa_parametric": 0.875,
+        "qa_overall": 0.8333
+      }
+    },
+    {
+      "id": "text2cad_0015_00155951_parametric_json_kimi_k26-reason",
+      "task": "text2cad",
+      "case_id": "0015/00155951",
+      "spec": "parametric",
+      "format": "json",
+      "model": "kimi_k26-reason",
+      "valid": true,
+      "condition": "Use a main base reference size of length 0.75, width 0.5, and height 0.125. Create the base as a solid upper-side arc-edged plate occupying the full 0.75 by 0.5 footprint with extrusion depth 0.125 from the base datum, and include a central circular through void with axis 0.375 from the left edge and 0.25 from the front edge, radius 0.125. Add a concentric underside annular collar starting at the base underside and reaching 0.0375 below it; the collar is centered on the same axis, has outer radius 0.2125 and inner radius 0.125, and must remain a hollow circular ring rather than a rectangular pad. Add a right-end upper solid rounded tab with plan footprint 0.125 by 0.375, offset 0.625 from the left edge, 0 from the right edge, and 0.0625 from both front and back edges; it rises from the top side to a total reach of 0.5875 from the base datum and contains a through circular opening of radius 0.0937 centered on the tab width axis at left-offset 0.75 and front-offset 0.25. Add the matching left-end upper solid rounded tab with plan footprint 0.125 by 0.375, offset 0 from the left edge, 0.625 from the right edge, and 0.0625 from both front and back edges; it also rises to a total reach of 0.5875 from the base datum and has a through circular opening of radius 0.0937 centered at left-offset 0 and front-offset 0.25. Keep the upright tab outlines rounded or slot-like in elevation, with the openings cut through the tab thickness, and keep the base opening continuous through the base and underside collar.",
+      "assets": {
+        "generated": "runs/text2cad_0015_00155951_parametric_json_kimi_k26-reason/generated.json",
+        "generated_json": "runs/text2cad_0015_00155951_parametric_json_kimi_k26-reason/generated.json",
+        "mesh": "runs/text2cad_0015_00155951_parametric_json_kimi_k26-reason/model.stl",
+        "pred_render": "runs/text2cad_0015_00155951_parametric_json_kimi_k26-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0015_00155951.stl",
+        "gt_render": "gt_renders/text2cad_0015_00155951.png"
+      },
+      "metrics": {
+        "chamfer_distance": 0.002789,
+        "hausdorff_distance": 0.202662,
+        "f_score_005": 0.6356,
+        "f_score_001": 0.0781,
+        "normal_consistency": 0.5067,
+        "iou_csg": 0.4163,
+        "iou_voxel": 0.4367,
+        "pred_open_edge_ratio": 0,
+        "pred_inverted_normal_ratio": 0,
+        "pred_non_manifold_edge_ratio": 0,
+        "acc_cmd": 0.2121,
+        "acc_param": 0.0694,
+        "qa_semantic": 0.75,
+        "qa_parametric": 0.5,
+        "qa_overall": 0.5833
+      }
+    },
+    {
+      "id": "text2cad_0015_00155951_parametric_json_claude-reason",
+      "task": "text2cad",
+      "case_id": "0015/00155951",
+      "spec": "parametric",
+      "format": "json",
+      "model": "claude-reason",
+      "valid": true,
+      "condition": "Use a main base reference size of length 0.75, width 0.5, and height 0.125. Create the base as a solid upper-side arc-edged plate occupying the full 0.75 by 0.5 footprint with extrusion depth 0.125 from the base datum, and include a central circular through void with axis 0.375 from the left edge and 0.25 from the front edge, radius 0.125. Add a concentric underside annular collar starting at the base underside and reaching 0.0375 below it; the collar is centered on the same axis, has outer radius 0.2125 and inner radius 0.125, and must remain a hollow circular ring rather than a rectangular pad. Add a right-end upper solid rounded tab with plan footprint 0.125 by 0.375, offset 0.625 from the left edge, 0 from the right edge, and 0.0625 from both front and back edges; it rises from the top side to a total reach of 0.5875 from the base datum and contains a through circular opening of radius 0.0937 centered on the tab width axis at left-offset 0.75 and front-offset 0.25. Add the matching left-end upper solid rounded tab with plan footprint 0.125 by 0.375, offset 0 from the left edge, 0.625 from the right edge, and 0.0625 from both front and back edges; it also rises to a total reach of 0.5875 from the base datum and has a through circular opening of radius 0.0937 centered at left-offset 0 and front-offset 0.25. Keep the upright tab outlines rounded or slot-like in elevation, with the openings cut through the tab thickness, and keep the base opening continuous through the base and underside collar.",
+      "assets": {
+        "generated": "runs/text2cad_0015_00155951_parametric_json_claude-reason/generated.json",
+        "generated_json": "runs/text2cad_0015_00155951_parametric_json_claude-reason/generated.json",
+        "mesh": "runs/text2cad_0015_00155951_parametric_json_claude-reason/model.stl",
+        "pred_render": "runs/text2cad_0015_00155951_parametric_json_claude-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0015_00155951.stl",
+        "gt_render": "gt_renders/text2cad_0015_00155951.png"
+      },
+      "metrics": {
+        "chamfer_distance": 0.008319,
+        "hausdorff_distance": 0.273809,
+        "f_score_005": 0.4121,
+        "f_score_001": 0.0285,
+        "normal_consistency": 0.3708,
+        "iou_csg": 0.2052,
+        "iou_voxel": 0.2231,
+        "pred_open_edge_ratio": 0,
+        "pred_inverted_normal_ratio": 0,
+        "pred_non_manifold_edge_ratio": 0,
+        "acc_cmd": 0.3333,
+        "acc_param": 0.0552,
+        "qa_semantic": 0.5,
+        "qa_parametric": 0.75,
+        "qa_overall": 0.6667
+      }
+    },
+    {
+      "id": "text2cad_0015_00155951_parametric_json_deepseek_v4pro-reason",
+      "task": "text2cad",
+      "case_id": "0015/00155951",
+      "spec": "parametric",
+      "format": "json",
+      "model": "deepseek_v4pro-reason",
+      "valid": true,
+      "condition": "Use a main base reference size of length 0.75, width 0.5, and height 0.125. Create the base as a solid upper-side arc-edged plate occupying the full 0.75 by 0.5 footprint with extrusion depth 0.125 from the base datum, and include a central circular through void with axis 0.375 from the left edge and 0.25 from the front edge, radius 0.125. Add a concentric underside annular collar starting at the base underside and reaching 0.0375 below it; the collar is centered on the same axis, has outer radius 0.2125 and inner radius 0.125, and must remain a hollow circular ring rather than a rectangular pad. Add a right-end upper solid rounded tab with plan footprint 0.125 by 0.375, offset 0.625 from the left edge, 0 from the right edge, and 0.0625 from both front and back edges; it rises from the top side to a total reach of 0.5875 from the base datum and contains a through circular opening of radius 0.0937 centered on the tab width axis at left-offset 0.75 and front-offset 0.25. Add the matching left-end upper solid rounded tab with plan footprint 0.125 by 0.375, offset 0 from the left edge, 0.625 from the right edge, and 0.0625 from both front and back edges; it also rises to a total reach of 0.5875 from the base datum and has a through circular opening of radius 0.0937 centered at left-offset 0 and front-offset 0.25. Keep the upright tab outlines rounded or slot-like in elevation, with the openings cut through the tab thickness, and keep the base opening continuous through the base and underside collar.",
+      "assets": {
+        "generated": "runs/text2cad_0015_00155951_parametric_json_deepseek_v4pro-reason/generated.json",
+        "generated_json": "runs/text2cad_0015_00155951_parametric_json_deepseek_v4pro-reason/generated.json",
+        "mesh": "runs/text2cad_0015_00155951_parametric_json_deepseek_v4pro-reason/model.stl",
+        "pred_render": "runs/text2cad_0015_00155951_parametric_json_deepseek_v4pro-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0015_00155951.stl",
+        "gt_render": "gt_renders/text2cad_0015_00155951.png"
+      },
+      "metrics": {
+        "chamfer_distance": 0.007551,
+        "hausdorff_distance": 0.25015,
+        "f_score_005": 0.3442,
+        "f_score_001": 0.0293,
+        "normal_consistency": 0.317,
+        "iou_csg": 0.1837,
+        "iou_voxel": 0.1853,
+        "pred_open_edge_ratio": 0,
+        "pred_inverted_normal_ratio": 0,
+        "pred_non_manifold_edge_ratio": 0,
+        "acc_cmd": 0.0909,
+        "acc_param": 0.0807,
+        "qa_semantic": 0.25,
+        "qa_parametric": 0.375,
+        "qa_overall": 0.3333
+      }
+    },
+    {
+      "id": "text2cad_0015_00155951_parametric_json_qwen-reason",
+      "task": "text2cad",
+      "case_id": "0015/00155951",
+      "spec": "parametric",
+      "format": "json",
+      "model": "qwen-reason",
+      "valid": true,
+      "condition": "Use a main base reference size of length 0.75, width 0.5, and height 0.125. Create the base as a solid upper-side arc-edged plate occupying the full 0.75 by 0.5 footprint with extrusion depth 0.125 from the base datum, and include a central circular through void with axis 0.375 from the left edge and 0.25 from the front edge, radius 0.125. Add a concentric underside annular collar starting at the base underside and reaching 0.0375 below it; the collar is centered on the same axis, has outer radius 0.2125 and inner radius 0.125, and must remain a hollow circular ring rather than a rectangular pad. Add a right-end upper solid rounded tab with plan footprint 0.125 by 0.375, offset 0.625 from the left edge, 0 from the right edge, and 0.0625 from both front and back edges; it rises from the top side to a total reach of 0.5875 from the base datum and contains a through circular opening of radius 0.0937 centered on the tab width axis at left-offset 0.75 and front-offset 0.25. Add the matching left-end upper solid rounded tab with plan footprint 0.125 by 0.375, offset 0 from the left edge, 0.625 from the right edge, and 0.0625 from both front and back edges; it also rises to a total reach of 0.5875 from the base datum and has a through circular opening of radius 0.0937 centered at left-offset 0 and front-offset 0.25. Keep the upright tab outlines rounded or slot-like in elevation, with the openings cut through the tab thickness, and keep the base opening continuous through the base and underside collar.",
+      "assets": {
+        "generated": "runs/text2cad_0015_00155951_parametric_json_qwen-reason/generated.json",
+        "generated_json": "runs/text2cad_0015_00155951_parametric_json_qwen-reason/generated.json",
+        "mesh": "runs/text2cad_0015_00155951_parametric_json_qwen-reason/model.stl",
+        "pred_render": "runs/text2cad_0015_00155951_parametric_json_qwen-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0015_00155951.stl",
+        "gt_render": "gt_renders/text2cad_0015_00155951.png"
+      },
+      "metrics": {
+        "chamfer_distance": 0.005629,
+        "hausdorff_distance": 0.253345,
+        "f_score_005": 0.3761,
+        "f_score_001": 0.0441,
+        "normal_consistency": 0.5898,
+        "iou_csg": 0.1479,
+        "iou_voxel": 0.1648,
+        "pred_open_edge_ratio": 0,
+        "pred_inverted_normal_ratio": 0,
+        "pred_non_manifold_edge_ratio": 0,
+        "acc_cmd": 0.1515,
+        "acc_param": 0.0728,
+        "qa_semantic": 0,
+        "qa_parametric": 0.75,
+        "qa_overall": 0.5
+      }
+    },
+    {
+      "id": "text2cad_0015_00155951_parametric_json_mimo_v25-reason",
+      "task": "text2cad",
+      "case_id": "0015/00155951",
+      "spec": "parametric",
+      "format": "json",
+      "model": "mimo_v25-reason",
+      "valid": true,
+      "condition": "Use a main base reference size of length 0.75, width 0.5, and height 0.125. Create the base as a solid upper-side arc-edged plate occupying the full 0.75 by 0.5 footprint with extrusion depth 0.125 from the base datum, and include a central circular through void with axis 0.375 from the left edge and 0.25 from the front edge, radius 0.125. Add a concentric underside annular collar starting at the base underside and reaching 0.0375 below it; the collar is centered on the same axis, has outer radius 0.2125 and inner radius 0.125, and must remain a hollow circular ring rather than a rectangular pad. Add a right-end upper solid rounded tab with plan footprint 0.125 by 0.375, offset 0.625 from the left edge, 0 from the right edge, and 0.0625 from both front and back edges; it rises from the top side to a total reach of 0.5875 from the base datum and contains a through circular opening of radius 0.0937 centered on the tab width axis at left-offset 0.75 and front-offset 0.25. Add the matching left-end upper solid rounded tab with plan footprint 0.125 by 0.375, offset 0 from the left edge, 0.625 from the right edge, and 0.0625 from both front and back edges; it also rises to a total reach of 0.5875 from the base datum and has a through circular opening of radius 0.0937 centered at left-offset 0 and front-offset 0.25. Keep the upright tab outlines rounded or slot-like in elevation, with the openings cut through the tab thickness, and keep the base opening continuous through the base and underside collar.",
+      "assets": {
+        "generated": "runs/text2cad_0015_00155951_parametric_json_mimo_v25-reason/generated.json",
+        "generated_json": "runs/text2cad_0015_00155951_parametric_json_mimo_v25-reason/generated.json",
+        "mesh": "runs/text2cad_0015_00155951_parametric_json_mimo_v25-reason/model.stl",
+        "pred_render": "runs/text2cad_0015_00155951_parametric_json_mimo_v25-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0015_00155951.stl",
+        "gt_render": "gt_renders/text2cad_0015_00155951.png"
+      },
+      "metrics": {
+        "chamfer_distance": 0.017955,
+        "hausdorff_distance": 0.430628,
+        "f_score_005": 0.1739,
+        "f_score_001": 0.0146,
+        "normal_consistency": 0.3462,
+        "iou_csg": 0.0718,
+        "iou_voxel": 0.0811,
+        "pred_open_edge_ratio": 0,
+        "pred_inverted_normal_ratio": 0,
+        "pred_non_manifold_edge_ratio": 0,
+        "acc_cmd": 0.2121,
+        "acc_param": 0.0625,
+        "qa_semantic": 0,
+        "qa_parametric": 0,
+        "qa_overall": 0
+      }
+    },
+    {
+      "id": "text2cad_0015_00155951_parametric_json_doubao-reason",
+      "task": "text2cad",
+      "case_id": "0015/00155951",
+      "spec": "parametric",
+      "format": "json",
+      "model": "doubao-reason",
+      "valid": true,
+      "condition": "Use a main base reference size of length 0.75, width 0.5, and height 0.125. Create the base as a solid upper-side arc-edged plate occupying the full 0.75 by 0.5 footprint with extrusion depth 0.125 from the base datum, and include a central circular through void with axis 0.375 from the left edge and 0.25 from the front edge, radius 0.125. Add a concentric underside annular collar starting at the base underside and reaching 0.0375 below it; the collar is centered on the same axis, has outer radius 0.2125 and inner radius 0.125, and must remain a hollow circular ring rather than a rectangular pad. Add a right-end upper solid rounded tab with plan footprint 0.125 by 0.375, offset 0.625 from the left edge, 0 from the right edge, and 0.0625 from both front and back edges; it rises from the top side to a total reach of 0.5875 from the base datum and contains a through circular opening of radius 0.0937 centered on the tab width axis at left-offset 0.75 and front-offset 0.25. Add the matching left-end upper solid rounded tab with plan footprint 0.125 by 0.375, offset 0 from the left edge, 0.625 from the right edge, and 0.0625 from both front and back edges; it also rises to a total reach of 0.5875 from the base datum and has a through circular opening of radius 0.0937 centered at left-offset 0 and front-offset 0.25. Keep the upright tab outlines rounded or slot-like in elevation, with the openings cut through the tab thickness, and keep the base opening continuous through the base and underside collar.",
+      "assets": {
+        "generated": "runs/text2cad_0015_00155951_parametric_json_doubao-reason/generated.json",
+        "generated_json": "runs/text2cad_0015_00155951_parametric_json_doubao-reason/generated.json",
+        "mesh": "runs/text2cad_0015_00155951_parametric_json_doubao-reason/model.stl",
+        "pred_render": "runs/text2cad_0015_00155951_parametric_json_doubao-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0015_00155951.stl",
+        "gt_render": "gt_renders/text2cad_0015_00155951.png"
+      },
+      "metrics": {
+        "chamfer_distance": 0.007466,
+        "hausdorff_distance": 0.249993,
+        "f_score_005": 0.3481,
+        "f_score_001": 0.0457,
+        "normal_consistency": 0.3388,
+        "iou_csg": 0.1559,
+        "iou_voxel": 0.1615,
+        "pred_open_edge_ratio": 0,
+        "pred_inverted_normal_ratio": 0,
+        "pred_non_manifold_edge_ratio": 0,
+        "acc_cmd": 0.1212,
+        "acc_param": 0.0927,
+        "qa_semantic": 0,
+        "qa_parametric": 0.25,
+        "qa_overall": 0.1667
+      }
+    },
+    {
+      "id": "text2cad_0015_00155951_parametric_json_glm-reason",
+      "task": "text2cad",
+      "case_id": "0015/00155951",
+      "spec": "parametric",
+      "format": "json",
+      "model": "glm-reason",
+      "valid": true,
+      "condition": "Use a main base reference size of length 0.75, width 0.5, and height 0.125. Create the base as a solid upper-side arc-edged plate occupying the full 0.75 by 0.5 footprint with extrusion depth 0.125 from the base datum, and include a central circular through void with axis 0.375 from the left edge and 0.25 from the front edge, radius 0.125. Add a concentric underside annular collar starting at the base underside and reaching 0.0375 below it; the collar is centered on the same axis, has outer radius 0.2125 and inner radius 0.125, and must remain a hollow circular ring rather than a rectangular pad. Add a right-end upper solid rounded tab with plan footprint 0.125 by 0.375, offset 0.625 from the left edge, 0 from the right edge, and 0.0625 from both front and back edges; it rises from the top side to a total reach of 0.5875 from the base datum and contains a through circular opening of radius 0.0937 centered on the tab width axis at left-offset 0.75 and front-offset 0.25. Add the matching left-end upper solid rounded tab with plan footprint 0.125 by 0.375, offset 0 from the left edge, 0.625 from the right edge, and 0.0625 from both front and back edges; it also rises to a total reach of 0.5875 from the base datum and has a through circular opening of radius 0.0937 centered at left-offset 0 and front-offset 0.25. Keep the upright tab outlines rounded or slot-like in elevation, with the openings cut through the tab thickness, and keep the base opening continuous through the base and underside collar.",
+      "assets": {
+        "generated": "runs/text2cad_0015_00155951_parametric_json_glm-reason/generated.json",
+        "generated_json": "runs/text2cad_0015_00155951_parametric_json_glm-reason/generated.json",
+        "mesh": "runs/text2cad_0015_00155951_parametric_json_glm-reason/model.stl",
+        "pred_render": "runs/text2cad_0015_00155951_parametric_json_glm-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0015_00155951.stl",
+        "gt_render": "gt_renders/text2cad_0015_00155951.png"
+      },
+      "metrics": {
+        "chamfer_distance": 0.00473,
+        "hausdorff_distance": 0.191897,
+        "f_score_005": 0.4283,
+        "f_score_001": 0.0408,
+        "normal_consistency": 0.4042,
+        "iou_csg": 0.1241,
+        "iou_voxel": 0.1411,
+        "pred_open_edge_ratio": 0,
+        "pred_inverted_normal_ratio": 0,
+        "pred_non_manifold_edge_ratio": 0,
+        "acc_cmd": 0.303,
+        "acc_param": 0.0473,
+        "qa_semantic": 0.75,
+        "qa_parametric": 0.5,
+        "qa_overall": 0.5833
+      }
+    },
+    {
+      "id": "text2cad_0015_00155951_parametric_openscad_gpt55-reason",
+      "task": "text2cad",
+      "case_id": "0015/00155951",
+      "spec": "parametric",
+      "format": "openscad",
+      "model": "gpt55-reason",
+      "valid": true,
+      "condition": "Use a main base reference size of length 0.75, width 0.5, and height 0.125. Create the base as a solid upper-side arc-edged plate occupying the full 0.75 by 0.5 footprint with extrusion depth 0.125 from the base datum, and include a central circular through void with axis 0.375 from the left edge and 0.25 from the front edge, radius 0.125. Add a concentric underside annular collar starting at the base underside and reaching 0.0375 below it; the collar is centered on the same axis, has outer radius 0.2125 and inner radius 0.125, and must remain a hollow circular ring rather than a rectangular pad. Add a right-end upper solid rounded tab with plan footprint 0.125 by 0.375, offset 0.625 from the left edge, 0 from the right edge, and 0.0625 from both front and back edges; it rises from the top side to a total reach of 0.5875 from the base datum and contains a through circular opening of radius 0.0937 centered on the tab width axis at left-offset 0.75 and front-offset 0.25. Add the matching left-end upper solid rounded tab with plan footprint 0.125 by 0.375, offset 0 from the left edge, 0.625 from the right edge, and 0.0625 from both front and back edges; it also rises to a total reach of 0.5875 from the base datum and has a through circular opening of radius 0.0937 centered at left-offset 0 and front-offset 0.25. Keep the upright tab outlines rounded or slot-like in elevation, with the openings cut through the tab thickness, and keep the base opening continuous through the base and underside collar.",
+      "assets": {
+        "generated": "runs/text2cad_0015_00155951_parametric_openscad_gpt55-reason/generated.scad",
+        "generated_scad": "runs/text2cad_0015_00155951_parametric_openscad_gpt55-reason/generated.scad",
+        "mesh": "runs/text2cad_0015_00155951_parametric_openscad_gpt55-reason/model.stl",
+        "pred_render": "runs/text2cad_0015_00155951_parametric_openscad_gpt55-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0015_00155951.stl",
+        "gt_render": "gt_renders/text2cad_0015_00155951.png"
+      },
+      "metrics": {
+        "chamfer_distance": 0.000346,
+        "hausdorff_distance": 0.089621,
+        "f_score_005": 0.9209,
+        "f_score_001": 0.4455,
+        "normal_consistency": 0.8281,
+        "iou_csg": 0.8154,
+        "iou_voxel": 0.8321,
+        "pred_open_edge_ratio": 0,
+        "pred_inverted_normal_ratio": 0,
+        "pred_non_manifold_edge_ratio": 0,
+        "qa_semantic": 1,
+        "qa_parametric": 1,
+        "qa_overall": 1
+      }
+    },
+    {
+      "id": "text2cad_0015_00155951_parametric_openscad_gemini-reason",
+      "task": "text2cad",
+      "case_id": "0015/00155951",
+      "spec": "parametric",
+      "format": "openscad",
+      "model": "gemini-reason",
+      "valid": true,
+      "condition": "Use a main base reference size of length 0.75, width 0.5, and height 0.125. Create the base as a solid upper-side arc-edged plate occupying the full 0.75 by 0.5 footprint with extrusion depth 0.125 from the base datum, and include a central circular through void with axis 0.375 from the left edge and 0.25 from the front edge, radius 0.125. Add a concentric underside annular collar starting at the base underside and reaching 0.0375 below it; the collar is centered on the same axis, has outer radius 0.2125 and inner radius 0.125, and must remain a hollow circular ring rather than a rectangular pad. Add a right-end upper solid rounded tab with plan footprint 0.125 by 0.375, offset 0.625 from the left edge, 0 from the right edge, and 0.0625 from both front and back edges; it rises from the top side to a total reach of 0.5875 from the base datum and contains a through circular opening of radius 0.0937 centered on the tab width axis at left-offset 0.75 and front-offset 0.25. Add the matching left-end upper solid rounded tab with plan footprint 0.125 by 0.375, offset 0 from the left edge, 0.625 from the right edge, and 0.0625 from both front and back edges; it also rises to a total reach of 0.5875 from the base datum and has a through circular opening of radius 0.0937 centered at left-offset 0 and front-offset 0.25. Keep the upright tab outlines rounded or slot-like in elevation, with the openings cut through the tab thickness, and keep the base opening continuous through the base and underside collar.",
+      "assets": {
+        "generated": "runs/text2cad_0015_00155951_parametric_openscad_gemini-reason/generated.scad",
+        "generated_scad": "runs/text2cad_0015_00155951_parametric_openscad_gemini-reason/generated.scad",
+        "mesh": "runs/text2cad_0015_00155951_parametric_openscad_gemini-reason/model.stl",
+        "pred_render": "runs/text2cad_0015_00155951_parametric_openscad_gemini-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0015_00155951.stl",
+        "gt_render": "gt_renders/text2cad_0015_00155951.png"
+      },
+      "metrics": {
+        "chamfer_distance": 0.000344,
+        "hausdorff_distance": 0.090935,
+        "f_score_005": 0.9206,
+        "f_score_001": 0.4489,
+        "normal_consistency": 0.8298,
+        "iou_csg": 0.8207,
+        "iou_voxel": 0.8309,
+        "pred_open_edge_ratio": 0,
+        "pred_inverted_normal_ratio": 0,
+        "pred_non_manifold_edge_ratio": 0,
+        "qa_semantic": 1,
+        "qa_parametric": 1,
+        "qa_overall": 1
+      }
+    },
+    {
+      "id": "text2cad_0015_00155951_parametric_openscad_kimi_k26-reason",
+      "task": "text2cad",
+      "case_id": "0015/00155951",
+      "spec": "parametric",
+      "format": "openscad",
+      "model": "kimi_k26-reason",
+      "valid": true,
+      "condition": "Use a main base reference size of length 0.75, width 0.5, and height 0.125. Create the base as a solid upper-side arc-edged plate occupying the full 0.75 by 0.5 footprint with extrusion depth 0.125 from the base datum, and include a central circular through void with axis 0.375 from the left edge and 0.25 from the front edge, radius 0.125. Add a concentric underside annular collar starting at the base underside and reaching 0.0375 below it; the collar is centered on the same axis, has outer radius 0.2125 and inner radius 0.125, and must remain a hollow circular ring rather than a rectangular pad. Add a right-end upper solid rounded tab with plan footprint 0.125 by 0.375, offset 0.625 from the left edge, 0 from the right edge, and 0.0625 from both front and back edges; it rises from the top side to a total reach of 0.5875 from the base datum and contains a through circular opening of radius 0.0937 centered on the tab width axis at left-offset 0.75 and front-offset 0.25. Add the matching left-end upper solid rounded tab with plan footprint 0.125 by 0.375, offset 0 from the left edge, 0.625 from the right edge, and 0.0625 from both front and back edges; it also rises to a total reach of 0.5875 from the base datum and has a through circular opening of radius 0.0937 centered at left-offset 0 and front-offset 0.25. Keep the upright tab outlines rounded or slot-like in elevation, with the openings cut through the tab thickness, and keep the base opening continuous through the base and underside collar.",
+      "assets": {
+        "generated": "runs/text2cad_0015_00155951_parametric_openscad_kimi_k26-reason/generated.scad",
+        "generated_scad": "runs/text2cad_0015_00155951_parametric_openscad_kimi_k26-reason/generated.scad",
+        "mesh": "runs/text2cad_0015_00155951_parametric_openscad_kimi_k26-reason/model.stl",
+        "pred_render": "runs/text2cad_0015_00155951_parametric_openscad_kimi_k26-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0015_00155951.stl",
+        "gt_render": "gt_renders/text2cad_0015_00155951.png"
+      },
+      "metrics": {
+        "chamfer_distance": 0.000368,
+        "hausdorff_distance": 0.088027,
+        "f_score_005": 0.9214,
+        "f_score_001": 0.4096,
+        "normal_consistency": 0.8037,
+        "iou_csg": 0.8113,
+        "iou_voxel": 0.8204,
+        "pred_open_edge_ratio": 0,
+        "pred_inverted_normal_ratio": 0,
+        "pred_non_manifold_edge_ratio": 0,
+        "qa_semantic": 0.75,
+        "qa_parametric": 1,
+        "qa_overall": 0.9167
+      }
+    },
+    {
+      "id": "text2cad_0015_00155951_parametric_openscad_claude-reason",
+      "task": "text2cad",
+      "case_id": "0015/00155951",
+      "spec": "parametric",
+      "format": "openscad",
+      "model": "claude-reason",
+      "valid": true,
+      "condition": "Use a main base reference size of length 0.75, width 0.5, and height 0.125. Create the base as a solid upper-side arc-edged plate occupying the full 0.75 by 0.5 footprint with extrusion depth 0.125 from the base datum, and include a central circular through void with axis 0.375 from the left edge and 0.25 from the front edge, radius 0.125. Add a concentric underside annular collar starting at the base underside and reaching 0.0375 below it; the collar is centered on the same axis, has outer radius 0.2125 and inner radius 0.125, and must remain a hollow circular ring rather than a rectangular pad. Add a right-end upper solid rounded tab with plan footprint 0.125 by 0.375, offset 0.625 from the left edge, 0 from the right edge, and 0.0625 from both front and back edges; it rises from the top side to a total reach of 0.5875 from the base datum and contains a through circular opening of radius 0.0937 centered on the tab width axis at left-offset 0.75 and front-offset 0.25. Add the matching left-end upper solid rounded tab with plan footprint 0.125 by 0.375, offset 0 from the left edge, 0.625 from the right edge, and 0.0625 from both front and back edges; it also rises to a total reach of 0.5875 from the base datum and has a through circular opening of radius 0.0937 centered at left-offset 0 and front-offset 0.25. Keep the upright tab outlines rounded or slot-like in elevation, with the openings cut through the tab thickness, and keep the base opening continuous through the base and underside collar.",
+      "assets": {
+        "generated": "runs/text2cad_0015_00155951_parametric_openscad_claude-reason/generated.scad",
+        "generated_scad": "runs/text2cad_0015_00155951_parametric_openscad_claude-reason/generated.scad",
+        "mesh": "runs/text2cad_0015_00155951_parametric_openscad_claude-reason/model.stl",
+        "pred_render": "runs/text2cad_0015_00155951_parametric_openscad_claude-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0015_00155951.stl",
+        "gt_render": "gt_renders/text2cad_0015_00155951.png"
+      },
+      "metrics": {
+        "chamfer_distance": 0.000375,
+        "hausdorff_distance": 0.09061,
+        "f_score_005": 0.9207,
+        "f_score_001": 0.4124,
+        "normal_consistency": 0.7975,
+        "iou_csg": 0.8099,
+        "iou_voxel": 0.8202,
+        "pred_open_edge_ratio": 0,
+        "pred_inverted_normal_ratio": 0,
+        "pred_non_manifold_edge_ratio": 0,
+        "qa_semantic": 1,
+        "qa_parametric": 1,
+        "qa_overall": 1
+      }
+    },
+    {
+      "id": "text2cad_0015_00155951_parametric_openscad_deepseek_v4pro-reason",
+      "task": "text2cad",
+      "case_id": "0015/00155951",
+      "spec": "parametric",
+      "format": "openscad",
+      "model": "deepseek_v4pro-reason",
+      "valid": true,
+      "condition": "Use a main base reference size of length 0.75, width 0.5, and height 0.125. Create the base as a solid upper-side arc-edged plate occupying the full 0.75 by 0.5 footprint with extrusion depth 0.125 from the base datum, and include a central circular through void with axis 0.375 from the left edge and 0.25 from the front edge, radius 0.125. Add a concentric underside annular collar starting at the base underside and reaching 0.0375 below it; the collar is centered on the same axis, has outer radius 0.2125 and inner radius 0.125, and must remain a hollow circular ring rather than a rectangular pad. Add a right-end upper solid rounded tab with plan footprint 0.125 by 0.375, offset 0.625 from the left edge, 0 from the right edge, and 0.0625 from both front and back edges; it rises from the top side to a total reach of 0.5875 from the base datum and contains a through circular opening of radius 0.0937 centered on the tab width axis at left-offset 0.75 and front-offset 0.25. Add the matching left-end upper solid rounded tab with plan footprint 0.125 by 0.375, offset 0 from the left edge, 0.625 from the right edge, and 0.0625 from both front and back edges; it also rises to a total reach of 0.5875 from the base datum and has a through circular opening of radius 0.0937 centered at left-offset 0 and front-offset 0.25. Keep the upright tab outlines rounded or slot-like in elevation, with the openings cut through the tab thickness, and keep the base opening continuous through the base and underside collar.",
+      "assets": {
+        "generated": "runs/text2cad_0015_00155951_parametric_openscad_deepseek_v4pro-reason/generated.scad",
+        "generated_scad": "runs/text2cad_0015_00155951_parametric_openscad_deepseek_v4pro-reason/generated.scad",
+        "mesh": "runs/text2cad_0015_00155951_parametric_openscad_deepseek_v4pro-reason/model.stl",
+        "pred_render": "runs/text2cad_0015_00155951_parametric_openscad_deepseek_v4pro-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0015_00155951.stl",
+        "gt_render": "gt_renders/text2cad_0015_00155951.png"
+      },
+      "metrics": {
+        "chamfer_distance": 0.000777,
+        "hausdorff_distance": 0.09775,
+        "f_score_005": 0.8383,
+        "f_score_001": 0.1568,
+        "normal_consistency": 0.7273,
+        "iou_csg": 0.5909,
+        "iou_voxel": 0.6226,
+        "pred_open_edge_ratio": 0,
+        "pred_inverted_normal_ratio": 0,
+        "pred_non_manifold_edge_ratio": 0,
+        "qa_semantic": 1,
+        "qa_parametric": 1,
+        "qa_overall": 1
+      }
+    },
+    {
+      "id": "text2cad_0015_00155951_parametric_openscad_qwen-reason",
+      "task": "text2cad",
+      "case_id": "0015/00155951",
+      "spec": "parametric",
+      "format": "openscad",
+      "model": "qwen-reason",
+      "valid": true,
+      "condition": "Use a main base reference size of length 0.75, width 0.5, and height 0.125. Create the base as a solid upper-side arc-edged plate occupying the full 0.75 by 0.5 footprint with extrusion depth 0.125 from the base datum, and include a central circular through void with axis 0.375 from the left edge and 0.25 from the front edge, radius 0.125. Add a concentric underside annular collar starting at the base underside and reaching 0.0375 below it; the collar is centered on the same axis, has outer radius 0.2125 and inner radius 0.125, and must remain a hollow circular ring rather than a rectangular pad. Add a right-end upper solid rounded tab with plan footprint 0.125 by 0.375, offset 0.625 from the left edge, 0 from the right edge, and 0.0625 from both front and back edges; it rises from the top side to a total reach of 0.5875 from the base datum and contains a through circular opening of radius 0.0937 centered on the tab width axis at left-offset 0.75 and front-offset 0.25. Add the matching left-end upper solid rounded tab with plan footprint 0.125 by 0.375, offset 0 from the left edge, 0.625 from the right edge, and 0.0625 from both front and back edges; it also rises to a total reach of 0.5875 from the base datum and has a through circular opening of radius 0.0937 centered at left-offset 0 and front-offset 0.25. Keep the upright tab outlines rounded or slot-like in elevation, with the openings cut through the tab thickness, and keep the base opening continuous through the base and underside collar.",
+      "assets": {
+        "generated": "runs/text2cad_0015_00155951_parametric_openscad_qwen-reason/generated.scad",
+        "generated_scad": "runs/text2cad_0015_00155951_parametric_openscad_qwen-reason/generated.scad",
+        "mesh": "runs/text2cad_0015_00155951_parametric_openscad_qwen-reason/model.stl",
+        "pred_render": "runs/text2cad_0015_00155951_parametric_openscad_qwen-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0015_00155951.stl",
+        "gt_render": "gt_renders/text2cad_0015_00155951.png"
+      },
+      "metrics": {
+        "chamfer_distance": 0.000751,
+        "hausdorff_distance": 0.099868,
+        "f_score_005": 0.8406,
+        "f_score_001": 0.1286,
+        "normal_consistency": 0.7234,
+        "iou_csg": 0.5972,
+        "iou_voxel": 0.6275,
+        "pred_open_edge_ratio": 0,
+        "pred_inverted_normal_ratio": 0,
+        "pred_non_manifold_edge_ratio": 0,
+        "qa_semantic": 1,
+        "qa_parametric": 1,
+        "qa_overall": 1
+      }
+    },
+    {
+      "id": "text2cad_0015_00155951_parametric_openscad_mimo_v25-reason",
+      "task": "text2cad",
+      "case_id": "0015/00155951",
+      "spec": "parametric",
+      "format": "openscad",
+      "model": "mimo_v25-reason",
+      "valid": true,
+      "condition": "Use a main base reference size of length 0.75, width 0.5, and height 0.125. Create the base as a solid upper-side arc-edged plate occupying the full 0.75 by 0.5 footprint with extrusion depth 0.125 from the base datum, and include a central circular through void with axis 0.375 from the left edge and 0.25 from the front edge, radius 0.125. Add a concentric underside annular collar starting at the base underside and reaching 0.0375 below it; the collar is centered on the same axis, has outer radius 0.2125 and inner radius 0.125, and must remain a hollow circular ring rather than a rectangular pad. Add a right-end upper solid rounded tab with plan footprint 0.125 by 0.375, offset 0.625 from the left edge, 0 from the right edge, and 0.0625 from both front and back edges; it rises from the top side to a total reach of 0.5875 from the base datum and contains a through circular opening of radius 0.0937 centered on the tab width axis at left-offset 0.75 and front-offset 0.25. Add the matching left-end upper solid rounded tab with plan footprint 0.125 by 0.375, offset 0 from the left edge, 0.625 from the right edge, and 0.0625 from both front and back edges; it also rises to a total reach of 0.5875 from the base datum and has a through circular opening of radius 0.0937 centered at left-offset 0 and front-offset 0.25. Keep the upright tab outlines rounded or slot-like in elevation, with the openings cut through the tab thickness, and keep the base opening continuous through the base and underside collar.",
+      "assets": {
+        "generated": "runs/text2cad_0015_00155951_parametric_openscad_mimo_v25-reason/generated.scad",
+        "generated_scad": "runs/text2cad_0015_00155951_parametric_openscad_mimo_v25-reason/generated.scad",
+        "mesh": "runs/text2cad_0015_00155951_parametric_openscad_mimo_v25-reason/model.stl",
+        "pred_render": "runs/text2cad_0015_00155951_parametric_openscad_mimo_v25-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0015_00155951.stl",
+        "gt_render": "gt_renders/text2cad_0015_00155951.png"
+      },
+      "metrics": {
+        "chamfer_distance": 0.00085,
+        "hausdorff_distance": 0.119258,
+        "f_score_005": 0.8293,
+        "f_score_001": 0.237,
+        "normal_consistency": 0.7847,
+        "iou_csg": 0.6927,
+        "iou_voxel": 0.682,
+        "pred_open_edge_ratio": 0,
+        "pred_inverted_normal_ratio": 0,
+        "pred_non_manifold_edge_ratio": 0,
+        "qa_semantic": 0.25,
+        "qa_parametric": 0.5,
+        "qa_overall": 0.4167
+      }
+    },
+    {
+      "id": "text2cad_0015_00155951_parametric_openscad_doubao-reason",
+      "task": "text2cad",
+      "case_id": "0015/00155951",
+      "spec": "parametric",
+      "format": "openscad",
+      "model": "doubao-reason",
+      "valid": true,
+      "condition": "Use a main base reference size of length 0.75, width 0.5, and height 0.125. Create the base as a solid upper-side arc-edged plate occupying the full 0.75 by 0.5 footprint with extrusion depth 0.125 from the base datum, and include a central circular through void with axis 0.375 from the left edge and 0.25 from the front edge, radius 0.125. Add a concentric underside annular collar starting at the base underside and reaching 0.0375 below it; the collar is centered on the same axis, has outer radius 0.2125 and inner radius 0.125, and must remain a hollow circular ring rather than a rectangular pad. Add a right-end upper solid rounded tab with plan footprint 0.125 by 0.375, offset 0.625 from the left edge, 0 from the right edge, and 0.0625 from both front and back edges; it rises from the top side to a total reach of 0.5875 from the base datum and contains a through circular opening of radius 0.0937 centered on the tab width axis at left-offset 0.75 and front-offset 0.25. Add the matching left-end upper solid rounded tab with plan footprint 0.125 by 0.375, offset 0 from the left edge, 0.625 from the right edge, and 0.0625 from both front and back edges; it also rises to a total reach of 0.5875 from the base datum and has a through circular opening of radius 0.0937 centered at left-offset 0 and front-offset 0.25. Keep the upright tab outlines rounded or slot-like in elevation, with the openings cut through the tab thickness, and keep the base opening continuous through the base and underside collar.",
+      "assets": {
+        "generated": "runs/text2cad_0015_00155951_parametric_openscad_doubao-reason/generated.scad",
+        "generated_scad": "runs/text2cad_0015_00155951_parametric_openscad_doubao-reason/generated.scad",
+        "mesh": "runs/text2cad_0015_00155951_parametric_openscad_doubao-reason/model.stl",
+        "pred_render": "runs/text2cad_0015_00155951_parametric_openscad_doubao-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0015_00155951.stl",
+        "gt_render": "gt_renders/text2cad_0015_00155951.png"
+      },
+      "metrics": {
+        "chamfer_distance": 0.003674,
+        "hausdorff_distance": 0.142487,
+        "f_score_005": 0.4674,
+        "f_score_001": 0.0273,
+        "normal_consistency": 0.5518,
+        "iou_csg": 0.3198,
+        "iou_voxel": 0.3269,
+        "pred_open_edge_ratio": 0,
+        "pred_inverted_normal_ratio": 0,
+        "pred_non_manifold_edge_ratio": 0,
+        "qa_semantic": 1,
+        "qa_parametric": 1,
+        "qa_overall": 1
+      }
+    },
+    {
+      "id": "text2cad_0015_00155951_parametric_openscad_glm-reason",
+      "task": "text2cad",
+      "case_id": "0015/00155951",
+      "spec": "parametric",
+      "format": "openscad",
+      "model": "glm-reason",
+      "valid": true,
+      "condition": "Use a main base reference size of length 0.75, width 0.5, and height 0.125. Create the base as a solid upper-side arc-edged plate occupying the full 0.75 by 0.5 footprint with extrusion depth 0.125 from the base datum, and include a central circular through void with axis 0.375 from the left edge and 0.25 from the front edge, radius 0.125. Add a concentric underside annular collar starting at the base underside and reaching 0.0375 below it; the collar is centered on the same axis, has outer radius 0.2125 and inner radius 0.125, and must remain a hollow circular ring rather than a rectangular pad. Add a right-end upper solid rounded tab with plan footprint 0.125 by 0.375, offset 0.625 from the left edge, 0 from the right edge, and 0.0625 from both front and back edges; it rises from the top side to a total reach of 0.5875 from the base datum and contains a through circular opening of radius 0.0937 centered on the tab width axis at left-offset 0.75 and front-offset 0.25. Add the matching left-end upper solid rounded tab with plan footprint 0.125 by 0.375, offset 0 from the left edge, 0.625 from the right edge, and 0.0625 from both front and back edges; it also rises to a total reach of 0.5875 from the base datum and has a through circular opening of radius 0.0937 centered at left-offset 0 and front-offset 0.25. Keep the upright tab outlines rounded or slot-like in elevation, with the openings cut through the tab thickness, and keep the base opening continuous through the base and underside collar.",
+      "assets": {
+        "generated": "runs/text2cad_0015_00155951_parametric_openscad_glm-reason/generated.scad",
+        "generated_scad": "runs/text2cad_0015_00155951_parametric_openscad_glm-reason/generated.scad",
+        "mesh": "runs/text2cad_0015_00155951_parametric_openscad_glm-reason/model.stl",
+        "pred_render": "runs/text2cad_0015_00155951_parametric_openscad_glm-reason/pred_render.png",
+        "gt_mesh": "gt_meshes/text2cad_0015_00155951.stl",
+        "gt_render": "gt_renders/text2cad_0015_00155951.png"
+      },
+      "metrics": {
+        "chamfer_distance": 0.000585,
+        "hausdorff_distance": 0.093796,
+        "f_score_005": 0.8681,
+        "f_score_001": 0.3184,
+        "normal_consistency": 0.7583,
+        "iou_csg": 0.7056,
+        "iou_voxel": 0.7308,
+        "pred_open_edge_ratio": 0,
+        "pred_inverted_normal_ratio": 0,
+        "pred_non_manifold_edge_ratio": 0,
+        "qa_semantic": 1,
+        "qa_parametric": 1,
+        "qa_overall": 1
       }
     }
   ],
