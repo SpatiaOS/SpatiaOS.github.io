@@ -1,0 +1,6 @@
+# Local review and audit artifacts for release-page maintenance.
+projects/P3D-Bench/data_review_status_*.md
+projects/P3D-Bench/*_review_status*.md
+projects/P3D-Bench/*_gap_report*.md
+projects/P3D-Bench/*_audit*.md
+projects/P3D-Bench/local/
