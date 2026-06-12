@@ -1,0 +1,115 @@
+{
+  "parameters": {
+    "common_center_x": 0.375,
+    "common_center_y": 0.375,
+    "main_base_outer_radius": 0.375,
+    "main_base_inner_radius": 0.3375,
+    "main_base_extrude_positive": 0.0281,
+    "main_base_extrude_negative": 0.0281,
+    "collar_outer_radius": 0.075,
+    "collar_inner_radius": 0.0375,
+    "collar_extrude_positive": 0.0234,
+    "collar_extrude_negative": 0.0234,
+    "rib_left_offset": 0.0658,
+    "rib_right_offset": 0.0658,
+    "rib_front_offset": 0.0387,
+    "rib_back_offset": 0.1903,
+    "rib_extrude_positive": 0.0141,
+    "rib_extrude_negative": 0.0141,
+    "base_plate_total_width": 0.75
+  },
+  "parts": {
+    "part_1_main_annular_base": {
+      "$comment": "Main concentric annular base, outer radius 0.375, inner cutout radius 0.3375, symmetric extrusion total height 0.0562",
+      "coordinate_system": {
+        "Euler Angles": [0.0, 0.0, 0.0],
+        "Translation Vector": [0.0, 0.0, 0.0]
+      },
+      "sketch": {
+        "face_1": {
+          "loop_1_outer_profile": {
+            "circle_1": {
+              "Center": [0.375, 0.375],
+              "Radius": 0.375
+            }
+          },
+          "loop_2_inner_cutout": {
+            "circle_2": {
+              "Center": [0.375, 0.375],
+              "Radius": 0.3375
+            }
+          }
+        }
+      },
+      "extrusion": {
+        "extrude_depth_towards_normal": 0.0281,
+        "extrude_depth_opposite_normal": 0.0281,
+        "sketch_scale": 1.0,
+        "operation": "NewBodyFeatureOperation"
+      }
+    },
+    "part_2_central_annular_collar": {
+      "$comment": "Concentric central annular collar, 0.15mm total diameter, inner through void, symmetric extrusion total height 0.0468",
+      "coordinate_system": {
+        "Euler Angles": [0.0, 0.0, 0.0],
+        "Translation Vector": [0.0, 0.0, 0.0]
+      },
+      "sketch": {
+        "face_1": {
+          "loop_1_collar_outer": {
+            "circle_3": {
+              "Center": [0.375, 0.375],
+              "Radius": 0.075
+            }
+          },
+          "loop_2_collar_inner_void": {
+            "circle_4": {
+              "Center": [0.375, 0.375],
+              "Radius": 0.0375
+            }
+          }
+        }
+      },
+      "extrusion": {
+        "extrude_depth_towards_normal": 0.0234,
+        "extrude_depth_opposite_normal": 0.0234,
+        "sketch_scale": 1.0,
+        "operation": "JoinFeatureOperation"
+      }
+    },
+    "part_3_radial_rib_web": {
+      "$comment": "Arc-based rounded radial rib web between base rim and collar, symmetric extrusion total height 0.0282, matches specified bounding footprint offsets",
+      "coordinate_system": {
+        "Euler Angles": [0.0, 0.0, 0.0],
+        "Translation Vector": [0.0, 0.0, 0.0]
+      },
+      "sketch": {
+        "face_1": {
+          "loop_1_rib_closed_profile": {
+            "arc_1": {
+              "Start Point": [0.0658, 0.0387],
+              "Mid Point": [0.375, 0.29],
+              "End Point": [0.6842, 0.0387]
+            },
+            "arc_2": {
+              "Start Point": [0.6842, 0.0387],
+              "Mid Point": [0.6842, 0.2992],
+              "End Point": [0.375, 0.5597]
+            },
+            "arc_3": {
+              "Start Point": [0.375, 0.5597],
+              "Mid Point": [0.0658, 0.2992],
+              "End Point": [0.0658, 0.0387]
+            }
+          }
+        }
+      },
+      "extrusion": {
+        "extrude_depth_towards_normal": 0.0141,
+        "extrude_depth_opposite_normal": 0.0141,
+        "sketch_scale": 1.0,
+        "operation": "JoinFeatureOperation"
+      }
+    }
+  }
+}

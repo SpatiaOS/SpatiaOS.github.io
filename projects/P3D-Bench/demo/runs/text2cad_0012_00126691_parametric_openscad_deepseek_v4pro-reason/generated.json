@@ -1,0 +1,28 @@
+{
+  "schema": "p3d.demo.generated_output.v1",
+  "task": "text2cad",
+  "case_id": "0012/00126691",
+  "model": "deepseek_v4pro-reason",
+  "input_spec": "parametric",
+  "output_format": "openscad",
+  "valid": true,
+  "condition": "Start with the main reference slab as a rectangular solid length 0.5, width 0.75, height 0.016667, with main extrusion depth 0.0167. Add an upper-side solid rectangular feature with footprint 0.5 by 0.5, flush to the left, right, and back edges of the base and offset 0.25 from the front edge; its reach from the base datum is 0.2334. Add two upper-side solid narrow rectangular edge strips over this rear region, each with footprint 0.0083 by 0.5 and main extrusion depth 0.0083; one strip is flush with the left edge and offset 0.4917 from the right edge, and the other is flush with the right edge and offset 0.4917 from the left edge, with both offset 0.25 from the front and flush with the back. Add the thin upper-side transverse solid feature with footprint 0.5 by 0.250819, flush to the left and right edges, offset 0.24922 from the front edge and 0.249961 from the back edge; its own thickness is 0.0021 and its total reach from the base datum is 0.335265. Preserve the closed internal profile in the added material as a real open void through that local solid. For the aligned stepped portion, treat the upper pad depth as 0.1 and the deeper continuation below it as a separate solid continuation with own depth 0.2167; the deeper footprint is contained within the shallow footprint, shares the left, front, and back edges, and its reach is measured from the same shoulder rather than added end-to-end.",
+  "metrics": {
+    "chamfer_distance": 0.002309,
+    "hausdorff_distance": 0.195575,
+    "f_score_005": 0.7464,
+    "f_score_001": 0.0613,
+    "normal_consistency": 0.7142,
+    "iou_csg": 0.0134,
+    "iou_voxel": 0.0402,
+    "pred_open_edge_ratio": 0.0,
+    "qa_semantic": 0.25,
+    "qa_parametric": 0.125,
+    "qa_overall": 0.1667
+  },
+  "program": {
+    "language": "openscad",
+    "source": "// Parameters\nbase_length = 0.5;\nbase_width = 0.75;\nbase_height = 0.016667;\n\nblock1_length = 0.5;\nblock1_width = 0.5;\nblock1_offset_front = 0.25;          // Y distance from front edge\nblock1_reach = 0.2334;               // Z top from base datum\nblock1_height = block1_reach - base_height;\n\nstrip_width = 0.0083;                // X dimension\nstrip_length = 0.5;                  // Y dimension\nstrip_height = 0.0083;\nstrip_offset_front = 0.25;           // Y position\nright_strip_x = base_length - strip_width; // flush right\n\nupper_pad_depth = 0.1;\nupper_pad_length = 0.5;\nupper_pad_width = 0.250819;\nupper_pad_offset_front = 0.24922;    // Y position\nupper_pad_z = block1_reach;          // bottom sits on top of block1\n\ntransverse_thickness = 0.0021;\ntransverse_reach = 0.335265;         // top from base datum\ntransverse_z_bottom = transverse_reach - transverse_thickness;\ntransverse_length = 0.5;\ntransverse_width = upper_pad_width;  // same footprint as upper pad\ntransverse_y = upper_pad_offset_front;\n\n// Void (stepped pocket) dimensions\nshallow_pocket_depth = 0.1;\nshallow_pocket_z = transverse_reach - shallow_pocket_depth; // bottom of shallow pocket\ndeep_pocket_depth = 0.2167;\ndeep_pocket_width = right_strip_x;   // from left edge (0) to inner edge of right strip\ndeep_pocket_z = shallow_pocket_z - deep_pocket_depth;\n\n$fn = 50; // resolution for any curves (none here)\n\n// Main solid union\nmodule solids() {\n    // Base slab\n    cube([base_length, base_width, base_height]);\n    \n    // Upper rectangular feature (block1)\n    translate([0, block1_offset_front, base_height])\n        cube([block1_length, block1_width, block1_height]);\n    \n    // Left narrow strip\n    translate([0, strip_offset_front, base_height])\n        cube([strip_width, strip_length, strip_height]);\n    \n    // Right narrow strip\n    translate([right_strip_x, strip_offset_front, base_height])\n        cube([strip_width, strip_length, strip_height]);\n    \n    // Upper pad (stepped shallow solid)\n    translate([0, upper_pad_offset_front, upper_pad_z])\n        cube([upper_pad_length, upper_pad_width, upper_pad_depth]);\n    \n    // Thin transverse feature\n    translate([0, transverse_y, transverse_z_bottom])\n        cube([transverse_length, transverse_width, transverse_thickness]);\n}\n\n// Void solid (to be subtracted)\nmodule void() {\n    // Shallow pocket\n    translate([0, upper_pad_offset_front, shallow_pocket_z])\n        cube([upper_pad_length, upper_pad_width, shallow_pocket_depth]);\n    \n    // Deep pocket (narrower, shares left, front, back edges)\n    translate([0, upper_pad_offset_front, deep_pocket_z])\n        cube([deep_pocket_width, upper_pad_width, deep_pocket_depth]);\n}\n\n// Final model\ndifference() {\n    solids();\n    void();\n}"
+  },
+  "note": "Non-JSON CAD source wrapped as JSON."
+}
