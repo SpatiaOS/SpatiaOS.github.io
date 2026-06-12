@@ -12,3 +12,21 @@
   color: var(--ink);
   font-weight: 800;
 }
+
+/* Interactive Results — bucket aggregate score pill (next to each bucket label) */
+.metric-bucket-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.metric-bucket-score {
+  flex: none;
+  font: 700 11.5px/1 var(--font-code);
+  color: var(--ink);
+  background: color-mix(in srgb, var(--bucket-accent) 14%, var(--paper));
+  border: 1px solid color-mix(in srgb, var(--bucket-accent) 30%, transparent);
+  border-radius: 999px;
+  padding: 3px 9px;
+  letter-spacing: .02em;
+}
