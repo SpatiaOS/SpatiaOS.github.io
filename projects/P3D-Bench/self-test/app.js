@@ -8,7 +8,9 @@ const state = {
   recoveryKey: null,
   submissionId: null,
   selfTest: null,
+  evaluation: null,
   activeCase: 0,
+  activeResultCase: 0,
   pollTimer: null,
   imageUrl: null,
 };
@@ -367,7 +369,7 @@ async function upload(event) {
 }
 
 function flattenNumbers(value, prefix = "", output = {}) {
-  if (Object.keys(output).length >= 24) return output;
+  if (Object.keys(output).length >= 80) return output;
   if (typeof value === "number" && Number.isFinite(value)) output[prefix || "value"] = value;
   else if (value && typeof value === "object" && !Array.isArray(value)) {
     Object.entries(value).forEach(([key, item]) => flattenNumbers(item, prefix ? `${prefix}.${key}` : key, output));
@@ -390,6 +392,129 @@ function resultMetrics(result) {
   return result?.result_summary || result?.summary || {};
 }
 
+const HEADLINE_METRICS = [
+  "iou_voxel",
+  "iou_csg",
+  "visible_silhouette_iou",
+  "chamfer_distance",
+  "f_score_005",
+  "f_score_001",
+  "normal_consistency",
+  "visible_depth_mae",
+  "visible_normal_consistency",
+];
+
+function metricText(value) {
+  return Number.isInteger(value) ? String(value) : Number(value).toFixed(5).replace(/0+$/, "").replace(/\.$/, "");
+}
+
+function renderMetricValues(value, emptyMessage = "该 case 尚未产生公开 metrics") {
+  const metrics = flattenNumbers(value || {});
+  const entries = Object.entries(metrics);
+  const preferred = HEADLINE_METRICS.flatMap((name) => Object.hasOwn(metrics, name) ? [[name, metrics[name]]] : []);
+  const headline = (preferred.length ? preferred : entries).slice(0, 9);
+  const headlineNames = new Set(headline.map(([name]) => name));
+  const remaining = entries.filter(([name]) => !headlineNames.has(name));
+  const metricRoot = byId("metrics");
+  metricRoot.replaceChildren();
+  if (!headline.length) {
+    const empty = document.createElement("div");
+    empty.className = "metric empty";
+    empty.textContent = emptyMessage;
+    metricRoot.append(empty);
+  } else {
+    headline.forEach(([name, value]) => {
+      const cell = document.createElement("div");
+      cell.className = "metric";
+      const label = document.createElement("span");
+      label.textContent = name;
+      const number = document.createElement("strong");
+      number.textContent = metricText(value);
+      cell.append(label, number);
+      metricRoot.append(cell);
+    });
+  }
+  const details = byId("metric-details");
+  const table = byId("metric-table");
+  table.replaceChildren();
+  remaining.forEach(([name, value]) => {
+    const row = document.createElement("div");
+    const term = document.createElement("dt");
+    term.textContent = name;
+    const detail = document.createElement("dd");
+    detail.textContent = metricText(value);
+    row.append(term, detail);
+    table.append(row);
+  });
+  details.hidden = remaining.length === 0;
+  details.open = false;
+  if (!details.hidden) details.querySelector("summary").textContent = `完整指标 · ${remaining.length} 项`;
+}
+
+function artifactCaseIndex(artifact, cases) {
+  const explicit = cases.findIndex((item) => (
+    artifact.case_id && item.case_id === artifact.case_id
+    && (!artifact.task || item.task === artifact.task)
+  ));
+  if (explicit >= 0) return explicit;
+  const prefix = String(artifact.artifact_id || "").match(/^(\d+)-/);
+  return prefix ? Number(prefix[1]) : cases.length === 1 ? 0 : -1;
+}
+
+function renderResultCase(index) {
+  const submission = state.evaluation?.submission || {};
+  const result = state.evaluation?.result || {};
+  const cases = Array.isArray(result.result_summary?.cases) ? result.result_summary.cases : [];
+  const caseIndex = Math.min(Math.max(0, index), Math.max(0, cases.length - 1));
+  state.activeResultCase = caseIndex;
+  const item = cases[caseIndex] || null;
+  document.querySelectorAll(".result-case-button").forEach((button, buttonIndex) => {
+    button.classList.toggle("active", buttonIndex === caseIndex);
+  });
+  byId("result-case-task").textContent = item?.task || "RESULT";
+  byId("result-case-id").textContent = item?.case_id || "Run summary";
+  const caseStatus = byId("result-case-status");
+  const valid = item?.valid;
+  const failed = item?.evaluation_status === "failed" || (!item && submission.status === "failed");
+  caseStatus.dataset.state = failed ? "failed" : valid === false ? "invalid" : valid === true ? "complete" : "pending";
+  caseStatus.textContent = failed ? "评测失败" : valid === false ? "Invalid" : valid === true ? "Valid" : statusText(item?.status || submission.status);
+  renderMetricValues(
+    item?.metrics || resultMetrics(result),
+    failed ? submission.failure_reason || "评测未产生公开 metrics" : "等待 evaluator 写入 metrics",
+  );
+  const artifacts = Array.isArray(result.artifacts) ? result.artifacts : [];
+  const scoped = cases.length
+    ? artifacts.filter((artifact) => artifactCaseIndex(artifact, cases) === caseIndex)
+    : artifacts;
+  byId("artifact-context").textContent = item ? `${item.task} · ${item.case_id}` : "Run-level artifacts";
+  renderArtifacts(scoped);
+}
+
+function renderResultCases(cases) {
+  const root = byId("result-cases");
+  root.replaceChildren();
+  cases.forEach((item, index) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "result-case-button";
+    const count = document.createElement("span");
+    count.textContent = String(index + 1).padStart(2, "0");
+    const copy = document.createElement("span");
+    const task = document.createElement("strong");
+    task.textContent = item.task || "case";
+    const id = document.createElement("small");
+    id.textContent = item.case_id || "unknown";
+    copy.append(task, id);
+    const status = document.createElement("i");
+    status.dataset.state = item.evaluation_status === "failed" ? "failed" : item.valid === false ? "invalid" : item.valid === true ? "complete" : "pending";
+    status.setAttribute("aria-label", item.valid === true ? "valid" : item.valid === false ? "invalid" : "pending");
+    button.append(count, copy, status);
+    button.addEventListener("click", () => renderResultCase(index));
+    root.append(button);
+  });
+  root.hidden = cases.length === 0;
+}
+
 async function pollSubmission() {
   if (!state.submissionId) return;
   byId("results").hidden = false;
@@ -410,6 +535,7 @@ async function pollSubmission() {
 }
 
 function renderResult(evaluation) {
+  state.evaluation = evaluation;
   const submission = evaluation.submission || {};
   const status = submission.status || "pending";
   const runState = byId("run-state");
@@ -430,27 +556,9 @@ function renderResult(evaluation) {
     row.append(term, detail);
     identifiers.append(row);
   });
-  const metrics = flattenNumbers(resultMetrics(evaluation.result));
-  const metricRoot = byId("metrics");
-  metricRoot.replaceChildren();
-  if (!Object.keys(metrics).length) {
-    const empty = document.createElement("div");
-    empty.className = "metric empty";
-    empty.textContent = status === "failed" ? submission.failure_reason || "评测未产生 metrics" : "等待 evaluator 写入 metrics";
-    metricRoot.append(empty);
-  } else {
-    Object.entries(metrics).forEach(([name, value]) => {
-      const cell = document.createElement("div");
-      cell.className = "metric";
-      const label = document.createElement("span");
-      label.textContent = name;
-      const number = document.createElement("strong");
-      number.textContent = Number.isInteger(value) ? String(value) : Number(value).toFixed(4).replace(/0+$/, "").replace(/\.$/, "");
-      cell.append(label, number);
-      metricRoot.append(cell);
-    });
-  }
-  renderArtifacts(evaluation.result?.artifacts || []);
+  const cases = Array.isArray(evaluation.result?.result_summary?.cases) ? evaluation.result.result_summary.cases : [];
+  renderResultCases(cases);
+  renderResultCase(Math.min(state.activeResultCase, Math.max(0, cases.length - 1)));
   byId("raw-result").textContent = JSON.stringify(evaluation, null, 2);
 }
 
@@ -467,9 +575,10 @@ function renderArtifacts(artifacts) {
     button.className = "artifact-link";
     const name = document.createElement("span");
     name.textContent = artifact.filename || artifact.artifact_id;
-    const size = document.createElement("small");
-    size.textContent = artifact.bytes ? `${Math.ceil(artifact.bytes / 1024)} KiB` : "下载";
-    button.append(name, size);
+    const meta = document.createElement("small");
+    const size = artifact.bytes ? `${Math.ceil(artifact.bytes / 1024)} KiB` : "下载";
+    meta.textContent = `${artifact.role || "artifact"} · ${size}`;
+    button.append(name, meta);
     button.addEventListener("click", async () => {
       const blob = await api(artifact.download_url, {}, true);
       downloadBlob(blob, artifact.filename || artifact.artifact_id);

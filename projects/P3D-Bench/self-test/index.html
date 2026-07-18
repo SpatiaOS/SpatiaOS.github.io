@@ -179,10 +179,23 @@
         <div class="result-layout">
           <div>
             <dl id="run-identifiers" class="identifiers"></dl>
+            <nav id="result-cases" class="result-cases" aria-label="评测 cases"></nav>
+            <div class="result-case-heading">
+              <div>
+                <span id="result-case-task">CASE</span>
+                <strong id="result-case-id">等待结果</strong>
+              </div>
+              <span id="result-case-status" class="case-status">等待中</span>
+            </div>
             <div id="metrics" class="metrics"></div>
+            <details id="metric-details" class="metric-details" hidden>
+              <summary>完整指标</summary>
+              <dl id="metric-table"></dl>
+            </details>
           </div>
           <aside class="result-files">
             <h3>结果文件</h3>
+            <p id="artifact-context"></p>
             <div id="artifact-list"></div>
           </aside>
         </div>
