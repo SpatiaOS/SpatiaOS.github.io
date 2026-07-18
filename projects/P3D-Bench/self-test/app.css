@@ -155,6 +155,7 @@ button.primary { min-height: 44px; padding-inline: 18px; border-color: #152026; 
 .selected-file span { color: var(--muted); font-size: 12px; }
 
 .result-layout { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(250px, .65fr); gap: 36px; }
+.result-layout > div { min-width: 0; }
 .identifiers { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 0 0 20px; }
 .identifiers div { min-width: 0; padding: 0 14px 14px 0; border-bottom: 1px solid var(--line); }
 .identifiers dt { color: var(--muted); font: 700 9px var(--mono); text-transform: uppercase; }
