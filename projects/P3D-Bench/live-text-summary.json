@@ -1,9 +1,15 @@
 {
-  "schema_version": 1,
+  "schema_version": "p3d-live-text-summary-v1",
   "scope": "Text-to-3D fixed first-100 UID prefix; descriptive and parametric; JSON and OpenSCAD",
   "score_definition": "mean(Desc-Judge, Param-Geo, Param-Topo, Param-Judge) * 100",
-  "score_source": "text2cad-workbench/intake/data/kimi_k3_qwen37_textp3d_eval/stage100/comparison13/tables/stage100_fig1_style_scores.csv",
-  "cost_source": "text2cad-workbench/results/final/live/audits/cost/textp3d_same100_13model/model_cost_same100.csv",
+  "score_source": {
+    "id": "p3d-text2cad-fixed100-comparison13",
+    "sha256": "cb3708e37da2a8fb5aa328ae0ac12593b8ce8ad294d46f7438913fa3e15f2f30"
+  },
+  "cost_source": {
+    "id": "p3d-text2cad-fixed100-cost13",
+    "sha256": "1fd20c85234429630045d03d051ac26e48db3eab35b34a01cbf5306c513bd32d"
+  },
   "rows": [
     {"model":"Kimi K3","family":"kimi","metrics":"0.833 1.000 0.939 1.000 0.886 1.000 0.676 0.986 0.743 1.000 0.695 1.000 0.822 1.000 0.685 0.993 0.782 1.000","score":83.64900775,"cost_usd":48.601371,"usage_kind":"official_tokenizer_estimate"},
     {"model":"GPT-5.5","family":"openai","metrics":"0.853 1.000 0.922 0.990 0.887 0.995 0.676 0.963 0.713 1.000 0.691 0.990 0.863 1.000 0.683 0.977 0.788 1.000","score":83.37202254166667,"cost_usd":163.610555,"usage_kind":"saved_response_usage"},

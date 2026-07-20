@@ -24,6 +24,12 @@ if (inputSha256 !== expectedInputSha256) {
 }
 
 const data = JSON.parse(readFileSync(dataPath, "utf8"));
+if (data.schema_version !== "p3d-live-text-summary-v1") throw new Error("unsupported live summary schema");
+for (const [label, source] of [["score", data.score_source], ["cost", data.cost_source]]) {
+  if (!source || !/^[a-z0-9][a-z0-9-]{7,63}$/.test(source.id) || !/^[0-9a-f]{64}$/.test(source.sha256)) {
+    throw new Error(`invalid ${label} source provenance`);
+  }
+}
 if (data.rows.length !== 13) throw new Error(`expected 13 Text-to-3D rows, got ${data.rows.length}`);
 for (const [index, row] of data.rows.entries()) {
   if (row.metrics.trim().split(/\s+/).length !== 18) throw new Error(`${row.model}: expected 18 metric cells`);
