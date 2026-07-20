@@ -1,0 +1,4616 @@
+{
+  "schema_version": "p3d-public-visible-assets-v1",
+  "suite_id": "p3d-bench-paper",
+  "suite_version": "v1",
+  "license_status": "research_only_upstream_restricted",
+  "visibility": "public_visible_input",
+  "render_profile": "cadbenchmark_occ_single_view_v1",
+  "unique_asset_count": 400,
+  "total_bytes": 70518505,
+  "hidden_geometry_published": false,
+  "entries": [
+    {
+      "uid": "104525_d7575000",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/104525_d7575000.png",
+      "sha256": "cb3f1f76bee412354e7b6125212b2a8f65a35981a6d1dfc7193c21b07a8b740a",
+      "bytes": 90679,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "106726_7658d0c5",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/106726_7658d0c5.png",
+      "sha256": "c90d91ca4e618191df2089e71fdb3f0424aef58374cdf779f3a55d1cb91a1e61",
+      "bytes": 110702,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "107234_d484742b",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/107234_d484742b.png",
+      "sha256": "a784fdbdc3b5980bb0ab94aa047c82c95da4f509a967d1fd36a303b350a40ee6",
+      "bytes": 160993,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "110867_c97b35ff",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/110867_c97b35ff.png",
+      "sha256": "c126305cdb01b1cf4d71312e410b71392e999c7c96a3e624c94ee814375c900b",
+      "bytes": 178435,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "110965_77421da9",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/110965_77421da9.png",
+      "sha256": "ba16c4635240ed82fd898afb378e6d83619ddb4a148b606feafd4aadf16fdd09",
+      "bytes": 91545,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "111151_7c7f89f6",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/111151_7c7f89f6.png",
+      "sha256": "6ff0f5a52999b23a84fb1f8efcc987de67e33c5e96be45bfae30c584d2a5d9b7",
+      "bytes": 98528,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "112181_d498e10b",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/112181_d498e10b.png",
+      "sha256": "0cd0572c3650a78e964f3cfbfd062db605d459f68ff1feab322c9619cd3843f0",
+      "bytes": 65934,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "112645_b0bf4b79",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/112645_b0bf4b79.png",
+      "sha256": "663af11d50beef8c5360a6f567e0b270f2f27461c8c4015de8fd251aae1231ae",
+      "bytes": 123144,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "113551_4202972d",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/113551_4202972d.png",
+      "sha256": "4589cf421349be2c564701d85b7a687abf069e36fbd52652d61bbf2a169cedc3",
+      "bytes": 168947,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "113708_5afa74be",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/113708_5afa74be.png",
+      "sha256": "80d06ac7ad8bd0c852ccbc180a12893ae76e796af854e5ead535272114377bd4",
+      "bytes": 96868,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "114260_d7eb6523",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/114260_d7eb6523.png",
+      "sha256": "9b685ee2dc87b3b7a3a377e5ade1efc40acc0207909d33a515ea4f3e151f03d5",
+      "bytes": 176761,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "117698_aca36590",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/117698_aca36590.png",
+      "sha256": "3967b7b47e416a56d148806e316a44c9ddafde3b09748a80e37fc8e1ef7a210d",
+      "bytes": 94242,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "118277_5c98c14f",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/118277_5c98c14f.png",
+      "sha256": "50c155ed851a19d824b9e55f04b9364e996f7da31c7f191a4b408a672dbba941",
+      "bytes": 116823,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "119788_feae8862",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/119788_feae8862.png",
+      "sha256": "ee269bed0788e6bbba0486a5e21b6c155490a22d0f7f28bb28f0c41b3b1083d7",
+      "bytes": 166148,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "120712_92f373b4",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/120712_92f373b4.png",
+      "sha256": "1f4451cc00c114b382ec6753cd2cad14ccdaafaf8fde0e45ed10527abb7ed9fa",
+      "bytes": 158344,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "120872_5a39c4ca",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/120872_5a39c4ca.png",
+      "sha256": "bebe2d4d61a60593e95e38ca5a86a8a04e0a4b4bdbd09f128a8495a0d7b27fed",
+      "bytes": 28163,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "121549_e1415df9",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/121549_e1415df9.png",
+      "sha256": "add9a6dea9fafe938b945c35f631e75b6d3d6ee5edc2867720eeea8222160ea0",
+      "bytes": 128112,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "122579_2663ded3",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/122579_2663ded3.png",
+      "sha256": "1d482f973a4d98a9b436d7f0a790686dae379f8b3b8523b450fc8d939a93817a",
+      "bytes": 174448,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "123940_74d90c60",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/123940_74d90c60.png",
+      "sha256": "b4c8e063aed45729687f3be8c40a0bf962cabb8626fe5f2c707b4f3d7fbe14b7",
+      "bytes": 34904,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "124156_f866e8fb",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/124156_f866e8fb.png",
+      "sha256": "efeb7eacbbfdb267bc3638fd3ed05d379ab353c73f91a69d0eb7fca299e9ca6a",
+      "bytes": 130892,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "125421_e70d536f",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/125421_e70d536f.png",
+      "sha256": "f40454caceb5346aeb7dd0b96790ced5696133b9c7e70490a5d6df6ed8a7066d",
+      "bytes": 136630,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "126255_ca581625",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/126255_ca581625.png",
+      "sha256": "4fe7860bd96e301e6a5b98448b0c27eefc833b8dfeeb7665e97d5b8c4784782c",
+      "bytes": 98737,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "126655_183b0675",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/126655_183b0675.png",
+      "sha256": "e9be5bc28cb9504a53da8ff8a2c702ba88a7975ce8fd2abf5e8660fcd53c1fab",
+      "bytes": 88442,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "126907_8c612811",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/126907_8c612811.png",
+      "sha256": "22a8aed8e2f3a49733cb101c6de3787df662f6e67bcf949b2b58aa14142222ed",
+      "bytes": 86841,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "127094_e79e6db8",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/127094_e79e6db8.png",
+      "sha256": "fac8434ddbe4eacf012de1adfe145409220ab8d3ac43290b265d19b79d253b6b",
+      "bytes": 144294,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "130670_b24af09a",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/130670_b24af09a.png",
+      "sha256": "dbb6d461fcbca26e9b57f885c55bf2d87a20aeb34de00ac22945ddc57e5d4eea",
+      "bytes": 96710,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "131189_f50b6b23",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/131189_f50b6b23.png",
+      "sha256": "e9a9fa15a95e9fc32514d2d1cf85e6209697f092e94c7b8c7f732f94195f03c9",
+      "bytes": 141682,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "131316_614c6310",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/131316_614c6310.png",
+      "sha256": "d63d51d55f20d20c839ae3d25d9aa616e088d639e38ef7766aeab2bf6b2bb7b2",
+      "bytes": 153683,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "131554_a7707c54",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/131554_a7707c54.png",
+      "sha256": "6c70a408b9e8dda60c9db82ed153ce398a10414b380d7b5349db34dad55c486e",
+      "bytes": 95637,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "131863_d8b2c0a3",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/131863_d8b2c0a3.png",
+      "sha256": "e06191a046290ebd9b03369369e192768f9b58556db7041a13208d9f3480e63c",
+      "bytes": 138032,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "132529_cdcc5d1d",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/132529_cdcc5d1d.png",
+      "sha256": "1cc1eea7ba228766ee3d50b91bc7e185b3e65acedbd455e008e7e6213c29b138",
+      "bytes": 88459,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "132535_a374e751",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/132535_a374e751.png",
+      "sha256": "632a408035d936791e41423f89656e6e9869c8a8063badfe09250317a46a0cbd",
+      "bytes": 85486,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "132687_d1a27238",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/132687_d1a27238.png",
+      "sha256": "9f6d8855b920ad3ac106bb045bd2355dde8adf3f24d4e9a09b672082ad79a61d",
+      "bytes": 52243,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "133363_5c23fb1f",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/133363_5c23fb1f.png",
+      "sha256": "e4286439834616117ae86c953371aa3b963c7b6e3480cf5330aa0c99d87e0d1a",
+      "bytes": 97337,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "133439_0ddc18c5",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/133439_0ddc18c5.png",
+      "sha256": "faf46594d8f60445c8ad35567f366346e0fda084b8f82f4c1c5afeea64d2e9df",
+      "bytes": 125686,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "133454_0cc21197",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/133454_0cc21197.png",
+      "sha256": "700edcf925010859787da66efa2157a1c5e207549a43699118e649a4a79a7683",
+      "bytes": 41954,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "134812_a1677966",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/134812_a1677966.png",
+      "sha256": "4907f6ccc384bc9226f218b41e1114b70c82976099f96f02346bc6910549f1d1",
+      "bytes": 178787,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "136501_56e0a877",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/136501_56e0a877.png",
+      "sha256": "4165160b4aa23c518d68c10d6f11613bbe59d0733594380f82036f1b782258b4",
+      "bytes": 113734,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "137247_8bc3ea86",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/137247_8bc3ea86.png",
+      "sha256": "97ea2654c6d7d97f62a958124d75110e1260d822e429385533cafc3e881c4553",
+      "bytes": 143468,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "137495_31a82b02",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/137495_31a82b02.png",
+      "sha256": "edefdf317aeedd025f6a2cb505b54b984a33da37cf9a6ef04d9c9bb47b1e7a8d",
+      "bytes": 108672,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "139568_c0eb3b79",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/139568_c0eb3b79.png",
+      "sha256": "e95bdb7954498bbe0bf4e78ccb0ec478d3e5b9703770047ad02e2fc6e4c69b68",
+      "bytes": 167797,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "140725_202d5192",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/140725_202d5192.png",
+      "sha256": "a0c0402b2983206b4b468266d0c18de2001942848433598beb96f6a15d0c6fca",
+      "bytes": 125684,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "141852_f4b6db5e",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/141852_f4b6db5e.png",
+      "sha256": "0d3ee3ea252a981b5e6339f9ce8995a8bb6109da32a70d8e30f4cbaedc6c9187",
+      "bytes": 248813,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "141961_60e7bd3d",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/141961_60e7bd3d.png",
+      "sha256": "94938ef05038ed9b51905109eb4332aeec704ec16e69e78c23550720d7d47fdc",
+      "bytes": 33102,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "142057_b467cae3",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/142057_b467cae3.png",
+      "sha256": "8ca056536d69293dd4d9533b613fbadf8da6bd307f4c5fbfd2257f2ceeeae84f",
+      "bytes": 221070,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "142225_b0f2f5cc",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/142225_b0f2f5cc.png",
+      "sha256": "5ec538f78da5d5e771f1d488e0a1575be5be7aee8e3649adc63dd3d6b4a7f86c",
+      "bytes": 209280,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "142294_983b0358",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/142294_983b0358.png",
+      "sha256": "fa64de463f423865afc70f7f97dc503feddc2bb208c64e0f478bca8b6db31ec6",
+      "bytes": 131397,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "146102_93e433ac",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/146102_93e433ac.png",
+      "sha256": "6510ed9f29daed55da90383c4d21225449cf0b3356cf5c773d7fcedf00ec6001",
+      "bytes": 90443,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "20468_1c33550a",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/20468_1c33550a.png",
+      "sha256": "06aacf02033d4d4739e423b198abe4eb547e85f2e3a80d5eb6d0a654dad73fa1",
+      "bytes": 194971,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "20755_4b5e61bf",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/20755_4b5e61bf.png",
+      "sha256": "6e833745d75a9aded33f03bffa486f6f86733b027d1f03aded937486a1b66035",
+      "bytes": 219830,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "20803_473c87ac",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/20803_473c87ac.png",
+      "sha256": "38139b3b8c9055cacae5737a8748897f8c4374619aecad97dadd5b241d61966d",
+      "bytes": 176631,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "20814_5a2be0fb",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/20814_5a2be0fb.png",
+      "sha256": "63270fe5c314aa341946840818a3f9efe0ac6d56b2b3be995223c8af036e9108",
+      "bytes": 170709,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "20858_15bdad00",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/20858_15bdad00.png",
+      "sha256": "a33a134230a85692ff3fb5a18e4f6fc65f3913d84e35f2e178f837bf69751a4b",
+      "bytes": 73625,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "21133_f9a1614e",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/21133_f9a1614e.png",
+      "sha256": "007609fc7d5cabfab674acd58a073b5ab3c072ed20aa5de5cc89e1c4c453e26b",
+      "bytes": 115548,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "21185_ac5324ba",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/21185_ac5324ba.png",
+      "sha256": "57690494575850a71e2bf4b2713a91299cdb7e65cb8c4b50ccc57c6ac126e699",
+      "bytes": 200321,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "21224_18ba4aba",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/21224_18ba4aba.png",
+      "sha256": "a3763c5d68ae2b5bcff65dfb37415448651c4ba084b43577ec99712b47bd2d21",
+      "bytes": 98931,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "21425_d0d47a2a",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/21425_d0d47a2a.png",
+      "sha256": "5164d916ce6e047cad3e7134796058ef37860f22b832e6696d21d4a3560b174b",
+      "bytes": 189149,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "21513_50fb4d62",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/21513_50fb4d62.png",
+      "sha256": "4ad3af45e8e09da77f1367209decd02020ffd4a1180f8653fee56cff261e4a55",
+      "bytes": 125562,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "21958_e48ddf4e",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/21958_e48ddf4e.png",
+      "sha256": "c047113d1eb1d05e9437163adc49443c89cf09ecc9daf0ca2e947b3bb0484f14",
+      "bytes": 83812,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "22472_f65d3470",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/22472_f65d3470.png",
+      "sha256": "60fd1cb833b3fe76a0aa19341e6cd44f4279720c253fe3a7aa185be04acfeed0",
+      "bytes": 127632,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "22749_346e10ae",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/22749_346e10ae.png",
+      "sha256": "9a5e5d1ca18560a5624523863f2a2838109f65fbae87d9037e0c0d4f5ed21d6c",
+      "bytes": 71254,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "22824_65fa15ec",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/22824_65fa15ec.png",
+      "sha256": "3000294b706f2a079462cb9937414ba465e4ee1b7d8b2a625f2a2eb1a954cc79",
+      "bytes": 73022,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "22894_5f7c276d",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/22894_5f7c276d.png",
+      "sha256": "fac4d3ed7808964a8a56fc3b31f308d77ff5b94ace2fa8c07356ab2201e7e38c",
+      "bytes": 110867,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "23036_7f9d143f",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/23036_7f9d143f.png",
+      "sha256": "eced7d9c272681b3ceca7438889fcc8cfe84724970ff9387e6d78e263a814308",
+      "bytes": 159034,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "23127_38d73061",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/23127_38d73061.png",
+      "sha256": "728025c620eb1f39712690afde1267a0e892660eb474813ea53453fa2c52bab9",
+      "bytes": 109988,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "23439_18900af2",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/23439_18900af2.png",
+      "sha256": "f948ba12e0d890ce1290ff481e68a29e2ae1d6eea7a94cc6d4b8d573693e785e",
+      "bytes": 134281,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "23807_ec9a48b3",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/23807_ec9a48b3.png",
+      "sha256": "b89412be24b8f2ae6fb9a9f094f3b30f37a1ee07db527660e5171378fc9a0878",
+      "bytes": 129839,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "23901_080de815",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/23901_080de815.png",
+      "sha256": "7e6d652fd703be7a721b8983f5dd349bf825e2c58e776a8d118191a563cb70bb",
+      "bytes": 103186,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "24220_b9b03534",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/24220_b9b03534.png",
+      "sha256": "62232d1893946336f4c4bef5856d803856642ffe459b4a48858030222da70a28",
+      "bytes": 60514,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "24414_7a63ec0b",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/24414_7a63ec0b.png",
+      "sha256": "ad3c9b54247b5d275a87415db8649950e2ba21d7d9f250e3ea545fa0152e5def",
+      "bytes": 151759,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "24540_45dbce51",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/24540_45dbce51.png",
+      "sha256": "3d84a94abd2c5f86b0cda5e2e8dd66dcb2ad18f2c101add9843fa933a32e9f3c",
+      "bytes": 153734,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "24709_7b40810e",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/24709_7b40810e.png",
+      "sha256": "67b9a5b6b5746ffa84c88317a8363b727867a484aebe466e0824389db60dd9b1",
+      "bytes": 113251,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "24864_2991f8b6",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/24864_2991f8b6.png",
+      "sha256": "494e9acd64cfe08be0d2ade7937f8285c91a843b0971cd4c1e99f444eb706fc3",
+      "bytes": 149699,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "24953_c42c4301",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/24953_c42c4301.png",
+      "sha256": "bbbbf40003a1d059d931a269966568ec49678c7bb68eed8b17fb4fd97cc9e106",
+      "bytes": 129685,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "25126_0d22bad6",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/25126_0d22bad6.png",
+      "sha256": "1dbbcfd3ed9e6ddb97e5db123395d1ab93cfe5e31f6ec3baa69c233a9e393263",
+      "bytes": 234741,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "25183_8282c43d",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/25183_8282c43d.png",
+      "sha256": "afb83453df5f29731a729af00fb483bdbde481f7a2028c7f6ef7a3e379ddda7c",
+      "bytes": 88159,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "26920_2bb3eb12",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/26920_2bb3eb12.png",
+      "sha256": "208e14f0bae9b318bb5d7466bb8d2ddea83b86c239ed69cb4282607f168ad400",
+      "bytes": 71768,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "29443_cc984576",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/29443_cc984576.png",
+      "sha256": "0b5875235b471cf9f495eb0d539fec427cbf0490d9bb308002c1465932846d02",
+      "bytes": 56743,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "30513_0a4d5207",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/30513_0a4d5207.png",
+      "sha256": "7cc9538480a7df8aad885f6a9de6780cc0fddcf4f5d200eb89377af59bb8fc62",
+      "bytes": 168696,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "31487_ba2665d3",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/31487_ba2665d3.png",
+      "sha256": "5e944d0c5522990058e28bf0ca87bfbf7345debd427e48c6794d4dfffb626949",
+      "bytes": 218826,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "121170_a57becc5",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/121170_a57becc5.png",
+      "sha256": "45b861a2eac3313945627da3d81e43ea20b311d90dc38e6dec84b1b65dbb58d2",
+      "bytes": 279997,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "132095_48c3d00c",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/132095_48c3d00c.png",
+      "sha256": "4d3d8360e56a5fde5c0d3bbc062855babe92f23b84aca5a8a7c7cbda98a10f66",
+      "bytes": 259254,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "135640_a221b607",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/135640_a221b607.png",
+      "sha256": "ed58b1f1cccc578205239cbc9f60b0fd7fc4170659d4f90ab91a6f2b6a71ef12",
+      "bytes": 390850,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "139811_87b211e9",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/139811_87b211e9.png",
+      "sha256": "c85e6a2dd561ac2ba0b2108954483f7ac5c29a1897efc8887c9bb8f3805429d9",
+      "bytes": 185510,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "142006_a08d8f22",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/142006_a08d8f22.png",
+      "sha256": "9c94bc51a813d90c38c46ceccf8d06d6fb2c7fa4249c5f6d176ba855f8f116d3",
+      "bytes": 92559,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "144940_885193da",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/144940_885193da.png",
+      "sha256": "66e68b5abbfb3660e16446bc4f92a96ea5ff76cbdafac6373a1713ee81163a69",
+      "bytes": 208332,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "145879_bf41ef7a",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/145879_bf41ef7a.png",
+      "sha256": "f8765ae6513d71ae5cafeea6d1fe2605d59cdbd0cbee35193cd551ebdbff5d7e",
+      "bytes": 276089,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "19051_26735260",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/19051_26735260.png",
+      "sha256": "177d4dc291da2b90fa5b1caaa637ec8689fd5d322a13d06bfd76cc3ae7c2ea86",
+      "bytes": 120115,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "21709_4dd88551",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/21709_4dd88551.png",
+      "sha256": "e1564147804d775d8ebbeaefe75f8c02470b10d0ce7971f425b9f41a74d037f0",
+      "bytes": 215675,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "21744_5ae4d9d5",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/21744_5ae4d9d5.png",
+      "sha256": "23c73d14da3dbdb3b60f94cb56314d0bce45b2649b7a3582a9231d6875502f57",
+      "bytes": 293248,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "21918_976c2754",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/21918_976c2754.png",
+      "sha256": "64d0bb2317a7f4c913d1d8bd8e854591446accbd2eb54a99022c37e3ca835f1b",
+      "bytes": 113709,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "22491_a33562ad",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/22491_a33562ad.png",
+      "sha256": "c6ae1c80562038447f5116740d9e0f8714500a1015c784abe3ea35d015ac618b",
+      "bytes": 239260,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "22535_0ba01cc9",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/22535_0ba01cc9.png",
+      "sha256": "7d3ae9b814c5beac3cdb7d715002346c6fbe42ae0f0a39f8fba9cbd05a6d69ea",
+      "bytes": 135982,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "22630_b6010fff",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/22630_b6010fff.png",
+      "sha256": "f92c25a234827be65f03f2a7156bbc39c32ff2321c6d9b83533ca19c96bc487b",
+      "bytes": 146947,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "24338_848cab42",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/24338_848cab42.png",
+      "sha256": "808e921194fb8bc78812bc19ecce68611cb6d807aa71e80bbc2a226e8c1c4c26",
+      "bytes": 234716,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "24852_fcaddd4c",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/24852_fcaddd4c.png",
+      "sha256": "3eb6e08d78111a26645e16d116c1e48e736f8bc519151ff2d385b03f92c9d29b",
+      "bytes": 148156,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "24961_00c41655",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/24961_00c41655.png",
+      "sha256": "b9a7a8586dce861a773d47cc2a7fba7a0e551db64b017280d10723a73a4fb85a",
+      "bytes": 206779,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "25147_b145ede0",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/25147_b145ede0.png",
+      "sha256": "979b0013ea6aaed0436519b62c63e52cf50592bdc8493574e2c5533aa3b5eda9",
+      "bytes": 208768,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "25566_1b09fdfe",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/25566_1b09fdfe.png",
+      "sha256": "1594556c4ec4f49b525e90a26d7087c7dee75d2b754c89758629af7fbd6b7228",
+      "bytes": 174083,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "26917_f0bc89f6",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/26917_f0bc89f6.png",
+      "sha256": "349ce8b96a52e2684483649adc899a926cff098e14207784a7abae81e16686d2",
+      "bytes": 207963,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "26951_6e448f1f",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/26951_6e448f1f.png",
+      "sha256": "ffc66d6636b8dbc0fbc1bf1596b9944bb6816a44b3106868fa55fc0efb7255c5",
+      "bytes": 151754,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "27577_8520e14a",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/27577_8520e14a.png",
+      "sha256": "9417dfa41c2c54a446e8c4705e07bcd0f9720effe10e9b33ce75cc2c42586e69",
+      "bytes": 95438,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "28283_1a9ffb0b",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/28283_1a9ffb0b.png",
+      "sha256": "e7cd85f4ad222d4a4500a84c3ef0ecc5594e1aee2e678a1f51f81624055bf333",
+      "bytes": 160460,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "29457_8c2c252e",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/29457_8c2c252e.png",
+      "sha256": "4c217e1799ed912a269bcbea0f8649896eea0c0974eb1dd21f1a179dd038d6ba",
+      "bytes": 140595,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "30375_4ff65965",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/30375_4ff65965.png",
+      "sha256": "50077816cbc567428a9ade916eeabba8d64882e7f8031a3b4bb38cb7f644fb6c",
+      "bytes": 105826,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "30556_19a3f741",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/30556_19a3f741.png",
+      "sha256": "74403acba9e067f21494c25751a9676b53f56cd56a3182ae87bf2ef765b3eb47",
+      "bytes": 95973,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "33084_344fec27",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/33084_344fec27.png",
+      "sha256": "f881b08e0a0886381b04625c2b4a9121b488be8ab1fb4a1355eb6aa23eba89d0",
+      "bytes": 178418,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "33615_7bab1106",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/33615_7bab1106.png",
+      "sha256": "83be04e4e328b48c78e2ffa7450c93c6c2f98f2784156f0fb85aff1fc290eae5",
+      "bytes": 205941,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "33988_724280ed",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/33988_724280ed.png",
+      "sha256": "6ff4cceebb328a924b9ee6bda533236cf3d65bd8765188f7046847dea5cd9ac3",
+      "bytes": 191294,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "34338_8e5def0b",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/34338_8e5def0b.png",
+      "sha256": "f69bc7ce638791f55d04d16c1babac289b29853f2d685731aa2de8756f61301b",
+      "bytes": 227079,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "34587_ed155e93",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/34587_ed155e93.png",
+      "sha256": "6967a683273d60f84916a9ff5858f0c83adafc443189b6f12f502788034aa126",
+      "bytes": 232803,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "34672_301d66e9",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/34672_301d66e9.png",
+      "sha256": "2f859cc73e044ff58d668bb3caf4b984ea439e207bb3c49fad0e0c154c9a8074",
+      "bytes": 263544,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "34673_5d261268",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/34673_5d261268.png",
+      "sha256": "71b038c325b3a85f3f98f4a4a1270b9b9094444e86c873e0bed301df701d625d",
+      "bytes": 189183,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "36189_4338d4eb",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/36189_4338d4eb.png",
+      "sha256": "21372d59045014e8ae096c79bfdb89cf85f2fbb97c38f985913d1d25306c3e4c",
+      "bytes": 235502,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "36440_1a838cec",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/36440_1a838cec.png",
+      "sha256": "29a9865eb8d5e62d04758ff0e4521451cfb7b2b83315056a0319335d6bc2b610",
+      "bytes": 197385,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "44535_2ae6ddca",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/44535_2ae6ddca.png",
+      "sha256": "1aef49770ad11b4a68a472bef2c9a54d58b848c5091c1030379c3208c29f469c",
+      "bytes": 396190,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "50048_0ef4ffc9",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/50048_0ef4ffc9.png",
+      "sha256": "601d952bdb4d7caadbb8b0a51bf8993d3380f665f7e59fe56e5dc0fde50a8a1d",
+      "bytes": 94488,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "51471_289b2a1d",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/51471_289b2a1d.png",
+      "sha256": "548540e8aac99efd6ef3d475b287895b0c156f1492c207fd491e8ea1bc952be4",
+      "bytes": 99327,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "52785_14afff6d",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/52785_14afff6d.png",
+      "sha256": "18e62adf6cfb62e169b7b484720c0c3fedc77b10e9107fa277925cd3bf699ec1",
+      "bytes": 224931,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "52890_7ae554d9",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/52890_7ae554d9.png",
+      "sha256": "ea4c6f2bde4f42ec9ca3ab4808bf85cc4677ce66fa52c719ffceb9316ae312cb",
+      "bytes": 133987,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "54071_9817455b",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/54071_9817455b.png",
+      "sha256": "86345b45abfa100fac7221ae27284f466c1964dbfc75a17cc125d2e8edeec377",
+      "bytes": 364181,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "55128_6094ac28",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/55128_6094ac28.png",
+      "sha256": "1ed7c5dd10884a5638b69cc351e4cc6a7e2e623dbcd5b6fe3b448c537cbfe244",
+      "bytes": 103765,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "55715_525d1d3e",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/55715_525d1d3e.png",
+      "sha256": "f1e5f072e287fef77ad7aa7eb1d00292c0044903ac082f4b76bfcac86bd993f1",
+      "bytes": 323568,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "56438_cab40da5",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/56438_cab40da5.png",
+      "sha256": "8ce48d0ce797df2080477626027318427412c3288151758f87fc5b7106517dc5",
+      "bytes": 132180,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "56441_ed350d93",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/56441_ed350d93.png",
+      "sha256": "1a87a6215abfaeff74b640e121a43cb28a16a3c8c1f2c2a982b08d6777ce9724",
+      "bytes": 257979,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "56449_ad00f9f1",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/56449_ad00f9f1.png",
+      "sha256": "8ff607944221c0b01398c62a42b256e82682d0b10f3b4cbba68f18aefc6cc229",
+      "bytes": 183788,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "56568_d3018fcb",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/56568_d3018fcb.png",
+      "sha256": "934972d80507c9f66b227a15f44a7bb148b058bb68f9ed2149cd27fa857a025c",
+      "bytes": 152292,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "61290_fb0765ef",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/61290_fb0765ef.png",
+      "sha256": "0b732e2b0a43e49f4980048d3f203a5e1c3055348cae444eefadb0237e5f8bfc",
+      "bytes": 174868,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "67865_fcb946b0",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/67865_fcb946b0.png",
+      "sha256": "729df1c6293d1b43de6d96cc4ddb5badf0bd0792ebee61adc853ad6d6155e546",
+      "bytes": 104585,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "68928_0d4e4a2e",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/68928_0d4e4a2e.png",
+      "sha256": "9c9d33180ce35703f312698e6e728e0276e5eab2b659cf83792369a48ca6440d",
+      "bytes": 189784,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "69217_19f39829",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/69217_19f39829.png",
+      "sha256": "c60843c090f605204f6c8068065736bf1f75af19995bdfa57ffa486dfebdc155",
+      "bytes": 137653,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "79248_314ca891",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/79248_314ca891.png",
+      "sha256": "c23db225a61c1ba7dbd65b2406a6f299780159bc486e8c054a940ce450d9ebef",
+      "bytes": 133455,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "94488_65dd96e3",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/94488_65dd96e3.png",
+      "sha256": "3b7540a672acb4ec592eae6c94b79e46156a9460da41fbd1b3962cbdf7c930eb",
+      "bytes": 149149,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "100904_5bc74d44",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/100904_5bc74d44.png",
+      "sha256": "bf502c0889f417dcf6784dfccaa5a9525e72a22a0e75e4a3f33af6fad078f4c4",
+      "bytes": 226715,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "101281_b6883476",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/101281_b6883476.png",
+      "sha256": "7af1f27465da13876606175eb61bc7db366c6773e6b8ffb90776925650fb5604",
+      "bytes": 65970,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "102525_06a3094b",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/102525_06a3094b.png",
+      "sha256": "c94fc5bd86632a45159c33b8cfd93b5c87cc4b3ac0100b8c2ed806d8e397361b",
+      "bytes": 84334,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "103812_97df699a",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/103812_97df699a.png",
+      "sha256": "95eaa4d1689b2b8573f8be4a1f3d08f73678e3caa2f4239db592b9a654f90588",
+      "bytes": 198126,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "104740_d3638bbe",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/104740_d3638bbe.png",
+      "sha256": "f00201c9ba3216b8ae7cf8724b119482a9627264f3e3dedaca08119985a48041",
+      "bytes": 147572,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "107647_af2c0a8b",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/107647_af2c0a8b.png",
+      "sha256": "76eec2f83b2d259df262c02d76b4f5e418e89d0bb57b54ed1ac0beb18ffa560d",
+      "bytes": 126889,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "107832_665a08a7",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/107832_665a08a7.png",
+      "sha256": "524664de99282de10ff524e99fc6029d3d2f32b19457f811f886dca0780f4346",
+      "bytes": 204458,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "108855_86bf65d0",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/108855_86bf65d0.png",
+      "sha256": "62643cd59e28a1b8cc264bdad506e067b3c8badf1ae3b807b9bf11091e88aa34",
+      "bytes": 123034,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "109575_ec4c4662",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/109575_ec4c4662.png",
+      "sha256": "d6cea89f3ef5c3c4d35f40ceb522fba2970b4059f4e0083c86969a172510307b",
+      "bytes": 155492,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "112017_a8394d4b",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/112017_a8394d4b.png",
+      "sha256": "753b02c31d201b4e5578e8c1cf6eb4edf92bd366f81e48b293aefdb522254e62",
+      "bytes": 106200,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "113841_5c85a0f0",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/113841_5c85a0f0.png",
+      "sha256": "70cee15725a15ea2ddf72e40681cfb14c257ec8fe5c2fa8e2fe9ba2658673af7",
+      "bytes": 95370,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "113856_e7484fa7",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/113856_e7484fa7.png",
+      "sha256": "221ffc912e02b96b00bcd6c79c8ecf2644d7b2b401f5b694503430929ded8f64",
+      "bytes": 116729,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "114269_b7352fb7",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/114269_b7352fb7.png",
+      "sha256": "5ccbd41e4f75fd91273c581f55c96664f40b0c4351a8257863c21b0cbe8d51c3",
+      "bytes": 117884,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "114350_2b4d7166",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/114350_2b4d7166.png",
+      "sha256": "befff621ce01d98d3ea00a5dce7a559fdc780782ce56b747452a18628e694d89",
+      "bytes": 171276,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "114589_c4b12e3b",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/114589_c4b12e3b.png",
+      "sha256": "a22815aa7a19e159bc3ea72161720452bfe62a97b9e0d64e4390cf9ca87c4fa4",
+      "bytes": 177256,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "114935_797875fe",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/114935_797875fe.png",
+      "sha256": "51e7c053370fd1a96191ac3dc59be06ba3a993518a576e798ead445c5e795866",
+      "bytes": 165801,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "115603_50901239",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/115603_50901239.png",
+      "sha256": "ac866e585afc4081f38b5acb575d073bb340705921167216635113c044c4359b",
+      "bytes": 96000,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "115615_d06fa061",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/115615_d06fa061.png",
+      "sha256": "83d9f856f230bd3567b5a7c42fdc4037f0c1761b72b35e96974969631e20680d",
+      "bytes": 110486,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "116076_12d31fb7",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/116076_12d31fb7.png",
+      "sha256": "8aa61434898c1080d76466797d9ccdf287b4c892043892af3b8f63ea28f0d564",
+      "bytes": 266452,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "116415_03b7a6fc",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/116415_03b7a6fc.png",
+      "sha256": "aca0204a59da4c4e9e4dbda942d1d13f7b7563a8ff6bb64d51f2b46a9535bff5",
+      "bytes": 104498,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "119893_05ecd353",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/119893_05ecd353.png",
+      "sha256": "cae3f94470a94a7a6ee1cb4186b4d351fc153f5420b9676966b8b6dbe710104a",
+      "bytes": 128140,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "127453_75e818dd",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/127453_75e818dd.png",
+      "sha256": "c4907195773ec212e62f7769c10c81174ce64def8a5ce1ea82d923f3f3008aea",
+      "bytes": 53397,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "127964_e846247a",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/127964_e846247a.png",
+      "sha256": "73a6ff03370c255b7afdd80af3cbc94efe50d55021bfee799673f41ce09a5ffc",
+      "bytes": 202211,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "128372_cdd0ceba",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/128372_cdd0ceba.png",
+      "sha256": "822f9f911e47169fb0d021ee2ae35e53121116e3877f4adaf259b276685cb1a3",
+      "bytes": 220102,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "128914_83550ab8",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/128914_83550ab8.png",
+      "sha256": "52975982639fb4a02b3d4a2926acc22cb1bba44fb7ac5dd1b0bc29f4e7f28dbd",
+      "bytes": 119344,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "130611_30e9a8da",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/130611_30e9a8da.png",
+      "sha256": "eddbe5b4b95bcdf212479879415334db3b27c46234b3a0a109d73121b61dc8ec",
+      "bytes": 70813,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "130944_ffffa173",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/130944_ffffa173.png",
+      "sha256": "a29a184687d465d9f5324ef68070280294d2bdc770c235a1ffc342ca96b82de3",
+      "bytes": 127424,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "131260_4f9f60b1",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/131260_4f9f60b1.png",
+      "sha256": "4a76d366dd57fa9391f8512a17eb6479eb45b0cb4c7f46e645f52c9db425d507",
+      "bytes": 290125,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "131586_eff7d729",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/131586_eff7d729.png",
+      "sha256": "e1cae30ab5963234cea72eee0e284de4c23a65dd66b83fee96ccfeaa3de8be9f",
+      "bytes": 326792,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "133080_b2b10214",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/133080_b2b10214.png",
+      "sha256": "d827901b11d09120be359b230dc9e19ff083f25ed21d7e8efeacd1e113a46f32",
+      "bytes": 288500,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "134094_e1d75019",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/134094_e1d75019.png",
+      "sha256": "b273927e259330d21656e136cf0b209c62f7e20a986a941ed74e247b897b5e52",
+      "bytes": 154078,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "134530_2333795d",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/134530_2333795d.png",
+      "sha256": "9a1a1eab062351575682ebc1045c45bd54507e3c7266d5237f66c314038dedd4",
+      "bytes": 93764,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "135295_38f19234",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/135295_38f19234.png",
+      "sha256": "66b1d4176d055c340bc518feb3b289709bf9638061dafa98c5c8d8dcb026491a",
+      "bytes": 180481,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "137239_c1502986",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/137239_c1502986.png",
+      "sha256": "5889856d99b27db3bb833c6b0b4199f7f47d7510ed34c607743b4d68a9737de7",
+      "bytes": 129205,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "137485_a953e1be",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/137485_a953e1be.png",
+      "sha256": "21eace806a2491b10fb15be88f378df0b0a98314a1f8ac38c69b2a3489ad68af",
+      "bytes": 201147,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "139675_d56cb14a",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/139675_d56cb14a.png",
+      "sha256": "d5dcae5e5bfc882a697a3c902f4dc257518e3cb9aa919fde7c78962eb0d0fc05",
+      "bytes": 211062,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "142503_1fd94cd7",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/142503_1fd94cd7.png",
+      "sha256": "3d72772af34cc8ce06e405f1757b2701e2f00c41b447ac688f3ea0c922cc5dc0",
+      "bytes": 215023,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "143590_87049041",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/143590_87049041.png",
+      "sha256": "68c3c79a4dbe9d14d349b648d34f7a090e31191d84aa06453510ca9eaa81f0c8",
+      "bytes": 102531,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "143872_bf92cc91",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/143872_bf92cc91.png",
+      "sha256": "f5aff7e5e3b60fe0678182f47f20a857bef08b0d9429715c9666727717bdb160",
+      "bytes": 92299,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "146292_ce6923d3",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/146292_ce6923d3.png",
+      "sha256": "a1e3c8e57135b85c0a3e7f5fe359abc4e4bb7023c392f6a90d65ed5c70718271",
+      "bytes": 90521,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "20260_4a01a99d",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/20260_4a01a99d.png",
+      "sha256": "613ed52307068f9d00b35c60bf9c1a07676e13b84179d292fc675a461b3b1525",
+      "bytes": 282419,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "20414_a33bd0d7",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/20414_a33bd0d7.png",
+      "sha256": "6825cceafd3a99623b00aa43deec7d7ef00725996c5e036afb037887d78af05e",
+      "bytes": 82857,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "20431_27e7f151",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/20431_27e7f151.png",
+      "sha256": "b6dce2e8a5c4692616651e13c4a6c084d871fb67da2e1a6131e5d0e76a1eabc6",
+      "bytes": 177527,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "20477_633cca4f",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/20477_633cca4f.png",
+      "sha256": "1c663440667502c2c30c7b84b4a3f077c21346887e535a8d26cb2f64d7cf7891",
+      "bytes": 166209,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "20788_d25efea2",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/20788_d25efea2.png",
+      "sha256": "86e47a9ba367e8bd57dc5c1c91e49e74e4c85711df844ca0e307c19555711890",
+      "bytes": 218716,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "20792_d2ea0500",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/20792_d2ea0500.png",
+      "sha256": "a1f73c2ce06ec6e04ff262b28ac5313668d9ec3a6406ac1e3fc2c3754368ed47",
+      "bytes": 80578,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "21549_18160a0a",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/21549_18160a0a.png",
+      "sha256": "e038dfa0dbffca02a3ea89aca7992788f0a95e9cd116312cb2bf57b92392a4b6",
+      "bytes": 90582,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "21805_2ba39d00",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/21805_2ba39d00.png",
+      "sha256": "37d8664510fa452e8cecedec8e356627efe4bb76354a3645d3d5103c014e9d97",
+      "bytes": 88562,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "22399_97987ada",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/22399_97987ada.png",
+      "sha256": "e87bdca95122f5dd6f1b8e7dbf71ce9e1a35d6f50cca404cc2af6715befebd54",
+      "bytes": 204475,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "22428_c1ffa51a",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/22428_c1ffa51a.png",
+      "sha256": "287e218df9ed732b2ba014549e9933c495bfda44af4282f0093c63a6de37688b",
+      "bytes": 246501,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "22483_f4e4b62a",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/22483_f4e4b62a.png",
+      "sha256": "6b835878f9c0eb3f3c1adbc52cd9880ee4e018da7a57e01cf335d8167624f128",
+      "bytes": 132950,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "22581_406c16c4",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/22581_406c16c4.png",
+      "sha256": "62c1fc93f681d93c05b0b866c8c7cfffbdf209fea49d3044bdca58f155cfdd59",
+      "bytes": 38590,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "22900_09de4c7a",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/22900_09de4c7a.png",
+      "sha256": "b498b525e7548fa6e8aaf3486fcc9a8aa36e12731d043e79acdfc790ab253f9d",
+      "bytes": 156234,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "23144_88ca00a5",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/23144_88ca00a5.png",
+      "sha256": "0530fea60b360d2015a6513944d171440edcf3b2891bdf7cc814bab611b0d4ee",
+      "bytes": 110205,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "23251_3eb3d2e6",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/23251_3eb3d2e6.png",
+      "sha256": "24ca4e79dfe588b72bc6d178f1aaf47463e14b09014a5fc3de825287ef597b44",
+      "bytes": 99887,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "23373_f5dac851",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/23373_f5dac851.png",
+      "sha256": "f7ddc271b38dccf05152b246c016998b1329e92606f721aed6adae5a5a46cd46",
+      "bytes": 71351,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "23409_e27e3b8b",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/23409_e27e3b8b.png",
+      "sha256": "e828fadd3bb7b6ce1b0a3771b08592742c06aeac33ea0cdc8386392c48fe0ef4",
+      "bytes": 316733,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "23475_b14d1dc8",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/23475_b14d1dc8.png",
+      "sha256": "23f52f125e0eb26d27bac683e9a901d91fcdbdd55df2105ae7b7841c5de4dc7c",
+      "bytes": 193466,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "23612_dd8e34c4",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/23612_dd8e34c4.png",
+      "sha256": "e8efed820fd06ab4d189aa8b9bc4468cff673b39d23e9e455ef32ec36de5da69",
+      "bytes": 165988,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "24012_097cf980",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/24012_097cf980.png",
+      "sha256": "849b56406f97a8eaa3f6ade29e6878b31bc455e244766609f6bda92d25f33385",
+      "bytes": 127259,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "24044_9bbe7992",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/24044_9bbe7992.png",
+      "sha256": "a3f928a4cb0d5f7adb73aecf589239295a3f22214d35c62171c7f488b37d0838",
+      "bytes": 122997,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "24074_f0fc6311",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/24074_f0fc6311.png",
+      "sha256": "c782ebb03d04c080870ef905e59568b2655687dd69fd169bc782661512a0c8c9",
+      "bytes": 114903,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "24245_fc75c5a7",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/24245_fc75c5a7.png",
+      "sha256": "532753e66120741ee8e97020733f09f9554645185775537c10d8331402da0c2f",
+      "bytes": 124156,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "24413_786c8353",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/24413_786c8353.png",
+      "sha256": "516e8e66d22bfbe11c188becfdc270dfdae4dd7def8af66616cca7e68bee0839",
+      "bytes": 113472,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "24473_54b90e74",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/24473_54b90e74.png",
+      "sha256": "0c6b19674d16ed35f8185b2bc98338aa767554ab5331b7363bfa8caa0f1f5192",
+      "bytes": 165348,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "24474_2e83b11c",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/24474_2e83b11c.png",
+      "sha256": "3b691418e2d438c7bad19743b5926de195401c87031512cb9645c4fa21a3ef47",
+      "bytes": 157858,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "24558_65ea8165",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/24558_65ea8165.png",
+      "sha256": "34da83c9ab29c6810b22ddf9331e1477baadc4ba23759ddfa4130d752bc31884",
+      "bytes": 111570,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "24659_d2ba8a0f",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/24659_d2ba8a0f.png",
+      "sha256": "dc3b25c299664a1ddaa5e6bd5834741bf20a4662d9ff5215c2c349d36d4b0266",
+      "bytes": 155823,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "24679_17a2a710",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/24679_17a2a710.png",
+      "sha256": "66be430c4daafca0c4dc5c9914032756eb947322f46afa77b6695564dfe5cba5",
+      "bytes": 125069,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "24815_4f2a57e4",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/24815_4f2a57e4.png",
+      "sha256": "47de96fa45b432d87ce8e36dbb5deb904b70de8dd08f7ba54afd1f70ed527f7e",
+      "bytes": 139668,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "24847_769bb89d",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/24847_769bb89d.png",
+      "sha256": "383563cd0f9cbe199bf8175ab54d18a704fa6993e19f7e07447692d9f9aa7f91",
+      "bytes": 63434,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "24941_3a92417c",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/24941_3a92417c.png",
+      "sha256": "f9dbfb4b1086f44499bea82a747d7f939cf60863361f9e4ec7f7f740af5ce73d",
+      "bytes": 231367,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "25116_db9746f4",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/25116_db9746f4.png",
+      "sha256": "7c20a8f591814f20c24d2c117ae9d18486e59059d9ada8139f787e9a24c25715",
+      "bytes": 148107,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "25168_05818e21",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/25168_05818e21.png",
+      "sha256": "ed55908e1498613c92913906199760962cc5302b1e0d37fc8dca1adb01edc831",
+      "bytes": 84508,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "25201_ae8d5a33",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/25201_ae8d5a33.png",
+      "sha256": "fcf9463fa4fadef9c87b4f178483813cb243c6bb6c8af4289114126248ecb8c1",
+      "bytes": 197665,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "25807_ec78a3d3",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/25807_ec78a3d3.png",
+      "sha256": "ffe92c04ea934188d6a9a58aa61657de45b9c4e4f8991815e57066e87019a8a7",
+      "bytes": 72709,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "26927_1df8d994",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/26927_1df8d994.png",
+      "sha256": "6f5b045c2ef26fdbfa2afb200198ec299b6a09bf43400da3d7a6b6f98f0ad6c2",
+      "bytes": 27933,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "27039_f647c9a1",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/27039_f647c9a1.png",
+      "sha256": "eedc9491ca3fa88f62a446398cef0abc24ddc0770e8637097145ad9db6fd019d",
+      "bytes": 95287,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "27717_5de88b4a",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/27717_5de88b4a.png",
+      "sha256": "bcf0137185acaf7187ade8fa1908f6a3cb0c7b135e346213bd502a3d7d8f6c5a",
+      "bytes": 140114,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "27935_d49f374d",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/27935_d49f374d.png",
+      "sha256": "1a0f5135dc71e8924ac0b5db4465fbae2ed08e81a389eec209bca050594261e4",
+      "bytes": 103214,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "28379_7e292343",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/28379_7e292343.png",
+      "sha256": "4f434abaf79497fec2aed795f6c9fcc06d13ef70b491aa767cf8d39a4baabd27",
+      "bytes": 109550,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "30274_ca0d10b2",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/30274_ca0d10b2.png",
+      "sha256": "1213a609d9de75a10ebdd8d1e3d076d7eeabcda63dd2957c18e2cb5175cc810c",
+      "bytes": 211494,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "31010_d2ba2943",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/31010_d2ba2943.png",
+      "sha256": "5b36cfac29916a989bb88e6663c5d3ee91fbe0a8d7405fa93c4af35792735143",
+      "bytes": 286776,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "31597_99d5e14f",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/31597_99d5e14f.png",
+      "sha256": "5b5732b664a580b201d9ac25550a28e721368f2af3c79d5ef83a00c57ad52429",
+      "bytes": 99939,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "31601_ec207433",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/31601_ec207433.png",
+      "sha256": "4e8c5e0a1a5981f1c9ae444d446ba8edd26ba8b8640d3ded5542a558486f1875",
+      "bytes": 91636,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "31756_c677adc0",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/31756_c677adc0.png",
+      "sha256": "5840cbd3aaaa96c87fefa7298290cc93b10e635ea414552c4fd24f34693faf17",
+      "bytes": 208969,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "32211_8a51dfa6",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/32211_8a51dfa6.png",
+      "sha256": "7820befb6b0e20f4f8a2bc0d54d388461ad183327811243167a13440ccef3c28",
+      "bytes": 222290,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "32536_cf33bc82",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/32536_cf33bc82.png",
+      "sha256": "899afecfc8401a9dca70c08a75768ee4cf65b1502dbb9967baee85f3e4b63bbf",
+      "bytes": 192718,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "32853_bd6998c3",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/32853_bd6998c3.png",
+      "sha256": "f669c9d3a620590d7cbc3d27cd553446d43cad4142fac5cb6ed9d5b674e0292d",
+      "bytes": 81902,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "33171_e4b4721e",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/33171_e4b4721e.png",
+      "sha256": "a0130a65e619476aef255d39477907a7e560367454fa738c47628b691693a883",
+      "bytes": 51396,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "33541_78aa248e",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/33541_78aa248e.png",
+      "sha256": "03dd1b8b2ebf75c46c41d84ee09c226cd6111e9ab3491192979c81dbfa22c4ff",
+      "bytes": 107366,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "33609_35b29e6a",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/33609_35b29e6a.png",
+      "sha256": "ea6127d294633f427855e8d3f6d7c240e8de2cad3d436e32b81d6a7ddad329af",
+      "bytes": 163137,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "33632_da973faa",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/33632_da973faa.png",
+      "sha256": "a11966de10387579641acc7039f218b5c16dfcd445f4640d813e76b42d14638a",
+      "bytes": 50155,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "33753_5b1489dd",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/33753_5b1489dd.png",
+      "sha256": "620cdb9c671f7b0b7e57ee6f0e8a03363598f8c4273e82716f1e51690c8a2ac5",
+      "bytes": 149858,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "33762_23d5c1d9",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/33762_23d5c1d9.png",
+      "sha256": "2d904879044a52847ee52ddec1f425b7e3f70e633240a9269dbbeaf11f0287ce",
+      "bytes": 143548,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "33973_0bcf43ee",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/33973_0bcf43ee.png",
+      "sha256": "0818bf5d9f11e226b0f50f951b815343c1952016cf6f6877de1bc894dbe90750",
+      "bytes": 69057,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "34000_95de2773",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/34000_95de2773.png",
+      "sha256": "60b92b9ca691f663ebe2d8b1daf4846e1e9aa20e5adaffe81202b3f1ee20b84b",
+      "bytes": 75699,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "34443_27f9adde",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/34443_27f9adde.png",
+      "sha256": "23d7859e38fcc2ab2ab873f13c39a50218c15884ae615c1ffa29f1cb147a0150",
+      "bytes": 84456,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "34675_769b3cf9",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/34675_769b3cf9.png",
+      "sha256": "4bac2ecacf45a64021a161d5dd5000427ff5592bcf4f49743d6ea75eec1a4a31",
+      "bytes": 185790,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "34678_f709cdcc",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/34678_f709cdcc.png",
+      "sha256": "ea2c422c9f914742c7f5c88e22a5ec3da566d6c685d04ff0121b67d04a5961d9",
+      "bytes": 172320,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "34793_d51aa91e",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/34793_d51aa91e.png",
+      "sha256": "80e2bb3dc9c2dc1988818d81d32b995272d7dab5fb0d4a575c7f8d272ba9fee3",
+      "bytes": 108494,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "35584_fb213b6b",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/35584_fb213b6b.png",
+      "sha256": "651df8a9317ef332778a870844fe248815fc7f384e908d7bb1206531008d3a09",
+      "bytes": 142915,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "35941_9352b107",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/35941_9352b107.png",
+      "sha256": "554730f104c2bdb8b284e1f346f54582b555fbcd0cfd7d9a31a5ab8f997b4903",
+      "bytes": 96860,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "36326_c5319e42",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/36326_c5319e42.png",
+      "sha256": "9ba7ab2be08c08928915a7bfe504f14881116b3e58d53a23f0d1b2dcc7c8aea6",
+      "bytes": 135225,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "36667_6c4f7023",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/36667_6c4f7023.png",
+      "sha256": "9b7f315c797567f81d1a2e1b4853b08b2b98ffaf997fbf9e946add1093ad2511",
+      "bytes": 114338,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "37682_47b23856",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/37682_47b23856.png",
+      "sha256": "9111714d03b65541b26d334ee7f60f57ff8c9ca37f73c046e73e28c7a76e5966",
+      "bytes": 90640,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "38854_674d45b6",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/38854_674d45b6.png",
+      "sha256": "fed7f1f32731f540f347477b72e25045e40f04d471bb005cacdb3703586227c5",
+      "bytes": 167579,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "140413_44177109",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/140413_44177109.png",
+      "sha256": "8b1f20d165944caee64cc3ff45392f8e164f0ae0822da665f9a2fae0d009f58d",
+      "bytes": 427223,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "44387_1618ffe6",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/44387_1618ffe6.png",
+      "sha256": "848515a68e72713ed83301990e3213547d4b811919d22127e676b58aaeee78a6",
+      "bytes": 395821,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "111698_28d1b5b3",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/111698_28d1b5b3.png",
+      "sha256": "efd6b84e41f12e910fdbd6e13381de6f7f4821b554a24c39897daa139194a982",
+      "bytes": 299814,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "118629_1004111b",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/118629_1004111b.png",
+      "sha256": "bf443ed76bca620bbbae2ace89c3e51ba87ba73bccaa709b65a990dcf5642126",
+      "bytes": 359982,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "127966_4cce3f78",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/127966_4cce3f78.png",
+      "sha256": "1db655caecd64c1660fbb2121d77c8da29fe5989b271a1d41f8fc5a92b696380",
+      "bytes": 259176,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "129428_edce5555",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/129428_edce5555.png",
+      "sha256": "1f55ac7a4529cf6ead00bf2a9ba1e9298fc9fb3275e38187976694204eb4c025",
+      "bytes": 275520,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "131850_2070be75",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/131850_2070be75.png",
+      "sha256": "2648253355eb61afa5a2312f873f070fe8184572311c9ed4ccf7d924a478a736",
+      "bytes": 328023,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "140329_34b663b2",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/140329_34b663b2.png",
+      "sha256": "43ff706a7275cbf8c8602d65fc5f551e1de686fa36ceb55ec4d611b49e150bef",
+      "bytes": 216343,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "141956_16ac8fc2",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/141956_16ac8fc2.png",
+      "sha256": "b0e219c77f7811166f863c6c5c93df95c3210a0b66a4a59b0e3763bc89b6bedb",
+      "bytes": 276198,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "144436_b108c6db",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/144436_b108c6db.png",
+      "sha256": "c126cedaf0f0e255ca3e54ab0a46cf509f320e28a4d3d3c3a9bc92639dd183ec",
+      "bytes": 116282,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "147833_d1722696",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/147833_d1722696.png",
+      "sha256": "9684dfa6b5df7c846741ccd6b837a81945c8c45594a28eabbda09095cadec1a4",
+      "bytes": 373784,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "20546_87dbd755",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/20546_87dbd755.png",
+      "sha256": "324eb7109920582a15eece528a79c49f578a53c07757cf4c471709ce5cd3fd3f",
+      "bytes": 239938,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "24202_0db5d57a",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/24202_0db5d57a.png",
+      "sha256": "cfe657916cf072c2cd003e17418431c6854af94662aea2efba56e700947e14e8",
+      "bytes": 293864,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "25257_7bfa2776",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/25257_7bfa2776.png",
+      "sha256": "c5c6142fe831c99098a396bb5072a872bbb4e9fcbd5c4e430be581b22c10ba0c",
+      "bytes": 409094,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "25847_f459c420",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/25847_f459c420.png",
+      "sha256": "926b1fa977d97f8ae6f25ff302329a9a28aee0dbb2f2fa9d663a23dc0e4ce969",
+      "bytes": 285979,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "30910_38ea5a06",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/30910_38ea5a06.png",
+      "sha256": "ee4d8c5adedfc72889a78d172205c0c6bc4892b21210d4305ac322201d18e42a",
+      "bytes": 302916,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "34456_fac5e814",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/34456_fac5e814.png",
+      "sha256": "0aaf5c1f5997e871351a1cf950809b4bd87980b4fdebb2d2e3d7c486ba5ad920",
+      "bytes": 140617,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "34906_33249709",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/34906_33249709.png",
+      "sha256": "0399961a41922bef6f6eafc8df0303c906a5789df070ac139d69e5c74dec1634",
+      "bytes": 118241,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "43628_a95b7e66",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/43628_a95b7e66.png",
+      "sha256": "8035f4a00ff3134bc8827ea355525e4c7cabc91358770fbec47aacf852f9493f",
+      "bytes": 379495,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "45318_16a86ca2",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/45318_16a86ca2.png",
+      "sha256": "603081e1e5444989fd6a68ce729c40470544fcd69b1ddd4118fb4021c3200a07",
+      "bytes": 310045,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "51443_8bcb2ac6",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/51443_8bcb2ac6.png",
+      "sha256": "87bfe822dd34c3e54eae090a7f13154cbe52f8dbba9dc84db3716a57bc0dae2e",
+      "bytes": 359739,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "71833_9b2c8d39",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/71833_9b2c8d39.png",
+      "sha256": "90bd186bcd82d43d83bbf67ea0d185ef542eed69bc2d040a3263d2cb3d79eadd",
+      "bytes": 388320,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "73901_7e772817",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/73901_7e772817.png",
+      "sha256": "520cd4d4fb2d12ee7b25458b725f68fd4e48a39be1989a49fb781083a63d6cb0",
+      "bytes": 297509,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "75271_2fbfd6f0",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/75271_2fbfd6f0.png",
+      "sha256": "a5f60f80bede5da757d34f180d2da0f18416bfa6ba52d8572e6d9acf37679c09",
+      "bytes": 414120,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "78113_df39c641",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/78113_df39c641.png",
+      "sha256": "f42f94872a441d93c10047f616442796a4e64a74907cc4511b4b32e0f9751326",
+      "bytes": 405959,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "81145_bdb0ac6a",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/81145_bdb0ac6a.png",
+      "sha256": "b00a31c9def5cbc949d71221af073faaa5aa431ec84867ce7e10dd5546aff05e",
+      "bytes": 126757,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "85436_f6137d9b",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/85436_f6137d9b.png",
+      "sha256": "ca511d7d7b977764fdc060e598bbb3ddc26f165ed27914d394c76de919e60757",
+      "bytes": 244935,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "108251_bcccb9dd",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/108251_bcccb9dd.png",
+      "sha256": "c81f272c0e898c5c7ad4ff95292655915be65165178413b370e278611fb9f959",
+      "bytes": 226105,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "126068_f94ff813",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/126068_f94ff813.png",
+      "sha256": "b1d131452a8360a3ffc57acac733003a965a2a901269999c91e20d3ea76c494e",
+      "bytes": 140246,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "127967_a1740148",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/127967_a1740148.png",
+      "sha256": "773933383c182764c36d75629c3dc7fa450d0e5dde2c76c5577983fc33c7db31",
+      "bytes": 182392,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "131829_6cd91235",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/131829_6cd91235.png",
+      "sha256": "568c6b09143ec1c2769e91c4e1b167d0ce610fbe818c6cede7830bb4f20987aa",
+      "bytes": 464516,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "131998_287fefc5",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/131998_287fefc5.png",
+      "sha256": "c7b5cb8f07790bfd74d51598be54a83f4d23d1a085000d166496c57ca53630d1",
+      "bytes": 124766,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "133202_6e40189a",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/133202_6e40189a.png",
+      "sha256": "e1a81463309f43a3b05ccd5d07c6310b135a222ebb4b34c2e54ac10d9b7b8d03",
+      "bytes": 184794,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "135142_8c7abb65",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/135142_8c7abb65.png",
+      "sha256": "549fc435f4234a0cca56e41d8cf12fe8085e0f0c0e2cac258fc51d43808e29e0",
+      "bytes": 203377,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "140011_8c40a59c",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/140011_8c40a59c.png",
+      "sha256": "3f5472dfa1092c0afae1fc290e17be7e3a92b6116735d7a7067bd66ad019aaf5",
+      "bytes": 138173,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "144144_3f88d77a",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/144144_3f88d77a.png",
+      "sha256": "b1dbb28b841f6d92a3f045efdb277f7824a9d8097fe2036789fce7339c47fc5a",
+      "bytes": 145446,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "144698_994348e6",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/144698_994348e6.png",
+      "sha256": "7d90c435bad71965336da033d16007785a6b3be8e109f1f5ee2b89cc2c59c88e",
+      "bytes": 269991,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "20533_0a3e112b",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/20533_0a3e112b.png",
+      "sha256": "1a5f33dea9a78d834af32bbd1e1d7c11650e7ff1c79e3ef7d3b1a9db8e770a99",
+      "bytes": 143993,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "20636_ca9eb29a",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/20636_ca9eb29a.png",
+      "sha256": "65669adb94b6408d9c36720691ae217fd66dcfed8473d481a7626da5915bd172",
+      "bytes": 114654,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "20745_3e22ad07",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/20745_3e22ad07.png",
+      "sha256": "f4dcd95f8465acdec343c90063cbe9691f51375a36a11b9191921c815f572a1b",
+      "bytes": 318661,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "22125_e3a4cad4",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/22125_e3a4cad4.png",
+      "sha256": "4d6c9fe60e809d3b7067dd5c7148d5466a55e46402845149dcac75f67c19f4b7",
+      "bytes": 138248,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "22430_c6f08b03",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/22430_c6f08b03.png",
+      "sha256": "ddbfc5cbb3a5d794f22476ed2ce2091938ebd0d9e5f3b577409c22865d9e924b",
+      "bytes": 281380,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "23195_2629864e",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/23195_2629864e.png",
+      "sha256": "914cc9575c89779343ea2d90b12d6252042d6c26a2662dc722d28fe65307daf3",
+      "bytes": 224431,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "24646_516c57f9",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/24646_516c57f9.png",
+      "sha256": "61539076e65772ec8eeb7f4a0663fb5c6163d206ce85a77e54194c3ce38a82fb",
+      "bytes": 173480,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "24737_d00de1a2",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/24737_d00de1a2.png",
+      "sha256": "ee95daa5e2e52aefd872eb0a66f5cf7d4f3f1e4ec50f97d3bca34148e3dfa27e",
+      "bytes": 175471,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "24829_8b811730",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/24829_8b811730.png",
+      "sha256": "70474b5159b0623b8a355e9093a4d640dcfed66994715a375ea85558f9073e91",
+      "bytes": 160169,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "25287_b8ae84ad",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/25287_b8ae84ad.png",
+      "sha256": "a6c403663174597b980b5a296776d1711b0a579b22dcd9d33bce12340fd7d5cb",
+      "bytes": 292373,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "25337_423c48ac",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/25337_423c48ac.png",
+      "sha256": "5669ce0e5462c3b2dddd8fa6ea65c2a1721d83071a88860c6e93f47f70515af9",
+      "bytes": 314954,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "25365_bb0e4ede",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/25365_bb0e4ede.png",
+      "sha256": "078d23a343d6fb60e6045f84cedce94c52dc171e9ac92308d9cf7bdfc79ee347",
+      "bytes": 189382,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "25402_08eca872",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/25402_08eca872.png",
+      "sha256": "cc6aa190041f4689094778b34f0f1900f1af8dadba4c10056736bdff4a203783",
+      "bytes": 164728,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "25845_e9c6813d",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/25845_e9c6813d.png",
+      "sha256": "336ced950135f442b28d4c769083ef6325cd6f20aea3f55248143f12a323cc7e",
+      "bytes": 213093,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "31282_05c4b783",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/31282_05c4b783.png",
+      "sha256": "47d605cbecd044af33fb3d9a85f65599712fcd2ce5b7e4ed8c3b1f5feead180a",
+      "bytes": 100152,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "31455_14e32e92",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/31455_14e32e92.png",
+      "sha256": "bff76303f0ebe0a686d5fad00805f2a8f997d68c87c078b61aa8612b6e47d40e",
+      "bytes": 285326,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "31489_d1949a24",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/31489_d1949a24.png",
+      "sha256": "2be3f448c618c6f524f2c37ced247dff6c9959f29d636f705346575fd4211bef",
+      "bytes": 181275,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "33673_2504b86f",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/33673_2504b86f.png",
+      "sha256": "bcba4b08cae67a6a8ac2d57dee77bdd8a264732220c9f248fec8e05b8080f6ee",
+      "bytes": 173465,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "33760_f5bb698f",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/33760_f5bb698f.png",
+      "sha256": "1de9214e1d9648b3196358f6684a0dd7b866d0f07413e440c0c74ad6c0087269",
+      "bytes": 322130,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "33970_c040ca8f",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/33970_c040ca8f.png",
+      "sha256": "bb4c845f4b24e9aa05a48024193c2d7db10f859d51881567b44412259b0a959f",
+      "bytes": 158866,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "36327_2dad061c",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/36327_2dad061c.png",
+      "sha256": "cebadd7d6f6cc236469e4c4ee785098082ac0d6ba4daf83ed932b68ec470ce7e",
+      "bytes": 346347,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "40589_2673464e",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/40589_2673464e.png",
+      "sha256": "19ba39e44c855e1966679a1454b2d469124b43705c42487483195efd2ee51085",
+      "bytes": 303512,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "41754_fb582b36",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/41754_fb582b36.png",
+      "sha256": "ef4672cfd15330c80a411736f69434d829c70fb14c92fd2f8dd75a39a3563e4c",
+      "bytes": 354289,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "41948_c0d68e8c",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/41948_c0d68e8c.png",
+      "sha256": "ca74d9e0837749a4837bcec4f754ae73d1f1a3fa8ded544938ae4b50b286b802",
+      "bytes": 202431,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "45542_320c16fd",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/45542_320c16fd.png",
+      "sha256": "072750ce7b9587e629b00ab889011afe4310d9b2aea8d3a3c7e88384898e4385",
+      "bytes": 313744,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "50823_d1830e58",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/50823_d1830e58.png",
+      "sha256": "105337ed875e2c6a9232b4967a896ba86e6c1c2f56aa0a60b4d3371c8890af0d",
+      "bytes": 250289,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "55015_a79e0d2e",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/55015_a79e0d2e.png",
+      "sha256": "55f0a215651ab8553343aee5cb314d33256e5ec1ea667090b47d7c172b9b55f7",
+      "bytes": 278081,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "55114_7bf17f6a",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/55114_7bf17f6a.png",
+      "sha256": "8c31c7666d5d89366f73ec2ab620d0b472cac6652930d90675965fe7fa99a80d",
+      "bytes": 257426,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "55627_971fde61",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/55627_971fde61.png",
+      "sha256": "02e81302310dc072f39f5dd23f12d43d439237a4ffe6b0f19fa82c0f2eebef21",
+      "bytes": 246772,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "56484_a09446e9",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/56484_a09446e9.png",
+      "sha256": "bb296d17d146fabba11532c12e771bad1634f4ea8952a105c779d553abaffe6d",
+      "bytes": 78695,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "56572_05ede839",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/56572_05ede839.png",
+      "sha256": "4cd57e2d7bce3b20f82d3ec94c67df43705ed242076d0dcfe7f3862b3b6b9a7f",
+      "bytes": 470324,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "62057_c02d1ddf",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/62057_c02d1ddf.png",
+      "sha256": "3b4b79e3af0febadc2e1a032220c48a109450df2b03229bec77c9e301b15795b",
+      "bytes": 62175,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "71675_5093bfee",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/71675_5093bfee.png",
+      "sha256": "8630ed0c66711e27a3ab5f840af2e7834cd3a86b4c120c3761e01870ec6177e2",
+      "bytes": 353031,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "81227_f2ce5bb7",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/81227_f2ce5bb7.png",
+      "sha256": "378d53cf6cceb9fd648447602c8c973e5ef19e850997d1c7daae1c34fe4d68d6",
+      "bytes": 290759,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "102082_2788d7c3",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/102082_2788d7c3.png",
+      "sha256": "073db765c6f22c7cead9cc9b2f31703a792d3efb8f540ec28f0e2c0e574835bd",
+      "bytes": 132020,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "102410_f9877a7b",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/102410_f9877a7b.png",
+      "sha256": "028816e83ee13ac88f8ab09509689a9b901a0743afd2a310f50ea82d211acfdd",
+      "bytes": 145274,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "108259_20dc5b09",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/108259_20dc5b09.png",
+      "sha256": "00a7a8fdefb15b11b1057e15eaef8a4a90c31c7914a239474b07d648c27597e5",
+      "bytes": 303261,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "114425_891ab08d",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/114425_891ab08d.png",
+      "sha256": "ff2e06c2055a3d8b410d6fd25b4c5d45e1d39fa5155b3b5608b12554a6146630",
+      "bytes": 335190,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "115524_1e68af15",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/115524_1e68af15.png",
+      "sha256": "0bda7d62fcf6a6c362266b5457706cbbb44a53a3c8c31f138db65445cabdc58c",
+      "bytes": 121025,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "117939_8142cb36",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/117939_8142cb36.png",
+      "sha256": "835c675a3f4a7602586d0fa3bc828965480edd45f18db81b63328ecc10d6dbbf",
+      "bytes": 212850,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "121949_e10b5e85",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/121949_e10b5e85.png",
+      "sha256": "36c87a3a75e8e5cfc9c985bfb17750a547599578afbde7fb67e9a57243ec5bf5",
+      "bytes": 176732,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "125815_44323d36",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/125815_44323d36.png",
+      "sha256": "598cf1a711ff16490816ec09e464b21f25b56354bd238623aebf27835ee123ec",
+      "bytes": 134252,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "127561_f5bef0dc",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/127561_f5bef0dc.png",
+      "sha256": "0e8c40f8eb0556e0b1690540a807ddd76e0259b583d68bbfe73e65b7a349428d",
+      "bytes": 81919,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "131193_98f3ac52",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/131193_98f3ac52.png",
+      "sha256": "42857c4fd579c09cccc5525272aab51ae97ef34be2887008d307258941de9c13",
+      "bytes": 269516,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "131711_b6dd09f7",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/131711_b6dd09f7.png",
+      "sha256": "96f9766dac18a5a42ad66507ffb32060360b6c63b7b7d3e4c939eda8c52b894d",
+      "bytes": 161721,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "133251_269f4b2d",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/133251_269f4b2d.png",
+      "sha256": "22ac0e9c2566cb6c321a4dcd7aa2445874bc4f0026e4c0b85941627b05de8994",
+      "bytes": 140557,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "134008_d46e42d8",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/134008_d46e42d8.png",
+      "sha256": "28fdb1cefa2384a77edf0e6210dae8ef33b5b9ca13ff27b1511769bdb9a27a22",
+      "bytes": 119604,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "134183_278d4966",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/134183_278d4966.png",
+      "sha256": "0b6f3003177c0578971d8b63b980ec941c4c5b5523b271d0c30f9ffd8e1ce30d",
+      "bytes": 312674,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "137416_0319a631",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/137416_0319a631.png",
+      "sha256": "209a2c883eeef3dc10c0b5479192b41da88500dd2d49e6513d3e1bf9bce6713b",
+      "bytes": 227103,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "138210_482aa6e2",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/138210_482aa6e2.png",
+      "sha256": "f792a3391b2b947f7f4ae7583b16fadef52f5863fd32bce51b0afa0268843f71",
+      "bytes": 107886,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "138987_85973de9",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/138987_85973de9.png",
+      "sha256": "fc3d9993f5f88e356df3eca98ea222db198cb200db93f6e4c0aa53963ad72654",
+      "bytes": 189735,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "139661_105bb47a",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/139661_105bb47a.png",
+      "sha256": "ebe6667610cf626f2ce13e7f4594bf6251dcabba2ea6d9428cff3f84017816a5",
+      "bytes": 80261,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "139704_3676e62a",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/139704_3676e62a.png",
+      "sha256": "449688da329e9506ef54de24c97f5c731d62c7f1b35bc6f89e3ac9877415a378",
+      "bytes": 162081,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "139796_515f80a8",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/139796_515f80a8.png",
+      "sha256": "957a36483db84afaaef6ab899cc155f168d15926b7c63cc443c75378c492064b",
+      "bytes": 114372,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "139853_d0680974",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/139853_d0680974.png",
+      "sha256": "c7821df9856a7d7990a8376cb413e4f2ae7110e7a37f8ecbd85e1c2d9cd1aa34",
+      "bytes": 137313,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "141300_06f19ac4",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/141300_06f19ac4.png",
+      "sha256": "0ac2c4ee47080805e927ff8445b90b942b932f22e547b7238dcf6f52614f7bc7",
+      "bytes": 99900,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "142803_3da901ec",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/142803_3da901ec.png",
+      "sha256": "d4f6d080569934880b29976bcad228400758a829c4ef8066fb88083c998d0ef3",
+      "bytes": 132680,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "143466_0cfaa234",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/143466_0cfaa234.png",
+      "sha256": "cc3fbd688b3fd0186a798eed5d709e92db96f402d914d79da99369bf36b382f4",
+      "bytes": 175429,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "144641_dec0dcb2",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/144641_dec0dcb2.png",
+      "sha256": "882400d917ee6c3330561771a5a7eca22398fd01e3f0d592c5ce607f95740a1d",
+      "bytes": 293850,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "145368_a2f4d15f",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/145368_a2f4d15f.png",
+      "sha256": "a01bb349022dd3629b2d3fab923766295459fb8929d29d59010d6287e240172b",
+      "bytes": 144432,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "146853_40cadbdd",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/146853_40cadbdd.png",
+      "sha256": "ff40d4d945e8287e17100c2e295d524c11a27bcb2f3cdc648550a4af83c3d98f",
+      "bytes": 449290,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "146890_bd415c5e",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/146890_bd415c5e.png",
+      "sha256": "2417e36cdfd8f393b20f571a5b2ce8061d0d2055d9d3d620e7cb450f17f8ee93",
+      "bytes": 75585,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "147641_7198279f",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/147641_7198279f.png",
+      "sha256": "80b015c9c7c0e51813186e8a3c0b3513c3ede52d436f7e5d04784279f36711da",
+      "bytes": 168621,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "20319_9f53cd7c",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/20319_9f53cd7c.png",
+      "sha256": "a33b1e7f282f91a1086c19a63018a2096de9bab63be3cf0cf41972c79bf4e5e6",
+      "bytes": 309237,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "20746_57a7b346",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/20746_57a7b346.png",
+      "sha256": "1446a30127dd1dc9802bd96d025789c716974631157d916a72e276c73a1fef6e",
+      "bytes": 105244,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "21134_7aa7cd89",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/21134_7aa7cd89.png",
+      "sha256": "765b1f090aaf3b1733620ace734a72f437850167dc7320b9562d6595a678149c",
+      "bytes": 242886,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "21174_861bd902",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/21174_861bd902.png",
+      "sha256": "f81766d4ea8cee65aa3cb101fdd590e86e1d25cd8c6773a1a1c5a1f6fc7b6f93",
+      "bytes": 496827,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "21557_53eafe15",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/21557_53eafe15.png",
+      "sha256": "47f4675bb8737f65adc56d71007c7cf6aced3f63ff691d8e49ffce71eaaacbe0",
+      "bytes": 144058,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "21685_93737a7a",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/21685_93737a7a.png",
+      "sha256": "5cffb5e23be5e08c31a5554b90e99e09df8d9f93e61412ade9cad8b55db3950b",
+      "bytes": 236808,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "22081_ab3124af",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/22081_ab3124af.png",
+      "sha256": "58a6e139910fb31e0dde24206e91ddce592d5d545298c185dac981ee1707d1cc",
+      "bytes": 119177,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "22082_39503fa6",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/22082_39503fa6.png",
+      "sha256": "fe289a90a07af9013bcda42b544de1186fc379844208a7f1961e3d465554ec59",
+      "bytes": 154926,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "22492_047b125b",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/22492_047b125b.png",
+      "sha256": "5038dc8f3a6be0bb356f06c87c8e83d083360587e09261563a15849c15eb9108",
+      "bytes": 116262,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "22666_bdaa1303",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/22666_bdaa1303.png",
+      "sha256": "cb5d7869fc1027879e35b3450fab51f2d9f24f9fc74fabb60b299b1cb24642b4",
+      "bytes": 208598,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "22670_9353c710",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/22670_9353c710.png",
+      "sha256": "aacfc6a426990d65c47242b5584ad6e1e2254e99821a8827febf65d1c393391d",
+      "bytes": 239147,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "22787_49022c32",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/22787_49022c32.png",
+      "sha256": "d8b4b8697a9cd703af2a5e43806c1c38ef10173dc3a94c6d5c24eff8097d503b",
+      "bytes": 174553,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "23020_1d0d0f01",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/23020_1d0d0f01.png",
+      "sha256": "d98e6df5806edd6292510f33bad9a60b2ce63a7d6881c5edccdd3acbe365c6d8",
+      "bytes": 177560,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "23053_139f2009",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/23053_139f2009.png",
+      "sha256": "b3d810dca992f45ba3acd4c2a6dcbb0f209a3136ef6879a56e8346e5eff39827",
+      "bytes": 295942,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "23120_f7c9092f",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/23120_f7c9092f.png",
+      "sha256": "743949862b2d9f195cedb4e12790b2bdbb03ffad713913f967badc90d0b8ef00",
+      "bytes": 124165,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "23123_f35404c4",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/23123_f35404c4.png",
+      "sha256": "d0af33c04f531feadc9fb1dc7c88350a42367b03e5ee81b27c5f804c3e453ceb",
+      "bytes": 207057,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "23161_e7f63a9f",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/23161_e7f63a9f.png",
+      "sha256": "69b11dc2b8db369da6313fda81f26ca4e942fff80defd136b5ad77dd76cf6b40",
+      "bytes": 86489,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "23226_8d1b5098",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/23226_8d1b5098.png",
+      "sha256": "8c68985819c3c464e9caaade3fc7d7785276e81401b8badfbd9158feb64cddaa",
+      "bytes": 124032,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "23235_f9ccb8b0",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/23235_f9ccb8b0.png",
+      "sha256": "a4b4ce24fb906d450ef9d60cd4e451f3f94da79011848ffc5ce32b9de8508bfd",
+      "bytes": 122695,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "23310_7daded69",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/23310_7daded69.png",
+      "sha256": "4fc6979952b5b2b808cf58a7b692e88b720264a9793f8f05025aecfa0ea8e04a",
+      "bytes": 281762,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "23576_d1801080",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/23576_d1801080.png",
+      "sha256": "f2b175cea1cbc80f0f8bad692c2fab2f0083c1859d00c3bd8eb7a8aee1651ccb",
+      "bytes": 59721,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "23668_d4fa89ff",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/23668_d4fa89ff.png",
+      "sha256": "d07c852ede0eff372d5d978fa7cf54bbe8f88e8015be4318228dc72d4ba2e4b4",
+      "bytes": 203803,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "23751_5e8bc03f",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/23751_5e8bc03f.png",
+      "sha256": "4b27323ab6f785d1a0fdc6a18ab1bca2ac13364cd00b7c68928f602e02285671",
+      "bytes": 235092,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "24267_8a216138",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/24267_8a216138.png",
+      "sha256": "ce3c494d238a0fcbcbff14eeac07450bf2dcc53f598a859106b1bafcbdb02bbe",
+      "bytes": 174870,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "24416_b5f2fd88",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/24416_b5f2fd88.png",
+      "sha256": "13c079e71fd901ebf8bb2e1997c37bf6ec6cd1bd8e9c5ad8581a539fc3e300e7",
+      "bytes": 91642,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "24467_4582c75b",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/24467_4582c75b.png",
+      "sha256": "bab9de3c068c9e7d15088d462ef50985412bf9337bae83212f4fb214f1377259",
+      "bytes": 178630,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "24542_07dae7ff",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/24542_07dae7ff.png",
+      "sha256": "0f8f6657ca423a939b0495690609e043cc82297eba57a21b91419a0417afecb3",
+      "bytes": 74105,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "24547_5875d194",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/24547_5875d194.png",
+      "sha256": "8d719343d5951e7b9193b21038c51636ee3f93c72cf7f58d0e2f7463a9eb3b78",
+      "bytes": 250449,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "24584_a13ef50c",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/24584_a13ef50c.png",
+      "sha256": "240cff9d4fada61080d7fb92f39b25fff92949937124a415367da1ffe64a79c3",
+      "bytes": 150769,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "24648_427a9cf0",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/24648_427a9cf0.png",
+      "sha256": "4230507bc2e6b16e379f66db16df3247c1ff844017ed0ac35d9546ad3a03d7f3",
+      "bytes": 245280,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "24830_8328e407",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/24830_8328e407.png",
+      "sha256": "c36a3809ca43fb1edbfa2a1f62cddb8934e15a69165dc70152863801d36f3459",
+      "bytes": 171384,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "24893_b2906d17",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/24893_b2906d17.png",
+      "sha256": "a1441864e66843a01e23cef27c61f290aed357de44e4f3435e5c7fc7c9719c78",
+      "bytes": 288734,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "24920_51bb7cea",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/24920_51bb7cea.png",
+      "sha256": "6e52565a0baf7017eccd84740df5d53c841f133d6dd6c88c5ed324074fabf7b2",
+      "bytes": 296433,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "24940_dc89bd52",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/24940_dc89bd52.png",
+      "sha256": "429a7b99693f53717b8a718ac84ec7aa201ffb63e31a2e8879bf84dc5881d703",
+      "bytes": 256298,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "25127_ecba81df",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/25127_ecba81df.png",
+      "sha256": "e8f94e5a485f820e3bdc75213682dc78275395815f967109e48a90d3b40d6ac7",
+      "bytes": 52454,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "25178_3fb6fdd8",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/25178_3fb6fdd8.png",
+      "sha256": "58ed994ec7f80a13f931400a54cb0faffd183202aa090394b18c170f00c96e1b",
+      "bytes": 251100,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "25383_bad9a1d4",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/25383_bad9a1d4.png",
+      "sha256": "60576b81882fbc38c8b180187c1ea0adb564b72395b51a662fbd33036a933741",
+      "bytes": 281776,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "25464_7e27d057",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/25464_7e27d057.png",
+      "sha256": "f124fcc6ee600a4b43b7d10ca4f78776eeeae14147f249e46e3ce05f20a2ddfb",
+      "bytes": 206411,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "25552_c1ea16b1",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/25552_c1ea16b1.png",
+      "sha256": "7399bbcb99037e507237a4b6e4c0d1b9b50f9b36cf8bd17509ac6ffbd9ec062e",
+      "bytes": 135410,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "25809_20add5fe",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/25809_20add5fe.png",
+      "sha256": "7dd5a2f6cc100220225fe2d29374ee6837f7fc32c6d9279d4e07c25f142964e7",
+      "bytes": 412085,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "26381_2bc79767",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/26381_2bc79767.png",
+      "sha256": "8d21813e1c80a0110268b0a8c89edb8c6b49a02c136081882c45fecc520b8842",
+      "bytes": 147374,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "27847_d2436f7c",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/27847_d2436f7c.png",
+      "sha256": "7b2287b29a8ea14e4662fed5de64ebb7dac12bf4b9c72de01a74f2464d00b9a5",
+      "bytes": 196299,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "28720_ef4be90b",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/28720_ef4be90b.png",
+      "sha256": "785999cb4366b687b8016f2060f981d586c58cf794ec36421b92199e90085139",
+      "bytes": 127769,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "28936_71968a77",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/28936_71968a77.png",
+      "sha256": "71ef4a0a2241b6107b4d0ac2fbfce4fe806430475916ca4c203c938fcf1123aa",
+      "bytes": 463490,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "30270_84c53a15",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/30270_84c53a15.png",
+      "sha256": "587a4def682868b8799803f433925b7943dd56a73cedfe6ed997ee1bf0c5bd20",
+      "bytes": 73767,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "30297_fd93a92a",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/30297_fd93a92a.png",
+      "sha256": "ce9fb5e918d3540e85bb2d9fa2a80858a3a84c8723169f469b91f7a212fe7eee",
+      "bytes": 161832,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "31845_9d450de4",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/31845_9d450de4.png",
+      "sha256": "7b0aefe70fc7eb77bdb0ed25fe6330e5708fbd1671e4d14e1ae7e413c7edc654",
+      "bytes": 166550,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "32216_06401c17",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/32216_06401c17.png",
+      "sha256": "767f35a2bd85db5d8aea1ea3cbac4adfe63409168d510d4189aa0965f7da135e",
+      "bytes": 204476,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "33528_10e28c4c",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/33528_10e28c4c.png",
+      "sha256": "7fc0334773cd506fa523c2b9de368dfb54d97907c7c94c9496145ea04b06d4cf",
+      "bytes": 191020,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "33968_1d605403",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/33968_1d605403.png",
+      "sha256": "432eb85dd9da5365dd56a8f5e2a7bd57a1b3c18fabd5f62791ec9e8167282d7b",
+      "bytes": 120966,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "33971_46bb0373",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/33971_46bb0373.png",
+      "sha256": "a5bedf9ec5abc9233efa11b41cbc6c8018aa53b22d0ea49606b2d4c612ecd4c3",
+      "bytes": 126645,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "33972_7870b8ef",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/33972_7870b8ef.png",
+      "sha256": "d803721d6a0161463b3744211730b6a637b91cdd2b701c4d390a4276ade73206",
+      "bytes": 157028,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "34098_6b45db6b",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/34098_6b45db6b.png",
+      "sha256": "a7703fce682796f0e8519d7533e0fe12d678711d5601fa9e57b61fb0e32038f7",
+      "bytes": 147516,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "36323_5a763909",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/36323_5a763909.png",
+      "sha256": "6cd98c02ce85b20e5c9356cb3c5d248fe27d88d878c11e946e7087c422fe3a94",
+      "bytes": 102630,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "37442_5d12f8ed",
+      "tasks": [
+        "image2cad",
+        "text_image2cad"
+      ],
+      "path": "visible-inputs/37442_5d12f8ed.png",
+      "sha256": "8a3611e57c199352e41d08552ee7b26318e1ab112528d796f27f05ac137d4bd8",
+      "bytes": 258149,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "37840_de7298de",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/37840_de7298de.png",
+      "sha256": "9d2f125afdaa4e13e07c3fbe6151bb2daed8521cd20da0e2c1530ce19aac399c",
+      "bytes": 182693,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "38484_56f24230",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/38484_56f24230.png",
+      "sha256": "452f130b092be24c03684273961a0b9165a7b5b3a66616bf6b716e0ae10f2388",
+      "bytes": 268438,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "39389_d641313f",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/39389_d641313f.png",
+      "sha256": "5c38c80b866120b1c8d72e3a1ce91739fb00499dad8ba94819df7f5e657ba945",
+      "bytes": 185676,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "40417_b8d98f73",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/40417_b8d98f73.png",
+      "sha256": "db3ec024a74cfc5b1cfb61f573735dc6e2ca6dff0d9259e9023be4cb266e282a",
+      "bytes": 236620,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "uid": "41624_a15f83c1",
+      "tasks": [
+        "image2cad"
+      ],
+      "path": "visible-inputs/41624_a15f83c1.png",
+      "sha256": "c4d672d156ffaa120f74e559ebb1cfdf0b788ca305a85701f3b87f65fde00625",
+      "bytes": 163222,
+      "width": 1024,
+      "height": 1024
+    }
+  ]
+}
