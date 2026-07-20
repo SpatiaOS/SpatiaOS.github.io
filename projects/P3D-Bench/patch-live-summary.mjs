@@ -80,11 +80,53 @@ const paperTextScoreCostTotals = new Map([
   ["MiMo v2.5 Pro", [74.4, 9.85]],
 ]);
 
+const paperImageScoreCostTotals = new Map([
+  ["GPT-5.5", [67.5, 1141.5]],
+  ["Gemini 3.1 Pro", [66.7, 279.7448]],
+  ["Claude Opus 4.6", [62.0, 640.4595]],
+  ["Kimi K2.6", [59.2, 102.379205]],
+  ["GLM 5V Turbo", [49.1, 29.19464]],
+  ["Qwen3.6-Plus", [47.5, 39.178717]],
+  ["MiMo v2 Omni", [45.2, 2.582888]],
+  ["Doubao Seed 2.0 Pro", [43.7, 17.190236]],
+]);
+
+const paperAssemblyScoreCostTotals = new Map([
+  ["GPT-5.5", [68.1, 450.962]],
+  ["Gemini 3.1 Pro", [65.9, 110.5444]],
+  ["Claude Opus 4.6", [60.0, 322.044]],
+  ["Kimi K2.6", [55.2, 77.405749]],
+  ["MiMo v2 Omni", [37.9, 1.525888]],
+  ["Qwen3.6-Plus", [36.6, 22.10299]],
+  ["GLM 5V Turbo", [34.2, 20.932]],
+  ["Doubao Seed 2.0 Pro", [32.7, 8.26677]],
+]);
+
+function appendPaperScoreCost(table, rows, caseCount, task) {
+  for (const [model, [score, totalCost]] of rows) {
+    const escapedModel = model.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const rowPattern = new RegExp(`(\\{model:"${escapedModel}",family:"[^"]+",cells:")([^"]+)("\\})`);
+    if (!rowPattern.test(table)) throw new Error(`paper ${task} row missing: ${model}`);
+    table = table.replace(
+      rowPattern,
+      (_, prefix, cells, suffix) => `${prefix}${cells} ${score.toFixed(1)} $${(totalCost / caseCount).toFixed(3)}${suffix}`,
+    );
+  }
+  if ((table.match(/\$\d/g) || []).length !== rows.size) throw new Error(`paper ${task} score/cost patch incomplete`);
+  return table;
+}
+
 const paperTextStart = input.indexOf('{key:"text",title:"Text-to-3D"');
 const paperImageStart = input.indexOf('{key:"image",title:"Image-to-3D"', paperTextStart);
-if (paperTextStart < 0 || paperImageStart < 0) throw new Error("paper Text-to-3D table anchors not found");
+const paperAssemblyStart = input.indexOf('{key:"assembly",title:"Assembly-3D"', paperImageStart);
+const liveStart = input.indexOf(",p2=[", paperAssemblyStart);
+if ([paperTextStart, paperImageStart, paperAssemblyStart, liveStart].some((value) => value < 0)) {
+  throw new Error("paper leaderboard anchors not found");
+}
 
 const paperTextSource = input.slice(paperTextStart, paperImageStart);
+const paperImageSource = input.slice(paperImageStart, paperAssemblyStart);
+const paperAssemblySource = input.slice(paperAssemblyStart, liveStart);
 let paperTextTable = paperTextSource
   .replace(
     'superGroups:[{label:"Descriptive",span:6},{label:"Parametric",span:12}]',
@@ -100,21 +142,35 @@ let paperTextTable = paperTextSource
   )
   .replace(/,domainRows:\[\{model:"Text2CAD",cells:"[^"]*"\}\]/, "");
 
-for (const [model, [score, totalCost]] of paperTextScoreCostTotals) {
-  const escapedModel = model.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  const rowPattern = new RegExp(`(\\{model:"${escapedModel}",family:"[^"]+",cells:")([^"]+)("\\})`);
-  if (!rowPattern.test(paperTextTable)) throw new Error(`paper Text-to-3D row missing: ${model}`);
-  paperTextTable = paperTextTable.replace(
-    rowPattern,
-    (_, prefix, cells, suffix) => `${prefix}${cells} ${score.toFixed(1)} $${(totalCost / 400).toFixed(3)}${suffix}`,
+paperTextTable = appendPaperScoreCost(paperTextTable, paperTextScoreCostTotals, 400, "Text-to-3D");
+if (paperTextTable.includes('model:"Text2CAD"')) throw new Error("incomplete Text2CAD paper row was not removed");
+
+let paperImageTable = paperImageSource
+  .replace(
+    'groups:[{label:"CadQuery",span:4},{label:"OpenSCAD",span:4},{label:"Three.js",span:4},{label:"Average",span:4}]',
+    'groups:[{label:"CadQuery",span:4},{label:"OpenSCAD",span:4},{label:"Three.js",span:4},{label:"Average",span:4},{label:"Score / Cost",span:2}]',
+  )
+  .replace(
+    'metrics:["Geo","Topo","Judge","Valid","Geo","Topo","Judge","Valid","Geo","Topo","Judge","Valid","Geo","Topo","Judge","Valid"]',
+    'metrics:["Geo","Topo","Judge","Valid","Geo","Topo","Judge","Valid","Geo","Topo","Judge","Valid","Geo","Topo","Judge","Valid","Score","USD / case"]',
+  )
+  .replace(/,domainRows:\[\{model:"Cadrille"[^\]]*\]/, "");
+paperImageTable = appendPaperScoreCost(paperImageTable, paperImageScoreCostTotals, 400, "Image-to-3D");
+if (paperImageTable.includes('model:"Cadrille"') || paperImageTable.includes('model:"CAD-Coder"')) {
+  throw new Error("incomplete Image-to-3D baseline rows were not removed");
+}
+
+let paperAssemblyTable = paperAssemblySource
+  .replace(
+    'groups:[{label:"CadQuery",span:5},{label:"OpenSCAD",span:5},{label:"Average",span:5}]',
+    'groups:[{label:"CadQuery",span:5},{label:"OpenSCAD",span:5},{label:"Average",span:5},{label:"Score / Cost",span:2}]',
+  )
+  .replace(
+    'metrics:["Geo","Topo","Judge","Part","Valid","Geo","Topo","Judge","Part","Valid","Geo","Topo","Judge","Part","Valid"]',
+    'metrics:["Geo","Topo","Judge","Part","Valid","Geo","Topo","Judge","Part","Valid","Geo","Topo","Judge","Part","Valid","Score","USD / case"]',
   );
-}
+paperAssemblyTable = appendPaperScoreCost(paperAssemblyTable, paperAssemblyScoreCostTotals, 203, "Assembly-3D");
 
-if (paperTextTable.includes('model:"Text2CAD"') || (paperTextTable.match(/\$\d/g) || []).length !== paperTextScoreCostTotals.size) {
-  throw new Error("paper Text-to-3D score/cost patch incomplete");
-}
-
-const liveStart = input.indexOf(",p2=[");
 const rendererStart = input.indexOf("function m2(", liveStart);
 const rendererEnd = input.indexOf("function Ws(", rendererStart);
 const assemblyStart = input.indexOf('{key:"assembly",title:"Assembly-3D"', liveStart);
@@ -128,8 +184,11 @@ assemblyTable = assemblyTable.replace(/,note:"[^"]*"}$/, `,note:${JSON.stringify
 if (!assemblyTable.endsWith("}")) throw new Error("failed to preserve the Assembly-3D table");
 
 const renderer = readFileSync(rendererPath, "utf8").trim();
-const beforeLive = input.slice(0, liveStart).replace(paperTextSource, paperTextTable);
-if (beforeLive === input.slice(0, liveStart)) throw new Error("paper Text-to-3D table was not patched");
+const beforeLive = input.slice(0, liveStart)
+  .replace(paperTextSource, paperTextTable)
+  .replace(paperImageSource, paperImageTable)
+  .replace(paperAssemblySource, paperAssemblyTable);
+if (beforeLive === input.slice(0, liveStart)) throw new Error("paper leaderboard tables were not patched");
 
 const patched = beforeLive
   + `,p2=[${JSON.stringify(textTable)},${assemblyTable}];`
