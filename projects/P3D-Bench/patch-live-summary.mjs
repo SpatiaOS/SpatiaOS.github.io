@@ -8,6 +8,7 @@ import { fileURLToPath } from "node:url";
 const root = dirname(fileURLToPath(import.meta.url));
 const indexPath = join(root, "index.html");
 const dataPath = join(root, "live-text-summary.json");
+const assemblyDataPath = join(root, "live-assembly-summary.json");
 const rendererPath = join(root, "leaderboard-renderer.fragment.js");
 const expectedInputSha256 = "74d319a896b51138dd3965f07fef3203691f52582d43eb6a158d5ff065f7a2b8";
 const inputName = "index-BtO9hYwb.js";
@@ -36,6 +37,20 @@ for (const [index, row] of data.rows.entries()) {
   if (index > 0 && data.rows[index - 1].score < row.score) throw new Error("rows must be score-descending");
   if (!(row.cost_usd > 0)) throw new Error(`${row.model}: invalid cost`);
 }
+
+const assemblyData = JSON.parse(readFileSync(assemblyDataPath, "utf8"));
+if (assemblyData.schema_version !== "p3d-live-assembly-summary-v1") throw new Error("unsupported live assembly summary schema");
+for (const [label, source] of [["score", assemblyData.score_source], ["cost", assemblyData.cost_source]]) {
+  if (!source || !/^[a-z0-9][a-z0-9-]{7,63}$/.test(source.id) || !/^[0-9a-f]{64}$/.test(source.sha256)) {
+    throw new Error(`invalid assembly ${label} source provenance`);
+  }
+}
+if (assemblyData.rows.length !== 14) throw new Error(`expected 14 Assembly-3D rows, got ${assemblyData.rows.length}`);
+for (const [index, row] of assemblyData.rows.entries()) {
+  if (index > 0 && assemblyData.rows[index - 1].score < row.score) throw new Error("assembly rows must be score-descending");
+  if (!(row.cost_usd > 0)) throw new Error(`${row.model}: invalid assembly cost`);
+}
+const assemblyCostByModel = new Map(assemblyData.rows.map((row) => [row.model, row]));
 
 const textTable = {
   key: "text",
@@ -179,7 +194,42 @@ if ([liveStart, rendererStart, rendererEnd, assemblyStart].some((value) => value
 }
 
 let assemblyTable = input.slice(assemblyStart, rendererStart - 2);
-const assemblyNote = "Assembly-3D scores use a fixed 100-assembly subset evaluated identically across all models, so they differ from the paper's 203-assembly results. Updated as evaluations complete.";
+
+// Inject the Score / Cost column into the live Assembly-3D table (parallel to the
+// live Text-to-3D table): Score is the mean of the displayed Average Geo/Topo/Judge/Part,
+// cost is the estimated per-case USD (stored x100 in the summary, displayed /100).
+assemblyTable = assemblyTable.replace(
+  'groups:[{label:"CadQuery",span:5},{label:"OpenSCAD",span:5},{label:"Average",span:5}]',
+  'groups:[{label:"CadQuery",span:5},{label:"OpenSCAD",span:5},{label:"Average",span:5},{label:"Score / Cost",span:2}]',
+);
+assemblyTable = assemblyTable.replace(
+  'metrics:["Geo","Topo","Judge","Part","Valid","Geo","Topo","Judge","Part","Valid","Geo","Topo","Judge","Part","Valid"]',
+  'metrics:["Geo","Topo","Judge","Part","Valid","Geo","Topo","Judge","Part","Valid","Geo","Topo","Judge","Part","Valid","Score","USD / case"]',
+);
+if (!assemblyTable.includes('{label:"Score / Cost",span:2}') || !assemblyTable.includes('"Score","USD / case"')) {
+  throw new Error("live Assembly-3D header was not patched");
+}
+let assemblyPatchedRows = 0;
+for (const [model, summaryRow] of assemblyCostByModel) {
+  const escapedModel = model.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const rowPattern = new RegExp(`(\\{model:"${escapedModel}",family:"[^"]+",cells:")([^"]+)("\\})`);
+  if (!rowPattern.test(assemblyTable)) throw new Error(`live assembly row missing: ${model}`);
+  assemblyTable = assemblyTable.replace(rowPattern, (_, prefix, cells, suffix) => {
+    const values = cells.trim().split(/\s+/).map((token) => token.replace(/[!^]$/, ""));
+    if (values.length !== 15) throw new Error(`${model}: expected 15 assembly metric cells`);
+    const avg = [10, 11, 12, 13].map((i) => Number(values[i]));
+    if (avg.some((value) => !Number.isFinite(value))) throw new Error(`${model}: unreadable assembly average cells`);
+    const cellScore = (avg[0] + avg[1] + avg[2] + avg[3]) / 4 * 100;
+    if (Math.abs(cellScore - summaryRow.score) > 0.05) {
+      throw new Error(`${model}: summary score ${summaryRow.score} != cells ${cellScore.toFixed(4)}`);
+    }
+    assemblyPatchedRows += 1;
+    return `${prefix}${cells} ${summaryRow.score.toFixed(1)} $${(summaryRow.cost_usd / 100).toFixed(3)}${suffix}`;
+  });
+}
+if (assemblyPatchedRows !== assemblyData.rows.length) throw new Error("live Assembly-3D score/cost patch incomplete");
+
+const assemblyNote = "Assembly-3D scores use a fixed 100-assembly subset evaluated identically across all models, so they differ from the paper's 203-assembly results. Score is the mean of the Average Geo / Topo / Judge / Part; cost is the estimated USD per case. Updated as evaluations complete.";
 assemblyTable = assemblyTable.replace(/,note:"[^"]*"}$/, `,note:${JSON.stringify(assemblyNote)}}`);
 if (!assemblyTable.endsWith("}")) throw new Error("failed to preserve the Assembly-3D table");
 

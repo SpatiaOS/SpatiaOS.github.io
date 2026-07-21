@@ -1,0 +1,114 @@
+{
+  "schema_version": "p3d-live-assembly-summary-v1",
+  "scope": "Assembly-3D fixed 100-assembly subset; CadQuery and OpenSCAD",
+  "score_definition": "mean(Avg-Geo, Avg-Topo, Avg-Judge, Avg-Part) * 100 from the displayed fixed-100 cells",
+  "cost_definition": "estimated per-case USD averaged over CadQuery and OpenSCAD; stored x100, displayed /100",
+  "score_source": {
+    "id": "p3d-textimage2cad-fixed100-comparison14",
+    "sha256": "6b904908892628c4b5847c2740e3e85dcb10a866115c38a524aea5985149f8b5"
+  },
+  "cost_source": {
+    "id": "p3d-textimage2cad-fixed100-cost14",
+    "sha256": "ec0e9a49196d2c636f4c139b1ac144e12b2100647932fca020baf7d58623b329"
+  },
+  "rows": [
+    {
+      "model": "GPT-5.6 (sol)",
+      "family": "openai",
+      "score": 69.9,
+      "cost_usd": 111.22825,
+      "usage_kind": "saved_response_usage"
+    },
+    {
+      "model": "GPT-5.5",
+      "family": "openai",
+      "score": 67.475,
+      "cost_usd": 111.6285,
+      "usage_kind": "saved_response_usage"
+    },
+    {
+      "model": "Fable 5",
+      "family": "fable",
+      "score": 67.275,
+      "cost_usd": 55.8715,
+      "usage_kind": "saved_response_usage"
+    },
+    {
+      "model": "Gemini 3.1 Pro",
+      "family": "gemini",
+      "score": 65.725,
+      "cost_usd": 31.525,
+      "usage_kind": "saved_response_usage"
+    },
+    {
+      "model": "Kimi K3",
+      "family": "kimi",
+      "score": 65.1,
+      "cost_usd": 59.4837,
+      "usage_kind": "official_tokenizer_estimate"
+    },
+    {
+      "model": "Claude Opus 4.6",
+      "family": "claude",
+      "score": 58.925,
+      "cost_usd": 82.5365,
+      "usage_kind": "saved_response_usage"
+    },
+    {
+      "model": "Kimi K2.7 Code",
+      "family": "kimi",
+      "score": 57.7,
+      "cost_usd": 18.75182,
+      "usage_kind": "saved_response_usage"
+    },
+    {
+      "model": "Kimi K2.6",
+      "family": "kimi",
+      "score": 54.775,
+      "cost_usd": 22.829605,
+      "usage_kind": "saved_response_usage"
+    },
+    {
+      "model": "Qwen3.7-Plus",
+      "family": "qwen",
+      "score": 49.875,
+      "cost_usd": 2.02176,
+      "usage_kind": "saved_response_usage"
+    },
+    {
+      "model": "Doubao Seed 2.1 Pro",
+      "family": "doubao",
+      "score": 40.575,
+      "cost_usd": 27.009944,
+      "usage_kind": "saved_response_usage"
+    },
+    {
+      "model": "MiMo v2 Omni",
+      "family": "mimo",
+      "score": 37.025,
+      "cost_usd": 2.54684,
+      "usage_kind": "saved_response_usage"
+    },
+    {
+      "model": "Qwen3.6-Plus",
+      "family": "qwen",
+      "score": 36.125,
+      "cost_usd": 5.898783,
+      "usage_kind": "saved_response_usage"
+    },
+    {
+      "model": "GLM 5V Turbo",
+      "family": "zai",
+      "score": 34.65,
+      "cost_usd": 5.73772,
+      "usage_kind": "saved_response_usage"
+    },
+    {
+      "model": "Doubao Seed 2.0 Pro",
+      "family": "doubao",
+      "score": 31.425,
+      "cost_usd": 2.293473,
+      "usage_kind": "saved_response_usage"
+    }
+  ]
+}
