@@ -3,12 +3,12 @@
   "scope": "Text-to-3D fixed first-100 UID prefix; descriptive and parametric; JSON and OpenSCAD",
   "score_definition": "mean(Desc-Judge, Param-Geo, Param-Topo, Param-Judge) * 100",
   "score_source": {
-    "id": "p3d-text2cad-fixed100-comparison13",
-    "sha256": "cb3708e37da2a8fb5aa328ae0ac12593b8ce8ad294d46f7438913fa3e15f2f30"
+    "id": "p3d-text2cad-fixed100-comparison14",
+    "sha256": "ea741f9f6919790145524e12ba01f7705300fe0d8500a6d46de77246e5f297ac"
   },
   "cost_source": {
-    "id": "p3d-text2cad-fixed100-cost13",
-    "sha256": "1fd20c85234429630045d03d051ac26e48db3eab35b34a01cbf5306c513bd32d"
+    "id": "p3d-text2cad-fixed100-cost14",
+    "sha256": "59d1c8c5d39bfd1e2948c5b962610bff690b9d2533b3ad7e1e307e1ec562fcf6"
   },
   "rows": [
     {"model":"Kimi K3","family":"kimi","metrics":"0.833 1.000 0.939 1.000 0.886 1.000 0.676 0.986 0.743 1.000 0.695 1.000 0.822 1.000 0.685 0.993 0.782 1.000","score":83.64900775,"cost_usd":48.601371,"usage_kind":"official_tokenizer_estimate"},
@@ -18,6 +18,7 @@
     {"model":"GLM-5.2","family":"zai","metrics":"0.795 1.000 0.882 1.000 0.839 1.000 0.646 0.956 0.728 0.960 0.683 1.000 0.813 1.000 0.664 0.978 0.771 0.980","score":81.29704783333334,"cost_usd":14.288979659,"usage_kind":"saved_response_usage"},
     {"model":"Kimi K2.6","family":"kimi","metrics":"0.737 0.900 0.898 0.980 0.817 0.940 0.646 0.966 0.742 0.990 0.670 0.990 0.803 1.000 0.658 0.978 0.772 0.995","score":80.63978734722222,"cost_usd":29.22859206,"usage_kind":"saved_response_usage"},
     {"model":"GLM-5.1","family":"zai","metrics":"0.777 0.940 0.825 0.930 0.801 0.935 0.666 0.983 0.771 1.000 0.632 0.940 0.797 0.950 0.649 0.961 0.784 0.975","score":79.88712413888889,"cost_usd":18.573446654,"usage_kind":"saved_response_usage"},
+    {"model":"Doubao Seed 2.1 Pro","family":"doubao","metrics":"0.747 1.000 0.772 1.000 0.759 1.000 0.647 0.976 0.706 0.990 0.667 1.000 0.778 1.000 0.657 0.988 0.742 0.995","score":79.67544305555556,"cost_usd":77.678664311,"usage_kind":"saved_response_usage"},
     {"model":"Qwen3.7-Plus","family":"qwen","metrics":"0.737 1.000 0.807 1.000 0.772 1.000 0.654 0.986 0.696 1.000 0.675 1.000 0.780 1.000 0.665 0.993 0.738 1.000","score":79.17596697222222,"cost_usd":8.92276928,"usage_kind":"saved_response_usage"},
     {"model":"DeepSeek V4 Pro","family":"deepseek","metrics":"0.743 0.980 0.753 0.930 0.748 0.955 0.624 0.959 0.714 0.980 0.611 0.940 0.777 0.950 0.617 0.949 0.746 0.965","score":76.51211588888889,"cost_usd":3.710926507,"usage_kind":"saved_response_usage"},
     {"model":"Doubao Seed 2.0 Pro","family":"doubao","metrics":"0.731 0.980 0.730 0.990 0.731 0.985 0.592 0.986 0.719 1.000 0.606 0.980 0.760 0.990 0.599 0.983 0.740 0.995","score":76.30968063888889,"cost_usd":4.185249348,"usage_kind":"saved_response_usage"},

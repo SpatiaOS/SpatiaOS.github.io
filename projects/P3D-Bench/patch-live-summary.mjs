@@ -31,7 +31,7 @@ for (const [label, source] of [["score", data.score_source], ["cost", data.cost_
     throw new Error(`invalid ${label} source provenance`);
   }
 }
-if (data.rows.length !== 13) throw new Error(`expected 13 Text-to-3D rows, got ${data.rows.length}`);
+if (data.rows.length !== 14) throw new Error(`expected 14 Text-to-3D rows, got ${data.rows.length}`);
 for (const [index, row] of data.rows.entries()) {
   if (row.metrics.trim().split(/\s+/).length !== 18) throw new Error(`${row.model}: expected 18 metric cells`);
   if (index > 0 && data.rows[index - 1].score < row.score) throw new Error("rows must be score-descending");
