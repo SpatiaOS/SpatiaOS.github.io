@@ -31,7 +31,7 @@
   letter-spacing: .02em;
 }
 
-/* Text-to-3D score and per-case cost columns. */
+/* Leaderboard score and per-case cost columns. */
 .results-table .rt-summary-score,
 .results-table .rt-summary-cost {
   position: static;
