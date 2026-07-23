@@ -31,7 +31,7 @@ for (const [label, source] of [["score", data.score_source], ["cost", data.cost_
     throw new Error(`invalid ${label} source provenance`);
   }
 }
-if (data.rows.length !== 14) throw new Error(`expected 14 Text-to-3D rows, got ${data.rows.length}`);
+if (data.rows.length !== 15) throw new Error(`expected 15 Text-to-3D rows, got ${data.rows.length}`);
 for (const [index, row] of data.rows.entries()) {
   if (row.metrics.trim().split(/\s+/).length !== 18) throw new Error(`${row.model}: expected 18 metric cells`);
   if (index > 0 && data.rows[index - 1].score < row.score) throw new Error("rows must be score-descending");
@@ -248,8 +248,8 @@ const patched = beforeLive
 if (!patched.includes("Generated assembly and parts") || !patched.includes("P3D-Dataset")) {
   throw new Error("restored Dataset/assembly components were not preserved");
 }
-if (!data.rows.some((row) => row.model === "Kimi K3") || !assemblyTable.includes("Kimi K3")) {
-  throw new Error("Kimi K3 leaderboard rows missing");
+if (!data.rows.some((row) => row.model === "GPT-5.6 Sol") || !data.rows.some((row) => row.model === "Kimi K3") || !assemblyTable.includes("Kimi K3")) {
+  throw new Error("expected live leaderboard rows missing");
 }
 
 const outputHash = createHash("sha256").update(patched).digest("hex").slice(0, 8);
