@@ -10,7 +10,7 @@ const indexPath = join(root, "index.html");
 const dataPath = join(root, "live-text-summary.json");
 const assemblyDataPath = join(root, "live-assembly-summary.json");
 const rendererPath = join(root, "leaderboard-renderer.fragment.js");
-const expectedInputSha256 = "74d319a896b51138dd3965f07fef3203691f52582d43eb6a158d5ff065f7a2b8";
+const expectedInputSha256 = "fdf9066e56a7986c68c29c14b0169714d0805e43813bf825bf24096de77f98ed";
 const inputName = "index-BtO9hYwb.js";
 
 const indexHtml = readFileSync(indexPath, "utf8");
