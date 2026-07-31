@@ -1,3 +1,5 @@
+import liveTextSummary from "./liveTextSummary.json";
+
 export type ResultTableRow = { model: string; model_id?: string; family?: string; cells: string };
 
 export type ResultSubtable = {
@@ -27,8 +29,8 @@ export const liveResultTables: ResultSubtable[] = [
         "span": 12
       },
       {
-        "label": "Cost",
-        "span": 1
+        "label": "Score / Cost",
+        "span": 2
       }
     ],
     "groups": [
@@ -57,8 +59,8 @@ export const liveResultTables: ResultSubtable[] = [
         "span": 4
       },
       {
-        "label": "100 cases",
-        "span": 1
+        "label": "Fixed 100",
+        "span": 2
       }
     ],
     "metrics": [
@@ -80,85 +82,10 @@ export const liveResultTables: ResultSubtable[] = [
       "Topo",
       "Judge",
       "Valid",
-      "USD"
+      "Score",
+      "USD / case"
     ],
-    "rows": [
-      {
-        "model": "GPT-5.6 Sol",
-        "family": "openai",
-        "cells": "0.846 0.990 0.928 1.000 0.887 0.995 0.674 0.973 0.753 0.980 0.703 1.000 0.829 1.000 0.688 0.987 0.791 0.990 $83.98"
-      },
-      {
-        "model": "Kimi K3",
-        "family": "kimi",
-        "cells": "0.833 1.000 0.939 1.000 0.886 1.000 0.676 0.986 0.743 1.000 0.695 1.000 0.822 1.000 0.685 0.993 0.782 1.000 $48.60"
-      },
-      {
-        "model": "GPT-5.5",
-        "family": "openai",
-        "cells": "0.853 1.000 0.922 0.990 0.887 0.995 0.676 0.963 0.713 1.000 0.691 0.990 0.863 1.000 0.683 0.977 0.788 1.000 $163.61"
-      },
-      {
-        "model": "Gemini 3.1 Pro",
-        "family": "gemini",
-        "cells": "0.836 1.000 0.949 0.990 0.892 0.995 0.660 0.976 0.668 1.000 0.684 0.990 0.820 1.000 0.672 0.983 0.744 1.000 $37.48"
-      },
-      {
-        "model": "Claude Opus 4.6",
-        "family": "claude",
-        "cells": "0.821 0.990 0.915 0.980 0.868 0.985 0.634 0.936 0.747 0.970 0.663 0.990 0.838 1.000 0.649 0.963 0.792 0.985 $108.21"
-      },
-      {
-        "model": "GLM-5.2",
-        "family": "zai",
-        "cells": "0.795 1.000 0.882 1.000 0.839 1.000 0.646 0.956 0.728 0.960 0.683 1.000 0.813 1.000 0.664 0.978 0.771 0.980 $14.29"
-      },
-      {
-        "model": "Kimi K2.6",
-        "family": "kimi",
-        "cells": "0.737 0.900 0.898 0.980 0.817 0.940 0.646 0.966 0.742 0.990 0.670 0.990 0.803 1.000 0.658 0.978 0.772 0.995 $29.23"
-      },
-      {
-        "model": "GLM-5.1",
-        "family": "zai",
-        "cells": "0.777 0.940 0.825 0.930 0.801 0.935 0.666 0.983 0.771 1.000 0.632 0.940 0.797 0.950 0.649 0.961 0.784 0.975 $18.57"
-      },
-      {
-        "model": "Doubao Seed 2.1 Pro",
-        "family": "doubao",
-        "cells": "0.747 1.000 0.772 1.000 0.759 1.000 0.647 0.976 0.706 0.990 0.667 1.000 0.778 1.000 0.657 0.988 0.742 0.995 $77.68"
-      },
-      {
-        "model": "Qwen3.7-Plus",
-        "family": "qwen",
-        "cells": "0.737 1.000 0.807 1.000 0.772 1.000 0.654 0.986 0.696 1.000 0.675 1.000 0.780 1.000 0.665 0.993 0.738 1.000 $8.92"
-      },
-      {
-        "model": "DeepSeek V4 Pro",
-        "family": "deepseek",
-        "cells": "0.743 0.980 0.753 0.930 0.748 0.955 0.624 0.959 0.714 0.980 0.611 0.940 0.777 0.950 0.617 0.949 0.746 0.965 $3.71"
-      },
-      {
-        "model": "Doubao Seed 2.0 Pro",
-        "family": "doubao",
-        "cells": "0.731 0.980 0.730 0.990 0.731 0.985 0.592 0.986 0.719 1.000 0.606 0.980 0.760 0.990 0.599 0.983 0.740 0.995 $4.19"
-      },
-      {
-        "model": "MiMo v2.5 Pro",
-        "family": "mimo",
-        "cells": "0.670 1.000 0.728 0.970 0.699 0.985 0.605 0.962 0.657 0.990 0.621 0.990 0.764 1.000 0.613 0.976 0.710 0.995 $2.68"
-      },
-      {
-        "model": "Qwen3.6-Plus",
-        "family": "qwen",
-        "cells": "0.541 0.970 0.785 0.990 0.663 0.980 0.622 0.979 0.558 1.000 0.642 0.990 0.802 1.000 0.632 0.985 0.680 1.000 $6.92"
-      },
-      {
-        "model": "MiMo v2 Pro",
-        "family": "mimo",
-        "cells": "0.652 0.990 0.734 0.970 0.693 0.980 0.593 0.955 0.657 0.990 0.582 0.990 0.752 1.000 0.588 0.972 0.704 0.995 $7.24"
-      }
-    ],
+    "rows": [],
     "note": "Text-to-3D scores in the live leaderboard are computed on a fixed 100-case subset evaluated identically across all models, so they differ from the figures in the paper. The leaderboard is continuously updated as new evaluations are completed. Cost is estimated for the same four 100-case runs from saved usage and published rate cards."
   },
   {
@@ -266,3 +193,21 @@ export const liveResultTables: ResultSubtable[] = [
     "note": "Assembly-3D scores in the live leaderboard are computed on a fixed 100-assembly subset evaluated identically across all models, so they differ from the 203-assembly figures in the paper. The leaderboard is continuously updated as new evaluations are completed."
   }
 ];
+
+if (
+  liveTextSummary.schema_version !== "p3d-live-text-summary-v1" ||
+  liveTextSummary.rows.length !== 15
+) {
+  throw new Error("Invalid Text-to-3D live leaderboard summary");
+}
+
+liveResultTables[0] = {
+  ...liveResultTables[0],
+  rows: liveTextSummary.rows.map((row) => ({
+    model: row.model,
+    family: row.family,
+    cells: `${row.metrics} ${row.score.toFixed(1)} $${(row.cost_usd / 100).toFixed(3)}`,
+  })),
+  note:
+    "Scores use the fixed 100-case subset; costs are normalized per case across the four evaluation settings. Updated as evaluations complete.",
+};

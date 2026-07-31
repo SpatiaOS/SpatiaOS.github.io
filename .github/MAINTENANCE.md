@@ -21,12 +21,10 @@
 
 ## 怎么改站点内容
 
-站点是"构建产物 + 补丁流水线"，仓库内自带全部所需文件，不需要外部源码工程：
+站点是"构建产物 + 受限数据更新器"，仓库内自带全部所需文件，不需要外部源码工程：
 
-- `projects/P3D-Bench/assets/index-BtO9hYwb.js` —— 基座 bundle（patch 的输入，有 sha256 校验）
-- `projects/P3D-Bench/leaderboard-renderer.fragment.js` —— 榜单渲染片段
 - `projects/P3D-Bench/live-text-summary.json` / `live-assembly-summary.json` —— 榜单数据（分数、成本）
-- `projects/P3D-Bench/patch-live-summary.mjs` —— 把上面几样合成新 bundle，并改写 `index.html` 的引用
+- `projects/P3D-Bench/tools/update-live-text.mjs` —— 只替换 active bundle 的 Live Text 表；Paper、Assembly、demo 和页面其余部分保持不变
 - `projects/P3D-Bench/demo/manifest.json` —— 论文标题、作者、**摘要**、链接、案例清单（页面运行时 fetch）
 
 常见改动：
@@ -34,8 +32,8 @@
 | 想改什么 | 改哪里 |
 | --- | --- |
 | 摘要 / 标题 / 作者 / 链接 | `demo/manifest.json`（前端 fetch 的就是它），同时改 bundle 内的 fallback 文案 |
-| 榜单数字、新增模型行、成本列 | `live-*-summary.json`，然后跑 `node patch-live-summary.mjs` |
-| 榜单表格结构 / 排序交互 | `leaderboard-renderer.fragment.js`，然后跑 patch |
+| Text 榜单数字、成本列 | `live-text-summary.json`，然后跑 `node projects/P3D-Bench/tools/update-live-text.mjs` |
+| Assembly 榜单或页面结构 | 修改 `.github/site-src/` 后做完整页面回归；Text 更新器不会触碰这些内容 |
 | 图片、网格、GT mesh | `demo/` 下对应资源 |
 
 改完 push 到 `main`，Actions 自动部署，约 1 分钟生效。
@@ -45,8 +43,8 @@
 上面那套流水线够应付内容更新，但**改页面结构**（新增板块、改布局/导航/配色）需要前端源码。
 本仓库已收录一份一次性源码快照：
 
-- 位置：`.github/site-src/`（约 356 KB，16 个文件；`.github/` 会被部署 workflow 排除，不会发布到站点）
-- 来源：`LucasQAQ/p3d` @ `33ace73`（2026-07-29），作者 Zhanpeng-Hu
+- 位置：`.github/site-src/`（`.github/` 会被部署 workflow 排除，不会发布到站点）
+- 来源：归档前的 `LucasQAQ/p3d` @ `e6412ff`（2026-07-31）；当前 Live Text 数据已内置为 `src/liveTextSummary.json`
 - 技术栈：React + TypeScript + Vite；`src/main.tsx` 是整页结构与逻辑，`src/styles.css` 是全部样式
 - 性质：**一次性拷贝**，不是 submodule / fork，与上游没有任何同步关系。上游后续改动不会影响本仓库
 
@@ -56,13 +54,11 @@
 
 1. 源码自带的 `public/demo/` 素材**没有**收进快照（几百 MB，本仓库 `projects/P3D-Bench/demo/` 里已有全量），
    重建时把本仓库的 `demo/` 当作素材源。
-2. 线上 bundle 比源码直接构建的结果多一层内容——实时榜单分数/成本列、表格排序，由
-   `patch-live-summary.mjs` 注入。重建后必须再跑一遍 patch 才等价。
+2. 线上 bundle 仍包含独立维护的 Assembly Score/Cost 和完整 demo；任何源码全量重建都必须与当前线上页面做逐区回归，不能直接覆盖。
 3. 快照里 `src/main.tsx` 的 fallback 摘要与本仓库 `demo/manifest.json` 可能不同步；
    **以本仓库的 `demo/manifest.json` 为准**（页面运行时读的是它，且已移除旧的 project page 那句）。
 
-注意：修改基座 bundle `index-BtO9hYwb.js` 后，必须同步更新 `patch-live-summary.mjs` 里的
-`expectedInputSha256`，否则脚本会拒绝执行。
+Text 数值更新器自动读取 `index.html` 当前 active bundle，并对 Assembly 及其后内容做字节级保护，不再依赖固定的历史 bundle 文件名。
 
 ## 缓存
 
