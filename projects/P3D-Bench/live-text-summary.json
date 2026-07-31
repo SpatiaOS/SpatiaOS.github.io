@@ -9,12 +9,12 @@
     "historical_base_sha256": "89c166e1ceef729cdd984786b99aa0a4026c608125963b7414d7192312706d26"
   },
   "score_source": {
-    "id": "p3d-text2cad-fixed100-current",
-    "sha256": "9b260a91b1925777bd22bb417455906e59cb89b457cbafa193bedd81f230bff6"
+    "id": "p3d-text2cad-fixed100-current-16model",
+    "sha256": "b236e91ce0c072458134071a96fffd8101efb3961beb3b82c6c5ff174bcf2392"
   },
   "cost_source": {
-    "id": "p3d-text2cad-fixed100-cost15",
-    "sha256": "8fe57f2fbdad14e2b6c2df0414c70408fd7a89ce1c1694ad8dd5fd53d719c242"
+    "id": "p3d-text2cad-fixed100-cost16",
+    "sha256": "41605994c707f3e216ac3e792f09522802511b6bdd5d8681661a7deb889ab43c"
   },
   "rows": [
     {
@@ -47,6 +47,14 @@
       "metrics": "0.835 1.000 0.949 0.990 0.892 0.995 0.660 0.976 0.668 1.000 0.684 0.990 0.820 1.000 0.672 0.983 0.744 1.000",
       "score": 82.27904005555555,
       "cost_usd": 37.48104,
+      "usage_kind": "saved_response_usage"
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "family": "deepseek",
+      "metrics": "0.782 1.000 0.884 1.000 0.833 1.000 0.674 0.983 0.752 1.000 0.696 1.000 0.810 1.000 0.685 0.991 0.781 1.000",
+      "score": 82.25236616666666,
+      "cost_usd": 2.9661197888000004,
       "usage_kind": "saved_response_usage"
     },
     {
@@ -137,5 +145,13 @@
       "cost_usd": 7.2385956,
       "usage_kind": "saved_response_usage"
     }
-  ]
+  ],
+  "formal_release_overlay": {
+    "model": "DeepSeek V4 Flash",
+    "provider": "deepseek_direct",
+    "returned_model": "deepseek-v4-flash",
+    "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402",
+    "uid_sha256": "fac7d9b2950d98b3e10b3bc966a9b76f3674407c2a18e4a3d541b2c5f5a10593",
+    "paper_current_modified": false
+  }
 }

@@ -3,7 +3,7 @@
 `update-live-text.mjs` is the supported updater for the maintained public page.
 It consumes `../live-text-summary.json` and replaces only the active Live
 Text-to-3D table in the compiled application bundle. It fails closed if the
-15-row schema, metric count, score order, or bundle anchors differ.
+16-row schema, metric count, score order, or bundle anchors differ.
 
 Run from the repository root:
 
