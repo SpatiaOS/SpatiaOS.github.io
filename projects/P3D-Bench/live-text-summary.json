@@ -9,12 +9,12 @@
     "historical_base_sha256": "89c166e1ceef729cdd984786b99aa0a4026c608125963b7414d7192312706d26"
   },
   "score_source": {
-    "id": "p3d-text2cad-fixed100-current-16model",
-    "sha256": "b236e91ce0c072458134071a96fffd8101efb3961beb3b82c6c5ff174bcf2392"
+    "id": "p3d-text2cad-fixed100-current-17model",
+    "sha256": "23a8a4f85c92de8470b0caf1b3c9948f8647f22d938e293106fafeb83258c08e"
   },
   "cost_source": {
-    "id": "p3d-text2cad-fixed100-cost16",
-    "sha256": "41605994c707f3e216ac3e792f09522802511b6bdd5d8681661a7deb889ab43c"
+    "id": "p3d-text2cad-fixed100-cost17",
+    "sha256": "c12dbb6e3a2303c1d419b150f4e3ec218240ce14aed4fc55d58264fccecfc1de"
   },
   "rows": [
     {
@@ -23,6 +23,14 @@
       "metrics": "0.846 0.990 0.928 1.000 0.887 0.995 0.674 0.973 0.753 0.980 0.703 1.000 0.829 1.000 0.688 0.987 0.791 0.990",
       "score": 83.82410836111112,
       "cost_usd": 83.98276,
+      "usage_kind": "saved_response_usage"
+    },
+    {
+      "model": "Qwen3.8-Max",
+      "family": "qwen",
+      "metrics": "0.866 1.000 0.923 1.000 0.895 1.000 0.679 0.980 0.741 1.000 0.699 1.000 0.812 1.000 0.689 0.990 0.776 1.000",
+      "score": 83.74243576388889,
+      "cost_usd": 45.364158,
       "usage_kind": "saved_response_usage"
     },
     {
@@ -153,5 +161,22 @@
     "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402",
     "uid_sha256": "fac7d9b2950d98b3e10b3bc966a9b76f3674407c2a18e4a3d541b2c5f5a10593",
     "paper_current_modified": false
-  }
+  },
+  "formal_release_overlays": [
+    {
+      "model": "DeepSeek V4 Flash",
+      "provider": "deepseek_direct",
+      "returned_model": "deepseek-v4-flash",
+      "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402",
+      "uid_sha256": "fac7d9b2950d98b3e10b3bc966a9b76f3674407c2a18e4a3d541b2c5f5a10593",
+      "paper_current_modified": false
+    },
+    {
+      "model": "Qwen3.8-Max",
+      "provider": "aionly",
+      "returned_model": "qwen3.8-max",
+      "uid_sha256": "fac7d9b2950d98b3e10b3bc966a9b76f3674407c2a18e4a3d541b2c5f5a10593",
+      "paper_current_modified": false
+    }
+  ]
 }

@@ -15,8 +15,8 @@ const summary = JSON.parse(readFileSync(summaryPath, "utf8"));
 if (summary.schema_version !== "p3d-live-text-summary-v1") {
   throw new Error("unexpected live Text summary schema");
 }
-if (!Array.isArray(summary.rows) || summary.rows.length !== 16) {
-  throw new Error("expected exactly 16 live Text rows");
+if (!Array.isArray(summary.rows) || summary.rows.length !== 17) {
+  throw new Error("expected exactly 17 live Text rows");
 }
 for (const [index, row] of summary.rows.entries()) {
   const values = row.metrics.trim().split(/\s+/);
