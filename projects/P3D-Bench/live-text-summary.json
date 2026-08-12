@@ -114,7 +114,7 @@
       "usage_kind": "saved_response_usage"
     },
     {
-      "model": "DeepSeek V4 Pro",
+      "model": "DeepSeek V4 Pro Preview",
       "family": "deepseek",
       "metrics": "0.742 0.980 0.753 0.930 0.748 0.955 0.624 0.959 0.714 0.980 0.611 0.940 0.777 0.950 0.617 0.949 0.746 0.965",
       "score": 76.50517144444444,
