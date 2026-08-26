@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Procedura: Agentic 3D Modeling with Procedural Control</title>
+<meta name="description" content="Procedura is a procedural modeling agent that writes a 3D object as a parametric program: named parts joined by typed, machine-checkable mates.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237c98e9' stroke-width='1.6' stroke-linejoin='round'%3E%3Cpath d='M12 3 20 7.5 12 12 4 7.5Z'/%3E%3Cpath d='M20 7.5V16.5L12 21V12'/%3E%3Cpath d='M4 7.5V16.5L12 21'/%3E%3C/svg%3E">
+<link rel="preload" href="fonts/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/brand/wordmark.png" as="image">
+<link rel="preload" href="fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/jetbrains-mono-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css?v=1">
+<script type="importmap">{ "imports": { "three": "./js/vendor/three.module.min.js" } }</script>
+</head>
+<body>
+
+<canvas id="scene" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+<div class="scrim" aria-hidden="true"></div>
+
+<header class="site-header" id="siteHeader">
+  <a class="nav-brand" href="#hero" aria-label="Procedura home">
+    <img src="assets/brand/wordmark_nav.png" alt="Procedura" height="20">
+  </a>
+  <nav class="nav-links" aria-label="Sections">
+    <a href="#method">Method</a>
+    <a href="#results">Results</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#bibtex">BibTeX</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ================= 3D story: assembled / exploded / reassembled ====== -->
+
+  <section class="panel" id="hero">
+    <div class="hero-block">
+      <h1 class="sr-only">Procedura: Agentic 3D Modeling with Procedural Control</h1>
+      <img class="hero-wordmark reveal" src="assets/brand/wordmark.png" alt="Procedura">
+      <p class="hero-sub reveal" style="--d:.08s">Agentic 3D Modeling with Procedural Control</p>
+      <p class="hero-authors reveal" style="--d:.14s">
+        Youtian Lin<sup>1</sup>, Yikang Yang<sup>1</sup>, Zhanpeng Hu<sup>1</sup>, Mengqi Zhou<sup>1</sup>, Feihu Zhang<sup>2</sup>, Xun Cao<sup>1</sup>,<br>
+        Jiaheng Liu<sup>1,&dagger;</sup>, Yao Yao<sup>1,&dagger;</sup>
+        <span class="hero-affil"><sup>1</sup>Nanjing University&ensp;<sup>2</sup>DreamTech&ensp;<sup>&dagger;</sup>Corresponding authors</span>
+      </p>
+      <div class="cta-row reveal" style="--d:.2s">
+        <a class="btn btn-solid" href="#" data-link="paper">Read the paper</a>
+        <a class="btn btn-ghost" href="#" data-link="code">Code</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel panel-right" id="parts">
+    <div class="story-block">
+      <h2 class="reveal">Not a mesh.<br>A program.</h2>
+      <p class="reveal" style="--d:.08s">
+        Procedura writes the object as a procedural assembly: a parametric
+        program whose parts are named, editable modules. The motorcycle on
+        screen is 19 of them.
+      </p>
+      <ul class="part-ticker" id="partTicker" aria-label="Module names">
+        <li>trellis_frame</li>
+        <li>v_twin_engine</li>
+        <li>fuel_tank</li>
+        <li>exhaust_system</li>
+        <li>rear_swingarm</li>
+        <li>front_fork</li>
+        <li>handlebars</li>
+        <li>headlight</li>
+        <li class="ticker-more">+ 11 more modules</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="panel" id="solve">
+    <div class="story-block">
+      <h2 class="reveal">Joined by mate.<br>Placed by solving.</h2>
+      <p class="reveal" style="--d:.08s">
+        Every joint is a typed, machine&#8209;checkable mate, both halves cut
+        from one shared nominal. The assembly transform is solved from the mated
+        frames, never guessed from a render.
+      </p>
+      <p class="solve-eq reveal" style="--d:.16s">T<sub>j</sub> = F<sub>i</sub> &middot; &Delta;(&phi;) &middot; F<sub>j</sub><sup>&minus;1</sup></p>
+    </div>
+  </section>
+
+  <div class="story-exit" aria-hidden="true"></div>
+
+  <!-- ================= content ========================================== -->
+
+  <div class="page-body">
+
+    <section class="section" id="method">
+      <div class="wrap">
+        <h2 class="reveal">From one prompt to a production asset</h2>
+        <p class="lead reveal" style="--d:.06s">
+          A single frozen LLM plans the object as an assembly graph, writes the
+          program part by part, and refines it under a decoupled vision critic.
+          The same graph then carries per&#8209;part materials and a
+          simulator&#8209;validated articulation. No 3D training anywhere.
+        </p>
+                <figure class="plate reveal" style="--d:.14s">
+          <img src="assets/figs/overview.jpg" alt="Procedura pipeline overview: planning, procedural modeling, refine, then materials and articulation" loading="lazy">
+          <figcaption>Planning authors parts and mates, procedural modeling builds the program one part at a time against a dynamic context, and a refine loop art&#8209;directs the result. Compilation yields the mesh, the native part decomposition, and the painted, articulated asset.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="build">
+      <div class="wrap">
+        <h2 class="reveal">The program grows one part at a time</h2>
+        <p class="lead reveal" style="--d:.06s">
+          Each generation call sees the reference, the full compiling program,
+          and a render of the build so far, and emits exactly one new module. A
+          deterministic splice inserts it; three gates decide whether it stays.
+          The strip replays the motorcycle on this page, one committed part per
+          frame, in its actual build order.
+        </p>
+      </div>
+
+            <div class="strip strip-build reveal" style="--d:.08s" aria-label="Motorcycle build steps">
+        <figure><img src="assets/figs/buildstep_01.jpg" alt="Motorcycle build after part 1: trellis_frame" loading="lazy"><figcaption>+ trellis_frame &middot; 1/19</figcaption></figure>
+        <figure><img src="assets/figs/buildstep_02.jpg" alt="Motorcycle build after part 2: v_twin_engine" loading="lazy"><figcaption>+ v_twin_engine &middot; 2/19</figcaption></figure>
+        <figure><img src="assets/figs/buildstep_03.jpg" alt="Motorcycle build after part 3: subframe" loading="lazy"><figcaption>+ subframe &middot; 3/19</figcaption></figure>
+        <figure><img src="assets/figs/buildstep_04.jpg" alt="Motorcycle build after part 4: fuel_tank" loading="lazy"><figcaption>+ fuel_tank &middot; 4/19</figcaption></figure>
+        <figure><img src="assets/figs/buildstep_05.jpg" alt="Motorcycle build after part 5: seat" loading="lazy"><figcaption>+ seat &middot; 5/19</figcaption></figure>
+        <figure><img src="assets/figs/buildstep_06.jpg" alt="Motorcycle build after part 6: radiator" loading="lazy"><figcaption>+ radiator &middot; 6/19</figcaption></figure>
+        <figure><img src="assets/figs/buildstep_07.jpg" alt="Motorcycle build after part 7: exhaust_system" loading="lazy"><figcaption>+ exhaust_system &middot; 7/19</figcaption></figure>
+        <figure><img src="assets/figs/buildstep_08.jpg" alt="Motorcycle build after part 8: rear_swingarm" loading="lazy"><figcaption>+ rear_swingarm &middot; 8/19</figcaption></figure>
+        <figure><img src="assets/figs/buildstep_09.jpg" alt="Motorcycle build after part 9: rear_shock" loading="lazy"><figcaption>+ rear_shock &middot; 9/19</figcaption></figure>
+        <figure><img src="assets/figs/buildstep_10.jpg" alt="Motorcycle build after part 10: rear_wheel" loading="lazy"><figcaption>+ rear_wheel &middot; 10/19</figcaption></figure>
+        <figure><img src="assets/figs/buildstep_11.jpg" alt="Motorcycle build after part 11: rear_brake" loading="lazy"><figcaption>+ rear_brake &middot; 11/19</figcaption></figure>
+        <figure><img src="assets/figs/buildstep_12.jpg" alt="Motorcycle build after part 12: drive_chain" loading="lazy"><figcaption>+ drive_chain &middot; 12/19</figcaption></figure>
+        <figure><img src="assets/figs/buildstep_13.jpg" alt="Motorcycle build after part 13: steering_assembly" loading="lazy"><figcaption>+ steering_assembly &middot; 13/19</figcaption></figure>
+        <figure><img src="assets/figs/buildstep_14.jpg" alt="Motorcycle build after part 14: front_fork" loading="lazy"><figcaption>+ front_fork &middot; 14/19</figcaption></figure>
+        <figure><img src="assets/figs/buildstep_15.jpg" alt="Motorcycle build after part 15: handlebars" loading="lazy"><figcaption>+ handlebars &middot; 15/19</figcaption></figure>
+        <figure><img src="assets/figs/buildstep_16.jpg" alt="Motorcycle build after part 16: headlight" loading="lazy"><figcaption>+ headlight &middot; 16/19</figcaption></figure>
+        <figure><img src="assets/figs/buildstep_17.jpg" alt="Motorcycle build after part 17: front_fender" loading="lazy"><figcaption>+ front_fender &middot; 17/19</figcaption></figure>
+        <figure><img src="assets/figs/buildstep_18.jpg" alt="Motorcycle build after part 18: front_wheel" loading="lazy"><figcaption>+ front_wheel &middot; 18/19</figcaption></figure>
+        <figure><img src="assets/figs/buildstep_19.jpg" alt="Motorcycle build after part 19: front_brakes" loading="lazy"><figcaption>+ front_brakes &middot; 19/19</figcaption></figure>
+      </div>
+
+      <div class="wrap">
+        <div class="build-detail">
+          <div class="code-panel reveal">
+            <div class="code-tab">assembly.scad</div>
+<pre><code><span class="c">// MALE peg, base at origin, growing +Z, chamfered self-centring tip.</span>
+<span class="c">// Pair with asm_socket(d, ...) cut from the SAME d.</span>
+<span class="k">module</span> <span class="f">asm_peg</span>(d, len) {
+    lead = asm_lead(d);
+    <span class="k">union</span>() {
+        <span class="f">cylinder</span>(h = max(0.01, len - lead), d = d);
+        <span class="f">translate</span>([0, 0, len - lead])
+            <span class="f">cylinder</span>(h = lead, d1 = d, d2 = max(0.2, d - 2 * lead));
+    }
+}
+
+<span class="c">// FEMALE socket NEGATIVE tool. Bore = d + fit; mouth flares for lead-in.</span>
+<span class="k">module</span> <span class="f">asm_socket</span>(d, depth, cls = <span class="s">"location"</span>) {
+    bore = d + 2 * asm_fit(cls);
+    ...</code></pre>
+            <div class="code-tab">plan.json</div>
+<pre><code>{ <span class="s">"name"</span>: <span class="s">"front_bumper_lightbar"</span>,
+  <span class="s">"assembly"</span>: { <span class="s">"partner"</span>: <span class="s">"lower_chassis_frame"</span>,
+                <span class="s">"mate"</span>: <span class="s">"bolt_pattern"</span>,
+                <span class="s">"fit"</span>: <span class="s">"clearance"</span>, <span class="s">"count"</span>: 4 } }</code></pre>
+          </div>
+          <div class="gates reveal" style="--d:.08s">
+            <h3>The verification stack</h3>
+            <div class="gate">
+              <span class="gate-name">Compile gate</span>
+              <p>The spliced program must compile. On failure the compiler's error text goes back into the regeneration prompt.</p>
+            </div>
+            <div class="gate">
+              <span class="gate-name">Mate gate</span>
+              <p>Each mate is measured on the compiled mesh: registration area must reach &tau;<sub>a</sub>&thinsp;d&sup2;, penetration must stay inside the fit tolerance. Hovering or gouging parts are rejected with the measured values.</p>
+            </div>
+            <div class="gate">
+              <span class="gate-name">Connectivity gate</span>
+              <p>A span&#8209;based floater check rejects a part only if it increases the count of visibly detached components. What ships is the mesh the gate graded.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+            <section class="section" id="materials">
+      <div class="wrap">
+        <h2 class="reveal">Paint from the reference, part by part</h2>
+        <div class="mat-split">
+          <figure class="mat-media reveal">
+            <div class="plate">
+              <img src="assets/figs/painted_iso.jpg" alt="Painted motorcycle rolling chassis, Blender Cycles PBR render" loading="lazy">
+              <img class="mat-ref" src="assets/figs/paint_ref.jpg" alt="Reference image of the motorcycle" loading="lazy">
+            </div>
+            <figcaption>The painted motorcycle beside its reference. Every material stays a per&#8209;part attribute of the program, exported as multi&#8209;group OBJ&thinsp;+&thinsp;MTL.</figcaption>
+          </figure>
+          <div class="mat-copy reveal" style="--d:.08s">
+            <p class="lead">
+              Four one&#8209;shot vision calls: extract a compact PBR material
+              library from the reference, assign one entry per named part, let
+              a decoupled material critic correct the assignment, then split
+              modules into sibling colour blocks where one material is too
+              coarse. Every rewrite is recompiled and rejected if the triangle
+              count moves, so colour can never alter the shape.
+            </p>
+            <h3>The motorcycle's extracted library</h3>
+            <div class="palette" id="palette"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="motion">
+      <div class="wrap">
+        <h2 class="reveal">Joints that survive a physics simulator</h2>
+        <p class="lead reveal" style="--d:.06s">
+          The mate network is the kinematic graph: static mates group parts
+          into rigid links, kinematic mates become joints with measured
+          axes and anchors. The plan is exported as OpenUSD and URDF, then
+          driven through a fixed battery in Isaac Sim; a failed verdict feeds
+          rendered simulation frames back for one refine.
+        </p>
+      </div>
+      <div class="strip strip-videos reveal" style="--d:.1s" id="articStrip" aria-label="Isaac Sim articulation clips"></div>
+      <div class="wrap">
+        <p class="motion-stats reveal" style="--d:.12s">
+          Every clip above is a real headless Isaac Sim capture in
+          per&#8209;link colours: each case's exported USD is loaded fresh and
+          every driven joint sweeps at once along phase&#8209;offset
+          sinusoids, so the whole mechanism is alive in a single take.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="results">
+      <div class="wrap">
+        <h2 class="reveal">State of the art on both benchmarks</h2>
+        <p class="lead reveal" style="--d:.06s">
+          Every method is re&#8209;rendered from one shared rig and scored by
+          the same blinded judge, so the only difference between two rows is
+          the method.
+        </p>
+
+        <div class="result-tiles reveal" style="--d:.1s">
+          <div class="tile">
+            <span class="tile-num">3.1&times;</span>
+            <p>sharper edge structure than the next code&#8209;emitting method on MechBench&#8209;36 (Shrp 185.2 vs 60.4), with the top judge composite at 0.828.</p>
+          </div>
+          <div class="tile">
+            <span class="tile-num">0.590</span>
+            <p>P3D&#8209;Bench assembly composite, first place across every published entry and both of our base models prompted directly.</p>
+          </div>
+          </div>
+
+        <h3 class="tbl-title reveal">MechBench&#8209;36</h3>
+        <div class="tbl-scroll reveal" style="--d:.04s">
+          <table>
+            <thead><tr><th>Method</th><th>Geo</th><th>Aes</th><th>Sem</th><th>Overall</th><th>CLIP</th><th>Shrp<sub>60</sub></th><th>Dih<sub>95</sub></th></tr></thead>
+            <tbody>
+              <tr class="ours"><td>Procedura (Gemini 3.7 Flash)</td><td><b>0.799</b></td><td><b>0.827</b></td><td>0.858</td><td><b>0.828</b></td><td><b>82.67</b></td><td>158.08</td><td>97.97</td></tr>
+              <tr class="ours"><td>Procedura (GPT&#8209;5.6&#8209;sol)</td><td>0.756</td><td>0.793</td><td>0.843</td><td>0.797</td><td>81.76</td><td><b>185.18</b></td><td><b>105.28</b></td></tr>
+              <tr class="group"><td colspan="8">Agentic 3D&#8209;code</td></tr>
+              <tr><td>Adam CAD (GPT&#8209;5.6&#8209;sol)</td><td>0.778</td><td>0.759</td><td><b>0.861</b></td><td>0.799</td><td>81.26</td><td>57.35</td><td>90.41</td></tr>
+              <tr><td>ArtiCraft (GPT&#8209;5.6&#8209;sol)</td><td>0.682</td><td>0.596</td><td>0.827</td><td>0.702</td><td>79.12</td><td>41.31</td><td>94.74</td></tr>
+              <tr><td>CAD&#8209;Coder</td><td>0.099</td><td>0.210</td><td>0.096</td><td>0.135</td><td>60.62</td><td>7.63</td><td>92.91</td></tr>
+              <tr><td>cadrille</td><td>0.086</td><td>0.105</td><td>0.083</td><td>0.092</td><td>50.65</td><td>19.58</td><td>97.18</td></tr>
+              <tr class="group"><td colspan="8">Single&#8209;shot LLM</td></tr>
+              <tr><td>GPT&#8209;5.6&#8209;sol</td><td>0.790</td><td>0.735</td><td>0.852</td><td>0.792</td><td>80.91</td><td>60.39</td><td>89.76</td></tr>
+              <tr><td>Gemini 3.7 Flash</td><td>0.719</td><td>0.722</td><td>0.849</td><td>0.763</td><td>80.86</td><td>63.54</td><td>91.35</td></tr>
+              <tr><td>Gemini 3.1 Pro</td><td>0.698</td><td>0.673</td><td>0.824</td><td>0.731</td><td>79.94</td><td></td><td></td></tr>
+              <tr class="group"><td colspan="8">Native 3D generation</td></tr>
+              <tr><td>TRELLIS.2</td><td>0.781</td><td>0.787</td><td><b>0.861</b></td><td>0.810</td><td>77.51</td><td>134.02</td><td>73.11</td></tr>
+              <tr><td>UltraShape</td><td>0.731</td><td>0.694</td><td>0.818</td><td>0.748</td><td>75.04</td><td>8.58</td><td>33.06</td></tr>
+              <tr><td>Hunyuan3D</td><td>0.685</td><td>0.590</td><td>0.815</td><td>0.697</td><td>74.62</td><td>6.41</td><td>35.12</td></tr>
+              <tr><td>Direct3D&#8209;S2</td><td>0.583</td><td>0.559</td><td>0.775</td><td>0.639</td><td>74.90</td><td>35.17</td><td>52.78</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="tbl-note reveal">Geo, Aes, and Sem are the judge's geometry, aesthetics, and semantic axes, mapped per case to 0&#8209;1; Overall is their mean, the judge composite. CLIP is prompt&#8209;to&#8209;render alignment on the shared renders. Shrp<sub>60</sub> and Dih<sub>95</sub> measure edge structure on the shipped mesh: total sharp&#8209;edge length above a 60&deg; dihedral, and the 95th&#8209;percentile dihedral. A case with no shipped mesh scores zero and stays in the mean, which is why CAD&#8209;Coder and cadrille sit low. Native generators reproduce the silhouette, but bolt heads, vents, and panel lines fuse into the surface; compiled CSG keeps them sharp.</p>
+
+        <h3 class="tbl-title reveal">P3D&#8209;Bench assembly</h3>
+        <div class="tbl-scroll reveal" style="--d:.04s">
+          <table>
+            <thead><tr><th>Method</th><th>Semantic</th><th>Geometry</th><th>Aesthetics</th><th>Overall</th></tr></thead>
+            <tbody>
+              <tr class="ours"><td>Procedura (Gemini 3.7 Flash)</td><td><b>0.666</b></td><td><b>0.490</b></td><td><b>0.616</b></td><td><b>0.590</b> <span class="ci">&plusmn;0.009</span></td></tr>
+              <tr class="ours"><td>Procedura (GPT&#8209;5.6&#8209;sol)</td><td>0.661</td><td>0.460</td><td>0.604</td><td>0.575 <span class="ci">&plusmn;0.010</span></td></tr>
+              <tr><td>Gemini 3.7 Flash</td><td>0.662</td><td>0.458</td><td>0.577</td><td>0.566 <span class="ci">&plusmn;0.016</span></td></tr>
+              <tr><td>GPT&#8209;5.6&#8209;sol</td><td>0.662</td><td>0.444</td><td>0.584</td><td>0.563 <span class="ci">&plusmn;0.015</span></td></tr>
+              <tr><td>GPT&#8209;5.5</td><td>0.643</td><td>0.392</td><td>0.537</td><td>0.524 <span class="ci">&plusmn;0.012</span></td></tr>
+              <tr><td>Gemini 3.1 Pro</td><td>0.639</td><td>0.390</td><td>0.508</td><td>0.513 <span class="ci">&plusmn;0.012</span></td></tr>
+              <tr><td>Opus 4.6</td><td>0.572</td><td>0.327</td><td>0.446</td><td>0.448 <span class="ci">&plusmn;0.016</span></td></tr>
+              <tr><td>Kimi K2.6</td><td>0.523</td><td>0.294</td><td>0.372</td><td>0.396 <span class="ci">&plusmn;0.014</span></td></tr>
+              <tr><td>Qwen 3.6</td><td>0.451</td><td>0.264</td><td>0.322</td><td>0.346 <span class="ci">&plusmn;0.014</span></td></tr>
+              <tr><td>Doubao</td><td>0.408</td><td>0.253</td><td>0.302</td><td>0.321 <span class="ci">&plusmn;0.014</span></td></tr>
+              <tr><td>GLM&#8209;5V Turbo</td><td>0.402</td><td>0.249</td><td>0.300</td><td>0.317 <span class="ci">&plusmn;0.013</span></td></tr>
+              <tr><td>MiMo Omni</td><td>0.379</td><td>0.242</td><td>0.294</td><td>0.305 <span class="ci">&plusmn;0.012</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="tbl-note reveal">Scores are the benchmark's judge axes normalized to 0&#8209;1; Overall is their mean, the benchmark's composite, with 95% intervals. Baselines are the benchmark's entries re&#8209;run under the same harness, plus single&#8209;shot prompting of the two base models Procedura uses.</p>
+      </div>
+    </section>
+
+    <section class="section" id="gallery">
+      <div class="wrap">
+        <h2 class="reveal">30 objects, straight from the pipeline</h2>
+        <p class="lead reveal" style="--d:.06s">
+          Ambient&#8209;occlusion renders from the benchmark run, untouched.
+          Hover a card to paint it with its Materials&#8209;stage output; the
+          inset shows the reference view the agent worked from.
+        </p>
+      </div>
+      <div class="grid" id="galleryGrid"></div>
+    </section>
+
+    <section class="section" id="bibtex">
+      <div class="wrap">
+        <h2 class="reveal">Citation</h2>
+        <div class="bib-card reveal" style="--d:.06s">
+          <button class="bib-copy" id="bibCopy" type="button">Copy</button>
+<pre id="bibText">@article{lin2026procedura,
+  title   = {Agentic 3D Modeling with Procedural Control},
+  author  = {Lin, Youtian and Yang, Yikang and Hu, Zhanpeng and
+             Zhou, Mengqi and Zhang, Feihu and Cao, Xun and
+             Liu, Jiaheng and Yao, Yao},
+  journal = {arXiv preprint},
+  year    = {2026},
+}</pre>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <img class="foot-logo" src="assets/brand/nju3dv_light.png" alt="NJU-3DV lab" height="26">
+      <span class="foot-note">Every render on this page is an actual pipeline output.</span>
+    </footer>
+
+  </div>
+</main>
+
+<script type="module" src="js/main.js?v=1"></script>
+</body>
+</html>

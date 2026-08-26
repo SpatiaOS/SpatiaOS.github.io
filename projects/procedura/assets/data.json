@@ -1,0 +1,405 @@
+{
+ "stats": {
+  "objects": 30,
+  "parts": 572,
+  "contracts": 562,
+  "scadLines": 91968
+ },
+ "cases": [
+  {
+   "id": "00001198",
+   "paint": true
+  },
+  {
+   "id": "aircraft_landing_gear",
+   "paint": true
+  },
+  {
+   "id": "assault_buggy",
+   "paint": true
+  },
+  {
+   "id": "atmospheric_diving_suit",
+   "paint": true
+  },
+  {
+   "id": "cinema_camera_rig",
+   "paint": true
+  },
+  {
+   "id": "compact_tracked_excavator",
+   "paint": true
+  },
+  {
+   "id": "equatorial_telescope",
+   "paint": true
+  },
+  {
+   "id": "full_suspension_mountain_bike",
+   "paint": true
+  },
+  {
+   "id": "gravity_hover_bike",
+   "paint": true
+  },
+  {
+   "id": "gunship_drone",
+   "paint": true
+  },
+  {
+   "id": "hexapod_walker",
+   "paint": true
+  },
+  {
+   "id": "industrial_robot_arm",
+   "paint": true
+  },
+  {
+   "id": "knuckle_boom_crane",
+   "paint": true
+  },
+  {
+   "id": "landing_dropship",
+   "paint": true
+  },
+  {
+   "id": "mech_robot",
+   "paint": true
+  },
+  {
+   "id": "motorcycle_rolling_chassis",
+   "paint": true
+  },
+  {
+   "id": "plasma_rifle",
+   "paint": true
+  },
+  {
+   "id": "power_pylon_reactor",
+   "paint": true
+  },
+  {
+   "id": "pressurized_rover",
+   "paint": true
+  },
+  {
+   "id": "quadcopter_drone",
+   "paint": true
+  },
+  {
+   "id": "quadruped_robot_dog",
+   "paint": true
+  },
+  {
+   "id": "railgun_turret",
+   "paint": true
+  },
+  {
+   "id": "research_submarine",
+   "paint": true
+  },
+  {
+   "id": "rotating_ring_station",
+   "paint": true
+  },
+  {
+   "id": "satellite_servicing_spacecraft",
+   "paint": true
+  },
+  {
+   "id": "sentry_turret_tripod",
+   "paint": true
+  },
+  {
+   "id": "space_fighter",
+   "paint": true
+  },
+  {
+   "id": "survey_total_station",
+   "paint": true
+  },
+  {
+   "id": "tlr_camera",
+   "paint": true
+  },
+  {
+   "id": "v12_twin_turbo_engine",
+   "paint": true
+  }
+ ],
+ "palette": [
+  {
+   "hex": "#676a6e",
+   "name": "matte gunmetal paint",
+   "rough": 0.65,
+   "metal": 0
+  },
+  {
+   "hex": "#232427",
+   "name": "satin black frame enamel",
+   "rough": 0.45,
+   "metal": 0
+  },
+  {
+   "hex": "#5a1820",
+   "name": "wine-red metallic accent paint",
+   "rough": 0.35,
+   "metal": 0
+  },
+  {
+   "hex": "#2c2e30",
+   "name": "matte charcoal seat leather",
+   "rough": 0.8,
+   "metal": 0
+  },
+  {
+   "hex": "#1d1f21",
+   "name": "matte black composite undertray",
+   "rough": 0.6,
+   "metal": 0
+  },
+  {
+   "hex": "#25272a",
+   "name": "cast black engine finish",
+   "rough": 0.55,
+   "metal": 0
+  },
+  {
+   "hex": "#bcc1c7",
+   "name": "milled aluminum fin highlights",
+   "rough": 0.28,
+   "metal": 1
+  },
+  {
+   "hex": "#8a8375",
+   "name": "brushed stainless exhaust headers",
+   "rough": 0.35,
+   "metal": 1
+  },
+  {
+   "hex": "#a3a097",
+   "name": "satin titanium silencer sleeve",
+   "rough": 0.3,
+   "metal": 1
+  },
+  {
+   "hex": "#524b42",
+   "name": "heat-tinted weld metal",
+   "rough": 0.45,
+   "metal": 1
+  },
+  {
+   "hex": "#9ba0a5",
+   "name": "perforated rotor steel",
+   "rough": 0.25,
+   "metal": 1
+  },
+  {
+   "hex": "#191b1d",
+   "name": "black anodized brake carrier",
+   "rough": 0.35,
+   "metal": 1
+  },
+  {
+   "hex": "#27292d",
+   "name": "matte black brake calipers",
+   "rough": 0.38,
+   "metal": 1
+  },
+  {
+   "hex": "#991418",
+   "name": "gloss red caliper script",
+   "rough": 0.3,
+   "metal": 0
+  },
+  {
+   "hex": "#d8dce2",
+   "name": "polished chrome steel spokes",
+   "rough": 0.12,
+   "metal": 1
+  },
+  {
+   "hex": "#181a1c",
+   "name": "black anodized wheel rims",
+   "rough": 0.32,
+   "metal": 1
+  },
+  {
+   "hex": "#adafb4",
+   "name": "bright nickel spoke nipples",
+   "rough": 0.22,
+   "metal": 1
+  },
+  {
+   "hex": "#e5e9ee",
+   "name": "mirror chrome fork stanchions",
+   "rough": 0.08,
+   "metal": 1
+  },
+  {
+   "hex": "#2a2c2f",
+   "name": "matte black fork uppers",
+   "rough": 0.35,
+   "metal": 1
+  },
+  {
+   "hex": "#303337",
+   "name": "black anodized billet alloy",
+   "rough": 0.4,
+   "metal": 1
+  },
+  {
+   "hex": "#b5bac0",
+   "name": "nickel-plated chain plates",
+   "rough": 0.25,
+   "metal": 1
+  },
+  {
+   "hex": "#383a3c",
+   "name": "dark steel chain rollers",
+   "rough": 0.45,
+   "metal": 1
+  },
+  {
+   "hex": "#43464a",
+   "name": "dark steel rear sprocket",
+   "rough": 0.35,
+   "metal": 1
+  },
+  {
+   "hex": "#101112",
+   "name": "gloss black shock spring",
+   "rough": 0.2,
+   "metal": 0
+  },
+  {
+   "hex": "#6d171d",
+   "name": "red anodized shock collar",
+   "rough": 0.3,
+   "metal": 1
+  },
+  {
+   "hex": "#4f5358",
+   "name": "knurled aluminum footpeg",
+   "rough": 0.5,
+   "metal": 1
+  },
+  {
+   "hex": "#c9ced3",
+   "name": "bright zinc hardware",
+   "rough": 0.2,
+   "metal": 1
+  },
+  {
+   "hex": "#141516",
+   "name": "black oxide hex bolts",
+   "rough": 0.4,
+   "metal": 1
+  },
+  {
+   "hex": "#161719",
+   "name": "matte tyre rubber",
+   "rough": 0.85,
+   "metal": 0
+  },
+  {
+   "hex": "#111213",
+   "name": "textured handle grip rubber",
+   "rough": 0.72,
+   "metal": 0
+  },
+  {
+   "hex": "#0d0e0f",
+   "name": "flexible hydraulic hose rubber",
+   "rough": 0.58,
+   "metal": 0
+  },
+  {
+   "hex": "#2a2924",
+   "name": "smoked reservoir plastic",
+   "rough": 0.25,
+   "metal": 0
+  },
+  {
+   "hex": "#212224",
+   "name": "matte black radiator core",
+   "rough": 0.65,
+   "metal": 1
+  },
+  {
+   "hex": "#33363a",
+   "name": "molded radiator shroud",
+   "rough": 0.5,
+   "metal": 0
+  },
+  {
+   "hex": "#eef3f7",
+   "name": "clear headlamp glass",
+   "rough": 0.05,
+   "metal": 0
+  },
+  {
+   "hex": "#e8ecf0",
+   "name": "chrome projector bezel",
+   "rough": 0.08,
+   "metal": 1
+  },
+  {
+   "hex": "#ffffff",
+   "name": "illuminated LED halo ring",
+   "rough": 0.2,
+   "metal": 0
+  },
+  {
+   "hex": "#17181a",
+   "name": "matte black lamp bucket",
+   "rough": 0.42,
+   "metal": 0
+  },
+  {
+   "hex": "#d5dae0",
+   "name": "clear indicator lens",
+   "rough": 0.1,
+   "metal": 0
+  },
+  {
+   "hex": "#27292c",
+   "name": "matte composite tail stalk",
+   "rough": 0.55,
+   "metal": 0
+  },
+  {
+   "hex": "#e0e4e7",
+   "name": "specular mirror glass",
+   "rough": 0.02,
+   "metal": 0
+  },
+  {
+   "hex": "#1b1e22",
+   "name": "smoked gauge crystal",
+   "rough": 0.1,
+   "metal": 0
+  }
+ ],
+ "motion": [
+  "assault_buggy",
+  "atmospheric_diving_suit",
+  "cinema_camera_rig",
+  "compact_tracked_excavator",
+  "equatorial_telescope",
+  "gunship_drone",
+  "hexapod_walker",
+  "industrial_robot_arm",
+  "landing_dropship",
+  "mech_robot",
+  "motorcycle_rolling_chassis",
+  "pressurized_rover",
+  "quadcopter_drone",
+  "quadruped_robot_dog",
+  "research_submarine",
+  "satellite_servicing_spacecraft",
+  "sentry_turret_tripod",
+  "space_fighter",
+  "survey_total_station"
+ ]
+}
