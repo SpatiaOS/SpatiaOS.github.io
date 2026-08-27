@@ -10,7 +10,7 @@ import {
 
 // External links. The paper PDF is produced by build_assets; the code link
 // stays a placeholder until the repository is public.
-const LINKS = { paper: '#', code: '#' };
+const LINKS = { paper: 'assets/procedura.pdf', code: 'https://github.com/SpatiaOS/Procedura' };
 
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
