@@ -19,7 +19,8 @@ the two format means are averaged equally. This is an API-equivalent generation
 cost, excluding evaluator calls, superseded runs, transport failures, subscription
 payments, and taxes. Kimi's original 240 generation responses have empty usage.
 Its actual cost remains `null`, but the separate `estimated_cost_usd` field
-publishes an explicitly marked **≈$0.575/case** estimate. Assembly is displayed first.
+publishes **$0.575/case**, with its estimated basis explained in the table footnote.
+Assembly is displayed first.
 
 Kimi's estimate recounts saved reasoning and code with its own official K3
 tokenizer, reconstructs initial/refine prompts from saved captions, previous
@@ -46,8 +47,10 @@ python projects/P3D-Bench/tools/estimate-kimi-cost.py \
   --private-ledger /absolute/private/path/to/kimi-estimate-ledger.json
 ```
 
-The `≈` marker is retained in rendering and ignored only when sorting numeric
-costs. Estimated values cannot be written into the audited actual-cost field.
+Per the maintainer's display preference, the cost cell uses the same currency
+format as the other models, without an approximation marker. The table footnote
+and separate estimated-value fields retain its provenance. Estimated values
+cannot be written into the audited actual-cost field.
 
 Official rates and source links live in `../assembly-api-pricing.json`; aggregate
 token counts and costs live in `../assembly-cost-audit.json`. The historical

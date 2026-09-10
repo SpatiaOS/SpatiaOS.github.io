@@ -5,7 +5,7 @@
   "score_definition": "100 × mean of unrounded Average Geo, Topo, Judge and Part; formats are equally weighted; Judge uses geometry and semantic axes.",
   "api_failure_policy": "Generation API failures are unrun and excluded; non-API invalid outputs receive worst scores. Missing evaluations retain the existing per-metric denominators.",
   "valid_definition": "Valid/tested per format; Average Valid is the equal-weight mean of both formats.",
-  "cost_definition": "Official API equivalent generation cost. Sum all selected initial/correction requests (at most three per tested case); include invalid cases; exclude API-unrun cases. Average the two format-specific per-tested-case means equally. Output includes reasoning exactly once; cached reads and writes are priced separately. Excludes evaluator calls, superseded runs, failed transport overhead, subscription payments and tax. Historical cost_usd storage is USD/case × 100; the displayed value divides by 100. Kimi has a separate estimated_cost_usd value (also stored ×100), recounted with its official tokenizer; it is displayed with ≈. Actual cost_usd remains null.",
+  "cost_definition": "Official API equivalent generation cost. Sum all selected initial/correction requests (at most three per tested case); include invalid cases; exclude API-unrun cases. Average the two format-specific per-tested-case means equally. Output includes reasoning exactly once; cached reads and writes are priced separately. Excludes evaluator calls, superseded runs, failed transport overhead, subscription payments and tax. Historical cost_usd storage is USD/case × 100; the displayed value divides by 100. Kimi has a separate estimated_cost_usd value (also stored ×100), recounted with its official tokenizer; it is displayed in the same currency format, with its estimated basis explained in the table footnote. Actual cost_usd remains null.",
   "score_source": {
     "id": "p3d-assembly100-seven-models-20260910-001900",
     "sha256": "de9fa98ee7d38e72fbf81cd7f6602c161a1d7580d7446a19cce0c1970840581e"
@@ -51,7 +51,7 @@
       "Score",
       "USD / case"
     ],
-    "note": "100 assemblies in CadQuery and OpenSCAD. API failures are excluded; invalid outputs receive worst scores. Score averages the four unrounded Average metrics × 100; missing evaluations use available per-metric results. USD/case includes generation, correction and reasoning at official API rates (Sep 10, 2026), averaged equally across formats; evaluation costs are excluded. Kimi (≈) is estimated from saved text with its official tokenizer, assuming uncached input and 1024×1024 images; other costs use recorded usage."
+    "note": "100 assemblies in CadQuery and OpenSCAD. API failures are excluded; invalid outputs receive worst scores. Score averages the four unrounded Average metrics × 100; missing evaluations use available per-metric results. USD/case includes generation, correction and reasoning at official API rates (Sep 10, 2026), averaged equally across formats; evaluation costs are excluded. Kimi is estimated from saved text with its official tokenizer, assuming uncached input and 1024×1024 images; other costs use recorded usage."
   },
   "rows": [
     {
