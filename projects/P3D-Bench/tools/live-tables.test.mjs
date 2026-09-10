@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { buildAssemblyTable, keepMissingCostsLast, readLiveTables, replaceLiveTable } from "./live-tables.mjs";
+import { buildAssemblyTable, keepMissingCostsLast, supportEstimatedCosts, readLiveTables, replaceLiveTable } from "./live-tables.mjs";
 
 const summary = JSON.parse(readFileSync(new URL("../live-assembly-summary.json", import.meta.url)));
 const assembly = buildAssemblyTable(summary);
@@ -15,7 +15,7 @@ test("publish exactly the seven measured models and precise scores", () => {
   assert.deepEqual(assembly.rows.map((row) => row.model), ["GPT-6 Astra", "Claude Opus 5", "Gemini 3.8 Flash", "Grok 4.6", "Kimi K3", "Qwen 3.8 Max", "GLM 5.3 Flash"]);
   assert.deepEqual(assembly.rows.map((row) => row.cells.split(" ").at(-2)), ["75.18", "69.99", "68.61", "67.12", "66.82", "65.97", "65.82"]);
   assert(assembly.rows.every((row) => row.cells.split(" ").length === 17));
-  assert.deepEqual(assembly.rows.map((row) => row.cells.split(" ").at(-1)), ["$1.315", "$0.995", "$0.158", "$0.305", "-", "$0.121", "$0.034"]);
+  assert.deepEqual(assembly.rows.map((row) => row.cells.split(" ").at(-1)), ["$1.315", "$0.995", "$0.158", "$0.305", "≈$0.575", "$0.121", "$0.034"]);
   assert.deepEqual(summary.rows[0].coverage, { total: 200, tested: 183, valid: 182, invalid: 1, api_unrun: 17 });
 });
 
@@ -76,4 +76,18 @@ test("missing costs stay last in either sorting direction", () => {
   }
   assert.equal(keepMissingCostsLast(comparator), comparator);
   assert.throws(() => keepMissingCostsLast("unrelated comparator"), /anchor changed/);
+});
+
+test("estimated Kimi cost stays visibly distinct and sorts numerically", () => {
+  const kimi = summary.rows.find((row) => row.model_id === "kimi_k3");
+  assert.equal(kimi.cost_usd, null);
+  assert.equal(kimi.cost_estimate.formats.cadquery.generation_requests + kimi.cost_estimate.formats.openscad.generation_requests, 240);
+  const parse = new Function("token", supportEstimatedCosts('return Number(token.replace(/[$,!^]/g, ""));'));
+  assert.equal(parse("≈$0.575"), 0.575);
+  let bad = structuredClone(summary);
+  bad.rows.find((row) => row.model_id === "kimi_k3").estimated_cost_usd *= 2;
+  assert.throws(() => buildAssemblyTable(bad), /estimated cost formats/);
+  bad = structuredClone(summary);
+  bad.rows.find((row) => row.model_id === "kimi_k3").cost_estimate = null;
+  assert.throws(() => buildAssemblyTable(bad), /provenance/);
 });

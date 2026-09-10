@@ -5,7 +5,7 @@
   "score_definition": "100 × mean of unrounded Average Geo, Topo, Judge and Part; formats are equally weighted; Judge uses geometry and semantic axes.",
   "api_failure_policy": "Generation API failures are unrun and excluded; non-API invalid outputs receive worst scores. Missing evaluations retain the existing per-metric denominators.",
   "valid_definition": "Valid/tested per format; Average Valid is the equal-weight mean of both formats.",
-  "cost_definition": "Official API equivalent generation cost. Sum all selected initial/correction requests (at most three per tested case); include invalid cases; exclude API-unrun cases. Average the two format-specific per-tested-case means equally. Output includes reasoning exactly once; cached reads and writes are priced separately. Excludes evaluator calls, superseded runs, failed transport overhead, subscription payments and tax. Historical cost_usd storage is USD/case × 100; the displayed value divides by 100.",
+  "cost_definition": "Official API equivalent generation cost. Sum all selected initial/correction requests (at most three per tested case); include invalid cases; exclude API-unrun cases. Average the two format-specific per-tested-case means equally. Output includes reasoning exactly once; cached reads and writes are priced separately. Excludes evaluator calls, superseded runs, failed transport overhead, subscription payments and tax. Historical cost_usd storage is USD/case × 100; the displayed value divides by 100. Kimi has a separate estimated_cost_usd value (also stored ×100), recounted with its official tokenizer; it is displayed with ≈. Actual cost_usd remains null.",
   "score_source": {
     "id": "p3d-assembly100-seven-models-20260910-001900",
     "sha256": "de9fa98ee7d38e72fbf81cd7f6602c161a1d7580d7446a19cce0c1970840581e"
@@ -51,7 +51,7 @@
       "Score",
       "USD / case"
     ],
-    "note": "100 assemblies in CadQuery and OpenSCAD. API failures are excluded; invalid outputs receive worst scores. Score averages the four unrounded Average metrics × 100; missing evaluations use available per-metric results. USD/case uses actual generation tokens (including correction and reasoning) at official API rates checked Sep 10, 2026, averaging both formats equally. Evaluation costs are excluded. Kimi has no recorded generation usage (—)."
+    "note": "100 assemblies in CadQuery and OpenSCAD. API failures are excluded; invalid outputs receive worst scores. Score averages the four unrounded Average metrics × 100; missing evaluations use available per-metric results. USD/case includes generation, correction and reasoning at official API rates (Sep 10, 2026), averaged equally across formats; evaluation costs are excluded. Kimi (≈) is estimated from saved text with its official tokenizer, assuming uncached input and 1024×1024 images; other costs use recorded usage."
   },
   "rows": [
     {
@@ -154,7 +154,8 @@
             "usd_per_case": 0.8554426510416666
           }
         }
-      }
+      },
+      "estimated_cost_usd": null
     },
     {
       "model": "Claude Opus 5",
@@ -256,7 +257,8 @@
             "usd_per_case": 0.5250547
           }
         }
-      }
+      },
+      "estimated_cost_usd": null
     },
     {
       "model": "Gemini 3.8 Flash",
@@ -358,7 +360,8 @@
             "usd_per_case": 0.1173833175
           }
         }
-      }
+      },
+      "estimated_cost_usd": null
     },
     {
       "model": "Grok 4.6",
@@ -460,7 +463,8 @@
             "usd_per_case": 0.25299905376344084
           }
         }
-      }
+      },
+      "estimated_cost_usd": null
     },
     {
       "model": "Kimi K3",
@@ -469,7 +473,7 @@
       "metrics": "0.554 0.898 0.487 0.663 0.979 0.582 1.000 0.498 0.665 1.000 0.568 0.949 0.493 0.664 0.990",
       "score": 66.8249875,
       "cost_usd": null,
-      "usage_kind": "missing_generation_usage",
+      "usage_kind": "estimated_official_tokenizer",
       "formats": {
         "cadquery": {
           "metrics": {
@@ -549,6 +553,94 @@
             "total_usd": null,
             "usd_per_case": null
           }
+        }
+      },
+      "estimated_cost_usd": 57.5266678125,
+      "cost_estimate": {
+        "model_id": "kimi_k3",
+        "usage_kind": "estimated_official_tokenizer",
+        "source_full_results_sha256": "552f6bb4b79f3a8d34aed65308e559115464b46b2ef523eb9ef43125fd1be3d4",
+        "official_tokenizer_repository": "moonshotai/Kimi-K3",
+        "official_tokenizer_revision": "f831ab66814297da540d832a5235f8e904f29d06",
+        "tokenizer_files_sha256": {
+          "tiktoken.model": "b6c497a7469b33ced9c38afb1ad6e47f03f5e5dc05f15930799210ec050c5103",
+          "tokenization_kimi.py": "f28ea66e2d862a2a5814970b2ce40c2f7d8296ff09aed90a7e7def689b906944",
+          "tokenizer_config.json": "5d0803c94db9cd78763499e0956c95fd5a225c14a727e5a6cf5db3f96f010a6e",
+          "encoding_k3.py": "49ff03305fdc4be26867972788d36150b67f8a9e852e62bb7959d87482223676",
+          "preprocessor_config.json": "4be333605990c53a816e586dee9d5dd545afb7a59947c17f8f7ef26b4782668e",
+          "media_utils.py": "78403540328f9847d6b7ebc5c44eb2e6a752863de0afb7d0710728bb161dc60d"
+        },
+        "formats": {
+          "cadquery": {
+            "tested_cases": 96,
+            "generation_requests": 139,
+            "valid_cases": 94,
+            "token_totals_estimated": {
+              "input_tokens_estimated": 669014,
+              "input_tokens_image512": 528624,
+              "input_tokens_image1536": 899198,
+              "output_tokens_estimated": 4826339,
+              "reasoning_tokens_recounted": 4401072,
+              "answer_tokens_recounted": 423460
+            },
+            "total_usd_estimated": 74.402127,
+            "usd_per_case_estimated": 0.7750221562499999,
+            "all_input_cached_1024_usd_per_case": 0.7562061375,
+            "image512_uncached_usd_per_case": 0.77063496875,
+            "image1536_uncached_usd_per_case": 0.7822154062500001
+          },
+          "openscad": {
+            "tested_cases": 100,
+            "generation_requests": 101,
+            "valid_cases": 100,
+            "token_totals_estimated": {
+              "input_tokens_estimated": 461390,
+              "input_tokens_image512": 359380,
+              "input_tokens_image1536": 628646,
+              "output_tokens_estimated": 2411130,
+              "reasoning_tokens_recounted": 2208910,
+              "answer_tokens_recounted": 200907
+            },
+            "total_usd_estimated": 37.55112,
+            "usd_per_case_estimated": 0.3755112,
+            "all_input_cached_1024_usd_per_case": 0.36305367,
+            "image512_uncached_usd_per_case": 0.3724509,
+            "image1536_uncached_usd_per_case": 0.38052888
+          }
+        },
+        "usd_per_case_estimated": 0.575266678125,
+        "response_recovery_counts": {
+          "code_fence": 205,
+          "saved_code": 33,
+          "saved_code_with_unrecovered_response_text": 2
+        },
+        "response_chars_unrecovered": 17,
+        "assumptions": {
+          "image_size_pixels": [
+            1024,
+            1024
+          ],
+          "image_tokens_per_request": 1369,
+          "cached_input_tokens": 0,
+          "image_size_is_assumed": true,
+          "original_input_images_available": false,
+          "source": "Saved condition text, prior generated code, error feedback, historical system prompts and unchanged user/refine templates. Official K3 tokenizer and XTML framing recount saved reasoning and answer text.",
+          "limits": "Estimate, not API-reported usage or an invoice. Original full request bodies, images and cache-hit counters are unavailable. Two responses have 17 answer characters not reconstructed. Code fences restored where lengths match. Original API serialization or tokenizer revision may differ."
+        },
+        "official_pricing": {
+          "input_usd_per_million": 3,
+          "cached_input_usd_per_million": 0.3,
+          "output_usd_per_million": 15,
+          "checked_at": "2026-09-10",
+          "source": "https://platform.kimi.ai/docs/pricing/chat-k3",
+          "supporting_source": "https://www.kimi.ai/blog/kimi-k3"
+        },
+        "formula": "Mean of CadQuery/OpenSCAD per-tested-case generation costs; includes initial/correction and invalid cases, excludes API failed. Reasoning is counted exactly once.",
+        "benchmark_prompt_revision": "1a3b9e6",
+        "benchmark_source_sha256": {
+          "model/tasks.py": "e916afa3611757d6e7f645366a272337e8a06e0a8109239eeea3ca7b545f735b",
+          "model/cad_formats.py": "91a2dc070c829779a68df30dc95d253b6a9f12f9a895f8062b6801f8478d3ee7",
+          "model/llm/retry.py": "2bca49917c2de13424ae54f56d3251318710ab15a3fb95de82053faa4a0bc40f"
         }
       }
     },
@@ -652,7 +744,8 @@
             "usd_per_case": 0.0994479387755102
           }
         }
-      }
+      },
+      "estimated_cost_usd": null
     },
     {
       "model": "GLM 5.3 Flash",
@@ -754,12 +847,14 @@
             "usd_per_case": 0.02559781
           }
         }
-      }
+      },
+      "estimated_cost_usd": null
     }
   ],
   "cost_source": {
     "path": "assembly-cost-audit.json",
     "pricing_path": "assembly-api-pricing.json",
-    "checked_at": "2026-09-10"
+    "checked_at": "2026-09-10",
+    "kimi_estimate_path": "kimi-cost-estimate.json"
   }
 }

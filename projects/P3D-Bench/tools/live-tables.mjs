@@ -101,6 +101,14 @@ export function keepMissingCostsLast(input) {
   return input.replace(anchor, guard + anchor);
 }
 
+export function supportEstimatedCosts(input) {
+  const before = 'Number(token.replace(/[$,!^]/g, ""))';
+  const after = 'Number(token.replace(/[$,!^≈]/g, ""))';
+  if (input.includes(after)) return input;
+  if (input.split(before).length !== 2) throw new Error("cost value parser anchor changed");
+  return input.replace(before, after);
+}
+
 export function buildAssemblyTable(summary) {
   const expected = new Set(["gpt6_astra_local", "claude_opus5", "gemini38_flash", "grok46", "kimi_k3", "qwen38max", "glm53_flash"]);
   if (summary.schema_version !== "p3d-live-assembly-summary-v1" || summary.rows?.length !== expected.size) {
@@ -155,6 +163,27 @@ export function buildAssemblyTable(summary) {
       });
       if (Math.abs(row.cost_usd / 100 - (costs[0] + costs[1]) / 2) > 1e-10) throw new Error("Assembly cost formats must have equal weight");
     }
+    if (row.estimated_cost_usd != null) {
+      const estimate = row.cost_estimate;
+      if (row.model_id !== "kimi_k3" || row.cost_usd !== null || row.usage_kind !== "estimated_official_tokenizer"
+          || !Number.isFinite(row.estimated_cost_usd) || row.estimated_cost_usd < 0
+          || !estimate?.official_tokenizer_revision) throw new Error("estimated cost needs distinct provenance");
+      const means = ["cadquery", "openscad"].map((format) => {
+        const cost = estimate.formats[format];
+        if (cost.tested_cases !== row.formats[format].coverage.tested
+            || !Number.isFinite(cost.total_usd_estimated) || cost.total_usd_estimated < 0
+            || !Number.isFinite(cost.usd_per_case_estimated)
+            || Math.abs(cost.usd_per_case_estimated - cost.total_usd_estimated / cost.tested_cases) > 1e-10) {
+          throw new Error("estimated cost denominator is incorrect");
+        }
+        const tokens = cost.token_totals_estimated;
+        const rates = estimate.official_pricing;
+        const tokenCost = (tokens.input_tokens_estimated * rates.input_usd_per_million + tokens.output_tokens_estimated * rates.output_usd_per_million) / 1e6;
+        if (!Number.isFinite(tokenCost) || Math.abs(tokenCost - cost.total_usd_estimated) > 1e-8) throw new Error("estimated cost differs from token counts and rates");
+        return cost.usd_per_case_estimated;
+      });
+      if (Math.abs(row.estimated_cost_usd / 100 - (means[0] + means[1]) / 2) > 1e-10) throw new Error("estimated cost formats must have equal weight");
+    }
   }
   return {
     ...summary.table,
@@ -162,7 +191,7 @@ export function buildAssemblyTable(summary) {
       model: row.model,
       model_id: row.model_id,
       family: row.family,
-      cells: `${row.metrics} ${row.score.toFixed(2)} ${row.cost_usd === null ? "-" : `$${(row.cost_usd / 100).toFixed(3)}`}`,
+      cells: `${row.metrics} ${row.score.toFixed(2)} ${row.cost_usd !== null ? `$${(row.cost_usd / 100).toFixed(3)}` : row.estimated_cost_usd != null ? `≈$${(row.estimated_cost_usd / 100).toFixed(3)}` : "-"}`,
     })),
   };
 }

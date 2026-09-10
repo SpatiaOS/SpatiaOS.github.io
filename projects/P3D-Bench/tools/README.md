@@ -17,8 +17,37 @@ separately priced cache reads/writes. Invalid cases remain included; API-unrun
 cases are excluded. Each format's total cost is divided by its tested count, then
 the two format means are averaged equally. This is an API-equivalent generation
 cost, excluding evaluator calls, superseded runs, transport failures, subscription
-payments, and taxes. Kimi's original 240 generation responses have empty usage,
-so its cost remains `null` (an em dash). Assembly is displayed first.
+payments, and taxes. Kimi's original 240 generation responses have empty usage.
+Its actual cost remains `null`, but the separate `estimated_cost_usd` field
+publishes an explicitly marked **≈$0.575/case** estimate. Assembly is displayed first.
+
+Kimi's estimate recounts saved reasoning and code with its own official K3
+tokenizer, reconstructs initial/refine prompts from saved captions, previous
+code and errors, and uses the benchmark's historical system prompts. It includes
+196 initial calls and 44 correction calls. Images are assumed to be 1024×1024
+and input is priced with zero cache hits, because original image files and
+cache counters are unavailable. It is not API-reported usage or an invoice.
+`../kimi-cost-estimate.json` includes the pinned vocabulary hashes, assumptions,
+per-format counters and sensitivity to cache/image assumptions. It does not
+replace the actual-usage audit's missing fields.
+
+To reproduce this separate estimate, install `tiktoken` and download only the
+tokenizer/formatter files listed in `kimi-cost-estimate.json` from the pinned
+revision of [moonshotai/Kimi-K3](https://huggingface.co/moonshotai/Kimi-K3).
+Also save the model metadata as `model-info.json` (with its `sha` revision).
+Run:
+
+```bash
+python projects/P3D-Bench/tools/estimate-kimi-cost.py \
+  --tokenizer-dir /absolute/path/to/tokenizer-files \
+  --benchmark-repo /absolute/path/to/cadbenchmark \
+  --snapshot-directory /absolute/private/path/to/frozen-snapshot \
+  --output projects/P3D-Bench/kimi-cost-estimate.json \
+  --private-ledger /absolute/private/path/to/kimi-estimate-ledger.json
+```
+
+The `≈` marker is retained in rendering and ignored only when sorting numeric
+costs. Estimated values cannot be written into the audited actual-cost field.
 
 Official rates and source links live in `../assembly-api-pricing.json`; aggregate
 token counts and costs live in `../assembly-cost-audit.json`. The historical

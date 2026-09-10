@@ -694,7 +694,7 @@ function rankMetricRows(rows: ResultTableRow[], metricCount: number) {
 }
 
 function parseSortableValue(token: string) {
-  const value = Number(token.replace(/[$,!^]/g, ""));
+  const value = Number(token.replace(/[$,!^≈]/g, ""));
   return Number.isFinite(value) ? value : Number.POSITIVE_INFINITY;
 }
 

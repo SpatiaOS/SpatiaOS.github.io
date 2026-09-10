@@ -104,7 +104,7 @@ export const liveResultTables: ResultSubtable[] = [
       model: row.model,
       model_id: row.model_id,
       family: row.family,
-      cells: `${row.metrics} ${row.score.toFixed(2)} ${row.cost_usd === null ? "-" : "$" + (row.cost_usd / 100).toFixed(3)}`,
+      cells: `${row.metrics} ${row.score.toFixed(2)} ${row.cost_usd !== null ? "$" + (row.cost_usd / 100).toFixed(3) : row.estimated_cost_usd != null ? "≈$" + (row.estimated_cost_usd / 100).toFixed(3) : "-"}`,
     })),
   },
   {
