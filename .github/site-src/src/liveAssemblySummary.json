@@ -1,6 +1,6 @@
 {
   "schema_version": "p3d-live-assembly-summary-v1",
-  "updated_at": "2026-09-10T23:59:35+08:00",
+  "updated_at": "2026-09-11T00:42:14+08:00",
   "scope": "100 assemblies × CadQuery/OpenSCAD, 200 planned cases per model",
   "score_definition": "100 × mean of unrounded Average Geo, Topo, Judge and Part; formats are equally weighted; Judge uses geometry and semantic axes.",
   "api_failure_policy": "Generation API failures are unrun and excluded; non-API invalid outputs receive worst scores. Missing evaluations retain the existing per-metric denominators.",
@@ -851,6 +851,68 @@
       "estimated_cost_usd": null
     },
     {
+      "model": "DeepSeek V4.1 Flash",
+      "model_id": "deepseek41_flash",
+      "family": "deepseek",
+      "metrics": "0.541 0.913 0.457 0.621 0.968 0.563 0.990 0.473 0.609 0.990 0.552 0.951 0.465 0.615 0.979",
+      "score": 64.58497638888889,
+      "cost_usd": null,
+      "usage_kind": "not_yet_audited",
+      "formats": {
+        "cadquery": {
+          "metrics": {
+            "geom": 0.5413600000000001,
+            "topo": 0.9133270000000001,
+            "judge": 0.45666666666666667,
+            "part": 0.6207,
+            "valid": 0.9680851063829787
+          },
+          "coverage": {
+            "total": 100,
+            "api_unrun": 6,
+            "tested": 94,
+            "valid": 91,
+            "invalid": 3
+          }
+        },
+        "openscad": {
+          "metrics": {
+            "geom": 0.56312,
+            "topo": 0.9896466666666667,
+            "judge": 0.47277777777777785,
+            "part": 0.6092,
+            "valid": 0.98989898989899
+          },
+          "coverage": {
+            "total": 100,
+            "api_unrun": 1,
+            "tested": 99,
+            "valid": 98,
+            "invalid": 1
+          }
+        }
+      },
+      "average": {
+        "geom": 0.5522400000000001,
+        "topo": 0.9514868333333334,
+        "judge": 0.46472222222222226,
+        "part": 0.61495,
+        "valid": 0.9789920481409844
+      },
+      "coverage": {
+        "total": 200,
+        "tested": 193,
+        "valid": 189,
+        "invalid": 4,
+        "api_unrun": 7
+      },
+      "evaluation": {
+        "model_id": "google/gemini-3.8-flash",
+        "reasoning_effort": "high"
+      },
+      "score_source_sha256": "ed4f010d5fc6d3033284b828fff7db240c063e54267e75368701c8b2f5eec320"
+    },
+    {
       "model": "Doubao Seed 2.1 Pro",
       "model_id": "doubao_seed21",
       "family": "doubao",
@@ -990,6 +1052,13 @@
       ],
       "sha256": "1baaf2e8ec613d58d66c38cc4511a7516a6ba13c15f8d9a7bcc8dcb2e77b35da",
       "snapshot_at": "2026-09-10T18:17:28+08:00"
+    },
+    {
+      "models": [
+        "deepseek41_flash"
+      ],
+      "sha256": "ed4f010d5fc6d3033284b828fff7db240c063e54267e75368701c8b2f5eec320",
+      "snapshot_at": "2026-09-11T00:42:10+08:00"
     }
   ]
 }
