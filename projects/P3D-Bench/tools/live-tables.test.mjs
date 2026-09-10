@@ -11,12 +11,29 @@ const prefix = 'const paper=[{key:"assembly",rows:["paper results"]}],p2=';
 const suffix = ';function unchangedDemo(){return "demo"}';
 const fixture = `${prefix}[${textRaw},${oldAssembly}]${suffix}`;
 
-test("publish exactly the seven measured models and precise scores", () => {
-  assert.deepEqual(assembly.rows.map((row) => row.model), ["GPT-6 Astra", "Claude Opus 5", "Gemini 3.8 Flash", "Grok 4.6", "Kimi K3", "Qwen 3.8 Max", "GLM 5.3 Flash"]);
-  assert.deepEqual(assembly.rows.map((row) => row.cells.split(" ").at(-2)), ["75.18", "69.99", "68.61", "67.12", "66.82", "65.97", "65.82"]);
+test("preserve the original seven measured models, scores and audited costs", () => {
+  const original = assembly.rows.filter((row) => !["doubao_seed21", "mimo25"].includes(row.model_id));
+  assert.deepEqual(original.map((row) => row.model), ["GPT-6 Astra", "Claude Opus 5", "Gemini 3.8 Flash", "Grok 4.6", "Kimi K3", "Qwen 3.8 Max", "GLM 5.3 Flash"]);
+  assert.deepEqual(original.map((row) => row.cells.split(" ").at(-2)), ["75.18", "69.99", "68.61", "67.12", "66.82", "65.97", "65.82"]);
   assert(assembly.rows.every((row) => row.cells.split(" ").length === 17));
-  assert.deepEqual(assembly.rows.map((row) => row.cells.split(" ").at(-1)), ["$1.315", "$0.995", "$0.158", "$0.305", "$0.575", "$0.121", "$0.034"]);
-  assert.deepEqual(summary.rows[0].coverage, { total: 200, tested: 183, valid: 182, invalid: 1, api_unrun: 17 });
+  assert.deepEqual(original.map((row) => row.cells.split(" ").at(-1)), ["$1.315", "$0.995", "$0.158", "$0.305", "$0.575", "$0.121", "$0.034"]);
+  assert.deepEqual(summary.rows.find((row) => row.model_id === "gpt6_astra_local").coverage, { total: 200, tested: 183, valid: 182, invalid: 1, api_unrun: 17 });
+});
+
+test("accept completed additions only with the same evaluator and preserve original rows", () => {
+  const extended = structuredClone(summary);
+  extended.rows = extended.rows.filter((row) => !["doubao_seed21", "mimo25"].includes(row.model_id));
+  const row = structuredClone(extended.rows[0]);
+  Object.assign(row, { model_id: "mimo25", model: "MiMo-V2.5", family: "mimo", cost_usd: null,
+    usage_kind: "not_yet_audited", generation_cost: null, score_source_sha256: "frozen-source",
+    evaluation: { model_id: "google/gemini-3.8-flash", reasoning_effort: "high" } });
+  extended.rows.push(row);
+  assert.equal(buildAssemblyTable(extended).rows.length, 8);
+  row.evaluation.model_id = "old-evaluator";
+  assert.throws(() => buildAssemblyTable(extended), /shared evaluator/);
+  row.evaluation.model_id = "google/gemini-3.8-flash";
+  extended.rows = extended.rows.filter((entry) => entry.model_id !== "kimi_k3");
+  assert.throws(() => buildAssemblyTable(extended), /missing original/);
 });
 
 test("Assembly moves first while Text, Paper and demo bytes remain intact", () => {

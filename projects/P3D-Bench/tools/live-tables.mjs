@@ -111,15 +111,25 @@ export function supportEstimatedCosts(input) {
 
 export function buildAssemblyTable(summary) {
   const expected = new Set(["gpt6_astra_local", "claude_opus5", "gemini38_flash", "grok46", "kimi_k3", "qwen38max", "glm53_flash"]);
-  if (summary.schema_version !== "p3d-live-assembly-summary-v1" || summary.rows?.length !== expected.size) {
-    throw new Error("expected the seven-model Assembly summary");
+  const additions = new Set(["doubao_seed21", "mimo25"]);
+  const seen = new Set();
+  if (summary.schema_version !== "p3d-live-assembly-summary-v1" || !Array.isArray(summary.rows)
+      || summary.rows.length < expected.size || summary.rows.length > expected.size + additions.size) {
+    throw new Error("expected the measured Assembly cohort with completed additions");
   }
   if (summary.table?.key !== "assembly" || summary.table.metrics?.length !== 17
       || summary.table.groups?.reduce((sum, group) => sum + group.span, 0) !== 17) {
     throw new Error("unexpected Assembly table layout");
   }
   for (const row of summary.rows) {
-    if (!expected.delete(row.model_id)) throw new Error("unexpected or duplicate Assembly model");
+    if (seen.has(row.model_id) || (!expected.has(row.model_id) && !additions.has(row.model_id))) {
+      throw new Error("unexpected or duplicate Assembly model");
+    }
+    seen.add(row.model_id);
+    if (additions.has(row.model_id) && (row.evaluation?.model_id !== "google/gemini-3.8-flash"
+        || row.evaluation?.reasoning_effort !== "high" || !row.score_source_sha256)) {
+      throw new Error("new Assembly rows require the shared evaluator and frozen score provenance");
+    }
     const cells = row.metrics.trim().split(/\s+/).map(Number);
     if (cells.length !== 15 || cells.some((value) => !Number.isFinite(value) || value < 0 || value > 1)) {
       throw new Error(`${row.model}: expected 15 normalized metric cells`);
@@ -185,6 +195,7 @@ export function buildAssemblyTable(summary) {
       if (Math.abs(row.estimated_cost_usd / 100 - (means[0] + means[1]) / 2) > 1e-10) throw new Error("estimated cost formats must have equal weight");
     }
   }
+  if ([...expected].some((model) => !seen.has(model))) throw new Error("missing original Assembly model");
   return {
     ...summary.table,
     rows: [...summary.rows].sort((a, b) => b.score - a.score).map((row) => ({

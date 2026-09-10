@@ -8,7 +8,8 @@ node projects/P3D-Bench/tools/update-live-text.mjs
 node --test projects/P3D-Bench/tools/live-tables.test.mjs
 ```
 
-Assembly uses `../live-assembly-summary.json`: seven measured models, both formats,
+Assembly uses `../live-assembly-summary.json`: the original seven models plus
+completed Doubao Seed 2.1 Pro and MiMo-V2.5 rows when available, both formats,
 equal-weight averages, and scores computed from unrounded metrics. API failures
 are excluded from tested cases; invalid outputs remain in the score denominator.
 Costs use actual generation tokens at official API rates checked September 10,
@@ -21,6 +22,12 @@ payments, and taxes. Kimi's original 240 generation responses have empty usage.
 Its actual cost remains `null`, but the separate `estimated_cost_usd` field
 publishes **$0.575/case**, with its estimated basis explained in the table footnote.
 Assembly is displayed first.
+
+Additional rows require frozen score provenance and Gemini 3.8 Flash `high`
+for decomposition and judging. Each format must contain the same 100-case scope;
+generation API failures remain excluded. New rows display `-` for cost until
+their generation usage is audited. Adding rows preserves the original seven
+rows and their existing cost audits.
 
 Kimi's estimate recounts saved reasoning and code with its own official K3
 tokenizer, reconstructs initial/refine prompts from saved captions, previous
