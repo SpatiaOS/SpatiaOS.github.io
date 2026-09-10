@@ -1,2 +1,3 @@
 # Generated Three.js shader strings preserve upstream whitespace.
 projects/P3D-Bench/self-test/assets/three.module-*.js whitespace=-trailing-space,-space-before-tab
+projects/P3D-Bench/assets/index-live-assembly-*.js whitespace=-trailing-space,-space-before-tab

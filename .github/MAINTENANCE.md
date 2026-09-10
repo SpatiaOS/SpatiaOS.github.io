@@ -24,7 +24,8 @@
 站点是"构建产物 + 受限数据更新器"，仓库内自带全部所需文件，不需要外部源码工程：
 
 - `projects/P3D-Bench/live-text-summary.json` / `live-assembly-summary.json` —— 榜单数据（分数、成本）
-- `projects/P3D-Bench/tools/update-live-text.mjs` —— 只替换 active bundle 的 Live Text 表；Paper、Assembly、demo 和页面其余部分保持不变
+- `projects/P3D-Bench/tools/update-live-text.mjs` —— 只替换 active bundle 的 Live Text 表，保留 Assembly 在前的顺序
+- `projects/P3D-Bench/tools/update-live-assembly.mjs` —— 替换 Live Assembly 表并置于 Text 之前；校验七个模型、计分和 API 排除口径
 - `projects/P3D-Bench/demo/manifest.json` —— 论文标题、作者、**摘要**、链接、案例清单（页面运行时 fetch）
 
 常见改动：
@@ -33,7 +34,8 @@
 | --- | --- |
 | 摘要 / 标题 / 作者 / 链接 | `demo/manifest.json`（前端 fetch 的就是它），同时改 bundle 内的 fallback 文案 |
 | Text 榜单数字、成本列 | `live-text-summary.json`，然后跑 `node projects/P3D-Bench/tools/update-live-text.mjs` |
-| Assembly 榜单或页面结构 | 修改 `.github/site-src/` 后做完整页面回归；Text 更新器不会触碰这些内容 |
+| Assembly 榜单数字和模型 | `live-assembly-summary.json`，然后跑 `node projects/P3D-Bench/tools/update-live-assembly.mjs` |
+| 其他页面结构 | 修改 `.github/site-src/` 后做完整页面回归 |
 | 图片、网格、GT mesh | `demo/` 下对应资源 |
 
 改完 push 到 `main`，Actions 自动部署，约 1 分钟生效。
@@ -58,7 +60,9 @@
 3. 快照里 `src/main.tsx` 的 fallback 摘要与本仓库 `demo/manifest.json` 可能不同步；
    **以本仓库的 `demo/manifest.json` 为准**（页面运行时读的是它，且已移除旧的 project page 那句）。
 
-Text 数值更新器自动读取 `index.html` 当前 active bundle，并对 Assembly 及其后内容做字节级保护，不再依赖固定的历史 bundle 文件名。
+两个数值更新器按表格 key 定位当前 active bundle，保留未更新表格和非榜单内容的字节，并将 JSON 同步到源码快照。Assembly 排在 Text 前；后续更新 Text 不会重排 Assembly。数值更新不以源码开发构建覆盖线上 Paper、demo 等后续维护内容。
+
+当前 Assembly 使用 2026-09-10 的七模型评测结果，总分两位小数，API failed 不计入 tested 或 invalid。成本尚未核验，显示“—”。仅保留大写 `projects/P3D-Bench/`；旧的小写跳转目录已按维护者要求删除。
 
 ## 缓存
 

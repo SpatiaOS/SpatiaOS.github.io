@@ -2,10 +2,10 @@
 // Update only the active Live Text-to-3D table. Paper, Assembly, demos,
 // navigation, sections, styles, and media remain byte-identical.
 
-import { createHash } from "node:crypto";
 import { readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { readActiveBundle, replaceLiveTable, writeActiveBundle } from "./live-tables.mjs";
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const summaryPath = join(root, "live-text-summary.json");
@@ -60,30 +60,8 @@ const textTable = {
   note: "Scores use the fixed 100-case subset; costs are normalized per case across the four evaluation settings. Updated as evaluations complete.",
 };
 
-const indexHtml = readFileSync(indexPath, "utf8");
-const scriptMatch = indexHtml.match(/assets\/(index[^"']+\.js)/);
-if (!scriptMatch) throw new Error("active application bundle not found");
-const inputName = scriptMatch[1];
-const inputPath = join(root, "assets", inputName);
-const input = readFileSync(inputPath, "utf8");
-const liveStart = input.indexOf(",p2=[");
-const textStart = liveStart + ",p2=[".length;
-const assemblyStart = input.indexOf('{key:"assembly",title:"Assembly-3D"', textStart);
-if (liveStart < 0 || assemblyStart < 0 || input[assemblyStart - 1] !== ",") {
-  throw new Error("live leaderboard anchors not found");
-}
-
-const patched = input.slice(0, textStart) + JSON.stringify(textTable) + "," + input.slice(assemblyStart);
-if (patched.slice(0, textStart) !== input.slice(0, textStart)) throw new Error("prefix drift");
-const patchedAssemblyStart = patched.indexOf(
-  '{key:"assembly",title:"Assembly-3D"',
-  textStart,
-);
-if (patchedAssemblyStart < 0 || patched.slice(patchedAssemblyStart) !== input.slice(assemblyStart)) {
-  throw new Error("Assembly or later bundle content drift");
-}
-const outputHash = createHash("sha256").update(patched).digest("hex").slice(0, 8);
-const outputName = `index-live-text-${outputHash}.js`;
-writeFileSync(join(root, "assets", outputName), patched);
-writeFileSync(indexPath, indexHtml.replace(scriptMatch[1], outputName));
-console.log(`updated Live Text only: ${inputName} -> ${outputName}`);
+const original = readActiveBundle(root);
+const patched = replaceLiveTable(original.input, textTable);
+const outputName = writeActiveBundle(root, original, patched, "text");
+writeFileSync(join(root, "../../.github/site-src/src/liveTextSummary.json"), readFileSync(summaryPath, "utf8"));
+console.log(`updated Live Text only: ${original.name} -> ${outputName}`);

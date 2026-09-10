@@ -640,6 +640,7 @@ function formatPriority(formatName: string) {
 
 const modelFamilies: Record<string, ModelFamilyStyle> = {
   openai: { color: "#202123", icon: "icons/src/openai.svg" },
+  grok: { color: "#202123", icon: "icons/src/grok.svg" },
   gemini: { color: "#14B86A", icon: "icons/src/gemini-color.svg" },
   claude: { color: "#D97757", icon: "icons/src/claude-color.svg" },
   fable: { color: "#D97757", icon: "icons/src/claude-color.svg" },
