@@ -1,11 +1,11 @@
 {
   "schema_version": "p3d-live-assembly-summary-v1",
-  "updated_at": "2026-09-10T18:17:32+08:00",
+  "updated_at": "2026-09-10T23:59:35+08:00",
   "scope": "100 assemblies × CadQuery/OpenSCAD, 200 planned cases per model",
   "score_definition": "100 × mean of unrounded Average Geo, Topo, Judge and Part; formats are equally weighted; Judge uses geometry and semantic axes.",
   "api_failure_policy": "Generation API failures are unrun and excluded; non-API invalid outputs receive worst scores. Missing evaluations retain the existing per-metric denominators.",
   "valid_definition": "Valid/tested per format; Average Valid is the equal-weight mean of both formats.",
-  "cost_definition": "Official API equivalent generation cost. Sum all selected initial/correction requests (at most three per tested case); include invalid cases; exclude API-unrun cases. Average the two format-specific per-tested-case means equally. Output includes reasoning exactly once; cached reads and writes are priced separately. Excludes evaluator calls, superseded runs, failed transport overhead, subscription payments and tax. Historical cost_usd storage is USD/case × 100; the displayed value divides by 100. Kimi has a separate estimated_cost_usd value (also stored ×100), recounted with its official tokenizer; it is displayed in the same currency format, with its estimated basis explained in the table footnote. Actual cost_usd remains null.",
+  "cost_definition": "Official API equivalent generation cost. Sum all selected initial/correction requests (at most three per tested case); include invalid cases; exclude API-unrun cases. Average the two format-specific per-tested-case means equally. Output includes reasoning exactly once; cached reads and writes are priced separately. Excludes evaluator calls, superseded runs, failed transport overhead, subscription payments and tax. Historical cost_usd storage is USD/case × 100; the displayed value divides by 100. Kimi has a separate estimated_cost_usd value (also stored ×100), recounted with its official tokenizer; it is displayed in the same currency format, with its estimated basis explained in the table footnote. Actual cost_usd remains null. Doubao uses official CNY rates converted at 6.7766 CNY/USD (Sep 10, 2026).",
   "score_source": {
     "id": "p3d-assembly100-seven-models-20260910-001900",
     "sha256": "de9fa98ee7d38e72fbf81cd7f6602c161a1d7580d7446a19cce0c1970840581e"
@@ -51,7 +51,7 @@
       "Score",
       "USD / case"
     ],
-    "note": "100 assemblies in CadQuery and OpenSCAD. API failures are excluded; invalid outputs receive worst scores. Score averages the four unrounded Average metrics × 100; missing evaluations use available per-metric results. USD/case includes generation, correction and reasoning at official API rates (Sep 10, 2026), averaged equally across formats; evaluation costs are excluded. Kimi is estimated from saved text with its official tokenizer, assuming uncached input and 1024×1024 images; other costs use recorded usage."
+    "note": "100 assemblies in CadQuery and OpenSCAD. API failures are excluded; invalid outputs receive worst scores. Score averages the four unrounded Average metrics × 100; missing evaluations use available per-metric results. USD/case includes generation, correction and reasoning at official API rates (Sep 10, 2026), averaged equally across formats; evaluation costs are excluded. Kimi is estimated from saved text with its official tokenizer, assuming uncached input and 1024×1024 images; other costs use recorded usage. Doubao uses official CNY rates converted at 6.7766 CNY/USD (Sep 10, 2026)."
   },
   "rows": [
     {
@@ -856,8 +856,8 @@
       "family": "doubao",
       "metrics": "0.206 0.393 0.168 0.221 0.410 0.499 0.980 0.391 0.554 0.980 0.352 0.686 0.279 0.388 0.695",
       "score": 42.63798333333333,
-      "cost_usd": null,
-      "usage_kind": "not_yet_audited",
+      "cost_usd": 28.508027742525748,
+      "usage_kind": "actual_tokens_official_api_rates",
       "formats": {
         "cadquery": {
           "metrics": {
@@ -910,7 +910,71 @@
         "model_id": "google/gemini-3.8-flash",
         "reasoning_effort": "high"
       },
-      "score_source_sha256": "1baaf2e8ec613d58d66c38cc4511a7516a6ba13c15f8d9a7bcc8dcb2e77b35da"
+      "score_source_sha256": "1baaf2e8ec613d58d66c38cc4511a7516a6ba13c15f8d9a7bcc8dcb2e77b35da",
+      "generation_cost": {
+        "model_id": "doubao_seed21",
+        "model": "Doubao Seed 2.1 Pro",
+        "usd_per_case": 0.2850802774252575,
+        "usage_kind": "actual_tokens_official_api_rates",
+        "formats": {
+          "cadquery": {
+            "tested_cases": 100,
+            "api_unrun": 0,
+            "valid_cases": 41,
+            "invalid_cases": 59,
+            "cases_with_complete_usage": 100,
+            "generation_requests": 254,
+            "requests_without_usage": 0,
+            "histories_recovered_from_attempt_files": 0,
+            "token_totals": {
+              "input_tokens": 1507741,
+              "cached_input_tokens": 420895,
+              "cache_write_tokens": 0,
+              "output_tokens": 8304251,
+              "reasoning_tokens": 7491938
+            },
+            "max_request_input_tokens": 13944,
+            "total_usd": 37.7997343800726,
+            "usd_per_case": 0.377997343800726
+          },
+          "openscad": {
+            "tested_cases": 100,
+            "api_unrun": 0,
+            "valid_cases": 98,
+            "invalid_cases": 2,
+            "cases_with_complete_usage": 100,
+            "generation_requests": 115,
+            "requests_without_usage": 0,
+            "histories_recovered_from_attempt_files": 0,
+            "token_totals": {
+              "input_tokens": 587874,
+              "cached_input_tokens": 61913,
+              "cache_write_tokens": 0,
+              "output_tokens": 4233042,
+              "reasoning_tokens": 3942627
+            },
+            "max_request_input_tokens": 11179,
+            "total_usd": 19.2163211049789,
+            "usd_per_case": 0.19216321104978898
+          }
+        },
+        "score_source": {
+          "id": "doubao-seed21-gemini38-assembly100-20260910",
+          "sha256": "1baaf2e8ec613d58d66c38cc4511a7516a6ba13c15f8d9a7bcc8dcb2e77b35da"
+        },
+        "full_results_sha256": "9fd686425d521e8399ad21ca87a41a18328bcb38b4f13e30559caf36c4f1a764",
+        "native_currency": "CNY",
+        "total_cny_by_format": {
+          "cadquery": "256.15368",
+          "openscad": "130.2213216"
+        },
+        "currency_conversion": {
+          "cny_per_usd": "6.7766",
+          "date": "2026-09-10",
+          "source": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do",
+          "source_usd_100_in_cny": "677.66"
+        }
+      }
     }
   ],
   "cost_source": {

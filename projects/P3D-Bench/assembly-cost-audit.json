@@ -332,6 +332,81 @@
           "usd_per_case": 0.02559781
         }
       }
+    },
+    {
+      "model_id": "doubao_seed21",
+      "model": "Doubao Seed 2.1 Pro",
+      "usd_per_case": 0.2850802774252575,
+      "usage_kind": "actual_tokens_official_api_rates",
+      "formats": {
+        "cadquery": {
+          "tested_cases": 100,
+          "api_unrun": 0,
+          "valid_cases": 41,
+          "invalid_cases": 59,
+          "cases_with_complete_usage": 100,
+          "generation_requests": 254,
+          "requests_without_usage": 0,
+          "histories_recovered_from_attempt_files": 0,
+          "token_totals": {
+            "input_tokens": 1507741,
+            "cached_input_tokens": 420895,
+            "cache_write_tokens": 0,
+            "output_tokens": 8304251,
+            "reasoning_tokens": 7491938
+          },
+          "max_request_input_tokens": 13944,
+          "total_usd": 37.7997343800726,
+          "usd_per_case": 0.377997343800726
+        },
+        "openscad": {
+          "tested_cases": 100,
+          "api_unrun": 0,
+          "valid_cases": 98,
+          "invalid_cases": 2,
+          "cases_with_complete_usage": 100,
+          "generation_requests": 115,
+          "requests_without_usage": 0,
+          "histories_recovered_from_attempt_files": 0,
+          "token_totals": {
+            "input_tokens": 587874,
+            "cached_input_tokens": 61913,
+            "cache_write_tokens": 0,
+            "output_tokens": 4233042,
+            "reasoning_tokens": 3942627
+          },
+          "max_request_input_tokens": 11179,
+          "total_usd": 19.2163211049789,
+          "usd_per_case": 0.19216321104978898
+        }
+      },
+      "score_source": {
+        "id": "doubao-seed21-gemini38-assembly100-20260910",
+        "sha256": "1baaf2e8ec613d58d66c38cc4511a7516a6ba13c15f8d9a7bcc8dcb2e77b35da"
+      },
+      "full_results_sha256": "9fd686425d521e8399ad21ca87a41a18328bcb38b4f13e30559caf36c4f1a764",
+      "native_currency": "CNY",
+      "total_cny_by_format": {
+        "cadquery": "256.15368",
+        "openscad": "130.2213216"
+      },
+      "currency_conversion": {
+        "cny_per_usd": "6.7766",
+        "date": "2026-09-10",
+        "source": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do",
+        "source_usd_100_in_cny": "677.66"
+      }
+    }
+  ],
+  "additional_score_sources": [
+    {
+      "model_id": "doubao_seed21",
+      "score_source": {
+        "id": "doubao-seed21-gemini38-assembly100-20260910",
+        "sha256": "1baaf2e8ec613d58d66c38cc4511a7516a6ba13c15f8d9a7bcc8dcb2e77b35da"
+      },
+      "full_results_sha256": "9fd686425d521e8399ad21ca87a41a18328bcb38b4f13e30559caf36c4f1a764",
+      "checked_at": "2026-09-10T23:59:35+08:00"
     }
   ]
 }

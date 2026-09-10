@@ -29,6 +29,17 @@ generation API failures remain excluded. New rows display `-` for cost until
 their generation usage is audited. Adding rows preserves the original seven
 rows and their existing cost audits.
 
+Doubao Seed 2.1 Pro now has complete recorded usage for all 200 tested outputs:
+254 CadQuery requests and 115 OpenSCAD requests, including corrections and
+invalid outputs. Its API-equivalent generation cost is **$0.285/case** (unrounded
+$0.2850802774252575), with the two formats weighted equally. Official Volcengine
+rates are CNY 6/M uncached input, CNY 1.2/M cached input and CNY 30/M output;
+thinking is already included in output tokens. The largest request input was
+13,944 tokens, within the quoted 256k tier. Currency conversion uses the official
+September 10, 2026 central parity rate of CNY 6.7766/USD. The pricing catalog
+includes both original CNY rates and the FX source; the cost audit records this
+row's own frozen score source while preserving the prior seven-model audit.
+
 Kimi's estimate recounts saved reasoning and code with its own official K3
 tokenizer, reconstructs initial/refine prompts from saved captions, previous
 code and errors, and uses the benchmark's historical system prompts. It includes
