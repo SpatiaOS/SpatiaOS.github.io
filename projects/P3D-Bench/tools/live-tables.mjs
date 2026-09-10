@@ -93,6 +93,14 @@ export function writeActiveBundle(root, original, patched, label) {
   return name;
 }
 
+export function keepMissingCostsLast(input) {
+  const anchor = '      const difference = sort.endsWith("asc") ? leftValue - rightValue : rightValue - leftValue;';
+  const guard = '      if (!Number.isFinite(leftValue) || !Number.isFinite(rightValue)) return Number.isFinite(leftValue) ? -1 : Number.isFinite(rightValue) ? 1 : left.index - right.index;\n';
+  if (input.includes(guard + anchor)) return input;
+  if (input.split(anchor).length !== 2) throw new Error("cost sort comparator anchor changed");
+  return input.replace(anchor, guard + anchor);
+}
+
 export function buildAssemblyTable(summary) {
   const expected = new Set(["gpt6_astra_local", "claude_opus5", "gemini38_flash", "grok46", "kimi_k3", "qwen38max", "glm53_flash"]);
   if (summary.schema_version !== "p3d-live-assembly-summary-v1" || summary.rows?.length !== expected.size) {
@@ -132,6 +140,21 @@ export function buildAssemblyTable(summary) {
     const score = ["geom", "topo", "judge", "part"].reduce((sum, metric) => sum + average[metric], 0) * 25;
     if (!Number.isFinite(score) || Math.abs(score - row.score) > 1e-8) throw new Error(`${row.model}: score does not match unrounded metrics`);
     if (row.cost_usd !== null && (!Number.isFinite(row.cost_usd) || row.cost_usd < 0)) throw new Error("invalid Assembly cost");
+    if (row.cost_usd !== null) {
+      if (row.usage_kind !== "actual_tokens_official_api_rates" || !row.generation_cost) throw new Error("Assembly cost needs audited token usage");
+      const costs = ["cadquery", "openscad"].map((format) => {
+        const cost = row.generation_cost.formats[format];
+        if (cost.cases_with_complete_usage !== row.formats[format].coverage.tested
+            || cost.tested_cases !== row.formats[format].coverage.tested
+            || !Number.isFinite(cost.total_usd) || cost.total_usd < 0
+            || !Number.isFinite(cost.usd_per_case) || cost.usd_per_case < 0
+            || Math.abs(cost.usd_per_case - cost.total_usd / cost.tested_cases) > 1e-10) {
+          throw new Error("Assembly cost usage coverage or denominator is incorrect");
+        }
+        return cost.usd_per_case;
+      });
+      if (Math.abs(row.cost_usd / 100 - (costs[0] + costs[1]) / 2) > 1e-10) throw new Error("Assembly cost formats must have equal weight");
+    }
   }
   return {
     ...summary.table,

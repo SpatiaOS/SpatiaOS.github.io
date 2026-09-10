@@ -1,0 +1,337 @@
+{
+  "schema_version": "p3d-assembly-generation-cost-v1",
+  "checked_at": "2026-09-10",
+  "score_source": {
+    "id": "p3d-assembly100-seven-models-20260910-001900",
+    "sha256": "de9fa98ee7d38e72fbf81cd7f6602c161a1d7580d7446a19cce0c1970840581e"
+  },
+  "full_results_sha256": "552f6bb4b79f3a8d34aed65308e559115464b46b2ef523eb9ef43125fd1be3d4",
+  "pricing_source": "assembly-api-pricing.json",
+  "definition": "Official API equivalent generation cost. Sum all selected initial/correction requests (at most three per tested case); include invalid cases; exclude API-unrun cases. Average the two format-specific per-tested-case means equally. Output includes reasoning exactly once; cached reads and writes are priced separately. Excludes evaluator calls, superseded runs, failed transport overhead, subscription payments and tax.",
+  "rows": [
+    {
+      "model_id": "gpt6_astra_local",
+      "model": "GPT-6 Astra",
+      "usd_per_case": 1.3146247335668102,
+      "usage_kind": "actual_tokens_official_api_rates",
+      "formats": {
+        "cadquery": {
+          "tested_cases": 87,
+          "api_unrun": 13,
+          "valid_cases": 86,
+          "invalid_cases": 1,
+          "cases_with_complete_usage": 87,
+          "generation_requests": 88,
+          "requests_without_usage": 0,
+          "histories_recovered_from_attempt_files": 0,
+          "token_totals": {
+            "input_tokens": 317980,
+            "cached_input_tokens": 14208,
+            "cache_write_tokens": 150506,
+            "output_tokens": 3017860,
+            "reasoning_tokens": 2626828
+          },
+          "max_request_input_tokens": 5953,
+          "total_usd": 154.321193,
+          "usd_per_case": 1.773806816091954
+        },
+        "openscad": {
+          "tested_cases": 96,
+          "api_unrun": 4,
+          "valid_cases": 96,
+          "invalid_cases": 0,
+          "cases_with_complete_usage": 96,
+          "generation_requests": 99,
+          "requests_without_usage": 0,
+          "histories_recovered_from_attempt_files": 0,
+          "token_totals": {
+            "input_tokens": 466128,
+            "cached_input_tokens": 51012,
+            "cache_write_tokens": 19929,
+            "output_tokens": 1557410,
+            "reasoning_tokens": 1193582
+          },
+          "max_request_input_tokens": 8000,
+          "total_usd": 82.1224945,
+          "usd_per_case": 0.8554426510416666
+        }
+      }
+    },
+    {
+      "model_id": "claude_opus5",
+      "model": "Claude Opus 5",
+      "usd_per_case": 0.9950250112903225,
+      "usage_kind": "actual_tokens_official_api_rates",
+      "formats": {
+        "cadquery": {
+          "tested_cases": 93,
+          "api_unrun": 7,
+          "valid_cases": 93,
+          "invalid_cases": 0,
+          "cases_with_complete_usage": 93,
+          "generation_requests": 103,
+          "requests_without_usage": 0,
+          "histories_recovered_from_attempt_files": 0,
+          "token_totals": {
+            "input_tokens": 565088,
+            "cached_input_tokens": 0,
+            "cache_write_tokens": 0,
+            "output_tokens": 5336765,
+            "reasoning_tokens": 4835752
+          },
+          "max_request_input_tokens": 15282,
+          "total_usd": 136.244565,
+          "usd_per_case": 1.4649953225806451
+        },
+        "openscad": {
+          "tested_cases": 100,
+          "api_unrun": 0,
+          "valid_cases": 100,
+          "invalid_cases": 0,
+          "cases_with_complete_usage": 100,
+          "generation_requests": 101,
+          "requests_without_usage": 0,
+          "histories_recovered_from_attempt_files": 1,
+          "token_totals": {
+            "input_tokens": 647219,
+            "cached_input_tokens": 0,
+            "cache_write_tokens": 0,
+            "output_tokens": 1970775,
+            "reasoning_tokens": 1562290
+          },
+          "max_request_input_tokens": 11923,
+          "total_usd": 52.50547,
+          "usd_per_case": 0.5250547
+        }
+      }
+    },
+    {
+      "model_id": "gemini38_flash",
+      "model": "Gemini 3.8 Flash",
+      "usd_per_case": 0.1582039512757732,
+      "usage_kind": "actual_tokens_official_api_rates",
+      "formats": {
+        "cadquery": {
+          "tested_cases": 97,
+          "api_unrun": 3,
+          "valid_cases": 95,
+          "invalid_cases": 2,
+          "cases_with_complete_usage": 97,
+          "generation_requests": 137,
+          "requests_without_usage": 0,
+          "histories_recovered_from_attempt_files": 2,
+          "token_totals": {
+            "input_tokens": 648088,
+            "cached_input_tokens": 0,
+            "cache_write_tokens": 0,
+            "output_tokens": 5018485,
+            "reasoning_tokens": 4497460
+          },
+          "max_request_input_tokens": 12007,
+          "total_usd": 19.30538475,
+          "usd_per_case": 0.19902458505154638
+        },
+        "openscad": {
+          "tested_cases": 100,
+          "api_unrun": 0,
+          "valid_cases": 100,
+          "invalid_cases": 0,
+          "cases_with_complete_usage": 100,
+          "generation_requests": 102,
+          "requests_without_usage": 0,
+          "histories_recovered_from_attempt_files": 2,
+          "token_totals": {
+            "input_tokens": 464759,
+            "cached_input_tokens": 0,
+            "cache_write_tokens": 0,
+            "output_tokens": 3037270,
+            "reasoning_tokens": 2658924
+          },
+          "max_request_input_tokens": 10529,
+          "total_usd": 11.73833175,
+          "usd_per_case": 0.1173833175
+        }
+      }
+    },
+    {
+      "model_id": "grok46",
+      "model": "Grok 4.6",
+      "usd_per_case": 0.304562864231118,
+      "usage_kind": "actual_tokens_official_api_rates",
+      "formats": {
+        "cadquery": {
+          "tested_cases": 83,
+          "api_unrun": 17,
+          "valid_cases": 83,
+          "invalid_cases": 0,
+          "cases_with_complete_usage": 83,
+          "generation_requests": 112,
+          "requests_without_usage": 0,
+          "histories_recovered_from_attempt_files": 1,
+          "token_totals": {
+            "input_tokens": 499905,
+            "cached_input_tokens": 8192,
+            "cache_write_tokens": 0,
+            "output_tokens": 4761832,
+            "reasoning_tokens": 4387949
+          },
+          "max_request_input_tokens": 15580,
+          "total_usd": 29.558514,
+          "usd_per_case": 0.35612667469879516
+        },
+        "openscad": {
+          "tested_cases": 93,
+          "api_unrun": 7,
+          "valid_cases": 93,
+          "invalid_cases": 0,
+          "cases_with_complete_usage": 93,
+          "generation_requests": 93,
+          "requests_without_usage": 0,
+          "histories_recovered_from_attempt_files": 1,
+          "token_totals": {
+            "input_tokens": 405388,
+            "cached_input_tokens": 11648,
+            "cache_write_tokens": 0,
+            "output_tokens": 3789268,
+            "reasoning_tokens": 3565143
+          },
+          "max_request_input_tokens": 5770,
+          "total_usd": 23.528912,
+          "usd_per_case": 0.25299905376344084
+        }
+      }
+    },
+    {
+      "model_id": "kimi_k3",
+      "model": "Kimi K3",
+      "usd_per_case": null,
+      "usage_kind": "missing_generation_usage",
+      "formats": {
+        "cadquery": {
+          "tested_cases": 96,
+          "api_unrun": 4,
+          "valid_cases": 94,
+          "invalid_cases": 2,
+          "cases_with_complete_usage": 0,
+          "generation_requests": 139,
+          "requests_without_usage": 139,
+          "histories_recovered_from_attempt_files": 0,
+          "token_totals": null,
+          "max_request_input_tokens": null,
+          "total_usd": null,
+          "usd_per_case": null
+        },
+        "openscad": {
+          "tested_cases": 100,
+          "api_unrun": 0,
+          "valid_cases": 100,
+          "invalid_cases": 0,
+          "cases_with_complete_usage": 0,
+          "generation_requests": 101,
+          "requests_without_usage": 101,
+          "histories_recovered_from_attempt_files": 0,
+          "token_totals": null,
+          "max_request_input_tokens": null,
+          "total_usd": null,
+          "usd_per_case": null
+        }
+      }
+    },
+    {
+      "model_id": "qwen38max",
+      "model": "Qwen 3.8 Max",
+      "usd_per_case": 0.12097770272108843,
+      "usage_kind": "actual_tokens_official_api_rates",
+      "formats": {
+        "cadquery": {
+          "tested_cases": 90,
+          "api_unrun": 10,
+          "valid_cases": 88,
+          "invalid_cases": 2,
+          "cases_with_complete_usage": 90,
+          "generation_requests": 126,
+          "requests_without_usage": 0,
+          "histories_recovered_from_attempt_files": 1,
+          "token_totals": {
+            "input_tokens": 544514,
+            "cached_input_tokens": 77824,
+            "cache_write_tokens": 0,
+            "output_tokens": 1978806,
+            "reasoning_tokens": 1657644
+          },
+          "max_request_input_tokens": 9534,
+          "total_usd": 12.825672,
+          "usd_per_case": 0.14250746666666667
+        },
+        "openscad": {
+          "tested_cases": 98,
+          "api_unrun": 2,
+          "valid_cases": 98,
+          "invalid_cases": 0,
+          "cases_with_complete_usage": 98,
+          "generation_requests": 105,
+          "requests_without_usage": 0,
+          "histories_recovered_from_attempt_files": 0,
+          "token_totals": {
+            "input_tokens": 475797,
+            "cached_input_tokens": 121216,
+            "cache_write_tokens": 0,
+            "output_tokens": 1501072,
+            "reasoning_tokens": 1319434
+          },
+          "max_request_input_tokens": 8407,
+          "total_usd": 9.745898,
+          "usd_per_case": 0.0994479387755102
+        }
+      }
+    },
+    {
+      "model_id": "glm53_flash",
+      "model": "GLM 5.3 Flash",
+      "usd_per_case": 0.03413413143678161,
+      "usage_kind": "actual_tokens_official_api_rates",
+      "formats": {
+        "cadquery": {
+          "tested_cases": 87,
+          "api_unrun": 13,
+          "valid_cases": 85,
+          "invalid_cases": 2,
+          "cases_with_complete_usage": 87,
+          "generation_requests": 100,
+          "requests_without_usage": 0,
+          "histories_recovered_from_attempt_files": 0,
+          "token_totals": {
+            "input_tokens": 428314,
+            "cached_input_tokens": 2560,
+            "cache_write_tokens": 0,
+            "output_tokens": 7296779,
+            "reasoning_tokens": 6976142
+          },
+          "max_request_input_tokens": 15777,
+          "total_usd": 3.7123294,
+          "usd_per_case": 0.04267045287356322
+        },
+        "openscad": {
+          "tested_cases": 93,
+          "api_unrun": 7,
+          "valid_cases": 93,
+          "invalid_cases": 0,
+          "cases_with_complete_usage": 93,
+          "generation_requests": 93,
+          "requests_without_usage": 0,
+          "histories_recovered_from_attempt_files": 1,
+          "token_totals": {
+            "input_tokens": 416567,
+            "cached_input_tokens": 13056,
+            "cache_write_tokens": 0,
+            "output_tokens": 4639356,
+            "reasoning_tokens": 4436439
+          },
+          "max_request_input_tokens": 6290,
+          "total_usd": 2.38059633,
+          "usd_per_case": 0.02559781
+        }
+      }
+    }
+  ]
+}

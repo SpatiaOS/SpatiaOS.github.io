@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { buildAssemblyTable, readLiveTables, replaceLiveTable } from "./live-tables.mjs";
+import { buildAssemblyTable, keepMissingCostsLast, readLiveTables, replaceLiveTable } from "./live-tables.mjs";
 
 const summary = JSON.parse(readFileSync(new URL("../live-assembly-summary.json", import.meta.url)));
 const assembly = buildAssemblyTable(summary);
@@ -14,7 +14,8 @@ const fixture = `${prefix}[${textRaw},${oldAssembly}]${suffix}`;
 test("publish exactly the seven measured models and precise scores", () => {
   assert.deepEqual(assembly.rows.map((row) => row.model), ["GPT-6 Astra", "Claude Opus 5", "Gemini 3.8 Flash", "Grok 4.6", "Kimi K3", "Qwen 3.8 Max", "GLM 5.3 Flash"]);
   assert.deepEqual(assembly.rows.map((row) => row.cells.split(" ").at(-2)), ["75.18", "69.99", "68.61", "67.12", "66.82", "65.97", "65.82"]);
-  assert(assembly.rows.every((row) => row.cells.split(" ").length === 17 && row.cells.endsWith(" -")));
+  assert(assembly.rows.every((row) => row.cells.split(" ").length === 17));
+  assert.deepEqual(assembly.rows.map((row) => row.cells.split(" ").at(-1)), ["$1.315", "$0.995", "$0.158", "$0.305", "-", "$0.121", "$0.034"]);
   assert.deepEqual(summary.rows[0].coverage, { total: 200, tested: 183, valid: 182, invalid: 1, api_unrun: 17 });
 });
 
@@ -51,4 +52,28 @@ test("reject stale scores, duplicated models and incorrect API denominators", ()
 test("reject changed bundle boundaries instead of patching another table", () => {
   assert.throws(() => readLiveTables(fixture.replace(",p2=", ",newName=")), /expected one/);
   assert.throws(() => readLiveTables(fixture.replace(oldAssembly, textRaw)), /duplicate/);
+});
+
+test("costs require complete usage and preserve equal format denominators", () => {
+  let invalid = structuredClone(summary);
+  invalid.rows[0].cost_usd *= 2;
+  assert.throws(() => buildAssemblyTable(invalid), /cost formats/);
+  invalid = structuredClone(summary);
+  invalid.rows[0].generation_cost.formats.cadquery.cases_with_complete_usage -= 1;
+  assert.throws(() => buildAssemblyTable(invalid), /coverage/);
+  invalid = structuredClone(summary);
+  invalid.rows.find((row) => row.model_id === "kimi_k3").cost_usd = 0;
+  assert.throws(() => buildAssemblyTable(invalid), /audited token/);
+});
+
+test("missing costs stay last in either sorting direction", () => {
+  const anchor = '      const difference = sort.endsWith("asc") ? leftValue - rightValue : rightValue - leftValue;';
+  const comparator = keepMissingCostsLast(`const leftValue=left.value,rightValue=right.value;\n${anchor}\nreturn difference || left.index-right.index;`);
+  const compare = new Function("left", "right", "sort", comparator);
+  for (const direction of ["cost-asc", "cost-desc"]) {
+    assert(compare({value:1,index:1},{value:Infinity,index:0},direction)<0);
+    assert(compare({value:Infinity,index:0},{value:1,index:1},direction)>0);
+  }
+  assert.equal(keepMissingCostsLast(comparator), comparator);
+  assert.throws(() => keepMissingCostsLast("unrelated comparator"), /anchor changed/);
 });

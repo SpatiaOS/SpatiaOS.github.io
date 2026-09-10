@@ -760,6 +760,7 @@ function ResultsSubtableTable({ subtable }: { subtable: ResultSubtable }) {
     .sort((left, right) => {
       const leftValue = parseSortableValue(left.row.cells.trim().split(/\s+/)[sortIndex]);
       const rightValue = parseSortableValue(right.row.cells.trim().split(/\s+/)[sortIndex]);
+      if (!Number.isFinite(leftValue) || !Number.isFinite(rightValue)) return Number.isFinite(leftValue) ? -1 : Number.isFinite(rightValue) ? 1 : left.index - right.index;
       const difference = sort.endsWith("asc") ? leftValue - rightValue : rightValue - leftValue;
       return difference || left.index - right.index;
     })

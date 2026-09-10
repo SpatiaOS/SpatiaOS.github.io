@@ -62,7 +62,11 @@
 
 两个数值更新器按表格 key 定位当前 active bundle，保留未更新表格和非榜单内容的字节，并将 JSON 同步到源码快照。Assembly 排在 Text 前；后续更新 Text 不会重排 Assembly。数值更新不以源码开发构建覆盖线上 Paper、demo 等后续维护内容。
 
-当前 Assembly 使用 2026-09-10 的七模型评测结果，总分两位小数，API failed 不计入 tested 或 invalid。成本尚未核验，显示“—”。仅保留大写 `projects/P3D-Bench/`；旧的小写跳转目录已按维护者要求删除。
+当前 Assembly 使用 2026-09-10 的七模型评测结果，总分两位小数，API failed 不计入 tested 或 invalid。六个模型成本已按实际生成 token 与官方 API 单价核验，包括所选结果的纠错重试、推理输出、缓存读写；CadQuery/OpenSCAD 各自按 tested 求均值，再等权平均。Kimi 原始 240 次生成请求没有 usage，成本显示“—”，不能填 0 或用其他模型 token 估算。评测、历史被替代运行、API 失败和订阅费不计入此生成成本。
+
+价格来源与日期在 `projects/P3D-Bench/assembly-api-pricing.json`；按格式统计的实际 token 和成本在 `assembly-cost-audit.json`。可用 `tools/calculate-assembly-costs.py` 从冻结分数快照重算，命令见 `tools/README.md`。逐请求私有审计文件包含本地路径，只保存在外部审计目录，不提交到公开仓库。GPT 使用标准 API 等值成本；GLM 使用官网标准价，不能直接拷贝 OpenRouter 折扣结算价。Qwen 使用 Singapore / International 对应快照价格；Gemini 使用截至 2026-12-31 的官方标准促销价。
+
+仅保留大写 `projects/P3D-Bench/`；旧的小写跳转目录已按维护者要求删除。
 
 ## 缓存
 
