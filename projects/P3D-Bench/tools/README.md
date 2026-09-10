@@ -9,7 +9,7 @@ node --test projects/P3D-Bench/tools/live-tables.test.mjs
 ```
 
 Assembly uses `../live-assembly-summary.json`: the original seven models plus
-completed Doubao Seed 2.1 Pro and MiMo-V2.5 rows when available, both formats,
+completed Doubao Seed 2.1 Pro, MiMo-V2.5 and DeepSeek V4.1 Flash rows when available, both formats,
 equal-weight averages, and scores computed from unrounded metrics. API failures
 are excluded from tested cases; invalid outputs remain in the score denominator.
 Costs use actual generation tokens at official API rates checked September 10,

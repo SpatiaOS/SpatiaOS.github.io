@@ -111,7 +111,7 @@ export function supportEstimatedCosts(input) {
 
 export function buildAssemblyTable(summary) {
   const expected = new Set(["gpt6_astra_local", "claude_opus5", "gemini38_flash", "grok46", "kimi_k3", "qwen38max", "glm53_flash"]);
-  const additions = new Set(["doubao_seed21", "mimo25"]);
+  const additions = new Set(["doubao_seed21", "mimo25", "deepseek41_flash"]);
   const seen = new Set();
   if (summary.schema_version !== "p3d-live-assembly-summary-v1" || !Array.isArray(summary.rows)
       || summary.rows.length < expected.size || summary.rows.length > expected.size + additions.size) {
