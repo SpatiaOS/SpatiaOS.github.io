@@ -41,22 +41,13 @@ function _2({ token, groupStart, summary }) {
 }
 
 function v2() {
-  const [view, setView] = Ze.useState("live");
-  const subtables = view === "paper" ? d2 : p2;
-  return D.jsxs("div", {
+  const subtables = [...p2].sort((left, right) => {
+    const order = ["assembly", "text", "image"];
+    return order.indexOf(left.key) - order.indexOf(right.key);
+  });
+  return D.jsx("div", {
     className: "results-tables",
-    children: [
-      D.jsxs("div", {
-        className: "results-view-toggle",
-        role: "tablist",
-        "aria-label": "Leaderboard version",
-        children: [
-          D.jsx("button", { type: "button", role: "tab", "aria-selected": view === "paper", className: view === "paper" ? "rv-tab active" : "rv-tab", onClick: () => setView("paper"), children: "Paper results" }),
-          D.jsx("button", { type: "button", role: "tab", "aria-selected": view === "live", className: view === "live" ? "rv-tab active" : "rv-tab", onClick: () => setView("live"), children: "Live leaderboard" }),
-        ],
-      }),
-      subtables.map((subtable) => D.jsx(x2, { sub: subtable }, `${view}-${subtable.key}`)),
-    ],
+    children: subtables.map((subtable) => D.jsx(x2, { sub: subtable }, subtable.key)),
   });
 }
 

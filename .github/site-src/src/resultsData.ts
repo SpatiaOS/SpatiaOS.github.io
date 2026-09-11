@@ -93,13 +93,15 @@ const textTable: ResultSubtable = {
 if (liveTextSummary.schema_version !== "p3d-live-text-summary-v1" || liveTextSummary.rows.length !== 17) {
   throw new Error("Invalid Text-to-3D live leaderboard summary");
 }
-if (liveAssemblySummary.schema_version !== "p3d-live-assembly-summary-v1" || liveAssemblySummary.rows.length !== 7) {
+if (liveAssemblySummary.schema_version !== "p3d-live-assembly-summary-v1"
+    || liveAssemblySummary.rows.length < 7 || liveAssemblySummary.rows.length > 10) {
   throw new Error("Invalid Assembly-3D live leaderboard summary");
 }
 
 export const liveResultTables: ResultSubtable[] = [
   {
     ...liveAssemblySummary.table,
+    note: "",
     rows: [...liveAssemblySummary.rows].sort((a, b) => b.score - a.score).map((row) => ({
       model: row.model,
       model_id: row.model_id,

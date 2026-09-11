@@ -646,7 +646,7 @@ const modelFamilies: Record<string, ModelFamilyStyle> = {
   fable: { color: "#D97757", icon: "icons/src/claude-color.svg" },
   kimi: { color: "#1783FF", icon: "icons/src/kimi-color.svg", tile: "#111619" },
   zai: { color: "#8E5CFB", icon: "icons/src/zai.svg" },
-  doubao: { color: "#00A6B8", icon: "icons/src/bytedance-color.svg" },
+  doubao: { color: "#00A6B8", icon: "icons/src/doubao-color.svg" },
   deepseek: { color: "#4D6BFE", icon: "icons/src/deepseek-color.svg" },
   qwen: { color: "#FF6003", icon: "icons/src/qwen-color.svg" },
   mimo: { color: "#FF6900", icon: "icons/src/xiaomimimo.svg", tile: "#111619", filter: "invert(1)" },
@@ -656,8 +656,8 @@ function MainFigures() {
   return (
     <div className="main-figures">
       <figure className="leaderboard-figure">
-        <a href="./figures/fig_tasks_grouped_bars.pdf" aria-label="Open leaderboard figure PDF">
-          <img src="./figures/fig_tasks_grouped_bars.svg" alt="Task overview: grouped bar scores across text, image and assembly tasks" />
+        <a href="./figures/fig_tasks_grouped_bars.pdf?v=iclr2027-46c89f3d83c3" aria-label="Open leaderboard figure PDF">
+          <img src="./figures/fig_tasks_grouped_bars.svg?v=iclr2027-46c89f3d83c3" alt="Task overview: Assembly-3D with updated models, followed by original Text-to-3D and Image-to-3D results" />
         </a>
       </figure>
     </div>
@@ -707,42 +707,35 @@ function ResultCell({ token, groupStart, summary }: { token: string; groupStart:
 }
 
 function ResultsTables() {
-  const [view, setView] = useState<"paper" | "live">(HAS_PAPER_SNAPSHOT ? "paper" : "live");
-  const [paperTables, setPaperTables] = useState<ResultSubtable[] | null>(null);
-  const [liveTables, setLiveTables] = useState<ResultSubtable[] | null>(null);
-  const [paperError, setPaperError] = useState("");
+  const [subtables, setSubtables] = useState<ResultSubtable[] | null>(null);
+  const [error, setError] = useState("");
 
   useEffect(() => {
-    if (INCLUDE_LIVE) {
-      import("./resultsData").then((module) => setLiveTables(module.liveResultTables));
-    }
-    if (!HAS_PAPER_SNAPSHOT) {
-      setPaperError("This build does not contain a verified paper snapshot.");
+    if (!INCLUDE_LIVE && !HAS_PAPER_SNAPSHOT) {
+      setError("This build does not contain leaderboard results.");
       return;
     }
-    loadPaperResultTables(releaseAsset("paper-snapshot.json"))
+    let active = true;
+    const results = INCLUDE_LIVE
+      ? import("./resultsData").then((module) => module.liveResultTables)
+      : loadPaperResultTables(releaseAsset("paper-snapshot.json"));
+    results
       .then((tables) => {
-        setPaperTables(tables);
-        setPaperError("");
+        if (!active) return;
+        const order = ["assembly", "text", "image"];
+        setSubtables([...tables].sort((a, b) => order.indexOf(a.key) - order.indexOf(b.key)));
       })
       .catch((error: unknown) => {
-        setPaperTables(null);
-        setPaperError(error instanceof Error ? error.message : "Paper snapshot validation failed.");
+        if (active) setError(error instanceof Error ? error.message : "Could not load leaderboard results.");
       });
+    return () => { active = false; };
   }, []);
 
-  const subtables = view === "paper" ? paperTables : liveTables;
   return (
     <div className="results-tables">
-      {INCLUDE_LIVE ? (
-        <div className="results-view-toggle" role="tablist" aria-label="Leaderboard version">
-          <button type="button" role="tab" aria-selected={view === "paper"} className={view === "paper" ? "rv-tab active" : "rv-tab"} onClick={() => setView("paper")}>Paper results</button>
-          <button type="button" role="tab" aria-selected={view === "live"} className={view === "live" ? "rv-tab active" : "rv-tab"} onClick={() => setView("live")}>Live leaderboard</button>
-        </div>
-      ) : null}
       {subtables
-        ? subtables.map((subtable) => <ResultsSubtableTable subtable={subtable} key={`${view}-${subtable.key}`} />)
-        : <Placeholder title="Paper results unavailable" text={paperError || "Verifying the paper snapshot…"} />}
+        ? subtables.map((subtable) => <ResultsSubtableTable subtable={subtable} key={subtable.key} />)
+        : <Placeholder title={error ? "Leaderboard unavailable" : "Loading leaderboard"} text={error || "Loading the latest results…"} />}
     </div>
   );
 }

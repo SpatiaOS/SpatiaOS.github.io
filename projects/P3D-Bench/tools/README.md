@@ -1,5 +1,15 @@
 # P3D-Bench static release tools
 
+The public page has one leaderboard, showing the current Assembly results
+first and the current Text results second. There is no Paper/Live switch.
+Keep `leaderboard-renderer.fragment.js` and the source `ResultsTables`
+component aligned with that presentation when patching the active bundle.
+The overview figure is the ICLR 2027 teaser: updated Assembly models, with
+the original Text/Image models retained as a transition and labeled in the
+figure. SVG, PDF and PNG copies must be synchronized together, and the SVG
+and PDF URLs versioned whenever that figure changes. Use the Doubao icon
+(`demo/icons/src/doubao-color.svg`) for the Doubao family.
+
 Run the updater for the leaderboard being changed:
 
 ```bash
