@@ -2,6 +2,9 @@
 
 线上地址：https://spatiaos.github.io/projects/P3D-Bench/
 
+2026-09-11 展示要求：Live Assembly 榜单下方不显示计分、计费、估算或汇率等长段说明。
+相关依据保留在审计 JSON 和 tools/README.md；后续补成本时不要重新加入页面页脚。
+
 ## 唯一来源
 
 站点内容 **只来自本仓库 `main` 分支**。`.github/workflows/pages.yml` 只 checkout 本仓库自身，

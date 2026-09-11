@@ -115,6 +115,25 @@
       },
       "note": "Official synchronous non-audio rates for inputs up to 256k tokens. Input includes image tokens; output already includes thinking. Recorded cached tokens use the cache-hit rate. No explicit cache storage was requested (Responses store=false); evaluator calls are excluded. CNY converted to USD at the 2026-09-10 official central parity rate.",
       "checked_at": "2026-09-10T23:59:35+08:00"
+    },
+    "deepseek41_flash": {
+      "model_ids": [
+        "deepseek-flash"
+      ],
+      "input": "0.3",
+      "cache_read": "0.006",
+      "cache_write": null,
+      "output": "1.2",
+      "max_input_at_rate": 1048576,
+      "source": "https://api-docs.deepseek.com/quick_start/pricing/",
+      "checked_at": "2026-09-11T11:18:15+08:00",
+      "rate_basis": "standard_peak",
+      "off_peak_rates": {
+        "input": "0.15",
+        "cache_read": "0.003",
+        "output": "0.6"
+      },
+      "note": "Official standard peak API-equivalent rates, applied uniformly so benchmark cost does not depend on when a run was scheduled. Off-peak prices are half these rates and are not applied. Input includes images; output already includes reasoning. Cache-hit counters are priced separately. Evaluator calls, API-unrun cases and interrupted transport overhead are excluded."
     }
   }
 }

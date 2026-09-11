@@ -98,7 +98,7 @@ test("missing costs stay last in either sorting direction", () => {
 test("Kimi cost retains estimated provenance and sorts numerically", () => {
   const kimi = summary.rows.find((row) => row.model_id === "kimi_k3");
   assert.equal(kimi.cost_usd, null);
-  assert(assembly.note.includes("Kimi is estimated"));
+  assert.equal(kimi.usage_kind, "estimated_official_tokenizer");
   assert.equal(kimi.cost_estimate.formats.cadquery.generation_requests + kimi.cost_estimate.formats.openscad.generation_requests, 240);
   const parse = new Function("token", supportEstimatedCosts('return Number(token.replace(/[$,!^]/g, ""));'));
   assert.equal(parse("≈$0.575"), 0.575);

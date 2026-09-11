@@ -396,6 +396,60 @@
         "source": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do",
         "source_usd_100_in_cny": "677.66"
       }
+    },
+    {
+      "model_id": "deepseek41_flash",
+      "model": "DeepSeek V4.1 Flash",
+      "usd_per_case": 0.07153787928207608,
+      "usage_kind": "actual_tokens_official_api_rates",
+      "formats": {
+        "cadquery": {
+          "tested_cases": 94,
+          "api_unrun": 6,
+          "valid_cases": 91,
+          "invalid_cases": 3,
+          "cases_with_complete_usage": 94,
+          "generation_requests": 136,
+          "requests_without_usage": 0,
+          "histories_recovered_from_attempt_files": 0,
+          "token_totals": {
+            "input_tokens": 550909,
+            "cached_input_tokens": 119679,
+            "cache_write_tokens": 0,
+            "output_tokens": 7334076,
+            "reasoning_tokens": 6895041
+          },
+          "max_request_input_tokens": 14034,
+          "total_usd": 8.930978274,
+          "usd_per_case": 0.09501040717021277
+        },
+        "openscad": {
+          "tested_cases": 99,
+          "api_unrun": 1,
+          "valid_cases": 98,
+          "invalid_cases": 1,
+          "cases_with_complete_usage": 99,
+          "generation_requests": 101,
+          "requests_without_usage": 0,
+          "histories_recovered_from_attempt_files": 0,
+          "token_totals": {
+            "input_tokens": 393697,
+            "cached_input_tokens": 136448,
+            "cache_write_tokens": 0,
+            "output_tokens": 3900397,
+            "reasoning_tokens": 3675661
+          },
+          "max_request_input_tokens": 11376,
+          "total_usd": 4.758469788,
+          "usd_per_case": 0.048065351393939394
+        }
+      },
+      "score_source": {
+        "id": "deepseek41-official-assembly100-retry28",
+        "sha256": "ed4f010d5fc6d3033284b828fff7db240c063e54267e75368701c8b2f5eec320"
+      },
+      "full_results_sha256": "c796c4c19adeba8ce2f2773890981004f57cb25318baa2b301362aba991b7f28",
+      "rate_basis": "standard_peak"
     }
   ],
   "additional_score_sources": [
@@ -407,6 +461,15 @@
       },
       "full_results_sha256": "9fd686425d521e8399ad21ca87a41a18328bcb38b4f13e30559caf36c4f1a764",
       "checked_at": "2026-09-10T23:59:35+08:00"
+    },
+    {
+      "model_id": "deepseek41_flash",
+      "score_source": {
+        "id": "deepseek41-official-assembly100-retry28",
+        "sha256": "ed4f010d5fc6d3033284b828fff7db240c063e54267e75368701c8b2f5eec320"
+      },
+      "full_results_sha256": "c796c4c19adeba8ce2f2773890981004f57cb25318baa2b301362aba991b7f28",
+      "checked_at": "2026-09-11T11:18:15+08:00"
     }
   ]
 }

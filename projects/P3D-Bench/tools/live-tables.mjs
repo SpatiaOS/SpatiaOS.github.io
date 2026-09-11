@@ -198,6 +198,8 @@ export function buildAssemblyTable(summary) {
   if ([...expected].some((model) => !seen.has(model))) throw new Error("missing original Assembly model");
   return {
     ...summary.table,
+    // The live Assembly table has no methodology footer; audits stay in JSON.
+    note: "",
     rows: [...summary.rows].sort((a, b) => b.score - a.score).map((row) => ({
       model: row.model,
       model_id: row.model_id,

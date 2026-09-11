@@ -1,6 +1,6 @@
 {
   "schema_version": "p3d-live-assembly-summary-v1",
-  "updated_at": "2026-09-11T00:42:14+08:00",
+  "updated_at": "2026-09-11T11:19:43+08:00",
   "scope": "100 assemblies × CadQuery/OpenSCAD, 200 planned cases per model",
   "score_definition": "100 × mean of unrounded Average Geo, Topo, Judge and Part; formats are equally weighted; Judge uses geometry and semantic axes.",
   "api_failure_policy": "Generation API failures are unrun and excluded; non-API invalid outputs receive worst scores. Missing evaluations retain the existing per-metric denominators.",
@@ -51,7 +51,7 @@
       "Score",
       "USD / case"
     ],
-    "note": "100 assemblies in CadQuery and OpenSCAD. API failures are excluded; invalid outputs receive worst scores. Score averages the four unrounded Average metrics × 100; missing evaluations use available per-metric results. USD/case includes generation, correction and reasoning at official API rates (Sep 10, 2026), averaged equally across formats; evaluation costs are excluded. Kimi is estimated from saved text with its official tokenizer, assuming uncached input and 1024×1024 images; other costs use recorded usage. Doubao uses official CNY rates converted at 6.7766 CNY/USD (Sep 10, 2026)."
+    "note": ""
   },
   "rows": [
     {
@@ -856,8 +856,8 @@
       "family": "deepseek",
       "metrics": "0.541 0.913 0.457 0.621 0.968 0.563 0.990 0.473 0.609 0.990 0.552 0.951 0.465 0.615 0.979",
       "score": 64.58497638888889,
-      "cost_usd": null,
-      "usage_kind": "not_yet_audited",
+      "cost_usd": 7.153787928207608,
+      "usage_kind": "actual_tokens_official_api_rates",
       "formats": {
         "cadquery": {
           "metrics": {
@@ -910,7 +910,61 @@
         "model_id": "google/gemini-3.8-flash",
         "reasoning_effort": "high"
       },
-      "score_source_sha256": "ed4f010d5fc6d3033284b828fff7db240c063e54267e75368701c8b2f5eec320"
+      "score_source_sha256": "ed4f010d5fc6d3033284b828fff7db240c063e54267e75368701c8b2f5eec320",
+      "generation_cost": {
+        "model_id": "deepseek41_flash",
+        "model": "DeepSeek V4.1 Flash",
+        "usd_per_case": 0.07153787928207608,
+        "usage_kind": "actual_tokens_official_api_rates",
+        "formats": {
+          "cadquery": {
+            "tested_cases": 94,
+            "api_unrun": 6,
+            "valid_cases": 91,
+            "invalid_cases": 3,
+            "cases_with_complete_usage": 94,
+            "generation_requests": 136,
+            "requests_without_usage": 0,
+            "histories_recovered_from_attempt_files": 0,
+            "token_totals": {
+              "input_tokens": 550909,
+              "cached_input_tokens": 119679,
+              "cache_write_tokens": 0,
+              "output_tokens": 7334076,
+              "reasoning_tokens": 6895041
+            },
+            "max_request_input_tokens": 14034,
+            "total_usd": 8.930978274,
+            "usd_per_case": 0.09501040717021277
+          },
+          "openscad": {
+            "tested_cases": 99,
+            "api_unrun": 1,
+            "valid_cases": 98,
+            "invalid_cases": 1,
+            "cases_with_complete_usage": 99,
+            "generation_requests": 101,
+            "requests_without_usage": 0,
+            "histories_recovered_from_attempt_files": 0,
+            "token_totals": {
+              "input_tokens": 393697,
+              "cached_input_tokens": 136448,
+              "cache_write_tokens": 0,
+              "output_tokens": 3900397,
+              "reasoning_tokens": 3675661
+            },
+            "max_request_input_tokens": 11376,
+            "total_usd": 4.758469788,
+            "usd_per_case": 0.048065351393939394
+          }
+        },
+        "score_source": {
+          "id": "deepseek41-official-assembly100-retry28",
+          "sha256": "ed4f010d5fc6d3033284b828fff7db240c063e54267e75368701c8b2f5eec320"
+        },
+        "full_results_sha256": "c796c4c19adeba8ce2f2773890981004f57cb25318baa2b301362aba991b7f28",
+        "rate_basis": "standard_peak"
+      }
     },
     {
       "model": "Doubao Seed 2.1 Pro",

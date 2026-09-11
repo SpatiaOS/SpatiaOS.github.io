@@ -29,6 +29,19 @@ generation API failures remain excluded. New rows display `-` for cost until
 their generation usage is audited. Adding rows preserves the original seven
 rows and their existing cost audits.
 
+Per the maintainer's September 11 display preference, the live Assembly table
+has no methodology footer. Keep explanations and source details in the audit
+JSON and maintenance documentation; do not add them back below the table.
+
+DeepSeek V4.1 Flash has complete recorded usage for 193 tested outputs (94
+CadQuery, 99 OpenSCAD), comprising 237 successful initial/correction requests.
+Seven API-unrun outputs are excluded consistently from score and cost. The
+published **$0.072/case** is the official standard peak API-equivalent cost:
+$0.30/M cache-miss input, $0.006/M cache-hit input and $1.20/M output. Off-peak
+discounts are not applied, so this comparable cost does not depend on run timing.
+The audit independently verifies DeepSeek's native cache-hit/miss counters,
+includes reasoning once, and records its own frozen score source.
+
 Doubao Seed 2.1 Pro now has complete recorded usage for all 200 tested outputs:
 254 CadQuery requests and 115 OpenSCAD requests, including corrections and
 invalid outputs. Its API-equivalent generation cost is **$0.285/case** (unrounded
