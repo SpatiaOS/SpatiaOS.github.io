@@ -2,7 +2,7 @@
   "schema_version": "p3d-live-assembly-summary-v1",
   "updated_at": "2026-09-11T11:19:43+08:00",
   "scope": "100 assemblies × CadQuery/OpenSCAD, 200 planned cases per model",
-  "score_definition": "100 × mean of unrounded Average Geo, Topo, Judge and Part; formats are equally weighted; Judge uses geometry and semantic axes.",
+  "score_definition": "100 × mean of unrounded Average Geo, Topo, Judge and Part; formats are equally weighted; Judge uses geometry, aesthetics and semantic axes.",
   "api_failure_policy": "Generation API failures are unrun and excluded; non-API invalid outputs receive worst scores. Missing evaluations retain the existing per-metric denominators.",
   "valid_definition": "Valid/tested per format; Average Valid is the equal-weight mean of both formats.",
   "cost_definition": "Official API equivalent generation cost. Sum all selected initial/correction requests (at most three per tested case); include invalid cases; exclude API-unrun cases. Average the two format-specific per-tested-case means equally. Output includes reasoning exactly once; cached reads and writes are priced separately. Excludes evaluator calls, superseded runs, failed transport overhead, subscription payments and tax. Historical cost_usd storage is USD/case × 100; the displayed value divides by 100. Kimi has a separate estimated_cost_usd value (also stored ×100), recounted with its official tokenizer; it is displayed in the same currency format, with its estimated basis explained in the table footnote. Actual cost_usd remains null. Doubao uses official CNY rates converted at 6.7766 CNY/USD (Sep 10, 2026).",
@@ -58,8 +58,8 @@
       "model": "GPT-6 Astra",
       "model_id": "gpt6_astra_local",
       "family": "openai",
-      "metrics": "0.731 0.916 0.588 0.746 0.989 0.724 1.000 0.602 0.708 1.000 0.728 0.958 0.595 0.727 0.994",
-      "score": 75.18044166666667,
+      "metrics": "0.731 0.916 0.591 0.746 0.989 0.724 1.000 0.606 0.708 1.000 0.728 0.958 0.599 0.727 0.994",
+      "score": 75.27303425925926,
       "cost_usd": 131.46247335668102,
       "usage_kind": "actual_tokens_official_api_rates",
       "formats": {
@@ -67,7 +67,7 @@
           "metrics": {
             "geom": 0.73148,
             "topo": 0.915543,
-            "judge": 0.5877777777777777,
+            "judge": 0.5911111111111111,
             "part": 0.7458,
             "valid": 0.9885057471264368
           },
@@ -77,13 +77,33 @@
             "tested": 87,
             "valid": 86,
             "invalid": 1
+          },
+          "judge_submetrics": {
+            "geometry": {
+              "raw_mean": 5.82,
+              "normalized": 0.5355555555555556,
+              "measured": 84,
+              "worst_filled": 1
+            },
+            "aesthetics": {
+              "raw_mean": 6.38,
+              "normalized": 0.5977777777777777,
+              "measured": 84,
+              "worst_filled": 1
+            },
+            "semantic": {
+              "raw_mean": 6.76,
+              "normalized": 0.64,
+              "measured": 84,
+              "worst_filled": 1
+            }
           }
         },
         "openscad": {
           "metrics": {
             "geom": 0.72412,
             "topo": 0.9998923333333334,
-            "judge": 0.6022222222222222,
+            "judge": 0.6062962962962963,
             "part": 0.7076,
             "valid": 1.0
           },
@@ -93,13 +113,33 @@
             "tested": 96,
             "valid": 96,
             "invalid": 0
+          },
+          "judge_submetrics": {
+            "geometry": {
+              "raw_mean": 5.85,
+              "normalized": 0.5388888888888889,
+              "measured": 95,
+              "worst_filled": 0
+            },
+            "aesthetics": {
+              "raw_mean": 6.53,
+              "normalized": 0.6144444444444445,
+              "measured": 95,
+              "worst_filled": 0
+            },
+            "semantic": {
+              "raw_mean": 6.99,
+              "normalized": 0.6655555555555556,
+              "measured": 95,
+              "worst_filled": 0
+            }
           }
         }
       },
       "average": {
         "geom": 0.7278,
         "topo": 0.9577176666666667,
-        "judge": 0.595,
+        "judge": 0.5987037037037037,
         "part": 0.7267,
         "valid": 0.9942528735632183
       },
@@ -161,8 +201,8 @@
       "model": "Claude Opus 5",
       "model_id": "claude_opus5",
       "family": "claude",
-      "metrics": "0.619 0.971 0.526 0.704 1.000 0.600 1.000 0.514 0.665 1.000 0.609 0.985 0.520 0.685 1.000",
-      "score": 69.98922083333333,
+      "metrics": "0.619 0.971 0.526 0.704 1.000 0.600 1.000 0.515 0.665 1.000 0.609 0.985 0.520 0.685 1.000",
+      "score": 69.9984800925926,
       "cost_usd": 99.50250112903225,
       "usage_kind": "actual_tokens_official_api_rates",
       "formats": {
@@ -180,13 +220,33 @@
             "tested": 93,
             "valid": 93,
             "invalid": 0
+          },
+          "judge_submetrics": {
+            "geometry": {
+              "raw_mean": 4.74,
+              "normalized": 0.41555555555555557,
+              "measured": 92,
+              "worst_filled": 0
+            },
+            "aesthetics": {
+              "raw_mean": 5.73,
+              "normalized": 0.5255555555555556,
+              "measured": 92,
+              "worst_filled": 0
+            },
+            "semantic": {
+              "raw_mean": 6.72,
+              "normalized": 0.6355555555555555,
+              "measured": 92,
+              "worst_filled": 0
+            }
           }
         },
         "openscad": {
           "metrics": {
             "geom": 0.59958,
             "topo": 0.99986,
-            "judge": 0.5144444444444445,
+            "judge": 0.5151851851851852,
             "part": 0.6654500000000001,
             "valid": 1.0
           },
@@ -196,13 +256,33 @@
             "tested": 100,
             "valid": 100,
             "invalid": 0
+          },
+          "judge_submetrics": {
+            "geometry": {
+              "raw_mean": 4.53,
+              "normalized": 0.39222222222222225,
+              "measured": 100,
+              "worst_filled": 0
+            },
+            "aesthetics": {
+              "raw_mean": 5.65,
+              "normalized": 0.5166666666666667,
+              "measured": 100,
+              "worst_filled": 0
+            },
+            "semantic": {
+              "raw_mean": 6.73,
+              "normalized": 0.6366666666666667,
+              "measured": 100,
+              "worst_filled": 0
+            }
           }
         }
       },
       "average": {
         "geom": 0.60913,
         "topo": 0.9854888333333334,
-        "judge": 0.52,
+        "judge": 0.5203703703703704,
         "part": 0.6849500000000001,
         "valid": 1.0
       },
@@ -264,8 +344,8 @@
       "model": "Gemini 3.8 Flash",
       "model_id": "gemini38_flash",
       "family": "gemini",
-      "metrics": "0.589 0.948 0.529 0.627 0.979 0.616 1.000 0.535 0.644 1.000 0.603 0.974 0.532 0.635 0.990",
-      "score": 68.60645555555556,
+      "metrics": "0.589 0.948 0.525 0.627 0.979 0.616 1.000 0.534 0.644 1.000 0.603 0.974 0.529 0.635 0.990",
+      "score": 68.53701111111111,
       "cost_usd": 15.820395127577319,
       "usage_kind": "actual_tokens_official_api_rates",
       "formats": {
@@ -273,7 +353,7 @@
           "metrics": {
             "geom": 0.58902,
             "topo": 0.9479433333333334,
-            "judge": 0.5294444444444444,
+            "judge": 0.5248148148148148,
             "part": 0.6267,
             "valid": 0.979381443298969
           },
@@ -283,13 +363,33 @@
             "tested": 97,
             "valid": 95,
             "invalid": 2
+          },
+          "judge_submetrics": {
+            "geometry": {
+              "raw_mean": 4.88,
+              "normalized": 0.4311111111111111,
+              "measured": 95,
+              "worst_filled": 2
+            },
+            "aesthetics": {
+              "raw_mean": 5.64,
+              "normalized": 0.5155555555555555,
+              "measured": 95,
+              "worst_filled": 2
+            },
+            "semantic": {
+              "raw_mean": 6.65,
+              "normalized": 0.6277777777777778,
+              "measured": 95,
+              "worst_filled": 2
+            }
           }
         },
         "openscad": {
           "metrics": {
             "geom": 0.61636,
             "topo": 0.9997986666666666,
-            "judge": 0.535,
+            "judge": 0.5340740740740741,
             "part": 0.64425,
             "valid": 1.0
           },
@@ -299,13 +399,33 @@
             "tested": 100,
             "valid": 100,
             "invalid": 0
+          },
+          "judge_submetrics": {
+            "geometry": {
+              "raw_mean": 4.82,
+              "normalized": 0.42444444444444446,
+              "measured": 100,
+              "worst_filled": 0
+            },
+            "aesthetics": {
+              "raw_mean": 5.79,
+              "normalized": 0.5322222222222223,
+              "measured": 100,
+              "worst_filled": 0
+            },
+            "semantic": {
+              "raw_mean": 6.81,
+              "normalized": 0.6455555555555555,
+              "measured": 100,
+              "worst_filled": 0
+            }
           }
         }
       },
       "average": {
         "geom": 0.60269,
         "topo": 0.9738709999999999,
-        "judge": 0.5322222222222222,
+        "judge": 0.5294444444444445,
         "part": 0.635475,
         "valid": 0.9896907216494846
       },
@@ -367,8 +487,8 @@
       "model": "Grok 4.6",
       "model_id": "grok46",
       "family": "grok",
-      "metrics": "0.561 0.951 0.476 0.620 1.000 0.608 1.000 0.518 0.636 1.000 0.585 0.976 0.497 0.628 1.000",
-      "score": 67.12312916666667,
+      "metrics": "0.561 0.951 0.475 0.620 1.000 0.608 1.000 0.516 0.636 1.000 0.585 0.976 0.496 0.628 1.000",
+      "score": 67.09998101851852,
       "cost_usd": 30.4562864231118,
       "usage_kind": "actual_tokens_official_api_rates",
       "formats": {
@@ -376,7 +496,7 @@
           "metrics": {
             "geom": 0.56114,
             "topo": 0.95128,
-            "judge": 0.4755555555555555,
+            "judge": 0.47518518518518515,
             "part": 0.6201000000000001,
             "valid": 1.0
           },
@@ -386,13 +506,33 @@
             "tested": 83,
             "valid": 83,
             "invalid": 0
+          },
+          "judge_submetrics": {
+            "geometry": {
+              "raw_mean": 4.3,
+              "normalized": 0.36666666666666664,
+              "measured": 82,
+              "worst_filled": 0
+            },
+            "aesthetics": {
+              "raw_mean": 5.27,
+              "normalized": 0.4744444444444444,
+              "measured": 82,
+              "worst_filled": 0
+            },
+            "semantic": {
+              "raw_mean": 6.26,
+              "normalized": 0.5844444444444444,
+              "measured": 82,
+              "worst_filled": 0
+            }
           }
         },
         "openscad": {
           "metrics": {
             "geom": 0.6079600000000001,
             "topo": 0.999737,
-            "judge": 0.5177777777777778,
+            "judge": 0.5162962962962963,
             "part": 0.6363,
             "valid": 1.0
           },
@@ -402,13 +542,33 @@
             "tested": 93,
             "valid": 93,
             "invalid": 0
+          },
+          "judge_submetrics": {
+            "geometry": {
+              "raw_mean": 4.58,
+              "normalized": 0.3977777777777778,
+              "measured": 93,
+              "worst_filled": 0
+            },
+            "aesthetics": {
+              "raw_mean": 5.62,
+              "normalized": 0.5133333333333333,
+              "measured": 93,
+              "worst_filled": 0
+            },
+            "semantic": {
+              "raw_mean": 6.74,
+              "normalized": 0.6377777777777778,
+              "measured": 93,
+              "worst_filled": 0
+            }
           }
         }
       },
       "average": {
         "geom": 0.58455,
         "topo": 0.9755085,
-        "judge": 0.49666666666666665,
+        "judge": 0.4957407407407407,
         "part": 0.6282000000000001,
         "valid": 1.0
       },
@@ -470,8 +630,8 @@
       "model": "Kimi K3",
       "model_id": "kimi_k3",
       "family": "kimi",
-      "metrics": "0.554 0.898 0.487 0.663 0.979 0.582 1.000 0.498 0.665 1.000 0.568 0.949 0.493 0.664 0.990",
-      "score": 66.8249875,
+      "metrics": "0.554 0.898 0.476 0.663 0.979 0.582 1.000 0.489 0.665 1.000 0.568 0.949 0.483 0.664 0.990",
+      "score": 66.57730231481482,
       "cost_usd": null,
       "usage_kind": "estimated_official_tokenizer",
       "formats": {
@@ -479,7 +639,7 @@
           "metrics": {
             "geom": 0.5541,
             "topo": 0.8980293333333332,
-            "judge": 0.4866666666666667,
+            "judge": 0.4759259259259259,
             "part": 0.6628499999999999,
             "valid": 0.9791666666666666
           },
@@ -489,13 +649,33 @@
             "tested": 96,
             "valid": 94,
             "invalid": 2
+          },
+          "judge_submetrics": {
+            "geometry": {
+              "raw_mean": 4.29,
+              "normalized": 0.3655555555555556,
+              "measured": 94,
+              "worst_filled": 2
+            },
+            "aesthetics": {
+              "raw_mean": 5.09,
+              "normalized": 0.45444444444444443,
+              "measured": 94,
+              "worst_filled": 2
+            },
+            "semantic": {
+              "raw_mean": 6.47,
+              "normalized": 0.6077777777777778,
+              "measured": 94,
+              "worst_filled": 2
+            }
           }
         },
         "openscad": {
           "metrics": {
             "geom": 0.58152,
             "topo": 0.9997996666666666,
-            "judge": 0.49833333333333335,
+            "judge": 0.4892592592592593,
             "part": 0.6647,
             "valid": 1.0
           },
@@ -505,13 +685,33 @@
             "tested": 100,
             "valid": 100,
             "invalid": 0
+          },
+          "judge_submetrics": {
+            "geometry": {
+              "raw_mean": 4.32,
+              "normalized": 0.36888888888888893,
+              "measured": 99,
+              "worst_filled": 0
+            },
+            "aesthetics": {
+              "raw_mean": 5.24,
+              "normalized": 0.47111111111111115,
+              "measured": 99,
+              "worst_filled": 0
+            },
+            "semantic": {
+              "raw_mean": 6.65,
+              "normalized": 0.6277777777777778,
+              "measured": 99,
+              "worst_filled": 0
+            }
           }
         }
       },
       "average": {
         "geom": 0.56781,
         "topo": 0.9489144999999999,
-        "judge": 0.49250000000000005,
+        "judge": 0.4825925925925926,
         "part": 0.663775,
         "valid": 0.9895833333333333
       },
@@ -648,8 +848,8 @@
       "model": "Qwen 3.8 Max",
       "model_id": "qwen38max",
       "family": "qwen",
-      "metrics": "0.527 0.918 0.462 0.615 0.978 0.596 1.000 0.497 0.662 1.000 0.562 0.959 0.480 0.639 0.989",
-      "score": 65.97308055555555,
+      "metrics": "0.527 0.918 0.454 0.615 0.978 0.596 1.000 0.492 0.662 1.000 0.562 0.959 0.473 0.639 0.989",
+      "score": 65.79946944444444,
       "cost_usd": 12.097770272108843,
       "usage_kind": "actual_tokens_official_api_rates",
       "formats": {
@@ -657,7 +857,7 @@
           "metrics": {
             "geom": 0.52738,
             "topo": 0.9184733333333334,
-            "judge": 0.4622222222222222,
+            "judge": 0.45370370370370366,
             "part": 0.6146499999999999,
             "valid": 0.9777777777777777
           },
@@ -667,13 +867,33 @@
             "tested": 90,
             "valid": 88,
             "invalid": 2
+          },
+          "judge_submetrics": {
+            "geometry": {
+              "raw_mean": 4.14,
+              "normalized": 0.34888888888888886,
+              "measured": 88,
+              "worst_filled": 2
+            },
+            "aesthetics": {
+              "raw_mean": 4.93,
+              "normalized": 0.43666666666666665,
+              "measured": 88,
+              "worst_filled": 2
+            },
+            "semantic": {
+              "raw_mean": 6.18,
+              "normalized": 0.5755555555555555,
+              "measured": 88,
+              "worst_filled": 2
+            }
           }
         },
         "openscad": {
           "metrics": {
             "geom": 0.5956400000000001,
             "topo": 0.9998586666666668,
-            "judge": 0.49722222222222223,
+            "judge": 0.4918518518518519,
             "part": 0.6624,
             "valid": 1.0
           },
@@ -683,13 +903,33 @@
             "tested": 98,
             "valid": 98,
             "invalid": 0
+          },
+          "judge_submetrics": {
+            "geometry": {
+              "raw_mean": 4.34,
+              "normalized": 0.3711111111111111,
+              "measured": 97,
+              "worst_filled": 0
+            },
+            "aesthetics": {
+              "raw_mean": 5.33,
+              "normalized": 0.4811111111111111,
+              "measured": 97,
+              "worst_filled": 0
+            },
+            "semantic": {
+              "raw_mean": 6.61,
+              "normalized": 0.6233333333333334,
+              "measured": 97,
+              "worst_filled": 0
+            }
           }
         }
       },
       "average": {
         "geom": 0.56151,
         "topo": 0.9591660000000001,
-        "judge": 0.4797222222222222,
+        "judge": 0.47277777777777774,
         "part": 0.638525,
         "valid": 0.9888888888888889
       },
@@ -751,8 +991,8 @@
       "model": "GLM 5.3 Flash",
       "model_id": "glm53_flash",
       "family": "zai",
-      "metrics": "0.563 0.923 0.467 0.615 0.977 0.573 1.000 0.496 0.629 1.000 0.568 0.962 0.481 0.622 0.989",
-      "score": 65.81567361111111,
+      "metrics": "0.563 0.923 0.465 0.615 0.977 0.573 1.000 0.496 0.629 1.000 0.568 0.962 0.481 0.622 0.989",
+      "score": 65.80641435185186,
       "cost_usd": 3.4134131436781607,
       "usage_kind": "actual_tokens_official_api_rates",
       "formats": {
@@ -760,7 +1000,7 @@
           "metrics": {
             "geom": 0.5634,
             "topo": 0.9231846666666667,
-            "judge": 0.4666666666666667,
+            "judge": 0.4651851851851852,
             "part": 0.6145499999999999,
             "valid": 0.9770114942528736
           },
@@ -770,13 +1010,33 @@
             "tested": 87,
             "valid": 85,
             "invalid": 2
+          },
+          "judge_submetrics": {
+            "geometry": {
+              "raw_mean": 4.12,
+              "normalized": 0.3466666666666667,
+              "measured": 84,
+              "worst_filled": 2
+            },
+            "aesthetics": {
+              "raw_mean": 5.16,
+              "normalized": 0.46222222222222226,
+              "measured": 84,
+              "worst_filled": 2
+            },
+            "semantic": {
+              "raw_mean": 6.28,
+              "normalized": 0.5866666666666667,
+              "measured": 84,
+              "worst_filled": 2
+            }
           }
         },
         "openscad": {
           "metrics": {
             "geom": 0.5726,
             "topo": 0.9998969999999999,
-            "judge": 0.4955555555555555,
+            "judge": 0.4962962962962963,
             "part": 0.6294,
             "valid": 1.0
           },
@@ -786,13 +1046,33 @@
             "tested": 93,
             "valid": 93,
             "invalid": 0
+          },
+          "judge_submetrics": {
+            "geometry": {
+              "raw_mean": 4.33,
+              "normalized": 0.37,
+              "measured": 92,
+              "worst_filled": 0
+            },
+            "aesthetics": {
+              "raw_mean": 5.48,
+              "normalized": 0.4977777777777778,
+              "measured": 92,
+              "worst_filled": 0
+            },
+            "semantic": {
+              "raw_mean": 6.59,
+              "normalized": 0.6211111111111111,
+              "measured": 92,
+              "worst_filled": 0
+            }
           }
         }
       },
       "average": {
         "geom": 0.5680000000000001,
         "topo": 0.9615408333333333,
-        "judge": 0.4811111111111111,
+        "judge": 0.48074074074074075,
         "part": 0.621975,
         "valid": 0.9885057471264368
       },
@@ -854,8 +1134,8 @@
       "model": "DeepSeek V4.1 Flash",
       "model_id": "deepseek41_flash",
       "family": "deepseek",
-      "metrics": "0.541 0.913 0.457 0.621 0.968 0.563 0.990 0.473 0.609 0.990 0.552 0.951 0.465 0.615 0.979",
-      "score": 64.58497638888889,
+      "metrics": "0.541 0.913 0.454 0.621 0.968 0.563 0.990 0.473 0.609 0.990 0.552 0.951 0.463 0.615 0.979",
+      "score": 64.55025416666666,
       "cost_usd": 7.153787928207608,
       "usage_kind": "actual_tokens_official_api_rates",
       "formats": {
@@ -863,7 +1143,7 @@
           "metrics": {
             "geom": 0.5413600000000001,
             "topo": 0.9133270000000001,
-            "judge": 0.45666666666666667,
+            "judge": 0.4540740740740741,
             "part": 0.6207,
             "valid": 0.9680851063829787
           },
@@ -873,13 +1153,33 @@
             "tested": 94,
             "valid": 91,
             "invalid": 3
+          },
+          "judge_submetrics": {
+            "geometry": {
+              "raw_mean": 4.1,
+              "normalized": 0.3444444444444444,
+              "measured": 91,
+              "worst_filled": 3
+            },
+            "aesthetics": {
+              "raw_mean": 5.04,
+              "normalized": 0.4488888888888889,
+              "measured": 91,
+              "worst_filled": 3
+            },
+            "semantic": {
+              "raw_mean": 6.12,
+              "normalized": 0.5688888888888889,
+              "measured": 91,
+              "worst_filled": 3
+            }
           }
         },
         "openscad": {
           "metrics": {
             "geom": 0.56312,
             "topo": 0.9896466666666667,
-            "judge": 0.47277777777777785,
+            "judge": 0.4725925925925926,
             "part": 0.6092,
             "valid": 0.98989898989899
           },
@@ -889,13 +1189,33 @@
             "tested": 99,
             "valid": 98,
             "invalid": 1
+          },
+          "judge_submetrics": {
+            "geometry": {
+              "raw_mean": 4.15,
+              "normalized": 0.35000000000000003,
+              "measured": 98,
+              "worst_filled": 1
+            },
+            "aesthetics": {
+              "raw_mean": 5.25,
+              "normalized": 0.4722222222222222,
+              "measured": 98,
+              "worst_filled": 1
+            },
+            "semantic": {
+              "raw_mean": 6.36,
+              "normalized": 0.5955555555555556,
+              "measured": 98,
+              "worst_filled": 1
+            }
           }
         }
       },
       "average": {
         "geom": 0.5522400000000001,
         "topo": 0.9514868333333334,
-        "judge": 0.46472222222222226,
+        "judge": 0.4633333333333334,
         "part": 0.61495,
         "valid": 0.9789920481409844
       },
@@ -970,8 +1290,8 @@
       "model": "Doubao Seed 2.1 Pro",
       "model_id": "doubao_seed21",
       "family": "doubao",
-      "metrics": "0.206 0.393 0.168 0.221 0.410 0.499 0.980 0.391 0.554 0.980 0.352 0.686 0.279 0.388 0.695",
-      "score": 42.63798333333333,
+      "metrics": "0.206 0.393 0.164 0.221 0.410 0.499 0.980 0.379 0.554 0.980 0.352 0.686 0.271 0.388 0.695",
+      "score": 42.4458537037037,
       "cost_usd": 28.508027742525748,
       "usage_kind": "actual_tokens_official_api_rates",
       "formats": {
@@ -979,7 +1299,7 @@
           "metrics": {
             "geom": 0.20568,
             "topo": 0.3930953333333333,
-            "judge": 0.16777777777777778,
+            "judge": 0.1637037037037037,
             "part": 0.22099999999999997,
             "valid": 0.41
           },
@@ -989,13 +1309,33 @@
             "tested": 100,
             "valid": 41,
             "invalid": 59
+          },
+          "judge_submetrics": {
+            "geometry": {
+              "raw_mean": 2.15,
+              "normalized": 0.12777777777777777,
+              "measured": 41,
+              "worst_filled": 59
+            },
+            "aesthetics": {
+              "raw_mean": 2.4,
+              "normalized": 0.15555555555555556,
+              "measured": 41,
+              "worst_filled": 59
+            },
+            "semantic": {
+              "raw_mean": 2.87,
+              "normalized": 0.20777777777777778,
+              "measured": 41,
+              "worst_filled": 59
+            }
           }
         },
         "openscad": {
           "metrics": {
             "geom": 0.4992,
             "topo": 0.97968,
-            "judge": 0.39055555555555554,
+            "judge": 0.3792592592592593,
             "part": 0.5540499999999999,
             "valid": 0.98
           },
@@ -1005,13 +1345,33 @@
             "tested": 100,
             "valid": 98,
             "invalid": 2
+          },
+          "judge_submetrics": {
+            "geometry": {
+              "raw_mean": 3.58,
+              "normalized": 0.2866666666666667,
+              "measured": 98,
+              "worst_filled": 2
+            },
+            "aesthetics": {
+              "raw_mean": 4.21,
+              "normalized": 0.3566666666666667,
+              "measured": 98,
+              "worst_filled": 2
+            },
+            "semantic": {
+              "raw_mean": 5.45,
+              "normalized": 0.49444444444444446,
+              "measured": 98,
+              "worst_filled": 2
+            }
           }
         }
       },
       "average": {
         "geom": 0.35244,
         "topo": 0.6863876666666666,
-        "judge": 0.2791666666666667,
+        "judge": 0.2714814814814815,
         "part": 0.38752499999999995,
         "valid": 0.695
       },
@@ -1232,11 +1592,11 @@
       "metrics": {
         "geom": 0.53416,
         "topo": 0.9876679999999999,
-        "judge": 0.3994444444444445,
+        "judge": 0.38407407407407407,
         "part": 0.57265,
         "valid": 1.0
       },
-      "score": 62.34806111111111,
+      "score": 61.963801851851855,
       "coverage": {
         "total": 100,
         "tested": 100,
@@ -1563,7 +1923,27 @@
         "gemini-3.8-flash": 76,
         "google/gemini-3.8-flash": 24
       },
-      "provisional": false
+      "provisional": false,
+      "judge_submetrics": {
+        "geometry": {
+          "raw_mean": 3.7,
+          "normalized": 0.30000000000000004,
+          "measured": 100,
+          "worst_filled": 0
+        },
+        "aesthetics": {
+          "raw_mean": 4.18,
+          "normalized": 0.3533333333333333,
+          "measured": 100,
+          "worst_filled": 0
+        },
+        "semantic": {
+          "raw_mean": 5.49,
+          "normalized": 0.49888888888888894,
+          "measured": 100,
+          "worst_filled": 0
+        }
+      }
     },
     {
       "model": "Gemini 3.8 Flash",
@@ -1573,11 +1953,11 @@
       "metrics": {
         "geom": 0.64208,
         "topo": 0.7425846666666667,
-        "judge": 0.5472222222222223,
+        "judge": 0.542962962962963,
         "part": 0.625,
         "valid": 1.0
       },
-      "score": 63.92217222222223,
+      "score": 63.815690740740735,
       "coverage": {
         "total": 100,
         "tested": 97,
@@ -1906,7 +2286,38 @@
         "gemini-3.8-flash": 79,
         "google/gemini-3.8-flash": 17
       },
-      "provisional": true
+      "provisional": true,
+      "judge_submetrics": {
+        "geometry": {
+          "raw_mean": 4.91,
+          "normalized": 0.43444444444444447,
+          "measured": 96,
+          "worst_filled": 0
+        },
+        "aesthetics": {
+          "raw_mean": 5.81,
+          "normalized": 0.5344444444444444,
+          "measured": 96,
+          "worst_filled": 0
+        },
+        "semantic": {
+          "raw_mean": 6.94,
+          "normalized": 0.66,
+          "measured": 96,
+          "worst_filled": 0
+        }
+      }
     }
-  ]
+  ],
+  "judge_definition": "Equal-weight mean of geometry, aesthetics and semantic ratings, each normalized by (s - 1) / 9; existing per-metric denominators are retained.",
+  "judge_axes": [
+    "geometry",
+    "aesthetics",
+    "semantic"
+  ],
+  "judge_reaggregation": {
+    "method": "Equal mean of all three normalized saved Judge axes; no model calls.",
+    "assembly_aggregate_source_sha256": "c796c4c19adeba8ce2f2773890981004f57cb25318baa2b301362aba991b7f28",
+    "population": "Same release snapshot; coverage, non-Judge buckets and costs retained."
+  }
 }

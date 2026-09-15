@@ -8,7 +8,7 @@
     "threejs"
   ],
   "score_definition": "Score = 100 * mean(GEO, TOPO, JUDGE), with three formats equally weighted.",
-  "judge_definition": "Mean of normalized geometry and semantic axes, matching the Assembly website table; aesthetics is excluded.",
+  "judge_definition": "Equal-weight mean of geometry, aesthetics and semantic ratings, each normalized by (s - 1) / 9; existing per-metric denominators are retained.",
   "valid_definition": "Per format: successful CAD exports / tested cases. Average VALID is the equal-weight mean of the three format rates. API failures are excluded. Proven exports with local evaluation failure count as export-valid in this snapshot only.",
   "missing_policy": "Missing local metrics and judge scores are unmeasured and excluded from their metric means. True generation/export failures receive the existing worst-fill penalties. Coverage gaps make scores provisional.",
   "cost_policy": "USD/case is a historical standard API-equivalent estimate using the frozen September 10/11 price snapshot and saved generation tokens, including recorded code corrections. Excludes judge, interrupted streams with no usage, superseded attempts and subscription payments. GPT uses the same API-equivalent convention; this is not actual subscription expenditure.",
@@ -164,29 +164,29 @@
         "cadquery": {
           "geom": 0.6201399999999999,
           "topo": 0.9289773333333334,
-          "judge": 0.5844444444444444,
+          "judge": 0.5988888888888889,
           "valid": 0.9884
         },
         "openscad": {
           "geom": 0.6154200000000001,
           "topo": 0.9999763333333332,
-          "judge": 0.5933333333333333,
+          "judge": 0.6066666666666667,
           "valid": 1.0
         },
         "threejs": {
           "geom": 0.6577200000000001,
           "topo": 0.8375773333333333,
-          "judge": 0.6116666666666666,
+          "judge": 0.6222222222222222,
           "valid": 1.0
         }
       },
       "average": {
         "geom": 0.6310933333333334,
         "topo": 0.922177,
-        "judge": 0.5964814814814815,
+        "judge": 0.6092592592592593,
         "valid": 0.9961333333333333
       },
-      "score": 71.6583938271605,
+      "score": 72.08431975308642,
       "counts": {
         "total": 300,
         "tested": 257,
@@ -465,6 +465,26 @@
             "geom": 39,
             "topo": 85,
             "judge": 85
+          },
+          "judge_submetrics": {
+            "geometry": {
+              "raw_mean": 5.57,
+              "normalized": 0.5077777777777778,
+              "measured": 85,
+              "worst_filled": 1
+            },
+            "aesthetics": {
+              "raw_mean": 6.65,
+              "normalized": 0.6277777777777778,
+              "measured": 85,
+              "worst_filled": 1
+            },
+            "semantic": {
+              "raw_mean": 6.95,
+              "normalized": 0.6611111111111111,
+              "measured": 85,
+              "worst_filled": 1
+            }
           }
         },
         "openscad": {
@@ -727,6 +747,26 @@
             "geom": 51,
             "topo": 100,
             "judge": 100
+          },
+          "judge_submetrics": {
+            "geometry": {
+              "raw_mean": 5.59,
+              "normalized": 0.51,
+              "measured": 100,
+              "worst_filled": 0
+            },
+            "aesthetics": {
+              "raw_mean": 6.7,
+              "normalized": 0.6333333333333333,
+              "measured": 100,
+              "worst_filled": 0
+            },
+            "semantic": {
+              "raw_mean": 7.09,
+              "normalized": 0.6766666666666666,
+              "measured": 100,
+              "worst_filled": 0
+            }
           }
         },
         "threejs": {
@@ -989,39 +1029,59 @@
             "geom": 25,
             "topo": 71,
             "judge": 71
+          },
+          "judge_submetrics": {
+            "geometry": {
+              "raw_mean": 5.93,
+              "normalized": 0.5477777777777777,
+              "measured": 71,
+              "worst_filled": 0
+            },
+            "aesthetics": {
+              "raw_mean": 6.79,
+              "normalized": 0.6433333333333333,
+              "measured": 71,
+              "worst_filled": 0
+            },
+            "semantic": {
+              "raw_mean": 7.08,
+              "normalized": 0.6755555555555556,
+              "measured": 71,
+              "worst_filled": 0
+            }
           }
         }
       },
-      "metrics": "0.620 0.929 0.584 0.988 0.615 1.000 0.593 1.000 0.658 0.838 0.612 1.000 0.631 0.922 0.596 0.996"
+      "metrics": "0.620 0.929 0.599 0.988 0.615 1.000 0.607 1.000 0.658 0.838 0.622 1.000 0.631 0.922 0.609 0.996"
     },
     {
       "formats": {
         "cadquery": {
           "geom": 0.53654,
           "topo": 0.9604226666666666,
-          "judge": 0.5111111111111111,
+          "judge": 0.5133333333333333,
           "valid": 1.0
         },
         "openscad": {
           "geom": 0.5520400000000001,
           "topo": 0.999899,
-          "judge": 0.5261111111111111,
+          "judge": 0.5344444444444444,
           "valid": 1.0
         },
         "threejs": {
           "geom": 0.57524,
           "topo": 0.811981,
-          "judge": 0.5388888888888889,
+          "judge": 0.5455555555555556,
           "valid": 1.0
         }
       },
       "average": {
         "geom": 0.5546066666666667,
         "topo": 0.9241008888888889,
-        "judge": 0.5253703703703704,
+        "judge": 0.5311111111111111,
         "valid": 1.0
       },
-      "score": 66.80259753086419,
+      "score": 66.99395555555554,
       "counts": {
         "total": 300,
         "tested": 277,
@@ -1305,6 +1365,26 @@
             "geom": 41,
             "topo": 86,
             "judge": 86
+          },
+          "judge_submetrics": {
+            "geometry": {
+              "raw_mean": 4.55,
+              "normalized": 0.39444444444444443,
+              "measured": 86,
+              "worst_filled": 0
+            },
+            "aesthetics": {
+              "raw_mean": 5.66,
+              "normalized": 0.5177777777777778,
+              "measured": 86,
+              "worst_filled": 0
+            },
+            "semantic": {
+              "raw_mean": 6.65,
+              "normalized": 0.6277777777777778,
+              "measured": 86,
+              "worst_filled": 0
+            }
           }
         },
         "openscad": {
@@ -1572,6 +1652,26 @@
             "geom": 50,
             "topo": 100,
             "judge": 100
+          },
+          "judge_submetrics": {
+            "geometry": {
+              "raw_mean": 4.64,
+              "normalized": 0.4044444444444444,
+              "measured": 100,
+              "worst_filled": 0
+            },
+            "aesthetics": {
+              "raw_mean": 5.96,
+              "normalized": 0.5511111111111111,
+              "measured": 100,
+              "worst_filled": 0
+            },
+            "semantic": {
+              "raw_mean": 6.83,
+              "normalized": 0.6477777777777778,
+              "measured": 100,
+              "worst_filled": 0
+            }
           }
         },
         "threejs": {
@@ -1839,29 +1939,49 @@
             "geom": 24,
             "topo": 91,
             "judge": 91
+          },
+          "judge_submetrics": {
+            "geometry": {
+              "raw_mean": 4.8,
+              "normalized": 0.4222222222222222,
+              "measured": 91,
+              "worst_filled": 0
+            },
+            "aesthetics": {
+              "raw_mean": 6.03,
+              "normalized": 0.5588888888888889,
+              "measured": 91,
+              "worst_filled": 0
+            },
+            "semantic": {
+              "raw_mean": 6.9,
+              "normalized": 0.6555555555555556,
+              "measured": 91,
+              "worst_filled": 0
+            }
           }
         }
       },
-      "metrics": "0.537 0.960 0.511 1.000 0.552 1.000 0.526 1.000 0.575 0.812 0.539 1.000 0.555 0.924 0.525 1.000"
+      "metrics": "0.537 0.960 0.513 1.000 0.552 1.000 0.534 1.000 0.575 0.812 0.546 1.000 0.555 0.924 0.531 1.000"
     },
     {
       "formats": {
         "cadquery": {
           "geom": 0.56704,
           "topo": 0.9614453333333334,
-          "judge": 0.5405555555555556,
+          "judge": 0.5374074074074073,
           "valid": 0.98
         },
         "openscad": {
           "geom": 0.56708,
           "topo": 0.99982,
-          "judge": 0.55,
+          "judge": 0.5518518518518518,
           "valid": 1.0
         },
         "threejs": {
           "geom": 0.5454,
           "topo": 0.7096133333333334,
-          "judge": 0.5394444444444444,
+          "judge": 0.5407407407407407,
           "valid": 0.99
         }
       },
@@ -2154,6 +2274,26 @@
             "geom": 47,
             "topo": 94,
             "judge": 94
+          },
+          "judge_submetrics": {
+            "geometry": {
+              "raw_mean": 4.92,
+              "normalized": 0.43555555555555553,
+              "measured": 94,
+              "worst_filled": 2
+            },
+            "aesthetics": {
+              "raw_mean": 5.78,
+              "normalized": 0.5311111111111111,
+              "measured": 94,
+              "worst_filled": 2
+            },
+            "semantic": {
+              "raw_mean": 6.81,
+              "normalized": 0.6455555555555555,
+              "measured": 94,
+              "worst_filled": 2
+            }
           }
         },
         "openscad": {
@@ -2420,6 +2560,26 @@
             "geom": 49,
             "topo": 96,
             "judge": 96
+          },
+          "judge_submetrics": {
+            "geometry": {
+              "raw_mean": 4.92,
+              "normalized": 0.43555555555555553,
+              "measured": 96,
+              "worst_filled": 0
+            },
+            "aesthetics": {
+              "raw_mean": 6.0,
+              "normalized": 0.5555555555555556,
+              "measured": 96,
+              "worst_filled": 0
+            },
+            "semantic": {
+              "raw_mean": 6.98,
+              "normalized": 0.6644444444444445,
+              "measured": 96,
+              "worst_filled": 0
+            }
           }
         },
         "threejs": {
@@ -2686,39 +2846,59 @@
             "geom": 9,
             "topo": 95,
             "judge": 95
+          },
+          "judge_submetrics": {
+            "geometry": {
+              "raw_mean": 4.89,
+              "normalized": 0.4322222222222222,
+              "measured": 95,
+              "worst_filled": 1
+            },
+            "aesthetics": {
+              "raw_mean": 5.89,
+              "normalized": 0.5433333333333333,
+              "measured": 95,
+              "worst_filled": 1
+            },
+            "semantic": {
+              "raw_mean": 6.82,
+              "normalized": 0.6466666666666667,
+              "measured": 95,
+              "worst_filled": 1
+            }
           }
         }
       },
-      "metrics": "0.567 0.961 0.541 0.980 0.567 1.000 0.550 1.000 0.545 0.710 0.539 0.990 0.560 0.890 0.543 0.990"
+      "metrics": "0.567 0.961 0.537 0.980 0.567 1.000 0.552 1.000 0.545 0.710 0.541 0.990 0.560 0.890 0.543 0.990"
     },
     {
       "formats": {
         "cadquery": {
           "geom": 0.5261,
           "topo": 0.9645079999999999,
-          "judge": 0.5050000000000001,
+          "judge": 0.49703703703703705,
           "valid": 0.99
         },
         "openscad": {
           "geom": 0.52784,
           "topo": 0.9999750000000001,
-          "judge": 0.5105555555555555,
+          "judge": 0.5007407407407407,
           "valid": 1.0
         },
         "threejs": {
           "geom": 0.55318,
           "topo": 0.8664006666666667,
-          "judge": 0.5172222222222221,
+          "judge": 0.5085185185185185,
           "valid": 1.0
         }
       },
       "average": {
         "geom": 0.5357066666666667,
         "topo": 0.9436278888888889,
-        "judge": 0.5109259259259259,
+        "judge": 0.5020987654320987,
         "valid": 0.9966666666666667
       },
-      "score": 66.34201604938272,
+      "score": 66.04777736625515,
       "counts": {
         "total": 300,
         "tested": 300,
@@ -3001,6 +3181,26 @@
             "geom": 45,
             "topo": 95,
             "judge": 95
+          },
+          "judge_submetrics": {
+            "geometry": {
+              "raw_mean": 4.48,
+              "normalized": 0.3866666666666667,
+              "measured": 95,
+              "worst_filled": 1
+            },
+            "aesthetics": {
+              "raw_mean": 5.33,
+              "normalized": 0.4811111111111111,
+              "measured": 95,
+              "worst_filled": 1
+            },
+            "semantic": {
+              "raw_mean": 6.61,
+              "normalized": 0.6233333333333334,
+              "measured": 95,
+              "worst_filled": 1
+            }
           }
         },
         "openscad": {
@@ -3267,6 +3467,26 @@
             "geom": 49,
             "topo": 96,
             "judge": 96
+          },
+          "judge_submetrics": {
+            "geometry": {
+              "raw_mean": 4.46,
+              "normalized": 0.3844444444444444,
+              "measured": 96,
+              "worst_filled": 0
+            },
+            "aesthetics": {
+              "raw_mean": 5.33,
+              "normalized": 0.4811111111111111,
+              "measured": 96,
+              "worst_filled": 0
+            },
+            "semantic": {
+              "raw_mean": 6.73,
+              "normalized": 0.6366666666666667,
+              "measured": 96,
+              "worst_filled": 0
+            }
           }
         },
         "threejs": {
@@ -3534,39 +3754,59 @@
             "geom": 33,
             "topo": 97,
             "judge": 97
+          },
+          "judge_submetrics": {
+            "geometry": {
+              "raw_mean": 4.51,
+              "normalized": 0.38999999999999996,
+              "measured": 97,
+              "worst_filled": 0
+            },
+            "aesthetics": {
+              "raw_mean": 5.42,
+              "normalized": 0.4911111111111111,
+              "measured": 97,
+              "worst_filled": 0
+            },
+            "semantic": {
+              "raw_mean": 6.8,
+              "normalized": 0.6444444444444444,
+              "measured": 97,
+              "worst_filled": 0
+            }
           }
         }
       },
-      "metrics": "0.526 0.965 0.505 0.990 0.528 1.000 0.511 1.000 0.553 0.866 0.517 1.000 0.536 0.944 0.511 0.997"
+      "metrics": "0.526 0.965 0.497 0.990 0.528 1.000 0.501 1.000 0.553 0.866 0.509 1.000 0.536 0.944 0.502 0.997"
     },
     {
       "formats": {
         "cadquery": {
           "geom": 0.5338,
           "topo": 0.9808673333333333,
-          "judge": 0.5072222222222222,
+          "judge": 0.5074074074074074,
           "valid": 1.0
         },
         "openscad": {
           "geom": 0.5422,
           "topo": 0.9999743333333333,
-          "judge": 0.5211111111111111,
+          "judge": 0.5248148148148148,
           "valid": 1.0
         },
         "threejs": {
           "geom": 0.54604,
           "topo": 0.7943380000000001,
-          "judge": 0.5077777777777778,
+          "judge": 0.512962962962963,
           "valid": 1.0
         }
       },
       "average": {
         "geom": 0.54068,
         "topo": 0.9250598888888889,
-        "judge": 0.512037037037037,
+        "judge": 0.5150617283950617,
         "valid": 1.0
       },
-      "score": 65.92589753086419,
+      "score": 66.0267205761317,
       "counts": {
         "total": 300,
         "tested": 300,
@@ -3849,6 +4089,26 @@
             "geom": 45,
             "topo": 96,
             "judge": 96
+          },
+          "judge_submetrics": {
+            "geometry": {
+              "raw_mean": 4.44,
+              "normalized": 0.38222222222222224,
+              "measured": 96,
+              "worst_filled": 0
+            },
+            "aesthetics": {
+              "raw_mean": 5.57,
+              "normalized": 0.5077777777777778,
+              "measured": 96,
+              "worst_filled": 0
+            },
+            "semantic": {
+              "raw_mean": 6.69,
+              "normalized": 0.6322222222222222,
+              "measured": 96,
+              "worst_filled": 0
+            }
           }
         },
         "openscad": {
@@ -4115,6 +4375,26 @@
             "geom": 49,
             "topo": 96,
             "judge": 96
+          },
+          "judge_submetrics": {
+            "geometry": {
+              "raw_mean": 4.59,
+              "normalized": 0.39888888888888885,
+              "measured": 96,
+              "worst_filled": 0
+            },
+            "aesthetics": {
+              "raw_mean": 5.79,
+              "normalized": 0.5322222222222223,
+              "measured": 96,
+              "worst_filled": 0
+            },
+            "semantic": {
+              "raw_mean": 6.79,
+              "normalized": 0.6433333333333333,
+              "measured": 96,
+              "worst_filled": 0
+            }
           }
         },
         "threejs": {
@@ -4381,39 +4661,59 @@
             "geom": 25,
             "topo": 96,
             "judge": 96
+          },
+          "judge_submetrics": {
+            "geometry": {
+              "raw_mean": 4.42,
+              "normalized": 0.38,
+              "measured": 96,
+              "worst_filled": 0
+            },
+            "aesthetics": {
+              "raw_mean": 5.71,
+              "normalized": 0.5233333333333333,
+              "measured": 96,
+              "worst_filled": 0
+            },
+            "semantic": {
+              "raw_mean": 6.72,
+              "normalized": 0.6355555555555555,
+              "measured": 96,
+              "worst_filled": 0
+            }
           }
         }
       },
-      "metrics": "0.534 0.981 0.507 1.000 0.542 1.000 0.521 1.000 0.546 0.794 0.508 1.000 0.541 0.925 0.512 1.000"
+      "metrics": "0.534 0.981 0.507 1.000 0.542 1.000 0.525 1.000 0.546 0.794 0.513 1.000 0.541 0.925 0.515 1.000"
     },
     {
       "formats": {
         "cadquery": {
           "geom": 0.5295799999999999,
           "topo": 0.975802,
-          "judge": 0.4883333333333333,
+          "judge": 0.4855555555555556,
           "valid": 1.0
         },
         "openscad": {
           "geom": 0.5167200000000001,
           "topo": 0.9791403333333334,
-          "judge": 0.4855555555555556,
+          "judge": 0.48814814814814816,
           "valid": 0.98
         },
         "threejs": {
           "geom": 0.54022,
           "topo": 0.8066443333333333,
-          "judge": 0.5233333333333333,
+          "judge": 0.5222222222222223,
           "valid": 1.0
         }
       },
       "average": {
         "geom": 0.5288400000000001,
         "topo": 0.9205288888888888,
-        "judge": 0.49907407407407406,
+        "judge": 0.498641975308642,
         "valid": 0.9933333333333333
       },
-      "score": 64.9480987654321,
+      "score": 64.93369547325103,
       "counts": {
         "total": 300,
         "tested": 300,
@@ -4697,6 +4997,26 @@
             "geom": 47,
             "topo": 97,
             "judge": 97
+          },
+          "judge_submetrics": {
+            "geometry": {
+              "raw_mean": 4.25,
+              "normalized": 0.3611111111111111,
+              "measured": 97,
+              "worst_filled": 0
+            },
+            "aesthetics": {
+              "raw_mean": 5.32,
+              "normalized": 0.48000000000000004,
+              "measured": 97,
+              "worst_filled": 0
+            },
+            "semantic": {
+              "raw_mean": 6.54,
+              "normalized": 0.6155555555555555,
+              "measured": 97,
+              "worst_filled": 0
+            }
           }
         },
         "openscad": {
@@ -4963,6 +5283,26 @@
             "geom": 49,
             "topo": 94,
             "judge": 94
+          },
+          "judge_submetrics": {
+            "geometry": {
+              "raw_mean": 4.23,
+              "normalized": 0.3588888888888889,
+              "measured": 94,
+              "worst_filled": 2
+            },
+            "aesthetics": {
+              "raw_mean": 5.44,
+              "normalized": 0.4933333333333334,
+              "measured": 94,
+              "worst_filled": 2
+            },
+            "semantic": {
+              "raw_mean": 6.51,
+              "normalized": 0.6122222222222222,
+              "measured": 94,
+              "worst_filled": 2
+            }
           }
         },
         "threejs": {
@@ -5230,39 +5570,59 @@
             "geom": 23,
             "topo": 96,
             "judge": 96
+          },
+          "judge_submetrics": {
+            "geometry": {
+              "raw_mean": 4.56,
+              "normalized": 0.3955555555555555,
+              "measured": 96,
+              "worst_filled": 0
+            },
+            "aesthetics": {
+              "raw_mean": 5.68,
+              "normalized": 0.52,
+              "measured": 96,
+              "worst_filled": 0
+            },
+            "semantic": {
+              "raw_mean": 6.86,
+              "normalized": 0.6511111111111112,
+              "measured": 96,
+              "worst_filled": 0
+            }
           }
         }
       },
-      "metrics": "0.530 0.976 0.488 1.000 0.517 0.979 0.486 0.980 0.540 0.807 0.523 1.000 0.529 0.921 0.499 0.993"
+      "metrics": "0.530 0.976 0.486 1.000 0.517 0.979 0.488 0.980 0.540 0.807 0.522 1.000 0.529 0.921 0.499 0.993"
     },
     {
       "formats": {
         "cadquery": {
           "geom": 0.49051999999999996,
           "topo": 0.9448683333333333,
-          "judge": 0.4811111111111111,
+          "judge": 0.4748148148148148,
           "valid": 0.97
         },
         "openscad": {
           "geom": 0.53986,
           "topo": 0.9999476666666668,
-          "judge": 0.5205555555555555,
+          "judge": 0.5214814814814814,
           "valid": 1.0
         },
         "threejs": {
           "geom": 0.5582,
           "topo": 0.76979,
-          "judge": 0.5177777777777778,
+          "judge": 0.5211111111111111,
           "valid": 1.0
         }
       },
       "average": {
         "geom": 0.5295266666666666,
         "topo": 0.9048686666666667,
-        "judge": 0.5064814814814814,
+        "judge": 0.5058024691358024,
         "valid": 0.9899999999999999
       },
-      "score": 64.69589382716049,
+      "score": 64.67326008230452,
       "counts": {
         "total": 300,
         "tested": 300,
@@ -5546,6 +5906,26 @@
             "geom": 43,
             "topo": 94,
             "judge": 94
+          },
+          "judge_submetrics": {
+            "geometry": {
+              "raw_mean": 4.28,
+              "normalized": 0.36444444444444446,
+              "measured": 94,
+              "worst_filled": 3
+            },
+            "aesthetics": {
+              "raw_mean": 5.16,
+              "normalized": 0.46222222222222226,
+              "measured": 94,
+              "worst_filled": 3
+            },
+            "semantic": {
+              "raw_mean": 6.38,
+              "normalized": 0.5977777777777777,
+              "measured": 94,
+              "worst_filled": 3
+            }
           }
         },
         "openscad": {
@@ -5813,6 +6193,26 @@
             "geom": 50,
             "topo": 97,
             "judge": 97
+          },
+          "judge_submetrics": {
+            "geometry": {
+              "raw_mean": 4.6,
+              "normalized": 0.39999999999999997,
+              "measured": 97,
+              "worst_filled": 0
+            },
+            "aesthetics": {
+              "raw_mean": 5.71,
+              "normalized": 0.5233333333333333,
+              "measured": 97,
+              "worst_filled": 0
+            },
+            "semantic": {
+              "raw_mean": 6.77,
+              "normalized": 0.6411111111111111,
+              "measured": 97,
+              "worst_filled": 0
+            }
           }
         },
         "threejs": {
@@ -6079,39 +6479,59 @@
             "geom": 14,
             "topo": 96,
             "judge": 96
+          },
+          "judge_submetrics": {
+            "geometry": {
+              "raw_mean": 4.56,
+              "normalized": 0.3955555555555555,
+              "measured": 96,
+              "worst_filled": 0
+            },
+            "aesthetics": {
+              "raw_mean": 5.75,
+              "normalized": 0.5277777777777778,
+              "measured": 96,
+              "worst_filled": 0
+            },
+            "semantic": {
+              "raw_mean": 6.76,
+              "normalized": 0.64,
+              "measured": 96,
+              "worst_filled": 0
+            }
           }
         }
       },
-      "metrics": "0.491 0.945 0.481 0.970 0.540 1.000 0.521 1.000 0.558 0.770 0.518 1.000 0.530 0.905 0.506 0.990"
+      "metrics": "0.491 0.945 0.475 0.970 0.540 1.000 0.521 1.000 0.558 0.770 0.521 1.000 0.530 0.905 0.506 0.990"
     },
     {
       "formats": {
         "cadquery": {
           "geom": 0.45392,
           "topo": 0.8911053333333333,
-          "judge": 0.41222222222222227,
+          "judge": 0.40925925925925927,
           "valid": 0.91
         },
         "openscad": {
           "geom": 0.52478,
           "topo": 0.9999043333333333,
-          "judge": 0.495,
+          "judge": 0.5018518518518519,
           "valid": 1.0
         },
         "threejs": {
           "geom": 0.54288,
           "topo": 0.8444806666666667,
-          "judge": 0.4872222222222222,
+          "judge": 0.48703703703703705,
           "valid": 1.0
         }
       },
       "average": {
         "geom": 0.5071933333333334,
         "topo": 0.9118301111111111,
-        "judge": 0.4648148148148148,
+        "judge": 0.4660493827160494,
         "valid": 0.9700000000000001
       },
-      "score": 62.79460864197531,
+      "score": 62.835760905349794,
       "counts": {
         "total": 300,
         "tested": 300,
@@ -6395,6 +6815,26 @@
             "geom": 46,
             "topo": 89,
             "judge": 89
+          },
+          "judge_submetrics": {
+            "geometry": {
+              "raw_mean": 3.79,
+              "normalized": 0.31,
+              "measured": 89,
+              "worst_filled": 9
+            },
+            "aesthetics": {
+              "raw_mean": 4.63,
+              "normalized": 0.4033333333333333,
+              "measured": 89,
+              "worst_filled": 9
+            },
+            "semantic": {
+              "raw_mean": 5.63,
+              "normalized": 0.5144444444444445,
+              "measured": 89,
+              "worst_filled": 9
+            }
           }
         },
         "openscad": {
@@ -6662,6 +7102,26 @@
             "geom": 49,
             "topo": 96,
             "judge": 96
+          },
+          "judge_submetrics": {
+            "geometry": {
+              "raw_mean": 4.29,
+              "normalized": 0.3655555555555556,
+              "measured": 96,
+              "worst_filled": 0
+            },
+            "aesthetics": {
+              "raw_mean": 5.64,
+              "normalized": 0.5155555555555555,
+              "measured": 96,
+              "worst_filled": 0
+            },
+            "semantic": {
+              "raw_mean": 6.62,
+              "normalized": 0.6244444444444445,
+              "measured": 96,
+              "worst_filled": 0
+            }
           }
         },
         "threejs": {
@@ -6929,39 +7389,59 @@
             "geom": 31,
             "topo": 96,
             "judge": 96
+          },
+          "judge_submetrics": {
+            "geometry": {
+              "raw_mean": 4.26,
+              "normalized": 0.3622222222222222,
+              "measured": 96,
+              "worst_filled": 0
+            },
+            "aesthetics": {
+              "raw_mean": 5.38,
+              "normalized": 0.48666666666666664,
+              "measured": 96,
+              "worst_filled": 0
+            },
+            "semantic": {
+              "raw_mean": 6.51,
+              "normalized": 0.6122222222222222,
+              "measured": 96,
+              "worst_filled": 0
+            }
           }
         }
       },
-      "metrics": "0.454 0.891 0.412 0.910 0.525 1.000 0.495 1.000 0.543 0.844 0.487 1.000 0.507 0.912 0.465 0.970"
+      "metrics": "0.454 0.891 0.409 0.910 0.525 1.000 0.502 1.000 0.543 0.844 0.487 1.000 0.507 0.912 0.466 0.970"
     },
     {
       "formats": {
         "cadquery": {
           "geom": 0.28004,
           "topo": 0.5413836666666666,
-          "judge": 0.2722222222222222,
+          "judge": 0.2614814814814815,
           "valid": 0.5781
         },
         "openscad": {
           "geom": 0.49796000000000007,
           "topo": 0.9852363333333333,
-          "judge": 0.4433333333333333,
+          "judge": 0.43296296296296294,
           "valid": 0.9853
         },
         "threejs": {
           "geom": 0.5343199999999999,
           "topo": 0.768442,
-          "judge": 0.4872222222222222,
+          "judge": 0.47555555555555556,
           "valid": 1.0
         }
       },
       "average": {
         "geom": 0.43744,
         "topo": 0.7650206666666666,
-        "judge": 0.4009259259259259,
+        "judge": 0.39,
         "valid": 0.8544666666666666
       },
-      "score": 53.44621975308642,
+      "score": 53.08202222222222,
       "counts": {
         "total": 300,
         "tested": 196,
@@ -7240,6 +7720,26 @@
             "geom": 22,
             "topo": 37,
             "judge": 37
+          },
+          "judge_submetrics": {
+            "geometry": {
+              "raw_mean": 2.78,
+              "normalized": 0.19777777777777775,
+              "measured": 37,
+              "worst_filled": 27
+            },
+            "aesthetics": {
+              "raw_mean": 3.16,
+              "normalized": 0.24000000000000002,
+              "measured": 37,
+              "worst_filled": 27
+            },
+            "semantic": {
+              "raw_mean": 4.12,
+              "normalized": 0.3466666666666667,
+              "measured": 37,
+              "worst_filled": 27
+            }
           }
         },
         "openscad": {
@@ -7502,6 +8002,26 @@
             "geom": 37,
             "topo": 67,
             "judge": 67
+          },
+          "judge_submetrics": {
+            "geometry": {
+              "raw_mean": 3.85,
+              "normalized": 0.31666666666666665,
+              "measured": 67,
+              "worst_filled": 1
+            },
+            "aesthetics": {
+              "raw_mean": 4.71,
+              "normalized": 0.4122222222222222,
+              "measured": 67,
+              "worst_filled": 1
+            },
+            "semantic": {
+              "raw_mean": 6.13,
+              "normalized": 0.57,
+              "measured": 67,
+              "worst_filled": 1
+            }
           }
         },
         "threejs": {
@@ -7764,10 +8284,30 @@
             "geom": 12,
             "topo": 64,
             "judge": 61
+          },
+          "judge_submetrics": {
+            "geometry": {
+              "raw_mean": 4.26,
+              "normalized": 0.3622222222222222,
+              "measured": 61,
+              "worst_filled": 0
+            },
+            "aesthetics": {
+              "raw_mean": 5.07,
+              "normalized": 0.45222222222222225,
+              "measured": 61,
+              "worst_filled": 0
+            },
+            "semantic": {
+              "raw_mean": 6.51,
+              "normalized": 0.6122222222222222,
+              "measured": 61,
+              "worst_filled": 0
+            }
           }
         }
       },
-      "metrics": "0.280 0.541 0.272 0.578 0.498 0.985 0.443 0.985 0.534 0.768 0.487 1.000 0.437 0.765 0.401 0.854"
+      "metrics": "0.280 0.541 0.261 0.578 0.498 0.985 0.433 0.985 0.534 0.768 0.476 1.000 0.437 0.765 0.390 0.854"
     }
   ],
   "additional_formats": [
@@ -7779,10 +8319,10 @@
       "metrics": {
         "geom": 0.49682000000000004,
         "topo": 0.9995273333333333,
-        "judge": 0.3827777777777778,
+        "judge": 0.35777777777777775,
         "valid": 1.0
       },
-      "score": 62.63750370370371,
+      "score": 61.80417037037037,
       "coverage": {
         "total": 100,
         "tested": 100,
@@ -8047,7 +8587,37 @@
         "google/gemini-3.8-flash": 55,
         "gemini-3.8-flash": 45
       },
-      "provisional": false
+      "provisional": false,
+      "judge_submetrics": {
+        "geometry": {
+          "raw_mean": 3.58,
+          "normalized": 0.2866666666666667,
+          "measured": 100,
+          "worst_filled": 0
+        },
+        "aesthetics": {
+          "raw_mean": 3.77,
+          "normalized": 0.30777777777777776,
+          "measured": 100,
+          "worst_filled": 0
+        },
+        "semantic": {
+          "raw_mean": 5.31,
+          "normalized": 0.47888888888888886,
+          "measured": 100,
+          "worst_filled": 0
+        }
+      }
     }
-  ]
+  ],
+  "judge_axes": [
+    "geometry",
+    "aesthetics",
+    "semantic"
+  ],
+  "judge_reaggregation": {
+    "method": "Equal mean of all three normalized saved Judge axes; no model calls.",
+    "assembly_aggregate_source_sha256": "c796c4c19adeba8ce2f2773890981004f57cb25318baa2b301362aba991b7f28",
+    "population": "Same release snapshot; coverage, non-Judge buckets and costs retained."
+  }
 }

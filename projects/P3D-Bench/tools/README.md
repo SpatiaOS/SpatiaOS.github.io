@@ -4,9 +4,9 @@ The public page has one leaderboard, showing current Assembly, Text and Image
 results in that order. There is no Paper/Live switch.
 Keep `leaderboard-renderer.fragment.js` and the source `ResultsTables`
 component aligned with that presentation when patching the active bundle.
-The overview figure is the ICLR 2027 teaser: updated Assembly models, with
-the original Text/Image models retained as a transition and labeled in the
-figure. SVG, PDF and PNG copies must be synchronized together, and the SVG
+The overview figure uses the ICLR 2027 teaser design with current Assembly,
+Text and Image models. Each panel follows its published website summary; Text
+retains its existing fixed-denominator scores. SVG, PDF and PNG copies must be synchronized together, and the SVG
 and PDF URLs versioned whenever that figure changes. Use the Doubao icon
 (`demo/icons/src/doubao-color.svg`) for the Doubao family.
 
@@ -189,7 +189,7 @@ license alongside the icon at `demo/icons/src/grok.LICENSE`.
 `live-image-summary.json` contains nine current models on the same 100 Image
 UIDs in CadQuery, OpenSCAD and Three.js, frozen at **2026-09-15 23:01:23 +08:00**.
 The score is the equal-format average of Geo, Topo and Judge, multiplied by 100.
-Judge uses geometry and semantic axes. Valid is reported separately. The current
+Judge uses the equal mean of geometry, aesthetics and semantic axes, normalized by `(s - 1) / 9`. Valid is reported separately. The current
 Image result is provisional in the source metadata: GPT has 257/300 tested cases, Opus 277/300, and
 Doubao 196/300. The other six models have all 300 tested, with 66 successful
 exports collectively awaiting local evaluation. Doubao has three further judge
@@ -214,9 +214,9 @@ comparison estimates, not current price quotations or account expenditure.
 Assembly's nine existing rows, coverage and audited costs exactly match a fresh
 snapshot; `latest_verification` records its source hashes. The two-format score
 remains intact. Gemini's imported JSON and Three.js results are retained
-in the summary JSON: **62.35** (100/100 tested) and
-**63.92** (97/100 tested, 96/97 judged). Image's additional Gemini JSON result is
-**62.64** with all 100 tested and judged. Each extra row has a single-format
+in the summary JSON: **61.96** (100/100 tested) and
+**63.82** (97/100 tested, 96/97 judged). Image's additional Gemini JSON result is
+**61.80** with all 100 tested and judged. Each extra row has a single-format
 score and does not enter the main leaderboard average. Per the maintainer's
 display preference, the page uses the title “Image-to-3D”, with no snapshot
 footer, Hard100 suffix or Additional formats section. MiMo remains paused and
@@ -240,3 +240,14 @@ before retaining its cost audit. Additional-format checkpoints are frozen on
 first import and reused, so later running jobs cannot silently alter a repeat
 import. Only aggregate summaries, source hashes and historical pricing enter
 the public repo. Full checkpoints stay in the private audit directory.
+
+### Three-axis Judge correction
+
+Both Image and Assembly now include aesthetics in Judge. The release keeps the same frozen cases, coverage, non-Judge buckets and costs. `judge_submetrics` records the raw means, normalized axes and denominators. To reapply the correction from the private release audit, run:
+
+```bash
+python projects/P3D-Bench/tools/judge_three_axis.py --assembly-results /absolute/private/path/to/AUDIT/assembly/full_results.json
+node projects/P3D-Bench/tools/update-live-image-assembly.mjs
+```
+
+The importer also restores all three axes, including additional Gemini formats, before writing future summaries. No evaluator calls are made.

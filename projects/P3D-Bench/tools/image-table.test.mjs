@@ -11,7 +11,7 @@ const assembly = JSON.parse(readFileSync(new URL("../live-assembly-summary.json"
 test("Image uses current nine-model Hard100 data and records all coverage gaps", () => {
   const table = buildImageTable(summary);
   assert.deepEqual(table.rows.map(r => r.model_id), IMAGE_MODELS);
-  assert.deepEqual(table.rows.map(r => r.cells.split(" ").at(-2)), ["71.66", "66.80", "66.45", "66.34", "65.93", "64.95", "64.70", "62.79", "53.45"]);
+  assert.deepEqual(table.rows.map(r => r.cells.split(" ").at(-2)), ["72.08", "66.99", "66.45", "66.05", "66.03", "64.93", "64.67", "62.84", "53.08"]);
   assert.equal(table.metrics.length, 20);
   assert.equal(table.groups.reduce((n, g) => n + g.span, 0), 20);
   assert(table.rows.every(r => r.cells.split(" ").length === 20));
@@ -44,9 +44,9 @@ test("reject mismatched cohort, changed scores, weighting, validity and cost cov
 
 test("additional Gemini formats have independent per-format scores and coverage", () => {
   const tables = buildAdditionalFormatTables(assembly.additional_formats, "assembly");
-  assert.deepEqual(tables[0].rows.map(r => r.cells.split(" ").at(-2)), ["62.35", "63.92"]);
+  assert.deepEqual(tables[0].rows.map(r => r.cells.split(" ").at(-2)), ["61.96", "63.82"]);
   assert.match(tables[0].rows[1].cells, /97\/100 96\/97/);
-  assert.equal(buildAdditionalFormatTables(summary.additional_formats, "image")[0].rows[0].cells.split(" ").at(-2), "62.64");
+  assert.equal(buildAdditionalFormatTables(summary.additional_formats, "image")[0].rows[0].cells.split(" ").at(-2), "61.80");
   const bad = structuredClone(assembly.additional_formats);
   bad[0].score += 1;
   assert.throws(() => buildAdditionalFormatTables(bad, "assembly"), /score/);

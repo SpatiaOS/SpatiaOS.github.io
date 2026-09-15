@@ -14,6 +14,7 @@ import hashlib
 import json
 from pathlib import Path
 import sys
+from judge_three_axis import restore, components
 
 FORMATS = ("cadquery", "openscad", "threejs")
 AXES = ("geom", "topo", "judge")
@@ -57,10 +58,9 @@ def extra_formats(args, task, formats, expected_uids):
         tested = [c for c in cases if not c.get("llm_failed")]
         valid = [c for c in tested if c.get("valid")]
         judged = [c for c in valid if not (c.get("judge") or {}).get("error") and all(
-            isinstance((c.get("judge") or {}).get(k), (int, float)) for k in ("geometry", "semantic"))]
+            isinstance((c.get("judge") or {}).get(k), (int, float)) for k in ("geometry", "aesthetics", "semantic"))]
         aggregate = compute_combo_aggregate(cases, task_name=task_name, metadata=doc["metadata"])
         scoring = copy.deepcopy(aggregate)
-        scoring.pop("judge_aesthetics_mean_filled", None)
         buckets = compute_buckets_absolute(scoring, list(axes))
         assert set(buckets["scores"]) == set(axes)
         metrics = {**buckets["scores"], "valid": len(valid) / len(tested)}
@@ -85,18 +85,23 @@ def main(args):
     root = Path(__file__).resolve().parents[1]
     image = read(args.audit / "image/leaderboard.json")
     assembly = read(args.audit / "assembly/comparison.json")
+    assembly_full = read(args.audit / "assembly/full_results.json")
     summary = read(root / "live-assembly-summary.json")
     score_rows = {r["combo_key"]: r for r in read(args.audit / "assembly/aggregate_metric_website/scores.json")}
     # Existing costs remain tied to the same tested population and unchanged rows.
     assert {r["model_id"] for r in summary["rows"]} == {r["model"] for r in assembly["rankings"]}
     for row in summary["rows"]:
         current = next(r for r in assembly["rankings"] if r["model"] == row["model_id"])
-        assert abs(row["score"]-current["score"]) < 1e-10, "Assembly score changed: review cost audit before import"
+        assert min(abs(row["score"]-current[k]) for k in ("score", "current_three_axis_judge_score")) < 1e-10, "Assembly score changed: review cost audit before import"
         for fmt, values in row["formats"].items():
             key = f"text_image2cad/{row['model_id']}-reason/{fmt}"
             assert values["coverage"] == assembly["coverage"][key]
             for axis in (*AXES, "part"):
-                assert abs(values["metrics"][axis]-score_rows[key]["buckets_abs"][axis]) < 1e-10
+                expected = [score_rows[key]["buckets_abs"][axis]]
+                if axis == "judge":
+                    submetrics = components(assembly_full[key]["aggregate"])
+                    expected.append(sum(v["normalized"] for v in submetrics.values()) / 3)
+                assert min(abs(values["metrics"][axis]-v) for v in expected) < 1e-10
     summary["verified_at"] = image["snapshot_at"]
     summary["latest_verification"] = dict(source_sha256=digest(args.audit / "assembly/comparison.json"),
         model_count=len(summary["rows"]), all_metrics_and_coverage_match=True,
@@ -121,6 +126,7 @@ def main(args):
         checkpoint_sources=[{k: s[k] for k in ("model", "format", "sha256")} for s in image["sources"]],
         uniform_evaluator_claim=False, rows=rows,
         additional_formats=extra_formats(args, "image", ("json",), image_uids))
+    restore(summary, public, assembly_full, digest(args.audit / "assembly/full_results.json"))
     write(root / "live-image-summary.json", public)
     write(root / "live-assembly-summary.json", summary)
     write(root / "image-api-pricing.json", read(args.audit / "image/pricing_snapshot.json"))

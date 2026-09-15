@@ -1,0 +1,209 @@
+{
+  "source_url": "https://spatiaos.github.io/projects/P3D-Bench/",
+  "retrieved_on": "2026-09-15T23:01:23+08:00",
+  "score_scale": [
+    0,
+    100
+  ],
+  "display_decimals": 1,
+  "models": [
+    {
+      "id": "gpt6_astra_local",
+      "label": "GPT-6 Astra",
+      "family": "openai",
+      "color": "#304771",
+      "bar_label": "Astra"
+    },
+    {
+      "id": "gpt6_probe",
+      "label": "GPT-6",
+      "family": "openai",
+      "color": "#304771"
+    },
+    {
+      "id": "gemini38_flash",
+      "label": "Gemini 3.8 Flash",
+      "family": "gemini",
+      "color": "#3F5E8B"
+    },
+    {
+      "id": "claude_opus5",
+      "label": "Claude Opus 5",
+      "family": "claude",
+      "color": "#4E779E"
+    },
+    {
+      "id": "kimi_k3",
+      "label": "Kimi K3",
+      "family": "kimi",
+      "color": "#6993AB"
+    },
+    {
+      "id": "glm53_official",
+      "label": "GLM-5.3",
+      "family": "zai",
+      "color": "#83ADB4",
+      "bar_label": "5.3"
+    },
+    {
+      "id": "glm53_flash",
+      "label": "GLM-5.3-Flash",
+      "family": "zai",
+      "color": "#83ADB4",
+      "bar_label": "Flash"
+    },
+    {
+      "id": "deepseek41_flash",
+      "label": "DeepSeek V4.1 Flash",
+      "family": "deepseek",
+      "color": "#E3C49C"
+    },
+    {
+      "id": "qwen38max",
+      "label": "Qwen3.8-Max",
+      "family": "qwen",
+      "color": "#B0C2B8"
+    },
+    {
+      "id": "grok46",
+      "label": "Grok 4.6",
+      "family": "grok",
+      "color": "#5B879F"
+    },
+    {
+      "id": "doubao_seed21",
+      "label": "Doubao Seed 2.1 Pro",
+      "family": "doubao",
+      "color": "#EDD7C0"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "assembly",
+      "label": "Assembly-3D",
+      "scores": {
+        "gpt6_astra_local": 75.27303425925926,
+        "claude_opus5": 69.9984800925926,
+        "gemini38_flash": 68.53701111111111,
+        "grok46": 67.09998101851852,
+        "kimi_k3": 66.57730231481482,
+        "glm53_flash": 65.80641435185186,
+        "qwen38max": 65.79946944444444,
+        "deepseek41_flash": 64.55025416666666,
+        "doubao_seed21": 42.4458537037037
+      },
+      "result_version": "Current models",
+      "source_kind": "live_leaderboard",
+      "source": "live-assembly-summary.json",
+      "legend_group": "models"
+    },
+    {
+      "id": "text",
+      "label": "Text-to-3D",
+      "scores": {
+        "gpt6_probe": 89.13754413888888,
+        "gemini38_flash": 87.17949630555555,
+        "qwen38max": 87.12989048611112,
+        "grok46": 86.70336465277776,
+        "kimi_k3": 86.57049916666666,
+        "claude_opus5": 86.49335904166666,
+        "glm53_official": 85.69514065277778,
+        "deepseek41_flash": 85.43891698611111,
+        "doubao_seed21": 84.66158294444445,
+        "glm53_flash": 82.34031143055556
+      },
+      "result_version": "Current models",
+      "source_kind": "fixed100_recomputed",
+      "source_file": "data/text100/recomputed_main_results.csv",
+      "legend_group": "models",
+      "source": "live-text-summary.json"
+    },
+    {
+      "id": "image",
+      "label": "Image-to-3D",
+      "scores": {
+        "gpt6_astra_local": 72.08431975308642,
+        "claude_opus5": 66.99395555555554,
+        "gemini38_flash": 66.44887407407407,
+        "qwen38max": 66.04777736625515,
+        "kimi_k3": 66.0267205761317,
+        "glm53_flash": 64.93369547325103,
+        "grok46": 64.67326008230452,
+        "deepseek41_flash": 62.835760905349794,
+        "doubao_seed21": 53.08202222222222
+      },
+      "result_version": "Current models",
+      "source_kind": "original_paper_figure",
+      "source_file": "../aaai27-overleaf/scripts/make_fig_tasks_grouped.py",
+      "legend_group": "models",
+      "source": "live-image-summary.json"
+    }
+  ],
+  "assembly_source_rows": [
+    {
+      "model": "GPT-6 Astra",
+      "model_id": "gpt6_astra_local",
+      "family": "openai",
+      "cells": "0.731 0.916 0.588 0.746 0.989 0.724 1.000 0.602 0.708 1.000 0.728 0.958 0.595 0.727 0.994 75.18 $1.315"
+    },
+    {
+      "model": "Claude Opus 5",
+      "model_id": "claude_opus5",
+      "family": "claude",
+      "cells": "0.619 0.971 0.526 0.704 1.000 0.600 1.000 0.514 0.665 1.000 0.609 0.985 0.520 0.685 1.000 69.99 $0.995"
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "model_id": "gemini38_flash",
+      "family": "gemini",
+      "cells": "0.589 0.948 0.529 0.627 0.979 0.616 1.000 0.535 0.644 1.000 0.603 0.974 0.532 0.635 0.990 68.61 $0.158"
+    },
+    {
+      "model": "Grok 4.6",
+      "model_id": "grok46",
+      "family": "grok",
+      "cells": "0.561 0.951 0.476 0.620 1.000 0.608 1.000 0.518 0.636 1.000 0.585 0.976 0.497 0.628 1.000 67.12 $0.305"
+    },
+    {
+      "model": "Kimi K3",
+      "model_id": "kimi_k3",
+      "family": "kimi",
+      "cells": "0.554 0.898 0.487 0.663 0.979 0.582 1.000 0.498 0.665 1.000 0.568 0.949 0.493 0.664 0.990 66.82 $0.575"
+    },
+    {
+      "model": "Qwen 3.8 Max",
+      "model_id": "qwen38max",
+      "family": "qwen",
+      "cells": "0.527 0.918 0.462 0.615 0.978 0.596 1.000 0.497 0.662 1.000 0.562 0.959 0.480 0.639 0.989 65.97 $0.121"
+    },
+    {
+      "model": "GLM 5.3 Flash",
+      "model_id": "glm53_flash",
+      "family": "zai",
+      "cells": "0.563 0.923 0.467 0.615 0.977 0.573 1.000 0.496 0.629 1.000 0.568 0.962 0.481 0.622 0.989 65.82 $0.034"
+    },
+    {
+      "model": "DeepSeek V4.1 Flash",
+      "model_id": "deepseek41_flash",
+      "family": "deepseek",
+      "cells": "0.541 0.913 0.457 0.621 0.968 0.563 0.990 0.473 0.609 0.990 0.552 0.951 0.465 0.615 0.979 64.58 $0.072"
+    },
+    {
+      "model": "Doubao Seed 2.1 Pro",
+      "model_id": "doubao_seed21",
+      "family": "doubao",
+      "cells": "0.206 0.393 0.168 0.221 0.410 0.499 0.980 0.391 0.554 0.980 0.352 0.686 0.279 0.388 0.695 42.64 $0.285"
+    }
+  ],
+  "transition_note": "Assembly retains the local updated leaderboard, Text uses the fixed-100 source reaggregated under the existing manuscript rules, and Image retains its original model versions and scores.",
+  "legend_groups": {
+    "models": {
+      "title": "Models",
+      "labels": {
+        "openai": "GPT-6 / GPT-6 Astra",
+        "zai": "GLM-5.3 / GLM-5.3-Flash"
+      }
+    }
+  },
+  "text_policy": "The website retains the published fixed-denominator Text scores. The local paper uses its separately recomputed Text scores."
+}

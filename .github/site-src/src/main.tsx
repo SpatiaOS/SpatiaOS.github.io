@@ -671,8 +671,8 @@ function MainFigures() {
   return (
     <div className="main-figures">
       <figure className="leaderboard-figure">
-        <a href="./figures/fig_tasks_grouped_bars.pdf?v=iclr2027-46c89f3d83c3" aria-label="Open leaderboard figure PDF">
-          <img src="./figures/fig_tasks_grouped_bars.svg?v=iclr2027-46c89f3d83c3" alt="Task overview: Assembly-3D with updated models, followed by original Text-to-3D and Image-to-3D results" />
+        <a href="./figures/fig_tasks_grouped_bars.pdf?v=three-axis-6cf4cdb2d003" aria-label="Open leaderboard figure PDF">
+          <img src="./figures/fig_tasks_grouped_bars.svg?v=three-axis-6cf4cdb2d003" alt="Current model scores for Assembly-3D, Text-to-3D and Image-to-3D" />
         </a>
       </figure>
     </div>
