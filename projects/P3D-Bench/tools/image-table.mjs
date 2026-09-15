@@ -88,14 +88,13 @@ export function buildImageTable(summary) {
     cost(row.cost_usd_per_case, row.counts);
   }
   return {
-    key: "image", title: "Image-to-3D · Hard100", accent: "var(--teal)",
+    key: "image", title: "Image-to-3D", accent: "var(--teal)",
     groups: ["CadQuery", "OpenSCAD", "Three.js", "Average"].map(label => ({ label, span: 4 }))
       .concat([{ label: "Coverage", span: 2 }, { label: "Score / Cost", span: 2 }]),
     metrics: Array.from({ length: 4 }, () => ["Geo", "Topo", "Judge", "Valid"]).flat().concat(["Tested", "Judged", "Score", "USD / case"]),
     rows: [...summary.rows].sort((a, b) => b.score - a.score).map(row => ({ model: row.model,
       model_id: row.model_id, family: row.family,
       cells: `${row.metrics} ${row.counts.tested}/300 ${row.counts.judge_ok}/${row.counts.valid} ${row.score.toFixed(2)} ${cost(row.cost_usd_per_case, row.counts)}` })),
-    note: `Snapshot ${summary.snapshot_at.replace("T", " ")}. Scores are provisional where coverage is incomplete. Tested excludes API failures; Judged counts scored valid outputs. Valid measures successful exports; missing evaluations are excluded from metric means. Score averages Geo, Topo and Judge equally across three formats. Costs use saved generation tokens at the frozen September 10/11 API rates.`,
-    extraTables: buildAdditionalFormatTables(summary.additional_formats, "image"),
+    note: "",
   };
 }

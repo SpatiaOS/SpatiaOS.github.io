@@ -1,7 +1,6 @@
 import { createHash } from "node:crypto";
 import { readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
-import { buildAdditionalFormatTables } from "./image-table.mjs";
 
 // Find complete data literals without interpreting or executing bundle code.
 function literalEnd(input, start) {
@@ -201,7 +200,6 @@ export function buildAssemblyTable(summary) {
   if ([...expected].some((model) => !seen.has(model))) throw new Error("missing original Assembly model");
   return {
     ...summary.table,
-    extraTables: buildAdditionalFormatTables(summary.additional_formats, "assembly"),
     // The live Assembly table has no methodology footer; audits stay in JSON.
     note: "",
     rows: [...summary.rows].sort((a, b) => b.score - a.score).map((row) => ({

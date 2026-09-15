@@ -19,7 +19,9 @@ test("Image uses current nine-model Hard100 data and records all coverage gaps",
   assert.equal(table.rows[2].cells.split(" ")[17], "285/297");
   assert.equal(table.rows.at(-1).cells.split(" ")[16], "196/300");
   assert(summary.rows.every(r => r.provisional));
-  assert.match(table.note, /provisional/);
+  assert.equal(table.title, "Image-to-3D");
+  assert.equal(table.note, "");
+  assert.equal(table.extraTables, undefined);
 });
 
 test("reject mismatched cohort, changed scores, weighting, validity and cost coverage", () => {
@@ -44,7 +46,7 @@ test("additional Gemini formats have independent per-format scores and coverage"
   const tables = buildAdditionalFormatTables(assembly.additional_formats, "assembly");
   assert.deepEqual(tables[0].rows.map(r => r.cells.split(" ").at(-2)), ["62.35", "63.92"]);
   assert.match(tables[0].rows[1].cells, /97\/100 96\/97/);
-  assert.equal(buildImageTable(summary).extraTables[0].rows[0].cells.split(" ").at(-2), "62.64");
+  assert.equal(buildAdditionalFormatTables(summary.additional_formats, "image")[0].rows[0].cells.split(" ").at(-2), "62.64");
   const bad = structuredClone(assembly.additional_formats);
   bad[0].score += 1;
   assert.throws(() => buildAdditionalFormatTables(bad, "assembly"), /score/);

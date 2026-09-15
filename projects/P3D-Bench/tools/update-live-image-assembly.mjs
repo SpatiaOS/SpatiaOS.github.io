@@ -11,7 +11,7 @@ const assemblyRaw = readFileSync(join(root, "live-assembly-summary.json"), "utf8
 const original = readActiveBundle(root);
 let patched = replaceLiveTable(original.input, buildAssemblyTable(JSON.parse(assemblyRaw)), { first: true });
 patched = replaceLiveTable(patched, buildImageTable(JSON.parse(imageRaw)), { append: true });
-const anchor = '      sub.note ? D.jsx("p", { className: "rt-note", children: sub.note }) : null,';
+// Retire the previous expandable format tables from existing release bundles.
 const extension = `
       sub.extraTables?.length ? D.jsxs("details", {
         className: "rt-extra-formats",
@@ -20,9 +20,9 @@ const extension = `
           sub.extraTables.map((table) => D.jsx(x2, { sub: table }, table.key)),
         ],
       }) : null,`;
-if (!patched.includes(extension)) {
-  if (patched.split(anchor).length !== 2) throw new Error("leaderboard renderer anchor changed");
-  patched = patched.replace(anchor, anchor + extension);
+if (patched.includes(extension)) {
+  if (patched.split(extension).length !== 2) throw new Error("leaderboard renderer anchor changed");
+  patched = patched.replace(extension, "");
 }
 const name = writeActiveBundle(root, original, patched, "image-assembly");
 writeFileSync(join(root, "../../.github/site-src/src/liveImageSummary.json"), imageRaw);

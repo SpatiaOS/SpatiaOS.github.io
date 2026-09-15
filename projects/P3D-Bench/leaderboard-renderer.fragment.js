@@ -175,13 +175,6 @@ function x2({ sub }) {
         }),
       }),
       sub.note ? D.jsx("p", { className: "rt-note", children: sub.note }) : null,
-      sub.extraTables?.length ? D.jsxs("details", {
-        className: "rt-extra-formats",
-        children: [
-          D.jsx("summary", { children: "Additional formats · Gemini 3.8 Flash" }),
-          sub.extraTables.map((table) => D.jsx(x2, { sub: table }, table.key)),
-        ],
-      }) : null,
     ],
   });
 }

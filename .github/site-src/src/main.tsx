@@ -884,12 +884,6 @@ function ResultsSubtableTable({ subtable }: { subtable: ResultSubtable }) {
         </table>
       </div>
       {subtable.note ? <p className="rt-note">{subtable.note}</p> : null}
-      {subtable.extraTables?.length ? (
-        <details className="rt-extra-formats">
-          <summary>Additional formats · Gemini 3.8 Flash</summary>
-          {subtable.extraTables.map(table => <ResultsSubtableTable subtable={table} key={table.key} />)}
-        </details>
-      ) : null}
     </div>
   );
 }

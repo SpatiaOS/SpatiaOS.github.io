@@ -190,7 +190,7 @@ license alongside the icon at `demo/icons/src/grok.LICENSE`.
 UIDs in CadQuery, OpenSCAD and Three.js, frozen at **2026-09-15 23:01:23 +08:00**.
 The score is the equal-format average of Geo, Topo and Judge, multiplied by 100.
 Judge uses geometry and semantic axes. Valid is reported separately. The current
-Image result is provisional: GPT has 257/300 tested cases, Opus 277/300, and
+Image result is provisional in the source metadata: GPT has 257/300 tested cases, Opus 277/300, and
 Doubao 196/300. The other six models have all 300 tested, with 66 successful
 exports collectively awaiting local evaluation. Doubao has three further judge
 gaps at this snapshot. Tested and Judged coverage appear in the table.
@@ -213,11 +213,13 @@ comparison estimates, not current price quotations or account expenditure.
 
 Assembly's nine existing rows, coverage and audited costs exactly match a fresh
 snapshot; `latest_verification` records its source hashes. The two-format score
-remains intact. Gemini's newly imported JSON and Three.js results are available
-in the expandable Additional formats table: **62.35** (100/100 tested) and
+remains intact. Gemini's imported JSON and Three.js results are retained
+in the summary JSON: **62.35** (100/100 tested) and
 **63.92** (97/100 tested, 96/97 judged). Image's additional Gemini JSON result is
 **62.64** with all 100 tested and judged. Each extra row has a single-format
-score and does not enter the main leaderboard average. MiMo remains paused and
+score and does not enter the main leaderboard average. Per the maintainer's
+display preference, the page uses the title “Image-to-3D”, with no snapshot
+footer, Hard100 suffix or Additional formats section. MiMo remains paused and
 is not included. Original 3D examples and figure assets are unchanged.
 
 To reproduce, use the benchmark environment to freeze Image and Assembly reports
