@@ -7,8 +7,9 @@ const summary = JSON.parse(readFileSync(new URL("../live-text-summary.json", imp
 
 test("current ten models retain exact scores and both tasks' validity", () => {
   validateTextSummary(summary);
-  assert.deepEqual(summary.rows.map(r => r.model_id), TEXT_MODELS);
-  assert.deepEqual(summary.rows.map(r => r.score.toFixed(2)), ["89.14", "87.18", "87.13", "86.70", "86.57", "86.49", "85.70", "85.44", "84.66", "82.34"]);
+  assert.deepEqual(summary.rows.map(r => r.model_id).sort(), [...TEXT_MODELS].sort());
+  assert.equal(summary.metric_policy, "aaai_frozen_common_metric_success_summary");
+  assert.deepEqual(summary.rows.map(r => r.score.toFixed(2)), ["89.30", "87.45", "87.34", "86.92", "86.85", "86.63", "86.01", "85.59", "84.98", "82.65"]);
   for (const row of summary.rows) assert.equal(row.metrics.split(" ").length, 18);
 });
 

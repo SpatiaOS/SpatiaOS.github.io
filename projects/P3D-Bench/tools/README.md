@@ -120,9 +120,10 @@ row's `generation_cost`, set `cost_usd` from `usd_per_case × 100`, then run the
 Assembly updater. The updater rejects missing usage or inconsistent denominators.
 
 Text uses `../live-text-summary.json` (`p3d-live-text-summary-v2`): exactly ten
-current models, fixed-100, JSON/OpenSCAD only in the main table. Scores preserve
-the existing fixed-100 aggregation, including zero contribution for inapplicable
-IoU; they are sorted before rounding and displayed to two decimals. The eighteen
+current models, fixed-100, JSON/OpenSCAD only in the main table. Scores follow
+the owner-specified AAAI table implementation: valid measured IoU mean weighted
+by common metric-success count / 100. Inapplicable IoU is not a measured zero.
+Scores are sorted before rounding and displayed to two decimals. The eighteen
 metric cells are checked against the per-format values and equal-weight means.
 All ten current Text rows require a supported numeric dollar value; do not show
 `N/A`, an approximation marker, or substitute a zero. Kimi retains its separate
