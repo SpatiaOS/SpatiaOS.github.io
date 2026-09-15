@@ -1,4 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
+import { mergeLiveTextManifest } from "../../../projects/P3D-Bench/tools/text-demo.mjs";
+import "../../../projects/P3D-Bench/assets/text-demo-overrides.css";
 import { createRoot } from "react-dom/client";
 import { BookOpen, ChevronDown, ChevronUp, Code2, Github, Image as ImageIcon, Layers3, Play } from "lucide-react";
 import * as THREE from "three";
@@ -40,6 +42,7 @@ type Run = {
 
 type Manifest = {
   schema_version: number;
+  text_showcase?: ShowcaseComparison;
   paper: {
     title: string;
     authors: string[];
@@ -175,7 +178,11 @@ function App() {
   useEffect(() => {
     fetch(asset("manifest.json"))
       .then((res) => (res.ok ? res.json() : fallbackManifest))
-      .then((data) => setManifest(data))
+      .then(async (data) => {
+        const response = await fetch(asset("text-live-fixed100.json?v=b90861762efd"));
+        if (!response.ok) throw new Error("Text live data unavailable");
+        setManifest(mergeLiveTextManifest(data, await response.json()));
+      })
       .catch(() => setManifest(fallbackManifest));
   }, []);
 
@@ -195,8 +202,8 @@ function App() {
   const taskRuns = useMemo(() => completeTaskRuns.filter((run) => interactiveCaseIds.has(run.case_id)), [completeTaskRuns, interactiveCaseIds]);
   const cases = useMemo(() => manifest.cases.filter((item) => item.task === task && interactiveCaseIds.has(item.id)), [interactiveCaseIds, manifest, task]);
   const exactRun = useMemo(
-    () => taskRuns.find((run) => run.case_id === caseId && run.model === model && run.format === format),
-    [caseId, format, model, taskRuns]
+    () => taskRuns.find((run) => run.case_id === caseId && run.model === model && run.format === format && run.spec === spec),
+    [caseId, format, model, spec, taskRuns]
   );
   const selectedRun = useMemo(
     () => exactRun || pickDefaultRun(taskRuns.filter((run) => run.case_id === caseId && run.model === model)) || pickDefaultRun(taskRuns.filter((run) => run.case_id === caseId)) || pickDefaultRun(taskRuns),
@@ -419,6 +426,7 @@ function buildShowcaseComparisons(manifest: Manifest): ShowcaseComparison[] {
 
   return taskOrder
     .map((task) => {
+      if (task === "text2cad" && manifest.text_showcase) return manifest.text_showcase;
       const cases = manifest.cases.filter((item) => item.task === task);
       const availableFormats = Array.from(new Set(completeRuns.filter((run) => run.task === task).map((run) => run.format)));
       const formats = Array.from(new Set([...(formatPreference[task] || []), ...availableFormats])).filter((formatName) => availableFormats.includes(formatName));

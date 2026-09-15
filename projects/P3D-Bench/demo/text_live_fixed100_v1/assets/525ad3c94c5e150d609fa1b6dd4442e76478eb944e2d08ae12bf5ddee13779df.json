@@ -1,0 +1,236 @@
+{
+  "design_parameters": {
+    "base": {
+      "outer_radius": 2.0,
+      "height": 0.5,
+      "description": "Low circular (rounded in plan) base section"
+    },
+    "sleeve": {
+      "outer_radius": 1.0,
+      "height": 3.0,
+      "bore_radius": 0.5,
+      "description": "Tall hollow annular sleeve, central bore runs fully through both base and sleeve as a through hole, not a blind depression"
+    },
+    "side_arm": {
+      "total_width": 1.2,
+      "half_width": 0.6,
+      "rounded_end_radius": 0.6,
+      "tip_x_coordinate": 4.0,
+      "top_surface_z": 2.0,
+      "inner_section_total_depth": 1.5,
+      "outer_section_thickness": 0.5,
+      "step_x_coordinate": 1.9,
+      "description": "Projecting side arm with stepped underside formed by a lower cutaway, outer portion sits on a higher tier"
+    },
+    "arm_end_hole": {
+      "radius": 0.15,
+      "center": [3.8, 0.0],
+      "description": "Real through rounded opening in the arm's rounded outer end"
+    },
+    "top_rib": {
+      "raised_height": 0.2,
+      "base_width_at_sleeve": 0.2,
+      "apex_at_arm_tip": [4.0, 0.0],
+      "description": "Thin triangular raised reinforcing web running from the arm's rounded end toward the sleeve"
+    }
+  },
+  "feature_sequence_notes": {
+    "part_1": "Create new solid body: low profile circular rounded base centered at origin",
+    "part_2": "Join feature: add tall solid sleeve cylinder centered on the base",
+    "part_3": "Cut feature: create full-through central bore passing through entire base and sleeve to make the sleeve annular/hollow",
+    "part_4": "Join feature: add full-depth projecting side arm with rounded outer end, attached to the sleeve and base",
+    "part_5": "Cut feature: remove lower material from the outer arm section to create the stepped underside, leaving the outer arm on a higher tier",
+    "part_6": "Cut feature: create the rounded through-hole opening in the arm's rounded end",
+    "part_7": "Join feature: add the thin triangular raised rib on top, connecting the arm tip to the sleeve"
+  },
+  "parts": {
+    "part_1": {
+      "coordinate_system": {
+        "Euler Angles": [0.0, 0.0, 0.0],
+        "Translation Vector": [0.0, 0.0, 0.0]
+      },
+      "sketch": {
+        "face_1": {
+          "loop_1": {
+            "circle_1": {
+              "Center": [0.0, 0.0],
+              "Radius": 2.0
+            }
+          }
+        }
+      },
+      "extrusion": {
+        "extrude_depth_towards_normal": 0.5,
+        "extrude_depth_opposite_normal": 0.0,
+        "sketch_scale": 1.0,
+        "operation": "NewBodyFeatureOperation"
+      }
+    },
+    "part_2": {
+      "coordinate_system": {
+        "Euler Angles": [0.0, 0.0, 0.0],
+        "Translation Vector": [0.0, 0.0, 0.5]
+      },
+      "sketch": {
+        "face_1": {
+          "loop_1": {
+            "circle_1": {
+              "Center": [0.0, 0.0],
+              "Radius": 1.0
+            }
+          }
+        }
+      },
+      "extrusion": {
+        "extrude_depth_towards_normal": 3.0,
+        "extrude_depth_opposite_normal": 0.0,
+        "sketch_scale": 1.0,
+        "operation": "JoinFeatureOperation"
+      }
+    },
+    "part_3": {
+      "coordinate_system": {
+        "Euler Angles": [0.0, 0.0, 0.0],
+        "Translation Vector": [0.0, 0.0, 0.0]
+      },
+      "sketch": {
+        "face_1": {
+          "loop_1": {
+            "circle_1": {
+              "Center": [0.0, 0.0],
+              "Radius": 0.5
+            }
+          }
+        }
+      },
+      "extrusion": {
+        "extrude_depth_towards_normal": 3.5,
+        "extrude_depth_opposite_normal": 0.0,
+        "sketch_scale": 1.0,
+        "operation": "CutFeatureOperation"
+      }
+    },
+    "part_4": {
+      "coordinate_system": {
+        "Euler Angles": [0.0, 0.0, 0.0],
+        "Translation Vector": [0.0, 0.0, 2.0]
+      },
+      "sketch": {
+        "face_1": {
+          "loop_1": {
+            "line_1": {
+              "Start Point": [0.8, 0.6],
+              "End Point": [3.4, 0.6]
+            },
+            "arc_1": {
+              "Start Point": [3.4, 0.6],
+              "Mid Point": [4.0, 0.0],
+              "End Point": [3.4, -0.6]
+            },
+            "line_2": {
+              "Start Point": [3.4, -0.6],
+              "End Point": [0.8, -0.6]
+            },
+            "line_3": {
+              "Start Point": [0.8, -0.6],
+              "End Point": [0.8, 0.6]
+            }
+          }
+        }
+      },
+      "extrusion": {
+        "extrude_depth_towards_normal": 0.0,
+        "extrude_depth_opposite_normal": 1.5,
+        "sketch_scale": 1.0,
+        "operation": "JoinFeatureOperation"
+      }
+    },
+    "part_5": {
+      "coordinate_system": {
+        "Euler Angles": [0.0, 0.0, 0.0],
+        "Translation Vector": [0.0, 0.0, 0.5]
+      },
+      "sketch": {
+        "face_1": {
+          "loop_1": {
+            "line_1": {
+              "Start Point": [1.9, 0.6],
+              "End Point": [3.4, 0.6]
+            },
+            "arc_1": {
+              "Start Point": [3.4, 0.6],
+              "Mid Point": [4.0, 0.0],
+              "End Point": [3.4, -0.6]
+            },
+            "line_2": {
+              "Start Point": [3.4, -0.6],
+              "End Point": [1.9, -0.6]
+            },
+            "line_3": {
+              "Start Point": [1.9, -0.6],
+              "End Point": [1.9, 0.6]
+            }
+          }
+        }
+      },
+      "extrusion": {
+        "extrude_depth_towards_normal": 1.0,
+        "extrude_depth_opposite_normal": 0.0,
+        "sketch_scale": 1.0,
+        "operation": "CutFeatureOperation"
+      }
+    },
+    "part_6": {
+      "coordinate_system": {
+        "Euler Angles": [0.0, 0.0, 0.0],
+        "Translation Vector": [0.0, 0.0, 2.0]
+      },
+      "sketch": {
+        "face_1": {
+          "loop_1": {
+            "circle_1": {
+              "Center": [3.8, 0.0],
+              "Radius": 0.15
+            }
+          }
+        }
+      },
+      "extrusion": {
+        "extrude_depth_towards_normal": 0.0,
+        "extrude_depth_opposite_normal": 0.5,
+        "sketch_scale": 1.0,
+        "operation": "CutFeatureOperation"
+      }
+    },
+    "part_7": {
+      "coordinate_system": {
+        "Euler Angles": [0.0, 0.0, 0.0],
+        "Translation Vector": [0.0, 0.0, 2.0]
+      },
+      "sketch": {
+        "face_1": {
+          "loop_1": {
+            "line_1": {
+              "Start Point": [4.0, 0.0],
+              "End Point": [1.0, 0.1]
+            },
+            "line_2": {
+              "Start Point": [1.0, 0.1],
+              "End Point": [1.0, -0.1]
+            },
+            "line_3": {
+              "Start Point": [1.0, -0.1],
+              "End Point": [4.0, 0.0]
+            }
+          }
+        }
+      },
+      "extrusion": {
+        "extrude_depth_towards_normal": 0.2,
+        "extrude_depth_opposite_normal": 0.0,
+        "sketch_scale": 1.0,
+        "operation": "JoinFeatureOperation"
+      }
+    }
+  }
+}

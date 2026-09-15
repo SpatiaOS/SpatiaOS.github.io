@@ -16,6 +16,7 @@ Run the updater for the leaderboard being changed:
 node projects/P3D-Bench/tools/update-live-assembly.mjs
 node projects/P3D-Bench/tools/update-live-text.mjs
 node --test projects/P3D-Bench/tools/live-tables.test.mjs
+node --test projects/P3D-Bench/tools/text-table.test.mjs
 ```
 
 Assembly uses `../live-assembly-summary.json`: the original seven models plus
@@ -116,12 +117,86 @@ public repository. Copy the audited per-format values into each leaderboard
 row's `generation_cost`, set `cost_usd` from `usd_per_case × 100`, then run the
 Assembly updater. The updater rejects missing usage or inconsistent denominators.
 
-Text uses `../live-text-summary.json`. Updating it preserves Assembly's data and
-position. Both updaters locate tables by key, guard the surrounding bundle bytes,
+Text uses `../live-text-summary.json` (`p3d-live-text-summary-v2`): exactly ten
+current models, fixed-100, JSON/OpenSCAD only in the main table. Scores preserve
+the existing fixed-100 aggregation, including zero contribution for inapplicable
+IoU; they are sorted before rounding and displayed to two decimals. The eighteen
+metric cells are checked against the per-format values and equal-weight means.
+All ten current Text rows require a supported numeric dollar value; do not show
+`N/A`, an approximation marker, or substitute a zero. Kimi retains its separate
+tokenizer-estimate fields but displays `$0.486`. Qwen `$0.410` and Doubao `$0.638`
+reuse their saved official-price equivalents with exactly 400 selected responses
+per model, excluding retries. Doubao retains the fixed 7 CNY/USD comparison
+conversion, not today's FX. The earlier `$0.751` included 50 unselected responses
+and must not be used for the selected-response comparison. GLM-5.3 and
+GLM-5.3-Flash likewise use their 400 selected responses, not all saved attempts.
+Text costs cover four generation cells per UID and are not Assembly's cost
+convention or actual invoices. The private v3 audit records the source hashes.
+`cost_usd` and `estimated_cost_usd` store USD/UID multiplied by 100. Historical
+seventeen-row input is retained exactly in
+`../history/live-text-summary-35f95f8.json`, not in the current table.
+
+This September 15 change is a collaboration-branch preview, not a publication or a uniformly
+re-evaluated protocol claim. Selected historical results and real Judge route
+differences remain in the private provenance; no experiments were repeated.
+The statistical overview is unchanged and its historical Text results are visibly
+marked as pending replacement. Dataset figures remain valid descriptions of the
+complete 400-case datasets; do not replace them with 100-subset counts. Plot updates require the
+verified original script; do not create, modify, or substitute plotting code.
+
+Updating Text preserves Assembly's data and position. Both updaters locate
+tables by key, guard the surrounding bundle bytes,
 write a content-hashed asset, and synchronize their source JSON mirrors under
 `.github/site-src/src/`. Paper results, demo data, and styles are preserved.
 The Assembly updater also registers the Grok model icon and keeps missing costs
 last for both ascending and descending sorting.
+
+## Current local Text demo overlay
+
+`../demo/text-live-fixed100.json` supplies the same ten current models and the
+four-case intersection of the old Text demo/showcase with the fixed-100 UIDs.
+It retains 160 original records (159 complete valid outputs and one original
+invalid JSON output). The existing completeness filter exposes only the 159
+complete outputs; never replace the invalid case with another model's mesh.
+The mounting-bracket showcase keeps its original case, comparing each model's
+own parametric OpenSCAD result with the same input and verified equivalent GT.
+
+The 481 assets in `../demo/text_live_fixed100_v1/assets/` are byte-for-byte copies
+of saved programs, meshes and images, named by SHA256. There was no new CAD
+evaluation, model call or benchmark rendering. Private source paths and audit
+files remain outside this repository. The original `demo/manifest.json` is kept
+in `history/demo-manifest-before-text100-35f95f8.json`; only its Text evaluation
+sentence in the paper abstract is corrected in the active manifest. All original
+case, run, model and figure data are untouched. `text-demo.mjs` merges only Text records,
+preserving the complete Image/Assembly records and metadata.
+
+```bash
+node projects/P3D-Bench/tools/update-live-text-demo.mjs
+node --test projects/P3D-Bench/tools/text-demo.test.mjs
+```
+
+This is a restricted local-review runtime adapter, not a whole-site release
+build. It guards the original fetch and Text-showcase boundaries and preserves
+all remaining runtime bytes and leaderboard entries. Repeating it with the
+same payload is a no-op; a different payload/version must pass a reviewed
+boundary migration, not a blind replacement. Source mirrors are in
+`.github/site-src/src/textLiveDemo.json` and `main.tsx`. The separate
+`assets/text-demo-overrides.css` is scoped to Text comparison cards to prevent
+narrow-screen label overflow without changing Image/Assembly styling.
+
+Local browser acceptance covers every complete selector combination, the ten
+showcase models, generated-program identity, other-task tabs, and widths
+1600/820/390. Statistical-figure completion is a separate gate: the grouped
+overview still requires its original script; the complete-dataset panels stay
+unchanged. The fixed100 subset retains original difficulty labels (98 D4 and 2 D5)
+and must not be described as a balanced or random sample of the full dataset.
+The manuscript collaboration snapshot contains numerical inputs in data/text100
+and a Text figure handoff in TEXT_RESULTS_UPDATE.md. No figure has been redrawn here.
+
+This snapshot is pushed to `text-fixed100-review-20260915`, not `main`, because
+the repository deploys Pages automatically on pushes to `main`. The visible
+collaboration notice distinguishes current numerical results from the pending
+Text overview. Merging or deploying is a separate maintainer action.
 
 Structural source development uses `.github/site-src/`. A development build is
 not a replacement for the deployed Paper results; compare every page section

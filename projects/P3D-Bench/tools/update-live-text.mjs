@@ -6,28 +6,14 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { readActiveBundle, replaceLiveTable, writeActiveBundle } from "./live-tables.mjs";
+import { validateTextSummary, textCost } from "./text-table.mjs";
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const summaryPath = join(root, "live-text-summary.json");
 const indexPath = join(root, "index.html");
 const summary = JSON.parse(readFileSync(summaryPath, "utf8"));
 
-if (summary.schema_version !== "p3d-live-text-summary-v1") {
-  throw new Error("unexpected live Text summary schema");
-}
-if (!Array.isArray(summary.rows) || summary.rows.length !== 17) {
-  throw new Error("expected exactly 17 live Text rows");
-}
-for (const [index, row] of summary.rows.entries()) {
-  const values = row.metrics.trim().split(/\s+/);
-  if (values.length !== 18 || values.some((value) => !Number.isFinite(Number(value)))) {
-    throw new Error(`${row.model}: expected 18 numeric metric cells`);
-  }
-  if (index && summary.rows[index - 1].score < row.score) {
-    throw new Error("live Text rows must be score-descending");
-  }
-  if (!(row.cost_usd > 0)) throw new Error(`${row.model}: invalid cost`);
-}
+validateTextSummary(summary);
 
 const textTable = {
   key: "text",
@@ -54,10 +40,11 @@ const textTable = {
   ],
   rows: summary.rows.map((row) => ({
     model: row.model,
+    model_id: row.model_id,
     family: row.family,
-    cells: `${row.metrics} ${row.score.toFixed(1)} $${(row.cost_usd / 100).toFixed(3)}`,
+    cells: `${row.metrics} ${row.score.toFixed(2)} ${textCost(row)}`,
   })),
-  note: "Scores use the fixed 100-case subset; costs are normalized per case across the four evaluation settings. Updated as evaluations complete.",
+  note: "",
 };
 
 const original = readActiveBundle(root);

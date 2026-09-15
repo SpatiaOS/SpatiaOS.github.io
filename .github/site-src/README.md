@@ -94,6 +94,17 @@ python -m http.server --bind 127.0.0.1 --directory dist-release/anonymous 8000
 
 ## Demo Asset Bundle
 
+The September 15 local Text review additionally merges
+`public/demo/text-live-fixed100.json` at runtime through the shared
+`projects/P3D-Bench/tools/text-demo.mjs` helper. Its source JSON mirror is
+`src/textLiveDemo.json`; the public files live in the repository's
+`projects/P3D-Bench/demo/`, not in this source snapshot. Preserve this complete
+asset root when previewing source development. The Text-only responsive
+stylesheet is imported from `projects/P3D-Bench/assets/text-demo-overrides.css`.
+Do not rebuild the old bundle from experimental roots or treat the historical
+release flow below as authorization to publish this local review. Original
+statistical figures still need their verified original generators.
+
 The page reads `public/demo/manifest.json` plus the static assets under
 `public/demo/`. To rebuild that sanitized bundle from local evaluation outputs:
 

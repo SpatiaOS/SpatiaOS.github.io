@@ -30,6 +30,7 @@
 - `projects/P3D-Bench/tools/update-live-text.mjs` —— 只替换 active bundle 的 Live Text 表，保留 Assembly 在前的顺序
 - `projects/P3D-Bench/tools/update-live-assembly.mjs` —— 替换 Live Assembly 表并置于 Text 之前；校验七个模型、计分和 API 排除口径
 - `projects/P3D-Bench/demo/manifest.json` —— 论文标题、作者、**摘要**、链接、案例清单（页面运行时 fetch）
+- `projects/P3D-Bench/demo/text-live-fixed100.json` —— 本地审阅的Text专用案例／素材覆盖层；用`tools/update-live-text-demo.mjs`接入，保留基础manifest和其他任务
 
 常见改动：
 
@@ -64,6 +65,10 @@
    **以本仓库的 `demo/manifest.json` 为准**（页面运行时读的是它，且已移除旧的 project page 那句）。
 
 两个数值更新器按表格 key 定位当前 active bundle，保留未更新表格和非榜单内容的字节，并将 JSON 同步到源码快照。Assembly 排在 Text 前；后续更新 Text 不会重排 Assembly。数值更新不以源码开发构建覆盖线上 Paper、demo 等后续维护内容。
+
+2026-09-15 的 Text 本地审阅使用 `p3d-live-text-summary-v2`，只展示最新10模型；此前17行原始输入保留在 `projects/P3D-Bench/history/live-text-summary-35f95f8.json`。保持既有 fixed-100 算法与分数，18指标、双格式均值和未舍入总分由 `tools/text-table.mjs` 校验，总分显示两位小数。10行费用必须有依据且显示普通美元数，不显示 N/A 或约值符号；Kimi估算属性仅留在独立字段/说明，Qwen与Doubao采用已保存的官方费率比较值。此约定不改变 Assembly。
+
+Text demo与showcase已接入10模型和4个原案例，160份记录中159份完整可用、1份原始无效保留；481份原素材只做字节一致复制。运行时覆盖层不改Image／Assembly记录；基础demo/manifest.json只修正摘要中的Text评测句，原始完整文件留在history/demo-manifest-before-text100-35f95f8.json。16项测试与159个组合通过。完整数据集及其图保持Text400／Image400／Assembly203；100只是原Text排序400的前100评测子集（98个D4、2个D5），不覆盖数据集分布。顶部Text实验图仍待原维护者更新，页面已明确提示；禁止新写／修改或借用不匹配的绘图脚本。本版拟推协作分支，不推会自动部署的main；完整约定见 `projects/P3D-Bench/tools/README.md`。
 
 当前 Assembly 使用 2026-09-10 的七模型评测结果，总分两位小数，API failed 不计入 tested 或 invalid。六个模型成本已按实际生成 token 与官方 API 单价核验，包括所选结果的纠错重试、推理输出、缓存读写；CadQuery/OpenSCAD 各自按 tested 求均值，再等权平均。Kimi 的 196 个 tested case 共 240 次生成（含 44 次纠错）没有 usage；按维护者要求，使用 Kimi 自己的官方分词器对保存文本重计数，按维护者的显示偏好统一写为 **$0.575/case**，脚注保留估算说明。实际成本字段仍为 null，估算存入独立字段，明确假设输入不命中缓存、图片为 1024×1024。细节在 `kimi-cost-estimate.json`，不使用其他模型 token 代替。评测、历史被替代运行、API 失败和订阅费不计入此生成成本。
 
