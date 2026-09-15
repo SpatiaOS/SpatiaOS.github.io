@@ -1,5 +1,7 @@
 import liveTextSummary from "./liveTextSummary.json";
 import liveAssemblySummary from "./liveAssemblySummary.json";
+import liveImageSummary from "./liveImageSummary.json";
+import { buildImageTable, buildAdditionalFormatTables } from "../../../projects/P3D-Bench/tools/image-table.mjs";
 import { textCost } from "../../../projects/P3D-Bench/tools/text-table.mjs";
 
 export type ResultTableRow = { model: string; model_id?: string; family?: string; cells: string };
@@ -14,6 +16,7 @@ export type ResultSubtable = {
   rows: ResultTableRow[];
   domainRows?: ResultTableRow[];
   note?: string;
+  extraTables?: ResultSubtable[];
 };
 
 
@@ -107,6 +110,7 @@ if (liveAssemblySummary.schema_version !== "p3d-live-assembly-summary-v1"
 export const liveResultTables: ResultSubtable[] = [
   {
     ...liveAssemblySummary.table,
+    extraTables: buildAdditionalFormatTables(liveAssemblySummary.additional_formats, "assembly"),
     note: "",
     rows: [...liveAssemblySummary.rows].sort((a, b) => b.score - a.score).map((row) => ({
       model: row.model,
@@ -124,4 +128,5 @@ export const liveResultTables: ResultSubtable[] = [
       cells: `${row.metrics} ${row.score.toFixed(2)} ${textCost(row)}`,
     })),
   },
+  buildImageTable(liveImageSummary),
 ];

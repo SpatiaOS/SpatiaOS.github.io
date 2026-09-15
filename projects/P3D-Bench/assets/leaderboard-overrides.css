@@ -99,6 +99,30 @@
   font: 800 9px/1 var(--font-code);
 }
 
+.rt-extra-formats {
+  margin: 14px 0 0;
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+}
+
+.rt-extra-formats > summary {
+  cursor: pointer;
+  color: var(--muted);
+  font: 600 12px/1.6 var(--font-code);
+}
+
+.rt-extra-formats > summary:focus-visible {
+  outline: 2px solid var(--rt-accent);
+  outline-offset: 4px;
+}
+
+.rt-extra-formats > .rt-block { margin-top: 14px; }
+.rt-extra-formats .results-table.has-summary .rt-model-col {
+  width: 280px;
+  min-width: 280px;
+  max-width: 280px;
+}
+
 @media (min-width: 1080px) {
   .results-table.has-summary {
     table-layout: fixed;

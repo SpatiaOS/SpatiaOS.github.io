@@ -1,7 +1,7 @@
 # P3D-Bench static release tools
 
-The public page has one leaderboard, showing the current Assembly results
-first and the current Text results second. There is no Paper/Live switch.
+The public page has one leaderboard, showing current Assembly, Text and Image
+results in that order. There is no Paper/Live switch.
 Keep `leaderboard-renderer.fragment.js` and the source `ResultsTables`
 component aligned with that presentation when patching the active bundle.
 The overview figure is the ICLR 2027 teaser: updated Assembly models, with
@@ -17,6 +17,8 @@ node projects/P3D-Bench/tools/update-live-assembly.mjs
 node projects/P3D-Bench/tools/update-live-text.mjs
 node --test projects/P3D-Bench/tools/live-tables.test.mjs
 node --test projects/P3D-Bench/tools/text-table.test.mjs
+node projects/P3D-Bench/tools/update-live-image-assembly.mjs
+node --test projects/P3D-Bench/tools/image-table.test.mjs
 ```
 
 Assembly uses `../live-assembly-summary.json`: the original seven models plus
@@ -181,3 +183,58 @@ before a full release.
 
 The Grok SVG is from [Lobe Icons](https://github.com/lobehub/lobe-icons), with its
 license alongside the icon at `demo/icons/src/grok.LICENSE`.
+
+## Image Hard100 and additional Assembly formats (September 15)
+
+`live-image-summary.json` contains nine current models on the same 100 Image
+UIDs in CadQuery, OpenSCAD and Three.js, frozen at **2026-09-15 23:01:23 +08:00**.
+The score is the equal-format average of Geo, Topo and Judge, multiplied by 100.
+Judge uses geometry and semantic axes. Valid is reported separately. The current
+Image result is provisional: GPT has 257/300 tested cases, Opus 277/300, and
+Doubao 196/300. The other six models have all 300 tested, with 66 successful
+exports collectively awaiting local evaluation. Doubao has three further judge
+gaps at this snapshot. Tested and Judged coverage appear in the table.
+
+The importer uses the existing `snapshot_image2cad_current_metrics.py` result:
+API failures are excluded, genuine generation/export failures retain the
+benchmark's worst-fill penalties, and missing evaluations remain unmeasured.
+Successful exports backed by their saved attempt and mesh are counted as valid
+even if later local evaluation failed. The public summary retains raw/export
+validity counters, aggregate metric denominators and checkpoint hashes.
+Publishing does not rerun evaluation or claim a uniform evaluator route.
+
+Image costs are saved-generation API equivalents at the frozen September 10/11
+rates in `image-api-pricing.json`, including recorded corrections. They use total
+cost divided by tested cases across the three formats, following the source
+report. This differs from Assembly's equal-format cost weighting and Text's
+four selected responses per UID. Evaluator calls, superseded attempts, unrecorded
+transport failures and subscription payments are excluded. These are historical
+comparison estimates, not current price quotations or account expenditure.
+
+Assembly's nine existing rows, coverage and audited costs exactly match a fresh
+snapshot; `latest_verification` records its source hashes. The two-format score
+remains intact. Gemini's newly imported JSON and Three.js results are available
+in the expandable Additional formats table: **62.35** (100/100 tested) and
+**63.92** (97/100 tested, 96/97 judged). Image's additional Gemini JSON result is
+**62.64** with all 100 tested and judged. Each extra row has a single-format
+score and does not enter the main leaderboard average. MiMo remains paused and
+is not included. Original 3D examples and figure assets are unchanged.
+
+To reproduce, use the benchmark environment to freeze Image and Assembly reports
+under a private `AUDIT/image` and `AUDIT/assembly` directory. Then run:
+
+```bash
+python projects/P3D-Bench/tools/import-live-image-assembly.py \
+  --audit /absolute/private/path/to/AUDIT \
+  --benchmark-repo /absolute/path/to/cadbenchmark \
+  --image-bucket /absolute/path/to/image2cad_hard100_reason_20260908 \
+  --assembly-bucket /absolute/path/to/textimage2cad_ppapi_reason_new
+node projects/P3D-Bench/tools/update-live-image-assembly.mjs
+node --test projects/P3D-Bench/tools/*.test.mjs
+```
+
+The importer verifies every existing Assembly bucket and coverage denominator
+before retaining its cost audit. Additional-format checkpoints are frozen on
+first import and reused, so later running jobs cannot silently alter a repeat
+import. Only aggregate summaries, source hashes and historical pricing enter
+the public repo. Full checkpoints stay in the private audit directory.

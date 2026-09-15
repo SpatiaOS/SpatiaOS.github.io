@@ -1,6 +1,7 @@
 import { createHash } from "node:crypto";
 import { readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
+import { buildAdditionalFormatTables } from "./image-table.mjs";
 
 // Find complete data literals without interpreting or executing bundle code.
 function literalEnd(input, start) {
@@ -57,14 +58,16 @@ export function readLiveTables(input) {
   return { start, end, entries };
 }
 
-export function replaceLiveTable(input, table, { first = false } = {}) {
+export function replaceLiveTable(input, table, { first = false, append = false } = {}) {
   const original = readLiveTables(input);
-  if (!original.entries.some((entry) => entry.key === table.key)) {
+  const exists = original.entries.some((entry) => entry.key === table.key);
+  if (!exists && !append) {
     throw new Error(`live table ${table.key} not found`);
   }
   let entries = original.entries.map((entry) => entry.key === table.key
     ? { key: table.key, raw: JSON.stringify(table) }
     : entry);
+  if (!exists) entries.push({ key: table.key, raw: JSON.stringify(table) });
   if (first) entries = [entries.find((entry) => entry.key === table.key), ...entries.filter((entry) => entry.key !== table.key)];
   const patched = input.slice(0, original.start) + `[${entries.map((entry) => entry.raw).join(",")}]` + input.slice(original.end);
   const next = readLiveTables(patched);
@@ -198,6 +201,7 @@ export function buildAssemblyTable(summary) {
   if ([...expected].some((model) => !seen.has(model))) throw new Error("missing original Assembly model");
   return {
     ...summary.table,
+    extraTables: buildAdditionalFormatTables(summary.additional_formats, "assembly"),
     // The live Assembly table has no methodology footer; audits stay in JSON.
     note: "",
     rows: [...summary.rows].sort((a, b) => b.score - a.score).map((row) => ({

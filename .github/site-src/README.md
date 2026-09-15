@@ -43,8 +43,9 @@ second hand-edited results source.
 
 Release profiles are deliberately separate:
 
-- `public` shows a single current leaderboard, ordered Assembly first, then
-  Text. The paper/live selector is removed. The complete checked-in demo and
+- `public` shows a single current leaderboard, ordered Assembly, Text, then
+  Image. Gemini additional-format results expand beneath their task tables.
+  The paper/live selector is removed. The complete checked-in demo and
   showcase are preserved.
 - `paper` contains snapshot-backed paper results, the same complete checked-in
   demo and showcase, and no live leaderboard.
