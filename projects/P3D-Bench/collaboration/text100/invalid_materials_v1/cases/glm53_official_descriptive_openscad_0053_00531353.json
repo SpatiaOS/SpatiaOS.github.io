@@ -1,0 +1,40 @@
+{
+  "classification_status": "not_assigned_in_selected_source",
+  "cohort": "main",
+  "failure_class": null,
+  "format": "openscad",
+  "historical_generation_attempt_errors": [
+    {
+      "attempt": 1,
+      "error_signature": "unknown_stage|None|STL export failed: ERROR: Parser error: syntax error in file <LOCAL_PATH>, line 38\nCan't parse file '<LOCAL_PATH>'!",
+      "error_stage": null,
+      "error_type": null,
+      "errors": [
+        "STL export failed: ERROR: Parser error: syntax error in file <LOCAL_PATH>, line 38\nCan't parse file '<LOCAL_PATH>'!",
+        "Preview render failed: Unknown error"
+      ],
+      "valid": false
+    }
+  ],
+  "model_id": "glm53_official",
+  "note": "Native flags and historical attempt errors can differ; use selected_local_errors for the retained local outcome. No new taxonomy assigned.",
+  "program": "programs/cff75835e33665737a9741b86143f2740787d0dd78c1f03509cf298e67ecf470.scad",
+  "selected_local_errors": {
+    "export_errors": [
+      "STL export failed: ERROR: Parser error: syntax error in file ../../../local_campaigns/native_conversion_v4/native/descriptive/text2cad/glm53_official/openscad/0053_00531353/model.scad, line 38\nCan't parse file '<LOCAL_PATH>'!",
+      "Preview render failed: Unknown error"
+    ]
+  },
+  "selected_record_flags": {
+    "api_complete": true,
+    "api_parse_failed": false,
+    "llm_failed": false,
+    "local_eval_complete": true
+  },
+  "source_judge_sha256": "3af3f015e778cdffb9f2c6b8f87b614e0dc1f5e1f9f507e3c2d92e21ad71eb3b",
+  "source_native_sha256": "e6eb743a878ba08f21f5fe54038da419d835da539e68b5e81ed22e400a0c35c0",
+  "strict_json_parseable": null,
+  "task": "descriptive",
+  "uid": "0053/00531353",
+  "valid": false
+}

@@ -1,0 +1,98 @@
+{
+  "identity": [
+    "gpt6_probe",
+    "descriptive",
+    "json",
+    "0085/00852511"
+  ],
+  "metrics": {
+    "chamfer_distance": null,
+    "chamfer_distance_score": null,
+    "f_score_001": null,
+    "f_score_005": null,
+    "geometry": null,
+    "inverted_normal_score": null,
+    "iou_csg": null,
+    "iou_inapplicable": null,
+    "iou_measured": null,
+    "jsem_filled_1_10": 10.0,
+    "jsem_normalized": 1.0,
+    "jsem_observed": 10.0,
+    "judge": 1.0,
+    "no_open_edge": null,
+    "non_manifold_edge_score": null,
+    "normal_consistency": null,
+    "qa_micro": null,
+    "qa_p": null,
+    "qa_p_correct": 0.0,
+    "qa_s": 1.0,
+    "qa_s_correct": 4.0,
+    "topology": null,
+    "valid": true
+  },
+  "note": "Per-case saved contributions; not a recomputed experiment. Judge bucket differs from native J-Sem.",
+  "selected_qa": {
+    "none_of_above_count": 0,
+    "overall_accuracy": 1.0,
+    "param_accuracy": 0.0,
+    "param_correct": 0,
+    "param_total": 0,
+    "per_category_accuracy": {},
+    "semantic_accuracy": 1.0,
+    "semantic_correct": 4,
+    "semantic_total": 4,
+    "total_correct": 4,
+    "total_questions": 4
+  },
+  "selected_qa_answers": [
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "A",
+      "is_correct": true,
+      "predicted": "A",
+      "qid": "semantic_1",
+      "question": "Which description best matches the overall shape of the object?",
+      "reasoning": "The renders and artifact show a stepped series of concentric cylinders tapering down on one side, a broad collar in the middle, and a cylindrical sleeve extending from the other side.",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "C",
+      "is_correct": true,
+      "predicted": "C",
+      "qid": "semantic_2",
+      "question": "Which statement is true regarding the internal opening of the object?",
+      "reasoning": "The CAD logic shows cuts stepping down from radius 10 to 8 to 6, stopping at depth 18, which leaves the lowest cylindrical segment (depth 18 to 24) completely solid as seen in the renders.",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "A",
+      "is_correct": true,
+      "predicted": "A",
+      "qid": "semantic_3",
+      "question": "How are the various cylindrical sections of the object aligned relative to each other?",
+      "reasoning": "All cylindrical sections have their sketch centers at (0, 0) and translate purely along the Z-axis, meaning they are completely coaxial.",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "D",
+      "is_correct": true,
+      "predicted": "D",
+      "qid": "semantic_4",
+      "question": "What feature is located immediately above the broad annular collar?",
+      "reasoning": "Directly above the broad collar (part_1) is part_2, which is an extruded hollow cylindrical sleeve with an outer radius of 16 and an inner hole radius of 10.",
+      "split": "semantic"
+    }
+  ],
+  "selected_semantic_judge": {
+    "error": null,
+    "reason": "Both the reconstruction and reference depict the same functional object category: a stepped concentric adapter/plug featuring a hollow sleeve, a central annular collar, and multi-tiered stepped concentric stages ending in a solid tip. Differences in length and proportions are geometric and do not alter the functional category.",
+    "semantic": 10
+  }
+}

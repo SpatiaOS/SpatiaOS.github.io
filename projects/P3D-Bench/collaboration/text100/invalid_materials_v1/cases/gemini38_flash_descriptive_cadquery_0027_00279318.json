@@ -1,0 +1,38 @@
+{
+  "classification_status": "not_assigned_in_selected_source",
+  "cohort": "gemini_supplemental",
+  "failure_class": null,
+  "format": "cadquery",
+  "historical_generation_attempt_errors": [
+    {
+      "attempt": 1,
+      "error_signature": "execute|60|ERROR executing CadQuery code: name 'lower_depth' is not defined",
+      "error_stage": "execute",
+      "error_type": "NameError",
+      "errors": [
+        "ERROR executing CadQuery code: name 'lower_depth' is not defined"
+      ],
+      "valid": false
+    }
+  ],
+  "model_id": "gemini38_flash",
+  "note": "Native flags and historical attempt errors can differ; use selected_local_errors for the retained local outcome. No new taxonomy assigned.",
+  "program": "programs/890f58d12de36fab6fe10137340f2bce5ba2fbad48a86767f19f157ef6b1e99a.py",
+  "selected_local_errors": {
+    "export_errors": [
+      "ERROR executing CadQuery code: name 'lower_depth' is not defined"
+    ]
+  },
+  "selected_record_flags": {
+    "api_complete": true,
+    "api_parse_failed": false,
+    "llm_failed": false,
+    "local_eval_complete": true
+  },
+  "source_judge_sha256": "55786033f89c18631f6f0e0d7a35f1c3a79219a6bd155dc8cd3cc0e9e9b9f0f5",
+  "source_native_sha256": "e818154ddf19770114b91b8e5c6504b9bbaf9e94fbc42fd88124280d2cc36efc",
+  "strict_json_parseable": null,
+  "task": "descriptive",
+  "uid": "0027/00279318",
+  "valid": false
+}

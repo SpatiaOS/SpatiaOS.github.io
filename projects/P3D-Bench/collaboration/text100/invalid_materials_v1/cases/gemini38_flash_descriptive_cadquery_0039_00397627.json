@@ -1,0 +1,38 @@
+{
+  "classification_status": "not_assigned_in_selected_source",
+  "cohort": "gemini_supplemental",
+  "failure_class": null,
+  "format": "cadquery",
+  "historical_generation_attempt_errors": [
+    {
+      "attempt": 1,
+      "error_signature": "execute|62|ERROR executing CadQuery code: Workplane.cboreHole() got an unexpected keyword argument 'holeDiameter'",
+      "error_stage": "execute",
+      "error_type": "TypeError",
+      "errors": [
+        "ERROR executing CadQuery code: Workplane.cboreHole() got an unexpected keyword argument 'holeDiameter'"
+      ],
+      "valid": false
+    }
+  ],
+  "model_id": "gemini38_flash",
+  "note": "Native flags and historical attempt errors can differ; use selected_local_errors for the retained local outcome. No new taxonomy assigned.",
+  "program": "programs/7f041a8e3559f38b456248e3b7091415180bbe3de74a40b0421d153c3d77c58c.py",
+  "selected_local_errors": {
+    "export_errors": [
+      "ERROR executing CadQuery code: Workplane.cboreHole() got an unexpected keyword argument 'holeDiameter'"
+    ]
+  },
+  "selected_record_flags": {
+    "api_complete": true,
+    "api_parse_failed": false,
+    "llm_failed": false,
+    "local_eval_complete": true
+  },
+  "source_judge_sha256": "55786033f89c18631f6f0e0d7a35f1c3a79219a6bd155dc8cd3cc0e9e9b9f0f5",
+  "source_native_sha256": "e818154ddf19770114b91b8e5c6504b9bbaf9e94fbc42fd88124280d2cc36efc",
+  "strict_json_parseable": null,
+  "task": "descriptive",
+  "uid": "0039/00397627",
+  "valid": false
+}

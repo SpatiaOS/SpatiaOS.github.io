@@ -664,9 +664,10 @@ function MainFigures() {
   return (
     <div className="main-figures">
       <figure className="leaderboard-figure">
-        <a href="./figures/fig_tasks_grouped_bars.pdf?v=iclr2027-46c89f3d83c3" aria-label="Open leaderboard figure PDF">
-          <img src="./figures/fig_tasks_grouped_bars.svg?v=iclr2027-46c89f3d83c3" alt="Task overview: Assembly-3D with updated models, followed by original Text-to-3D and Image-to-3D results" />
-        </a>
+        <div className="overview-review-frame">
+          <img src="./figures/fig_tasks_grouped_bars.svg?v=iclr2027-46c89f3d83c3" alt="Assembly-3D and Image-to-3D overview; the previous Text panel is withheld" />
+          <div className="overview-text-pending">Text-to-3D<br />Updated figure pending.<br />See the current 100-case results below.</div>
+        </div>
       </figure>
     </div>
   );

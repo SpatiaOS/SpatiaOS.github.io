@@ -1,0 +1,98 @@
+{
+  "identity": [
+    "gemini38_flash",
+    "descriptive",
+    "openscad",
+    "0092/00923543"
+  ],
+  "metrics": {
+    "chamfer_distance": null,
+    "chamfer_distance_score": null,
+    "f_score_001": null,
+    "f_score_005": null,
+    "geometry": null,
+    "inverted_normal_score": null,
+    "iou_csg": null,
+    "iou_inapplicable": null,
+    "iou_measured": null,
+    "jsem_filled_1_10": 6.0,
+    "jsem_normalized": 0.5555555555555556,
+    "jsem_observed": 6.0,
+    "judge": 0.7777777777777778,
+    "no_open_edge": null,
+    "non_manifold_edge_score": null,
+    "normal_consistency": null,
+    "qa_micro": null,
+    "qa_p": null,
+    "qa_p_correct": 0.0,
+    "qa_s": 1.0,
+    "qa_s_correct": 4.0,
+    "topology": null,
+    "valid": true
+  },
+  "note": "Per-case saved contributions; not a recomputed experiment. Judge bucket differs from native J-Sem.",
+  "selected_qa": {
+    "none_of_above_count": 0,
+    "overall_accuracy": 1.0,
+    "param_accuracy": 0.0,
+    "param_correct": 0,
+    "param_total": 0,
+    "per_category_accuracy": {},
+    "semantic_accuracy": 1.0,
+    "semantic_correct": 4,
+    "semantic_total": 4,
+    "total_correct": 4,
+    "total_questions": 4
+  },
+  "selected_qa_answers": [
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "B",
+      "is_correct": true,
+      "predicted": "B",
+      "qid": "semantic_1",
+      "question": "How do the two long side walls relate to the central web structure?",
+      "reasoning": "The renders and code show two solid rectangular walls along the long outer edges with a height of 16 mm, extending well above the 5 mm thick central web structure.",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "A",
+      "is_correct": true,
+      "predicted": "A",
+      "qid": "semantic_2",
+      "question": "Which of the following best describes the openings present in the base web?",
+      "reasoning": "The web is a truss-like open network containing triangular/quadrilateral voids between structural ribs as well as three central circular through-hole openings.",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "D",
+      "is_correct": true,
+      "predicted": "D",
+      "qid": "semantic_3",
+      "question": "What characterizes the depth profile of the overall part?",
+      "reasoning": "The overall part has a stepped depth profile formed by the 5 mm deep open web and the two raised side walls that stand 16 mm tall.",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "A",
+      "is_correct": true,
+      "predicted": "A",
+      "qid": "semantic_4",
+      "question": "How is the interior of the rectangular web structured?",
+      "reasoning": "The central web interior is composed of a longitudinal center rib, circular hub bosses, cross ribs, and diagonal truss ribs connecting them.",
+      "split": "semantic"
+    }
+  ],
+  "selected_semantic_judge": {
+    "error": null,
+    "reason": "The reference represents a structural truss frame or bracket with mounting holes, whereas the reconstruction depicts an architectural open-web railing or decorative balustrade panel.",
+    "semantic": 6
+  }
+}

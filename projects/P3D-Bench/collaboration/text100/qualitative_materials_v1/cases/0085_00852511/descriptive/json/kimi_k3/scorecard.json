@@ -1,0 +1,98 @@
+{
+  "identity": [
+    "kimi_k3",
+    "descriptive",
+    "json",
+    "0085/00852511"
+  ],
+  "metrics": {
+    "chamfer_distance": null,
+    "chamfer_distance_score": null,
+    "f_score_001": null,
+    "f_score_005": null,
+    "geometry": null,
+    "inverted_normal_score": null,
+    "iou_csg": null,
+    "iou_inapplicable": null,
+    "iou_measured": null,
+    "jsem_filled_1_10": 10.0,
+    "jsem_normalized": 1.0,
+    "jsem_observed": 10.0,
+    "judge": 1.0,
+    "no_open_edge": null,
+    "non_manifold_edge_score": null,
+    "normal_consistency": null,
+    "qa_micro": null,
+    "qa_p": null,
+    "qa_p_correct": 0.0,
+    "qa_s": 1.0,
+    "qa_s_correct": 4.0,
+    "topology": null,
+    "valid": true
+  },
+  "note": "Per-case saved contributions; not a recomputed experiment. Judge bucket differs from native J-Sem.",
+  "selected_qa": {
+    "none_of_above_count": 0,
+    "overall_accuracy": 1.0,
+    "param_accuracy": 0.0,
+    "param_correct": 0,
+    "param_total": 0,
+    "per_category_accuracy": {},
+    "semantic_accuracy": 1.0,
+    "semantic_correct": 4,
+    "semantic_total": 4,
+    "total_correct": 4,
+    "total_questions": 4
+  },
+  "selected_qa_answers": [
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "A",
+      "is_correct": true,
+      "predicted": "A",
+      "qid": "semantic_1",
+      "question": "Which description best matches the overall shape of the object?",
+      "reasoning": "The CAD model consists of multiple concentric cylindrical tiers of varying diameters centered along a single axis, featuring a prominent wide annular collar.",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "C",
+      "is_correct": true,
+      "predicted": "C",
+      "qid": "semantic_2",
+      "question": "Which statement is true regarding the internal opening of the object?",
+      "reasoning": "Tracing through parts 1 to 6 shows that the internal bore diameter steps down progressively through each tier (radii 0.30, 0.24, 0.18, 0.12) until the final lowest tier (part 6), which is completely solid.",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "A",
+      "is_correct": true,
+      "predicted": "A",
+      "qid": "semantic_3",
+      "question": "How are the various cylindrical sections of the object aligned relative to each other?",
+      "reasoning": "All cylindrical sections share the same central sketch center ([0.0, 0.0]) and identical orientation, making them coaxial along the central Z axis.",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "D",
+      "is_correct": true,
+      "predicted": "D",
+      "qid": "semantic_4",
+      "question": "What feature is located immediately above the broad annular collar?",
+      "reasoning": "Located immediately above the broad annular collar (part 1) in the +Z direction is part 2, which is an extruded annular cylinder forming a hollow cylindrical sleeve.",
+      "split": "semantic"
+    }
+  ],
+  "selected_semantic_judge": {
+    "error": null,
+    "reason": "The reconstruction correctly captures the intended functional category of a stepped coaxial component/plug with a hollow sleeve, central annular collar, and multi-tiered concentric stepped section ending in a solid tip. Differences in step count, proportions, and overall dimensions are geometric rather than categorical.",
+    "semantic": 10
+  }
+}

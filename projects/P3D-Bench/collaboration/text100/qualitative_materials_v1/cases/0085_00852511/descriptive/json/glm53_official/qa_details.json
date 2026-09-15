@@ -1,0 +1,91 @@
+{
+  "bank_sha256": "40ead7e654e36e0c8279b7af78208331b0115c1aac4cb561b94f1e59e7f69440",
+  "format": "json",
+  "model_id": "glm53_official",
+  "note": "Saved evaluator explanations, not a new human validation. E is the evaluator none-of-the-above option.",
+  "questions": [
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "A",
+      "is_correct": true,
+      "none_of_above_option": "E",
+      "options": [
+        "A series of coaxial, stepped cylindrical sections with a broad collar",
+        "A rectangular block with multiple cylindrical cutouts",
+        "A spherical body with a hollow sleeve protruding from one side",
+        "A single uniform cylinder with a flat top and bottom"
+      ],
+      "predicted": "A",
+      "qid": "semantic_1",
+      "question": "Which description best matches the overall shape of the object?",
+      "reasoning": "The rendered model consists of a sequence of coaxial stepped cylinders of decreasing diameters alongside a broad annular collar.",
+      "reference_answer": "A",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "C",
+      "is_correct": true,
+      "none_of_above_option": "E",
+      "options": [
+        "The internal opening expands in diameter towards the lowest end",
+        "The internal opening maintains a constant diameter throughout the entire object",
+        "The internal opening reduces in diameter through multiple tiers, leaving only the lowest narrow end solid",
+        "The object is completely solid with no internal opening"
+      ],
+      "predicted": "C",
+      "qid": "semantic_2",
+      "question": "Which statement is true regarding the internal opening of the object?",
+      "reasoning": "Tracing the code and renders shows the central bore steps down from radius 15 to 10 to 5 through the sections, while the final lowest cylindrical section (part_6) is completely solid.",
+      "reference_answer": "C",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "A",
+      "is_correct": true,
+      "none_of_above_option": "E",
+      "options": [
+        "They are all coaxial, sharing the same central axis",
+        "They intersect each other at right angles",
+        "They are offset from each other along a single axis",
+        "They are arranged in a grid pattern"
+      ],
+      "predicted": "A",
+      "qid": "semantic_3",
+      "question": "How are the various cylindrical sections of the object aligned relative to each other?",
+      "reasoning": "All cylindrical sections share the same central Z-axis with translations along X=0 and Y=0, making them completely coaxial.",
+      "reference_answer": "A",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": true,
+      "ground_truth": "D",
+      "is_correct": false,
+      "none_of_above_option": "E",
+      "options": [
+        "A flat square plate",
+        "A solid rectangular boss",
+        "A threaded rod",
+        "A hollow cylindrical sleeve"
+      ],
+      "predicted": "E",
+      "qid": "semantic_4",
+      "question": "What feature is located immediately above the broad annular collar?",
+      "reasoning": "The broad annular collar (part_2) is at the maximum Z extent of the object (Z=35 to 50); there is no feature located above it in the predicted model.",
+      "reference_answer": "D",
+      "split": "semantic"
+    }
+  ],
+  "semantic_judge": {
+    "error": null,
+    "reason": "Both the reference and reconstruction represent a stepped hose adapter/fitting (cut-to-size multi-tier connector). While the reconstruction suffers from construction and positioning flaws—the annular collar is axially displaced as a disjoint body and the upper hollow sleeve is omitted—these geometric, positional, and construction-quality errors do not change the functional category of the object.",
+    "semantic": 10
+  },
+  "task": "descriptive",
+  "uid": "0085/00852511"
+}

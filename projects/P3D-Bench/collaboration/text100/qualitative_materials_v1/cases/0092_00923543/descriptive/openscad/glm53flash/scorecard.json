@@ -1,0 +1,98 @@
+{
+  "identity": [
+    "glm53flash",
+    "descriptive",
+    "openscad",
+    "0092/00923543"
+  ],
+  "metrics": {
+    "chamfer_distance": null,
+    "chamfer_distance_score": null,
+    "f_score_001": null,
+    "f_score_005": null,
+    "geometry": null,
+    "inverted_normal_score": null,
+    "iou_csg": null,
+    "iou_inapplicable": null,
+    "iou_measured": null,
+    "jsem_filled_1_10": 8.0,
+    "jsem_normalized": 0.7777777777777778,
+    "jsem_observed": 8.0,
+    "judge": 0.8888888888888888,
+    "no_open_edge": null,
+    "non_manifold_edge_score": null,
+    "normal_consistency": null,
+    "qa_micro": null,
+    "qa_p": null,
+    "qa_p_correct": 0.0,
+    "qa_s": 1.0,
+    "qa_s_correct": 4.0,
+    "topology": null,
+    "valid": true
+  },
+  "note": "Per-case saved contributions; not a recomputed experiment. Judge bucket differs from native J-Sem.",
+  "selected_qa": {
+    "none_of_above_count": 0,
+    "overall_accuracy": 1.0,
+    "param_accuracy": 0.0,
+    "param_correct": 0,
+    "param_total": 0,
+    "per_category_accuracy": {},
+    "semantic_accuracy": 1.0,
+    "semantic_correct": 4,
+    "semantic_total": 4,
+    "total_correct": 4,
+    "total_questions": 4
+  },
+  "selected_qa_answers": [
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "B",
+      "is_correct": true,
+      "predicted": "B",
+      "qid": "semantic_1",
+      "question": "How do the two long side walls relate to the central web structure?",
+      "reasoning": "As seen in the renders and code, the two long side walls rise significantly higher (total height 30 mm) than the shallow central web (thickness 3 mm), forming raised solid additions along opposite edges.",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "A",
+      "is_correct": true,
+      "predicted": "A",
+      "qid": "semantic_2",
+      "question": "Which of the following best describes the openings present in the base web?",
+      "reasoning": "The base web is pierced by a 2x3 grid of circular through-holes located in the open void spaces between the ribs.",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "D",
+      "is_correct": true,
+      "predicted": "D",
+      "qid": "semantic_3",
+      "question": "What characterizes the depth profile of the overall part?",
+      "reasoning": "The depth profile features a stepped cross-section where the outer side walls extend to full height (30 mm) above the much shallower base web and ribs.",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "A",
+      "is_correct": true,
+      "predicted": "A",
+      "qid": "semantic_4",
+      "question": "How is the interior of the rectangular web structured?",
+      "reasoning": "The interior web panel is reinforced by a combination of transverse cross ribs and diagonal ribs arranged in an X pattern across the central area.",
+      "split": "semantic"
+    }
+  ],
+  "selected_semantic_judge": {
+    "error": null,
+    "reason": "Both models represent the same primary category of a flanged structural bracket or rib. However, there is a substantial secondary functional contradiction: instead of an open truss web with gusseted mounting holes, the reconstruction features a solid web plate with surface stiffeners and six through-holes.",
+    "semantic": 8
+  }
+}

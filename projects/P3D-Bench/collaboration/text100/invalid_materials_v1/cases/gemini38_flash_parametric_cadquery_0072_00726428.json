@@ -1,0 +1,38 @@
+{
+  "classification_status": "not_assigned_in_selected_source",
+  "cohort": "gemini_supplemental",
+  "failure_class": null,
+  "format": "cadquery",
+  "historical_generation_attempt_errors": [
+    {
+      "attempt": 1,
+      "error_signature": "execute|None|ERROR executing CadQuery code: unexpected indent (generated.py, line 8)",
+      "error_stage": "execute",
+      "error_type": "IndentationError",
+      "errors": [
+        "ERROR executing CadQuery code: unexpected indent (generated.py, line 8)"
+      ],
+      "valid": false
+    }
+  ],
+  "model_id": "gemini38_flash",
+  "note": "Native flags and historical attempt errors can differ; use selected_local_errors for the retained local outcome. No new taxonomy assigned.",
+  "program": "programs/f03ad1f4b1d6a713eee0e0b4998f4fa600d5e3bd8cc4327bcf4a10746065f1da.py",
+  "selected_local_errors": {
+    "export_errors": [
+      "ERROR executing CadQuery code: unexpected indent (generated.py, line 8)"
+    ]
+  },
+  "selected_record_flags": {
+    "api_complete": true,
+    "api_parse_failed": false,
+    "llm_failed": false,
+    "local_eval_complete": true
+  },
+  "source_judge_sha256": "926d509e8b8d479c6b7c686cf84686e3caf5070d6ad8dc50be90f045f3588d83",
+  "source_native_sha256": "db3252f50bbba56ecb0af5a79489b5028bf2fae03738e5e8c69c54ec127e9553",
+  "strict_json_parseable": null,
+  "task": "parametric",
+  "uid": "0072/00726428",
+  "valid": false
+}

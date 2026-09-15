@@ -1,0 +1,98 @@
+{
+  "identity": [
+    "qwen38max",
+    "descriptive",
+    "openscad",
+    "0092/00923543"
+  ],
+  "metrics": {
+    "chamfer_distance": null,
+    "chamfer_distance_score": null,
+    "f_score_001": null,
+    "f_score_005": null,
+    "geometry": null,
+    "inverted_normal_score": null,
+    "iou_csg": null,
+    "iou_inapplicable": null,
+    "iou_measured": null,
+    "jsem_filled_1_10": 10.0,
+    "jsem_normalized": 1.0,
+    "jsem_observed": 10.0,
+    "judge": 1.0,
+    "no_open_edge": null,
+    "non_manifold_edge_score": null,
+    "normal_consistency": null,
+    "qa_micro": null,
+    "qa_p": null,
+    "qa_p_correct": 0.0,
+    "qa_s": 1.0,
+    "qa_s_correct": 4.0,
+    "topology": null,
+    "valid": true
+  },
+  "note": "Per-case saved contributions; not a recomputed experiment. Judge bucket differs from native J-Sem.",
+  "selected_qa": {
+    "none_of_above_count": 0,
+    "overall_accuracy": 1.0,
+    "param_accuracy": 0.0,
+    "param_correct": 0,
+    "param_total": 0,
+    "per_category_accuracy": {},
+    "semantic_accuracy": 1.0,
+    "semantic_correct": 4,
+    "semantic_total": 4,
+    "total_correct": 4,
+    "total_questions": 4
+  },
+  "selected_qa_answers": [
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "B",
+      "is_correct": true,
+      "predicted": "B",
+      "qid": "semantic_1",
+      "question": "How do the two long side walls relate to the central web structure?",
+      "reasoning": "The two side walls run along opposite longitudinal edges and extend significantly higher (18 mm) than the shallow central web structure (5 mm).",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "A",
+      "is_correct": true,
+      "predicted": "A",
+      "qid": "semantic_2",
+      "question": "Which of the following best describes the openings present in the base web?",
+      "reasoning": "The web is an open truss-like lattice with three circular openings bordered by circular bosses, surrounded by open void spaces between the structural ribs.",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "D",
+      "is_correct": true,
+      "predicted": "D",
+      "qid": "semantic_3",
+      "question": "What characterizes the depth profile of the overall part?",
+      "reasoning": "The model has a stepped profile formed by the shallow 5 mm web and the raised 18 mm side walls along the edges.",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "A",
+      "is_correct": true,
+      "predicted": "A",
+      "qid": "semantic_4",
+      "question": "How is the interior of the rectangular web structured?",
+      "reasoning": "The interior of the perimeter frame is structured with transverse cross ribs, a longitudinal rib, and diagonal ribs in an X-pattern.",
+      "split": "semantic"
+    }
+  ],
+  "selected_semantic_judge": {
+    "error": null,
+    "reason": "Both the reference and reconstruction are open-web structural panels/truss frames featuring perimeter flanges and internal ribbing with circular openings. The differences in aspect ratio, bay count, and hole positions are dimensional, proportion, and count variations, which do not constitute a categorical contradiction.",
+    "semantic": 10
+  }
+}

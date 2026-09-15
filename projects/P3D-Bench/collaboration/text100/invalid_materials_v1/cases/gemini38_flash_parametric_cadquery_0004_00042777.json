@@ -1,0 +1,38 @@
+{
+  "classification_status": "not_assigned_in_selected_source",
+  "cohort": "gemini_supplemental",
+  "failure_class": null,
+  "format": "cadquery",
+  "historical_generation_attempt_errors": [
+    {
+      "attempt": 1,
+      "error_signature": "unknown_stage|None|STEP->mesh conversion failed for <LOCAL_PATH>",
+      "error_stage": null,
+      "error_type": null,
+      "errors": [
+        "STEP->mesh conversion failed for <LOCAL_PATH>"
+      ],
+      "valid": false
+    }
+  ],
+  "model_id": "gemini38_flash",
+  "note": "Native flags and historical attempt errors can differ; use selected_local_errors for the retained local outcome. No new taxonomy assigned.",
+  "program": "programs/539ec0a3b3746308a17d9de1864222fd8a5c2d9c45ab7fca970ee286e15bf58c.py",
+  "selected_local_errors": {
+    "export_errors": [
+      "STEP->mesh conversion failed for <LOCAL_PATH>"
+    ]
+  },
+  "selected_record_flags": {
+    "api_complete": true,
+    "api_parse_failed": false,
+    "llm_failed": false,
+    "local_eval_complete": true
+  },
+  "source_judge_sha256": "926d509e8b8d479c6b7c686cf84686e3caf5070d6ad8dc50be90f045f3588d83",
+  "source_native_sha256": "db3252f50bbba56ecb0af5a79489b5028bf2fae03738e5e8c69c54ec127e9553",
+  "strict_json_parseable": null,
+  "task": "parametric",
+  "uid": "0004/00042777",
+  "valid": false
+}

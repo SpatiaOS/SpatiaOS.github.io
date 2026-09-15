@@ -1,0 +1,98 @@
+{
+  "identity": [
+    "claude_opus5",
+    "descriptive",
+    "openscad",
+    "0092/00923543"
+  ],
+  "metrics": {
+    "chamfer_distance": null,
+    "chamfer_distance_score": null,
+    "f_score_001": null,
+    "f_score_005": null,
+    "geometry": null,
+    "inverted_normal_score": null,
+    "iou_csg": null,
+    "iou_inapplicable": null,
+    "iou_measured": null,
+    "jsem_filled_1_10": 3.0,
+    "jsem_normalized": 0.2222222222222222,
+    "jsem_observed": 3.0,
+    "judge": 0.1111111111111111,
+    "no_open_edge": null,
+    "non_manifold_edge_score": null,
+    "normal_consistency": null,
+    "qa_micro": null,
+    "qa_p": null,
+    "qa_p_correct": 0.0,
+    "qa_s": 0.0,
+    "qa_s_correct": 0.0,
+    "topology": null,
+    "valid": true
+  },
+  "note": "Per-case saved contributions; not a recomputed experiment. Judge bucket differs from native J-Sem.",
+  "selected_qa": {
+    "none_of_above_count": 4,
+    "overall_accuracy": 0.0,
+    "param_accuracy": 0.0,
+    "param_correct": 0,
+    "param_total": 0,
+    "per_category_accuracy": {},
+    "semantic_accuracy": 0.0,
+    "semantic_correct": 0,
+    "semantic_total": 4,
+    "total_correct": 0,
+    "total_questions": 4
+  },
+  "selected_qa_answers": [
+    {
+      "category": "",
+      "chose_none_of_above": true,
+      "ground_truth": "B",
+      "is_correct": false,
+      "predicted": "E",
+      "qid": "semantic_1",
+      "question": "How do the two long side walls relate to the central web structure?",
+      "reasoning": "The rendered views show only two disconnected, parallel rectangular bars with no central web structure between them, so none of the options describing a relationship to a web apply.",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": true,
+      "ground_truth": "A",
+      "is_correct": false,
+      "predicted": "E",
+      "qid": "semantic_2",
+      "question": "Which of the following best describes the openings present in the base web?",
+      "reasoning": "The predicted object lacks a base web entirely, consisting only of two isolated solid walls, so none of the descriptions of base web openings match.",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": true,
+      "ground_truth": "D",
+      "is_correct": false,
+      "predicted": "E",
+      "qid": "semantic_3",
+      "question": "What characterizes the depth profile of the overall part?",
+      "reasoning": "The predicted object consists solely of two detached side walls with the central web entirely absent, so it does not exhibit a stepped web depth, a continuous uniform plate, or a taper.",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": true,
+      "ground_truth": "A",
+      "is_correct": false,
+      "predicted": "E",
+      "qid": "semantic_4",
+      "question": "How is the interior of the rectangular web structured?",
+      "reasoning": "There is no rectangular web or enclosed frame present in the render between the two side walls, making all the provided descriptions of an interior web structure incorrect.",
+      "split": "semantic"
+    }
+  ],
+  "selected_semantic_judge": {
+    "error": null,
+    "reason": "The reference specifies a single open-web structural bracket with diagonal ribs and mounting holes, whereas the reconstruction consists merely of two disconnected solid rectangular bars.",
+    "semantic": 3
+  }
+}

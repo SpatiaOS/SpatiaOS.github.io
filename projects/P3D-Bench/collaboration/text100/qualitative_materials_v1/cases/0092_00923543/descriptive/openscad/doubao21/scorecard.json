@@ -1,0 +1,98 @@
+{
+  "identity": [
+    "doubao21",
+    "descriptive",
+    "openscad",
+    "0092/00923543"
+  ],
+  "metrics": {
+    "chamfer_distance": null,
+    "chamfer_distance_score": null,
+    "f_score_001": null,
+    "f_score_005": null,
+    "geometry": null,
+    "inverted_normal_score": null,
+    "iou_csg": null,
+    "iou_inapplicable": null,
+    "iou_measured": null,
+    "jsem_filled_1_10": 10.0,
+    "jsem_normalized": 1.0,
+    "jsem_observed": 10.0,
+    "judge": 1.0,
+    "no_open_edge": null,
+    "non_manifold_edge_score": null,
+    "normal_consistency": null,
+    "qa_micro": null,
+    "qa_p": null,
+    "qa_p_correct": 0.0,
+    "qa_s": 1.0,
+    "qa_s_correct": 4.0,
+    "topology": null,
+    "valid": true
+  },
+  "note": "Per-case saved contributions; not a recomputed experiment. Judge bucket differs from native J-Sem.",
+  "selected_qa": {
+    "none_of_above_count": 0,
+    "overall_accuracy": 1.0,
+    "param_accuracy": 0.0,
+    "param_correct": 0,
+    "param_total": 0,
+    "per_category_accuracy": {},
+    "semantic_accuracy": 1.0,
+    "semantic_correct": 4,
+    "semantic_total": 4,
+    "total_correct": 4,
+    "total_questions": 4
+  },
+  "selected_qa_answers": [
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "B",
+      "is_correct": true,
+      "predicted": "B",
+      "qid": "semantic_1",
+      "question": "How do the two long side walls relate to the central web structure?",
+      "reasoning": "The two long solid side walls run along opposite edges and have a height of 12 mm, extending significantly higher than the 3 mm central web structure.",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "A",
+      "is_correct": true,
+      "predicted": "A",
+      "qid": "semantic_2",
+      "question": "Which of the following best describes the openings present in the base web?",
+      "reasoning": "The open web structure consists of a lattice of ribs that create void spaces, including four circular through-hole openings surrounded by circular rib borders.",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "D",
+      "is_correct": true,
+      "predicted": "D",
+      "qid": "semantic_3",
+      "question": "What characterizes the depth profile of the overall part?",
+      "reasoning": "The part features a stepped depth profile where the side walls have a thickness/height of 12 mm while the internal web ribs have a shallow height of only 3 mm.",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "A",
+      "is_correct": true,
+      "predicted": "A",
+      "qid": "semantic_4",
+      "question": "How is the interior of the rectangular web structured?",
+      "reasoning": "The interior of the web structure is formed by transverse cross ribs and diagonal X-bracing ribs intersecting with circular ring features.",
+      "split": "semantic"
+    }
+  ],
+  "selected_semantic_judge": {
+    "error": null,
+    "reason": "Both the reference and the reconstruction represent an open-web structural panel/railing section with opposite edge flanges and internal diagonal/cross ribs with circular openings. The differences in aspect ratio, rib pattern layout, and hole count/placement are dimensional, proportional, and count variations, which do not constitute a categorical contradiction.",
+    "semantic": 10
+  }
+}

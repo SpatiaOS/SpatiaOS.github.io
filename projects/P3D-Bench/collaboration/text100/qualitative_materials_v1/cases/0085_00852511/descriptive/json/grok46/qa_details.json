@@ -1,0 +1,91 @@
+{
+  "bank_sha256": "40ead7e654e36e0c8279b7af78208331b0115c1aac4cb561b94f1e59e7f69440",
+  "format": "json",
+  "model_id": "grok46",
+  "note": "Saved evaluator explanations, not a new human validation. E is the evaluator none-of-the-above option.",
+  "questions": [
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "A",
+      "is_correct": true,
+      "none_of_above_option": "E",
+      "options": [
+        "A series of coaxial, stepped cylindrical sections with a broad collar",
+        "A rectangular block with multiple cylindrical cutouts",
+        "A spherical body with a hollow sleeve protruding from one side",
+        "A single uniform cylinder with a flat top and bottom"
+      ],
+      "predicted": "A",
+      "qid": "semantic_1",
+      "question": "Which description best matches the overall shape of the object?",
+      "reasoning": "The model consists of a series of stepped cylindrical segments on one side, a wide circular collar in the middle, and a cylindrical sleeve on the opposite side, all aligned coaxially.",
+      "reference_answer": "A",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "C",
+      "is_correct": true,
+      "none_of_above_option": "E",
+      "options": [
+        "The internal opening expands in diameter towards the lowest end",
+        "The internal opening maintains a constant diameter throughout the entire object",
+        "The internal opening reduces in diameter through multiple tiers, leaving only the lowest narrow end solid",
+        "The object is completely solid with no internal opening"
+      ],
+      "predicted": "C",
+      "qid": "semantic_2",
+      "question": "Which statement is true regarding the internal opening of the object?",
+      "reasoning": "The artifact code shows internal cuts stepped down from radius 0.40 to 0.32 to 0.22, terminating at depth 1.28, which leaves the lowest tip (depth 1.28 to 1.60) completely solid as visible in the render images.",
+      "reference_answer": "C",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "A",
+      "is_correct": true,
+      "none_of_above_option": "E",
+      "options": [
+        "They are all coaxial, sharing the same central axis",
+        "They intersect each other at right angles",
+        "They are offset from each other along a single axis",
+        "They are arranged in a grid pattern"
+      ],
+      "predicted": "A",
+      "qid": "semantic_3",
+      "question": "How are the various cylindrical sections of the object aligned relative to each other?",
+      "reasoning": "All cylindrical sections have their sketch centers at (0, 0) with identical Euler angles, meaning they share the same central Z-axis and are coaxial.",
+      "reference_answer": "A",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "D",
+      "is_correct": true,
+      "none_of_above_option": "E",
+      "options": [
+        "A flat square plate",
+        "A solid rectangular boss",
+        "A threaded rod",
+        "A hollow cylindrical sleeve"
+      ],
+      "predicted": "D",
+      "qid": "semantic_4",
+      "question": "What feature is located immediately above the broad annular collar?",
+      "reasoning": "Extending from the upper face of the wide collar is a cylindrical feature with a large through-hole, forming a hollow cylindrical sleeve.",
+      "reference_answer": "D",
+      "split": "semantic"
+    }
+  ],
+  "semantic_judge": {
+    "error": null,
+    "reason": "The reconstruction correctly captures the functional object category of a flanged, stepped concentric adapter/plug, featuring a hollow sleeve on one side of an annular collar and tiered concentric steps ending in a solid face on the other. Variations in step count and proportions are geometric differences rather than categorical contradictions.",
+    "semantic": 10
+  },
+  "task": "descriptive",
+  "uid": "0085/00852511"
+}

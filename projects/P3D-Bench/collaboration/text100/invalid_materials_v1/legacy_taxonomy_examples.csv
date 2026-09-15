@@ -1,0 +1,30 @@
+legacy_category,legacy_subcategory,legacy_failure_class,legacy_record_count,legacy_example_error,current_cohort_count,status
+output_contract_violation,unparseable_or_malformed_json,Syntax,66,model_output_parse_failed: invalid JSON output: Expecting value: line 1 column 1 (char 0),,historical_definition_only_not_new_labels
+output_contract_violation,no_usable_final_program,Syntax,52,model response contained no final program text,,historical_definition_only_not_new_labels
+geometry_construction_failure,solid_or_brep_build_failed,Geometry,21,Failed to build solids from minimal JSON,,historical_definition_only_not_new_labels
+output_contract_violation,missing_or_wrong_schema_fields,Parameter,12,Export failed: 'list' object has no attribute 'keys',,historical_definition_only_not_new_labels
+output_contract_violation,unparseable_or_malformed_json,Parameter,4,"model_output_parse_failed: JSON output missing top-level ""parts""",,historical_definition_only_not_new_labels
+export_or_meshing_failure,step_or_mesh_conversion_failed,Geometry,1,Export failed: STEP->mesh conversion failed for <LOCAL_PATH>,,historical_definition_only_not_new_labels
+timeout_or_excessive_complexity,local_export_or_evaluation_timeout,Geometry,8,"OpenSCAD STL export timed out (480s)
+OpenSCAD preview render timed out (240s)",,historical_definition_only_not_new_labels
+geometry_construction_failure,invalid_or_degenerate_geometry,Geometry,13,"STL export failed: ERROR: The given mesh is not closed! Unable to convert to CGAL_Nef_Polyhedron.
+Geometries in cache: 19
+Geometry cache size in bytes: 220904
+CGAL Polyhedrons in cache: 3
+CGAL cache size in bytes: 453760
+Total rendering time: 0:00:00.135
+Current top level object is empty.",,historical_definition_only_not_new_labels
+program_syntax_or_parse_error,program_syntax_error,Syntax,38,"STL export failed: ERROR: Parser error: syntax error in file <LOCAL_PATH>, line 1
+Can't parse file '<LOCAL_PATH>'!
+Preview render failed: Unknown error",,historical_definition_only_not_new_labels
+geometry_construction_failure,invalid_or_degenerate_geometry,Parameter,3,"STL export failed: ERROR: all points for rotate_extrude() must have the same X coordinate sign (range is -0.05 -> 50.80)
+Geometries in cache: 26
+Geometry cache size in bytes: 323424
+CGAL Polyhedrons in cache: 3
+CGAL cache size in bytes: 9697008
+Total rendering time: 0:00:03.656
+Current top level object is empty.",,historical_definition_only_not_new_labels
+not_evaluable_output,no_valid_local_evaluation_record,Syntax,2,No valid local-evaluation record was available for this model-case pair.,,historical_definition_only_not_new_labels
+other_model_invalid,other_recorded_failure,Parameter,1,Export failed: NCollection_Sequence::ChangeValue,,historical_definition_only_not_new_labels
+other_model_invalid,other_recorded_failure,Geometry,12,"No usable generated program was recorded for local evaluation
+missing_generated_code",,historical_definition_only_not_new_labels

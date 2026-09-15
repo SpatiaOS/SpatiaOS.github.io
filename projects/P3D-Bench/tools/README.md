@@ -4,10 +4,12 @@ The public page has one leaderboard, showing the current Assembly results
 first and the current Text results second. There is no Paper/Live switch.
 Keep `leaderboard-renderer.fragment.js` and the source `ResultsTables`
 component aligned with that presentation when patching the active bundle.
-The overview figure is the ICLR 2027 teaser: updated Assembly models, with
-the original Text/Image models retained as a transition and labeled in the
-figure. SVG, PDF and PNG copies must be synchronized together, and the SVG
-and PDF URLs versioned whenever that figure changes. Use the Doubao icon
+The overview asset is the ICLR 2027 teaser. The collaboration preview displays
+its Assembly/Image content but clips the previous Text panel with CSS until
+the original maintainer supplies its replacement. The original SVG, PDF and
+PNG bytes are unchanged; the preview does not link to the old full PDF.
+When the maintainer replaces the figure, synchronize all three asset copies
+and version the SVG/PDF URLs. Use the Doubao icon
 (`demo/icons/src/doubao-color.svg`) for the Doubao family.
 
 Run the updater for the leaderboard being changed:
@@ -139,8 +141,8 @@ seventeen-row input is retained exactly in
 This September 15 change is a collaboration-branch preview, not a publication or a uniformly
 re-evaluated protocol claim. Selected historical results and real Judge route
 differences remain in the private provenance; no experiments were repeated.
-The statistical overview is unchanged and its historical Text results are visibly
-marked as pending replacement. Dataset figures remain valid descriptions of the
+The statistical overview asset is unchanged; its historical Text panel is
+withheld, with a visible replacement notice. Dataset figures remain valid descriptions of the
 complete 400-case datasets; do not replace them with 100-subset counts. Plot updates require the
 verified original script; do not create, modify, or substitute plotting code.
 

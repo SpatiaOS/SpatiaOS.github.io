@@ -1,0 +1,36 @@
+{
+  "classification_status": "not_assigned_in_selected_source",
+  "cohort": "main",
+  "failure_class": null,
+  "format": "json",
+  "historical_generation_attempt_errors": [
+    {
+      "attempt": 1,
+      "error_signature": "unknown_stage|None|invalid_without_error",
+      "error_stage": null,
+      "error_type": null,
+      "errors": [],
+      "valid": true
+    }
+  ],
+  "model_id": "doubao21",
+  "note": "Native flags and historical attempt errors can differ; use selected_local_errors for the retained local outcome. No new taxonomy assigned.",
+  "program": "programs/e2ae6800131aa2dcca2ed8721571badbee35ee511a1e7950a5e402f5b6ef7620.json",
+  "selected_local_errors": {
+    "export_errors": [
+      "Export failed: Indexed face normals disagree with triangle winding"
+    ]
+  },
+  "selected_record_flags": {
+    "api_complete": true,
+    "api_parse_failed": false,
+    "llm_failed": false,
+    "local_eval_complete": true
+  },
+  "source_judge_sha256": "30e55d18ea4ccd7dd26f08a462014b0db5e9f268d0441545e8744f2cbed4c769",
+  "source_native_sha256": "7b1415c5cd42925a791a505dafca7d8e5a2bf87b2c8396e35e17a72d6371db96",
+  "strict_json_parseable": true,
+  "task": "descriptive",
+  "uid": "0039/00390147",
+  "valid": false
+}

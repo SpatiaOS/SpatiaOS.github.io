@@ -1,0 +1,38 @@
+{
+  "classification_status": "not_assigned_in_selected_source",
+  "cohort": "gemini_supplemental",
+  "failure_class": null,
+  "format": "threejs",
+  "historical_generation_attempt_errors": [
+    {
+      "attempt": 1,
+      "error_signature": "unknown_stage|None|Node.js STL export failed: ERROR executing Three.js code: Unexpected end of input",
+      "error_stage": null,
+      "error_type": null,
+      "errors": [
+        "Node.js STL export failed: ERROR executing Three.js code: Unexpected end of input"
+      ],
+      "valid": false
+    }
+  ],
+  "model_id": "gemini38_flash",
+  "note": "Native flags and historical attempt errors can differ; use selected_local_errors for the retained local outcome. No new taxonomy assigned.",
+  "program": "programs/e4adf8c732804dffc478ac2a5782fe3230992c70a105c1df76e5778c40f6f988.js",
+  "selected_local_errors": {
+    "export_errors": [
+      "Node.js STL export failed: ERROR executing Three.js code: Unexpected end of input"
+    ]
+  },
+  "selected_record_flags": {
+    "api_complete": true,
+    "api_parse_failed": false,
+    "llm_failed": false,
+    "local_eval_complete": true
+  },
+  "source_judge_sha256": "fb889b374a843b2599a1d810bbd1f353491c8d3f10ef59e08286c4ae43b4487e",
+  "source_native_sha256": "24b41d5ae5c79f21c3cd13bcd293a3d6fddbea68ef88c68052ba5ea6b70fa706",
+  "strict_json_parseable": null,
+  "task": "descriptive",
+  "uid": "0047/00478097",
+  "valid": false
+}

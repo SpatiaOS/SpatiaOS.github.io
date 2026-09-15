@@ -1,0 +1,48 @@
+{
+  "classification_status": "not_assigned_in_selected_source",
+  "cohort": "main",
+  "failure_class": null,
+  "format": "json",
+  "historical_generation_attempt_errors": [
+    {
+      "attempt": 1,
+      "error_signature": "unknown_stage|None|Invalid JSON from LLM: Expecting ',' delimiter: line 1 column 2541 (char 2540)",
+      "error_stage": null,
+      "error_type": null,
+      "errors": [
+        "Invalid JSON from LLM: Expecting ',' delimiter: line 1 column 2541 (char 2540)"
+      ],
+      "valid": false
+    },
+    {
+      "attempt": 2,
+      "error_signature": "unknown_stage|None|Invalid JSON from LLM: Expecting ',' delimiter: line 1 column 2497 (char 2496)",
+      "error_stage": null,
+      "error_type": null,
+      "errors": [
+        "Invalid JSON from LLM: Expecting ',' delimiter: line 1 column 2497 (char 2496)"
+      ],
+      "valid": false
+    }
+  ],
+  "model_id": "glm53flash",
+  "note": "Native flags and historical attempt errors can differ; use selected_local_errors for the retained local outcome. No new taxonomy assigned.",
+  "program": "programs/c997527a91f3a616f0bb14316196af20782eb87d0742120151643ef70c7f92c5.json",
+  "selected_local_errors": {
+    "export_errors": [
+      "Invalid JSON from LLM: Expecting ',' delimiter: line 1 column 2497 (char 2496)"
+    ]
+  },
+  "selected_record_flags": {
+    "api_complete": true,
+    "api_parse_failed": false,
+    "llm_failed": false,
+    "local_eval_complete": true
+  },
+  "source_judge_sha256": "5921703b7a68e7ea9dad6cc7c7e4df96bf6f81716cdef6693c049cae56a3eac8",
+  "source_native_sha256": "459e7b5bfcbc1ee548303c1ca325f13b1f397f814cc9dfee5f4e7489b2619da0",
+  "strict_json_parseable": false,
+  "task": "descriptive",
+  "uid": "0092/00925049",
+  "valid": false
+}

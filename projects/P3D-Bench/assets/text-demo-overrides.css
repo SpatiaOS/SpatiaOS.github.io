@@ -1,4 +1,23 @@
 /* Text-only responsive repair; keep the existing carousel and other tasks. */
+/* Display-only clipping of the previous Text panel. Original SVG/PDF/PNG stay
+   byte-identical; no chart is redrawn and the non-Text panels remain visible. */
+.overview-review-frame {
+  position: relative;
+}
+.overview-review-frame img {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 68.7% 100%, 68.7% 26%, 38% 26%, 38% 100%, 0 100%);
+}
+.overview-text-pending {
+  position: absolute;
+  left: 39%;
+  width: 28.5%;
+  top: 43%;
+  padding: 0 3px;
+  box-sizing: border-box;
+  color: #475467;
+  font: clamp(10px, 1.4vw, 16px)/1.5 system-ui, sans-serif;
+  text-align: center;
+}
 .text-review-notice {
   box-sizing: border-box;
   margin: 0 auto;

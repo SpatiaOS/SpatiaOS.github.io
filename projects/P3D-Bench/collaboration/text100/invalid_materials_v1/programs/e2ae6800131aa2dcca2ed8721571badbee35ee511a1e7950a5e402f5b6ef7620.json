@@ -1,0 +1,190 @@
+{
+  "design_parameters": {
+    "collar_outer_radius_mm": 20.0,
+    "collar_inner_bore_radius_mm": 10.0,
+    "collar_height_mm": 10.0,
+    "inner_sleeve_outer_radius_mm": 12.5,
+    "inner_sleeve_inner_bore_radius_mm": 10.0,
+    "inner_sleeve_height_mm": 30.0,
+    "support_web_height_mm": 12.0,
+    "support_web_width_at_collar_mm": 20.0,
+    "support_web_width_at_wall_mm": 14.0,
+    "support_web_connection_arc_angle_span_deg": 60.0,
+    "rear_wall_width_mm": 30.0,
+    "rear_wall_thickness_mm": 8.0,
+    "rear_wall_height_mm": 55.0,
+    "rear_wall_front_face_y_position_mm": -30.0,
+    "side_slot_angular_span_deg": 90.0,
+    "side_slot_depth_into_wall_mm": 3.0,
+    "side_slot_total_height_mm": 4.0,
+    "side_slot_midheight_z_position_mm": 5.0
+  },
+  "parts": {
+    "part_1": {
+      "feature_name": "Base feature: wider lower hollow annular collar, forms the lower section of the concentric stack",
+      "coordinate_system": {
+        "Euler Angles": [0.0, 0.0, 0.0],
+        "Translation Vector": [0.0, 0.0, 0.0]
+      },
+      "sketch": {
+        "face_1": {
+          "loop_1": {
+            "circle_1": {
+              "Center": [0.0, 0.0],
+              "Radius": 20.0
+            }
+          },
+          "loop_2": {
+            "circle_1": {
+              "Center": [0.0, 0.0],
+              "Radius": 10.0
+            }
+          }
+        }
+      },
+      "extrusion": {
+        "extrude_depth_towards_normal": 10.0,
+        "extrude_depth_opposite_normal": 0.0,
+        "sketch_scale": 1.0,
+        "operation": "NewBodyFeatureOperation"
+      }
+    },
+    "part_2": {
+      "feature_name": "Taller concentric inner hollow sleeve, joined to collar top with continuous through-bore",
+      "coordinate_system": {
+        "Euler Angles": [0.0, 0.0, 0.0],
+        "Translation Vector": [0.0, 0.0, 10.0]
+      },
+      "sketch": {
+        "face_1": {
+          "loop_1": {
+            "circle_1": {
+              "Center": [0.0, 0.0],
+              "Radius": 12.5
+            }
+          },
+          "loop_2": {
+            "circle_1": {
+              "Center": [0.0, 0.0],
+              "Radius": 10.0
+            }
+          }
+        }
+      },
+      "extrusion": {
+        "extrude_depth_towards_normal": 30.0,
+        "extrude_depth_opposite_normal": 0.0,
+        "sketch_scale": 1.0,
+        "operation": "JoinFeatureOperation"
+      }
+    },
+    "part_3": {
+      "feature_name": "Shallow rounded tapered rear support web, added solid material connecting collar to rear wall",
+      "coordinate_system": {
+        "Euler Angles": [0.0, 0.0, 0.0],
+        "Translation Vector": [0.0, 0.0, 0.0]
+      },
+      "sketch": {
+        "face_1": {
+          "loop_1": {
+            "arc_1": {
+              "Start Point": [-10.0, -17.3205],
+              "Mid Point": [0.0, -20.0],
+              "End Point": [10.0, -17.3205]
+            },
+            "line_1": {
+              "Start Point": [10.0, -17.3205],
+              "End Point": [7.0, -30.0]
+            },
+            "line_2": {
+              "Start Point": [7.0, -30.0],
+              "End Point": [-7.0, -30.0]
+            },
+            "line_3": {
+              "Start Point": [-7.0, -30.0],
+              "End Point": [-10.0, -17.3205]
+            }
+          }
+        }
+      },
+      "extrusion": {
+        "extrude_depth_towards_normal": 12.0,
+        "extrude_depth_opposite_normal": 0.0,
+        "sketch_scale": 1.0,
+        "operation": "JoinFeatureOperation"
+      }
+    },
+    "part_4": {
+      "feature_name": "Tall solid upright rear rectangular wall, added solid material standing above all other features for stepped depth",
+      "coordinate_system": {
+        "Euler Angles": [0.0, 0.0, 0.0],
+        "Translation Vector": [0.0, 0.0, 0.0]
+      },
+      "sketch": {
+        "face_1": {
+          "loop_1": {
+            "line_1": {
+              "Start Point": [-15.0, -30.0],
+              "End Point": [15.0, -30.0]
+            },
+            "line_2": {
+              "Start Point": [15.0, -30.0],
+              "End Point": [15.0, -38.0]
+            },
+            "line_3": {
+              "Start Point": [15.0, -38.0],
+              "End Point": [-15.0, -38.0]
+            },
+            "line_4": {
+              "Start Point": [-15.0, -38.0],
+              "End Point": [-15.0, -30.0]
+            }
+          }
+        }
+      },
+      "extrusion": {
+        "extrude_depth_towards_normal": 55.0,
+        "extrude_depth_opposite_normal": 0.0,
+        "sketch_scale": 1.0,
+        "operation": "JoinFeatureOperation"
+      }
+    },
+    "part_5": {
+      "feature_name": "Curved slot recess cut into collar side band at mid-height, removed material (not an added rib)",
+      "coordinate_system": {
+        "Euler Angles": [0.0, 0.0, 0.0],
+        "Translation Vector": [0.0, 0.0, 5.0]
+      },
+      "sketch": {
+        "face_1": {
+          "loop_1": {
+            "arc_1": {
+              "Start Point": [14.1421, -14.1421],
+              "Mid Point": [20.0, 0.0],
+              "End Point": [14.1421, 14.1421]
+            },
+            "line_1": {
+              "Start Point": [14.1421, 14.1421],
+              "End Point": [12.0208, 12.0208]
+            },
+            "arc_2": {
+              "Start Point": [12.0208, 12.0208],
+              "Mid Point": [17.0, 0.0],
+              "End Point": [12.0208, -12.0208]
+            },
+            "line_2": {
+              "Start Point": [12.0208, -12.0208],
+              "End Point": [14.1421, -14.1421]
+            }
+          }
+        }
+      },
+      "extrusion": {
+        "extrude_depth_towards_normal": 2.0,
+        "extrude_depth_opposite_normal": 2.0,
+        "sketch_scale": 1.0,
+        "operation": "CutFeatureOperation"
+      }
+    }
+  }
+}

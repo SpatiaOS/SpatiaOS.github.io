@@ -1,0 +1,182 @@
+{
+  "identity": [
+    "grok46",
+    "parametric",
+    "json",
+    "0015/00155951"
+  ],
+  "metrics": {
+    "chamfer_distance": 0.003862,
+    "chamfer_distance_score": 0.6138,
+    "f_score_001": 0.108,
+    "f_score_005": 0.5939,
+    "geometry": 0.42796,
+    "inverted_normal_score": 1.0,
+    "iou_csg": 0.268,
+    "iou_inapplicable": false,
+    "iou_measured": true,
+    "jsem_filled_1_10": null,
+    "jsem_normalized": null,
+    "jsem_observed": null,
+    "judge": 0.8333333333333334,
+    "no_open_edge": 1.0,
+    "non_manifold_edge_score": 1.0,
+    "normal_consistency": 0.5561,
+    "qa_micro": 0.8333333333333334,
+    "qa_p": 0.875,
+    "qa_p_correct": 7.0,
+    "qa_s": 0.75,
+    "qa_s_correct": 3.0,
+    "topology": 1.0,
+    "valid": true
+  },
+  "note": "Per-case saved contributions; not a recomputed experiment. Judge bucket differs from native J-Sem.",
+  "selected_qa": {
+    "none_of_above_count": 0,
+    "overall_accuracy": 0.8333,
+    "param_accuracy": 0.875,
+    "param_correct": 7,
+    "param_total": 8,
+    "per_category_accuracy": {},
+    "semantic_accuracy": 0.75,
+    "semantic_correct": 3,
+    "semantic_total": 4,
+    "total_correct": 10,
+    "total_questions": 12
+  },
+  "selected_qa_answers": [
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "A",
+      "is_correct": true,
+      "predicted": "A",
+      "qid": "semantic_1",
+      "question": "Which statement best describes the vertical structure and depth relationship of the object's features?",
+      "reasoning": "The upright end tabs form the tallest vertical features, the main plate forms the central structure, and the annular collar on the opposite side forms a shallow tier.",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "D",
+      "is_correct": true,
+      "predicted": "D",
+      "qid": "semantic_2",
+      "question": "What feature is present on each of the tall rounded tabs located at the ends of the plate?",
+      "reasoning": "Each upright rounded tab has a circular through-hole cut through its full thickness (radius 0.0937).",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "B",
+      "is_correct": true,
+      "predicted": "B",
+      "qid": "semantic_3",
+      "question": "What is the geometric shape of the collar located on the underside of the main plate?",
+      "reasoning": "Part 2 is composed of two concentric circular sketch loops (outer radius 0.2125, inner radius 0.125), forming a hollow annular ring collar.",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "C",
+      "is_correct": false,
+      "predicted": "B",
+      "qid": "semantic_4",
+      "question": "Which description best characterizes the outer boundary (outline) of the main shallow plate?",
+      "reasoning": "The outer boundary of the base plate is defined by four straight line segments forming a 0.75 by 0.5 rectangle with sharp right angles.",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "D",
+      "is_correct": true,
+      "predicted": "D",
+      "qid": "param_1",
+      "question": "What is the ratio of the number of upright rounded tabs to the number of central through-holes in the main base plate?",
+      "reasoning": "There are 2 upright rounded tabs (parts 3 and 4) and 1 central through-hole in the base plate, giving a ratio of 2:1.",
+      "split": "param"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "B",
+      "is_correct": true,
+      "predicted": "B",
+      "qid": "param_2",
+      "question": "What is the radial wall thickness of the underside annular collar (the difference between its outer and inner radii)?",
+      "reasoning": "The collar's outer radius is 0.2125 and its inner radius is 0.1250; the radial wall thickness is 0.2125 - 0.1250 = 0.0875.",
+      "split": "param"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "A",
+      "is_correct": true,
+      "predicted": "A",
+      "qid": "param_3",
+      "question": "What is the protruding height of the upright tabs measured strictly from the top face of the main base plate to the top of the tabs?",
+      "reasoning": "In the tab sketch, the base line is at coordinate 0.125 and the arc apex is at 0.5875, resulting in a protruding height of 0.5875 - 0.1250 = 0.4625.",
+      "split": "param"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "B",
+      "is_correct": true,
+      "predicted": "B",
+      "qid": "param_4",
+      "question": "How does the radius of the central through-hole in the base compare to the radius of the through-holes in the upright tabs?",
+      "reasoning": "The central hole radius is 0.125 and the tab hole radius is 0.0937; the ratio is 0.125 / 0.0937 ≈ 1.334, meaning the central hole is larger, but less than 1.5 times as large.",
+      "split": "param"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "C",
+      "is_correct": true,
+      "predicted": "C",
+      "qid": "param_5",
+      "question": "What is the overall length of the main base plate footprint?",
+      "reasoning": "The footprint of the main base plate sketch runs from x = 0.0 to x = 0.75, giving an overall length of 0.75.",
+      "split": "param"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "A",
+      "is_correct": true,
+      "predicted": "A",
+      "qid": "param_6",
+      "question": "How was the rectangular pocket on the top face of the main base plate created?",
+      "reasoning": "There is no rectangular pocket present on the plate; the top face is planar aside from the through opening and upright tabs.",
+      "split": "param"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "D",
+      "is_correct": true,
+      "predicted": "D",
+      "qid": "param_7",
+      "question": "How many circular through-holes pass completely through the various parts of this object?",
+      "reasoning": "There are 3 total circular through-holes: 1 through the center of the base plate/collar and 1 through each of the two upright tabs.",
+      "split": "param"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "D",
+      "is_correct": false,
+      "predicted": "A",
+      "qid": "param_8",
+      "question": "What is the total overall height of the object, measured from the very bottom of the underside collar to the very top of the upright tabs?",
+      "reasoning": "Tracing the final geometry across the construction logic, the object extends from Z = -0.5875 to Z = 0.1250, yielding a total overall height of 0.7125 (confirmed by the mesh bounding box Z extent of 0.7123).",
+      "split": "param"
+    }
+  ],
+  "selected_semantic_judge": null
+}

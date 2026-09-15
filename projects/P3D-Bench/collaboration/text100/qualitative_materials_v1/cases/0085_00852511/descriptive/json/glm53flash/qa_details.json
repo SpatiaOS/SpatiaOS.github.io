@@ -1,0 +1,91 @@
+{
+  "bank_sha256": "40ead7e654e36e0c8279b7af78208331b0115c1aac4cb561b94f1e59e7f69440",
+  "format": "json",
+  "model_id": "glm53flash",
+  "note": "Saved evaluator explanations, not a new human validation. E is the evaluator none-of-the-above option.",
+  "questions": [
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "A",
+      "is_correct": true,
+      "none_of_above_option": "E",
+      "options": [
+        "A series of coaxial, stepped cylindrical sections with a broad collar",
+        "A rectangular block with multiple cylindrical cutouts",
+        "A spherical body with a hollow sleeve protruding from one side",
+        "A single uniform cylinder with a flat top and bottom"
+      ],
+      "predicted": "A",
+      "qid": "semantic_1",
+      "question": "Which description best matches the overall shape of the object?",
+      "reasoning": "The object consists of multiple cylindrical tiers of varying diameters sharing a common central axis, including a prominent wide flange/collar.",
+      "reference_answer": "A",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "C",
+      "is_correct": true,
+      "none_of_above_option": "E",
+      "options": [
+        "The internal opening expands in diameter towards the lowest end",
+        "The internal opening maintains a constant diameter throughout the entire object",
+        "The internal opening reduces in diameter through multiple tiers, leaving only the lowest narrow end solid",
+        "The object is completely solid with no internal opening"
+      ],
+      "predicted": "C",
+      "qid": "semantic_2",
+      "question": "Which statement is true regarding the internal opening of the object?",
+      "reasoning": "Tracing the internal loops through the extrusion levels from Z=1.8 down to Z=0 shows the bore narrows in steps (radius 0.55 to 0.45 to 0.35) until reaching the lowest, narrowest section (part_1), which is completely solid.",
+      "reference_answer": "C",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "A",
+      "is_correct": true,
+      "none_of_above_option": "E",
+      "options": [
+        "They are all coaxial, sharing the same central axis",
+        "They intersect each other at right angles",
+        "They are offset from each other along a single axis",
+        "They are arranged in a grid pattern"
+      ],
+      "predicted": "A",
+      "qid": "semantic_3",
+      "question": "How are the various cylindrical sections of the object aligned relative to each other?",
+      "reasoning": "All cylindrical sections and sketches are centered at (0.0, 0.0) with translations strictly along the Z-axis, making them all coaxial.",
+      "reference_answer": "A",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "D",
+      "is_correct": true,
+      "none_of_above_option": "E",
+      "options": [
+        "A flat square plate",
+        "A solid rectangular boss",
+        "A threaded rod",
+        "A hollow cylindrical sleeve"
+      ],
+      "predicted": "D",
+      "qid": "semantic_4",
+      "question": "What feature is located immediately above the broad annular collar?",
+      "reasoning": "Immediately adjacent to and above the broad collar (part_4, Z=0.45 to 0.75) along the Z-axis is part_5 (Z=0.75 to 1.80), which is an extruded annular section forming a hollow cylindrical sleeve.",
+      "reference_answer": "D",
+      "split": "semantic"
+    }
+  ],
+  "semantic_judge": {
+    "error": null,
+    "reason": "Both the reference and reconstruction represent a stepped hose adapter/fitting featuring a coaxial hollow sleeve, an annular collar, and concentric stepped tiers. The discrepancies in step count, step height, and overall proportions are dimensional and geometric variations that do not introduce a categorical contradiction.",
+    "semantic": 10
+  },
+  "task": "descriptive",
+  "uid": "0085/00852511"
+}

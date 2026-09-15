@@ -1,0 +1,182 @@
+{
+  "identity": [
+    "claude_opus5",
+    "parametric",
+    "openscad",
+    "0093/00934405"
+  ],
+  "metrics": {
+    "chamfer_distance": 0.000475,
+    "chamfer_distance_score": 0.9525,
+    "f_score_001": 0.2471,
+    "f_score_005": 0.9166,
+    "geometry": 0.6616799999999999,
+    "inverted_normal_score": 1.0,
+    "iou_csg": 0.4774,
+    "iou_inapplicable": false,
+    "iou_measured": true,
+    "jsem_filled_1_10": null,
+    "jsem_normalized": null,
+    "jsem_observed": null,
+    "judge": 0.9166666666666666,
+    "no_open_edge": 1.0,
+    "non_manifold_edge_score": 1.0,
+    "normal_consistency": 0.7148,
+    "qa_micro": 0.9166666666666666,
+    "qa_p": 0.875,
+    "qa_p_correct": 7.0,
+    "qa_s": 1.0,
+    "qa_s_correct": 4.0,
+    "topology": 1.0,
+    "valid": true
+  },
+  "note": "Per-case saved contributions; not a recomputed experiment. Judge bucket differs from native J-Sem.",
+  "selected_qa": {
+    "none_of_above_count": 0,
+    "overall_accuracy": 0.9167,
+    "param_accuracy": 0.875,
+    "param_correct": 7,
+    "param_total": 8,
+    "per_category_accuracy": {},
+    "semantic_accuracy": 1.0,
+    "semantic_correct": 4,
+    "semantic_total": 4,
+    "total_correct": 11,
+    "total_questions": 12
+  },
+  "selected_qa_answers": [
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "D",
+      "is_correct": true,
+      "predicted": "D",
+      "qid": "semantic_1",
+      "question": "Which description best matches the structure spanning across part of the large central circular opening?",
+      "reasoning": "A straight, narrow solid rib spans vertically across the large circular opening as seen in the renders and defined by the cube module in the code.",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "A",
+      "is_correct": true,
+      "predicted": "A",
+      "qid": "semantic_2",
+      "question": "What type of features are located near the rounded outer lobes of the wedge-like plate?",
+      "reasoning": "The two rounded front lobes each contain an elongated slot-like through hole penetrating through the plate.",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "C",
+      "is_correct": true,
+      "predicted": "C",
+      "qid": "semantic_3",
+      "question": "What is the geometric relationship between the smaller round solid boss and its internal recess/opening?",
+      "reasoning": "The cylindrical boss and the circular through hole share the same XY center coordinates (0.4796, 0.4282/0.4283), making them coaxial.",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "B",
+      "is_correct": true,
+      "predicted": "B",
+      "qid": "semantic_4",
+      "question": "Which statement is true regarding the vertical depth of the features in the central area?",
+      "reasoning": "The central area contains a shallow floor disc of height 0.0206, full-height rib and boss features (height 0.1718), and through cutouts, showing different vertical reaches.",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "B",
+      "is_correct": true,
+      "predicted": "B",
+      "qid": "param_1",
+      "question": "What is the approximate ratio of the large central circular opening's radius to the smaller circular hole's radius?",
+      "reasoning": "The central bore has a radius of 0.2165, while the hole radius is 0.07536, yielding a ratio of 0.2165 / 0.07536 ≈ 2.87, which rounds to approximately 2.9.",
+      "split": "param"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "A",
+      "is_correct": true,
+      "predicted": "A",
+      "qid": "param_2",
+      "question": "What is the side length of the square through-hole located at the center of the main base?",
+      "reasoning": "The central opening of the base is circular (radius 0.2165), not square.",
+      "split": "param"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "D",
+      "is_correct": true,
+      "predicted": "D",
+      "qid": "param_3",
+      "question": "What is the difference in height between the main base's overall extrusion depth and the shallow circular upper feature's depth?",
+      "reasoning": "The overall extrusion height is 0.1718 and the shallow floor height is 0.0206; their difference is 0.1718 - 0.0206 = 0.1512.",
+      "split": "param"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "D",
+      "is_correct": false,
+      "predicted": "C",
+      "qid": "param_4",
+      "question": "How many slot-like through openings are located near the rounded outer lobes of the main base?",
+      "reasoning": "There are exactly 2 slot-like through openings, one positioned near each of the two rounded front lobes.",
+      "split": "param"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "B",
+      "is_correct": true,
+      "predicted": "B",
+      "qid": "param_5",
+      "question": "How was the narrow straight web crossing the central opening created?",
+      "reasoning": "The web was created by unioning a solid rectangular prism (cube) across the subtracted central bore.",
+      "split": "param"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "C",
+      "is_correct": true,
+      "predicted": "C",
+      "qid": "param_6",
+      "question": "What is the thickness (narrowest dimension) of the straight solid web that crosses the central opening?",
+      "reasoning": "The width of the web in the X direction (narrowest dimension) is rib_w = 0.025368, which is approximately 0.025.",
+      "split": "param"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "C",
+      "is_correct": true,
+      "predicted": "C",
+      "qid": "param_7",
+      "question": "What is the approximate ratio of the main base's overall length to its overall width?",
+      "reasoning": "The overall length (X) is 0.7408 and overall width (Y) is 0.6728, giving a ratio of 0.7408 / 0.6728 ≈ 1.10.",
+      "split": "param"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "B",
+      "is_correct": true,
+      "predicted": "B",
+      "qid": "param_8",
+      "question": "How many smaller cylindrical bosses with through-holes are located within the large central opening?",
+      "reasoning": "There is exactly 1 smaller cylindrical boss (with an arm tying it to the rim and a concentric hole) located inside the large circular opening.",
+      "split": "param"
+    }
+  ],
+  "selected_semantic_judge": null
+}

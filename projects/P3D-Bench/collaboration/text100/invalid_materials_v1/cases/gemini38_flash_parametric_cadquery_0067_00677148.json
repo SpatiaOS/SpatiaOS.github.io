@@ -1,0 +1,38 @@
+{
+  "classification_status": "not_assigned_in_selected_source",
+  "cohort": "gemini_supplemental",
+  "failure_class": null,
+  "format": "cadquery",
+  "historical_generation_attempt_errors": [
+    {
+      "attempt": 1,
+      "error_signature": "execute|54|ERROR executing CadQuery code: 'Workplane' object has no attribute 'threePointsArc'",
+      "error_stage": "execute",
+      "error_type": "AttributeError",
+      "errors": [
+        "ERROR executing CadQuery code: 'Workplane' object has no attribute 'threePointsArc'"
+      ],
+      "valid": false
+    }
+  ],
+  "model_id": "gemini38_flash",
+  "note": "Native flags and historical attempt errors can differ; use selected_local_errors for the retained local outcome. No new taxonomy assigned.",
+  "program": "programs/43e9a9e8101554ea46fcf5076d034c1e20597e2dc3d8a892ae25bef9fdeee86e.py",
+  "selected_local_errors": {
+    "export_errors": [
+      "ERROR executing CadQuery code: 'Workplane' object has no attribute 'threePointsArc'"
+    ]
+  },
+  "selected_record_flags": {
+    "api_complete": true,
+    "api_parse_failed": false,
+    "llm_failed": false,
+    "local_eval_complete": true
+  },
+  "source_judge_sha256": "926d509e8b8d479c6b7c686cf84686e3caf5070d6ad8dc50be90f045f3588d83",
+  "source_native_sha256": "db3252f50bbba56ecb0af5a79489b5028bf2fae03738e5e8c69c54ec127e9553",
+  "strict_json_parseable": null,
+  "task": "parametric",
+  "uid": "0067/00677148",
+  "valid": false
+}

@@ -1,0 +1,39 @@
+{
+  "classification_status": "not_assigned_in_selected_source",
+  "cohort": "main",
+  "failure_class": null,
+  "format": "openscad",
+  "historical_generation_attempt_errors": [
+    {
+      "attempt": 1,
+      "error_signature": "unknown_stage|None|OpenSCAD not found. Install with: sudo apt install openscad",
+      "error_stage": null,
+      "error_type": null,
+      "errors": [
+        "OpenSCAD not found. Install with: sudo apt install openscad"
+      ],
+      "valid": false
+    }
+  ],
+  "model_id": "glm53flash",
+  "note": "Native flags and historical attempt errors can differ; use selected_local_errors for the retained local outcome. No new taxonomy assigned.",
+  "program": "programs/61cef51efac9180d1e61339a4120c9913dfef32599fd34c207bc7bbf2034b9bd.scad",
+  "selected_local_errors": {
+    "export_errors": [
+      "STL export failed: ERROR: Parser error: syntax error in file ../../../local_campaigns/native_conversion_v4/native/descriptive/text2cad/glm53flash/openscad/0018_00189804/model.scad, line 29\nCan't parse file '<LOCAL_PATH>'!",
+      "Preview render failed: Unknown error"
+    ]
+  },
+  "selected_record_flags": {
+    "api_complete": true,
+    "api_parse_failed": false,
+    "llm_failed": false,
+    "local_eval_complete": true
+  },
+  "source_judge_sha256": "05c73168b95a61b4f6e6f76317d8a985dac436a6f2d17c712b1bd3966e4f97a0",
+  "source_native_sha256": "90cab7c346a1585fcc99d9baefe112670d517d344818a86700aa45885ae90cba",
+  "strict_json_parseable": null,
+  "task": "descriptive",
+  "uid": "0018/00189804",
+  "valid": false
+}

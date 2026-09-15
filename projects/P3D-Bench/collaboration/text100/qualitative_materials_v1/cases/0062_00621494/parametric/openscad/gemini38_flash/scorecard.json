@@ -1,0 +1,182 @@
+{
+  "identity": [
+    "gemini38_flash",
+    "parametric",
+    "openscad",
+    "0062/00621494"
+  ],
+  "metrics": {
+    "chamfer_distance": 0.000562,
+    "chamfer_distance_score": 0.9438,
+    "f_score_001": 0.3126,
+    "f_score_005": 0.9071,
+    "geometry": 0.7038800000000001,
+    "inverted_normal_score": 1.0,
+    "iou_csg": 0.5504,
+    "iou_inapplicable": false,
+    "iou_measured": true,
+    "jsem_filled_1_10": null,
+    "jsem_normalized": null,
+    "jsem_observed": null,
+    "judge": 1.0,
+    "no_open_edge": 1.0,
+    "non_manifold_edge_score": 1.0,
+    "normal_consistency": 0.8055,
+    "qa_micro": 1.0,
+    "qa_p": 1.0,
+    "qa_p_correct": 8.0,
+    "qa_s": 1.0,
+    "qa_s_correct": 4.0,
+    "topology": 1.0,
+    "valid": true
+  },
+  "note": "Per-case saved contributions; not a recomputed experiment. Judge bucket differs from native J-Sem.",
+  "selected_qa": {
+    "none_of_above_count": 0,
+    "overall_accuracy": 1.0,
+    "param_accuracy": 1.0,
+    "param_correct": 8,
+    "param_total": 8,
+    "per_category_accuracy": {},
+    "semantic_accuracy": 1.0,
+    "semantic_correct": 4,
+    "semantic_total": 4,
+    "total_correct": 12,
+    "total_questions": 12
+  },
+  "selected_qa_answers": [
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "D",
+      "is_correct": true,
+      "predicted": "D",
+      "qid": "semantic_1",
+      "question": "Which description best matches the shape of the taller rear portion of the object?",
+      "reasoning": "The taller upright body features rounded exterior corners enclosing a slot-like interior cavity with an arched opening forming an arc-based wall.",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "B",
+      "is_correct": true,
+      "predicted": "B",
+      "qid": "semantic_2",
+      "question": "How are the visible circular areas in the model structured?",
+      "reasoning": "The visible circular features are constructed as hollow cylindrical sleeves or annular collars containing central bore openings.",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "B",
+      "is_correct": true,
+      "predicted": "B",
+      "qid": "semantic_3",
+      "question": "What feature characterizes the underside of the model?",
+      "reasoning": "Subtractive circular cuts are made into the underside of the circular features to create stepped depths and recesses.",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "C",
+      "is_correct": true,
+      "predicted": "C",
+      "qid": "semantic_4",
+      "question": "What is the spatial relationship between the internal bores and the circular stepped features?",
+      "reasoning": "The central bores are concentric with and extend through the circular stepped features across their full heights.",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "B",
+      "is_correct": true,
+      "predicted": "B",
+      "qid": "param_1",
+      "question": "What is the difference in height between the main upright solid and the larger lower annular circular solid?",
+      "reasoning": "The height of the upright solid is env_height = 0.4684 and the height of the large annular solid is large_solid_height = 0.2030, giving a difference of 0.4684 - 0.2030 = 0.2654.",
+      "split": "param"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "D",
+      "is_correct": true,
+      "predicted": "D",
+      "qid": "param_2",
+      "question": "What is the wall thickness of the larger lower annular circular solid (the difference between its outer radius and its inner annular boundary radius)?",
+      "reasoning": "The wall thickness is computed as large_outer_radius (0.2084) - large_annular_rad (0.1756) = 0.0328.",
+      "split": "param"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "A",
+      "is_correct": true,
+      "predicted": "A",
+      "qid": "param_3",
+      "question": "What is the ratio of the depth of the larger circular recess cut from the underside to the total height of the larger lower annular circular solid?",
+      "reasoning": "The ratio is large_recess_height / large_solid_height = 0.1280 / 0.2030 ≈ 0.6305, which is approximately 0.63.",
+      "split": "param"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "C",
+      "is_correct": true,
+      "predicted": "C",
+      "qid": "param_4",
+      "question": "What is the side length of the square pocket cut into the top face of the larger lower annular solid?",
+      "reasoning": "The subtractive recess in the larger lower solid is circular (a cylinder of radius 0.1756); there is no square pocket.",
+      "split": "param"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "C",
+      "is_correct": true,
+      "predicted": "C",
+      "qid": "param_5",
+      "question": "What is the diameter of the central bore (true opening) in the smaller coaxial circular sleeve located on the main upright solid?",
+      "reasoning": "The central bore of the smaller sleeve has a radius of small_bore_radius = 0.0250, so its diameter is 2 * 0.0250 = 0.050.",
+      "split": "param"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "A",
+      "is_correct": true,
+      "predicted": "A",
+      "qid": "param_6",
+      "question": "How was the larger circular recess on the underside of the lower annular solid formed?",
+      "reasoning": "The recess was formed by a subtractive cylinder in difference(), removing material to produce a stepped recess.",
+      "split": "param"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "D",
+      "is_correct": true,
+      "predicted": "D",
+      "qid": "param_7",
+      "question": "How many distinct through-holes (true voids passing completely through their respective tiers) are present in the final object?",
+      "reasoning": "There are exactly 2 through-holes penetrating through their respective tiers: the large boss central bore and the small sleeve central bore.",
+      "split": "param"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "B",
+      "is_correct": true,
+      "predicted": "B",
+      "qid": "param_8",
+      "question": "What is the difference in radius between the central opening of the larger lower annular solid and the central bore of the smaller circular sleeve?",
+      "reasoning": "The difference between large_bore_radius (0.0546) and small_bore_radius (0.0250) is 0.0546 - 0.0250 = 0.0296.",
+      "split": "param"
+    }
+  ],
+  "selected_semantic_judge": null
+}

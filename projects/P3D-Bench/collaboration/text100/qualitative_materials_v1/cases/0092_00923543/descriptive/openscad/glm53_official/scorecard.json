@@ -1,0 +1,98 @@
+{
+  "identity": [
+    "glm53_official",
+    "descriptive",
+    "openscad",
+    "0092/00923543"
+  ],
+  "metrics": {
+    "chamfer_distance": null,
+    "chamfer_distance_score": null,
+    "f_score_001": null,
+    "f_score_005": null,
+    "geometry": null,
+    "inverted_normal_score": null,
+    "iou_csg": null,
+    "iou_inapplicable": null,
+    "iou_measured": null,
+    "jsem_filled_1_10": 10.0,
+    "jsem_normalized": 1.0,
+    "jsem_observed": 10.0,
+    "judge": 0.875,
+    "no_open_edge": null,
+    "non_manifold_edge_score": null,
+    "normal_consistency": null,
+    "qa_micro": null,
+    "qa_p": null,
+    "qa_p_correct": 0.0,
+    "qa_s": 0.75,
+    "qa_s_correct": 3.0,
+    "topology": null,
+    "valid": true
+  },
+  "note": "Per-case saved contributions; not a recomputed experiment. Judge bucket differs from native J-Sem.",
+  "selected_qa": {
+    "none_of_above_count": 1,
+    "overall_accuracy": 0.75,
+    "param_accuracy": 0.0,
+    "param_correct": 0,
+    "param_total": 0,
+    "per_category_accuracy": {},
+    "semantic_accuracy": 0.75,
+    "semantic_correct": 3,
+    "semantic_total": 4,
+    "total_correct": 3,
+    "total_questions": 4
+  },
+  "selected_qa_answers": [
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "B",
+      "is_correct": true,
+      "predicted": "B",
+      "qid": "semantic_1",
+      "question": "How do the two long side walls relate to the central web structure?",
+      "reasoning": "The renders and construction logic confirm two solid side walls along the long edges extending to a height of 25 mm, which is higher than the 5 mm thick base web.",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": true,
+      "ground_truth": "A",
+      "is_correct": false,
+      "predicted": "E",
+      "qid": "semantic_2",
+      "question": "Which of the following best describes the openings present in the base web?",
+      "reasoning": "Although the web contains void areas between ribs, the circular cutouts were translated completely outside the part bounds and do not exist on the model, so none of the provided options correctly describes the openings.",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "D",
+      "is_correct": true,
+      "predicted": "D",
+      "qid": "semantic_3",
+      "question": "What characterizes the depth profile of the overall part?",
+      "reasoning": "The overall part has a stepped depth profile where the raised side walls (25 mm) extend higher than the shallow 5 mm web base.",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "A",
+      "is_correct": true,
+      "predicted": "A",
+      "qid": "semantic_4",
+      "question": "How is the interior of the rectangular web structured?",
+      "reasoning": "The interior of the rectangular perimeter frame is structured by central cross ribs (longitudinal and transverse) along with an internal diagonal rib.",
+      "split": "semantic"
+    }
+  ],
+  "selected_semantic_judge": {
+    "error": null,
+    "reason": "Both the reference and reconstruction represent an open-web structural bracket or flanged truss component. The disconnected floating elements, missing internal gussets, and absent circular mounting holes are construction-quality and geometric imperfections rather than categorical contradictions.",
+    "semantic": 10
+  }
+}

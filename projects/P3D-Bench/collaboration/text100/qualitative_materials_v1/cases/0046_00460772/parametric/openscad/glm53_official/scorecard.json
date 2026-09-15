@@ -1,0 +1,182 @@
+{
+  "identity": [
+    "glm53_official",
+    "parametric",
+    "openscad",
+    "0046/00460772"
+  ],
+  "metrics": {
+    "chamfer_distance": 0.000151,
+    "chamfer_distance_score": 0.9849,
+    "f_score_001": 0.6548,
+    "f_score_005": 0.9741,
+    "geometry": 0.8543800000000001,
+    "inverted_normal_score": 1.0,
+    "iou_csg": 0.8034,
+    "iou_inapplicable": false,
+    "iou_measured": true,
+    "jsem_filled_1_10": null,
+    "jsem_normalized": null,
+    "jsem_observed": null,
+    "judge": 1.0,
+    "no_open_edge": 1.0,
+    "non_manifold_edge_score": 1.0,
+    "normal_consistency": 0.8547,
+    "qa_micro": 1.0,
+    "qa_p": 1.0,
+    "qa_p_correct": 8.0,
+    "qa_s": 1.0,
+    "qa_s_correct": 4.0,
+    "topology": 1.0,
+    "valid": true
+  },
+  "note": "Per-case saved contributions; not a recomputed experiment. Judge bucket differs from native J-Sem.",
+  "selected_qa": {
+    "none_of_above_count": 0,
+    "overall_accuracy": 1.0,
+    "param_accuracy": 1.0,
+    "param_correct": 8,
+    "param_total": 8,
+    "per_category_accuracy": {},
+    "semantic_accuracy": 1.0,
+    "semantic_correct": 4,
+    "semantic_total": 4,
+    "total_correct": 12,
+    "total_questions": 12
+  },
+  "selected_qa_answers": [
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "B",
+      "is_correct": true,
+      "predicted": "B",
+      "qid": "semantic_1",
+      "question": "Which description best matches the structure of the projecting side arm's underside?",
+      "reasoning": "Observing the render and code, the projecting arm does not extend down to the base datum (Z=0); its underside starts at Z=0.065, creating a stepped underside where the arm sits on a higher tier.",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "B",
+      "is_correct": true,
+      "predicted": "B",
+      "qid": "semantic_2",
+      "question": "Which statement describes the internal geometry of the tall annular sleeve?",
+      "reasoning": "The rendered views and the OpenSCAD difference operation confirm that the tall cylindrical sleeve features a central cylindrical bore extending completely through its entire height.",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "B",
+      "is_correct": true,
+      "predicted": "B",
+      "qid": "semantic_3",
+      "question": "What feature is located at the smaller rounded end of the projecting side arm?",
+      "reasoning": "At the rounded end of the projecting side arm/base, there is a round through-hole cut through the full thickness of the part, matching the through rounded opening.",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "A",
+      "is_correct": true,
+      "predicted": "A",
+      "qid": "semantic_4",
+      "question": "Relative to the projecting side arm and the sleeve, how is the thin triangular rib oriented?",
+      "reasoning": "The thin triangular rib is situated on the upper face, sloping upward from the lower rounded arm/boss toward the top rim of the central hollow sleeve.",
+      "split": "semantic"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "C",
+      "is_correct": true,
+      "predicted": "C",
+      "qid": "param_1",
+      "question": "What is the wall thickness of the taller hollow sleeve (the difference between its outer and inner radii)?",
+      "reasoning": "The wall thickness is sleeve_r_outer - sleeve_r_inner = 0.1301 - 0.0867 = 0.0434, which rounds to 0.043.",
+      "split": "param"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "B",
+      "is_correct": true,
+      "predicted": "B",
+      "qid": "param_2",
+      "question": "What is the ratio of the taller hollow sleeve's overall height to the height of the low rounded base?",
+      "reasoning": "The sleeve height is sleeve_top = 0.260116 and the base height is base_height = 0.065029. The ratio 0.260116 / 0.065029 equals 4:1.",
+      "split": "param"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "A",
+      "is_correct": true,
+      "predicted": "A",
+      "qid": "param_3",
+      "question": "What is the depth of the rectangular pocket on the top face of the projecting straight-sided arm?",
+      "reasoning": "The arm_tier module is constructed as a solid rectangular block without any subtractive pocketing on its top face, leaving a flat solid surface.",
+      "split": "param"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "C",
+      "is_correct": true,
+      "predicted": "C",
+      "qid": "param_4",
+      "question": "How many narrow triangular webs (ribs) connect the central sleeve to the surrounding geometry?",
+      "reasoning": "Tracing the code and renders, exactly one triangular web module connects the central sleeve to the adjacent base.",
+      "split": "param"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "D",
+      "is_correct": true,
+      "predicted": "D",
+      "qid": "param_5",
+      "question": "What is the vertical distance (difference in height) between the top face of the taller hollow sleeve and the top face of the projecting straight-sided arm?",
+      "reasoning": "The vertical distance is sleeve_top - arm_top = 0.260116 - 0.130058 = 0.130058, which rounds to 0.130.",
+      "split": "param"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "A",
+      "is_correct": true,
+      "predicted": "A",
+      "qid": "param_6",
+      "question": "How was the stepped profile on the underside of the projecting straight-sided arm created?",
+      "reasoning": "The arm's stepped profile is created by setting the bottom of the arm tier at Z=0.065, effectively removing material from the lower band (0 to 0.065).",
+      "split": "param"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "A",
+      "is_correct": true,
+      "predicted": "A",
+      "qid": "param_7",
+      "question": "What is the material thickness of the narrow triangular web?",
+      "reasoning": "The web thickness is web_y1 - web_y0 = (0.199422 - 0.0996) - 0.0781 = 0.099822 - 0.0781 = 0.021722, which rounds to 0.022.",
+      "split": "param"
+    },
+    {
+      "category": "",
+      "chose_none_of_above": false,
+      "ground_truth": "D",
+      "is_correct": true,
+      "predicted": "D",
+      "qid": "param_8",
+      "question": "How does the inner radius of the taller hollow sleeve compare to the inner radius of the hole in the low rounded base?",
+      "reasoning": "The sleeve inner radius is 0.0867 and the ring boss inner radius is 0.0434; 0.0867 is exactly twice 0.0434.",
+      "split": "param"
+    }
+  ],
+  "selected_semantic_judge": null
+}

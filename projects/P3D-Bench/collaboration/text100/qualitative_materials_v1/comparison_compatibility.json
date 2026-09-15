@@ -1,0 +1,422 @@
+[
+  {
+    "format": "openscad",
+    "identical_conditions": true,
+    "identical_gt_triangles": true,
+    "models": [
+      {
+        "condition_sha256": "4c9c75e1a44c610693af8488005f2385110a2a4d4e8506d3ef06c8d4cda7971b",
+        "gt_mesh": "assets/1b326187950a3281c2e525e75d9ccb90e557ef97c4da8913acab93feee3d644f.stl",
+        "gt_triangle_signature": "733a7e5d9989d7fa4bb462960f0cb6e5cc67ee60f3a8655c605807ac908329ea",
+        "model_id": "gpt6_probe"
+      },
+      {
+        "condition_sha256": "4c9c75e1a44c610693af8488005f2385110a2a4d4e8506d3ef06c8d4cda7971b",
+        "gt_mesh": "assets/1b326187950a3281c2e525e75d9ccb90e557ef97c4da8913acab93feee3d644f.stl",
+        "gt_triangle_signature": "733a7e5d9989d7fa4bb462960f0cb6e5cc67ee60f3a8655c605807ac908329ea",
+        "model_id": "gemini38_flash"
+      },
+      {
+        "condition_sha256": "4c9c75e1a44c610693af8488005f2385110a2a4d4e8506d3ef06c8d4cda7971b",
+        "gt_mesh": "assets/1b326187950a3281c2e525e75d9ccb90e557ef97c4da8913acab93feee3d644f.stl",
+        "gt_triangle_signature": "733a7e5d9989d7fa4bb462960f0cb6e5cc67ee60f3a8655c605807ac908329ea",
+        "model_id": "qwen38max"
+      },
+      {
+        "condition_sha256": "4c9c75e1a44c610693af8488005f2385110a2a4d4e8506d3ef06c8d4cda7971b",
+        "gt_mesh": "assets/1b326187950a3281c2e525e75d9ccb90e557ef97c4da8913acab93feee3d644f.stl",
+        "gt_triangle_signature": "733a7e5d9989d7fa4bb462960f0cb6e5cc67ee60f3a8655c605807ac908329ea",
+        "model_id": "grok46"
+      },
+      {
+        "condition_sha256": "4c9c75e1a44c610693af8488005f2385110a2a4d4e8506d3ef06c8d4cda7971b",
+        "gt_mesh": "assets/1b326187950a3281c2e525e75d9ccb90e557ef97c4da8913acab93feee3d644f.stl",
+        "gt_triangle_signature": "733a7e5d9989d7fa4bb462960f0cb6e5cc67ee60f3a8655c605807ac908329ea",
+        "model_id": "kimi_k3"
+      },
+      {
+        "condition_sha256": "4c9c75e1a44c610693af8488005f2385110a2a4d4e8506d3ef06c8d4cda7971b",
+        "gt_mesh": "assets/1b326187950a3281c2e525e75d9ccb90e557ef97c4da8913acab93feee3d644f.stl",
+        "gt_triangle_signature": "733a7e5d9989d7fa4bb462960f0cb6e5cc67ee60f3a8655c605807ac908329ea",
+        "model_id": "claude_opus5"
+      },
+      {
+        "condition_sha256": "4c9c75e1a44c610693af8488005f2385110a2a4d4e8506d3ef06c8d4cda7971b",
+        "gt_mesh": "assets/1b326187950a3281c2e525e75d9ccb90e557ef97c4da8913acab93feee3d644f.stl",
+        "gt_triangle_signature": "733a7e5d9989d7fa4bb462960f0cb6e5cc67ee60f3a8655c605807ac908329ea",
+        "model_id": "glm53_official"
+      },
+      {
+        "condition_sha256": "4c9c75e1a44c610693af8488005f2385110a2a4d4e8506d3ef06c8d4cda7971b",
+        "gt_mesh": "assets/1b326187950a3281c2e525e75d9ccb90e557ef97c4da8913acab93feee3d644f.stl",
+        "gt_triangle_signature": "733a7e5d9989d7fa4bb462960f0cb6e5cc67ee60f3a8655c605807ac908329ea",
+        "model_id": "deepseek_v41flash"
+      },
+      {
+        "condition_sha256": "4c9c75e1a44c610693af8488005f2385110a2a4d4e8506d3ef06c8d4cda7971b",
+        "gt_mesh": "assets/1b326187950a3281c2e525e75d9ccb90e557ef97c4da8913acab93feee3d644f.stl",
+        "gt_triangle_signature": "733a7e5d9989d7fa4bb462960f0cb6e5cc67ee60f3a8655c605807ac908329ea",
+        "model_id": "doubao21"
+      },
+      {
+        "condition_sha256": "4c9c75e1a44c610693af8488005f2385110a2a4d4e8506d3ef06c8d4cda7971b",
+        "gt_mesh": "assets/1b326187950a3281c2e525e75d9ccb90e557ef97c4da8913acab93feee3d644f.stl",
+        "gt_triangle_signature": "733a7e5d9989d7fa4bb462960f0cb6e5cc67ee60f3a8655c605807ac908329ea",
+        "model_id": "glm53flash"
+      }
+    ],
+    "policy": "Retain each row's own GT and camera. Never substitute a common GT unless compatibility is separately proven.",
+    "task": "descriptive",
+    "uid": "0092/00923543"
+  },
+  {
+    "format": "openscad",
+    "identical_conditions": true,
+    "identical_gt_triangles": true,
+    "models": [
+      {
+        "condition_sha256": "cc787d58d6f12210ab468a8fb9e627cac54101b0309bfdae41e4f89d363d84f3",
+        "gt_mesh": "assets/7d756e1330c349968178a07dbbc15ef385598d41701a45af7fa058ecf716e01d.stl",
+        "gt_triangle_signature": "8b8f94d236c2d7ac9909ec66ccc43a746428cd7635038cab34286434ce05f581",
+        "model_id": "gpt6_probe"
+      },
+      {
+        "condition_sha256": "cc787d58d6f12210ab468a8fb9e627cac54101b0309bfdae41e4f89d363d84f3",
+        "gt_mesh": "assets/7d756e1330c349968178a07dbbc15ef385598d41701a45af7fa058ecf716e01d.stl",
+        "gt_triangle_signature": "8b8f94d236c2d7ac9909ec66ccc43a746428cd7635038cab34286434ce05f581",
+        "model_id": "gemini38_flash"
+      },
+      {
+        "condition_sha256": "cc787d58d6f12210ab468a8fb9e627cac54101b0309bfdae41e4f89d363d84f3",
+        "gt_mesh": "assets/7d756e1330c349968178a07dbbc15ef385598d41701a45af7fa058ecf716e01d.stl",
+        "gt_triangle_signature": "8b8f94d236c2d7ac9909ec66ccc43a746428cd7635038cab34286434ce05f581",
+        "model_id": "qwen38max"
+      },
+      {
+        "condition_sha256": "cc787d58d6f12210ab468a8fb9e627cac54101b0309bfdae41e4f89d363d84f3",
+        "gt_mesh": "assets/7d756e1330c349968178a07dbbc15ef385598d41701a45af7fa058ecf716e01d.stl",
+        "gt_triangle_signature": "8b8f94d236c2d7ac9909ec66ccc43a746428cd7635038cab34286434ce05f581",
+        "model_id": "grok46"
+      },
+      {
+        "condition_sha256": "cc787d58d6f12210ab468a8fb9e627cac54101b0309bfdae41e4f89d363d84f3",
+        "gt_mesh": "assets/7d756e1330c349968178a07dbbc15ef385598d41701a45af7fa058ecf716e01d.stl",
+        "gt_triangle_signature": "8b8f94d236c2d7ac9909ec66ccc43a746428cd7635038cab34286434ce05f581",
+        "model_id": "kimi_k3"
+      },
+      {
+        "condition_sha256": "cc787d58d6f12210ab468a8fb9e627cac54101b0309bfdae41e4f89d363d84f3",
+        "gt_mesh": "assets/7d756e1330c349968178a07dbbc15ef385598d41701a45af7fa058ecf716e01d.stl",
+        "gt_triangle_signature": "8b8f94d236c2d7ac9909ec66ccc43a746428cd7635038cab34286434ce05f581",
+        "model_id": "claude_opus5"
+      },
+      {
+        "condition_sha256": "cc787d58d6f12210ab468a8fb9e627cac54101b0309bfdae41e4f89d363d84f3",
+        "gt_mesh": "assets/a0a9fc30a1f17ea12683f940328d91fc9ebeae6b0b2eba5bca6b7a933d95b1a7.stl",
+        "gt_triangle_signature": "8b8f94d236c2d7ac9909ec66ccc43a746428cd7635038cab34286434ce05f581",
+        "model_id": "glm53_official"
+      },
+      {
+        "condition_sha256": "cc787d58d6f12210ab468a8fb9e627cac54101b0309bfdae41e4f89d363d84f3",
+        "gt_mesh": "assets/a0a9fc30a1f17ea12683f940328d91fc9ebeae6b0b2eba5bca6b7a933d95b1a7.stl",
+        "gt_triangle_signature": "8b8f94d236c2d7ac9909ec66ccc43a746428cd7635038cab34286434ce05f581",
+        "model_id": "deepseek_v41flash"
+      },
+      {
+        "condition_sha256": "cc787d58d6f12210ab468a8fb9e627cac54101b0309bfdae41e4f89d363d84f3",
+        "gt_mesh": "assets/a0a9fc30a1f17ea12683f940328d91fc9ebeae6b0b2eba5bca6b7a933d95b1a7.stl",
+        "gt_triangle_signature": "8b8f94d236c2d7ac9909ec66ccc43a746428cd7635038cab34286434ce05f581",
+        "model_id": "doubao21"
+      },
+      {
+        "condition_sha256": "cc787d58d6f12210ab468a8fb9e627cac54101b0309bfdae41e4f89d363d84f3",
+        "gt_mesh": "assets/7d756e1330c349968178a07dbbc15ef385598d41701a45af7fa058ecf716e01d.stl",
+        "gt_triangle_signature": "8b8f94d236c2d7ac9909ec66ccc43a746428cd7635038cab34286434ce05f581",
+        "model_id": "glm53flash"
+      }
+    ],
+    "policy": "Retain each row's own GT and camera. Never substitute a common GT unless compatibility is separately proven.",
+    "task": "parametric",
+    "uid": "0062/00621494"
+  },
+  {
+    "format": "openscad",
+    "identical_conditions": true,
+    "identical_gt_triangles": true,
+    "models": [
+      {
+        "condition_sha256": "f84bd37f25698d91cb1dafca9ccecf8894e085661eea50d05d889045c3036ab1",
+        "gt_mesh": "assets/e92422107cd1b93c27350d33562bbbaaaea086f29192769e7ac8e88a3cf2c835.stl",
+        "gt_triangle_signature": "790244adbaad6b80731290647c7b3a672d7923cd6767af6d9ab5965352dfde8f",
+        "model_id": "gpt6_probe"
+      },
+      {
+        "condition_sha256": "f84bd37f25698d91cb1dafca9ccecf8894e085661eea50d05d889045c3036ab1",
+        "gt_mesh": "assets/1b86f97d7da6ca7b90880cb46af3feb40104179f44ea1bdfdc037a293794ebf8.stl",
+        "gt_triangle_signature": "790244adbaad6b80731290647c7b3a672d7923cd6767af6d9ab5965352dfde8f",
+        "model_id": "gemini38_flash"
+      },
+      {
+        "condition_sha256": "f84bd37f25698d91cb1dafca9ccecf8894e085661eea50d05d889045c3036ab1",
+        "gt_mesh": "assets/94db7ca3780785e712ab6b29b93426c4c6fdd316d0e3ebfe2bc401394bd42dea.stl",
+        "gt_triangle_signature": "790244adbaad6b80731290647c7b3a672d7923cd6767af6d9ab5965352dfde8f",
+        "model_id": "qwen38max"
+      },
+      {
+        "condition_sha256": "f84bd37f25698d91cb1dafca9ccecf8894e085661eea50d05d889045c3036ab1",
+        "gt_mesh": "assets/1b86f97d7da6ca7b90880cb46af3feb40104179f44ea1bdfdc037a293794ebf8.stl",
+        "gt_triangle_signature": "790244adbaad6b80731290647c7b3a672d7923cd6767af6d9ab5965352dfde8f",
+        "model_id": "grok46"
+      },
+      {
+        "condition_sha256": "f84bd37f25698d91cb1dafca9ccecf8894e085661eea50d05d889045c3036ab1",
+        "gt_mesh": "assets/94db7ca3780785e712ab6b29b93426c4c6fdd316d0e3ebfe2bc401394bd42dea.stl",
+        "gt_triangle_signature": "790244adbaad6b80731290647c7b3a672d7923cd6767af6d9ab5965352dfde8f",
+        "model_id": "kimi_k3"
+      },
+      {
+        "condition_sha256": "f84bd37f25698d91cb1dafca9ccecf8894e085661eea50d05d889045c3036ab1",
+        "gt_mesh": "assets/1b86f97d7da6ca7b90880cb46af3feb40104179f44ea1bdfdc037a293794ebf8.stl",
+        "gt_triangle_signature": "790244adbaad6b80731290647c7b3a672d7923cd6767af6d9ab5965352dfde8f",
+        "model_id": "claude_opus5"
+      },
+      {
+        "condition_sha256": "f84bd37f25698d91cb1dafca9ccecf8894e085661eea50d05d889045c3036ab1",
+        "gt_mesh": "assets/1b86f97d7da6ca7b90880cb46af3feb40104179f44ea1bdfdc037a293794ebf8.stl",
+        "gt_triangle_signature": "790244adbaad6b80731290647c7b3a672d7923cd6767af6d9ab5965352dfde8f",
+        "model_id": "glm53_official"
+      },
+      {
+        "condition_sha256": "f84bd37f25698d91cb1dafca9ccecf8894e085661eea50d05d889045c3036ab1",
+        "gt_mesh": "assets/e92422107cd1b93c27350d33562bbbaaaea086f29192769e7ac8e88a3cf2c835.stl",
+        "gt_triangle_signature": "790244adbaad6b80731290647c7b3a672d7923cd6767af6d9ab5965352dfde8f",
+        "model_id": "deepseek_v41flash"
+      },
+      {
+        "condition_sha256": "f84bd37f25698d91cb1dafca9ccecf8894e085661eea50d05d889045c3036ab1",
+        "gt_mesh": "assets/94db7ca3780785e712ab6b29b93426c4c6fdd316d0e3ebfe2bc401394bd42dea.stl",
+        "gt_triangle_signature": "790244adbaad6b80731290647c7b3a672d7923cd6767af6d9ab5965352dfde8f",
+        "model_id": "doubao21"
+      },
+      {
+        "condition_sha256": "f84bd37f25698d91cb1dafca9ccecf8894e085661eea50d05d889045c3036ab1",
+        "gt_mesh": "assets/d7c39b6fc839a64f9b85bfa9aa87da56ac552f75fb9b2a5e59efd9f32ae5242c.stl",
+        "gt_triangle_signature": "790244adbaad6b80731290647c7b3a672d7923cd6767af6d9ab5965352dfde8f",
+        "model_id": "glm53flash"
+      }
+    ],
+    "policy": "Retain each row's own GT and camera. Never substitute a common GT unless compatibility is separately proven.",
+    "task": "parametric",
+    "uid": "0046/00460772"
+  },
+  {
+    "format": "openscad",
+    "identical_conditions": true,
+    "identical_gt_triangles": false,
+    "models": [
+      {
+        "condition_sha256": "f4ba3fa32ee929db547ecc9ebed4c9acb2ab778ac7b9a4b95f05d940bdc77524",
+        "gt_mesh": "assets/be88ee71f06db3ca0ebc088398e85727981cc1dd20586f25a374a8d870a0ed25.stl",
+        "gt_triangle_signature": "03f69d45b71c9398ee72f4189bc5b6ac8e3396672fdad78b5563b66195dcb4fa",
+        "model_id": "gpt6_probe"
+      },
+      {
+        "condition_sha256": "f4ba3fa32ee929db547ecc9ebed4c9acb2ab778ac7b9a4b95f05d940bdc77524",
+        "gt_mesh": "assets/be88ee71f06db3ca0ebc088398e85727981cc1dd20586f25a374a8d870a0ed25.stl",
+        "gt_triangle_signature": "03f69d45b71c9398ee72f4189bc5b6ac8e3396672fdad78b5563b66195dcb4fa",
+        "model_id": "gemini38_flash"
+      },
+      {
+        "condition_sha256": "f4ba3fa32ee929db547ecc9ebed4c9acb2ab778ac7b9a4b95f05d940bdc77524",
+        "gt_mesh": "assets/5f96193c18da157a6f852ff32f0c8f4f1318293268baf91c428d4c9aefe69d58.stl",
+        "gt_triangle_signature": "ede23884c9890f51fd14dbda82f50dabb953b148f6fdc6b0c6a8a51327c4b340",
+        "model_id": "qwen38max"
+      },
+      {
+        "condition_sha256": "f4ba3fa32ee929db547ecc9ebed4c9acb2ab778ac7b9a4b95f05d940bdc77524",
+        "gt_mesh": "assets/be88ee71f06db3ca0ebc088398e85727981cc1dd20586f25a374a8d870a0ed25.stl",
+        "gt_triangle_signature": "03f69d45b71c9398ee72f4189bc5b6ac8e3396672fdad78b5563b66195dcb4fa",
+        "model_id": "grok46"
+      },
+      {
+        "condition_sha256": "f4ba3fa32ee929db547ecc9ebed4c9acb2ab778ac7b9a4b95f05d940bdc77524",
+        "gt_mesh": "assets/5f96193c18da157a6f852ff32f0c8f4f1318293268baf91c428d4c9aefe69d58.stl",
+        "gt_triangle_signature": "ede23884c9890f51fd14dbda82f50dabb953b148f6fdc6b0c6a8a51327c4b340",
+        "model_id": "kimi_k3"
+      },
+      {
+        "condition_sha256": "f4ba3fa32ee929db547ecc9ebed4c9acb2ab778ac7b9a4b95f05d940bdc77524",
+        "gt_mesh": "assets/be88ee71f06db3ca0ebc088398e85727981cc1dd20586f25a374a8d870a0ed25.stl",
+        "gt_triangle_signature": "03f69d45b71c9398ee72f4189bc5b6ac8e3396672fdad78b5563b66195dcb4fa",
+        "model_id": "claude_opus5"
+      },
+      {
+        "condition_sha256": "f4ba3fa32ee929db547ecc9ebed4c9acb2ab778ac7b9a4b95f05d940bdc77524",
+        "gt_mesh": "assets/5f96193c18da157a6f852ff32f0c8f4f1318293268baf91c428d4c9aefe69d58.stl",
+        "gt_triangle_signature": "ede23884c9890f51fd14dbda82f50dabb953b148f6fdc6b0c6a8a51327c4b340",
+        "model_id": "glm53_official"
+      },
+      {
+        "condition_sha256": "f4ba3fa32ee929db547ecc9ebed4c9acb2ab778ac7b9a4b95f05d940bdc77524",
+        "gt_mesh": "assets/be88ee71f06db3ca0ebc088398e85727981cc1dd20586f25a374a8d870a0ed25.stl",
+        "gt_triangle_signature": "03f69d45b71c9398ee72f4189bc5b6ac8e3396672fdad78b5563b66195dcb4fa",
+        "model_id": "deepseek_v41flash"
+      },
+      {
+        "condition_sha256": "f4ba3fa32ee929db547ecc9ebed4c9acb2ab778ac7b9a4b95f05d940bdc77524",
+        "gt_mesh": "assets/5f96193c18da157a6f852ff32f0c8f4f1318293268baf91c428d4c9aefe69d58.stl",
+        "gt_triangle_signature": "ede23884c9890f51fd14dbda82f50dabb953b148f6fdc6b0c6a8a51327c4b340",
+        "model_id": "doubao21"
+      },
+      {
+        "condition_sha256": "f4ba3fa32ee929db547ecc9ebed4c9acb2ab778ac7b9a4b95f05d940bdc77524",
+        "gt_mesh": "assets/5f96193c18da157a6f852ff32f0c8f4f1318293268baf91c428d4c9aefe69d58.stl",
+        "gt_triangle_signature": "ede23884c9890f51fd14dbda82f50dabb953b148f6fdc6b0c6a8a51327c4b340",
+        "model_id": "glm53flash"
+      }
+    ],
+    "policy": "Retain each row's own GT and camera. Never substitute a common GT unless compatibility is separately proven.",
+    "task": "parametric",
+    "uid": "0093/00934405"
+  },
+  {
+    "format": "json",
+    "identical_conditions": true,
+    "identical_gt_triangles": true,
+    "models": [
+      {
+        "condition_sha256": "ec59ad6cbb98bb04ac259cdb15de9395efa04b11ca138d7ad4059754bf8ffd27",
+        "gt_mesh": "assets/d88e8cd2401a0f824526c76a6eb8091e60803e0171c2744e5460ac1c720a2387.stl",
+        "gt_triangle_signature": "99f424e2979d8e59501184a26bb63ec9b891bfa20c22021db8101707c6eb9099",
+        "model_id": "gpt6_probe"
+      },
+      {
+        "condition_sha256": "ec59ad6cbb98bb04ac259cdb15de9395efa04b11ca138d7ad4059754bf8ffd27",
+        "gt_mesh": "assets/d88e8cd2401a0f824526c76a6eb8091e60803e0171c2744e5460ac1c720a2387.stl",
+        "gt_triangle_signature": "99f424e2979d8e59501184a26bb63ec9b891bfa20c22021db8101707c6eb9099",
+        "model_id": "gemini38_flash"
+      },
+      {
+        "condition_sha256": "ec59ad6cbb98bb04ac259cdb15de9395efa04b11ca138d7ad4059754bf8ffd27",
+        "gt_mesh": "assets/d88e8cd2401a0f824526c76a6eb8091e60803e0171c2744e5460ac1c720a2387.stl",
+        "gt_triangle_signature": "99f424e2979d8e59501184a26bb63ec9b891bfa20c22021db8101707c6eb9099",
+        "model_id": "qwen38max"
+      },
+      {
+        "condition_sha256": "ec59ad6cbb98bb04ac259cdb15de9395efa04b11ca138d7ad4059754bf8ffd27",
+        "gt_mesh": "assets/d88e8cd2401a0f824526c76a6eb8091e60803e0171c2744e5460ac1c720a2387.stl",
+        "gt_triangle_signature": "99f424e2979d8e59501184a26bb63ec9b891bfa20c22021db8101707c6eb9099",
+        "model_id": "grok46"
+      },
+      {
+        "condition_sha256": "ec59ad6cbb98bb04ac259cdb15de9395efa04b11ca138d7ad4059754bf8ffd27",
+        "gt_mesh": "assets/d88e8cd2401a0f824526c76a6eb8091e60803e0171c2744e5460ac1c720a2387.stl",
+        "gt_triangle_signature": "99f424e2979d8e59501184a26bb63ec9b891bfa20c22021db8101707c6eb9099",
+        "model_id": "kimi_k3"
+      },
+      {
+        "condition_sha256": "ec59ad6cbb98bb04ac259cdb15de9395efa04b11ca138d7ad4059754bf8ffd27",
+        "gt_mesh": "assets/d88e8cd2401a0f824526c76a6eb8091e60803e0171c2744e5460ac1c720a2387.stl",
+        "gt_triangle_signature": "99f424e2979d8e59501184a26bb63ec9b891bfa20c22021db8101707c6eb9099",
+        "model_id": "claude_opus5"
+      },
+      {
+        "condition_sha256": "ec59ad6cbb98bb04ac259cdb15de9395efa04b11ca138d7ad4059754bf8ffd27",
+        "gt_mesh": "assets/d88e8cd2401a0f824526c76a6eb8091e60803e0171c2744e5460ac1c720a2387.stl",
+        "gt_triangle_signature": "99f424e2979d8e59501184a26bb63ec9b891bfa20c22021db8101707c6eb9099",
+        "model_id": "glm53_official"
+      },
+      {
+        "condition_sha256": "ec59ad6cbb98bb04ac259cdb15de9395efa04b11ca138d7ad4059754bf8ffd27",
+        "gt_mesh": "assets/d88e8cd2401a0f824526c76a6eb8091e60803e0171c2744e5460ac1c720a2387.stl",
+        "gt_triangle_signature": "99f424e2979d8e59501184a26bb63ec9b891bfa20c22021db8101707c6eb9099",
+        "model_id": "deepseek_v41flash"
+      },
+      {
+        "condition_sha256": "ec59ad6cbb98bb04ac259cdb15de9395efa04b11ca138d7ad4059754bf8ffd27",
+        "gt_mesh": "assets/d88e8cd2401a0f824526c76a6eb8091e60803e0171c2744e5460ac1c720a2387.stl",
+        "gt_triangle_signature": "99f424e2979d8e59501184a26bb63ec9b891bfa20c22021db8101707c6eb9099",
+        "model_id": "doubao21"
+      },
+      {
+        "condition_sha256": "ec59ad6cbb98bb04ac259cdb15de9395efa04b11ca138d7ad4059754bf8ffd27",
+        "gt_mesh": "assets/d88e8cd2401a0f824526c76a6eb8091e60803e0171c2744e5460ac1c720a2387.stl",
+        "gt_triangle_signature": "99f424e2979d8e59501184a26bb63ec9b891bfa20c22021db8101707c6eb9099",
+        "model_id": "glm53flash"
+      }
+    ],
+    "policy": "Retain each row's own GT and camera. Never substitute a common GT unless compatibility is separately proven.",
+    "task": "descriptive",
+    "uid": "0085/00852511"
+  },
+  {
+    "format": "json",
+    "identical_conditions": true,
+    "identical_gt_triangles": true,
+    "models": [
+      {
+        "condition_sha256": "7d744eeeb3021b8e53d4499838af6762c9f52adcf6bd7ff855edd9ff26a5b6b1",
+        "gt_mesh": "assets/41e308a29dd07404fd3567d21bac0b03aaaa207e95c638091784b38f0bd12bd8.stl",
+        "gt_triangle_signature": "85d05a0902330fe0410dda2fdab03b6a191c3aa54cc26da21b2e21189112734a",
+        "model_id": "gpt6_probe"
+      },
+      {
+        "condition_sha256": "7d744eeeb3021b8e53d4499838af6762c9f52adcf6bd7ff855edd9ff26a5b6b1",
+        "gt_mesh": "assets/41e308a29dd07404fd3567d21bac0b03aaaa207e95c638091784b38f0bd12bd8.stl",
+        "gt_triangle_signature": "85d05a0902330fe0410dda2fdab03b6a191c3aa54cc26da21b2e21189112734a",
+        "model_id": "gemini38_flash"
+      },
+      {
+        "condition_sha256": "7d744eeeb3021b8e53d4499838af6762c9f52adcf6bd7ff855edd9ff26a5b6b1",
+        "gt_mesh": "assets/41e308a29dd07404fd3567d21bac0b03aaaa207e95c638091784b38f0bd12bd8.stl",
+        "gt_triangle_signature": "85d05a0902330fe0410dda2fdab03b6a191c3aa54cc26da21b2e21189112734a",
+        "model_id": "qwen38max"
+      },
+      {
+        "condition_sha256": "7d744eeeb3021b8e53d4499838af6762c9f52adcf6bd7ff855edd9ff26a5b6b1",
+        "gt_mesh": "assets/41e308a29dd07404fd3567d21bac0b03aaaa207e95c638091784b38f0bd12bd8.stl",
+        "gt_triangle_signature": "85d05a0902330fe0410dda2fdab03b6a191c3aa54cc26da21b2e21189112734a",
+        "model_id": "grok46"
+      },
+      {
+        "condition_sha256": "7d744eeeb3021b8e53d4499838af6762c9f52adcf6bd7ff855edd9ff26a5b6b1",
+        "gt_mesh": "assets/41e308a29dd07404fd3567d21bac0b03aaaa207e95c638091784b38f0bd12bd8.stl",
+        "gt_triangle_signature": "85d05a0902330fe0410dda2fdab03b6a191c3aa54cc26da21b2e21189112734a",
+        "model_id": "kimi_k3"
+      },
+      {
+        "condition_sha256": "7d744eeeb3021b8e53d4499838af6762c9f52adcf6bd7ff855edd9ff26a5b6b1",
+        "gt_mesh": "assets/41e308a29dd07404fd3567d21bac0b03aaaa207e95c638091784b38f0bd12bd8.stl",
+        "gt_triangle_signature": "85d05a0902330fe0410dda2fdab03b6a191c3aa54cc26da21b2e21189112734a",
+        "model_id": "claude_opus5"
+      },
+      {
+        "condition_sha256": "7d744eeeb3021b8e53d4499838af6762c9f52adcf6bd7ff855edd9ff26a5b6b1",
+        "gt_mesh": "assets/41e308a29dd07404fd3567d21bac0b03aaaa207e95c638091784b38f0bd12bd8.stl",
+        "gt_triangle_signature": "85d05a0902330fe0410dda2fdab03b6a191c3aa54cc26da21b2e21189112734a",
+        "model_id": "glm53_official"
+      },
+      {
+        "condition_sha256": "7d744eeeb3021b8e53d4499838af6762c9f52adcf6bd7ff855edd9ff26a5b6b1",
+        "gt_mesh": "assets/41e308a29dd07404fd3567d21bac0b03aaaa207e95c638091784b38f0bd12bd8.stl",
+        "gt_triangle_signature": "85d05a0902330fe0410dda2fdab03b6a191c3aa54cc26da21b2e21189112734a",
+        "model_id": "deepseek_v41flash"
+      },
+      {
+        "condition_sha256": "7d744eeeb3021b8e53d4499838af6762c9f52adcf6bd7ff855edd9ff26a5b6b1",
+        "gt_mesh": "assets/41e308a29dd07404fd3567d21bac0b03aaaa207e95c638091784b38f0bd12bd8.stl",
+        "gt_triangle_signature": "85d05a0902330fe0410dda2fdab03b6a191c3aa54cc26da21b2e21189112734a",
+        "model_id": "doubao21"
+      },
+      {
+        "condition_sha256": "7d744eeeb3021b8e53d4499838af6762c9f52adcf6bd7ff855edd9ff26a5b6b1",
+        "gt_mesh": "assets/41e308a29dd07404fd3567d21bac0b03aaaa207e95c638091784b38f0bd12bd8.stl",
+        "gt_triangle_signature": "85d05a0902330fe0410dda2fdab03b6a191c3aa54cc26da21b2e21189112734a",
+        "model_id": "glm53flash"
+      }
+    ],
+    "policy": "Retain each row's own GT and camera. Never substitute a common GT unless compatibility is separately proven.",
+    "task": "parametric",
+    "uid": "0015/00155951"
+  }
+]

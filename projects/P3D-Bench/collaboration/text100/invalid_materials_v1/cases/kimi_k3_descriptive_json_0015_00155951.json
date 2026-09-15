@@ -1,0 +1,36 @@
+{
+  "classification_status": "not_assigned_in_selected_source",
+  "cohort": "main",
+  "failure_class": null,
+  "format": "json",
+  "historical_generation_attempt_errors": [
+    {
+      "attempt": 1,
+      "error_signature": "unknown_stage|None|invalid_without_error",
+      "error_stage": null,
+      "error_type": null,
+      "errors": [],
+      "valid": true
+    }
+  ],
+  "model_id": "kimi_k3",
+  "note": "Native flags and historical attempt errors can differ; use selected_local_errors for the retained local outcome. No new taxonomy assigned.",
+  "program": "programs/3624ea92b8027155702d2d68080278211b53a61b4cd866b297d44d4bb597e7e3.json",
+  "selected_local_errors": {
+    "export_errors": [
+      "Invalid JSON from LLM: Expecting ',' delimiter: line 1 column 2213 (char 2212)"
+    ]
+  },
+  "selected_record_flags": {
+    "api_complete": true,
+    "api_parse_failed": false,
+    "llm_failed": false,
+    "local_eval_complete": true
+  },
+  "source_judge_sha256": "748d3cb497b8b663d6fbdec6120303eba83b5b8815c58959e83ac45bfa5e2950",
+  "source_native_sha256": "3a427955c9669b0470dfed1d9736d5f269c7b32a760f7cddc4d53822c03c850b",
+  "strict_json_parseable": false,
+  "task": "descriptive",
+  "uid": "0015/00155951",
+  "valid": false
+}

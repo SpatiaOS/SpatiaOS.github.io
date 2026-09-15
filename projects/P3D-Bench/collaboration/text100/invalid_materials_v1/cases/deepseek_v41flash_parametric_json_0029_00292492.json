@@ -1,0 +1,38 @@
+{
+  "classification_status": "not_assigned_in_selected_source",
+  "cohort": "main",
+  "failure_class": null,
+  "format": "json",
+  "historical_generation_attempt_errors": [
+    {
+      "attempt": 1,
+      "error_signature": "unknown_stage|None|JSON->STEP conversion failed: ERROR:__main__:✗ _tmp_pred.json: 'sequence'",
+      "error_stage": null,
+      "error_type": null,
+      "errors": [
+        "JSON->STEP conversion failed: ERROR:__main__:✗ _tmp_pred.json: 'sequence'"
+      ],
+      "valid": false
+    }
+  ],
+  "model_id": "deepseek_v41flash",
+  "note": "Native flags and historical attempt errors can differ; use selected_local_errors for the retained local outcome. No new taxonomy assigned.",
+  "program": "programs/4a65f52b7074cb2a4474fbf51d6032d3e5927a4654742b6c5f37bfbbcb81e472.json",
+  "selected_local_errors": {
+    "export_errors": [
+      "JSON->STEP conversion failed: ERROR:__main__:✗ _tmp_pred.json: 'sequence'"
+    ]
+  },
+  "selected_record_flags": {
+    "api_complete": true,
+    "api_parse_failed": false,
+    "llm_failed": false,
+    "local_eval_complete": true
+  },
+  "source_judge_sha256": "0a025ce62fe83ff7acf4071640bba161e5bdf503b8deeee1aefc0af3c1687d8f",
+  "source_native_sha256": "ecfe926475f35065cd820a102c01e82f9857043d6bb17eb0eb1439a845166b7b",
+  "strict_json_parseable": true,
+  "task": "parametric",
+  "uid": "0029/00292492",
+  "valid": false
+}

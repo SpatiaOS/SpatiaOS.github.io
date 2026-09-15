@@ -1,0 +1,38 @@
+{
+  "classification_status": "not_assigned_in_selected_source",
+  "cohort": "gemini_supplemental",
+  "failure_class": null,
+  "format": "threejs",
+  "historical_generation_attempt_errors": [
+    {
+      "attempt": 1,
+      "error_signature": "unknown_stage|None|Node.js STL export failed: ERROR executing Three.js code: Cannot read properties of null (reading 'count')",
+      "error_stage": null,
+      "error_type": null,
+      "errors": [
+        "Node.js STL export failed: ERROR executing Three.js code: Cannot read properties of null (reading 'count')"
+      ],
+      "valid": false
+    }
+  ],
+  "model_id": "gemini38_flash",
+  "note": "Native flags and historical attempt errors can differ; use selected_local_errors for the retained local outcome. No new taxonomy assigned.",
+  "program": "programs/091f29c0a5950480bc1dad6486fd2cf970a562f18b75c11ff577796afeaa6db5.js",
+  "selected_local_errors": {
+    "export_errors": [
+      "Node.js STL export failed: ERROR executing Three.js code: Cannot read properties of null (reading 'count')"
+    ]
+  },
+  "selected_record_flags": {
+    "api_complete": true,
+    "api_parse_failed": false,
+    "llm_failed": false,
+    "local_eval_complete": true
+  },
+  "source_judge_sha256": "32d373a1bd1d7c7bf801876f6ccacf4c97657beaf86213056a188b0a85af26d2",
+  "source_native_sha256": "6ef4f9c2ea895604c53ac7cd9c82cd238c2b6c0933ca36cfe930ecd620659653",
+  "strict_json_parseable": null,
+  "task": "parametric",
+  "uid": "0068/00681400",
+  "valid": false
+}

@@ -1,0 +1,39 @@
+{
+  "classification_status": "not_assigned_in_selected_source",
+  "cohort": "main",
+  "failure_class": null,
+  "format": "openscad",
+  "historical_generation_attempt_errors": [
+    {
+      "attempt": 1,
+      "error_signature": "unknown_stage|None|OpenSCAD not found. Install with: sudo apt install openscad",
+      "error_stage": null,
+      "error_type": null,
+      "errors": [
+        "OpenSCAD not found. Install with: sudo apt install openscad"
+      ],
+      "valid": false
+    }
+  ],
+  "model_id": "deepseek_v41flash",
+  "note": "Native flags and historical attempt errors can differ; use selected_local_errors for the retained local outcome. No new taxonomy assigned.",
+  "program": "programs/3c668a5e0f846263ce24498939618ba2f5ac94ee9fb6e4fdd80b5a6a30ae7c50.scad",
+  "selected_local_errors": {
+    "export_errors": [
+      "STL export failed: ERROR: Parser error: syntax error in file ../../../../../../text_to_3d/parametric/openscad/local_eval/deepseek_v41flash/fixed100/recovered_local/plans/71badccd7c44865806b1/execution/native/text2cad/deepseek_v41flash-reason/openscad/0077_00779770/model.scad, line 42\nCan't parse file '<LOCAL_PATH>'!",
+      "Preview render failed: Unknown error"
+    ]
+  },
+  "selected_record_flags": {
+    "api_complete": true,
+    "api_parse_failed": false,
+    "llm_failed": false,
+    "local_eval_complete": true
+  },
+  "source_judge_sha256": "a5cf492b1ccc0a1961f4a8f7013c7e843afe5a1bcf1d05b9e79692dd7086594c",
+  "source_native_sha256": "1b7473e2dfff3f9075527d10a50eb8a43134eb07e2097a71274e8e3c5d5e159a",
+  "strict_json_parseable": null,
+  "task": "parametric",
+  "uid": "0077/00779770",
+  "valid": false
+}

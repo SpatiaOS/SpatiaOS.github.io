@@ -1,0 +1,2057 @@
+{
+  "model_ids": [
+    "gpt6_probe",
+    "gemini38_flash",
+    "qwen38max",
+    "grok46",
+    "kimi_k3",
+    "claude_opus5",
+    "glm53_official",
+    "deepseek_v41flash",
+    "doubao21",
+    "glm53flash"
+  ],
+  "records": [
+    {
+      "assets": {
+        "generated": "assets/491d4e53213aa1304b8fdbd5e2548b34b0898d7c552abb63e8d8886548647b38.scad",
+        "gt_mesh": "assets/1b326187950a3281c2e525e75d9ccb90e557ef97c4da8913acab93feee3d644f.stl",
+        "gt_render": "assets/42dbd1824aefa510f27a718303ae92623123df56ac7aed84ee94145f4273af9e.png",
+        "mesh": "assets/2d37dd625c83192bef04e908b1cd0b204364a46afd4d032b8de400451b06164f.stl",
+        "pred_render": "assets/c03a871d94e72f985c2c30b8a8442085b8fd504dca29a159b46585b40019989c.png"
+      },
+      "condition": "cases/0092_00923543/descriptive/openscad/gpt6_probe/condition.txt",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png"
+      ],
+      "format": "openscad",
+      "model_id": "gpt6_probe",
+      "model_label": "GPT-6 (xhigh)",
+      "model_order": 0,
+      "roles": [
+        "qualitative_grid"
+      ],
+      "scorecard": "cases/0092_00923543/descriptive/openscad/gpt6_probe/scorecard.json",
+      "source_selection_sha256": "615b39873640cef6ae45b5661866829a594de3f66af6a9e56760a0fca9cc65d0",
+      "task": "descriptive",
+      "uid": "0092/00923543",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/ab927f77d6f87a0da898136cabe50e996f9cf0604e5880a58afdeafa74711a1a.scad",
+        "gt_mesh": "assets/1b326187950a3281c2e525e75d9ccb90e557ef97c4da8913acab93feee3d644f.stl",
+        "gt_render": "assets/4a89f73612940b66272bf1d7e14627d0d6c142cddd0805b1379a30d7ab4205a2.png",
+        "mesh": "assets/a3ad1148aae9f0e19d0100f2a22af90b9753ddccbee3312fd02f19646fc70d9a.stl",
+        "pred_render": "assets/438d3af2ea2da770385fe009d6a30d706e95e19aa439baa0380c6b6ded6e5d93.png"
+      },
+      "condition": "cases/0092_00923543/descriptive/openscad/gemini38_flash/condition.txt",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png"
+      ],
+      "format": "openscad",
+      "model_id": "gemini38_flash",
+      "model_label": "Gemini 3.8 Flash (high)",
+      "model_order": 1,
+      "roles": [
+        "qualitative_grid"
+      ],
+      "scorecard": "cases/0092_00923543/descriptive/openscad/gemini38_flash/scorecard.json",
+      "source_selection_sha256": "fb13d1e74a2698c0eadbd5a0f79ba6d77639c14cfadd765c4857bc2755e14589",
+      "task": "descriptive",
+      "uid": "0092/00923543",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/c74028e4ceca067cff22a71afdca5ce1fd0dc0a97ae6a4666256b05b1c52e9bf.scad",
+        "gt_mesh": "assets/1b326187950a3281c2e525e75d9ccb90e557ef97c4da8913acab93feee3d644f.stl",
+        "gt_render": "assets/4a89f73612940b66272bf1d7e14627d0d6c142cddd0805b1379a30d7ab4205a2.png",
+        "mesh": "assets/d0738ada508895d8ab1791283e05f99f35056c89a00d4ae0f1c312bc7631fc14.stl",
+        "pred_render": "assets/6c0765fa6825d88ddab0d86a571e6d1d39f42ded96c30115d2c5f8eb0d92514a.png"
+      },
+      "condition": "cases/0092_00923543/descriptive/openscad/qwen38max/condition.txt",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png"
+      ],
+      "format": "openscad",
+      "model_id": "qwen38max",
+      "model_label": "Qwen3.8-Max (xhigh)",
+      "model_order": 2,
+      "roles": [
+        "qualitative_grid"
+      ],
+      "scorecard": "cases/0092_00923543/descriptive/openscad/qwen38max/scorecard.json",
+      "source_selection_sha256": "700466a7805151555d2f8a9f8c3ae2e04cde7462492b2afbf1e7a1a5b82d1547",
+      "task": "descriptive",
+      "uid": "0092/00923543",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/3af85b8454123686c2ada1ee7165c3abbce3a0f7f2c84cdeeb11a5b57fb628d2.scad",
+        "gt_mesh": "assets/1b326187950a3281c2e525e75d9ccb90e557ef97c4da8913acab93feee3d644f.stl",
+        "gt_render": "assets/4a89f73612940b66272bf1d7e14627d0d6c142cddd0805b1379a30d7ab4205a2.png",
+        "mesh": "assets/f16f4ad69648626f7294c0660eaa9f74fc38671371cc2fd5ecd224ce83b61584.stl",
+        "pred_render": "assets/1e4a287c7b25378b84a1ac8249e13a4835aa0e1f0b93b6f0f993f8620788f994.png"
+      },
+      "condition": "cases/0092_00923543/descriptive/openscad/grok46/condition.txt",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png"
+      ],
+      "format": "openscad",
+      "model_id": "grok46",
+      "model_label": "Grok 4.6 (high)",
+      "model_order": 3,
+      "roles": [
+        "qualitative_grid"
+      ],
+      "scorecard": "cases/0092_00923543/descriptive/openscad/grok46/scorecard.json",
+      "source_selection_sha256": "801a66306a2e1526d14faf0ab47300c9ffd0b037c0c986a41410bf91767e4fb5",
+      "task": "descriptive",
+      "uid": "0092/00923543",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/c346f8c14097b4e780787903e560cdd1c35e3c118da9540d5dd3fb252df3da4b.scad",
+        "gt_mesh": "assets/1b326187950a3281c2e525e75d9ccb90e557ef97c4da8913acab93feee3d644f.stl",
+        "gt_render": "assets/4a89f73612940b66272bf1d7e14627d0d6c142cddd0805b1379a30d7ab4205a2.png",
+        "mesh": "assets/634210b4a72c7c1b9dd73aced26cd0ac5aa65af905874f73e9d264f09cc482d8.stl",
+        "pred_render": "assets/3fde927d3002ec91e2cc7cdcdf4d4735f53ad2e09f9b1a16886ab45c074455c5.png"
+      },
+      "condition": "cases/0092_00923543/descriptive/openscad/kimi_k3/condition.txt",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png"
+      ],
+      "format": "openscad",
+      "model_id": "kimi_k3",
+      "model_label": "Kimi K3 (max)",
+      "model_order": 4,
+      "roles": [
+        "qualitative_grid"
+      ],
+      "scorecard": "cases/0092_00923543/descriptive/openscad/kimi_k3/scorecard.json",
+      "source_selection_sha256": "5b466492555d534b099b2f1867d8d42a481d364b0ad9cb13ade460c9c41c59b2",
+      "task": "descriptive",
+      "uid": "0092/00923543",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/2d925ce239fed5faa44f485a66b4c267236cf71057d4e8dd09759f9591c72cf4.scad",
+        "gt_mesh": "assets/1b326187950a3281c2e525e75d9ccb90e557ef97c4da8913acab93feee3d644f.stl",
+        "gt_render": "assets/4a89f73612940b66272bf1d7e14627d0d6c142cddd0805b1379a30d7ab4205a2.png",
+        "mesh": "assets/5ba0eef720c0030686f4f2bd4aef9380ee3d6c2ccb4ee96193025873bb5af050.stl",
+        "pred_render": "assets/34d0deb0d502beb9801f45856a1d44f7131a2f8e4734e0bb71d8ade8fa09218a.png"
+      },
+      "condition": "cases/0092_00923543/descriptive/openscad/claude_opus5/condition.txt",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png"
+      ],
+      "format": "openscad",
+      "model_id": "claude_opus5",
+      "model_label": "Claude Opus 5 (max)",
+      "model_order": 5,
+      "roles": [
+        "qualitative_grid"
+      ],
+      "scorecard": "cases/0092_00923543/descriptive/openscad/claude_opus5/scorecard.json",
+      "source_selection_sha256": "b26004087ec490d28e0f93046854d0fc7de0ef363db5d424d1b67cfa473f0306",
+      "task": "descriptive",
+      "uid": "0092/00923543",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/6944d41eed695396caffda624453491791090729b431063df62e7fda32aaa67e.scad",
+        "gt_mesh": "assets/1b326187950a3281c2e525e75d9ccb90e557ef97c4da8913acab93feee3d644f.stl",
+        "gt_render": "assets/4a89f73612940b66272bf1d7e14627d0d6c142cddd0805b1379a30d7ab4205a2.png",
+        "mesh": "assets/6ccc287229efa6cec98ae098c96994e538e4947250a8d3ed86779b897f6838f5.stl",
+        "pred_render": "assets/4e948a21a54feca84c9885cdda9d8ec8f8114e62870e62a110bf13d48caf74ad.png"
+      },
+      "condition": "cases/0092_00923543/descriptive/openscad/glm53_official/condition.txt",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png"
+      ],
+      "format": "openscad",
+      "model_id": "glm53_official",
+      "model_label": "GLM-5.3 (high)",
+      "model_order": 6,
+      "roles": [
+        "qualitative_grid"
+      ],
+      "scorecard": "cases/0092_00923543/descriptive/openscad/glm53_official/scorecard.json",
+      "source_selection_sha256": "3af3f015e778cdffb9f2c6b8f87b614e0dc1f5e1f9f507e3c2d92e21ad71eb3b",
+      "task": "descriptive",
+      "uid": "0092/00923543",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/696e8ff85b6bf4d9c055d2da6587652b6a5635d7954f21dfd15b3483dcad5fd9.scad",
+        "gt_mesh": "assets/1b326187950a3281c2e525e75d9ccb90e557ef97c4da8913acab93feee3d644f.stl",
+        "gt_render": "assets/8cb40920a43d9c70a220de8cf987bf17dfe5152c3c100ce76f4f756cf29888e0.png",
+        "mesh": "assets/67e8b99544e19ca150ff349091f318b75db179dfea2728a267c0876d4d4275ab.stl",
+        "pred_render": "assets/dd4fa8f36aab1047f49e2acd26183842f70550c2375c0cde6f388df7dc190300.png"
+      },
+      "condition": "cases/0092_00923543/descriptive/openscad/deepseek_v41flash/condition.txt",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png"
+      ],
+      "format": "openscad",
+      "model_id": "deepseek_v41flash",
+      "model_label": "DeepSeek V4.1 Flash (high)",
+      "model_order": 7,
+      "roles": [
+        "qualitative_grid"
+      ],
+      "scorecard": "cases/0092_00923543/descriptive/openscad/deepseek_v41flash/scorecard.json",
+      "source_selection_sha256": "7a1584d82b780bae885bb60950bf33337a2db6f2e9e7d60a59adbac49f452732",
+      "task": "descriptive",
+      "uid": "0092/00923543",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/9106cce21c70f519a51aff0ecd829e8ebdd41f0ea87d77930b9be3e922b68fa7.scad",
+        "gt_mesh": "assets/1b326187950a3281c2e525e75d9ccb90e557ef97c4da8913acab93feee3d644f.stl",
+        "gt_render": "assets/4a89f73612940b66272bf1d7e14627d0d6c142cddd0805b1379a30d7ab4205a2.png",
+        "mesh": "assets/87f7d7883ebe58081746977969bb16bd66ccdee73423e5a374cb88cc53c1fede.stl",
+        "pred_render": "assets/a27d90e043aca17fa403bab9660a0dcf67a8a45be0669df81f50dc6c6b3269ad.png"
+      },
+      "condition": "cases/0092_00923543/descriptive/openscad/doubao21/condition.txt",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png"
+      ],
+      "format": "openscad",
+      "model_id": "doubao21",
+      "model_label": "Doubao Seed 2.1 Pro (Thinking)",
+      "model_order": 8,
+      "roles": [
+        "qualitative_grid"
+      ],
+      "scorecard": "cases/0092_00923543/descriptive/openscad/doubao21/scorecard.json",
+      "source_selection_sha256": "0e96f95010c62a04b35ad12ba14f1d20621884ac5cf0b70da76c2799218e7dc7",
+      "task": "descriptive",
+      "uid": "0092/00923543",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/05e89aa91f86f787b2f69aea17be5c200baf4bff1c452d944968c6f18aa2154a.scad",
+        "gt_mesh": "assets/1b326187950a3281c2e525e75d9ccb90e557ef97c4da8913acab93feee3d644f.stl",
+        "gt_render": "assets/4a89f73612940b66272bf1d7e14627d0d6c142cddd0805b1379a30d7ab4205a2.png",
+        "mesh": "assets/80498c4219fe1ebf85c52807e5ea525125f88cba644871a6e1527e43c165a890.stl",
+        "pred_render": "assets/c99dc96df23d3c2bc731621ae84e77a8d3ce2967e39e88931b88f620906f1937.png"
+      },
+      "condition": "cases/0092_00923543/descriptive/openscad/glm53flash/condition.txt",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png"
+      ],
+      "format": "openscad",
+      "model_id": "glm53flash",
+      "model_label": "GLM-5.3-Flash (high)",
+      "model_order": 9,
+      "roles": [
+        "qualitative_grid"
+      ],
+      "scorecard": "cases/0092_00923543/descriptive/openscad/glm53flash/scorecard.json",
+      "source_selection_sha256": "05c73168b95a61b4f6e6f76317d8a985dac436a6f2d17c712b1bd3966e4f97a0",
+      "task": "descriptive",
+      "uid": "0092/00923543",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/978961038769b533b103345cdd3527b36ca56d0a17bdf198c5362bbb4868371e.scad",
+        "gt_mesh": "assets/7d756e1330c349968178a07dbbc15ef385598d41701a45af7fa058ecf716e01d.stl",
+        "gt_render": "assets/32bf8ebabbab13029414d1852515cbdabaa5f8b9fb40e94d95d5a6d4224df62d.png",
+        "mesh": "assets/65de081f1937eb9c7e9df398e867839c19986faf7aa75be5faa64130784d6d10.stl",
+        "pred_render": "assets/0d4e8ab9054c9839f279e36dbbef3a1b5fe490388d8a0aa194a018c5b6ba95ab.png"
+      },
+      "condition": "cases/0062_00621494/parametric/openscad/gpt6_probe/condition.txt",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png",
+        "qualitative_combined_select_transposed_openscad.png"
+      ],
+      "format": "openscad",
+      "model_id": "gpt6_probe",
+      "model_label": "GPT-6 (xhigh)",
+      "model_order": 0,
+      "roles": [
+        "qualitative_grid"
+      ],
+      "scorecard": "cases/0062_00621494/parametric/openscad/gpt6_probe/scorecard.json",
+      "source_selection_sha256": "40888524785953bfa419f1e1a963a153ba86811ae96c1e424aba70b361333567",
+      "task": "parametric",
+      "uid": "0062/00621494",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/1dea8834fc4fb4a87d652bff292ec3555fe652a2946ced83cda04eac56b4dcf8.scad",
+        "gt_mesh": "assets/7d756e1330c349968178a07dbbc15ef385598d41701a45af7fa058ecf716e01d.stl",
+        "gt_render": "assets/32bf8ebabbab13029414d1852515cbdabaa5f8b9fb40e94d95d5a6d4224df62d.png",
+        "mesh": "assets/9f5a4250f00f75050349f62df42c8dd21f029f3b14cdd20889feecb7ce8dbee1.stl",
+        "pred_render": "assets/f9b069b1cea4c8ae99801813358fd3f50c1f9b8cc946c68fe64e6eeb6ff7dcd7.png"
+      },
+      "condition": "cases/0062_00621494/parametric/openscad/gemini38_flash/condition.txt",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png",
+        "qualitative_combined_select_transposed_openscad.png"
+      ],
+      "format": "openscad",
+      "model_id": "gemini38_flash",
+      "model_label": "Gemini 3.8 Flash (high)",
+      "model_order": 1,
+      "roles": [
+        "qualitative_grid"
+      ],
+      "scorecard": "cases/0062_00621494/parametric/openscad/gemini38_flash/scorecard.json",
+      "source_selection_sha256": "6ed5c416709221840cad328d4af48446ef8790ebd265ec4273a3525eec0bf1dc",
+      "task": "parametric",
+      "uid": "0062/00621494",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/c1e9a56ee335cef479fb5bb617d100a18cedec1c8805abf6010ad16fb63f3b58.scad",
+        "gt_mesh": "assets/7d756e1330c349968178a07dbbc15ef385598d41701a45af7fa058ecf716e01d.stl",
+        "gt_render": "assets/32bf8ebabbab13029414d1852515cbdabaa5f8b9fb40e94d95d5a6d4224df62d.png",
+        "mesh": "assets/23622126ac7d13db382e697b0054b05a2e8f899d58359a6501bacef73f60b07c.stl",
+        "pred_render": "assets/f93151792350e1447ac40aafe8a650608caffa0d8def028a77207aa016d08ad6.png"
+      },
+      "condition": "cases/0062_00621494/parametric/openscad/qwen38max/condition.txt",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png",
+        "qualitative_combined_select_transposed_openscad.png"
+      ],
+      "format": "openscad",
+      "model_id": "qwen38max",
+      "model_label": "Qwen3.8-Max (xhigh)",
+      "model_order": 2,
+      "roles": [
+        "qualitative_grid"
+      ],
+      "scorecard": "cases/0062_00621494/parametric/openscad/qwen38max/scorecard.json",
+      "source_selection_sha256": "030690f1cdc4029e33ec8f9f8650674049534cf840632b6986b58657b6777f09",
+      "task": "parametric",
+      "uid": "0062/00621494",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/38a61cdcf78911eb81a4126573d8537b99ba636b53c383fbc80d7208297da5fd.scad",
+        "gt_mesh": "assets/7d756e1330c349968178a07dbbc15ef385598d41701a45af7fa058ecf716e01d.stl",
+        "gt_render": "assets/32bf8ebabbab13029414d1852515cbdabaa5f8b9fb40e94d95d5a6d4224df62d.png",
+        "mesh": "assets/3d6836558921be5d32c09a1101021a3ebced7c15bbab2f6b7caedc41976a0ef2.stl",
+        "pred_render": "assets/cdce85a4bbcd72545683a0010d95a87edefaa2ad038ecfb5129a18c78d0f6cf4.png"
+      },
+      "condition": "cases/0062_00621494/parametric/openscad/grok46/condition.txt",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png",
+        "qualitative_combined_select_transposed_openscad.png"
+      ],
+      "format": "openscad",
+      "model_id": "grok46",
+      "model_label": "Grok 4.6 (high)",
+      "model_order": 3,
+      "roles": [
+        "qualitative_grid"
+      ],
+      "scorecard": "cases/0062_00621494/parametric/openscad/grok46/scorecard.json",
+      "source_selection_sha256": "4599684696566b477f1955e0e81fed03d85a7c63ccebe3813b56e226806ac011",
+      "task": "parametric",
+      "uid": "0062/00621494",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/8717803983ada7e85597e2987b474a0263ab6afbb1d5718a0903614da353c5b2.scad",
+        "gt_mesh": "assets/7d756e1330c349968178a07dbbc15ef385598d41701a45af7fa058ecf716e01d.stl",
+        "gt_render": "assets/32bf8ebabbab13029414d1852515cbdabaa5f8b9fb40e94d95d5a6d4224df62d.png",
+        "mesh": "assets/22b5efc86c4366fc3b26086003d9f89f861c6eb2257a82e2a6dcf4a8e628f66f.stl",
+        "pred_render": "assets/81ed524ec7fdbe419029f0d9cc69770609f1dfc85b6b49c8303d30d80dece777.png"
+      },
+      "condition": "cases/0062_00621494/parametric/openscad/kimi_k3/condition.txt",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png",
+        "qualitative_combined_select_transposed_openscad.png"
+      ],
+      "format": "openscad",
+      "model_id": "kimi_k3",
+      "model_label": "Kimi K3 (max)",
+      "model_order": 4,
+      "roles": [
+        "qualitative_grid"
+      ],
+      "scorecard": "cases/0062_00621494/parametric/openscad/kimi_k3/scorecard.json",
+      "source_selection_sha256": "40f014acb45ed6500698fccaf9e3d88bd18ce0f4892890c539dde0c29a5f37df",
+      "task": "parametric",
+      "uid": "0062/00621494",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/751553ebf31657ab743d70c20ef2fff2e4e0d7f18f9e8bfaa5e4ac547d2c8d82.scad",
+        "gt_mesh": "assets/7d756e1330c349968178a07dbbc15ef385598d41701a45af7fa058ecf716e01d.stl",
+        "gt_render": "assets/32bf8ebabbab13029414d1852515cbdabaa5f8b9fb40e94d95d5a6d4224df62d.png",
+        "mesh": "assets/18aac155a0a206c5ce35dbb8e49e9a32a3e3990e3dd515e93691f5a031bd6d7b.stl",
+        "pred_render": "assets/fb1351b38683c9ba221197a70805cb9368eeed02be9360904677b29905925ca6.png"
+      },
+      "condition": "cases/0062_00621494/parametric/openscad/claude_opus5/condition.txt",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png",
+        "qualitative_combined_select_transposed_openscad.png"
+      ],
+      "format": "openscad",
+      "model_id": "claude_opus5",
+      "model_label": "Claude Opus 5 (max)",
+      "model_order": 5,
+      "roles": [
+        "qualitative_grid"
+      ],
+      "scorecard": "cases/0062_00621494/parametric/openscad/claude_opus5/scorecard.json",
+      "source_selection_sha256": "2379a280b7451253330a31311e232474f13397cd20d4b89752c013ccd4eb5104",
+      "task": "parametric",
+      "uid": "0062/00621494",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/194f73d2fb41728ad975a24994c545622c1e32d821dc9c2dc79ffa2b5485d99c.scad",
+        "gt_mesh": "assets/a0a9fc30a1f17ea12683f940328d91fc9ebeae6b0b2eba5bca6b7a933d95b1a7.stl",
+        "gt_render": "assets/32bf8ebabbab13029414d1852515cbdabaa5f8b9fb40e94d95d5a6d4224df62d.png",
+        "mesh": "assets/4fbc1bde5555eb44ffc4992fdb1c40a1b958270b2aff43803fd7e2b7abb25eab.stl",
+        "pred_render": "assets/1bb635646af0ba9bbe75569b17fb00ca50792371ac179100db5863356832275f.png"
+      },
+      "condition": "cases/0062_00621494/parametric/openscad/glm53_official/condition.txt",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png",
+        "qualitative_combined_select_transposed_openscad.png"
+      ],
+      "format": "openscad",
+      "model_id": "glm53_official",
+      "model_label": "GLM-5.3 (high)",
+      "model_order": 6,
+      "roles": [
+        "qualitative_grid"
+      ],
+      "scorecard": "cases/0062_00621494/parametric/openscad/glm53_official/scorecard.json",
+      "source_selection_sha256": "d2a4a7372f0c10432303f02b7d346b1a9eceb3fa95bfc4d9603fb6e3952440af",
+      "task": "parametric",
+      "uid": "0062/00621494",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/eb76c00e8840b50fca29afd43e5c5c60ab4a5d5c3140f20ebd5ededc79ed39b7.scad",
+        "gt_mesh": "assets/a0a9fc30a1f17ea12683f940328d91fc9ebeae6b0b2eba5bca6b7a933d95b1a7.stl",
+        "gt_render": "assets/32bf8ebabbab13029414d1852515cbdabaa5f8b9fb40e94d95d5a6d4224df62d.png",
+        "mesh": "assets/5aa8069fc23b78c1bb2c5cfb48077cf8b99f1fe13720f083a6fe6299c8b79d35.stl",
+        "pred_render": "assets/2ce6bb62943033baa8caa343ad2c9348801635c37d39aacca127227c15743360.png"
+      },
+      "condition": "cases/0062_00621494/parametric/openscad/deepseek_v41flash/condition.txt",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png",
+        "qualitative_combined_select_transposed_openscad.png"
+      ],
+      "format": "openscad",
+      "model_id": "deepseek_v41flash",
+      "model_label": "DeepSeek V4.1 Flash (high)",
+      "model_order": 7,
+      "roles": [
+        "qualitative_grid"
+      ],
+      "scorecard": "cases/0062_00621494/parametric/openscad/deepseek_v41flash/scorecard.json",
+      "source_selection_sha256": "a5cf492b1ccc0a1961f4a8f7013c7e843afe5a1bcf1d05b9e79692dd7086594c",
+      "task": "parametric",
+      "uid": "0062/00621494",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/36d322e720ce44a6d792327b7112ba8c43427a949cea3474fdb2b2541e7151ad.scad",
+        "gt_mesh": "assets/a0a9fc30a1f17ea12683f940328d91fc9ebeae6b0b2eba5bca6b7a933d95b1a7.stl",
+        "gt_render": "assets/32bf8ebabbab13029414d1852515cbdabaa5f8b9fb40e94d95d5a6d4224df62d.png",
+        "mesh": "assets/6f7ec4a5a1d33acf51cedb6de56b0a1f1b8f3eb1b1f335605e60b070f5a59f13.stl",
+        "pred_render": "assets/45fa0adb8dae84f6c3ad05d98a337f1a4d11f138571c4dd15080897c2d68c598.png"
+      },
+      "condition": "cases/0062_00621494/parametric/openscad/doubao21/condition.txt",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png",
+        "qualitative_combined_select_transposed_openscad.png"
+      ],
+      "format": "openscad",
+      "model_id": "doubao21",
+      "model_label": "Doubao Seed 2.1 Pro (Thinking)",
+      "model_order": 8,
+      "roles": [
+        "qualitative_grid"
+      ],
+      "scorecard": "cases/0062_00621494/parametric/openscad/doubao21/scorecard.json",
+      "source_selection_sha256": "579c68781e8de175cfdcae8c76ad8cbaec44885014d07e608915da49fde6e514",
+      "task": "parametric",
+      "uid": "0062/00621494",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/7e35aeed4221d10c1c8a527f5b5b35a2fe0073aabc38e22b731c8d2e5d542fef.scad",
+        "gt_mesh": "assets/7d756e1330c349968178a07dbbc15ef385598d41701a45af7fa058ecf716e01d.stl",
+        "gt_render": "assets/32bf8ebabbab13029414d1852515cbdabaa5f8b9fb40e94d95d5a6d4224df62d.png",
+        "mesh": "assets/368776508c5a3feeee4d3e6ba039b925ad46831fcf1414ee1563ec4be876306d.stl",
+        "pred_render": "assets/43aecf2ccb8f5e1a95f2cd99686bec3f0242fc4d480a5df4cbd5a7fa22beb2a0.png"
+      },
+      "condition": "cases/0062_00621494/parametric/openscad/glm53flash/condition.txt",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png",
+        "qualitative_combined_select_transposed_openscad.png"
+      ],
+      "format": "openscad",
+      "model_id": "glm53flash",
+      "model_label": "GLM-5.3-Flash (high)",
+      "model_order": 9,
+      "roles": [
+        "qualitative_grid"
+      ],
+      "scorecard": "cases/0062_00621494/parametric/openscad/glm53flash/scorecard.json",
+      "source_selection_sha256": "fc6668a0905f21bf5f2275112696dc5b4a583395ad272efe539ddf8b2df8d0ff",
+      "task": "parametric",
+      "uid": "0062/00621494",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/0883e57059b1e1203fca70ea342e28adab91b4db9634b8e3231d085468e38af7.scad",
+        "gt_mesh": "assets/e92422107cd1b93c27350d33562bbbaaaea086f29192769e7ac8e88a3cf2c835.stl",
+        "gt_render": "assets/be7ebd26fd33a3209f63e78555de198e17743bd2805db58fd4c699af20407085.png",
+        "mesh": "assets/9f1124bf382f0f25c0d39918d2fa59361a66f4136b880ad275ff704826cbf2ce.stl",
+        "pred_render": "assets/bb86ca23f5d55d765242f74a9bae45e07f54d8de91b2f387787fc731f6e36cf2.png"
+      },
+      "condition": "cases/0046_00460772/parametric/openscad/gpt6_probe/condition.txt",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png"
+      ],
+      "format": "openscad",
+      "model_id": "gpt6_probe",
+      "model_label": "GPT-6 (xhigh)",
+      "model_order": 0,
+      "roles": [
+        "qualitative_grid"
+      ],
+      "scorecard": "cases/0046_00460772/parametric/openscad/gpt6_probe/scorecard.json",
+      "source_selection_sha256": "40888524785953bfa419f1e1a963a153ba86811ae96c1e424aba70b361333567",
+      "task": "parametric",
+      "uid": "0046/00460772",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/79f682d6735cbe409580be15362a190646253089120492218820f35c7d4537b1.scad",
+        "gt_mesh": "assets/1b86f97d7da6ca7b90880cb46af3feb40104179f44ea1bdfdc037a293794ebf8.stl",
+        "gt_render": "assets/be7ebd26fd33a3209f63e78555de198e17743bd2805db58fd4c699af20407085.png",
+        "mesh": "assets/a41befeddb787a2ec35b366cc3ea6b65a56ae431923811583dfa0686876e0e78.stl",
+        "pred_render": "assets/7ed80bb6526c25700f224bdf7c370619d29cb36bffff28fc320e1a37f3805d50.png"
+      },
+      "condition": "cases/0046_00460772/parametric/openscad/gemini38_flash/condition.txt",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png"
+      ],
+      "format": "openscad",
+      "model_id": "gemini38_flash",
+      "model_label": "Gemini 3.8 Flash (high)",
+      "model_order": 1,
+      "roles": [
+        "qualitative_grid"
+      ],
+      "scorecard": "cases/0046_00460772/parametric/openscad/gemini38_flash/scorecard.json",
+      "source_selection_sha256": "6ed5c416709221840cad328d4af48446ef8790ebd265ec4273a3525eec0bf1dc",
+      "task": "parametric",
+      "uid": "0046/00460772",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/9d90528f981e69e91fdb605822b1ae1048bf6a89f47786c863bb5d5d6f65ea67.scad",
+        "gt_mesh": "assets/94db7ca3780785e712ab6b29b93426c4c6fdd316d0e3ebfe2bc401394bd42dea.stl",
+        "gt_render": "assets/be7ebd26fd33a3209f63e78555de198e17743bd2805db58fd4c699af20407085.png",
+        "mesh": "assets/b7eae674110c08b4b08d4f4c7238a553e8b2d33da44bab07d543270792e6be33.stl",
+        "pred_render": "assets/f86dd2d86335d5dfb8310c64b5743042cfc8fa5f6a374c9bc6e6e171ab1df7cd.png"
+      },
+      "condition": "cases/0046_00460772/parametric/openscad/qwen38max/condition.txt",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png"
+      ],
+      "format": "openscad",
+      "model_id": "qwen38max",
+      "model_label": "Qwen3.8-Max (xhigh)",
+      "model_order": 2,
+      "roles": [
+        "qualitative_grid"
+      ],
+      "scorecard": "cases/0046_00460772/parametric/openscad/qwen38max/scorecard.json",
+      "source_selection_sha256": "030690f1cdc4029e33ec8f9f8650674049534cf840632b6986b58657b6777f09",
+      "task": "parametric",
+      "uid": "0046/00460772",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/0213d19101177dc699ef7bb6329f536098abd49aa119e501824a9201319df1c6.scad",
+        "gt_mesh": "assets/1b86f97d7da6ca7b90880cb46af3feb40104179f44ea1bdfdc037a293794ebf8.stl",
+        "gt_render": "assets/be7ebd26fd33a3209f63e78555de198e17743bd2805db58fd4c699af20407085.png",
+        "mesh": "assets/c351618930b3a74120cb6a9795d911a03dff1f90b275b769f728456b90a6dbf0.stl",
+        "pred_render": "assets/f82f12d8175163b21b42290f81bd4003d87b07256c9c2d7b05648b55a7343ace.png"
+      },
+      "condition": "cases/0046_00460772/parametric/openscad/grok46/condition.txt",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png"
+      ],
+      "format": "openscad",
+      "model_id": "grok46",
+      "model_label": "Grok 4.6 (high)",
+      "model_order": 3,
+      "roles": [
+        "qualitative_grid"
+      ],
+      "scorecard": "cases/0046_00460772/parametric/openscad/grok46/scorecard.json",
+      "source_selection_sha256": "4599684696566b477f1955e0e81fed03d85a7c63ccebe3813b56e226806ac011",
+      "task": "parametric",
+      "uid": "0046/00460772",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/0fe43d5a58bf212f2ddb2d5a39b427f23b8a87135a5650404338e85a3bb626cc.scad",
+        "gt_mesh": "assets/94db7ca3780785e712ab6b29b93426c4c6fdd316d0e3ebfe2bc401394bd42dea.stl",
+        "gt_render": "assets/be7ebd26fd33a3209f63e78555de198e17743bd2805db58fd4c699af20407085.png",
+        "mesh": "assets/412d7a807e50827e8ccb0742a126547012f2ee83c424123f0ecff037897c6ca1.stl",
+        "pred_render": "assets/9d750e4a534924660fefb8f2bbed967de6aeb5f4c356354e6f0bcf5624a6bb89.png"
+      },
+      "condition": "cases/0046_00460772/parametric/openscad/kimi_k3/condition.txt",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png"
+      ],
+      "format": "openscad",
+      "model_id": "kimi_k3",
+      "model_label": "Kimi K3 (max)",
+      "model_order": 4,
+      "roles": [
+        "qualitative_grid"
+      ],
+      "scorecard": "cases/0046_00460772/parametric/openscad/kimi_k3/scorecard.json",
+      "source_selection_sha256": "40f014acb45ed6500698fccaf9e3d88bd18ce0f4892890c539dde0c29a5f37df",
+      "task": "parametric",
+      "uid": "0046/00460772",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/3b177183a0bb29bf5fd49c4d79f651c776fdf9d7b8d930a2840ab7c645e3c01f.scad",
+        "gt_mesh": "assets/1b86f97d7da6ca7b90880cb46af3feb40104179f44ea1bdfdc037a293794ebf8.stl",
+        "gt_render": "assets/be7ebd26fd33a3209f63e78555de198e17743bd2805db58fd4c699af20407085.png",
+        "mesh": "assets/8d8f52f2c5aa8427f8414d59efaca41e18016d8084d5c4edcdbb64dc58a3af43.stl",
+        "pred_render": "assets/90a5dbfe799ae081f8086f22dc6415b71aa7f52e52d9ac40353adcd2e00eb8a9.png"
+      },
+      "condition": "cases/0046_00460772/parametric/openscad/claude_opus5/condition.txt",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png"
+      ],
+      "format": "openscad",
+      "model_id": "claude_opus5",
+      "model_label": "Claude Opus 5 (max)",
+      "model_order": 5,
+      "roles": [
+        "qualitative_grid"
+      ],
+      "scorecard": "cases/0046_00460772/parametric/openscad/claude_opus5/scorecard.json",
+      "source_selection_sha256": "2379a280b7451253330a31311e232474f13397cd20d4b89752c013ccd4eb5104",
+      "task": "parametric",
+      "uid": "0046/00460772",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/e13e72fb7ac9c96a934335cf2e33d2d12363a7e5019d1812aa3b590180b6f777.scad",
+        "gt_mesh": "assets/1b86f97d7da6ca7b90880cb46af3feb40104179f44ea1bdfdc037a293794ebf8.stl",
+        "gt_render": "assets/be7ebd26fd33a3209f63e78555de198e17743bd2805db58fd4c699af20407085.png",
+        "mesh": "assets/acf51b31bb93eead960df0328cbd9213e72494bc382d8e757442ea09e95e798a.stl",
+        "pred_render": "assets/d04817fce0555f616a7c25e96c5f739dc8b0a4f555d1ab9ec174b2538f47048a.png"
+      },
+      "condition": "cases/0046_00460772/parametric/openscad/glm53_official/condition.txt",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png"
+      ],
+      "format": "openscad",
+      "model_id": "glm53_official",
+      "model_label": "GLM-5.3 (high)",
+      "model_order": 6,
+      "roles": [
+        "qualitative_grid"
+      ],
+      "scorecard": "cases/0046_00460772/parametric/openscad/glm53_official/scorecard.json",
+      "source_selection_sha256": "d2a4a7372f0c10432303f02b7d346b1a9eceb3fa95bfc4d9603fb6e3952440af",
+      "task": "parametric",
+      "uid": "0046/00460772",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/e54b376ada250029c7d937861e9a8c67de4936dcb62e431037ebca058950d994.scad",
+        "gt_mesh": "assets/e92422107cd1b93c27350d33562bbbaaaea086f29192769e7ac8e88a3cf2c835.stl",
+        "gt_render": "assets/be7ebd26fd33a3209f63e78555de198e17743bd2805db58fd4c699af20407085.png",
+        "mesh": "assets/51df59c310676b46d7a3f3bcbe1cf7b672bfe521f2810658ffa123809f48efa8.stl",
+        "pred_render": "assets/32747b8b1d72ec22584c295d6dda27f512c25ebad79f5190b6c1e97d7a7c783b.png"
+      },
+      "condition": "cases/0046_00460772/parametric/openscad/deepseek_v41flash/condition.txt",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png"
+      ],
+      "format": "openscad",
+      "model_id": "deepseek_v41flash",
+      "model_label": "DeepSeek V4.1 Flash (high)",
+      "model_order": 7,
+      "roles": [
+        "qualitative_grid"
+      ],
+      "scorecard": "cases/0046_00460772/parametric/openscad/deepseek_v41flash/scorecard.json",
+      "source_selection_sha256": "a5cf492b1ccc0a1961f4a8f7013c7e843afe5a1bcf1d05b9e79692dd7086594c",
+      "task": "parametric",
+      "uid": "0046/00460772",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/e8a678eebcc8ac9e712b5571959d2ccbd55660366859683211b227f55898b84f.scad",
+        "gt_mesh": "assets/94db7ca3780785e712ab6b29b93426c4c6fdd316d0e3ebfe2bc401394bd42dea.stl",
+        "gt_render": "assets/be7ebd26fd33a3209f63e78555de198e17743bd2805db58fd4c699af20407085.png",
+        "mesh": "assets/2a4de0afbc59e74788d072ca51c972e4800044a7255ac70d2fd198305bc90324.stl",
+        "pred_render": "assets/259cc41c1377f9ff1daea1834bc24158f91ffd5fc1c9003a7ac47851c2e779c7.png"
+      },
+      "condition": "cases/0046_00460772/parametric/openscad/doubao21/condition.txt",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png"
+      ],
+      "format": "openscad",
+      "model_id": "doubao21",
+      "model_label": "Doubao Seed 2.1 Pro (Thinking)",
+      "model_order": 8,
+      "roles": [
+        "qualitative_grid"
+      ],
+      "scorecard": "cases/0046_00460772/parametric/openscad/doubao21/scorecard.json",
+      "source_selection_sha256": "579c68781e8de175cfdcae8c76ad8cbaec44885014d07e608915da49fde6e514",
+      "task": "parametric",
+      "uid": "0046/00460772",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/ccc2db8a6287d3c43dbd103be5bbba6b889d1cef46122d31e98d430a30923af1.scad",
+        "gt_mesh": "assets/d7c39b6fc839a64f9b85bfa9aa87da56ac552f75fb9b2a5e59efd9f32ae5242c.stl",
+        "gt_render": "assets/be7ebd26fd33a3209f63e78555de198e17743bd2805db58fd4c699af20407085.png",
+        "mesh": "assets/a339e4f281422fc147f47e26d7c0cdaaf0293b09127ddf6438503b9fa66c4397.stl",
+        "pred_render": "assets/22881b15e0d40ac98b1d1de0e01a28e646c185ba992f1e121b2128fadd327e01.png"
+      },
+      "condition": "cases/0046_00460772/parametric/openscad/glm53flash/condition.txt",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png"
+      ],
+      "format": "openscad",
+      "model_id": "glm53flash",
+      "model_label": "GLM-5.3-Flash (high)",
+      "model_order": 9,
+      "roles": [
+        "qualitative_grid"
+      ],
+      "scorecard": "cases/0046_00460772/parametric/openscad/glm53flash/scorecard.json",
+      "source_selection_sha256": "fc6668a0905f21bf5f2275112696dc5b4a583395ad272efe539ddf8b2df8d0ff",
+      "task": "parametric",
+      "uid": "0046/00460772",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/d5083044bb5bbc8134382a34396dc70b2fed32b6dd6bc1a2a3669c329cc02c37.scad",
+        "gt_mesh": "assets/be88ee71f06db3ca0ebc088398e85727981cc1dd20586f25a374a8d870a0ed25.stl",
+        "gt_render": "assets/dc72d24eadd3744b16f2ee2f7d8ef50bad07da2003f0bdfbae2f804963177f91.png",
+        "mesh": "assets/75f5fca047a3b8dc52610f224e93a90b097a580e7684c57eed92ad8c7b769587.stl",
+        "pred_render": "assets/88edac2dbd8aa00e14223bbc7e7f6928635f29f32f2c253d594ab45837255851.png"
+      },
+      "condition": "cases/0093_00934405/parametric/openscad/gpt6_probe/condition.txt",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png"
+      ],
+      "format": "openscad",
+      "model_id": "gpt6_probe",
+      "model_label": "GPT-6 (xhigh)",
+      "model_order": 0,
+      "roles": [
+        "qualitative_grid"
+      ],
+      "scorecard": "cases/0093_00934405/parametric/openscad/gpt6_probe/scorecard.json",
+      "source_selection_sha256": "40888524785953bfa419f1e1a963a153ba86811ae96c1e424aba70b361333567",
+      "task": "parametric",
+      "uid": "0093/00934405",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/6580ae94735cefa9e2542b47c2a3e69ae38264e8e1c0e61dd20aada6ddb36bfe.scad",
+        "gt_mesh": "assets/be88ee71f06db3ca0ebc088398e85727981cc1dd20586f25a374a8d870a0ed25.stl",
+        "gt_render": "assets/dc72d24eadd3744b16f2ee2f7d8ef50bad07da2003f0bdfbae2f804963177f91.png",
+        "mesh": "assets/88a8272b77af838ec2e85a0abc2eda8d7ef8078a80c543434aab4652c2d19fac.stl",
+        "pred_render": "assets/906b5ef6a570590a4fc16f8cc83f2d9012c2a5afc11337d1a770c8913e17137c.png"
+      },
+      "condition": "cases/0093_00934405/parametric/openscad/gemini38_flash/condition.txt",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png"
+      ],
+      "format": "openscad",
+      "model_id": "gemini38_flash",
+      "model_label": "Gemini 3.8 Flash (high)",
+      "model_order": 1,
+      "roles": [
+        "qualitative_grid"
+      ],
+      "scorecard": "cases/0093_00934405/parametric/openscad/gemini38_flash/scorecard.json",
+      "source_selection_sha256": "6ed5c416709221840cad328d4af48446ef8790ebd265ec4273a3525eec0bf1dc",
+      "task": "parametric",
+      "uid": "0093/00934405",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/d2959b50c002836eaf0c2795492ad0dfb67051732f03a16915dd3e5c7c66b5f8.scad",
+        "gt_mesh": "assets/5f96193c18da157a6f852ff32f0c8f4f1318293268baf91c428d4c9aefe69d58.stl",
+        "gt_render": "assets/dc72d24eadd3744b16f2ee2f7d8ef50bad07da2003f0bdfbae2f804963177f91.png",
+        "mesh": "assets/f6f88835824b6c0638b6d52d1646120cb41accf1ed46c37ba9d686086c98d0f1.stl",
+        "pred_render": "assets/829b29cbb44a24521d6fc3023aa88af8ac3069bd14f644b9a758cc4e9b96011a.png"
+      },
+      "condition": "cases/0093_00934405/parametric/openscad/qwen38max/condition.txt",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png"
+      ],
+      "format": "openscad",
+      "model_id": "qwen38max",
+      "model_label": "Qwen3.8-Max (xhigh)",
+      "model_order": 2,
+      "roles": [
+        "qualitative_grid"
+      ],
+      "scorecard": "cases/0093_00934405/parametric/openscad/qwen38max/scorecard.json",
+      "source_selection_sha256": "030690f1cdc4029e33ec8f9f8650674049534cf840632b6986b58657b6777f09",
+      "task": "parametric",
+      "uid": "0093/00934405",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/3162205d641756b15346aea7d88e0b8f3a316dd33220b8b6b2c46cc6949871d3.scad",
+        "gt_mesh": "assets/be88ee71f06db3ca0ebc088398e85727981cc1dd20586f25a374a8d870a0ed25.stl",
+        "gt_render": "assets/dc72d24eadd3744b16f2ee2f7d8ef50bad07da2003f0bdfbae2f804963177f91.png",
+        "mesh": "assets/76e08f7ceaa0aa5ca13ad37d1a0bd9fc745da02b0815676e5f2b0a77d5e97285.stl",
+        "pred_render": "assets/c9c0fab306e7524649f4fc41cab3b99cfcef77dc0c0c85cf6910cfd0d4f0c39c.png"
+      },
+      "condition": "cases/0093_00934405/parametric/openscad/grok46/condition.txt",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png"
+      ],
+      "format": "openscad",
+      "model_id": "grok46",
+      "model_label": "Grok 4.6 (high)",
+      "model_order": 3,
+      "roles": [
+        "qualitative_grid"
+      ],
+      "scorecard": "cases/0093_00934405/parametric/openscad/grok46/scorecard.json",
+      "source_selection_sha256": "4599684696566b477f1955e0e81fed03d85a7c63ccebe3813b56e226806ac011",
+      "task": "parametric",
+      "uid": "0093/00934405",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/d08dc5d0fcdeedc30247afab16081ce234a3588ba4593f4fcb6391e9835e3aed.scad",
+        "gt_mesh": "assets/5f96193c18da157a6f852ff32f0c8f4f1318293268baf91c428d4c9aefe69d58.stl",
+        "gt_render": "assets/dc72d24eadd3744b16f2ee2f7d8ef50bad07da2003f0bdfbae2f804963177f91.png",
+        "mesh": "assets/0a0e8bb6d06f599e5ab920525d5b6a4ed00f0d2abda710fcf505a545943fae5e.stl",
+        "pred_render": "assets/9398cb4677fa77e91853ca390631ef1255095d9c71da03ecab14bd028f6e2578.png"
+      },
+      "condition": "cases/0093_00934405/parametric/openscad/kimi_k3/condition.txt",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png"
+      ],
+      "format": "openscad",
+      "model_id": "kimi_k3",
+      "model_label": "Kimi K3 (max)",
+      "model_order": 4,
+      "roles": [
+        "qualitative_grid"
+      ],
+      "scorecard": "cases/0093_00934405/parametric/openscad/kimi_k3/scorecard.json",
+      "source_selection_sha256": "40f014acb45ed6500698fccaf9e3d88bd18ce0f4892890c539dde0c29a5f37df",
+      "task": "parametric",
+      "uid": "0093/00934405",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/f7953dc87c230516507c6b35e155ce3f0fc5f70c4269fe0518971eb604013302.scad",
+        "gt_mesh": "assets/be88ee71f06db3ca0ebc088398e85727981cc1dd20586f25a374a8d870a0ed25.stl",
+        "gt_render": "assets/dc72d24eadd3744b16f2ee2f7d8ef50bad07da2003f0bdfbae2f804963177f91.png",
+        "mesh": "assets/8bc46853a14974e40584b01b3e4ab17f0af1d7fbb1d4dd7da1b4371a2afc2ad5.stl",
+        "pred_render": "assets/d352301e0c64d062bb41b20ffc250b4cfb89f3d677c42bbad0093df8799cd74f.png"
+      },
+      "condition": "cases/0093_00934405/parametric/openscad/claude_opus5/condition.txt",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png"
+      ],
+      "format": "openscad",
+      "model_id": "claude_opus5",
+      "model_label": "Claude Opus 5 (max)",
+      "model_order": 5,
+      "roles": [
+        "qualitative_grid"
+      ],
+      "scorecard": "cases/0093_00934405/parametric/openscad/claude_opus5/scorecard.json",
+      "source_selection_sha256": "2379a280b7451253330a31311e232474f13397cd20d4b89752c013ccd4eb5104",
+      "task": "parametric",
+      "uid": "0093/00934405",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/f7c6e21bb1761039a7a7367c240ca905f3af9a7cc6f5b0c078f22a0696ca8a23.scad",
+        "gt_mesh": "assets/5f96193c18da157a6f852ff32f0c8f4f1318293268baf91c428d4c9aefe69d58.stl",
+        "gt_render": "assets/dc72d24eadd3744b16f2ee2f7d8ef50bad07da2003f0bdfbae2f804963177f91.png",
+        "mesh": "assets/65362d7ee1d209c56275247cfd65047e8beef0503b8644051d1f6848a82af9d0.stl",
+        "pred_render": "assets/687d4ff8d89360e13e92a91ba9f7634bd00b0d841b233c712543bbf77ee061bc.png"
+      },
+      "condition": "cases/0093_00934405/parametric/openscad/glm53_official/condition.txt",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png"
+      ],
+      "format": "openscad",
+      "model_id": "glm53_official",
+      "model_label": "GLM-5.3 (high)",
+      "model_order": 6,
+      "roles": [
+        "qualitative_grid"
+      ],
+      "scorecard": "cases/0093_00934405/parametric/openscad/glm53_official/scorecard.json",
+      "source_selection_sha256": "d2a4a7372f0c10432303f02b7d346b1a9eceb3fa95bfc4d9603fb6e3952440af",
+      "task": "parametric",
+      "uid": "0093/00934405",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/1225bc6caca77e13723d19414a0a57ed7d0059ddc5d1ce4741fcd1ce2193e77e.scad",
+        "gt_mesh": "assets/be88ee71f06db3ca0ebc088398e85727981cc1dd20586f25a374a8d870a0ed25.stl",
+        "gt_render": "assets/dc72d24eadd3744b16f2ee2f7d8ef50bad07da2003f0bdfbae2f804963177f91.png",
+        "mesh": "assets/cb55226e48df4213666b7b1f09b851a351ad840a9b9e9de7dbe02735cbe78b6c.stl",
+        "pred_render": "assets/b3fca82115065013e24037dec964f76e5df12e6d71c0b9f2eee53a90b71c63cf.png"
+      },
+      "condition": "cases/0093_00934405/parametric/openscad/deepseek_v41flash/condition.txt",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png"
+      ],
+      "format": "openscad",
+      "model_id": "deepseek_v41flash",
+      "model_label": "DeepSeek V4.1 Flash (high)",
+      "model_order": 7,
+      "roles": [
+        "qualitative_grid"
+      ],
+      "scorecard": "cases/0093_00934405/parametric/openscad/deepseek_v41flash/scorecard.json",
+      "source_selection_sha256": "a5cf492b1ccc0a1961f4a8f7013c7e843afe5a1bcf1d05b9e79692dd7086594c",
+      "task": "parametric",
+      "uid": "0093/00934405",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/e497d7f59de581eb435e6701dd7c0f0f09e53f983f2d75d15a4e0fc6dc7fb563.scad",
+        "gt_mesh": "assets/5f96193c18da157a6f852ff32f0c8f4f1318293268baf91c428d4c9aefe69d58.stl",
+        "gt_render": "assets/dc72d24eadd3744b16f2ee2f7d8ef50bad07da2003f0bdfbae2f804963177f91.png",
+        "mesh": "assets/6ac6be3fb73c5224e90da0319020826905ea4c96bc528926a78b0ab8960ce2e4.stl",
+        "pred_render": "assets/487f6cfd4992e2fa2e67a446dd443a889239b415264f30e14c1f2dbfa9571033.png"
+      },
+      "condition": "cases/0093_00934405/parametric/openscad/doubao21/condition.txt",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png"
+      ],
+      "format": "openscad",
+      "model_id": "doubao21",
+      "model_label": "Doubao Seed 2.1 Pro (Thinking)",
+      "model_order": 8,
+      "roles": [
+        "qualitative_grid"
+      ],
+      "scorecard": "cases/0093_00934405/parametric/openscad/doubao21/scorecard.json",
+      "source_selection_sha256": "579c68781e8de175cfdcae8c76ad8cbaec44885014d07e608915da49fde6e514",
+      "task": "parametric",
+      "uid": "0093/00934405",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/87051533351ec0009c11bd4c55f02b54c1d54e02c12370bcae7e4803d05aeb52.scad",
+        "gt_mesh": "assets/5f96193c18da157a6f852ff32f0c8f4f1318293268baf91c428d4c9aefe69d58.stl",
+        "gt_render": "assets/dc72d24eadd3744b16f2ee2f7d8ef50bad07da2003f0bdfbae2f804963177f91.png",
+        "mesh": "assets/f02fdc5f6cc774b727346c7394dd1bbdf6c67513df7ea9ac299231a94ec6b92d.stl",
+        "pred_render": "assets/f763ce0fd37408781c2827d810eda57e3acb1fccf4120c33503573a0db365d06.png"
+      },
+      "condition": "cases/0093_00934405/parametric/openscad/glm53flash/condition.txt",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png"
+      ],
+      "format": "openscad",
+      "model_id": "glm53flash",
+      "model_label": "GLM-5.3-Flash (high)",
+      "model_order": 9,
+      "roles": [
+        "qualitative_grid"
+      ],
+      "scorecard": "cases/0093_00934405/parametric/openscad/glm53flash/scorecard.json",
+      "source_selection_sha256": "fc6668a0905f21bf5f2275112696dc5b4a583395ad272efe539ddf8b2df8d0ff",
+      "task": "parametric",
+      "uid": "0093/00934405",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/a9f63a166e19a115774324e071cbdd9e439ec466c29efb5393caf2011c839131.json",
+        "gt_mesh": "assets/d88e8cd2401a0f824526c76a6eb8091e60803e0171c2744e5460ac1c720a2387.stl",
+        "gt_render": "assets/9bbc668871bded0e68f8c35cbea43f01af0e95d8ce8b0436f80c9025fba9941b.png",
+        "mesh": "assets/af2bc29d82ff11ea8f565b16d303b5df791afa82a3972c43886d7df431bdb5a4.stl",
+        "pred_render": "assets/e8004763af498e2ecc8726e906f618898f795f9d2e159c80ea4b52507231d76c.png"
+      },
+      "condition": "cases/0085_00852511/descriptive/json/gpt6_probe/condition.txt",
+      "figures": [
+        "paper_judge_combined_stacked.jpg"
+      ],
+      "format": "json",
+      "judge_views": {
+        "gt": [
+          "assets/9bbc668871bded0e68f8c35cbea43f01af0e95d8ce8b0436f80c9025fba9941b.png",
+          "assets/0953639715dd4e6625dc879be5a161ebd5dfe2a7bec392b481f7b16224e8679e.png",
+          "assets/bfba64bbc5f9eebca9b96c7b05f9d1f0f36715dc649f677e372fe601a0206b29.png",
+          "assets/0d3aeca22e152e80e4dacd22d27c8eb4e6375b83543f333afdad58d2d0546059.png"
+        ],
+        "pred": [
+          "assets/e8004763af498e2ecc8726e906f618898f795f9d2e159c80ea4b52507231d76c.png",
+          "assets/7b76a9fbbdebfee0b264c333dceaa0ec7e27dcba2789d521738e92420b3976f4.png",
+          "assets/332eab22b6f6b118f0d4c7a514a83859e0bc9e6d189508158f83106889f47e34.png",
+          "assets/7b0a3bb6d2f0f7c2344afa9f7bdf4129c50d2b8655857a6b9f7d3ba4774e5a48.png"
+        ]
+      },
+      "model_id": "gpt6_probe",
+      "model_label": "GPT-6 (xhigh)",
+      "model_order": 0,
+      "old_displayed_question_matches": [
+        {
+          "current_qids": [
+            "semantic_1"
+          ],
+          "old_qid": "semantic_1"
+        },
+        {
+          "current_qids": [
+            "semantic_4"
+          ],
+          "old_qid": "semantic_4"
+        }
+      ],
+      "qa_details": "cases/0085_00852511/descriptive/json/gpt6_probe/qa_details.json",
+      "roles": [
+        "judge_qualitative"
+      ],
+      "scorecard": "cases/0085_00852511/descriptive/json/gpt6_probe/scorecard.json",
+      "source_selection_sha256": "ff051ebb56c49703ba6efa7abc960f3a3b96115c663383fdf891ceeb137296d2",
+      "task": "descriptive",
+      "uid": "0085/00852511",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/a088a221f0d3bf906c58d02c0cddeadd367d06814f18160d4f46bfdc6dcd69d5.json",
+        "gt_mesh": "assets/d88e8cd2401a0f824526c76a6eb8091e60803e0171c2744e5460ac1c720a2387.stl",
+        "gt_render": "assets/95ec538e2f8ebd93b927343e00cc08723fb0461fa53a4ff19fd2a477ab626022.png",
+        "mesh": "assets/ce864a226a41ffcc2f9fd34596c915adbc113e33abda3b1e5ed1345c953fea8a.stl",
+        "pred_render": "assets/0df242bfccf55f3e30e312b350936ccd533a49bab5c483c3f857696ae1f79c58.png"
+      },
+      "condition": "cases/0085_00852511/descriptive/json/gemini38_flash/condition.txt",
+      "figures": [
+        "paper_judge_combined_stacked.jpg"
+      ],
+      "format": "json",
+      "judge_views": {
+        "gt": [
+          "assets/95ec538e2f8ebd93b927343e00cc08723fb0461fa53a4ff19fd2a477ab626022.png",
+          "assets/e8239a9f34e6d6cd01b065cf726de1e3d14c3e3a6c75716fffde71766fce7e9e.png",
+          "assets/247cf90f46f7dc886f074fbfc06431ca442c4b5decc64ec9657b86ac656b78ee.png",
+          "assets/978221992f514279882418f5c95be02852201b9e38d1fd7040a58fd42f65a4d1.png"
+        ],
+        "pred": [
+          "assets/0df242bfccf55f3e30e312b350936ccd533a49bab5c483c3f857696ae1f79c58.png",
+          "assets/8b5bd185700f22c3b74d32beb77353f6e037a73841f138cf7bd70e6c7dbaa8bc.png",
+          "assets/9ba120f51ff6396d7f5bdb6d113f723fba0699854231a4920fd8d5116b6824a2.png",
+          "assets/cc08950d1c5f71314ce988ae7f8bf4942b9cd85b8dab2b5cbf35bb94d680258e.png"
+        ]
+      },
+      "model_id": "gemini38_flash",
+      "model_label": "Gemini 3.8 Flash (high)",
+      "model_order": 1,
+      "old_displayed_question_matches": [
+        {
+          "current_qids": [
+            "semantic_1"
+          ],
+          "old_qid": "semantic_1"
+        },
+        {
+          "current_qids": [
+            "semantic_4"
+          ],
+          "old_qid": "semantic_4"
+        }
+      ],
+      "qa_details": "cases/0085_00852511/descriptive/json/gemini38_flash/qa_details.json",
+      "roles": [
+        "judge_qualitative"
+      ],
+      "scorecard": "cases/0085_00852511/descriptive/json/gemini38_flash/scorecard.json",
+      "source_selection_sha256": "32062e08333424a4bfc2d57c1efddd13611a9b00c48681735ff969fc5813d48d",
+      "task": "descriptive",
+      "uid": "0085/00852511",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/27aa3306a783ce7e22fa2bd244d8d2ebafd0ffe18c91b1b7e43fff910fa2f355.json",
+        "gt_mesh": "assets/d88e8cd2401a0f824526c76a6eb8091e60803e0171c2744e5460ac1c720a2387.stl",
+        "gt_render": "assets/e58d1fccd9cc34985f537d4e232b557a6777d2e7d1289cd641a22df913b6094b.png",
+        "mesh": "assets/2bcc5440fe93114ab57df375aaea5a02959341bc4533b60749ae09c801058870.stl",
+        "pred_render": "assets/5d389ceb1cc60af0031cdab804eb62a4f0efb15d8eb3995e11eea629d9381b57.png"
+      },
+      "condition": "cases/0085_00852511/descriptive/json/qwen38max/condition.txt",
+      "figures": [
+        "paper_judge_combined_stacked.jpg"
+      ],
+      "format": "json",
+      "judge_views": {
+        "gt": [
+          "assets/e58d1fccd9cc34985f537d4e232b557a6777d2e7d1289cd641a22df913b6094b.png",
+          "assets/1e2a8dfdf82a9d0f55b317a43c0ca59707a5b182cfacd76011a5c1d5e9c7b7b0.png",
+          "assets/d81ce060e64965292b2205f6769a397ba53301b98a357b75949b7aaba32e1a24.png",
+          "assets/22756b84d3d9484b738519d5a72b3ab5c5225344b7d3b01ae6d3905072b158af.png"
+        ],
+        "pred": [
+          "assets/5d389ceb1cc60af0031cdab804eb62a4f0efb15d8eb3995e11eea629d9381b57.png",
+          "assets/e6b9872e86ed0de418cebd3366866c198577b506a56dd97fecac36c2af9db3f9.png",
+          "assets/8c1be35697de2f6b27ec675036dd1b71eb1ed8524ce23e2faf860a2199c41065.png",
+          "assets/37f1a28120cff15a8bfab4f8e3b0e24c5df9b39d58419b6cdbdf6abad549a215.png"
+        ]
+      },
+      "model_id": "qwen38max",
+      "model_label": "Qwen3.8-Max (xhigh)",
+      "model_order": 2,
+      "old_displayed_question_matches": [
+        {
+          "current_qids": [
+            "semantic_1"
+          ],
+          "old_qid": "semantic_1"
+        },
+        {
+          "current_qids": [
+            "semantic_4"
+          ],
+          "old_qid": "semantic_4"
+        }
+      ],
+      "qa_details": "cases/0085_00852511/descriptive/json/qwen38max/qa_details.json",
+      "roles": [
+        "judge_qualitative"
+      ],
+      "scorecard": "cases/0085_00852511/descriptive/json/qwen38max/scorecard.json",
+      "source_selection_sha256": "6fcbb4f6e59d7aeacb507018a65747bb87f2d16677eae0270b0e8c90a796887c",
+      "task": "descriptive",
+      "uid": "0085/00852511",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/03f1c94e93c896f8ed15c0bd2c451e1183b1bc98985844009b82e4f01ca98773.json",
+        "gt_mesh": "assets/d88e8cd2401a0f824526c76a6eb8091e60803e0171c2744e5460ac1c720a2387.stl",
+        "gt_render": "assets/95ec538e2f8ebd93b927343e00cc08723fb0461fa53a4ff19fd2a477ab626022.png",
+        "mesh": "assets/4d1b638c8127386f37573e996fa3f3837335bf8db853cfc434cef01c17ea1036.stl",
+        "pred_render": "assets/bfc1afa5ad617a29c2d665f8536a3c5e532b1efacb4ba160cc99984efdc15535.png"
+      },
+      "condition": "cases/0085_00852511/descriptive/json/grok46/condition.txt",
+      "figures": [
+        "paper_judge_combined_stacked.jpg"
+      ],
+      "format": "json",
+      "judge_views": {
+        "gt": [
+          "assets/95ec538e2f8ebd93b927343e00cc08723fb0461fa53a4ff19fd2a477ab626022.png",
+          "assets/e8239a9f34e6d6cd01b065cf726de1e3d14c3e3a6c75716fffde71766fce7e9e.png",
+          "assets/247cf90f46f7dc886f074fbfc06431ca442c4b5decc64ec9657b86ac656b78ee.png",
+          "assets/978221992f514279882418f5c95be02852201b9e38d1fd7040a58fd42f65a4d1.png"
+        ],
+        "pred": [
+          "assets/bfc1afa5ad617a29c2d665f8536a3c5e532b1efacb4ba160cc99984efdc15535.png",
+          "assets/5d7c9665dcfb9ad3886be91c6e3c42e2e38da65b1b477ee96aaf3b2439a03135.png",
+          "assets/bbff15c47f9d51e9da3b5862e12eaca47121adbb96268c9c133fce72e7137f9c.png",
+          "assets/df0719460a4796b79645bbca0b09fc21de9bddd39737f0885407ee55e18dfffa.png"
+        ]
+      },
+      "model_id": "grok46",
+      "model_label": "Grok 4.6 (high)",
+      "model_order": 3,
+      "old_displayed_question_matches": [
+        {
+          "current_qids": [
+            "semantic_1"
+          ],
+          "old_qid": "semantic_1"
+        },
+        {
+          "current_qids": [
+            "semantic_4"
+          ],
+          "old_qid": "semantic_4"
+        }
+      ],
+      "qa_details": "cases/0085_00852511/descriptive/json/grok46/qa_details.json",
+      "roles": [
+        "judge_qualitative"
+      ],
+      "scorecard": "cases/0085_00852511/descriptive/json/grok46/scorecard.json",
+      "source_selection_sha256": "39e7f448e5e5076349847b76865047b9419f63199d76929376e780afaa236cd8",
+      "task": "descriptive",
+      "uid": "0085/00852511",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/2b29a8a44eba9f83d8368c262c48dd986bb58aaa517427be5127cb06f4b2c6c1.json",
+        "gt_mesh": "assets/d88e8cd2401a0f824526c76a6eb8091e60803e0171c2744e5460ac1c720a2387.stl",
+        "gt_render": "assets/e58d1fccd9cc34985f537d4e232b557a6777d2e7d1289cd641a22df913b6094b.png",
+        "mesh": "assets/80489ef88e7749716aedb2ab5ecd01f9e0fdb715d8e3b834bf121c0b198d5d4d.stl",
+        "pred_render": "assets/3c5c86a621197d39cad9e6fe74d774cd09b3d4137417549f6b4182ea01e81386.png"
+      },
+      "condition": "cases/0085_00852511/descriptive/json/kimi_k3/condition.txt",
+      "figures": [
+        "paper_judge_combined_stacked.jpg"
+      ],
+      "format": "json",
+      "judge_views": {
+        "gt": [
+          "assets/e58d1fccd9cc34985f537d4e232b557a6777d2e7d1289cd641a22df913b6094b.png",
+          "assets/1e2a8dfdf82a9d0f55b317a43c0ca59707a5b182cfacd76011a5c1d5e9c7b7b0.png",
+          "assets/d81ce060e64965292b2205f6769a397ba53301b98a357b75949b7aaba32e1a24.png",
+          "assets/22756b84d3d9484b738519d5a72b3ab5c5225344b7d3b01ae6d3905072b158af.png"
+        ],
+        "pred": [
+          "assets/3c5c86a621197d39cad9e6fe74d774cd09b3d4137417549f6b4182ea01e81386.png",
+          "assets/6e6d03b263fcfda68ded1943311c148ee02e728f0f76dd933e5063df59f346da.png",
+          "assets/a33945bd76c70f7eaab39dfb970f6b8281aa9330d85b4a89812fc4ed86ba14ec.png",
+          "assets/8686d243c2ec9ede39380b35f069560a8805bc31b032786148fe000f16ed4958.png"
+        ]
+      },
+      "model_id": "kimi_k3",
+      "model_label": "Kimi K3 (max)",
+      "model_order": 4,
+      "old_displayed_question_matches": [
+        {
+          "current_qids": [
+            "semantic_1"
+          ],
+          "old_qid": "semantic_1"
+        },
+        {
+          "current_qids": [
+            "semantic_4"
+          ],
+          "old_qid": "semantic_4"
+        }
+      ],
+      "qa_details": "cases/0085_00852511/descriptive/json/kimi_k3/qa_details.json",
+      "roles": [
+        "judge_qualitative"
+      ],
+      "scorecard": "cases/0085_00852511/descriptive/json/kimi_k3/scorecard.json",
+      "source_selection_sha256": "748d3cb497b8b663d6fbdec6120303eba83b5b8815c58959e83ac45bfa5e2950",
+      "task": "descriptive",
+      "uid": "0085/00852511",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/789e5c1284b3b0c3d46f9f94f660be5f661afd4dd4fa043ca0a90dcde842b207.json",
+        "gt_mesh": "assets/d88e8cd2401a0f824526c76a6eb8091e60803e0171c2744e5460ac1c720a2387.stl",
+        "gt_render": "assets/95ec538e2f8ebd93b927343e00cc08723fb0461fa53a4ff19fd2a477ab626022.png",
+        "mesh": "assets/4a58b9aa1a96c92bb67586eeed3e1ba23413018e9700eeb796e8e045f9eb433c.stl",
+        "pred_render": "assets/4e656c12d24de994c7e2583877f646b98fd9c1673c694dd81232c2754bdb5712.png"
+      },
+      "condition": "cases/0085_00852511/descriptive/json/claude_opus5/condition.txt",
+      "figures": [
+        "paper_judge_combined_stacked.jpg"
+      ],
+      "format": "json",
+      "judge_views": {
+        "gt": [
+          "assets/95ec538e2f8ebd93b927343e00cc08723fb0461fa53a4ff19fd2a477ab626022.png",
+          "assets/e8239a9f34e6d6cd01b065cf726de1e3d14c3e3a6c75716fffde71766fce7e9e.png",
+          "assets/247cf90f46f7dc886f074fbfc06431ca442c4b5decc64ec9657b86ac656b78ee.png",
+          "assets/978221992f514279882418f5c95be02852201b9e38d1fd7040a58fd42f65a4d1.png"
+        ],
+        "pred": [
+          "assets/4e656c12d24de994c7e2583877f646b98fd9c1673c694dd81232c2754bdb5712.png",
+          "assets/01755315d16a346b3fc9609748b7a3d091a3c23d5299045d7f7a3e83999659d9.png",
+          "assets/7f612cfd9b9f31e040c8328096498b037e707d1d74abbecb741c0633c26b4e1b.png",
+          "assets/ac8e67fe61a7af9f9398d048c9f607ef36d1d569a937556ee1ce834375531230.png"
+        ]
+      },
+      "model_id": "claude_opus5",
+      "model_label": "Claude Opus 5 (max)",
+      "model_order": 5,
+      "old_displayed_question_matches": [
+        {
+          "current_qids": [
+            "semantic_1"
+          ],
+          "old_qid": "semantic_1"
+        },
+        {
+          "current_qids": [
+            "semantic_4"
+          ],
+          "old_qid": "semantic_4"
+        }
+      ],
+      "qa_details": "cases/0085_00852511/descriptive/json/claude_opus5/qa_details.json",
+      "roles": [
+        "judge_qualitative"
+      ],
+      "scorecard": "cases/0085_00852511/descriptive/json/claude_opus5/scorecard.json",
+      "source_selection_sha256": "2a16d50b6a5092c3eb5f11c648656188213537273c3df87d9b2dc8561c15ab14",
+      "task": "descriptive",
+      "uid": "0085/00852511",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/2be716685934f5a47c2818dae1c49057a32f47cc32f58eeada3e94d241dd79c9.json",
+        "gt_mesh": "assets/d88e8cd2401a0f824526c76a6eb8091e60803e0171c2744e5460ac1c720a2387.stl",
+        "gt_render": "assets/e58d1fccd9cc34985f537d4e232b557a6777d2e7d1289cd641a22df913b6094b.png",
+        "mesh": "assets/8f62ce6aa194dd15ad54c9fb4df6f4a740e5f97f6f819b4f911c18c3e7de9890.stl",
+        "pred_render": "assets/718525f19bfa4633c0acb9b33e018b5b6da69f29c85c45488da41a59a347284d.png"
+      },
+      "condition": "cases/0085_00852511/descriptive/json/glm53_official/condition.txt",
+      "figures": [
+        "paper_judge_combined_stacked.jpg"
+      ],
+      "format": "json",
+      "judge_views": {
+        "gt": [
+          "assets/e58d1fccd9cc34985f537d4e232b557a6777d2e7d1289cd641a22df913b6094b.png",
+          "assets/1e2a8dfdf82a9d0f55b317a43c0ca59707a5b182cfacd76011a5c1d5e9c7b7b0.png",
+          "assets/d81ce060e64965292b2205f6769a397ba53301b98a357b75949b7aaba32e1a24.png",
+          "assets/22756b84d3d9484b738519d5a72b3ab5c5225344b7d3b01ae6d3905072b158af.png"
+        ],
+        "pred": [
+          "assets/718525f19bfa4633c0acb9b33e018b5b6da69f29c85c45488da41a59a347284d.png",
+          "assets/fc1c61eda2c391b6a4f977ef0f42e7c67cfa9fa8f68d4e16c8f76e4defdda28b.png",
+          "assets/14279eb33c05f11543f1e0f86b00e39b427512c1a3ee510efe2392c8310bcfbf.png",
+          "assets/837774ee696f2eb75d5f9f92b556fe34a2216460ab836b4599be8da5b5195d17.png"
+        ]
+      },
+      "model_id": "glm53_official",
+      "model_label": "GLM-5.3 (high)",
+      "model_order": 6,
+      "old_displayed_question_matches": [
+        {
+          "current_qids": [
+            "semantic_1"
+          ],
+          "old_qid": "semantic_1"
+        },
+        {
+          "current_qids": [
+            "semantic_4"
+          ],
+          "old_qid": "semantic_4"
+        }
+      ],
+      "qa_details": "cases/0085_00852511/descriptive/json/glm53_official/qa_details.json",
+      "roles": [
+        "judge_qualitative"
+      ],
+      "scorecard": "cases/0085_00852511/descriptive/json/glm53_official/scorecard.json",
+      "source_selection_sha256": "44a6d2b3181873d8ddf85810f66567de3698351959da475a76744404802f7443",
+      "task": "descriptive",
+      "uid": "0085/00852511",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/96a0f92badabc2c8a14faa23438013203a8d82ecfc559ef7b8d0c791f98180a4.json",
+        "gt_mesh": "assets/d88e8cd2401a0f824526c76a6eb8091e60803e0171c2744e5460ac1c720a2387.stl",
+        "gt_render": "assets/caaa308054ca2998e781643f5b92fbc9800fadb130d8d1ac38b28b4d4b4e12ff.png",
+        "mesh": "assets/adb0b4c66b9cfc2ae061d608b219b256222645cd4dacea272417aa6690d6cf33.stl",
+        "pred_render": "assets/ba692d7ad9b1c926633ad281a88874efff421d5b99dbcd4b034d83496346ceed.png"
+      },
+      "condition": "cases/0085_00852511/descriptive/json/deepseek_v41flash/condition.txt",
+      "figures": [
+        "paper_judge_combined_stacked.jpg"
+      ],
+      "format": "json",
+      "judge_views": {
+        "gt": [
+          "assets/21cfe9bfa5ddf1ff1825ce50e2efbd07a93ed096a36b1cbb7f9473c4ee761cb0.png",
+          "assets/a4e55ce130b8d79e446a413f7c85cc49f7ffe0b629a08d822fa3210fa1f27141.png",
+          "assets/347f189d2d4bd89a0790a0771b059f050bd14bcff5b3c39acfeb365a0b548d53.png",
+          "assets/c4ac585d1533bcf208d7defd60086f8f18f5001a5d999b8c45bd93accdbf5b2d.png"
+        ],
+        "pred": [
+          "assets/5ba73ced5041588fc150da0cd61bd88115fc194da274e593cd6eba6223375781.png",
+          "assets/a822d987ecbb14e60555502f2bce0bcbad2f785323508896db35d1af30001d74.png",
+          "assets/89005408f0b42ab28398ce047f163517eb2ad0037b4e0d3268be3cd8298180dd.png",
+          "assets/751f645d8e80f775cb6eaf213f56e8232bc2405c61860b4ae254b6034484f74b.png"
+        ]
+      },
+      "model_id": "deepseek_v41flash",
+      "model_label": "DeepSeek V4.1 Flash (high)",
+      "model_order": 7,
+      "old_displayed_question_matches": [
+        {
+          "current_qids": [
+            "semantic_1"
+          ],
+          "old_qid": "semantic_1"
+        },
+        {
+          "current_qids": [
+            "semantic_4"
+          ],
+          "old_qid": "semantic_4"
+        }
+      ],
+      "qa_details": "cases/0085_00852511/descriptive/json/deepseek_v41flash/qa_details.json",
+      "roles": [
+        "judge_qualitative"
+      ],
+      "scorecard": "cases/0085_00852511/descriptive/json/deepseek_v41flash/scorecard.json",
+      "source_selection_sha256": "b8e76f2710d3801ff7cd619038bfb1cfc49c1e84c7b654c5d67e25166f168351",
+      "task": "descriptive",
+      "uid": "0085/00852511",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/d61ddf779841575561c67643cfbff1be3ce91e3b2d22ff56d91a6722df088d6a.json",
+        "gt_mesh": "assets/d88e8cd2401a0f824526c76a6eb8091e60803e0171c2744e5460ac1c720a2387.stl",
+        "gt_render": "assets/e58d1fccd9cc34985f537d4e232b557a6777d2e7d1289cd641a22df913b6094b.png",
+        "mesh": "assets/f5c66a25204c7a59b83ec60f241c8ed2ed357407a6f71c33c9595afe92614e2e.stl",
+        "pred_render": "assets/ba354d2e2915276660d0ca8c9e544918966dbde06c128754a1d95384d97bacba.png"
+      },
+      "condition": "cases/0085_00852511/descriptive/json/doubao21/condition.txt",
+      "figures": [
+        "paper_judge_combined_stacked.jpg"
+      ],
+      "format": "json",
+      "judge_views": {
+        "gt": [
+          "assets/e58d1fccd9cc34985f537d4e232b557a6777d2e7d1289cd641a22df913b6094b.png",
+          "assets/1e2a8dfdf82a9d0f55b317a43c0ca59707a5b182cfacd76011a5c1d5e9c7b7b0.png",
+          "assets/d81ce060e64965292b2205f6769a397ba53301b98a357b75949b7aaba32e1a24.png",
+          "assets/22756b84d3d9484b738519d5a72b3ab5c5225344b7d3b01ae6d3905072b158af.png"
+        ],
+        "pred": [
+          "assets/ba354d2e2915276660d0ca8c9e544918966dbde06c128754a1d95384d97bacba.png",
+          "assets/d5c5cd6951a339406e7e8baf9e94147d0ac010a52f3100ffcf87b6887beba1b5.png",
+          "assets/166ba7abcfebfe975b50bb8866e4ae91240f2a5b200be0a6a8268440761133e1.png",
+          "assets/4f8c5183a3fd898ee9030cd81486213fbd7da048306398a18ab9101f709bb295.png"
+        ]
+      },
+      "model_id": "doubao21",
+      "model_label": "Doubao Seed 2.1 Pro (Thinking)",
+      "model_order": 8,
+      "old_displayed_question_matches": [
+        {
+          "current_qids": [
+            "semantic_1"
+          ],
+          "old_qid": "semantic_1"
+        },
+        {
+          "current_qids": [
+            "semantic_4"
+          ],
+          "old_qid": "semantic_4"
+        }
+      ],
+      "qa_details": "cases/0085_00852511/descriptive/json/doubao21/qa_details.json",
+      "roles": [
+        "judge_qualitative"
+      ],
+      "scorecard": "cases/0085_00852511/descriptive/json/doubao21/scorecard.json",
+      "source_selection_sha256": "30e55d18ea4ccd7dd26f08a462014b0db5e9f268d0441545e8744f2cbed4c769",
+      "task": "descriptive",
+      "uid": "0085/00852511",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/9b46ef2e21edf281c1ad0c13fe88d4040b3c0b3dc31c54ae757eec0659cb6bb3.json",
+        "gt_mesh": "assets/d88e8cd2401a0f824526c76a6eb8091e60803e0171c2744e5460ac1c720a2387.stl",
+        "gt_render": "assets/e58d1fccd9cc34985f537d4e232b557a6777d2e7d1289cd641a22df913b6094b.png",
+        "mesh": "assets/aa2890251806485704580c4a0bce39e24cba64fca877c949d27f41f0cd625f3e.stl",
+        "pred_render": "assets/da6cac210781efeba58ca8ae314812f4d4ab8c81fbb3a9f316398fd294981a1c.png"
+      },
+      "condition": "cases/0085_00852511/descriptive/json/glm53flash/condition.txt",
+      "figures": [
+        "paper_judge_combined_stacked.jpg"
+      ],
+      "format": "json",
+      "judge_views": {
+        "gt": [
+          "assets/e58d1fccd9cc34985f537d4e232b557a6777d2e7d1289cd641a22df913b6094b.png",
+          "assets/1e2a8dfdf82a9d0f55b317a43c0ca59707a5b182cfacd76011a5c1d5e9c7b7b0.png",
+          "assets/d81ce060e64965292b2205f6769a397ba53301b98a357b75949b7aaba32e1a24.png",
+          "assets/22756b84d3d9484b738519d5a72b3ab5c5225344b7d3b01ae6d3905072b158af.png"
+        ],
+        "pred": [
+          "assets/da6cac210781efeba58ca8ae314812f4d4ab8c81fbb3a9f316398fd294981a1c.png",
+          "assets/38266f6cf9e1d9cd72dcd7b5aa38672c5ad9191f1abf1019df874e587201f591.png",
+          "assets/a75cbcdc84cdaa43dc0c7af6e863461f0f48dab9ea718a91a1b42c8a2469abbe.png",
+          "assets/a58d22fd3470c97ebb57a2ecdd37d00309c710121d0a5aca030ca0135c39014d.png"
+        ]
+      },
+      "model_id": "glm53flash",
+      "model_label": "GLM-5.3-Flash (high)",
+      "model_order": 9,
+      "old_displayed_question_matches": [
+        {
+          "current_qids": [
+            "semantic_1"
+          ],
+          "old_qid": "semantic_1"
+        },
+        {
+          "current_qids": [
+            "semantic_4"
+          ],
+          "old_qid": "semantic_4"
+        }
+      ],
+      "qa_details": "cases/0085_00852511/descriptive/json/glm53flash/qa_details.json",
+      "roles": [
+        "judge_qualitative"
+      ],
+      "scorecard": "cases/0085_00852511/descriptive/json/glm53flash/scorecard.json",
+      "source_selection_sha256": "5921703b7a68e7ea9dad6cc7c7e4df96bf6f81716cdef6693c049cae56a3eac8",
+      "task": "descriptive",
+      "uid": "0085/00852511",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/8bd5bef5240f5218ea9a0b462fe6c1706bbad652966062b0e538ff66b05cd292.json",
+        "gt_mesh": "assets/41e308a29dd07404fd3567d21bac0b03aaaa207e95c638091784b38f0bd12bd8.stl",
+        "gt_render": "assets/44d1bd18c65347d9fa3b61954d7cdaf4790732a66f12b9a5e72c893b174bcef1.png",
+        "mesh": "assets/435216337bc83fd2c18beeed5642d74ac149d4f879754cacf294539f6298a23c.stl",
+        "pred_render": "assets/7b1b033c7376bb2c0986909cb24e6a818a995d61c5f9a1c7e3336c7089eca6ea.png"
+      },
+      "condition": "cases/0015_00155951/parametric/json/gpt6_probe/condition.txt",
+      "figures": [
+        "paper_judge_combined_stacked.jpg"
+      ],
+      "format": "json",
+      "judge_views": {
+        "gt": [],
+        "pred": [
+          "assets/9de53c6aae1015f8738e0f7748a3076f59bb48c0acb9fa1487c75a1cd042d1b2.png",
+          "assets/e46acdb5cf98f643d1cff750a6087968139c6c5e11f5c1e1ddce3fa09d2562c7.png",
+          "assets/f42b9f769da138e3eae4300cecdbdb5d556bff9d118bc73f51677cf24f6b8c14.png",
+          "assets/a1a611243a9629cf0eca1508a64d4a395e00582e87439b4eccc192cd27b96fdc.png"
+        ]
+      },
+      "model_id": "gpt6_probe",
+      "model_label": "GPT-6 (xhigh)",
+      "model_order": 0,
+      "old_displayed_question_matches": [
+        {
+          "current_qids": [
+            "param_3"
+          ],
+          "old_qid": "param_3"
+        },
+        {
+          "current_qids": [
+            "semantic_1"
+          ],
+          "old_qid": "semantic_1"
+        }
+      ],
+      "qa_details": "cases/0015_00155951/parametric/json/gpt6_probe/qa_details.json",
+      "roles": [
+        "judge_qualitative"
+      ],
+      "scorecard": "cases/0015_00155951/parametric/json/gpt6_probe/scorecard.json",
+      "source_selection_sha256": "25e5d52714a4ab9fe2ebda518fb9f50440ff8228fd9cb0e44c496afc443ec3bb",
+      "task": "parametric",
+      "uid": "0015/00155951",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/f835769dca5b2885133f7fc497b431ada36e335e980a0c1531dde5110f4f115d.json",
+        "gt_mesh": "assets/41e308a29dd07404fd3567d21bac0b03aaaa207e95c638091784b38f0bd12bd8.stl",
+        "gt_render": "assets/44d1bd18c65347d9fa3b61954d7cdaf4790732a66f12b9a5e72c893b174bcef1.png",
+        "mesh": "assets/1e128ac0144e95ae8803dd8b9c6546709538542cf2d85740f4ce0fd697cdda08.stl",
+        "pred_render": "assets/e4ad0ce524af8999a6a23d337d3053f81d8336585f5ddfec6e8cf6831045f7b6.png"
+      },
+      "condition": "cases/0015_00155951/parametric/json/gemini38_flash/condition.txt",
+      "figures": [
+        "paper_judge_combined_stacked.jpg"
+      ],
+      "format": "json",
+      "judge_views": {
+        "gt": [],
+        "pred": [
+          "assets/6eca302c334f35164bdb59aa12f71bc5a72cdb3f4d5d333d3e9245a5dd1ab53f.png",
+          "assets/838ed597b1758bb1c09bd471621be0ad124eb5388c5571653760a3da8a49adf4.png",
+          "assets/8b445e1f162fe465553837a3bc72fdf9b8501a71232b89f271b8fdab35a42a9c.png",
+          "assets/27e491bfb498c6df2a3ae2d11b32ae32d13f83ad4c87cf71c76d808142b8acb8.png"
+        ]
+      },
+      "model_id": "gemini38_flash",
+      "model_label": "Gemini 3.8 Flash (high)",
+      "model_order": 1,
+      "old_displayed_question_matches": [
+        {
+          "current_qids": [
+            "param_3"
+          ],
+          "old_qid": "param_3"
+        },
+        {
+          "current_qids": [
+            "semantic_1"
+          ],
+          "old_qid": "semantic_1"
+        }
+      ],
+      "qa_details": "cases/0015_00155951/parametric/json/gemini38_flash/qa_details.json",
+      "roles": [
+        "judge_qualitative"
+      ],
+      "scorecard": "cases/0015_00155951/parametric/json/gemini38_flash/scorecard.json",
+      "source_selection_sha256": "27dba9e0c1cbe55fcc5e746e72c943e097df2aeb99a3d504ccdf032fc6dacd77",
+      "task": "parametric",
+      "uid": "0015/00155951",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/ed3884a6acb0f0d19da4f71de1d91281df96f8fbd86815673bc24755f169f9ff.json",
+        "gt_mesh": "assets/41e308a29dd07404fd3567d21bac0b03aaaa207e95c638091784b38f0bd12bd8.stl",
+        "gt_render": "assets/44d1bd18c65347d9fa3b61954d7cdaf4790732a66f12b9a5e72c893b174bcef1.png",
+        "mesh": "assets/409698a3707fc1bf3844150b7cb90b0989eb0f9e67088ddbcfc08cec7952aa15.stl",
+        "pred_render": "assets/3617bb1891c2312d6345186ac1020584090ab26fc0ae3f8a77e24a70268e6807.png"
+      },
+      "condition": "cases/0015_00155951/parametric/json/qwen38max/condition.txt",
+      "figures": [
+        "paper_judge_combined_stacked.jpg"
+      ],
+      "format": "json",
+      "judge_views": {
+        "gt": [],
+        "pred": [
+          "assets/8b88eaeab6205159f725a442a46735acca7d50a0a63c770136514d94642cace6.png",
+          "assets/94b31d1092a29c8c83aac7a08333f50116defaa714222c0e499e61101821569b.png",
+          "assets/f7b335e7a6f46f323ffabd4a06f3676dfc4ded55dda088587047e161c7b297e9.png",
+          "assets/f455ed1c264c3150b68d29f15d0be92b3654a1bba84fb9eed8d6c65eb7d50820.png"
+        ]
+      },
+      "model_id": "qwen38max",
+      "model_label": "Qwen3.8-Max (xhigh)",
+      "model_order": 2,
+      "old_displayed_question_matches": [
+        {
+          "current_qids": [
+            "param_3"
+          ],
+          "old_qid": "param_3"
+        },
+        {
+          "current_qids": [
+            "semantic_1"
+          ],
+          "old_qid": "semantic_1"
+        }
+      ],
+      "qa_details": "cases/0015_00155951/parametric/json/qwen38max/qa_details.json",
+      "roles": [
+        "judge_qualitative"
+      ],
+      "scorecard": "cases/0015_00155951/parametric/json/qwen38max/scorecard.json",
+      "source_selection_sha256": "6682304160d172ddd39958471936c45f8424d5988b0997a431cfb7d5789ea0df",
+      "task": "parametric",
+      "uid": "0015/00155951",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/6adca25a15800f6b3ce4a41de271b166b7aba1815f493ca93aeea729cedd59d6.json",
+        "gt_mesh": "assets/41e308a29dd07404fd3567d21bac0b03aaaa207e95c638091784b38f0bd12bd8.stl",
+        "gt_render": "assets/44d1bd18c65347d9fa3b61954d7cdaf4790732a66f12b9a5e72c893b174bcef1.png",
+        "mesh": "assets/fc067b43a0cd4c6c65784442c62c619411c6ac6b6f0086606f718121f63f315b.stl",
+        "pred_render": "assets/444c6b23818709ff71c487e3b2699a5df43f660c77b6e070829c88f3479289ca.png"
+      },
+      "condition": "cases/0015_00155951/parametric/json/grok46/condition.txt",
+      "figures": [
+        "paper_judge_combined_stacked.jpg"
+      ],
+      "format": "json",
+      "judge_views": {
+        "gt": [],
+        "pred": [
+          "assets/a5d1a4d84a9fe30d7dfb0b9ebc51be015fe8c07ffcb1765626e3cf37e6ed8767.png",
+          "assets/ba7009d6db6c09bd54dd270e6b872fce7ed38f1c402f982de38bab7709721b8d.png",
+          "assets/ed8a53686e21b44f0c602371030ae6caf978ce50697e9a111664f5a370d832b8.png",
+          "assets/a445cc2655c8d07172a9615dad1c9652599ecdf3e39d5d7f99d620de0b0c3f2a.png"
+        ]
+      },
+      "model_id": "grok46",
+      "model_label": "Grok 4.6 (high)",
+      "model_order": 3,
+      "old_displayed_question_matches": [
+        {
+          "current_qids": [
+            "param_3"
+          ],
+          "old_qid": "param_3"
+        },
+        {
+          "current_qids": [
+            "semantic_1"
+          ],
+          "old_qid": "semantic_1"
+        }
+      ],
+      "qa_details": "cases/0015_00155951/parametric/json/grok46/qa_details.json",
+      "roles": [
+        "judge_qualitative"
+      ],
+      "scorecard": "cases/0015_00155951/parametric/json/grok46/scorecard.json",
+      "source_selection_sha256": "9a865b798efc98372e1737f7175c6cace2483f6d26d4fa80cf18b0726ce6557c",
+      "task": "parametric",
+      "uid": "0015/00155951",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/c22d2c51c2fe4e1d94d91a5b72f1efb3a81ab2bc459fbc26ee66c3ff73a6910e.json",
+        "gt_mesh": "assets/41e308a29dd07404fd3567d21bac0b03aaaa207e95c638091784b38f0bd12bd8.stl",
+        "gt_render": "assets/44d1bd18c65347d9fa3b61954d7cdaf4790732a66f12b9a5e72c893b174bcef1.png",
+        "mesh": "assets/a1252e09a3ca185e95b42dd736b62a13ff8abcc814947d7994b28dcf061d29a4.stl",
+        "pred_render": "assets/fd7286baeee21e3bac9dd579f40e934981e8b3c0c9f8d514e9d02b0d3ee98e78.png"
+      },
+      "condition": "cases/0015_00155951/parametric/json/kimi_k3/condition.txt",
+      "figures": [
+        "paper_judge_combined_stacked.jpg"
+      ],
+      "format": "json",
+      "judge_views": {
+        "gt": [],
+        "pred": [
+          "assets/2580ec4205dfdd887eb125c2ba37810eb9fde82bd2d4f02232921f800837a2b7.png",
+          "assets/88e8bfccc544a00b3ba9eac5be3273b991e1ca36d1f6bcedc5c3cd582939188a.png",
+          "assets/9b1b39cf8c02530990763cc16f4b1e08beff1aa3d675047dc1df8ac0eef8402b.png",
+          "assets/9ce40706be4c9572fbfe9dfebe6fecc546cf3e6239e5ab247418a0162e0f3672.png"
+        ]
+      },
+      "model_id": "kimi_k3",
+      "model_label": "Kimi K3 (max)",
+      "model_order": 4,
+      "old_displayed_question_matches": [
+        {
+          "current_qids": [
+            "param_3"
+          ],
+          "old_qid": "param_3"
+        },
+        {
+          "current_qids": [
+            "semantic_1"
+          ],
+          "old_qid": "semantic_1"
+        }
+      ],
+      "qa_details": "cases/0015_00155951/parametric/json/kimi_k3/qa_details.json",
+      "roles": [
+        "judge_qualitative"
+      ],
+      "scorecard": "cases/0015_00155951/parametric/json/kimi_k3/scorecard.json",
+      "source_selection_sha256": "fbcfe4542b1f0410ab78e45207ada66326a8e1faf6d3671e7903888e316b15ca",
+      "task": "parametric",
+      "uid": "0015/00155951",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/a857733f40257b54f353c7d2b868d9ddfe024bab6e6193ccbaf632a2e15cf827.json",
+        "gt_mesh": "assets/41e308a29dd07404fd3567d21bac0b03aaaa207e95c638091784b38f0bd12bd8.stl",
+        "gt_render": "assets/44d1bd18c65347d9fa3b61954d7cdaf4790732a66f12b9a5e72c893b174bcef1.png",
+        "mesh": "assets/e92ddc0de765c40a272b3f19e4d58a922b60dfbe4a943a24bc8fec38178d967b.stl",
+        "pred_render": "assets/b00d7779cf7ba34ff24ad17d098314c024c7c345b35f76d8c85a111018398fa2.png"
+      },
+      "condition": "cases/0015_00155951/parametric/json/claude_opus5/condition.txt",
+      "figures": [
+        "paper_judge_combined_stacked.jpg"
+      ],
+      "format": "json",
+      "judge_views": {
+        "gt": [],
+        "pred": [
+          "assets/78d9b2b1ba8becd7646ab60ec17e9f3de9335e6422010d9bdaa617e2f391f595.png",
+          "assets/51bc66427a7b1a938dfb18805d387dc5e1b45410564f63fb8170f0d9c013074e.png",
+          "assets/dc9b23a98f19e3380c206a38758bfd2e08b786d9426a933379ed749e1390e2db.png",
+          "assets/947bc4e9c91c62c8f4a670c152d94016334a358fa79567d9677fd53ad0883224.png"
+        ]
+      },
+      "model_id": "claude_opus5",
+      "model_label": "Claude Opus 5 (max)",
+      "model_order": 5,
+      "old_displayed_question_matches": [
+        {
+          "current_qids": [
+            "param_3"
+          ],
+          "old_qid": "param_3"
+        },
+        {
+          "current_qids": [
+            "semantic_1"
+          ],
+          "old_qid": "semantic_1"
+        }
+      ],
+      "qa_details": "cases/0015_00155951/parametric/json/claude_opus5/qa_details.json",
+      "roles": [
+        "judge_qualitative"
+      ],
+      "scorecard": "cases/0015_00155951/parametric/json/claude_opus5/scorecard.json",
+      "source_selection_sha256": "8847da6d3334fbf0f74a31ec26dc902bfc2eb8684b2c727764474102a8dd8876",
+      "task": "parametric",
+      "uid": "0015/00155951",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/cffe139c41b1effae65fc54b777a9b3964429faec8ebfb512a87ea52c36ca755.json",
+        "gt_mesh": "assets/41e308a29dd07404fd3567d21bac0b03aaaa207e95c638091784b38f0bd12bd8.stl",
+        "gt_render": "assets/44d1bd18c65347d9fa3b61954d7cdaf4790732a66f12b9a5e72c893b174bcef1.png",
+        "mesh": "assets/84710c03f46b5257c84b597310636e8a2982f7815dc9b9aca693f1b290151729.stl",
+        "pred_render": "assets/70d2c0d3491d95ee6f36eb6ae2ca4ee26e6ddb575d576d22cb70863dff05cb6c.png"
+      },
+      "condition": "cases/0015_00155951/parametric/json/glm53_official/condition.txt",
+      "figures": [
+        "paper_judge_combined_stacked.jpg"
+      ],
+      "format": "json",
+      "judge_views": {
+        "gt": [],
+        "pred": [
+          "assets/1ff9ec730d6e0300d6603399cfd7ae1f5508b093b5be406f028c1b9f744fdd4f.png",
+          "assets/ee67fde55780c451670a727a7a83ee318f25e29033968ce687e9c91a3a0037c8.png",
+          "assets/a2aa12763e72cdf6ee09ee624cc21a47aa2ebebec854d688a0fdbcec7327b6bf.png",
+          "assets/ef715f0b80a3c6c79924edff6b7dd64788e509ab1b70c9ead6cdefd6bf5ac109.png"
+        ]
+      },
+      "model_id": "glm53_official",
+      "model_label": "GLM-5.3 (high)",
+      "model_order": 6,
+      "old_displayed_question_matches": [
+        {
+          "current_qids": [
+            "param_3"
+          ],
+          "old_qid": "param_3"
+        },
+        {
+          "current_qids": [
+            "semantic_1"
+          ],
+          "old_qid": "semantic_1"
+        }
+      ],
+      "qa_details": "cases/0015_00155951/parametric/json/glm53_official/qa_details.json",
+      "roles": [
+        "judge_qualitative"
+      ],
+      "scorecard": "cases/0015_00155951/parametric/json/glm53_official/scorecard.json",
+      "source_selection_sha256": "e1a63fee60bb6da4415c27e31c9f390a2959cb517c08ce385677f6b14e399876",
+      "task": "parametric",
+      "uid": "0015/00155951",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/18ffb149becb29a7a7721388e08cf60c55d8da65fb1bd17ce1f73700f591b347.json",
+        "gt_mesh": "assets/41e308a29dd07404fd3567d21bac0b03aaaa207e95c638091784b38f0bd12bd8.stl",
+        "gt_render": "assets/44d1bd18c65347d9fa3b61954d7cdaf4790732a66f12b9a5e72c893b174bcef1.png",
+        "mesh": "assets/05215ed0ab90e2b36ce1d32c3bac12e63e3f8cdf5792dfc559e818c2362a9477.stl",
+        "pred_render": "assets/58a5ba5a6c2d098c1d4a4e1d770c316abe9b79b710ce19d42039b1c8719210b4.png"
+      },
+      "condition": "cases/0015_00155951/parametric/json/deepseek_v41flash/condition.txt",
+      "figures": [
+        "paper_judge_combined_stacked.jpg"
+      ],
+      "format": "json",
+      "judge_views": {
+        "gt": [],
+        "pred": [
+          "assets/83803e384a4e1bd86b1d244385cfb83ab78ab8e6d8e123eb5323e755d438ac96.png",
+          "assets/ffae487c78e8f4a250689ac356ac5aa723d5dbf84dcbf18418e0761da107b6a9.png",
+          "assets/d40abffaabe3d13d808b8569b8a4af31c88814fe0515def8f313a317c2c7a536.png",
+          "assets/974413c98f310f25966f10816f3e1dc5057608901600fc3d6b7de43f3bdc44e9.png"
+        ]
+      },
+      "model_id": "deepseek_v41flash",
+      "model_label": "DeepSeek V4.1 Flash (high)",
+      "model_order": 7,
+      "old_displayed_question_matches": [
+        {
+          "current_qids": [
+            "param_3"
+          ],
+          "old_qid": "param_3"
+        },
+        {
+          "current_qids": [
+            "semantic_1"
+          ],
+          "old_qid": "semantic_1"
+        }
+      ],
+      "qa_details": "cases/0015_00155951/parametric/json/deepseek_v41flash/qa_details.json",
+      "roles": [
+        "judge_qualitative"
+      ],
+      "scorecard": "cases/0015_00155951/parametric/json/deepseek_v41flash/scorecard.json",
+      "source_selection_sha256": "0a025ce62fe83ff7acf4071640bba161e5bdf503b8deeee1aefc0af3c1687d8f",
+      "task": "parametric",
+      "uid": "0015/00155951",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/e44108a718f1c95fcc6c73ca7aa4c44533cc8b230b405febe33207957eeca385.json",
+        "gt_mesh": "assets/41e308a29dd07404fd3567d21bac0b03aaaa207e95c638091784b38f0bd12bd8.stl",
+        "gt_render": "assets/44d1bd18c65347d9fa3b61954d7cdaf4790732a66f12b9a5e72c893b174bcef1.png",
+        "mesh": "assets/d3dbddaa8a88d98d7c76a876c02d0d8ed406f4248a61905adfdc99edded22065.stl",
+        "pred_render": "assets/d39debbb4e744ba766ddfb55ae46a78e163e318a2e2320c4e4503e5bcfd93f81.png"
+      },
+      "condition": "cases/0015_00155951/parametric/json/doubao21/condition.txt",
+      "figures": [
+        "paper_judge_combined_stacked.jpg"
+      ],
+      "format": "json",
+      "judge_views": {
+        "gt": [],
+        "pred": [
+          "assets/06bccc00bb5c3983729462ddb0fe912bf03c0f92e568b36ca8d0b7cd5eab619f.png",
+          "assets/788db5b430245510a93b5655a3e121f3da2253b21a7aa5a0e85ee5626ebdf139.png",
+          "assets/f58ef8cf1fd1c3b3216df7d38693398f967ed4c3469ae3c540209d1219a13d51.png",
+          "assets/54df4a9980a4fbf23a3826f9b0b7231fe9d08460c3859256b72829305c6c1edb.png"
+        ]
+      },
+      "model_id": "doubao21",
+      "model_label": "Doubao Seed 2.1 Pro (Thinking)",
+      "model_order": 8,
+      "old_displayed_question_matches": [
+        {
+          "current_qids": [
+            "param_3"
+          ],
+          "old_qid": "param_3"
+        },
+        {
+          "current_qids": [
+            "semantic_1"
+          ],
+          "old_qid": "semantic_1"
+        }
+      ],
+      "qa_details": "cases/0015_00155951/parametric/json/doubao21/qa_details.json",
+      "roles": [
+        "judge_qualitative"
+      ],
+      "scorecard": "cases/0015_00155951/parametric/json/doubao21/scorecard.json",
+      "source_selection_sha256": "d1bd7004cceb11a1825200732a436981d4529ddfc16a402a34b8c3086a4bbf18",
+      "task": "parametric",
+      "uid": "0015/00155951",
+      "valid": true
+    },
+    {
+      "assets": {
+        "generated": "assets/e9adbf0dc866da61bf1a39ae2c8f869683e7f1088c62e9fed48064c1a6222d27.json",
+        "gt_mesh": "assets/41e308a29dd07404fd3567d21bac0b03aaaa207e95c638091784b38f0bd12bd8.stl",
+        "gt_render": "assets/44d1bd18c65347d9fa3b61954d7cdaf4790732a66f12b9a5e72c893b174bcef1.png",
+        "mesh": "assets/1192fead9aa25bbecea4251c3ca825312749a78afd7ed05e7b4fae78fbf9b5b4.stl",
+        "pred_render": "assets/873cbe9390d58e003e9ef860576401217aed3d410c8953c4380abace415c9cfe.png"
+      },
+      "condition": "cases/0015_00155951/parametric/json/glm53flash/condition.txt",
+      "figures": [
+        "paper_judge_combined_stacked.jpg"
+      ],
+      "format": "json",
+      "judge_views": {
+        "gt": [],
+        "pred": [
+          "assets/60549a72d7a1ae96d08b56873a48e2b7c41bb4363cf33bffdcb889f70401e791.png",
+          "assets/7c5c6c10d62b6734237946682d24aa0526963e3e5448fb09cc81e30220ea81f8.png",
+          "assets/c301d8fbb98d7d4dfaf2da2719ed75c8a7116411678a6f13ac23f872e003ed42.png",
+          "assets/26c1e97ae464bc24e166ef99d4b20d6ccbb784a43572b54ee540c914d9209412.png"
+        ]
+      },
+      "model_id": "glm53flash",
+      "model_label": "GLM-5.3-Flash (high)",
+      "model_order": 9,
+      "old_displayed_question_matches": [
+        {
+          "current_qids": [
+            "param_3"
+          ],
+          "old_qid": "param_3"
+        },
+        {
+          "current_qids": [
+            "semantic_1"
+          ],
+          "old_qid": "semantic_1"
+        }
+      ],
+      "qa_details": "cases/0015_00155951/parametric/json/glm53flash/qa_details.json",
+      "roles": [
+        "judge_qualitative"
+      ],
+      "scorecard": "cases/0015_00155951/parametric/json/glm53flash/scorecard.json",
+      "source_selection_sha256": "45ac45f471a41904842b41ac9017fcca0262b5418a90b82929b23603f80ab24f",
+      "task": "parametric",
+      "uid": "0015/00155951",
+      "valid": true
+    }
+  ],
+  "schema": "text100-qualitative-materials-v1"
+}

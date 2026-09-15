@@ -1,0 +1,318 @@
+{
+  "cases": [
+    {
+      "disposition": "outside_subset_no_new_output",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png",
+        "qualitative_combined_select_transposed_openscad.png"
+      ],
+      "format": "openscad",
+      "in_fixed100": false,
+      "original_column": 1,
+      "task": "descriptive",
+      "uid": "0001/00017063"
+    },
+    {
+      "disposition": "prepare_all_ten_models",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png"
+      ],
+      "format": "openscad",
+      "in_fixed100": true,
+      "original_column": 2,
+      "task": "descriptive",
+      "uid": "0092/00923543"
+    },
+    {
+      "disposition": "outside_subset_no_new_output",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png"
+      ],
+      "format": "openscad",
+      "in_fixed100": false,
+      "original_column": 3,
+      "task": "descriptive",
+      "uid": "0013/00132038"
+    },
+    {
+      "disposition": "prepare_all_ten_models",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png",
+        "qualitative_combined_select_transposed_openscad.png"
+      ],
+      "format": "openscad",
+      "in_fixed100": true,
+      "original_column": 4,
+      "task": "parametric",
+      "uid": "0062/00621494"
+    },
+    {
+      "disposition": "prepare_all_ten_models",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png"
+      ],
+      "format": "openscad",
+      "in_fixed100": true,
+      "original_column": 5,
+      "task": "parametric",
+      "uid": "0046/00460772"
+    },
+    {
+      "disposition": "prepare_all_ten_models",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png"
+      ],
+      "format": "openscad",
+      "in_fixed100": true,
+      "original_column": 6,
+      "task": "parametric",
+      "uid": "0093/00934405"
+    },
+    {
+      "disposition": "prepare_all_ten_models",
+      "figures": [
+        "paper_judge_combined_stacked.jpg"
+      ],
+      "format": "json",
+      "in_fixed100": true,
+      "original_column": null,
+      "task": "descriptive",
+      "uid": "0085/00852511"
+    },
+    {
+      "disposition": "prepare_all_ten_models",
+      "figures": [
+        "paper_judge_combined_stacked.jpg"
+      ],
+      "format": "json",
+      "in_fixed100": true,
+      "original_column": null,
+      "task": "parametric",
+      "uid": "0015/00155951"
+    }
+  ],
+  "original_judge_cases": [
+    {
+      "composing_script_identity_verified": false,
+      "displayed_questions": [
+        {
+          "category": "shape_structure",
+          "chose_none_of_above": false,
+          "ground_truth": "A",
+          "is_correct": true,
+          "predicted": "A",
+          "qid": "semantic_1",
+          "question": "Which description best matches the overall shape of the object?",
+          "reasoning": "The renders and the artifact code show a broad central collar with a series of stepped cylindrical sections on one side and a single cylindrical section on the other.",
+          "split": "semantic"
+        },
+        {
+          "category": "features",
+          "chose_none_of_above": false,
+          "ground_truth": "D",
+          "is_correct": true,
+          "predicted": "D",
+          "qid": "semantic_4",
+          "question": "What feature is located immediately above the broad annular collar?",
+          "reasoning": "Above the broad collar (in the +Z direction, Part 2), there is a single extruded cylinder with an inner cutout, which forms a hollow cylindrical sleeve.",
+          "split": "semantic"
+        }
+      ],
+      "figure": "paper_judge_combined_stacked.jpg",
+      "format": "json",
+      "mapping_basis": "existing image inspected; exact displayed question, answer and reasoning strings match saved JSON case",
+      "old_bank_questions": [
+        {
+          "answer": "A",
+          "category": "shape_structure",
+          "evidence": "The text describes the part as 'entirely round and coaxial' with a 'broad annular collar' and 'stepped through several smaller concentric tubular sections'.",
+          "options": [
+            "A series of coaxial, stepped cylindrical sections with a broad collar",
+            "A rectangular block with multiple cylindrical cutouts",
+            "A spherical body with a hollow sleeve protruding from one side",
+            "A single uniform cylinder with a flat top and bottom"
+          ],
+          "qid": "semantic_1",
+          "question": "Which description best matches the overall shape of the object?",
+          "source_text_level": "detailed",
+          "split": "semantic"
+        },
+        {
+          "answer": "D",
+          "category": "features",
+          "evidence": "The text mentions 'a hollow sleeve rising above a broad annular collar'.",
+          "options": [
+            "A flat square plate",
+            "A solid rectangular boss",
+            "A threaded rod",
+            "A hollow cylindrical sleeve"
+          ],
+          "qid": "semantic_4",
+          "question": "What feature is located immediately above the broad annular collar?",
+          "source_text_level": "detailed",
+          "split": "semantic"
+        }
+      ],
+      "old_judge": {
+        "error": null,
+        "reason": "The PRED model is a coaxial, round mechanical part with a collar, a sleeve, and stepped tiers, matching the general vocabulary of the prompt. However, it reverses the top and bottom features (placing the stepped tiers above the collar and the single sleeve below, opposite to the text) and makes the stepped tiers solid instead of hollow, resulting in a related but structurally incorrect part.",
+        "semantic": 6
+      },
+      "old_qa": {
+        "none_of_above_count": 0,
+        "overall_accuracy": 1.0,
+        "param_accuracy": 0.0,
+        "param_correct": 0,
+        "param_total": 0,
+        "per_category_accuracy": {
+          "semantic.features": {
+            "accuracy": 1.0,
+            "correct": 2,
+            "total": 2
+          },
+          "semantic.geometry_properties": {
+            "accuracy": 1.0,
+            "correct": 1,
+            "total": 1
+          },
+          "semantic.shape_structure": {
+            "accuracy": 1.0,
+            "correct": 1,
+            "total": 1
+          }
+        },
+        "semantic_accuracy": 1.0,
+        "semantic_correct": 4,
+        "semantic_total": 4,
+        "total_correct": 4,
+        "total_questions": 4
+      },
+      "original_model": "GPT-5.5",
+      "source_hashes": {
+        "qa_bank": "c4d1bb233744987677bbd4a3033a3c87d039e975d8b396447a1ec87f0fafda68",
+        "qa_results": "ed12feb824f212a5940cdf396b036dca1bae851e7b58e7548a43c7e0fab65c5e"
+      },
+      "task": "descriptive",
+      "uid": "0085/00852511"
+    },
+    {
+      "composing_script_identity_verified": false,
+      "displayed_questions": [
+        {
+          "category": "derived",
+          "chose_none_of_above": true,
+          "ground_truth": "D",
+          "is_correct": false,
+          "predicted": "E",
+          "qid": "param_3",
+          "question": "What is the protruding height of the upright tabs measured strictly from the top face of the main base plate to the top of the tabs?",
+          "reasoning": "There are no upright tabs on this object (the intended tabs are flat and separated), so a protruding height cannot be measured.",
+          "split": "param"
+        },
+        {
+          "category": "shape_structure",
+          "chose_none_of_above": true,
+          "ground_truth": "A",
+          "is_correct": false,
+          "predicted": "E",
+          "qid": "semantic_1",
+          "question": "Which statement best describes the vertical structure and depth relationship of the object's features?",
+          "reasoning": "The render images and bounding box show that the 'tabs' are not upright at all; instead, one is a completely separate flat piece lying on the same plane as the main plate, and the other is a flat pad on the bottom. None of the descriptions accurately reflect this disconnected, flat geometry.",
+          "split": "semantic"
+        }
+      ],
+      "figure": "paper_judge_combined_stacked.jpg",
+      "format": "json",
+      "mapping_basis": "existing image inspected; exact displayed question, answer and reasoning strings match saved JSON case",
+      "old_bank_questions": [
+        {
+          "answer": "A",
+          "category": "derived",
+          "evidence": "tab_reach_from_datum=0.5875, base_plate_height=0.1250, protruding_height=0.5875-0.1250=0.4625.",
+          "options": [
+            "0.4625",
+            "0.7125",
+            "0.1250",
+            "0.5875"
+          ],
+          "qid": "param_3",
+          "question": "What is the protruding height of the upright tabs measured strictly from the top face of the main base plate to the top of the tabs?",
+          "source_text_level": "parametric_detail",
+          "split": "param"
+        },
+        {
+          "answer": "A",
+          "category": "shape_structure",
+          "evidence": "The text explicitly states the end sections are much taller than the base, and the underside collar is a shallow lower tier, creating a stepped-depth relationship.",
+          "options": [
+            "The end tabs are the tallest features, the main plate is in the middle, and the collar forms a shallow lower tier",
+            "The collar is the tallest feature, extending far below the main plate, while the end tabs are shallow",
+            "The end tabs extend downwards from the main plate, while the collar extends upwards",
+            "All features share the same overall height, creating an object with uniform thickness"
+          ],
+          "qid": "semantic_1",
+          "question": "Which statement best describes the vertical structure and depth relationship of the object's features?",
+          "source_text_level": "detailed",
+          "split": "semantic"
+        }
+      ],
+      "old_judge": null,
+      "old_qa": {
+        "none_of_above_count": 6,
+        "overall_accuracy": 0.3333,
+        "param_accuracy": 0.25,
+        "param_correct": 2,
+        "param_total": 8,
+        "per_category_accuracy": {
+          "param.derived": {
+            "accuracy": 0.2,
+            "correct": 1,
+            "total": 5
+          },
+          "param.dimensions": {
+            "accuracy": 1.0,
+            "correct": 1,
+            "total": 1
+          },
+          "param.operations": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 1
+          },
+          "param.topology_count": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 1
+          },
+          "semantic.features": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 1
+          },
+          "semantic.geometry_properties": {
+            "accuracy": 1.0,
+            "correct": 2,
+            "total": 2
+          },
+          "semantic.shape_structure": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 1
+          }
+        },
+        "semantic_accuracy": 0.5,
+        "semantic_correct": 2,
+        "semantic_total": 4,
+        "total_correct": 4,
+        "total_questions": 12
+      },
+      "original_model": "GPT-5.5",
+      "source_hashes": {
+        "qa_bank": "f945be598a94d6c08828b68a63487bde2e069f87c25df38ab36b92df2e7b29d2",
+        "qa_results": "ebe02d1312cf907495e05996ffe2e35eecd93ee909205192a146ff02d422fbb6"
+      },
+      "task": "parametric",
+      "uid": "0015/00155951"
+    }
+  ]
+}
