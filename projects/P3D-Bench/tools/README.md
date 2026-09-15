@@ -16,6 +16,7 @@ Run the updater for the leaderboard being changed:
 node projects/P3D-Bench/tools/update-live-assembly.mjs
 node projects/P3D-Bench/tools/update-live-text.mjs
 node --test projects/P3D-Bench/tools/live-tables.test.mjs
+node --test projects/P3D-Bench/tools/text-table.test.mjs
 ```
 
 Assembly uses `../live-assembly-summary.json`: the original seven models plus
@@ -116,12 +117,63 @@ public repository. Copy the audited per-format values into each leaderboard
 row's `generation_cost`, set `cost_usd` from `usd_per_case × 100`, then run the
 Assembly updater. The updater rejects missing usage or inconsistent denominators.
 
-Text uses `../live-text-summary.json`. Updating it preserves Assembly's data and
-position. Both updaters locate tables by key, guard the surrounding bundle bytes,
+Text uses `../live-text-summary.json` (`p3d-live-text-summary-v2`): ten current
+models, the same fixed first-100 UIDs, and JSON/OpenSCAD in the main table.
+The full Text dataset remains 400 cases. The selected subset has 98 D4 and 2 D5
+cases and is not a random or balanced sample. Scores preserve the existing
+aggregation, including zero contribution for inapplicable IoU, and display two
+decimals after sorting unrounded values. `text-table.mjs` checks all eighteen
+metric cells, equal format means, scores, model identities and numeric costs.
+
+Text costs cover four selected generation responses per UID and exclude retries;
+they are standard-rate equivalents, not invoices or Assembly's cost convention.
+Kimi displays `$0.486` from its official-tokenizer estimate, stored separately
+from actual cost. Qwen `$0.410` and Doubao `$0.638` use saved official-price
+equivalents for 400 selected responses. Doubao keeps the comparison conversion
+of 7 CNY/USD. GLM-5.3 and GLM-5.3-Flash also use selected responses, not all saved
+attempts. `cost_usd` and `estimated_cost_usd` store USD/UID multiplied by 100.
+Source hashes and cost bases remain in the summary; private audits stay outside
+this repository. The imported results retain their historical evaluator routes;
+publishing the page does not imply a new uniform reevaluation or verified
+upstream Judge identity. The old seventeen-row table remains in Git history.
+
+Updating Text preserves Assembly's data and position. Both updaters locate
+tables by key, guard the surrounding bundle bytes,
 write a content-hashed asset, and synchronize their source JSON mirrors under
 `.github/site-src/src/`. Paper results, demo data, and styles are preserved.
 The Assembly updater also registers the Grok model icon and keeps missing costs
 last for both ascending and descending sorting.
+
+## Text demo
+
+`../demo/text-live-fixed100.json` overlays only Text records at runtime. It
+contains ten models, four original cases within fixed-100, both specifications
+and both formats: 160 records, of which 159 are complete valid outputs. The
+original invalid JSON record remains saved and is excluded by the completeness
+filter. Never replace its output with another model's mesh. The mounting-bracket
+showcase uses each model's own parametric OpenSCAD output with the same input.
+The 481 files in `../demo/text_live_fixed100_v1/assets/` are original saved assets
+named by SHA256; this update does not rerun generation, CAD evaluation or renders.
+All Image/Assembly records and metadata are preserved by `text-demo.mjs`.
+
+```bash
+node projects/P3D-Bench/tools/update-live-text-demo.mjs
+node --test projects/P3D-Bench/tools/text-demo.test.mjs
+```
+
+The runtime updater guards the manifest fetch, Text showcase, input selector and abstract
+boundaries and preserves unrelated bundle bytes and leaderboard entries.
+Manifest and overlay requests use content hashes for cache versioning. If the
+overlay cannot load, the existing base manifest remains available. Source
+mirrors live in `.github/site-src/src/`; responsive overrides are scoped to the
+Text comparison cards. Repeating the same update is a no-op; changing the
+payload requires a reviewed update to the runtime matching boundaries.
+Switching the Text input protocol retains the current output format whenever
+that model has a complete result for it; other tasks keep their existing behavior.
+
+Only project-page data and display assets are published. Paper-figure handoff
+packages under `collaboration/text100/`, collaboration banners and chart masks
+are excluded from main. Existing figure assets and links remain unchanged.
 
 Structural source development uses `.github/site-src/`. A development build is
 not a replacement for the deployed Paper results; compare every page section

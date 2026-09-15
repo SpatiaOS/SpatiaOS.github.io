@@ -94,6 +94,13 @@ python -m http.server --bind 127.0.0.1 --directory dist-release/anonymous 8000
 
 ## Demo Asset Bundle
 
+The current Text examples merge `demo/text-live-fixed100.json` at runtime using
+`projects/P3D-Bench/tools/text-demo.mjs`; `src/textLiveDemo.json` mirrors the data.
+Source development needs the repository's complete `projects/P3D-Bench/demo/`
+asset root. Text comparison styles come from
+`projects/P3D-Bench/assets/text-demo-overrides.css`. Keep source and deployed
+runtime changes synchronized through the Text table and demo updaters.
+
 The page reads `public/demo/manifest.json` plus the static assets under
 `public/demo/`. To rebuild that sanitized bundle from local evaluation outputs:
 

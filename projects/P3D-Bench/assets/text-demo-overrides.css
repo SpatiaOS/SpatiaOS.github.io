@@ -1,0 +1,19 @@
+/* Text-only responsive repair; keep the existing carousel and other tasks. */
+.comparison-panel[data-task="text2cad"] .model-carousel,
+.comparison-panel[data-task="text2cad"] .model-comparison-card,
+.comparison-panel[data-task="text2cad"] .compare-card-head > div {
+  min-width: 0;
+}
+.comparison-panel[data-task="text2cad"] .model-comparison-card {
+  grid-template-columns: minmax(0, 1fr);
+}
+@media (max-width: 560px) {
+  .comparison-panel[data-task="text2cad"] .model-comparison-grid {
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+  }
+  .comparison-panel[data-task="text2cad"] .compare-card-head strong {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}

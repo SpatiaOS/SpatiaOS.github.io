@@ -30,6 +30,7 @@
 - `projects/P3D-Bench/tools/update-live-text.mjs` —— 只替换 active bundle 的 Live Text 表，保留 Assembly 在前的顺序
 - `projects/P3D-Bench/tools/update-live-assembly.mjs` —— 替换 Live Assembly 表并置于 Text 之前；校验七个模型、计分和 API 排除口径
 - `projects/P3D-Bench/demo/manifest.json` —— 论文标题、作者、**摘要**、链接、案例清单（页面运行时 fetch）
+- `projects/P3D-Bench/demo/text-live-fixed100.json` —— 当前十模型的 Text 案例覆盖层，运行 `tools/update-live-text-demo.mjs` 接入
 
 常见改动：
 
@@ -65,6 +66,10 @@
 
 两个数值更新器按表格 key 定位当前 active bundle，保留未更新表格和非榜单内容的字节，并将 JSON 同步到源码快照。Assembly 排在 Text 前；后续更新 Text 不会重排 Assembly。数值更新不以源码开发构建覆盖线上 Paper、demo 等后续维护内容。
 
+2026-09-15 的项目页采用十模型 Text fixed-100 榜单与四案例展示，保留原计分方法，总分显示两位小数。Text 覆盖层包含 160 条记录，其中 159 条完整可用；481 个素材保留原始字节。Image／Assembly 的数据、展示和原有图表不变。完整 Text 数据集仍为 400，100 是其原排序的前 100 个案例。费用口径和来源说明见 `tools/README.md`。
+
+论文作图交接材料不属于本项目页发布范围，`collaboration/text100/` 不合入 main；协作预览横幅和旧图遮挡也不进入正式页面。旧榜单和 manifest 可从 Git 历史查阅。
+
 当前 Assembly 使用 2026-09-10 的七模型评测结果，总分两位小数，API failed 不计入 tested 或 invalid。六个模型成本已按实际生成 token 与官方 API 单价核验，包括所选结果的纠错重试、推理输出、缓存读写；CadQuery/OpenSCAD 各自按 tested 求均值，再等权平均。Kimi 的 196 个 tested case 共 240 次生成（含 44 次纠错）没有 usage；按维护者要求，使用 Kimi 自己的官方分词器对保存文本重计数，按维护者的显示偏好统一写为 **$0.575/case**，脚注保留估算说明。实际成本字段仍为 null，估算存入独立字段，明确假设输入不命中缓存、图片为 1024×1024。细节在 `kimi-cost-estimate.json`，不使用其他模型 token 代替。评测、历史被替代运行、API 失败和订阅费不计入此生成成本。
 
 价格来源与日期在 `projects/P3D-Bench/assembly-api-pricing.json`；按格式统计的实际 token 和成本在 `assembly-cost-audit.json`。可用 `tools/calculate-assembly-costs.py` 从冻结分数快照重算，命令见 `tools/README.md`。逐请求私有审计文件包含本地路径，只保存在外部审计目录，不提交到公开仓库。GPT 使用标准 API 等值成本；GLM 使用官网标准价，不能直接拷贝 OpenRouter 折扣结算价。Qwen 使用 Singapore / International 对应快照价格；Gemini 使用截至 2026-12-31 的官方标准促销价。
@@ -73,5 +78,6 @@
 
 ## 缓存
 
-`demo/manifest.json` 是带版本号 fetch 的（`?v=...`）。改了 manifest 记得把 bundle 里的这个
-token 一起 bump（当前 `textcomplete0047`），否则老访客会读到浏览器缓存里的旧内容。
+`demo/manifest.json` 和 `demo/text-live-fixed100.json` 使用各自内容哈希作为 fetch 版本号。
+Text demo 更新器同步发布 bundle 与源码的版本号。后续更换覆盖层需要同步更新并核验更新器的
+匹配边界；重复运行相同版本不会改变文件。修改摘要时也要同步 bundle 和源码的 fallback 文案。

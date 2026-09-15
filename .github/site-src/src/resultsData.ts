@@ -1,5 +1,6 @@
 import liveTextSummary from "./liveTextSummary.json";
 import liveAssemblySummary from "./liveAssemblySummary.json";
+import { textCost } from "../../../projects/P3D-Bench/tools/text-table.mjs";
 
 export type ResultTableRow = { model: string; model_id?: string; family?: string; cells: string };
 
@@ -87,10 +88,15 @@ const textTable: ResultSubtable = {
     "USD / case"
   ],
   "rows": [],
-  "note": "Scores use the fixed 100-case subset; costs are normalized per case across the four evaluation settings. Updated as evaluations complete."
+  "note": ""
 };
 
-if (liveTextSummary.schema_version !== "p3d-live-text-summary-v1" || liveTextSummary.rows.length !== 17) {
+const textModelIds = ["gpt6_probe", "gemini38_flash", "qwen38max", "grok46", "kimi_k3",
+  "claude_opus5", "glm53_official", "deepseek_v41flash", "doubao21", "glm53flash"];
+if (liveTextSummary.schema_version !== "p3d-live-text-summary-v2" || liveTextSummary.fixed_denominator !== 100
+    || liveTextSummary.rows.length !== 10
+    || new Set(liveTextSummary.rows.map(row => row.model_id)).size !== 10
+    || liveTextSummary.rows.some(row => !textModelIds.includes(row.model_id))) {
   throw new Error("Invalid Text-to-3D live leaderboard summary");
 }
 if (liveAssemblySummary.schema_version !== "p3d-live-assembly-summary-v1"
@@ -113,8 +119,9 @@ export const liveResultTables: ResultSubtable[] = [
     ...textTable,
     rows: liveTextSummary.rows.map((row) => ({
       model: row.model,
+      model_id: row.model_id,
       family: row.family,
-      cells: `${row.metrics} ${row.score.toFixed(1)} $${(row.cost_usd / 100).toFixed(3)}`,
+      cells: `${row.metrics} ${row.score.toFixed(2)} ${textCost(row)}`,
     })),
   },
 ];
