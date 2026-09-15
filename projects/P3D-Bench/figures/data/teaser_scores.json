@@ -38,6 +38,12 @@
       "color": "#6993AB"
     },
     {
+      "id": "qwen38max",
+      "label": "Qwen3.8-Max",
+      "family": "qwen",
+      "color": "#B0C2B8"
+    },
+    {
       "id": "glm53_official",
       "label": "GLM-5.3",
       "family": "zai",
@@ -48,12 +54,6 @@
       "label": "GLM-5.3-Flash",
       "family": "zai",
       "color": "#83ADB4"
-    },
-    {
-      "id": "qwen38max",
-      "label": "Qwen3.8-Max",
-      "family": "qwen",
-      "color": "#B0C2B8"
     },
     {
       "id": "deepseek41_flash",
@@ -78,8 +78,8 @@
         "gemini38_flash": 68.53701111111111,
         "grok46": 67.09998101851852,
         "kimi_k3": 66.57730231481482,
-        "glm53_flash": 65.80641435185186,
         "qwen38max": 65.79946944444444,
+        "glm53_flash": 65.80641435185186,
         "deepseek41_flash": 64.55025416666666,
         "doubao_seed21": 42.4458537037037
       },
@@ -98,8 +98,8 @@
         "gemini38_flash": 87.37741943055556,
         "grok46": 86.88181277777778,
         "kimi_k3": 86.96837916666667,
-        "glm53_official": 86.07652502777779,
         "qwen38max": 87.50188486111111,
+        "glm53_official": 86.07652502777779,
         "deepseek41_flash": 85.62471011111111,
         "doubao_seed21": 85.05521169444444
       },
@@ -117,8 +117,8 @@
         "gemini38_flash": 66.44887407407407,
         "grok46": 64.67326008230452,
         "kimi_k3": 66.0267205761317,
-        "glm53_flash": 64.93369547325103,
         "qwen38max": 66.04777736625515,
+        "glm53_flash": 64.93369547325103,
         "deepseek41_flash": 62.835760905349794,
         "doubao_seed21": 53.08202222222222
       },
@@ -161,6 +161,17 @@
       }
     },
     "order_from_task": "assembly",
+    "family_order": [
+      "openai",
+      "claude",
+      "gemini",
+      "grok",
+      "kimi",
+      "qwen",
+      "zai",
+      "deepseek",
+      "doubao"
+    ],
     "axis_ranges": {
       "assembly": [
         40,
