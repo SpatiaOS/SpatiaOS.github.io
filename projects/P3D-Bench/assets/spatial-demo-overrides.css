@@ -1,0 +1,25 @@
+/* Keep the current Image/Assembly comparisons within narrow viewports. */
+.comparison-panel[data-task="image2cad"] .model-carousel,
+.comparison-panel[data-task="image2cad"] .model-comparison-card,
+.comparison-panel[data-task="image2cad"] .compare-card-head > div,
+.comparison-panel[data-task="text_image2cad"] .model-carousel,
+.comparison-panel[data-task="text_image2cad"] .model-comparison-card,
+.comparison-panel[data-task="text_image2cad"] .compare-card-head > div {
+  min-width: 0;
+}
+.comparison-panel[data-task="image2cad"] .model-comparison-card,
+.comparison-panel[data-task="text_image2cad"] .model-comparison-card {
+  grid-template-columns: minmax(0, 1fr);
+}
+@media (max-width: 560px) {
+  .comparison-panel[data-task="image2cad"] .model-comparison-grid,
+  .comparison-panel[data-task="text_image2cad"] .model-comparison-grid {
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+  }
+  .comparison-panel[data-task="image2cad"] .compare-card-head strong,
+  .comparison-panel[data-task="text_image2cad"] .compare-card-head strong {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}

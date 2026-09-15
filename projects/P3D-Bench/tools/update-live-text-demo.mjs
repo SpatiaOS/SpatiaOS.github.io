@@ -24,7 +24,10 @@ const afterShow = 'return e.map(p=>{if(p==="text2cad"&&s.text_showcase)return s.
 const beforeProtocol = 'onChange:we=>se(Un(O.filter(Ke=>Ke.model===z&&Ke.spec===we)))';
 const afterProtocol = 'onChange:we=>se((l==="text2cad"?Un(B.filter(Ke=>Ke.model===z&&Ke.spec===we)):void 0)||Un(O.filter(Ke=>Ke.model===z&&Ke.spec===we)))';
 const prefix = `/* text-fixed100-data-adapter-v1 */\n${validateLiveTextDemo.toString()}\n${mergeLiveTextManifest.toString()}\n`;
-if (original.input.startsWith(prefix) && original.input.includes(afterFetch) && original.input.includes(afterShow) && original.input.includes(afterAbstract) && original.input.includes(afterProtocol)) {
+const withSpatial = afterFetch.replace('e(mergeLiveTextManifest(K,await R.json()))}catch{e(K)}}',
+  'e(await loadSpatialDemo(mergeLiveTextManifest(K,await R.json())))}catch{e(await loadSpatialDemo(K))}}');
+const withSpatialShow = afterShow.replace('return s.text_showcase;', 'return s.text_showcase;if(s.spatial_showcases?.[p])return s.spatial_showcases[p];');
+if (original.input.includes(prefix) && (original.input.includes(afterFetch) || original.input.includes(withSpatial)) && (original.input.includes(afterShow) || original.input.includes(withSpatialShow)) && original.input.includes(afterAbstract) && original.input.includes(afterProtocol)) {
   console.log(`Text demo already current: ${original.name}`);
   process.exit(0);
 }

@@ -1,0 +1,312 @@
+{
+  "schema_version": 1,
+  "items": [
+    {
+      "id": "text_image2cad_107647_af2c0a8b_cadquery_gpt6_astra_local_parts",
+      "case_id": "textimage2cad/107647_af2c0a8b",
+      "short_case_id": "107647_af2c0a8b",
+      "title": "Assembly Parts · Piston and Connecting Rod Assembly",
+      "model": "gpt6_astra_local-reason",
+      "model_label": "GPT-6 Astra",
+      "format": "cadquery",
+      "format_label": "CadQuery",
+      "condition": "Viewed in the rendered image, the assembly presents four cylindrical pistons stepping diagonally upward from lower-left to upper-right, each linked by an I-beam–profiled connecting rod to a shared slender shaft that runs nearly the full 438 mm length of the envelope. The overall bounding box measures approximately 80 × 168 × 438 mm with an aspect ratio of about 5.46. Five of the 14 instances are grounded, and the flat tree depth of 1 indicates all parts are siblings at the top assembly level.\n\nThe piston (part 6f80c918, 4 instances) is a squat hollow cylinder roughly 50 × 50 × 40 mm with outer radius 25 mm, featuring a flat crown, at least one circumferential ring groove (toroidal blend), a 40 mm through-hole forming the lower skirt bore, a 30 mm blind pocket beneath the crown, and a transverse 12 mm wrist-pin bore spanning the full 50 mm width. Each piston carries a spacer ring (part 6f825008, 4 instances) — a thin annular ring approximately 54.56 mm outer diameter, 50 mm inner diameter, and 5 mm thick — seated around the piston barrel near the crown groove. The connecting rod (part 6f8201ae, 4 instances) has no extracted geometry but is clearly visible in the image as a forked I-beam link with a large circular big-end eye and a smaller eye at the piston end. The shaft bar (part 6f83613a, 1 instance) spans 438 mm with a 6 mm diameter backbone rod carrying four integral 30 mm diameter disc bosses approximately 14 mm thick each, connected by short rectangular bracket arms with visible slots. A bushing (part 6f8276e8, 1 instance) of outer diameter 8 mm, inner bore 6 mm, and length 5 mm sits at the far end of the shaft. All 22 face-to-face contacts are coaxial fits. Hole inference identifies 4 occurrences of the connecting rod passing into the piston's 40 mm skirt bore (perpendicular distance 0.0 mm, axial overlap ~20.9 mm — a tight coaxial engagement) and 1 occurrence of the shaft's 6 mm rod through the bushing's bore (perpendicular distance 0.0 mm, axial overlap 5.3 mm). The piston's 12 mm wrist-pin bore appears in the part dossier but not in the hole-edge summary, suggesting the pin connection to the connecting rod is unmodeled or purely coincident. A single layout tag indicates a planar arrangement with normal approximately along the X-axis.\n\nParts:\n- shaft_bar_with_disc_bosses: A long, slender bar (aspect ratio 14.6, approximately 438 mm long) built around a 6 mm-diameter cylindrical rod from which four 30 mm-diameter disc-shaped bosses project via short rectangular bracket arms. Each disc is roughly 14 mm thick and appears to carry a narrow rectangular slot. The rod's five cylindrical segments participate in five Cylinder-on-Cylinder contact pairs, suggesting coaxial fits with cylindrical bores of adjacent parts. The part likely serves as a shaft or linkage bar with integral disc features that could act as cams or positional stops.\n- piston (×4): A squat hollow cylinder roughly 50 mm in diameter and 40 mm tall (aspect ratio 1.25) with a flat crown, at least one circumferential ring groove near the top, and a transverse through-hole of 12 mm diameter spanning the full width for a wrist-pin bore. The interior is stepped with a 40 mm-diameter lower bore and a 30 mm-diameter blind pocket beneath the crown. In the assembly it appears as four ungrounded instances, each participating in one cylinder-on-cylinder contact pair at the pin bore. These features — ring groove, pin bore, hollow skirt, and multiple instances — suggest the part likely serves as a reciprocating piston.\n- part (×4): \n- spacer_ring (×4): A thin annular ring with an outer diameter of approximately 54.56 mm, an inner bore diameter of 50.0 mm, and an axial height of 5.0 mm, giving a wall thickness of about 2.28 mm and an aspect ratio of roughly 10.9. It features two flat end faces and two concentric cylindrical surfaces with no additional holes, slots, or complex features. Four instances exist in the assembly, and the central through-hole could permit passage of a shaft or fit within a cylindrical seat, suggesting the part likely serves as a spacer or locating ring.\n- bushing: A hollow cylindrical tube with an outer diameter of 8.0 mm, an inner bore diameter of 6.0 mm, and an axial length of 5.0 mm, giving a wall thickness of 1.0 mm and an aspect ratio of 1.6. It has two flat annular end faces and a single full-length through-hole. One Cylinder/Cylinder assembly contact indicates a coaxial fit with an adjacent cylindrical feature. The part likely serves as a bushing or spacer that could receive a shaft through its bore or seat within a larger bore.\n\nAnnotation Caveats:\nThe connecting rod (part 6f8201ae, 4 instances) has null extraction status and an empty description, so its geometry is inferred entirely from the rendered image and contact/hole evidence. The piston's 12 mm wrist-pin through-bore is documented in the part dossier but absent from hole_edges_summary, indicating the wrist-pin–to–connecting-rod interface is either unmodeled or not captured by hole inference. Five ambiguous contact edges remain unresolved. The spacer rings record no contact edges despite sitting visibly on the piston barrels, suggesting their interfaces may be coincident rather than truly contacting.",
+      "assets": {
+        "generated": "spatial_live_v1/assets/ffd3af5aad0414401e74a1014e7ab52e4183e56ad96382724cb9d27d223f79e5.py",
+        "mesh": "spatial_live_v1/assets/fc81cff5b56ff5cc5de7c93b80723c05fba9a088322342e8122a753057a2a4da.stl",
+        "pred_render": "spatial_live_v1/assets/9946c042772d7d6ef1a1f67157192a883da0f6ec03eb5bf8138178c93f56ec1a.png",
+        "gt_mesh": "spatial_live_v1/assets/b78859005334343ca32432b5d2ade622d8271f520a865e13265ac3cf649a406e.stl",
+        "gt_render": "spatial_live_v1/assets/d6d47078c1970fc9f8e01dd89cc334ea66f9bf5a3675acc25a065200f31f1fcd.png",
+        "input_image": "spatial_live_v1/assets/d6d47078c1970fc9f8e01dd89cc334ea66f9bf5a3675acc25a065200f31f1fcd.png"
+      },
+      "metrics": {
+        "chamfer_distance": 3.8e-05,
+        "hausdorff_distance": 0.01846,
+        "f_score_005": 1.0,
+        "f_score_001": 0.9359,
+        "normal_consistency": 0.6912,
+        "iou_voxel": 0.7278,
+        "pred_open_edge_ratio": 0.0,
+        "pred_inverted_normal_ratio": 0.0,
+        "pred_non_manifold_edge_ratio": 0.0,
+        "judge_geometry": 6,
+        "judge_aesthetics": 7,
+        "judge_semantic": 7,
+        "part_match_f1": 0.8889,
+        "part_fscore_mean": 0.8869951173122573
+      },
+      "judge_reason": "PRED closely replicates the overall geometry, part count, and arrangement of the GT assembly. Across all views, the shaft, disc bosses, connecting rods, and piston placement match well. Key differences include the wrist-pin holes, which are through-holes in GT but modeled as shallow blind bosses in PRED, and the piston crown rings, which are slightly more pronounced in PRED. Semantic function is identical.",
+      "parts": [
+        {
+          "index": 0,
+          "label": "Part 01",
+          "name": "crankshaft",
+          "semantic": "Multi-throw crankshaft with five main journals, eight slotted webs, and four crank discs",
+          "mesh": "spatial_live_v1/assets/3767f5d964186fe50b828ab2ea5d2d021eefcf906451e4485064ac7b37a875f0.stl"
+        },
+        {
+          "index": 1,
+          "label": "Part 02",
+          "name": "crankshaft end bushing",
+          "semantic": "Cylindrical sleeve bushing mounted near the end of the crankshaft",
+          "mesh": "spatial_live_v1/assets/74e8e6a6d00513a7815fe1689f40fdc6448c160341bf66c64773b85294a44c57.stl"
+        },
+        {
+          "index": 2,
+          "label": "Part 03",
+          "name": "connecting rod 1",
+          "semantic": "H-beam connecting rod with integral wrist pin for cylinder 1",
+          "mesh": "spatial_live_v1/assets/d706e1cb2ed24d4d1878c973d5694e382532ee326cafedfd1e5f2126807dd0ad.stl"
+        },
+        {
+          "index": 3,
+          "label": "Part 04",
+          "name": "piston 1",
+          "semantic": "Trunk piston with crown pocket, skirt reliefs, and spacer band for cylinder 1",
+          "mesh": "spatial_live_v1/assets/dd1f45ed10e15ffca5a98003dc02e5560fb0d4f1ea717e8d79ddc394eb67b723.stl"
+        }
+      ],
+      "aligned_pairs": [
+        {
+          "slot": 0,
+          "f_score": 0.9955937346738597,
+          "accepted": true,
+          "gt": {
+            "name": "shaft bar with disc bosses",
+            "semantic": "A long, slender bar (aspect ratio 14.6, approximately 438 mm long) built around a 6 mm-diameter cylindrical rod from which four 30 mm-diameter disc-shaped bosses project via short rectangular bracket arms. Each disc is roughly 14 mm thick and appears to carry a narrow rectangular slot. The rod's five cylindrical segments participate in five Cylinder-on-Cylinder contact pairs, suggesting coaxial fits with cylindrical bores of adjacent parts. The part likely serves as a shaft or linkage bar with integral disc features that could act as cams or positional stops.",
+            "mesh": "spatial_live_v1/assets/86331abae425010a439b40c50656a7d9743e4f4a9558ce693d939eba6d3e8ca2.stl"
+          },
+          "pred": {
+            "name": "crankshaft",
+            "semantic": "Multi-throw crankshaft with five main journals, eight slotted webs, and four crank discs",
+            "mesh": "spatial_live_v1/assets/39450ddd42777526879fec4eb9f475b43a4e86c67bad4849b6374193b8bb430d.stl"
+          }
+        },
+        {
+          "slot": 1,
+          "f_score": 0.8605046512450482,
+          "accepted": true,
+          "gt": {
+            "name": "piston",
+            "semantic": "A squat hollow cylinder roughly 50 mm in diameter and 40 mm tall (aspect ratio 1.25) with a flat crown, at least one circumferential ring groove near the top, and a transverse through-hole of 12 mm diameter spanning the full width for a wrist-pin bore. The interior is stepped with a 40 mm-diameter lower bore and a 30 mm-diameter blind pocket beneath the crown. In the assembly it appears as four ungrounded instances, each participating in one cylinder-on-cylinder contact pair at the pin bore. These features — ring groove, pin bore, hollow skirt, and multiple instances — suggest the part likely serves as a reciprocating piston.",
+            "mesh": "spatial_live_v1/assets/cdf935be09037b3cad5fe77e974aab3d7df39c9ae5bad2089ede1cd01617315d.stl"
+          },
+          "pred": {
+            "name": "piston 1",
+            "semantic": "Trunk piston with crown pocket, skirt reliefs, and spacer band for cylinder 1",
+            "mesh": "spatial_live_v1/assets/777b4e69bd05e03a37392781cb386eade0f20c756e8823020d644db7a4680f38.stl"
+          }
+        },
+        {
+          "slot": 2,
+          "f_score": 0.70213623046875,
+          "accepted": true,
+          "gt": {
+            "name": "part",
+            "semantic": "",
+            "mesh": "spatial_live_v1/assets/b963c7925e951391e76b400f58a8960f457bdae5069e20d50eb342ab8d10f763.stl"
+          },
+          "pred": {
+            "name": "connecting rod 1",
+            "semantic": "H-beam connecting rod with integral wrist pin for cylinder 1",
+            "mesh": "spatial_live_v1/assets/bb0e3b6d7d0cb81157fd46b3c0377265c59d2bf342f5c66c91f512580a9e384c.stl"
+          }
+        },
+        {
+          "slot": 3,
+          "f_score": 0.9897458528613715,
+          "accepted": true,
+          "gt": {
+            "name": "bushing",
+            "semantic": "A hollow cylindrical tube with an outer diameter of 8.0 mm, an inner bore diameter of 6.0 mm, and an axial length of 5.0 mm, giving a wall thickness of 1.0 mm and an aspect ratio of 1.6. It has two flat annular end faces and a single full-length through-hole. One Cylinder/Cylinder assembly contact indicates a coaxial fit with an adjacent cylindrical feature. The part likely serves as a bushing or spacer that could receive a shaft through its bore or seat within a larger bore.",
+            "mesh": "spatial_live_v1/assets/a5b78c555dee20aff82614ccbce275a245dd66cb5ba9274acb0c8a07085cc3a8.stl"
+          },
+          "pred": {
+            "name": "crankshaft end bushing",
+            "semantic": "Cylindrical sleeve bushing mounted near the end of the crankshaft",
+            "mesh": "spatial_live_v1/assets/9f8b2cf5e427314114d44969f639acb61092aca662278ff2da2d0e31f1d21e80.stl"
+          }
+        }
+      ]
+    },
+    {
+      "id": "text_image2cad_21805_2ba39d00_cadquery_claude_opus5_parts",
+      "case_id": "textimage2cad/21805_2ba39d00",
+      "short_case_id": "21805_2ba39d00",
+      "title": "Assembly Parts · Universal Joint Shaft",
+      "model": "claude_opus5-reason",
+      "model_label": "Claude Opus 5",
+      "format": "cadquery",
+      "format_label": "CadQuery",
+      "condition": "In the rendered view the assembly extends diagonally as an elongated shaft with two distinct knuckle zones, each formed by a pair of opposing yoke forks bridged by a cross element, and smooth cylindrical stubs projecting from each outer end. The overall bounding box spans approximately 374 × 93 × 153 mm with an aspect ratio of about 4.0, and the parts follow a linear-chain layout along the primary axis (roughly [−0.986, 0.058, 0.156] in world coordinates) with three mirrored pairs of repeated components. Two grounded parts anchor the assembly: one is the integrated splined-shaft-yoke (e747c9d4, 1 instance, ~220 mm long, aspect ratio 8.6), which carries a 36-tooth spline section at one end and a forked universal-joint yoke at the other; the second is a very slender locating pin (e7477ba8, 1 instance, aspect ratio ~135). The two universal-joint yokes (e744bc80, 2 instances each ~57 × 41 × 23 mm) exhibit a dual-clevis form with an internal splined bore, four 8 mm through-holes in the fork ears for cross-pin passage, two 19.48 mm countersunk through-holes along the hub axis, and counterbore holes on the web. Two splined coupling pins (e73fdae8, 2 instances, ~75 mm long, 36-tooth spline at R ≈ 8.62 mm transitioning to a smooth R = 10 mm journal) engage the yokes' splined bores, each pin carrying two 6 mm radial through-holes for retention. A single serrated angle-joint body (e740c52e, ~72 × 42 × 26 mm) sits at the assembly's centre, presenting a serrated cylindrical interface that meshes with one yoke and a clevis-fork end connecting to the other. Two uncharacterised parts (e73a834c, 2 instances) likely serve as the cross or spider elements linking adjacent yoke pairs. Contact evidence shows 126 coaxial-fit edges — the bulk arising from multi-tooth spline engagement — and 9 mating-plane contacts at yoke-arm faces and shaft shoulders. Hole-inference confirms 9 fastener-through-hole links: two tight 8 mm pin passages between each yoke and the shaft-yoke (perp dist < 0.07 mm), two perfectly aligned 8 mm passages between each yoke and the cross element, two 19.48 mm countersunk passages where the splined pins seat through the yoke hubs (perp dist 0.0 mm), and additional links through the serrated angle-joint.\n\nParts:\n- serrated_angle_joint: A moderately elongated body (aspect ratio ≈ 2.82, ≈ 72 × 42 × 26 mm) combining a rectangular clevis at one end—carrying a ∅19.5 mm countersunk through-hole—with a semi-circular fork at the other end, connected by a serrated cylindrical zone (38 + 37 tooth-face strips at radii 8.62 and 8.24 mm). The fork features two ∅8 mm through-holes in its cheeks and a ∅6.78 mm/∅17.37 mm counterbore through-hole in its web. All 38 assembly contact pairs are cylinder-on-cylinder, matching the serration teeth, confirming a meshing toothed interface with an adjacent part. This part likely serves as a serrated angle-adjustment joint, permitting indexed angular positioning when clamped by fasteners through its multiple through-holes.\n- pin: An extremely slender, elongated solid with an aspect ratio of approximately 135, spanning about 1.15 units in length with a cross-section on the order of 0.009 × 0.013. It has only 3 faces — two perpendicular planes and one B-spline surface — giving it a wedge-like or angular cross-section. It participates in one Plane/Plane contact pair and is grounded in the assembly. This part likely serves as a thin pin or wire-like locating element that seats against a neighboring flat surface.\n- splined_shaft_yoke: An elongated shaft (aspect ratio ≈ 8.6, ~220 mm long) featuring a multi-tooth spline section at one end—evidenced by 46 cylindrical root faces at radius 8.62 mm and numerous radially-arrayed planar tooth flanks—transitioning through a smooth cylindrical shank (R ≈ 11.08 mm, ~78 mm long) to a forked universal-joint yoke at the opposite end, whose two ears each carry a bore of roughly 8.0 mm diameter. The 38 cylinder-on-cylinder assembly contacts strongly suggest the spline engages a mating splined bore, while the yoke bores appear to seat cross-pins or bearing cups. This part likely functions as a torque-transmitting splined shaft with an articulating yoke end.\n- part (×2): \n- universal_joint_yoke (×2): A compact double-fork body (bbox ~56.8 × 41.4 × 23.4 mm, aspect ratio 2.43) with two pairs of rounded lug ears projecting from a central hub. The hub contains a splined or serrated internal bore formed by approximately 80 cylindrical faces at radii R ≈ 8.62 mm and R ≈ 8.24 mm, clearly visible as a knurled profile in the central pocket. Each pair of fork ears carries through-holes of diameter 8.0 mm that could accept pivot or cross pins. The part participates in 86 cylinder-on-cylinder and 8 plane-on-plane contacts in the assembly, and two instances are present. This part likely serves as a universal-joint yoke or articulating coupling fork, where the splined bore engages a shaft and the fork ears pivot on cross pins.\n- splined_pin (×2): A cylindrical pin approximately 75 mm long and 20 mm in diameter (aspect ratio 3.75) with a 36-tooth straight spline at one end (root radius 8.62 mm, spanning roughly 21.5 mm) and a smooth cylindrical journal (radius 10.0 mm, spanning about 53.5 mm). Two radial through-holes of 6.0 mm diameter pass fully through the shaft perpendicular to its axis, likely permitting cross-pins for axial retention. The part participates in 82 cylinder-on-cylinder and 8 plane-on-plane assembly contacts, indicating the spline and journal seat coaxially into mating bores. This part appears to function as a splined pin or coupling shaft that could transmit torque through its spline engagement.\n\nAnnotation Caveats:\nPart e73a834c (2 instances) has null extraction_status and no description or hole data, so its geometry is inferred solely from its role in the contact graph and hole-edge links (it receives 8 mm pin passages from the yokes and is presumed to be a U-joint cross/spider). Several holes on characterized parts (6 mm radial bores on splined pins, 17.37/6.78 mm counterbore stacks on yokes, 75 mm blind recess on serrated angle-joint) lack matching fastener bodies in the assembly, suggesting either unmodelled fasteners or purely locating features. The reciprocal 8 mm hole-edge clusters between e740c52e and e744bc80 show relatively large perpendicular distances (1.2–3.6 mm), which may reflect the angular misalignment inherent in an articulated joint rather than modelling error, but this should be verified.",
+      "assets": {
+        "generated": "spatial_live_v1/assets/73a187380dd929db884f07b02762b4fa5cbe2881d4c4665bb99bc815e86c6282.py",
+        "mesh": "spatial_live_v1/assets/6521f1c628396c1398ffea487fe1f7b8c5b70349ed6a1cd9a71ab83f29920832.stl",
+        "pred_render": "spatial_live_v1/assets/9650b8bb5efd2fdd68c3028d3d2b5223d6dcd0ed21c8dfc21990e5e8793392ee.png",
+        "gt_mesh": "spatial_live_v1/assets/32a1e082b532e001fb806e0985af7b55ae0d61569f9b0ae39a468d6403850564.stl",
+        "gt_render": "spatial_live_v1/assets/d4bfabfd16fd4e5428e0537cd3b358073b91aea781019b321cb69526893410ec.png",
+        "input_image": "spatial_live_v1/assets/d4bfabfd16fd4e5428e0537cd3b358073b91aea781019b321cb69526893410ec.png"
+      },
+      "metrics": {
+        "chamfer_distance": 0.001762,
+        "hausdorff_distance": 0.212525,
+        "f_score_005": 0.8615,
+        "f_score_001": 0.5047,
+        "normal_consistency": 0.5481,
+        "iou_voxel": 0.282,
+        "pred_open_edge_ratio": 0.0,
+        "pred_inverted_normal_ratio": 0.0,
+        "pred_non_manifold_edge_ratio": 0.0,
+        "judge_geometry": 4,
+        "judge_aesthetics": 6,
+        "judge_semantic": 7,
+        "part_match_f1": 0.7692,
+        "part_fscore_mean": 0.7342632190727617
+      },
+      "judge_reason": "Across all views, the primary discrepancy is configuration and geometry: PRED models the driveshaft fully straightened and collinear, whereas GT has both universal joints articulated at realistic angles. Additionally, PRED simplifies the yoke bodies into blocky, rectangular clevises rather than the contoured, pinch-clamp yokes with countersunk bores seen in GT. Semantically, both models correctly represent a dual universal-joint driveshaft assembly with a splined shaft and end stubs. PRED demonstrates good mechanical detailing on pins and splines, though its overall joint shapes remain somewhat simplified.",
+      "parts": [
+        {
+          "index": 0,
+          "label": "Part 01",
+          "name": "input splined pin",
+          "semantic": "Input splined coupling pin with transverse pin holes",
+          "mesh": "spatial_live_v1/assets/41824ff26a278a3adc6c7d6ea3025470ff4521661e5ca3ef77b604e5e5d1de74.stl"
+        },
+        {
+          "index": 1,
+          "label": "Part 02",
+          "name": "serrated clamp yoke",
+          "semantic": "Slotted angle joint yoke with serrated bore and pinch collar",
+          "mesh": "spatial_live_v1/assets/00f51079d0fdf7b09eca6d9ac1e333f21fd142cf19d7b0934abb830010db0e5d.stl"
+        },
+        {
+          "index": 2,
+          "label": "Part 03",
+          "name": "clamp bolt",
+          "semantic": "Pinch clamp bolt and hex nut assembly",
+          "mesh": "spatial_live_v1/assets/7faf76c5ddf1ae8b6de41002fe61d8f51d1f0e657fbf65480c02d4214a6427aa.stl"
+        },
+        {
+          "index": 3,
+          "label": "Part 04",
+          "name": "universal cross 1",
+          "semantic": "Four-trunnion Cardan spider cross at input universal joint",
+          "mesh": "spatial_live_v1/assets/c41ae771e5470a2af58afe219dce46a0c3cf7ff82e198897d6bda9aa9a3d2d47.stl"
+        },
+        {
+          "index": 4,
+          "label": "Part 05",
+          "name": "universal yoke 1",
+          "semantic": "Internal splined universal joint yoke at intermediate shaft input",
+          "mesh": "spatial_live_v1/assets/36d31cab21d487875b9cc321f318c1fe1849e2a5596a59d1d6bde1a0e821e208.stl"
+        },
+        {
+          "index": 5,
+          "label": "Part 06",
+          "name": "intermediate splined shaft",
+          "semantic": "Telescoping male splined shaft with integral cardan yoke",
+          "mesh": "spatial_live_v1/assets/c36b8a9586c4bfc33053605e6df9343e764504ae2aa73acea89bb0a846cb5763.stl"
+        },
+        {
+          "index": 6,
+          "label": "Part 07",
+          "name": "retaining roll pin",
+          "semantic": "Cylindrical roll pin engaging output coupling pin bore",
+          "mesh": "spatial_live_v1/assets/ab2f55730a161b9c873ebf5025442d7f380d6bcf0481e777272cf1435e50cd8d.stl"
+        }
+      ],
+      "aligned_pairs": [
+        {
+          "slot": 0,
+          "f_score": 0.779245541301627,
+          "accepted": true,
+          "gt": {
+            "name": "serrated angle joint",
+            "semantic": "A moderately elongated body (aspect ratio ≈ 2.82, ≈ 72 × 42 × 26 mm) combining a rectangular clevis at one end—carrying a ∅19.5 mm countersunk through-hole—with a semi-circular fork at the other end, connected by a serrated cylindrical zone (38 + 37 tooth-face strips at radii 8.62 and 8.24 mm). The fork features two ∅8 mm through-holes in its cheeks and a ∅6.78 mm/∅17.37 mm counterbore through-hole in its web. All 38 assembly contact pairs are cylinder-on-cylinder, matching the serration teeth, confirming a meshing toothed interface with an adjacent part. This part likely serves as a serrated angle-adjustment joint, permitting indexed angular positioning when clamped by fasteners through its multiple through-holes.",
+            "mesh": "spatial_live_v1/assets/6d09ceda5bd1a7a2a94bdb2a65634c799f65a0e5c5b70ba823ba505a85af906c.stl"
+          },
+          "pred": {
+            "name": "serrated clamp yoke",
+            "semantic": "Slotted angle joint yoke with serrated bore and pinch collar",
+            "mesh": "spatial_live_v1/assets/27d3ca66feb0ef02fdf5ccb8400c44d3f01a25db395b2209a039770215016220.stl"
+          }
+        },
+        {
+          "slot": 1,
+          "f_score": 0.0,
+          "accepted": false,
+          "gt": {
+            "name": "pin",
+            "semantic": "An extremely slender, elongated solid with an aspect ratio of approximately 135, spanning about 1.15 units in length with a cross-section on the order of 0.009 × 0.013. It has only 3 faces — two perpendicular planes and one B-spline surface — giving it a wedge-like or angular cross-section. It participates in one Plane/Plane contact pair and is grounded in the assembly. This part likely serves as a thin pin or wire-like locating element that seats against a neighboring flat surface.",
+            "mesh": "spatial_live_v1/assets/3dec172b2ab099c0739e75e7cd299f284352a128f8f9f928ec62204ce4c71411.stl"
+          },
+          "pred": {
+            "name": "clamp bolt",
+            "semantic": "Pinch clamp bolt and hex nut assembly",
+            "mesh": "spatial_live_v1/assets/c8d826143dddd8ea018b2d8058a81de2e33c7424b0b5731462652e2a546bdf22.stl"
+          }
+        },
+        {
+          "slot": 2,
+          "f_score": 0.9432404540763674,
+          "accepted": true,
+          "gt": {
+            "name": "splined shaft yoke",
+            "semantic": "An elongated shaft (aspect ratio ≈ 8.6, ~220 mm long) featuring a multi-tooth spline section at one end—evidenced by 46 cylindrical root faces at radius 8.62 mm and numerous radially-arrayed planar tooth flanks—transitioning through a smooth cylindrical shank (R ≈ 11.08 mm, ~78 mm long) to a forked universal-joint yoke at the opposite end, whose two ears each carry a bore of roughly 8.0 mm diameter. The 38 cylinder-on-cylinder assembly contacts strongly suggest the spline engages a mating splined bore, while the yoke bores appear to seat cross-pins or bearing cups. This part likely functions as a torque-transmitting splined shaft with an articulating yoke end.",
+            "mesh": "spatial_live_v1/assets/4909342f8fed2e1d877ce2fc6d50d368288fc02cbb29289c250f0c7dea53cdb0.stl"
+          },
+          "pred": {
+            "name": "intermediate splined shaft",
+            "semantic": "Telescoping male splined shaft with integral cardan yoke",
+            "mesh": "spatial_live_v1/assets/4ef483041bf045f3915c740e47047d3a2bee154252ca64f0bee806397591b201.stl"
+          }
+        },
+        {
+          "slot": 3,
+          "f_score": 0.9897458528613715,
+          "accepted": true,
+          "gt": {
+            "name": "part",
+            "semantic": "",
+            "mesh": "spatial_live_v1/assets/2dbf546034d9a280cb53a631724535a16822bcce1ec91f06520cb3ad50d9c390.stl"
+          },
+          "pred": {
+            "name": "universal cross 1",
+            "semantic": "Four-trunnion Cardan spider cross at input universal joint",
+            "mesh": "spatial_live_v1/assets/c18af0e524d2bb98766da7786550eb74d713ff8e945029df5749e38415bb810a.stl"
+          }
+        },
+        {
+          "slot": 4,
+          "f_score": 0.8142657274284862,
+          "accepted": true,
+          "gt": {
+            "name": "universal joint yoke",
+            "semantic": "A compact double-fork body (bbox ~56.8 × 41.4 × 23.4 mm, aspect ratio 2.43) with two pairs of rounded lug ears projecting from a central hub. The hub contains a splined or serrated internal bore formed by approximately 80 cylindrical faces at radii R ≈ 8.62 mm and R ≈ 8.24 mm, clearly visible as a knurled profile in the central pocket. Each pair of fork ears carries through-holes of diameter 8.0 mm that could accept pivot or cross pins. The part participates in 86 cylinder-on-cylinder and 8 plane-on-plane contacts in the assembly, and two instances are present. This part likely serves as a universal-joint yoke or articulating coupling fork, where the splined bore engages a shaft and the fork ears pivot on cross pins.",
+            "mesh": "spatial_live_v1/assets/174be1c08d36b3658a772c516e5843ae7a555edef535eecba8b3b99ee69835c7.stl"
+          },
+          "pred": {
+            "name": "universal yoke 1",
+            "semantic": "Internal splined universal joint yoke at intermediate shaft input",
+            "mesh": "spatial_live_v1/assets/0ea90dfe80442644a02c3aa3f7d9f7e51e036a966eb4792a43cd71f77d22630c.stl"
+          }
+        },
+        {
+          "slot": 5,
+          "f_score": 0.8790817387687188,
+          "accepted": true,
+          "gt": {
+            "name": "splined pin",
+            "semantic": "A cylindrical pin approximately 75 mm long and 20 mm in diameter (aspect ratio 3.75) with a 36-tooth straight spline at one end (root radius 8.62 mm, spanning roughly 21.5 mm) and a smooth cylindrical journal (radius 10.0 mm, spanning about 53.5 mm). Two radial through-holes of 6.0 mm diameter pass fully through the shaft perpendicular to its axis, likely permitting cross-pins for axial retention. The part participates in 82 cylinder-on-cylinder and 8 plane-on-plane assembly contacts, indicating the spline and journal seat coaxially into mating bores. This part appears to function as a splined pin or coupling shaft that could transmit torque through its spline engagement.",
+            "mesh": "spatial_live_v1/assets/31bf240ac68625331a4bfe5a3bfb14918d1f71060ec8b78d4fbef7133ff5731e.stl"
+          },
+          "pred": {
+            "name": "input splined pin",
+            "semantic": "Input splined coupling pin with transverse pin holes",
+            "mesh": "spatial_live_v1/assets/724f9592228ab44652e3971af05676cad357d8302616c92bf0fff1b9921c154a.stl"
+          }
+        }
+      ]
+    }
+  ]
+}

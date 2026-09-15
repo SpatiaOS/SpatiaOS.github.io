@@ -220,7 +220,8 @@ in the summary JSON: **61.96** (100/100 tested) and
 score and does not enter the main leaderboard average. Per the maintainer's
 display preference, the page uses the title “Image-to-3D”, with no snapshot
 footer, Hard100 suffix or Additional formats section. MiMo remains paused and
-is not included. Original 3D examples and figure assets are unchanged.
+is not included. Figure assets are unchanged; the subsequent demo refresh is
+documented below.
 
 To reproduce, use the benchmark environment to freeze Image and Assembly reports
 under a private `AUDIT/image` and `AUDIT/assembly` directory. Then run:
@@ -251,3 +252,50 @@ node projects/P3D-Bench/tools/update-live-image-assembly.mjs
 ```
 
 The importer also restores all three axes, including additional Gemini formats, before writing future summaries. No evaluator calls are made.
+
+## Current Image and Assembly examples
+
+`demo/spatial-live.json` replaces the Image and Assembly portions of the runtime
+manifest after the current Text overlay is applied. It contains nine current
+models and eight new cases: robotic arm, planetary gear train, toy tank and
+high-rise building for Image; piston/connecting rods, seven-segment display,
+universal joint shaft and scissors for Assembly. All nine models have complete
+saved outputs, renders and judge scores in all three Image or both Assembly
+formats: 180 runs in total. Each case uses identical input image bytes, input
+text (Assembly), and GT mesh bytes across models. These are curated examples,
+not the sample used to estimate leaderboard performance. No leaderboard rows,
+Text examples, or page methodology labels are changed by this update.
+
+The showcase uses one fixed CadQuery case per task and includes all nine models
+in its existing carousel. `demo/spatial-assemblies.json` supplies two new part
+examples: GPT-6 Astra on piston/connecting rods and Claude Opus 5 on the universal
+joint shaft. Part identities, Hungarian assignments, acceptance flags and scores
+come from saved evaluation records. Only part display meshes are transformed:
+the saved assembly alignment, followed by a deterministic rigid 24-rotation
+alignment (1,024 surface points, seed 42). The private ledger records the source
+hashes and matrices; scores are never recomputed or substituted.
+
+`demo/spatial_live_v1/assets/` contains 587 content-addressed files (309 MB, largest
+file 22.4 MB). Full predictions and code are each model's own saved output; meshes
+are not decimated. Render images are copied unchanged. `spatial-live-audit.json`
+provides the selected scope, source-record hashes and public asset hashes without
+private paths or request metadata. Images and meshes are fetched only as needed
+by the existing viewers and carousel.
+
+Use frozen benchmark Image and Assembly snapshots plus a reviewed `selection.json`
+under a private audit directory to reproduce:
+
+```bash
+python projects/P3D-Bench/tools/build-spatial-demo.py \
+  --audit /absolute/private/path/to/demo-audit \
+  --benchmark-repo /absolute/path/to/cadbenchmark
+node projects/P3D-Bench/tools/update-spatial-demo.mjs
+node --test projects/P3D-Bench/tools/*.test.mjs
+```
+
+The updater guards the manifest adapter and showcase selection boundaries,
+preserves unrelated bundle bytes and every leaderboard entry, versions both
+data URLs, and updates the source mirror. Repeat updates with the same payload
+are a no-op. The Text updater recognizes this composed loader and preserves it.
+The display retains the existing task tabs, model carousel, input dialogs and
+part-pair carousel; spatial-only responsive CSS handles narrow screens.

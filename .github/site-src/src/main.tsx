@@ -1,6 +1,8 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { mergeLiveTextManifest } from "../../../projects/P3D-Bench/tools/text-demo.mjs";
+import { mergeSpatialManifest } from "../../../projects/P3D-Bench/tools/spatial-demo.mjs";
 import "../../../projects/P3D-Bench/assets/text-demo-overrides.css";
+import "../../../projects/P3D-Bench/assets/spatial-demo-overrides.css";
 import { createRoot } from "react-dom/client";
 import { BookOpen, ChevronDown, ChevronUp, Code2, Github, Image as ImageIcon, Layers3, Play } from "lucide-react";
 import * as THREE from "three";
@@ -43,6 +45,7 @@ type Run = {
 type Manifest = {
   schema_version: number;
   text_showcase?: ShowcaseComparison;
+  spatial_showcases?: Record<string, ShowcaseComparison>;
   paper: {
     title: string;
     authors: string[];
@@ -182,10 +185,14 @@ function App() {
         try {
           const response = await fetch(asset("text-live-fixed100.json?v=e462b1f817e4"));
           if (!response.ok) throw new Error("Text live data unavailable");
-          setManifest(mergeLiveTextManifest(data, await response.json()));
-        } catch {
-          setManifest(data);
-        }
+          data = mergeLiveTextManifest(data, await response.json());
+        } catch { /* The base manifest remains available when Text cannot load. */ }
+        try {
+          const response = await fetch(asset("spatial-live.json?v=ae456b0c9ddb"));
+          if (!response.ok) throw new Error("Spatial demo unavailable");
+          data = mergeSpatialManifest(data, await response.json());
+        } catch { /* Preserve the already loaded data if this overlay cannot load. */ }
+        setManifest(data);
       })
       .catch(() => setManifest(fallbackManifest));
   }, []);
@@ -195,7 +202,7 @@ function App() {
       setComplexAssemblies([]);
       return;
     }
-    fetch(asset("complex_assemblies.json"))
+    fetch(asset("spatial-assemblies.json?v=909fc492f542"))
       .then((res) => (res.ok ? res.json() : { items: [] }))
       .then((data: ComplexAssemblyData) => setComplexAssemblies(Array.isArray(data.items) ? data.items : []))
       .catch(() => setComplexAssemblies([]));
@@ -420,7 +427,7 @@ function App() {
 }
 
 function buildShowcaseComparisons(manifest: Manifest): ShowcaseComparison[] {
-  const taskOrder = ["text2cad", "image2cad"];
+  const taskOrder = ["text2cad", "image2cad", "text_image2cad"];
   const formatPreference: Record<string, string[]> = {
     text2cad: ["openscad", "json"],
     image2cad: ["cadquery", "openscad", "threejs"],
@@ -434,6 +441,7 @@ function buildShowcaseComparisons(manifest: Manifest): ShowcaseComparison[] {
   return taskOrder
     .map((task) => {
       if (task === "text2cad" && manifest.text_showcase) return manifest.text_showcase;
+      if (manifest.spatial_showcases?.[task]) return manifest.spatial_showcases[task];
       const cases = manifest.cases.filter((item) => item.task === task);
       const availableFormats = Array.from(new Set(completeRuns.filter((run) => run.task === task).map((run) => run.format)));
       const formats = Array.from(new Set([...(formatPreference[task] || []), ...availableFormats])).filter((formatName) => availableFormats.includes(formatName));
