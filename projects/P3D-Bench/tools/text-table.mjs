@@ -49,6 +49,31 @@ export function validateTextSummary(summary) {
     if (row.estimated_cost_usd !== null && row.usage_kind !== "official_tokenizer_estimate") throw new Error("missing estimate provenance");
   }
   if (summary.model_ids?.join() !== summary.rows.map((r) => r.model_id).join()) throw new Error("model order differs");
+  textNativeRows(summary);
+}
+
+// Native baselines have their own format contract, not invented two-format means.
+export function textNativeRows(summary) {
+  const rows = summary.native_baselines ?? [];
+  if (rows.length > 1) throw new Error("unexpected native Text baseline set");
+  return rows.map(row => {
+    if (row.model_id !== "text2cad" || row.scope !== "native_json_only"
+        || row.cost_kind !== "local_checkpoint_not_api_priced") throw new Error("native Text contract differs");
+    const d = row.formats.descriptive.json;
+    const p = row.formats.parametric.json;
+    if (Object.keys(row.formats.descriptive).join() !== "json"
+        || Object.keys(row.formats.parametric).join() !== "json") throw new Error("unsupported native format");
+    const values = [d.judge, d.valid, p.geometry, p.topology, p.judge, p.valid];
+    if (values.some(v => !Number.isFinite(v) || v < 0 || v > 1)) throw new Error("invalid native metric");
+    close(d.valid, .91, "native descriptive Valid");
+    close(p.valid, .98, "native parametric Valid");
+    close(row.score, (d.judge + p.geometry + p.topology + p.judge) * 25, "native score");
+    const metrics = [d.judge.toFixed(3), d.valid.toFixed(3), "-", "-", "-", "-",
+      ...[p.geometry, p.topology, p.judge, p.valid].map(v => v.toFixed(3)), ...Array(8).fill("-")].join(" ");
+    if (metrics !== row.metrics) throw new Error("native formatted cells differ");
+    return { model: row.model, model_id: row.model_id, family: row.family,
+      cells: `${metrics} ${row.score.toFixed(2)} -` };
+  });
 }
 
 export function textCost(row) {

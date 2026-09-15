@@ -1,0 +1,44 @@
+{
+  "chamfer_policy": "Original native raw filled CD mean, then clip normalized aggregate score at zero.",
+  "cost_policy": "Local checkpoint inference; hosted-model API-equivalent generation cost is not applicable.",
+  "dataset_size": 400,
+  "denominator_per_cell": 100,
+  "evaluation_subset_size": 100,
+  "experiments": {
+    "new_generation": 0,
+    "new_local_evaluation": 0,
+    "new_renders": 0,
+    "new_selected_judge_phases": 280
+  },
+  "fixed_uid_sha256": "fac7d9b2950d98b3e10b3bc966a9b76f3674407c2a18e4a3d541b2c5f5a10593",
+  "geometry_terms": [
+    "chamfer_distance_score",
+    "iou_csg",
+    "f_score_005",
+    "f_score_001",
+    "normal_consistency"
+  ],
+  "iou_policy": "aaai_native_baseline_exclude_valid_inapplicable_retain_invalid",
+  "judge_aggregation": "Original Text2CAD native success-only QA/J-Sem means; not the general-model fixed-N Judge aggregation.",
+  "judge_model": "gemini-3.8-flash",
+  "judge_phases": 280,
+  "model_ids": [
+    "text2cad"
+  ],
+  "per_case_policy": "Diagnostic rows retain all100 outcomes; native aggregate Judge excludes invalid outputs and aggregate Geometry is metric-first. Use the per-format table for model comparisons.",
+  "retained_current_model_count": 10,
+  "retained_current_model_values_changed": 0,
+  "schema": "p3d-native-baseline-fixed100-v1",
+  "scope": "Native JSON-only baseline; not a JSON/OpenSCAD two-format average.",
+  "selected_case_contributions": 200,
+  "semantic_profile": "gemini38_category_v1",
+  "supported_formats": [
+    "json"
+  ],
+  "text_score": "100 * mean(descriptive Judge, parametric Geometry, Topology, Judge), JSON only.",
+  "topology_terms": [
+    "no_open_edge",
+    "inverted_normal_score",
+    "non_manifold_edge_score"
+  ]
+}

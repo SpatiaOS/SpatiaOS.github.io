@@ -1,0 +1,60 @@
+{
+  "records": [
+    {
+      "evidence": "invalid/descriptive/0009_00099014.json",
+      "task": "descriptive",
+      "uid": "0009/00099014"
+    },
+    {
+      "evidence": "invalid/descriptive/0015_00155951.json",
+      "task": "descriptive",
+      "uid": "0015/00155951"
+    },
+    {
+      "evidence": "invalid/descriptive/0073_00732007.json",
+      "task": "descriptive",
+      "uid": "0073/00732007"
+    },
+    {
+      "evidence": "invalid/descriptive/0073_00737056.json",
+      "task": "descriptive",
+      "uid": "0073/00737056"
+    },
+    {
+      "evidence": "invalid/descriptive/0072_00725542.json",
+      "task": "descriptive",
+      "uid": "0072/00725542"
+    },
+    {
+      "evidence": "invalid/descriptive/0072_00724192.json",
+      "task": "descriptive",
+      "uid": "0072/00724192"
+    },
+    {
+      "evidence": "invalid/descriptive/0028_00284926.json",
+      "task": "descriptive",
+      "uid": "0028/00284926"
+    },
+    {
+      "evidence": "invalid/descriptive/0022_00225399.json",
+      "task": "descriptive",
+      "uid": "0022/00225399"
+    },
+    {
+      "evidence": "invalid/descriptive/0010_00101896.json",
+      "task": "descriptive",
+      "uid": "0010/00101896"
+    },
+    {
+      "evidence": "invalid/parametric/0018_00189804.json",
+      "task": "parametric",
+      "uid": "0018/00189804"
+    },
+    {
+      "evidence": "invalid/parametric/0005_00052091.json",
+      "task": "parametric",
+      "uid": "0005/00052091"
+    }
+  ],
+  "taxonomy_assigned": false
+}

@@ -6,7 +6,7 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { readActiveBundle, replaceLiveTable, writeActiveBundle } from "./live-tables.mjs";
-import { validateTextSummary, textCost } from "./text-table.mjs";
+import { validateTextSummary, textCost, textNativeRows } from "./text-table.mjs";
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const summaryPath = join(root, "live-text-summary.json");
@@ -44,6 +44,7 @@ const textTable = {
     family: row.family,
     cells: `${row.metrics} ${row.score.toFixed(2)} ${textCost(row)}`,
   })),
+  domainRows: textNativeRows(summary),
   note: "",
 };
 

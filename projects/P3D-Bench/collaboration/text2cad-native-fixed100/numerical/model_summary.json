@@ -1,0 +1,13 @@
+{
+  "denominator_per_cell": 100,
+  "desc_judge": 14.148361111111113,
+  "desc_valid": 91.0,
+  "formats": "json",
+  "geometry": 29.278119999999998,
+  "model": "Text2CAD",
+  "model_id": "text2cad",
+  "param_judge": 13.690466666666664,
+  "param_valid": 98.0,
+  "text_p3d_score": 38.71411194444445,
+  "topology": 97.7395
+}

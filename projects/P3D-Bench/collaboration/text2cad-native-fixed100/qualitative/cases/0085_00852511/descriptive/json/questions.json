@@ -1,0 +1,78 @@
+[
+  {
+    "category": "",
+    "chose_none_of_above": true,
+    "ground_truth": "A",
+    "is_correct": false,
+    "none_of_above_option": "E",
+    "options": [
+      "A series of coaxial, stepped cylindrical sections with a broad collar",
+      "A rectangular block with multiple cylindrical cutouts",
+      "A spherical body with a hollow sleeve protruding from one side",
+      "A single uniform cylinder with a flat top and bottom"
+    ],
+    "predicted": "E",
+    "qid": "semantic_1",
+    "question": "Which description best matches the overall shape of the object?",
+    "reasoning": "The rendered model is a simple thin rectangular plate, which does not match any of the descriptions in options A through D.",
+    "reference_answer": "A",
+    "split": "semantic"
+  },
+  {
+    "category": "",
+    "chose_none_of_above": false,
+    "ground_truth": "C",
+    "is_correct": false,
+    "none_of_above_option": "E",
+    "options": [
+      "The internal opening expands in diameter towards the lowest end",
+      "The internal opening maintains a constant diameter throughout the entire object",
+      "The internal opening reduces in diameter through multiple tiers, leaving only the lowest narrow end solid",
+      "The object is completely solid with no internal opening"
+    ],
+    "predicted": "D",
+    "qid": "semantic_2",
+    "question": "Which statement is true regarding the internal opening of the object?",
+    "reasoning": "Both the render images and the artifact code show a single solid rectangular extrusion with no holes, bores, or internal openings.",
+    "reference_answer": "C",
+    "split": "semantic"
+  },
+  {
+    "category": "",
+    "chose_none_of_above": true,
+    "ground_truth": "A",
+    "is_correct": false,
+    "none_of_above_option": "E",
+    "options": [
+      "They are all coaxial, sharing the same central axis",
+      "They intersect each other at right angles",
+      "They are offset from each other along a single axis",
+      "They are arranged in a grid pattern"
+    ],
+    "predicted": "E",
+    "qid": "semantic_3",
+    "question": "How are the various cylindrical sections of the object aligned relative to each other?",
+    "reasoning": "The predicted object is a flat rectangular plate with no cylindrical sections whatsoever, making none of options A through D applicable.",
+    "reference_answer": "A",
+    "split": "semantic"
+  },
+  {
+    "category": "",
+    "chose_none_of_above": true,
+    "ground_truth": "D",
+    "is_correct": false,
+    "none_of_above_option": "E",
+    "options": [
+      "A flat square plate",
+      "A solid rectangular boss",
+      "A threaded rod",
+      "A hollow cylindrical sleeve"
+    ],
+    "predicted": "E",
+    "qid": "semantic_4",
+    "question": "What feature is located immediately above the broad annular collar?",
+    "reasoning": "The predicted object does not contain an annular collar or any stepped features, so none of the provided options apply.",
+    "reference_answer": "D",
+    "split": "semantic"
+  }
+]

@@ -1,0 +1,230 @@
+[
+  {
+    "category": "",
+    "chose_none_of_above": true,
+    "ground_truth": "D",
+    "is_correct": false,
+    "none_of_above_option": "E",
+    "options": [
+      "A sharp rectangular tube with a solid core",
+      "A solid cylinder with no internal cavity",
+      "A flat rectangular plate with chamfered edges",
+      "An arc-based open wall with rounded ends and a slot-like interior"
+    ],
+    "predicted": "E",
+    "qid": "semantic_1",
+    "question": "Which description best matches the geometry of the taller rear portion of the model?",
+    "reasoning": "The main body of the predicted object is a solid cube and does not possess an arc-based open wall, rectangular tube, chamfered plate, or upright cylinder matching the described taller rear portion.",
+    "reference_answer": "D",
+    "split": "semantic"
+  },
+  {
+    "category": "",
+    "chose_none_of_above": false,
+    "ground_truth": "B",
+    "is_correct": false,
+    "none_of_above_option": "E",
+    "options": [
+      "As square bosses with rounded corners",
+      "As hollow sleeves or collars",
+      "As solid disks with no through-holes",
+      "As spherical domes protruding outward"
+    ],
+    "predicted": "C",
+    "qid": "semantic_2",
+    "question": "How are the visible circular areas in the model structured?",
+    "reasoning": "The visible circular feature on the cylinder is solid with no through-holes, matching option C.",
+    "reference_answer": "B",
+    "split": "semantic"
+  },
+  {
+    "category": "",
+    "chose_none_of_above": false,
+    "ground_truth": "B",
+    "is_correct": false,
+    "none_of_above_option": "E",
+    "options": [
+      "A single large rectangular pocket",
+      "Removed circular material creating stepped bottom depths",
+      "A series of parallel reinforcing ribs",
+      "A completely flat and flush surface across all parts"
+    ],
+    "predicted": "D",
+    "qid": "semantic_3",
+    "question": "What feature is present on the underside of the model?",
+    "reasoning": "As seen in the bottom render views and confirmed by the artifact coordinates, the underside of the model is a completely flat and flush planar surface.",
+    "reference_answer": "B",
+    "split": "semantic"
+  },
+  {
+    "category": "",
+    "chose_none_of_above": true,
+    "ground_truth": "A",
+    "is_correct": false,
+    "none_of_above_option": "E",
+    "options": [
+      "The bores continue through the related circular stepped features",
+      "The bores stop halfway, forming blind holes above the steps",
+      "The bores are oriented perpendicularly to the stepped features",
+      "The bores are completely separate and do not intersect the stepped features"
+    ],
+    "predicted": "E",
+    "qid": "semantic_4",
+    "question": "What is the spatial relationship between the internal bores and the circular stepped features?",
+    "reasoning": "The predicted model does not contain internal bores or circular stepped features, so none of the spatial relationships described in options A–D apply.",
+    "reference_answer": "A",
+    "split": "semantic"
+  },
+  {
+    "category": "",
+    "chose_none_of_above": true,
+    "ground_truth": "D",
+    "is_correct": false,
+    "none_of_above_option": "E",
+    "options": [
+      "0.0656",
+      "0.2084",
+      "0.1756",
+      "0.0328"
+    ],
+    "predicted": "E",
+    "qid": "param_1",
+    "question": "What is the wall thickness of the upper protruding ring of the larger lower annular circular solid (the difference between its outer radius and inner boundary radius)?",
+    "reasoning": "The predicted model lacks an annular circular solid with an upper protruding ring, so the requested wall thickness cannot be evaluated.",
+    "reference_answer": "D",
+    "split": "param"
+  },
+  {
+    "category": "",
+    "chose_none_of_above": true,
+    "ground_truth": "C",
+    "is_correct": false,
+    "none_of_above_option": "E",
+    "options": [
+      "3.142",
+      "1.500",
+      "2.184",
+      "0.458"
+    ],
+    "predicted": "E",
+    "qid": "param_2",
+    "question": "What is the ratio of the radius of the central bore in the larger circular solid to the radius of the central bore in the smaller circular sleeve?",
+    "reasoning": "The model has no central bores or sleeves, making it impossible to compute a bore radius ratio.",
+    "reference_answer": "C",
+    "split": "param"
+  },
+  {
+    "category": "",
+    "chose_none_of_above": true,
+    "ground_truth": "C",
+    "is_correct": false,
+    "none_of_above_option": "E",
+    "options": [
+      "0.331",
+      "0.128",
+      "0.075",
+      "0.203"
+    ],
+    "predicted": "E",
+    "qid": "param_3",
+    "question": "What is the thickness of the floor in the larger circular solid, calculated as its total height minus the depth of its underside circular recess?",
+    "reasoning": "There is no underside circular recess or annular solid in the predicted artifact, so the floor thickness calculation does not apply.",
+    "reference_answer": "C",
+    "split": "param"
+  },
+  {
+    "category": "",
+    "chose_none_of_above": false,
+    "ground_truth": "A",
+    "is_correct": false,
+    "none_of_above_option": "E",
+    "options": [
+      "0.2654",
+      "The object does not have a larger lower annular circular solid.",
+      "0.4684",
+      "0.2030"
+    ],
+    "predicted": "B",
+    "qid": "param_4",
+    "question": "What is the difference in overall height between the main upright solid and the larger lower annular circular solid?",
+    "reasoning": "Examining both the renders and code shows the model has no lower annular circular solid, making negation option B correct.",
+    "reference_answer": "A",
+    "split": "param"
+  },
+  {
+    "category": "",
+    "chose_none_of_above": false,
+    "ground_truth": "C",
+    "is_correct": true,
+    "none_of_above_option": "E",
+    "options": [
+      "3",
+      "1",
+      "There are no rectangular through-slots; the main upright solid has a curved open interior and circular bores.",
+      "2"
+    ],
+    "predicted": "C",
+    "qid": "param_5",
+    "question": "How many rectangular through-slots pass completely through the main upright solid?",
+    "reasoning": "No rectangular through-slots exist in the solid, matching the negation option C.",
+    "reference_answer": "C",
+    "split": "param"
+  },
+  {
+    "category": "",
+    "chose_none_of_above": true,
+    "ground_truth": "A",
+    "is_correct": false,
+    "none_of_above_option": "E",
+    "options": [
+      "Material was removed from the solid (subtractive operation).",
+      "It was formed by intersecting two separate bodies.",
+      "Material was added to form a stepped protrusion.",
+      "It was created by sweeping a profile along a curved path."
+    ],
+    "predicted": "E",
+    "qid": "param_6",
+    "question": "How was the larger circular recess on the underside of the lower annular solid created?",
+    "reasoning": "There is no circular recess on the underside of the model, and none of options A–D provide a negation option.",
+    "reference_answer": "A",
+    "split": "param"
+  },
+  {
+    "category": "",
+    "chose_none_of_above": false,
+    "ground_truth": "D",
+    "is_correct": true,
+    "none_of_above_option": "E",
+    "options": [
+      "0.1280",
+      "0.3034",
+      "0.2030",
+      "0.4684"
+    ],
+    "predicted": "D",
+    "qid": "param_7",
+    "question": "What is the overall height of the main upright solid from the base datum?",
+    "reasoning": "The main block (part_1) has an extrusion depth of 0.4688 from the base datum, which matches 0.4684 within discretization tolerance.",
+    "reference_answer": "D",
+    "split": "param"
+  },
+  {
+    "category": "",
+    "chose_none_of_above": true,
+    "ground_truth": "B",
+    "is_correct": false,
+    "none_of_above_option": "E",
+    "options": [
+      "3",
+      "2",
+      "4",
+      "1"
+    ],
+    "predicted": "E",
+    "qid": "param_8",
+    "question": "How many distinct circular through-holes (central bores) pass completely through the object vertically?",
+    "reasoning": "There are zero vertical circular through-holes passing through the predicted model, which does not match any of the counts in options A–D (1, 2, 3, or 4).",
+    "reference_answer": "B",
+    "split": "param"
+  }
+]

@@ -1,0 +1,418 @@
+{
+  "records": [
+    {
+      "assets": {
+        "aligned_mesh": {
+          "bytes": 684,
+          "path": "assets/ccc37d923bab36ddedfa8d11a42703951bd6ae7270cd6d2a7354c5387f294476.stl",
+          "sha256": "ccc37d923bab36ddedfa8d11a42703951bd6ae7270cd6d2a7354c5387f294476"
+        },
+        "artifact": {
+          "bytes": 1613,
+          "path": "assets/acb1f9fdf0646a34b6773ea8adae63c7727669bf94c6a6151f3520d16a4d58fb.json",
+          "sha256": "acb1f9fdf0646a34b6773ea8adae63c7727669bf94c6a6151f3520d16a4d58fb"
+        },
+        "gt_mesh": {
+          "bytes": 78484,
+          "path": "assets/6207b5134ca99b57d6281aeb872d3fb610270aa0dc526d4b725e94fa4f692af5.stl",
+          "sha256": "6207b5134ca99b57d6281aeb872d3fb610270aa0dc526d4b725e94fa4f692af5"
+        },
+        "gt_views": [
+          {
+            "bytes": 789047,
+            "path": "assets/a578c8ce0762d93bf42348c7a26119a83a9f7555cb3116a1582f64ad3e9c942d.png",
+            "sha256": "a578c8ce0762d93bf42348c7a26119a83a9f7555cb3116a1582f64ad3e9c942d"
+          },
+          {
+            "bytes": 768439,
+            "path": "assets/2b10b160cddfe7d5daf37f1b05476d7c8ecd99ac5f2b107cfa12d6dda55e44a3.png",
+            "sha256": "2b10b160cddfe7d5daf37f1b05476d7c8ecd99ac5f2b107cfa12d6dda55e44a3"
+          },
+          {
+            "bytes": 709001,
+            "path": "assets/82e11c65148233427525f04790e350d21a0ec8a77f2ac578e5cd7146f2a76e28.png",
+            "sha256": "82e11c65148233427525f04790e350d21a0ec8a77f2ac578e5cd7146f2a76e28"
+          },
+          {
+            "bytes": 685647,
+            "path": "assets/0d1a40f23c13ffe44bf679df37fe9c5c910cb450a4c22e661973341ebf048542.png",
+            "sha256": "0d1a40f23c13ffe44bf679df37fe9c5c910cb450a4c22e661973341ebf048542"
+          }
+        ],
+        "mesh": {
+          "bytes": 684,
+          "path": "assets/939eff7e5268402d57182f22b1a8980e9e3328fa020a2acf788fa0d624767eca.stl",
+          "sha256": "939eff7e5268402d57182f22b1a8980e9e3328fa020a2acf788fa0d624767eca"
+        },
+        "pred_views": [
+          {
+            "bytes": 890997,
+            "path": "assets/7a97e246091721ab2166702a4e7fa62feedd03171d3560371a4690e882ba6bb6.png",
+            "sha256": "7a97e246091721ab2166702a4e7fa62feedd03171d3560371a4690e882ba6bb6"
+          },
+          {
+            "bytes": 888223,
+            "path": "assets/ec9ef0b546667613371b2f282084470f01eebe821356f3013a8946b45e53a9fe.png",
+            "sha256": "ec9ef0b546667613371b2f282084470f01eebe821356f3013a8946b45e53a9fe"
+          },
+          {
+            "bytes": 736119,
+            "path": "assets/c21fd58a6c856814b6b6984ba6f58903fcc31b9c76b0f79c36bb1452f62b0d45.png",
+            "sha256": "c21fd58a6c856814b6b6984ba6f58903fcc31b9c76b0f79c36bb1452f62b0d45"
+          },
+          {
+            "bytes": 733459,
+            "path": "assets/94571e118bd044ebfef00253d9dffc1fb800f5265ba700235aaa2630e5353051.png",
+            "sha256": "94571e118bd044ebfef00253d9dffc1fb800f5265ba700235aaa2630e5353051"
+          }
+        ]
+      },
+      "condition": "cases/0085_00852511/descriptive/json/condition.txt",
+      "figures": [
+        "paper_judge_combined_stacked.jpg"
+      ],
+      "format": "json",
+      "model_id": "text2cad",
+      "model_label": "Text2CAD",
+      "questions": "cases/0085_00852511/descriptive/json/questions.json",
+      "scorecard": "cases/0085_00852511/descriptive/json/scorecard.json",
+      "task": "descriptive",
+      "uid": "0085/00852511",
+      "valid": true
+    },
+    {
+      "assets": {
+        "aligned_mesh": {
+          "bytes": 684,
+          "path": "assets/5c4f5f79983397b79e248210264ca09ae8747ccfbd808fd2477587fb9941e9ba.stl",
+          "sha256": "5c4f5f79983397b79e248210264ca09ae8747ccfbd808fd2477587fb9941e9ba"
+        },
+        "artifact": {
+          "bytes": 3200,
+          "path": "assets/c74336d992c874513de2c3ff779bd2dcce4a953be18073399b21e73d805bc30c.json",
+          "sha256": "c74336d992c874513de2c3ff779bd2dcce4a953be18073399b21e73d805bc30c"
+        },
+        "gt_mesh": {
+          "bytes": 16684,
+          "path": "assets/1b326187950a3281c2e525e75d9ccb90e557ef97c4da8913acab93feee3d644f.stl",
+          "sha256": "1b326187950a3281c2e525e75d9ccb90e557ef97c4da8913acab93feee3d644f"
+        },
+        "gt_views": [
+          {
+            "bytes": 647973,
+            "path": "assets/42dbd1824aefa510f27a718303ae92623123df56ac7aed84ee94145f4273af9e.png",
+            "sha256": "42dbd1824aefa510f27a718303ae92623123df56ac7aed84ee94145f4273af9e"
+          },
+          {
+            "bytes": 642833,
+            "path": "assets/b1c83ff062b8531bddd0e07f5c1d7bb623f4673d704c2f6ea4b2087cec1818f8.png",
+            "sha256": "b1c83ff062b8531bddd0e07f5c1d7bb623f4673d704c2f6ea4b2087cec1818f8"
+          },
+          {
+            "bytes": 668358,
+            "path": "assets/ee62b8c09cf69522426da7de892b7c5c2899753b342889145d99413a8dc9da75.png",
+            "sha256": "ee62b8c09cf69522426da7de892b7c5c2899753b342889145d99413a8dc9da75"
+          },
+          {
+            "bytes": 661537,
+            "path": "assets/c7a8b24e10bdd20c700677f7cb2ebe01b8b36bdca5f41b4d330eb96c65a4c0be.png",
+            "sha256": "c7a8b24e10bdd20c700677f7cb2ebe01b8b36bdca5f41b4d330eb96c65a4c0be"
+          }
+        ],
+        "mesh": {
+          "bytes": 684,
+          "path": "assets/eb250e0a48c040e56d5c0fda7a94a98f1cf6dc8dc6d7b852c5badbaeda82352a.stl",
+          "sha256": "eb250e0a48c040e56d5c0fda7a94a98f1cf6dc8dc6d7b852c5badbaeda82352a"
+        },
+        "pred_views": [
+          {
+            "bytes": 652231,
+            "path": "assets/b227934049dcc18bf2c9f70016581189ec1309d08999a55f6585dd691897ce51.png",
+            "sha256": "b227934049dcc18bf2c9f70016581189ec1309d08999a55f6585dd691897ce51"
+          },
+          {
+            "bytes": 653080,
+            "path": "assets/1c5e94c189e3421b118699eca7b344782089c0ed34b3338492d912974e2a0cf8.png",
+            "sha256": "1c5e94c189e3421b118699eca7b344782089c0ed34b3338492d912974e2a0cf8"
+          },
+          {
+            "bytes": 647979,
+            "path": "assets/981d2303bbd10fa2e1d434009050579ff872516ea58840b5712d305d2a1a3b6f.png",
+            "sha256": "981d2303bbd10fa2e1d434009050579ff872516ea58840b5712d305d2a1a3b6f"
+          },
+          {
+            "bytes": 650697,
+            "path": "assets/d25db676189be0dd32799013d3c207195c5f83e019d378bbc678b28edc641174.png",
+            "sha256": "d25db676189be0dd32799013d3c207195c5f83e019d378bbc678b28edc641174"
+          }
+        ]
+      },
+      "condition": "cases/0092_00923543/descriptive/json/condition.txt",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png"
+      ],
+      "format": "json",
+      "model_id": "text2cad",
+      "model_label": "Text2CAD",
+      "questions": "cases/0092_00923543/descriptive/json/questions.json",
+      "scorecard": "cases/0092_00923543/descriptive/json/scorecard.json",
+      "task": "descriptive",
+      "uid": "0092/00923543",
+      "valid": true
+    },
+    {
+      "assets": {
+        "aligned_mesh": {
+          "bytes": 1484,
+          "path": "assets/1b720ceb9e9824cd74db41ff920c5a120722b4325160e52772f0df2580de47b6.stl",
+          "sha256": "1b720ceb9e9824cd74db41ff920c5a120722b4325160e52772f0df2580de47b6"
+        },
+        "artifact": {
+          "bytes": 2493,
+          "path": "assets/d0b0100aa10bbf9574a655e4672fc79485559545a111d7536d0dd4b29d999d67.json",
+          "sha256": "d0b0100aa10bbf9574a655e4672fc79485559545a111d7536d0dd4b29d999d67"
+        },
+        "gt_mesh": {
+          "bytes": 50284,
+          "path": "assets/7fc8ad32bdc29f110044bd055d42021332eff5c7841ef16fe7b10212002de191.stl",
+          "sha256": "7fc8ad32bdc29f110044bd055d42021332eff5c7841ef16fe7b10212002de191"
+        },
+        "gt_render": {
+          "bytes": 63363,
+          "path": "assets/4eeb36c84c363116870d274de63083e8c58c4c0e2bfb9cba4f5a69583e0f9db1.png",
+          "sha256": "4eeb36c84c363116870d274de63083e8c58c4c0e2bfb9cba4f5a69583e0f9db1"
+        },
+        "mesh": {
+          "bytes": 1484,
+          "path": "assets/9023482f2bcd2f55f6223e20ada5db008a677dfa46b0c27a806afaa22becf3ce.stl",
+          "sha256": "9023482f2bcd2f55f6223e20ada5db008a677dfa46b0c27a806afaa22becf3ce"
+        },
+        "pred_views": [
+          {
+            "bytes": 803134,
+            "path": "assets/2e7f46ffa186526c23dc0643a01a75df8eee3a6109a85201639b685f01238413.png",
+            "sha256": "2e7f46ffa186526c23dc0643a01a75df8eee3a6109a85201639b685f01238413"
+          },
+          {
+            "bytes": 833985,
+            "path": "assets/7f1a52096020c112b810e5b14af9fafa8472ca2cde60f67fb6f09b40843b666b.png",
+            "sha256": "7f1a52096020c112b810e5b14af9fafa8472ca2cde60f67fb6f09b40843b666b"
+          },
+          {
+            "bytes": 788890,
+            "path": "assets/1a97af023562b71b804494e5eb783a8cac3de8e48fbc24e13146c2a7a252d52b.png",
+            "sha256": "1a97af023562b71b804494e5eb783a8cac3de8e48fbc24e13146c2a7a252d52b"
+          },
+          {
+            "bytes": 783766,
+            "path": "assets/239e4cc46f6244bd0d1c6c272be6e67f64fa4dbdc03fa161d8fd636e61a0ed0b.png",
+            "sha256": "239e4cc46f6244bd0d1c6c272be6e67f64fa4dbdc03fa161d8fd636e61a0ed0b"
+          }
+        ]
+      },
+      "condition": "cases/0015_00155951/parametric/json/condition.txt",
+      "figures": [
+        "paper_judge_combined_stacked.jpg"
+      ],
+      "format": "json",
+      "model_id": "text2cad",
+      "model_label": "Text2CAD",
+      "questions": "cases/0015_00155951/parametric/json/questions.json",
+      "scorecard": "cases/0015_00155951/parametric/json/scorecard.json",
+      "task": "parametric",
+      "uid": "0015/00155951",
+      "valid": true
+    },
+    {
+      "assets": {
+        "aligned_mesh": {
+          "bytes": 684,
+          "path": "assets/8e95486a6ad2b9c099299d8b896b65882e5d7d0da4623de1027a5655a2082fca.stl",
+          "sha256": "8e95486a6ad2b9c099299d8b896b65882e5d7d0da4623de1027a5655a2082fca"
+        },
+        "artifact": {
+          "bytes": 5173,
+          "path": "assets/821c1bce7a6cc10f955bc766567b231cada9ee6e71e7743082d6ea86fd569c86.json",
+          "sha256": "821c1bce7a6cc10f955bc766567b231cada9ee6e71e7743082d6ea86fd569c86"
+        },
+        "gt_mesh": {
+          "bytes": 44084,
+          "path": "assets/e92422107cd1b93c27350d33562bbbaaaea086f29192769e7ac8e88a3cf2c835.stl",
+          "sha256": "e92422107cd1b93c27350d33562bbbaaaea086f29192769e7ac8e88a3cf2c835"
+        },
+        "gt_render": {
+          "bytes": 69315,
+          "path": "assets/be7ebd26fd33a3209f63e78555de198e17743bd2805db58fd4c699af20407085.png",
+          "sha256": "be7ebd26fd33a3209f63e78555de198e17743bd2805db58fd4c699af20407085"
+        },
+        "mesh": {
+          "bytes": 684,
+          "path": "assets/35549df802301824f2a98a93ca1517d9c10b463c0284bdad326e6020a765b938.stl",
+          "sha256": "35549df802301824f2a98a93ca1517d9c10b463c0284bdad326e6020a765b938"
+        },
+        "pred_views": [
+          {
+            "bytes": 832901,
+            "path": "assets/14f7831749bbcf64c9da431b186b010f49ca6b3030c4ce2e0c4df490ef82365d.png",
+            "sha256": "14f7831749bbcf64c9da431b186b010f49ca6b3030c4ce2e0c4df490ef82365d"
+          },
+          {
+            "bytes": 832351,
+            "path": "assets/29cb7bc1fa9530b517217298b4a26032d3050b14e57dd9d00d2f8dbdb9bc9627.png",
+            "sha256": "29cb7bc1fa9530b517217298b4a26032d3050b14e57dd9d00d2f8dbdb9bc9627"
+          },
+          {
+            "bytes": 846362,
+            "path": "assets/a6cf31634ec851923c55c7b0953b456dadf20687efbddb424468e6a1f7b46a3d.png",
+            "sha256": "a6cf31634ec851923c55c7b0953b456dadf20687efbddb424468e6a1f7b46a3d"
+          },
+          {
+            "bytes": 852156,
+            "path": "assets/c0f4441e302349008134c068c7bebd2da5d5991cd944dba85ba89b4eba8be01e.png",
+            "sha256": "c0f4441e302349008134c068c7bebd2da5d5991cd944dba85ba89b4eba8be01e"
+          }
+        ]
+      },
+      "condition": "cases/0046_00460772/parametric/json/condition.txt",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png"
+      ],
+      "format": "json",
+      "model_id": "text2cad",
+      "model_label": "Text2CAD",
+      "questions": "cases/0046_00460772/parametric/json/questions.json",
+      "scorecard": "cases/0046_00460772/parametric/json/scorecard.json",
+      "task": "parametric",
+      "uid": "0046/00460772",
+      "valid": true
+    },
+    {
+      "assets": {
+        "aligned_mesh": {
+          "bytes": 10184,
+          "path": "assets/9448f0a69dd63a078b4cc1b02dd4c4a969d1044fae27aa7ffd33529f3b8145f6.stl",
+          "sha256": "9448f0a69dd63a078b4cc1b02dd4c4a969d1044fae27aa7ffd33529f3b8145f6"
+        },
+        "artifact": {
+          "bytes": 5877,
+          "path": "assets/d56cbcc2bb7efdecc085a62d271c7cd414cba15be11742f5c394856d270f3b43.json",
+          "sha256": "d56cbcc2bb7efdecc085a62d271c7cd414cba15be11742f5c394856d270f3b43"
+        },
+        "gt_mesh": {
+          "bytes": 60284,
+          "path": "assets/a0a9fc30a1f17ea12683f940328d91fc9ebeae6b0b2eba5bca6b7a933d95b1a7.stl",
+          "sha256": "a0a9fc30a1f17ea12683f940328d91fc9ebeae6b0b2eba5bca6b7a933d95b1a7"
+        },
+        "gt_render": {
+          "bytes": 65546,
+          "path": "assets/32bf8ebabbab13029414d1852515cbdabaa5f8b9fb40e94d95d5a6d4224df62d.png",
+          "sha256": "32bf8ebabbab13029414d1852515cbdabaa5f8b9fb40e94d95d5a6d4224df62d"
+        },
+        "mesh": {
+          "bytes": 10184,
+          "path": "assets/aa5d976ee9e80f8fe4125373508683374b197e745d8ceb965072e877f24f4820.stl",
+          "sha256": "aa5d976ee9e80f8fe4125373508683374b197e745d8ceb965072e877f24f4820"
+        },
+        "pred_views": [
+          {
+            "bytes": 885687,
+            "path": "assets/c4048494dfea24bfa6754c79ad380d152b61e5f386f6f98bb124905985f258fe.png",
+            "sha256": "c4048494dfea24bfa6754c79ad380d152b61e5f386f6f98bb124905985f258fe"
+          },
+          {
+            "bytes": 884869,
+            "path": "assets/ac77b1fc1250a56e0726d15454c80df277ebafda35b36b09ee30e757d53d373d.png",
+            "sha256": "ac77b1fc1250a56e0726d15454c80df277ebafda35b36b09ee30e757d53d373d"
+          },
+          {
+            "bytes": 840098,
+            "path": "assets/99b1bff03eba87e00293c9925b7cf7aa5ecc4d762476a8872a6be94d42dd7336.png",
+            "sha256": "99b1bff03eba87e00293c9925b7cf7aa5ecc4d762476a8872a6be94d42dd7336"
+          },
+          {
+            "bytes": 835252,
+            "path": "assets/63336d7cc764d6b8d0436f993428e1a23652fff3de9badbca30fda1b7192444b.png",
+            "sha256": "63336d7cc764d6b8d0436f993428e1a23652fff3de9badbca30fda1b7192444b"
+          }
+        ]
+      },
+      "condition": "cases/0062_00621494/parametric/json/condition.txt",
+      "figures": [
+        "qualitative_combined_select_transposed_openscad.png",
+        "qualitative_text2cad_6x6_with_scores_openscad.png"
+      ],
+      "format": "json",
+      "model_id": "text2cad",
+      "model_label": "Text2CAD",
+      "questions": "cases/0062_00621494/parametric/json/questions.json",
+      "scorecard": "cases/0062_00621494/parametric/json/scorecard.json",
+      "task": "parametric",
+      "uid": "0062/00621494",
+      "valid": true
+    },
+    {
+      "assets": {
+        "aligned_mesh": {
+          "bytes": 1484,
+          "path": "assets/e929eb0e6768e929efd568f6ea40cc2293deb14d7813c3b480eaf020c919e3d4.stl",
+          "sha256": "e929eb0e6768e929efd568f6ea40cc2293deb14d7813c3b480eaf020c919e3d4"
+        },
+        "artifact": {
+          "bytes": 3185,
+          "path": "assets/dedbe76b25e4610695bff8500c877bbbb82064d2b44a9c5b64196b4091476a21.json",
+          "sha256": "dedbe76b25e4610695bff8500c877bbbb82064d2b44a9c5b64196b4091476a21"
+        },
+        "gt_mesh": {
+          "bytes": 99334,
+          "path": "assets/5f96193c18da157a6f852ff32f0c8f4f1318293268baf91c428d4c9aefe69d58.stl",
+          "sha256": "5f96193c18da157a6f852ff32f0c8f4f1318293268baf91c428d4c9aefe69d58"
+        },
+        "gt_render": {
+          "bytes": 91371,
+          "path": "assets/dc72d24eadd3744b16f2ee2f7d8ef50bad07da2003f0bdfbae2f804963177f91.png",
+          "sha256": "dc72d24eadd3744b16f2ee2f7d8ef50bad07da2003f0bdfbae2f804963177f91"
+        },
+        "mesh": {
+          "bytes": 1484,
+          "path": "assets/f16f48d3affdbd1c5c58f1db319ebc50457103e3e32b8587acc657ed718e5b77.stl",
+          "sha256": "f16f48d3affdbd1c5c58f1db319ebc50457103e3e32b8587acc657ed718e5b77"
+        },
+        "pred_views": [
+          {
+            "bytes": 869110,
+            "path": "assets/17bbeb3bcf2b58583076fef5e84e6c5d1aa95585aec24b5123f11760ccc9e2fa.png",
+            "sha256": "17bbeb3bcf2b58583076fef5e84e6c5d1aa95585aec24b5123f11760ccc9e2fa"
+          },
+          {
+            "bytes": 872783,
+            "path": "assets/b084316e5d11cf9705e5c608c789e7d4cd2573c57673e0224c39d1359e7c4844.png",
+            "sha256": "b084316e5d11cf9705e5c608c789e7d4cd2573c57673e0224c39d1359e7c4844"
+          },
+          {
+            "bytes": 902418,
+            "path": "assets/9a3814a0af7d2a253d3e80755529002a554dccf1925acde170a76a406c0ef245.png",
+            "sha256": "9a3814a0af7d2a253d3e80755529002a554dccf1925acde170a76a406c0ef245"
+          },
+          {
+            "bytes": 894983,
+            "path": "assets/9a2fa4e233e437de72459b37baecc58abbb0f7bc0b66a3ac0edc01fce68a82f3.png",
+            "sha256": "9a2fa4e233e437de72459b37baecc58abbb0f7bc0b66a3ac0edc01fce68a82f3"
+          }
+        ]
+      },
+      "condition": "cases/0093_00934405/parametric/json/condition.txt",
+      "figures": [
+        "qualitative_text2cad_6x6_with_scores_openscad.png"
+      ],
+      "format": "json",
+      "model_id": "text2cad",
+      "model_label": "Text2CAD",
+      "questions": "cases/0093_00934405/parametric/json/questions.json",
+      "scorecard": "cases/0093_00934405/parametric/json/scorecard.json",
+      "task": "parametric",
+      "uid": "0093/00934405",
+      "valid": true
+    }
+  ],
+  "schema": "p3d-text2cad-native-qualitative-v1"
+}

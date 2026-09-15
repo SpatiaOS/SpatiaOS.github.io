@@ -14,6 +14,13 @@ and version the SVG/PDF URLs. Use the Doubao icon
 
 Run the updater for the leaderboard being changed:
 
+Text keeps its ten general-purpose rows and accepts one separate native
+Text2CAD row in `native_baselines`. `textNativeRows()` validates JSON-only
+metrics and the native headline; the existing `domainRows` renderer keeps it
+separate during sorting. Unsupported formats and hosted API cost are displayed
+as dashes, not invented values. Numerical and original-case handoff materials
+are in `../collaboration/text2cad-native-fixed100/`.
+
 ```bash
 node projects/P3D-Bench/tools/update-live-assembly.mjs
 node projects/P3D-Bench/tools/update-live-text.mjs

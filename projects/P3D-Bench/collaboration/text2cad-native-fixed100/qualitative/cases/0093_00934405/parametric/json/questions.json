@@ -1,0 +1,230 @@
+[
+  {
+    "category": "",
+    "chose_none_of_above": true,
+    "ground_truth": "B",
+    "is_correct": false,
+    "none_of_above_option": "E",
+    "options": [
+      "A cross-shaped rib structure divides the opening into four equal quadrants",
+      "A narrow solid straight web spans across part of the opening",
+      "The opening is completely unobstructed with no spanning structures",
+      "A thick cylindrical pillar stands in the center of the opening"
+    ],
+    "predicted": "E",
+    "qid": "semantic_1",
+    "question": "Which description best matches the structure spanning the large central opening?",
+    "reasoning": "The predicted object is a simple block with a side rectangular cutout and does not have a large central opening or any spanning structures, so none of A-D match.",
+    "reference_answer": "B",
+    "split": "semantic"
+  },
+  {
+    "category": "",
+    "chose_none_of_above": true,
+    "ground_truth": "A",
+    "is_correct": false,
+    "none_of_above_option": "E",
+    "options": [
+      "Small elongated through slots",
+      "Threaded blind holes",
+      "Raised cylindrical bosses",
+      "Rectangular recessed pockets"
+    ],
+    "predicted": "E",
+    "qid": "semantic_2",
+    "question": "What type of features are located near the rounded outer lobes of the wedge-like plate?",
+    "reasoning": "The predicted model does not contain any rounded outer lobes or wedge-like features, so none of the features listed in A-D are present.",
+    "reference_answer": "A",
+    "split": "semantic"
+  },
+  {
+    "category": "",
+    "chose_none_of_above": true,
+    "ground_truth": "A",
+    "is_correct": false,
+    "none_of_above_option": "E",
+    "options": [
+      "They are coaxial, sharing the same center axis",
+      "The boss and recess are located on opposite faces of the plate",
+      "The recess is perpendicular to the axis of the boss",
+      "The recess is offset to one edge of the boss"
+    ],
+    "predicted": "E",
+    "qid": "semantic_3",
+    "question": "What is the geometric relationship between the smaller round solid boss and its internal recess/opening?",
+    "reasoning": "There is no round solid boss or internal recess anywhere on the predicted object, making options A-D inapplicable.",
+    "reference_answer": "A",
+    "split": "semantic"
+  },
+  {
+    "category": "",
+    "chose_none_of_above": true,
+    "ground_truth": "B",
+    "is_correct": false,
+    "none_of_above_option": "E",
+    "options": [
+      "The solid additions are flush with the top face, while the cuts only penetrate halfway",
+      "They have different vertical reaches, not sharing a uniform thickness",
+      "All features share a single uniform thickness across the entire plate",
+      "The plate is completely flat on the underside with no deeper continuations"
+    ],
+    "predicted": "E",
+    "qid": "semantic_4",
+    "question": "How do the vertical profiles of the solid additions and the removed circular cut compare?",
+    "reasoning": "The predicted geometry consists of a single rectangular body with a rectangular slot cut, lacking any circular cuts or solid additions described in options A-D.",
+    "reference_answer": "B",
+    "split": "semantic"
+  },
+  {
+    "category": "",
+    "chose_none_of_above": true,
+    "ground_truth": "B",
+    "is_correct": false,
+    "none_of_above_option": "E",
+    "options": [
+      "3.45",
+      "2.87",
+      "1.52",
+      "4.12"
+    ],
+    "predicted": "E",
+    "qid": "param_1",
+    "question": "What is the ratio of the large central circular opening's radius to the smaller circular through-hole's radius?",
+    "reasoning": "The model contains no circular openings or through-holes, so the ratio described cannot be computed and none of A-D apply.",
+    "reference_answer": "B",
+    "split": "param"
+  },
+  {
+    "category": "",
+    "chose_none_of_above": false,
+    "ground_truth": "A",
+    "is_correct": true,
+    "none_of_above_option": "E",
+    "options": [
+      "The object does not have four circular corner holes; it has three slot-like openings near the lobes",
+      "0.30",
+      "0.45",
+      "0.60"
+    ],
+    "predicted": "A",
+    "qid": "param_2",
+    "question": "What is the sum of the radii of the four circular corner holes on the main base?",
+    "reasoning": "The base does not contain four circular corner holes; per the existence trap instructions, the negation/correction option is selected.",
+    "reference_answer": "A",
+    "split": "param"
+  },
+  {
+    "category": "",
+    "chose_none_of_above": false,
+    "ground_truth": "D",
+    "is_correct": true,
+    "none_of_above_option": "E",
+    "options": [
+      "3",
+      "1",
+      "2",
+      "There are no rectangular pockets recessed into the top face"
+    ],
+    "predicted": "D",
+    "qid": "param_3",
+    "question": "How many rectangular pockets are recessed into the top face of the main wedge base?",
+    "reasoning": "Observing the render and code, the top face is completely flat and has no recessed rectangular pockets, matching the negation option.",
+    "reference_answer": "D",
+    "split": "param"
+  },
+  {
+    "category": "",
+    "chose_none_of_above": true,
+    "ground_truth": "D",
+    "is_correct": false,
+    "none_of_above_option": "E",
+    "options": [
+      "0.06",
+      "0.35",
+      "0.24",
+      "0.12"
+    ],
+    "predicted": "E",
+    "qid": "param_4",
+    "question": "What is the ratio of the shallow circular upper feature's height to the main wedge base's overall height?",
+    "reasoning": "There is no shallow circular upper feature on the predicted model, so no corresponding height ratio exists among options A-D.",
+    "reference_answer": "D",
+    "split": "param"
+  },
+  {
+    "category": "",
+    "chose_none_of_above": true,
+    "ground_truth": "C",
+    "is_correct": false,
+    "none_of_above_option": "E",
+    "options": [
+      "By sweeping a profile along a curved path",
+      "By adding a cylindrical boss",
+      "By removing material (subtractive operation) through the solid pad",
+      "By intersecting two separate bodies"
+    ],
+    "predicted": "E",
+    "qid": "param_5",
+    "question": "How is the smaller circular through-hole near the center of the object formed?",
+    "reasoning": "The predicted model does not have any circular through-hole near its center, so none of the formation operations in A-D describe the object.",
+    "reference_answer": "C",
+    "split": "param"
+  },
+  {
+    "category": "",
+    "chose_none_of_above": true,
+    "ground_truth": "A",
+    "is_correct": false,
+    "none_of_above_option": "E",
+    "options": [
+      "3",
+      "4",
+      "2",
+      "5"
+    ],
+    "predicted": "E",
+    "qid": "param_6",
+    "question": "How many slot-like through openings are located near the rounded outer lobes of the main base?",
+    "reasoning": "The predicted CAD model has zero slot-like through openings or lobes, so none of the counts in A-D (2, 3, 4, 5) match.",
+    "reference_answer": "A",
+    "split": "param"
+  },
+  {
+    "category": "",
+    "chose_none_of_above": true,
+    "ground_truth": "D",
+    "is_correct": false,
+    "none_of_above_option": "E",
+    "options": [
+      "0.150",
+      "0.034",
+      "0.125",
+      "0.068"
+    ],
+    "predicted": "E",
+    "qid": "param_7",
+    "question": "What is the difference between the overall length of the main wedge base and its overall width?",
+    "reasoning": "The main block has an overall length of 0.7500 and width of 0.3706, giving a difference of ~0.3794, which does not match any of options A-D.",
+    "reference_answer": "D",
+    "split": "param"
+  },
+  {
+    "category": "",
+    "chose_none_of_above": false,
+    "ground_truth": "B",
+    "is_correct": true,
+    "none_of_above_option": "E",
+    "options": [
+      "0.1250",
+      "0.1718",
+      "0.3436",
+      "0.2500"
+    ],
+    "predicted": "B",
+    "qid": "param_8",
+    "question": "What is the overall height (thickness) of the main rounded wedge base?",
+    "reasoning": "Tracing the artifact extrusion depth and description for part_1 yields an overall height/thickness of 0.171875 (0.1719), which corresponds to 0.1718.",
+    "reference_answer": "B",
+    "split": "param"
+  }
+]

@@ -1,6 +1,6 @@
 import liveTextSummary from "./liveTextSummary.json";
 import liveAssemblySummary from "./liveAssemblySummary.json";
-import { textCost } from "../../../projects/P3D-Bench/tools/text-table.mjs";
+import { textCost, textNativeRows } from "../../../projects/P3D-Bench/tools/text-table.mjs";
 
 export type ResultTableRow = { model: string; model_id?: string; family?: string; cells: string };
 
@@ -123,5 +123,6 @@ export const liveResultTables: ResultSubtable[] = [
       family: row.family,
       cells: `${row.metrics} ${row.score.toFixed(2)} ${textCost(row)}`,
     })),
+    domainRows: textNativeRows(liveTextSummary),
   },
 ];

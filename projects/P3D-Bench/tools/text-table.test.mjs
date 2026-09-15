@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { validateTextSummary, textCost, TEXT_MODELS } from "./text-table.mjs";
+import { validateTextSummary, textCost, textNativeRows, TEXT_MODELS } from "./text-table.mjs";
 
 const summary = JSON.parse(readFileSync(new URL("../live-text-summary.json", import.meta.url)));
 
@@ -40,5 +40,20 @@ test("reject missing metrics, duplicates, stale scores, wrong means and costs", 
     const copy = structuredClone(summary);
     mutate(copy);
     assert.throws(() => validateTextSummary(copy));
+  }
+});
+
+test("native JSON baseline never invents OpenSCAD, averages or an API price", () => {
+  const native = { model_id: "text2cad", model: "Text2CAD (JSON only)", family: "text2cad",
+    scope: "native_json_only", cost_kind: "local_checkpoint_not_api_priced", score: 40,
+    formats: {descriptive: {json: {judge: .2, valid: .91}},
+      parametric: {json: {geometry: .3, topology: .9, judge: .2, valid: .98}}},
+    metrics: "0.200 0.910 - - - - 0.300 0.900 0.200 0.980 - - - - - - - -" };
+  const input = {native_baselines: [native]};
+  assert.equal(textNativeRows(input)[0].cells, native.metrics + " 40.00 -");
+  for (const mutate of [r => r.formats.descriptive.openscad = {judge: .2, valid: .91},
+    r => r.score++, r => r.metrics = r.metrics.replace("-", "0.000")]) {
+    const copy = structuredClone(native); mutate(copy);
+    assert.throws(() => textNativeRows({native_baselines: [copy]}));
   }
 });

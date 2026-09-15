@@ -1,0 +1,230 @@
+[
+  {
+    "category": "",
+    "chose_none_of_above": true,
+    "ground_truth": "A",
+    "is_correct": false,
+    "none_of_above_option": "E",
+    "options": [
+      "It runs from the smaller rounded end of the projecting arm toward the tall annular sleeve as a raised web",
+      "It connects the low rounded base section to the underside of the projecting arm",
+      "It spans internally across the central bore of the upright sleeve",
+      "It wraps horizontally around the outer circumference of the tall annular sleeve"
+    ],
+    "predicted": "E",
+    "qid": "semantic_1",
+    "question": "How does the thin triangular rib connect to the rest of the model?",
+    "reasoning": "The rendered model is a simple rectangular prism and completely lacks any thin triangular rib, arm, or sleeve.",
+    "reference_answer": "A",
+    "split": "semantic"
+  },
+  {
+    "category": "",
+    "chose_none_of_above": true,
+    "ground_truth": "D",
+    "is_correct": false,
+    "none_of_above_option": "E",
+    "options": [
+      "It is threaded and tapers towards the bottom",
+      "It stops halfway down as a shallow depression",
+      "It is intersected by a solid horizontal plate",
+      "It continues completely through the stepped circular portions"
+    ],
+    "predicted": "E",
+    "qid": "semantic_2",
+    "question": "Which statement accurately describes the central bore of the tall annular sleeve?",
+    "reasoning": "The predicted object is a solid rectangular block with no annular sleeve or central bore.",
+    "reference_answer": "D",
+    "split": "semantic"
+  },
+  {
+    "category": "",
+    "chose_none_of_above": true,
+    "ground_truth": "B",
+    "is_correct": false,
+    "none_of_above_option": "E",
+    "options": [
+      "It contains a deep rectangular groove running along its entire length",
+      "It has a stepped profile formed by a lower cutaway, placing the outer portion on a higher tier",
+      "It features a continuous slope that tapers down to a sharp edge",
+      "It is perfectly flat and flush with the bottom of the tall annular sleeve"
+    ],
+    "predicted": "E",
+    "qid": "semantic_3",
+    "question": "What is the geometric profile of the projecting arm's underside?",
+    "reasoning": "The predicted object is a simple cuboid without a tall annular sleeve or distinct projecting arm profile described in options A-D.",
+    "reference_answer": "B",
+    "split": "semantic"
+  },
+  {
+    "category": "",
+    "chose_none_of_above": true,
+    "ground_truth": "C",
+    "is_correct": false,
+    "none_of_above_option": "E",
+    "options": [
+      "A solid spherical boss",
+      "A square mounting slot",
+      "A rounded opening",
+      "A raised hexagonal nut"
+    ],
+    "predicted": "E",
+    "qid": "semantic_4",
+    "question": "What feature is located at the smaller rounded end of the projecting arm?",
+    "reasoning": "The predicted object has no rounded arm end, boss, slot, opening, or nut.",
+    "reference_answer": "C",
+    "split": "semantic"
+  },
+  {
+    "category": "",
+    "chose_none_of_above": true,
+    "ground_truth": "B",
+    "is_correct": false,
+    "none_of_above_option": "E",
+    "options": [
+      "0.2168",
+      "0.0434",
+      "0.0867",
+      "0.1301"
+    ],
+    "predicted": "E",
+    "qid": "param_1",
+    "question": "What is the wall thickness of the taller hollow sleeve (the difference between its outer and inner radii)?",
+    "reasoning": "There is no taller hollow sleeve in the predicted geometry, so a wall thickness cannot be determined from options A-D.",
+    "reference_answer": "B",
+    "split": "param"
+  },
+  {
+    "category": "",
+    "chose_none_of_above": true,
+    "ground_truth": "C",
+    "is_correct": false,
+    "none_of_above_option": "E",
+    "options": [
+      "5:1",
+      "2:1",
+      "4:1",
+      "3:1"
+    ],
+    "predicted": "E",
+    "qid": "param_2",
+    "question": "What is the ratio of the taller hollow sleeve's overall height to the height of the lower rounded base?",
+    "reasoning": "Neither the taller hollow sleeve nor the lower rounded base exists in the predicted model.",
+    "reference_answer": "C",
+    "split": "param"
+  },
+  {
+    "category": "",
+    "chose_none_of_above": true,
+    "ground_truth": "A",
+    "is_correct": false,
+    "none_of_above_option": "E",
+    "options": [
+      "0.0866",
+      "0.1301",
+      "0.1734",
+      "0.0434"
+    ],
+    "predicted": "E",
+    "qid": "param_3",
+    "question": "What is the difference in diameter between the central through-hole of the taller sleeve and the through-hole in the lower rounded base?",
+    "reasoning": "Neither through-hole exists in the predicted model, making options A-D inapplicable.",
+    "reference_answer": "A",
+    "split": "param"
+  },
+  {
+    "category": "",
+    "chose_none_of_above": false,
+    "ground_truth": "D",
+    "is_correct": false,
+    "none_of_above_option": "E",
+    "options": [
+      "This object does not have a triangular web",
+      "1:2",
+      "2:1",
+      "1:1"
+    ],
+    "predicted": "A",
+    "qid": "param_4",
+    "question": "What is the ratio of the number of narrow triangular webs to the number of taller hollow sleeves?",
+    "reasoning": "Examining both the code and render confirms that the model does not have a triangular web, matching the existence trap option.",
+    "reference_answer": "D",
+    "split": "param"
+  },
+  {
+    "category": "",
+    "chose_none_of_above": true,
+    "ground_truth": "A",
+    "is_correct": false,
+    "none_of_above_option": "E",
+    "options": [
+      "There are no rectangular pockets; the sleeve is a continuous annular cylinder",
+      "1",
+      "4",
+      "2"
+    ],
+    "predicted": "E",
+    "qid": "param_5",
+    "question": "How many rectangular pockets are cut into the top face of the taller hollow sleeve?",
+    "reasoning": "The predicted model does not contain an annular sleeve or any pockets, failing to match any option including option A's description.",
+    "reference_answer": "A",
+    "split": "param"
+  },
+  {
+    "category": "",
+    "chose_none_of_above": false,
+    "ground_truth": "C",
+    "is_correct": false,
+    "none_of_above_option": "E",
+    "options": [
+      "It is a full-depth solid extending all the way down to the base datum",
+      "It has a cylindrical boss protruding downwards",
+      "Material is removed from the lower band, leaving it as a raised stepped tier",
+      "It is angled upwards with a continuous chamfer"
+    ],
+    "predicted": "A",
+    "qid": "param_6",
+    "question": "How is the underside of the projecting straight-sided arm shaped relative to the base datum?",
+    "reasoning": "Tracing the construction logic shows part_1 is a solid rectangle extending to the base datum (Z=0) and part_2 used JoinFeatureOperation instead of a cut, leaving the solid full-depth down to the base datum.",
+    "reference_answer": "C",
+    "split": "param"
+  },
+  {
+    "category": "",
+    "chose_none_of_above": false,
+    "ground_truth": "A",
+    "is_correct": false,
+    "none_of_above_option": "E",
+    "options": [
+      "2",
+      "1",
+      "0",
+      "3"
+    ],
+    "predicted": "C",
+    "qid": "param_7",
+    "question": "How many distinct vertical through-holes are present in the final object?",
+    "reasoning": "Tracing part_3 shows its cut coordinate origin (Z=0.1094) lies outside the bounding box (max Z=0.1038) and the render shows a completely solid block with 0 through-holes.",
+    "reference_answer": "A",
+    "split": "param"
+  },
+  {
+    "category": "",
+    "chose_none_of_above": true,
+    "ground_truth": "B",
+    "is_correct": false,
+    "none_of_above_option": "E",
+    "options": [
+      "0.0650",
+      "0.0217",
+      "0.0108",
+      "0.0434"
+    ],
+    "predicted": "E",
+    "qid": "param_8",
+    "question": "What is the material thickness of the narrow triangular web?",
+    "reasoning": "No narrow triangular web exists in the predicted model, so its thickness cannot match any of options A-D.",
+    "reference_answer": "B",
+    "split": "param"
+  }
+]

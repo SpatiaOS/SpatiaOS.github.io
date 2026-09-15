@@ -1,0 +1,78 @@
+[
+  {
+    "category": "",
+    "chose_none_of_above": false,
+    "ground_truth": "B",
+    "is_correct": false,
+    "none_of_above_option": "E",
+    "options": [
+      "They are flush with the web, creating a uniform flat surface across the entire part.",
+      "They are raised solid additions along opposite edges that extend higher than the web.",
+      "They are cylindrical pillars placed at the four corners of the web.",
+      "They are cutouts removed from the center of the web to reduce weight."
+    ],
+    "predicted": "A",
+    "qid": "semantic_1",
+    "question": "How do the two long side walls relate to the central web structure?",
+    "reasoning": "The rendered model is a completely flat rectangular slab with no raised edges, meaning the side regions are completely flush with the rest of the surface.",
+    "reference_answer": "B",
+    "split": "semantic"
+  },
+  {
+    "category": "",
+    "chose_none_of_above": false,
+    "ground_truth": "A",
+    "is_correct": false,
+    "none_of_above_option": "E",
+    "options": [
+      "The base features open void areas between ribs, including circular openings.",
+      "The base is a completely solid filled slab with no openings.",
+      "The base contains only rectangular slots along its outer perimeter.",
+      "The base has a single large spherical hollow in its exact center."
+    ],
+    "predicted": "B",
+    "qid": "semantic_2",
+    "question": "Which of the following best describes the openings present in the base web?",
+    "reasoning": "Both the render images and code show a continuous solid rectangular extrusion with no cutouts, holes, or voids anywhere.",
+    "reference_answer": "A",
+    "split": "semantic"
+  },
+  {
+    "category": "",
+    "chose_none_of_above": false,
+    "ground_truth": "D",
+    "is_correct": false,
+    "none_of_above_option": "E",
+    "options": [
+      "It is tapered, gradually thinning from one end to the other.",
+      "The central web is significantly thicker and taller than the surrounding side walls.",
+      "It has a uniform thickness throughout the entire model.",
+      "It has a stepped depth, with the side walls extending higher than the shallow web."
+    ],
+    "predicted": "C",
+    "qid": "semantic_3",
+    "question": "What characterizes the depth profile of the overall part?",
+    "reasoning": "The model has a single uniform extrusion thickness (Z = 0.0078) throughout its entire extent without steps or tapers.",
+    "reference_answer": "D",
+    "split": "semantic"
+  },
+  {
+    "category": "",
+    "chose_none_of_above": false,
+    "ground_truth": "A",
+    "is_correct": false,
+    "none_of_above_option": "E",
+    "options": [
+      "It is formed by internal diagonal and cross ribs.",
+      "It is a solid, continuous filled slab.",
+      "It consists of a series of parallel circular tubes.",
+      "It is completely empty, forming a simple rectangular frame with no internal support."
+    ],
+    "predicted": "B",
+    "qid": "semantic_4",
+    "question": "How is the interior of the rectangular web structured?",
+    "reasoning": "The part is modeled as a simple solid, continuous filled rectangular slab with no ribs or internal structure.",
+    "reference_answer": "A",
+    "split": "semantic"
+  }
+]

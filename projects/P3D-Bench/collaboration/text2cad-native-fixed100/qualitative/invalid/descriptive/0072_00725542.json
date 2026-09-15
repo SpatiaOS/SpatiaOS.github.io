@@ -1,0 +1,31 @@
+{
+  "format": "json",
+  "historical_generation_attempt_errors": [
+    {
+      "attempt": 1,
+      "errors": [
+        "Failed to build solids from minimal JSON"
+      ],
+      "valid": false
+    }
+  ],
+  "model_id": "text2cad",
+  "program": {
+    "bytes": 1767,
+    "path": "assets/53d1356bb84660c79de6a4d46282257b10d8f365177e5ad3bafc91aa81b34f8c.json",
+    "sha256": "53d1356bb84660c79de6a4d46282257b10d8f365177e5ad3bafc91aa81b34f8c"
+  },
+  "selected_local_errors": {
+    "error": "Failed to build solids from minimal JSON",
+    "export_errors": [
+      "Failed to build solids from minimal JSON"
+    ]
+  },
+  "selected_record_flags": {
+    "llm_failed": false
+  },
+  "task": "descriptive",
+  "taxonomy_assigned": false,
+  "uid": "0072/00725542",
+  "valid": false
+}
