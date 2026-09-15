@@ -4,12 +4,18 @@ The public page has one leaderboard, showing current Assembly, Text and Image
 results in that order. There is no Paper/Live switch.
 Keep `leaderboard-renderer.fragment.js` and the source `ResultsTables`
 component aligned with that presentation when patching the active bundle.
-The overview figure is synchronized with Figure 1 of the ICLR 2027 paper.
+The score figure is synchronized with Figure 1 of the ICLR 2027 paper.
 Its panels use separate score axes and the same Assembly model order. The
 figure uses the paper-reaggregated Text scores; the live Text table retains
 its independently published fixed-denominator scores. SVG, PDF and PNG copies must be synchronized together, and the SVG
 and PDF URLs versioned whenever that figure changes. Use the Doubao icon
 (`demo/icons/src/doubao-color.svg`) for the Doubao family.
+
+The evaluation overview uses Figure 2 from the ICLR 2027 paper's
+`figures/fig2_leaderboard.pdf` (SHA256 `5410596bd1448b4b0f28db1cc7c7958a98de3d3e22eb9fcdb76bbef738154207`).
+Render the PDF with `pdftoppm -scale-to 2800 -png -singlefile` and use
+`figures/fig2_leaderboard-5410596bd144.png` in both the source overview and active bundle.
+Version the image and bundle filenames when the paper figure changes.
 
 Run the updater for the leaderboard being changed:
 

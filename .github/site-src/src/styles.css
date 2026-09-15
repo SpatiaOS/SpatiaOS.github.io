@@ -2581,3 +2581,41 @@ select {
     max-height: 300px;
   }
 }
+
+/* Paper Figure 2 overview; matches the published layout. */
+.overview-section {
+  padding-top: clamp(30px, 3.6vw, 50px);
+  padding-bottom: 0;
+}
+
+.overview-figure-block {
+  margin: 0 auto;
+  max-width: 1120px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.overview-figure-block img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--panel);
+  box-shadow: var(--shadow-soft);
+}
+
+.overview-figure-block figcaption {
+  max-width: 940px;
+  margin: 0 auto;
+  color: var(--muted);
+  font: 400 14.5px/1.55 var(--font-body);
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .overview-figure-block figcaption {
+    font-size: 13.5px;
+  }
+}

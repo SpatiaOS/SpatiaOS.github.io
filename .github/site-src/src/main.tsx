@@ -320,6 +320,15 @@ function App() {
         </div>
       </section>
 
+      <section id="overview" className="section overview-section">
+        <figure className="overview-figure-block">
+          <img src="./figures/fig2_leaderboard-5410596bd144.png" alt="P3D-Bench overview: tasks, evaluated models and output formats, and evaluation metrics" />
+          <figcaption>
+            P3D-Bench evaluates MLLMs and domain-specific models on three parametric-CAD tasks — Text-to-3D, Image-to-3D and Assembly-3D — across four code formats (JSON, OpenSCAD, CadQuery, Three.js), scoring geometric fidelity, mesh topology, an MLLM judge and part-level structure.
+          </figcaption>
+        </figure>
+      </section>
+
       <section id="leaderboard" className="section leaderboard-section">
         <div className="section-heading">
           <h2>Leaderboard</h2>
