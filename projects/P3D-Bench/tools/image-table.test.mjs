@@ -11,13 +11,14 @@ const assembly = JSON.parse(readFileSync(new URL("../live-assembly-summary.json"
 test("Image uses current nine-model Hard100 data and records all coverage gaps", () => {
   const table = buildImageTable(summary);
   assert.deepEqual(table.rows.map(r => r.model_id), IMAGE_MODELS);
-  assert.deepEqual(table.rows.map(r => r.cells.split(" ").at(-2)), ["72.08", "66.99", "66.45", "66.05", "66.03", "64.93", "64.67", "62.84", "53.08"]);
+  assert.deepEqual(table.rows.map(r => r.cells.split(" ").at(-2)), ["72.08", "66.99", "66.45", "66.05", "66.03", "64.93", "64.67", "62.84", "52.68"]);
   assert.equal(table.metrics.length, 20);
   assert.equal(table.groups.reduce((n, g) => n + g.span, 0), 20);
   assert(table.rows.every(r => r.cells.split(" ").length === 20));
   assert.equal(table.rows[0].cells.split(" ")[16], "257/300");
   assert.equal(table.rows[2].cells.split(" ")[17], "285/297");
-  assert.equal(table.rows.at(-1).cells.split(" ")[16], "196/300");
+  assert.equal(table.rows.at(-1).cells.split(" ")[16], "299/300");
+  assert.equal(table.rows.at(-1).cells.split(" ")[17], "253/253");
   assert(summary.rows.every(r => r.provisional));
   assert.equal(table.title, "Image-to-3D");
   assert.equal(table.note, "");

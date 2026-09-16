@@ -112,21 +112,23 @@
       "id": "image",
       "label": "Image-to-3D",
       "scores": {
-        "gpt6_astra_local": 72.08431975308642,
-        "claude_opus5": 66.99395555555554,
+        "gpt6_astra_local": 72.08431975308643,
+        "claude_opus5": 66.99395555555556,
         "gemini38_flash": 66.44887407407407,
-        "grok46": 64.67326008230452,
+        "grok46": 64.67326008230451,
         "kimi_k3": 66.0267205761317,
         "qwen38max": 66.04777736625515,
         "glm53_flash": 64.93369547325103,
         "deepseek41_flash": 62.835760905349794,
-        "doubao_seed21": 53.08202222222222
+        "doubao_seed21": 52.68205843621399
       },
       "result_version": "Current models",
       "source_kind": "release_snapshot_three_axis_judge",
       "source_file": "data/image_assembly100/release_metrics.json",
       "legend_group": "models",
-      "source": "data/image_assembly100/release_metrics.json"
+      "source": "data/image_assembly100/release_metrics.json",
+      "snapshot_at": "2026-09-16T12:18:48+08:00",
+      "source_report_sha256": "d60ed0b55e801d78748f1bf6817ac255bb655c14e8db4efbb398f71ce52a5d9f"
     }
   ],
   "legend_groups": {

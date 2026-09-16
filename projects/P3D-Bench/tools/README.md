@@ -194,13 +194,13 @@ license alongside the icon at `demo/icons/src/grok.LICENSE`.
 ## Image Hard100 and additional Assembly formats (September 15)
 
 `live-image-summary.json` contains nine current models on the same 100 Image
-UIDs in CadQuery, OpenSCAD and Three.js, frozen at **2026-09-15 23:01:23 +08:00**.
+UIDs in CadQuery, OpenSCAD and Three.js, frozen at **2026-09-16 12:18:48 +08:00**.
 The score is the equal-format average of Geo, Topo and Judge, multiplied by 100.
 Judge uses the equal mean of geometry, aesthetics and semantic axes, normalized by `(s - 1) / 9`. Valid is reported separately. The current
 Image result is provisional in the source metadata: GPT has 257/300 tested cases, Opus 277/300, and
-Doubao 196/300. The other six models have all 300 tested, with 66 successful
-exports collectively awaiting local evaluation. Doubao has three further judge
-gaps at this snapshot. Tested and Judged coverage appear in the table.
+Doubao 299/300. The other six models have all 300 tested, with 66 successful
+exports collectively awaiting local evaluation. Doubao has all 253 valid
+outputs judged; one API failure and 46 invalid outputs remain. Tested and Judged coverage appear in the table.
 
 The importer uses the existing `snapshot_image2cad_current_metrics.py` result:
 API failures are excluded, genuine generation/export failures retain the
@@ -306,3 +306,13 @@ data URLs, and updates the source mirror. Repeat updates with the same payload
 are a no-op. The Text updater recognizes this composed loader and preserves it.
 The display retains the existing task tabs, model carousel, input dialogs and
 part-pair carousel; spatial-only responsive CSS handles narrow screens.
+
+### September 16 completed Image queues
+
+The final saved Image snapshot updates Doubao from 53.08 to 52.68, with 299/300
+tested and 253/253 successful exports judged. All eight other displayed rows
+remain unchanged. The summary retains 67 API failures and 66 historical local
+evaluation gaps; this is not a claim of complete fixed-denominator coverage.
+Figure 1 SVG/PDF/PNG and its data mirror use the same updated Image score,
+preserving the paper's Assembly and Text scores, styling, axes and model order.
+No generation or evaluator calls were made by this publication.
