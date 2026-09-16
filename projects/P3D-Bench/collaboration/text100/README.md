@@ -18,7 +18,10 @@ Judge (0–100). Topology is reported separately. Unavailable valid IoU is omitt
 not worst-filled. Measured zeros remain zero, and invalid outputs retain zero
 Geometry contributions. Separately reported IoU omits unavailable valid entries.
 Saved primitive case measurements are unchanged; Geometry and aggregate IoU are rederived;
-programs, images, Judge evidence and costs are unchanged.
+programs, images, Judge evidence and full-task costs are unchanged.
+Cost is now reported per single generation: use `usd_per_generation` in
+`numerical/model_score_cost.csv` (selected total divided by 400 responses).
+The full-task total is retained as `total_standard_cost_usd`, not the plot x-axis.
 Use aggregate CSVs for rankings and cost/radar plots, and per-case values for
 distributions. Native Text2CAD has a separate preserved contract. The paper's original figures and their
 full typesetting are restored; pending Text figure updates remain with the

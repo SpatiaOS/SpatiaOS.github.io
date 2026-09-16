@@ -1,7 +1,10 @@
 {
   "aggregation_reference": "Current shared manuscript scoring revision, 2026-09-16; Text IoU omission explicitly approved by owner.",
   "chamfer_policy": "Clamp each case to [0,0.01], use 0.01 for invalid, then average; score = 1 - CD / 0.01.",
-  "cost_policy": "Saved list-price equivalent for four selected generations per UID; full task USD = USD/UID * 100. No retries/Judge/local evaluation. Kimi is the retained tokenizer estimate.",
+  "cost_denominator_selected_responses": 400,
+  "cost_policy": "Saved standard-rate generation cost divided by 400 selected responses (100 UIDs x two specifications x two formats). USD/generation is an average for one response; retries, Judge and local evaluation are excluded. Full-task totals and token usage are unchanged; Kimi retains its tokenizer estimate.",
+  "cost_revision": "text_generation_cost_v1",
+  "cost_unit": "USD/generation",
   "dataset_graphs": "Keep complete dataset diagrams and statistics unchanged; the distribution files here describe only the evaluation subset.",
   "dataset_size": 400,
   "denominator_per_cell": 100,

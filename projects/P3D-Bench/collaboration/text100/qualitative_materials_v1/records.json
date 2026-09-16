@@ -26,7 +26,7 @@
       ],
       "format": "openscad",
       "model_id": "gpt6_probe",
-      "model_label": "GPT-6 (xhigh)",
+      "model_label": "GPT-6 (max)",
       "model_order": 0,
       "roles": [
         "qualitative_grid"
@@ -277,7 +277,7 @@
       ],
       "format": "openscad",
       "model_id": "gpt6_probe",
-      "model_label": "GPT-6 (xhigh)",
+      "model_label": "GPT-6 (max)",
       "model_order": 0,
       "roles": [
         "qualitative_grid"
@@ -536,7 +536,7 @@
       ],
       "format": "openscad",
       "model_id": "gpt6_probe",
-      "model_label": "GPT-6 (xhigh)",
+      "model_label": "GPT-6 (max)",
       "model_order": 0,
       "roles": [
         "qualitative_grid"
@@ -786,7 +786,7 @@
       ],
       "format": "openscad",
       "model_id": "gpt6_probe",
-      "model_label": "GPT-6 (xhigh)",
+      "model_label": "GPT-6 (max)",
       "model_order": 0,
       "roles": [
         "qualitative_grid"
@@ -1050,7 +1050,7 @@
         ]
       },
       "model_id": "gpt6_probe",
-      "model_label": "GPT-6 (xhigh)",
+      "model_label": "GPT-6 (max)",
       "model_order": 0,
       "old_displayed_question_matches": [
         {
@@ -1585,7 +1585,7 @@
         ]
       },
       "model_id": "gpt6_probe",
-      "model_label": "GPT-6 (xhigh)",
+      "model_label": "GPT-6 (max)",
       "model_order": 0,
       "old_displayed_question_matches": [
         {

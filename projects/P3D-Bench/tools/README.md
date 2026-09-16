@@ -26,7 +26,7 @@ averages CD score, available IoU, F@.01 and NC per valid case, then averages all
 100 cases. Unavailable valid IoU is omitted, measured zero stays zero, and invalid
 cases retain zero Geometry. The headline averages descriptive Judge, parametric
 Geometry and parametric Judge. Topology is still displayed, not aggregated
-into the headline. Score and USD/case are the first two columns after Model;
+into the headline. Score and USD/gen. (USD per generation) are the first two columns after Model;
 Topo and Valid receive no best/second styling. The updater synchronizes the
 scoped renderer fragment as well as the Text table; other task data is unchanged.
 Text demo metric cards no longer display F@0.05; the raw diagnostic remains
@@ -143,21 +143,18 @@ Assembly updater. The updater rejects missing usage or inconsistent denominators
 
 Text uses `../live-text-summary.json` (`p3d-live-text-summary-v2`): exactly ten
 current models, fixed-100, JSON/OpenSCAD only in the main table. Scores follow
-the owner-specified AAAI table implementation: valid measured IoU mean weighted
-by common metric-success count / 100. Inapplicable IoU is not a measured zero.
+the current per-case available-IoU Geometry contract described above.
 Scores are sorted before rounding and displayed to two decimals. The eighteen
 metric cells are checked against the per-format values and equal-weight means.
 All ten current Text rows require a supported numeric dollar value; do not show
 `N/A`, an approximation marker, or substitute a zero. Kimi retains its separate
-tokenizer-estimate fields but displays `$0.486`. Qwen `$0.410` and Doubao `$0.638`
-reuse their saved official-price equivalents with exactly 400 selected responses
-per model, excluding retries. Doubao retains the fixed 7 CNY/USD comparison
-conversion, not today's FX. The earlier `$0.751` included 50 unselected responses
-and must not be used for the selected-response comparison. GLM-5.3 and
-GLM-5.3-Flash likewise use their 400 selected responses, not all saved attempts.
-Text costs cover four generation cells per UID and are not Assembly's cost
-convention or actual invoices. The private v3 audit records the source hashes.
-`cost_usd` and `estimated_cost_usd` store USD/UID multiplied by 100. Historical
+tokenizer-estimate fields but displays `$0.1215`. Qwen `$0.1026` and Doubao `$0.1594`
+use the same saved standard prices and exactly 400 selected responses per model.
+Text cost is USD per single generation, averaged across both specifications and
+both formats. `usd_per_generation` is the displayed value; `cost_usd` and
+`estimated_cost_usd` remain full-task totals and are divided by 400, not 100.
+The explicit `text_generation_cost_v1` contract rejects stale per-UID values.
+Historical
 seventeen-row input is retained exactly in
 `../history/live-text-summary-35f95f8.json`, not in the current table.
 

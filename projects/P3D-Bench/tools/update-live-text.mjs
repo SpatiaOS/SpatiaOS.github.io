@@ -34,7 +34,7 @@ const textTable = {
     { label: "Average", span: 4 },
   ],
   metrics: [
-    "Score", "USD / case",
+    "Score", "USD/gen.",
     "Judge", "Valid", "Judge", "Valid", "Judge", "Valid",
     "Geo", "Topo", "Judge", "Valid", "Geo", "Topo", "Judge", "Valid",
     "Geo", "Topo", "Judge", "Valid",

@@ -1,7 +1,11 @@
 {
+  "cost_denominator_selected_responses": 400,
   "cost_display_policy": "numeric_usd_only_estimation_basis_in_separate_document",
+  "cost_policy": "Saved standard-rate generation cost divided by 400 selected responses (100 UIDs x two specifications x two formats). USD/generation is an average for one response; retries, Judge and local evaluation are excluded. Full-task totals and token usage are unchanged; Kimi retains its tokenizer estimate.",
+  "cost_revision": "text_generation_cost_v1",
   "cost_source_sha256": "de3200744dab6f9eadea91f2cde416968824d95bf71caaa36bb23751f8a1b0f0",
   "cost_supplement_sha256": "e536d9de66ecf2c6f8b1fb10bb842e78f5686f88312b0e60c471e7c09290bbc9",
+  "cost_unit": "USD/generation",
   "fixed_denominator": 100,
   "fixed_uid_sha256": "fac7d9b2950d98b3e10b3bc966a9b76f3674407c2a18e4a3d541b2c5f5a10593",
   "geometry_aggregation": "case_first_available_terms_fixed100",
@@ -63,7 +67,7 @@
   "product_version": "text_fixed100_geo4_score3_iou_omit_v5",
   "rows": [
     {
-      "cost_basis": "Saved standard-rate equivalent for four selected generations per UID; retries excluded; not an invoice",
+      "cost_basis": "Saved standard-rate generation cost divided by 400 selected responses (100 UIDs x two specifications x two formats). USD/generation is an average for one response; retries, Judge and local evaluation are excluded. Full-task totals and token usage are unchanged; Kimi retains its tokenizer estimate.",
       "cost_usd": 59.202018,
       "estimated_cost_usd": null,
       "family": "openai",
@@ -104,14 +108,15 @@
         }
       },
       "metrics": "0.927 1.000 0.926 1.000 0.926 1.000 0.665 0.987 0.911 1.000 0.710 1.000 0.944 1.000 0.688 0.993 0.927 1.000",
-      "model": "GPT-6 (xhigh)",
+      "model": "GPT-6 (max)",
       "model_id": "gpt6_probe",
       "score": 84.7271962962963,
+      "selected_generation_responses": 400,
       "usage_kind": "selected_response_usage",
-      "usd_per_case": 0.59202018
+      "usd_per_generation": 0.148005045
     },
     {
-      "cost_basis": "Saved standard-rate equivalent for four selected generations per UID; retries excluded; not an invoice",
+      "cost_basis": "Saved standard-rate generation cost divided by 400 selected responses (100 UIDs x two specifications x two formats). USD/generation is an average for one response; retries, Judge and local evaluation are excluded. Full-task totals and token usage are unchanged; Kimi retains its tokenizer estimate.",
       "cost_usd": 41.022307971,
       "estimated_cost_usd": null,
       "family": "qwen",
@@ -155,11 +160,12 @@
       "model": "Qwen3.8-Max (xhigh)",
       "model_id": "qwen38max",
       "score": 82.3836425925926,
+      "selected_generation_responses": 400,
       "usage_kind": "selected_response_usage",
-      "usd_per_case": 0.41022307971
+      "usd_per_generation": 0.1025557699275
     },
     {
-      "cost_basis": "Saved standard-rate equivalent for four selected generations per UID; retries excluded; not an invoice",
+      "cost_basis": "Saved standard-rate generation cost divided by 400 selected responses (100 UIDs x two specifications x two formats). USD/generation is an average for one response; retries, Judge and local evaluation are excluded. Full-task totals and token usage are unchanged; Kimi retains its tokenizer estimate.",
       "cost_usd": 31.527327,
       "estimated_cost_usd": null,
       "family": "gemini",
@@ -203,11 +209,12 @@
       "model": "Gemini 3.8 Flash (high)",
       "model_id": "gemini38_flash",
       "score": 82.10315740740741,
+      "selected_generation_responses": 400,
       "usage_kind": "selected_response_usage",
-      "usd_per_case": 0.31527327
+      "usd_per_generation": 0.0788183175
     },
     {
-      "cost_basis": "Saved standard-rate equivalent for four selected generations per UID; retries excluded; not an invoice; historical official-tokenizer estimate, not observed usage",
+      "cost_basis": "Saved standard-rate generation cost divided by 400 selected responses (100 UIDs x two specifications x two formats). USD/generation is an average for one response; retries, Judge and local evaluation are excluded. Full-task totals and token usage are unchanged; Kimi retains its tokenizer estimate.",
       "cost_usd": null,
       "estimated_cost_usd": 48.601371,
       "family": "kimi",
@@ -251,11 +258,12 @@
       "model": "Kimi K3 (max)",
       "model_id": "kimi_k3",
       "score": 81.72546805555557,
+      "selected_generation_responses": 400,
       "usage_kind": "official_tokenizer_estimate",
-      "usd_per_case": 0.48601371
+      "usd_per_generation": 0.1215034275
     },
     {
-      "cost_basis": "Saved standard-rate equivalent for four selected generations per UID; retries excluded; not an invoice",
+      "cost_basis": "Saved standard-rate generation cost divided by 400 selected responses (100 UIDs x two specifications x two formats). USD/generation is an average for one response; retries, Judge and local evaluation are excluded. Full-task totals and token usage are unchanged; Kimi retains its tokenizer estimate.",
       "cost_usd": 31.256292,
       "estimated_cost_usd": null,
       "family": "grok",
@@ -299,11 +307,12 @@
       "model": "Grok 4.6 (high)",
       "model_id": "grok46",
       "score": 81.39750787037038,
+      "selected_generation_responses": 400,
       "usage_kind": "selected_response_usage",
-      "usd_per_case": 0.31256292
+      "usd_per_generation": 0.07814073
     },
     {
-      "cost_basis": "Saved standard-rate equivalent for four selected generations per UID; retries excluded; not an invoice",
+      "cost_basis": "Saved standard-rate generation cost divided by 400 selected responses (100 UIDs x two specifications x two formats). USD/generation is an average for one response; retries, Judge and local evaluation are excluded. Full-task totals and token usage are unchanged; Kimi retains its tokenizer estimate.",
       "cost_usd": 47.622545,
       "estimated_cost_usd": null,
       "family": "claude",
@@ -347,11 +356,12 @@
       "model": "Claude Opus 5 (max)",
       "model_id": "claude_opus5",
       "score": 81.12633749999999,
+      "selected_generation_responses": 400,
       "usage_kind": "selected_response_usage",
-      "usd_per_case": 0.47622545
+      "usd_per_generation": 0.1190563625
     },
     {
-      "cost_basis": "Saved standard-rate equivalent for four selected generations per UID; retries excluded; not an invoice",
+      "cost_basis": "Saved standard-rate generation cost divided by 400 selected responses (100 UIDs x two specifications x two formats). USD/generation is an average for one response; retries, Judge and local evaluation are excluded. Full-task totals and token usage are unchanged; Kimi retains its tokenizer estimate.",
       "cost_usd": 10.88919736,
       "estimated_cost_usd": null,
       "family": "zai",
@@ -395,11 +405,12 @@
       "model": "GLM-5.3 (high)",
       "model_id": "glm53_official",
       "score": 80.27487731481482,
+      "selected_generation_responses": 400,
       "usage_kind": "selected_response_usage",
-      "usd_per_case": 0.1088919736
+      "usd_per_generation": 0.0272229934
     },
     {
-      "cost_basis": "Saved standard-rate equivalent for four selected generations per UID; retries excluded; not an invoice",
+      "cost_basis": "Saved standard-rate generation cost divided by 400 selected responses (100 UIDs x two specifications x two formats). USD/generation is an average for one response; retries, Judge and local evaluation are excluded. Full-task totals and token usage are unchanged; Kimi retains its tokenizer estimate.",
       "cost_usd": 5.901147744,
       "estimated_cost_usd": null,
       "family": "deepseek",
@@ -443,11 +454,12 @@
       "model": "DeepSeek V4.1 Flash (high)",
       "model_id": "deepseek_v41flash",
       "score": 80.12996759259259,
+      "selected_generation_responses": 400,
       "usage_kind": "selected_response_usage",
-      "usd_per_case": 0.05901147744
+      "usd_per_generation": 0.01475286936
     },
     {
-      "cost_basis": "Saved standard-rate equivalent for four selected generations per UID; retries excluded; not an invoice",
+      "cost_basis": "Saved standard-rate generation cost divided by 400 selected responses (100 UIDs x two specifications x two formats). USD/generation is an average for one response; retries, Judge and local evaluation are excluded. Full-task totals and token usage are unchanged; Kimi retains its tokenizer estimate.",
       "cost_usd": 63.759342,
       "estimated_cost_usd": null,
       "family": "doubao",
@@ -491,11 +503,12 @@
       "model": "Doubao Seed 2.1 Pro (Thinking)",
       "model_id": "doubao21",
       "score": 79.16908703703704,
+      "selected_generation_responses": 400,
       "usage_kind": "selected_response_usage",
-      "usd_per_case": 0.63759342
+      "usd_per_generation": 0.159398355
     },
     {
-      "cost_basis": "Saved standard-rate equivalent for four selected generations per UID; retries excluded; not an invoice",
+      "cost_basis": "Saved standard-rate generation cost divided by 400 selected responses (100 UIDs x two specifications x two formats). USD/generation is an average for one response; retries, Judge and local evaluation are excluded. Full-task totals and token usage are unchanged; Kimi retains its tokenizer estimate.",
       "cost_usd": 0.32635956,
       "estimated_cost_usd": null,
       "family": "zai",
@@ -539,8 +552,9 @@
       "model": "GLM-5.3-Flash (high)",
       "model_id": "glm53flash",
       "score": 76.35220462962963,
+      "selected_generation_responses": 400,
       "usage_kind": "selected_response_usage",
-      "usd_per_case": 0.0032635956
+      "usd_per_generation": 0.0008158989
     }
   ],
   "schema_version": "p3d-live-text-summary-v2",

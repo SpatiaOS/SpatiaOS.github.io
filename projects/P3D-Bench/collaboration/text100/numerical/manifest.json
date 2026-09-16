@@ -1,9 +1,11 @@
 {
-  "aggregation_policy": "aaai_frozen_common_metric_success_summary",
+  "aggregation_policy": "omit_unavailable_valid_iou_retain_invalid_zero",
+  "cost_revision": "text_generation_cost_v1",
+  "cost_unit": "USD/generation",
   "files": {
     "all_format_metrics.csv": {
-      "bytes": 9217,
-      "sha256": "17798d03690b47116ad27ac2a6b20b938b44faa892ab1132f39a9449396dce38"
+      "bytes": 9209,
+      "sha256": "64b72bac86f0d71cec93a5e75cd59e2080fb70a40e2dc12b484cf4646390c168"
     },
     "dataset_category_distribution.csv": {
       "bytes": 231,
@@ -22,8 +24,8 @@
       "sha256": "b3c853e106ec2b6892eb9e2c7b43c040892f99b7436a3bee0ccd3fa2e3fea6df"
     },
     "definitions.json": {
-      "bytes": 3236,
-      "sha256": "b10fdbe5e2f266985b6870d4bee55bd3f8b725e5feef25517cda25d65668218d"
+      "bytes": 3486,
+      "sha256": "1cace81470253924ca80edde6106b2fb0299babb9092f9abffed31a18f28c117"
     },
     "format_deltas.csv": {
       "bytes": 7638,
@@ -38,8 +40,8 @@
       "sha256": "649f89bf8c5ce7f63e0b6136c2bf220b2fa3f7e51d995ce363f3352fe22b0a2f"
     },
     "generation_cost_usage.csv": {
-      "bytes": 1201,
-      "sha256": "393266916d8848816e9327f9201c6f75001f3e7d9cb89ba430c30c3845fbdb81"
+      "bytes": 1217,
+      "sha256": "ad20fbe5049ac052a92546736c7acc66f65749f7217c9ed0e8fefae9213c80cb"
     },
     "invalid_case_inventory.csv": {
       "bytes": 6035,
@@ -50,8 +52,8 @@
       "sha256": "eec0ce9d0979c6745f72f14fac3ea39701d63dd8f08f323811ffe93f36ef4a6c"
     },
     "model_score_cost.csv": {
-      "bytes": 1858,
-      "sha256": "e89e9255b3c9e61ec5fbfc959dbbfeb1c2cb4f5bed4af29b77f7d776b040bf94"
+      "bytes": 1872,
+      "sha256": "4d04b9c31679c9ccdb01ecdd9234bc33a890c0b493a4f13ee70c178d8850d10c"
     },
     "per_case_plot_values.csv": {
       "bytes": 592877,
@@ -62,12 +64,12 @@
       "sha256": "fac7d9b2950d98b3e10b3bc966a9b76f3674407c2a18e4a3d541b2c5f5a10593"
     },
     "text100_api_rows.tex": {
-      "bytes": 1260,
-      "sha256": "d19f3ed7e1f2815f6e0279a1493ffc8e9c2a6a088649054a90c025706655c1fd"
+      "bytes": 1258,
+      "sha256": "70fb1359203311685631cd35a735918a2be75cdedd6cf8897f87ec4a5873281d"
     },
     "text100_cost_rows.tex": {
-      "bytes": 406,
-      "sha256": "0a52fd7850a26525f804c6cd0ead4edd5fd8cb5854283783067c553fcb88e05a"
+      "bytes": 416,
+      "sha256": "c71c4f01770423e964ceb112c0cd7f28f15dd0825345984aa760180e7cd0b951"
     },
     "text100_descriptive_both_rows.tex": {
       "bytes": 832,

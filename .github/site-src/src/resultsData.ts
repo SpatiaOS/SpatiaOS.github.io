@@ -61,7 +61,7 @@ const textTable: ResultSubtable = {
   ],
   "metrics": [
     "Score",
-    "USD / case",
+    "USD/gen.",
     "Judge",
     "Valid",
     "Judge",

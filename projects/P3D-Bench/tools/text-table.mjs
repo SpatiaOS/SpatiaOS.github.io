@@ -22,6 +22,10 @@ export function validateTextSummary(summary) {
   if (summary.schema_version !== "p3d-live-text-summary-v2" || summary.fixed_denominator !== 100) {
     throw new Error("expected fixed100 Text v2 summary");
   }
+  if (summary.cost_revision !== "text_generation_cost_v1" || summary.cost_unit !== "USD/generation"
+      || summary.cost_denominator_selected_responses !== 400) {
+    throw new Error("expected cost per single generation over 400 selected responses");
+  }
   if (!Array.isArray(summary.rows) || summary.rows.length !== TEXT_MODELS.length) {
     throw new Error("expected exactly 10 current Text rows");
   }
@@ -55,7 +59,8 @@ export function validateTextSummary(summary) {
     const cost = row.cost_usd ?? row.estimated_cost_usd;
     if (cost === null) {
       throw new Error("current Text leaderboard requires a supported numeric cost for every model");
-    } else close(cost / 100, row.usd_per_case, "USD per case units");
+    } else close(cost / 400, row.usd_per_generation, "USD per generation units");
+    if ("usd_per_case" in row || row.selected_generation_responses !== 400) throw new Error("legacy or ambiguous cost units");
     if (row.estimated_cost_usd !== null && row.usage_kind !== "official_tokenizer_estimate") throw new Error("missing estimate provenance");
   }
   if (summary.model_ids?.join() !== summary.rows.map((r) => r.model_id).join()) throw new Error("model order differs");
@@ -89,5 +94,6 @@ export function textNativeRows(summary) {
 export function textCost(row) {
   const cost = row.cost_usd ?? row.estimated_cost_usd;
   if (!Number.isFinite(cost) || cost <= 0) throw new Error("Text cost must be supported and numeric");
-  return `$${(cost / 100).toFixed(3)}`;
+  close(cost / 400, row.usd_per_generation, "USD per generation units");
+  return `$${row.usd_per_generation.toFixed(4)}`;
 }

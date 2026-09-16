@@ -14,14 +14,16 @@ test("current ten models retain exact scores and both tasks' validity", () => {
 });
 
 test("every current cost is numeric and estimates remain in provenance", () => {
-  assert.equal(textCost(summary.rows.find(r => r.model_id === "qwen38max")), "$0.410");
-  assert.equal(textCost(summary.rows.find(r => r.model_id === "doubao21")), "$0.638");
+  assert.equal(textCost(summary.rows.find(r => r.model_id === "qwen38max")), "$0.1026");
+  assert.equal(textCost(summary.rows.find(r => r.model_id === "doubao21")), "$0.1594");
   const kimi = summary.rows.find(r => r.model_id === "kimi_k3");
   assert.equal(kimi.cost_usd, null);
   assert.equal(kimi.usage_kind, "official_tokenizer_estimate");
-  assert.equal(textCost(kimi), "$0.486");
-  assert.equal(textCost(summary.rows[0]), "$0.592");
-  for (const row of summary.rows) assert.match(textCost(row), /^\$\d+\.\d{3}$/);
+  assert.equal(textCost(kimi), "$0.1215");
+  assert.equal(textCost(summary.rows[0]), "$0.1480");
+  assert.equal(summary.rows[0].model, "GPT-6 (max)");
+  assert.equal(textCost(summary.rows.find(r => r.model_id === "glm53flash")), "$0.0008");
+  for (const row of summary.rows) assert.match(textCost(row), /^\$\d+\.\d{4}$/);
   assert.throws(() => textCost({cost_usd: null, estimated_cost_usd: null}));
 });
 
@@ -38,8 +40,12 @@ test("reject missing metrics, duplicates, stale scores, wrong means and costs", 
     s => { s.topology_in_headline = true; },
     s => { s.rows[0].formats.descriptive.average.valid = 0.8; },
     s => { s.rows[0].cost_usd = 0; },
-    s => { s.rows[0].cost_usd = null; s.rows[0].estimated_cost_usd = null; s.rows[0].usd_per_case = null; },
-    s => { s.rows[0].usd_per_case *= 100; },
+    s => { s.rows[0].cost_usd = null; s.rows[0].estimated_cost_usd = null; s.rows[0].usd_per_generation = null; },
+    s => { s.rows[0].usd_per_generation *= 4; },
+    s => { s.rows[0].usd_per_generation /= 4; },
+    s => { s.cost_denominator_selected_responses = 100; },
+    s => { s.cost_unit = "USD/UID"; },
+    s => { s.rows[0].usd_per_case = s.rows[0].usd_per_generation; },
     s => { s.rows.reverse(); },
   ]) {
     const copy = structuredClone(summary);
