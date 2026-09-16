@@ -1661,8 +1661,8 @@
       "sha256": "f4ba3fa32ee929db547ecc9ebed4c9acb2ab778ac7b9a4b95f05d940bdc77524"
     },
     "cases/0093_00934405/parametric/openscad/doubao21/scorecard.json": {
-      "bytes": 7284,
-      "sha256": "661d4816175a5761cab68adabb8771f119ebdcf017b09b53051098ccfd4d1df9"
+      "bytes": 7283,
+      "sha256": "b25dec5967b95368a7452a5833090a766fd999ce9250c101d2cdea4e751d9d11"
     },
     "cases/0093_00934405/parametric/openscad/gemini38_flash/condition.txt": {
       "bytes": 2152,
@@ -1677,16 +1677,16 @@
       "sha256": "f4ba3fa32ee929db547ecc9ebed4c9acb2ab778ac7b9a4b95f05d940bdc77524"
     },
     "cases/0093_00934405/parametric/openscad/glm53_official/scorecard.json": {
-      "bytes": 6798,
-      "sha256": "de83cd8bc4c028e577059ed134eabd7055835c02809cfd202ca6f88c6ec638af"
+      "bytes": 6811,
+      "sha256": "9eb281e8af9a349bd73daa99b620699309e5625e30ca5e0c69a98162ea8b0aeb"
     },
     "cases/0093_00934405/parametric/openscad/glm53flash/condition.txt": {
       "bytes": 2152,
       "sha256": "f4ba3fa32ee929db547ecc9ebed4c9acb2ab778ac7b9a4b95f05d940bdc77524"
     },
     "cases/0093_00934405/parametric/openscad/glm53flash/scorecard.json": {
-      "bytes": 6914,
-      "sha256": "c66d95d9d409b6bcb0a0d51792810b0074fa0231a3c1941cb7f72133bb1ae7fa"
+      "bytes": 6913,
+      "sha256": "3ddcdc526ef52531efd407fd65bcb456338ad3b3b4ab5a10eed1a60922d6040c"
     },
     "cases/0093_00934405/parametric/openscad/gpt6_probe/condition.txt": {
       "bytes": 2152,
@@ -1709,16 +1709,16 @@
       "sha256": "f4ba3fa32ee929db547ecc9ebed4c9acb2ab778ac7b9a4b95f05d940bdc77524"
     },
     "cases/0093_00934405/parametric/openscad/kimi_k3/scorecard.json": {
-      "bytes": 6943,
-      "sha256": "ef551bf3b0b2ce7212b7c23293756f33cfcb44027ae7eb4c2699d62fa7c5bcd5"
+      "bytes": 6953,
+      "sha256": "82753291aec77d777f53236a3c8959f7f861a70eee13b79e6343ce6d8ab433be"
     },
     "cases/0093_00934405/parametric/openscad/qwen38max/condition.txt": {
       "bytes": 2152,
       "sha256": "f4ba3fa32ee929db547ecc9ebed4c9acb2ab778ac7b9a4b95f05d940bdc77524"
     },
     "cases/0093_00934405/parametric/openscad/qwen38max/scorecard.json": {
-      "bytes": 7010,
-      "sha256": "fd481142dc6abffe8ad974e022a02780dd464bc9c4a9912b8e25732e3b2383da"
+      "bytes": 7009,
+      "sha256": "287b83604b74f141b3cd9b9df998b48086463121c9269a8b42e235d892cbd741"
     },
     "comparison_compatibility.json": {
       "bytes": 22576,

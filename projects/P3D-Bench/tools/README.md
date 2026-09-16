@@ -21,14 +21,20 @@ separate during sorting. Unsupported formats and hosted API cost are displayed
 as dashes, not invented values. Numerical and original-case handoff materials
 are in `../collaboration/text2cad-native-fixed100/`.
 
-The current Text contract is `text_geo4_score3_v1`: Geometry averages CD score,
-IoU, F@.01 and NC, and the headline averages descriptive Judge, parametric
+The current Text contract is `text_geo4_score3_iou_omit_v2`: general-model Geometry
+averages CD score, available IoU, F@.01 and NC per valid case, then averages all
+100 cases. Unavailable valid IoU is omitted, measured zero stays zero, and invalid
+cases retain zero Geometry. The headline averages descriptive Judge, parametric
 Geometry and parametric Judge. Topology is still displayed, not aggregated
 into the headline. Score and USD/case are the first two columns after Model;
 Topo and Valid receive no best/second styling. The updater synchronizes the
 scoped renderer fragment as well as the Text table; other task data is unchanged.
 Text demo metric cards no longer display F@0.05; the raw diagnostic remains
 in the saved source, and non-Text metric visibility is unchanged.
+The 80 parametric demo records use the same selected case Geometry values;
+`update-live-text-demo.mjs` refreshes only their fetch cache key when data changes.
+Native Text2CAD already excludes unavailable IoU and retains its separate
+CD/Judge aggregation, with a headline of 17.85.
 
 ```bash
 node projects/P3D-Bench/tools/update-live-assembly.mjs

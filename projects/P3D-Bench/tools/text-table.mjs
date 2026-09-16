@@ -9,10 +9,15 @@ function close(a, b, label) {
 }
 
 export function validateTextSummary(summary) {
-  if (summary.score_revision !== "text_geo4_score3_v1" || summary.topology_in_headline !== false
+  if (!["text_geo4_score3_v1", "text_geo4_score3_iou_omit_v2"].includes(summary.score_revision) || summary.topology_in_headline !== false
       || summary.geometry_terms?.join() !== "chamfer_distance_score,iou_csg,f_score_001,normal_consistency"
       || summary.headline_terms?.join() !== "desc_judge,geometry,param_judge") {
     throw new Error("expected four-term Geometry and three-bucket Text score");
+  }
+  if (summary.score_revision === "text_geo4_score3_iou_omit_v2"
+      && (summary.iou_policy !== "omit_unavailable_valid_iou_retain_invalid_zero"
+          || summary.geometry_aggregation !== "case_first_available_terms_fixed100")) {
+    throw new Error("missing explicit unavailable-IoU omission contract");
   }
   if (summary.schema_version !== "p3d-live-text-summary-v2" || summary.fixed_denominator !== 100) {
     throw new Error("expected fixed100 Text v2 summary");

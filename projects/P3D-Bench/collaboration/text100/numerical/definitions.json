@@ -1,4 +1,5 @@
 {
+  "aggregation_reference": "Current shared manuscript scoring revision, 2026-09-16; Text IoU omission explicitly approved by owner.",
   "chamfer_policy": "Clamp each case to [0,0.01], use 0.01 for invalid, then average; score = 1 - CD / 0.01.",
   "cost_policy": "Saved list-price equivalent for four selected generations per UID; full task USD = USD/UID * 100. No retries/Judge/local evaluation. Kimi is the retained tokenizer estimate.",
   "dataset_graphs": "Keep complete dataset diagrams and statistics unchanged; the distribution files here describe only the evaluation subset.",
@@ -9,6 +10,7 @@
   ],
   "evaluation_subset_size": 100,
   "fixed_uid_sha256": "fac7d9b2950d98b3e10b3bc966a9b76f3674407c2a18e4a3d541b2c5f5a10593",
+  "geometry_aggregation": "Average available normalized geometry terms within each valid case, then average all 100 case scores. Invalid cases contribute zero.",
   "geometry_terms": [
     "chamfer_distance_score",
     "iou_csg",
@@ -21,8 +23,8 @@
     "param_judge"
   ],
   "invalid_policy": "Retain selected original outcomes and fixed denominator; do not infer a new failure taxonomy.",
-  "iou_aggregation": "Observed valid IoU mean times common metric-success count divided by evaluation N, matching the saved AAAI table implementation.",
-  "iou_policy": "aaai_frozen_common_metric_success_summary",
+  "iou_aggregation": "Omit unavailable IoU for valid cases; preserve measured zeros and invalid zero penalties in the reported IoU mean.",
+  "iou_policy": "omit_unavailable_valid_iou_retain_invalid_zero",
   "main_cells": 40,
   "model_ids": [
     "gpt6_probe",
@@ -42,11 +44,11 @@
     "semantic": 4,
     "total_per_cell": 1200
   },
-  "per_case_policy": "Per-case Geometry uses four diagnostic terms. Aggregate Geometry retains the original metric-first statistics; all primitive metric policies are unchanged.",
+  "per_case_policy": "Geometry omits unavailable IoU only within that valid case. Cases stay in the fixed100 denominator. F@.05 is diagnostic only.",
   "reference_commit": "1bf9e2f7cb7ef05008c901f48df6e9f2918c5767",
   "reference_manuscript": "p3d-aaai-overleaf-6a4b5bb7087b1cdc6262985f",
   "schema": "p3d-text100-collaboration-inputs-v1",
-  "score_revision": "text_geo4_score3_v1",
+  "score_revision": "text_geo4_score3_iou_omit_v2",
   "score_scale": {
     "format_and_case": "0-1",
     "headline": "0-100",

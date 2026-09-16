@@ -22,6 +22,17 @@ if (original.input.startsWith(prefix) && original.input.includes(afterFetch) && 
   console.log(`Text demo already current: ${original.name}`);
   process.exit(0);
 }
+if (original.input.startsWith(prefix) && original.input.includes(afterShow)) {
+  const pattern = /text-live-fixed100\.json\?v=[0-9a-f]{12}/g;
+  const matches = [...original.input.matchAll(pattern)];
+  if (matches.length !== 1) throw new Error("ambiguous Text demo cache key");
+  const patched = original.input.replace(pattern, `text-live-fixed100.json?v=${version}`);
+  if (!patched.includes(afterFetch)) throw new Error("Text demo fetch adapter changed");
+  const name = writeActiveBundle(root, original, patched, "text-demo");
+  writeFileSync(join(root, "../../.github/site-src/src/textLiveDemo.json"), raw);
+  console.log(`refreshed Text demo data version only: ${original.name} -> ${name}`);
+  process.exit(0);
+}
 if (original.input.split(beforeFetch).length !== 2 || original.input.split(beforeShow).length !== 2
     || original.input.includes('text-fixed100-data-adapter-v1')) throw new Error("runtime boundaries changed; do not overwrite");
 const patched = prefix + original.input.replace(beforeFetch, afterFetch).replace(beforeShow, afterShow);

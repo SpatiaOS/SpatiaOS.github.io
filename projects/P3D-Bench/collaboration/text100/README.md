@@ -12,14 +12,15 @@ UIDs for all ten models. Image and Assembly results are outside this handoff.
   repository's `data/text100/`; `TEXT_RESULTS_UPDATE.md` lists figure work.
 
 Use the current paper data export, whose definitions identify
-`text_geo4_score3_v1`. Geometry averages CD score, IoU, F@.01 and NC;
+`text_geo4_score3_iou_omit_v2`. Geometry averages CD score, available IoU, F@.01 and NC within each valid case, then averages all 100 cases;
 the Text score averages descriptive Judge, parametric Geometry and parametric
-Judge (0–100). Topology is reported separately. The primitive statistics retain
-`aaai_frozen_common_metric_success_summary`; earlier aggregate exports are historical.
-Only derived Geometry fields change in per-case diagnostics and scorecards;
+Judge (0–100). Topology is reported separately. Unavailable valid IoU is omitted,
+not worst-filled. Measured zeros remain zero, and invalid outputs retain zero
+Geometry contributions. Separately reported IoU omits unavailable valid entries.
+Saved primitive case measurements are unchanged; Geometry and aggregate IoU are rederived;
 programs, images, Judge evidence and costs are unchanged.
-Use aggregate CSVs for rankings and cost/radar plots, not the average of the
-per-case diagnostic Geometry column. The paper's original figures and their
+Use aggregate CSVs for rankings and cost/radar plots, and per-case values for
+distributions. Native Text2CAD has a separate preserved contract. The paper's original figures and their
 full typesetting are restored; pending Text figure updates remain with the
 original maintainers.
 

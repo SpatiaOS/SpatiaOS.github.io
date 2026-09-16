@@ -2,8 +2,8 @@
   "aggregation_policy": "aaai_frozen_common_metric_success_summary",
   "files": {
     "all_format_metrics.csv": {
-      "bytes": 9227,
-      "sha256": "282c9b0935192dac664abea686665a0dec2677d980e8768d0eefa0823fb442cc"
+      "bytes": 9217,
+      "sha256": "17798d03690b47116ad27ac2a6b20b938b44faa892ab1132f39a9449396dce38"
     },
     "dataset_category_distribution.csv": {
       "bytes": 231,
@@ -22,20 +22,20 @@
       "sha256": "b3c853e106ec2b6892eb9e2c7b43c040892f99b7436a3bee0ccd3fa2e3fea6df"
     },
     "definitions.json": {
-      "bytes": 2970,
-      "sha256": "ad556577e3941eb3e068b84f37d23307a3e3dead77009647ae0afb8131bc3398"
+      "bytes": 3236,
+      "sha256": "b10fdbe5e2f266985b6870d4bee55bd3f8b725e5feef25517cda25d65668218d"
     },
     "format_deltas.csv": {
-      "bytes": 7654,
-      "sha256": "1abd05dd8de873a270cc98a3c2932e9575bf71a99c1cb28aba18cf37860c30ed"
+      "bytes": 7638,
+      "sha256": "7f73779539a202de649037dc7fe8114935425c7a1ddffa2aaf70124c8770e080"
     },
     "gemini_four_format_comparison.csv": {
-      "bytes": 2011,
-      "sha256": "9b6d025c06acfd17dccede26fc55e3af999debbcc53dc8cfe54d30ae07ee43d8"
+      "bytes": 2003,
+      "sha256": "b8f6ec3c0da5d6e8959baa0de9362391de7c003428ec8a896bef83e47d95ac21"
     },
     "gemini_four_format_rows.tex": {
       "bytes": 466,
-      "sha256": "723a3b6cef5da72866964fcee4fd6f008309af92329006e390bfb2d6671d708e"
+      "sha256": "649f89bf8c5ce7f63e0b6136c2bf220b2fa3f7e51d995ce363f3352fe22b0a2f"
     },
     "generation_cost_usage.csv": {
       "bytes": 1201,
@@ -46,16 +46,16 @@
       "sha256": "37a82392843512c7b92ca6c4c43c45d9cb3dcb89d4ae9e9c1da67ee9c2b5b095"
     },
     "judge_bucket_details.csv": {
-      "bytes": 2257,
-      "sha256": "c6e632b881c705cdda9625e965503960b207a6ea1445d35567359c3729b11b3f"
+      "bytes": 2232,
+      "sha256": "eec0ce9d0979c6745f72f14fac3ea39701d63dd8f08f323811ffe93f36ef4a6c"
     },
     "model_score_cost.csv": {
-      "bytes": 1874,
-      "sha256": "285705f0dd18fa797c57af2dfce51132fa6e6c7c960b5a634b85cadb0be1093f"
+      "bytes": 1858,
+      "sha256": "e89e9255b3c9e61ec5fbfc959dbbfeb1c2cb4f5bed4af29b77f7d776b040bf94"
     },
     "per_case_plot_values.csv": {
-      "bytes": 591735,
-      "sha256": "3666174896d43d0fd0bc9e018a9ef52fa163b4fc892dcdccfc53603946ec1db2"
+      "bytes": 592877,
+      "sha256": "11e492d15225d1fc4451bfab0c58ef95382cd5b199c5185efceb3a7c6fa862ec"
     },
     "selected_uids.txt": {
       "bytes": 1400,
@@ -67,7 +67,7 @@
     },
     "text100_cost_rows.tex": {
       "bytes": 406,
-      "sha256": "8f99283be4ce0ca40951d6eff4520cda27edcec8a75be4a0e9a92f4743ce3898"
+      "sha256": "0a52fd7850a26525f804c6cd0ead4edd5fd8cb5854283783067c553fcb88e05a"
     },
     "text100_descriptive_both_rows.tex": {
       "bytes": 832,
@@ -75,11 +75,11 @@
     },
     "text100_main_rows.tex": {
       "bytes": 918,
-      "sha256": "0102a7d7c33910a450a90d81ae10afb8561d9c956b29854c6f9b576b826e9a05"
+      "sha256": "527bd831f1b19b3c5a7c64143dd913e4fa316af817d265815a14bc5a1a93df18"
     },
     "text100_parametric_json_rows.tex": {
       "bytes": 1277,
-      "sha256": "79bff52d163c11f8ed0f424239f61849ff8389c3f9daf5205567639b4dfcb33b"
+      "sha256": "380afc4b8632cfeae88f4767aa3bbb12c0301a0acbc0b167696dc514c8eb2aeb"
     },
     "text100_parametric_openscad_rows.tex": {
       "bytes": 1329,
@@ -104,6 +104,6 @@
   ],
   "private_payloads_exported": false,
   "schema": "p3d-text100-collaboration-manifest-v1",
-  "score_revision": "text_geo4_score3_v1",
+  "score_revision": "text_geo4_score3_iou_omit_v2",
   "snapshot_role": "numeric inputs for the collaboration manuscript, not finished plots"
 }

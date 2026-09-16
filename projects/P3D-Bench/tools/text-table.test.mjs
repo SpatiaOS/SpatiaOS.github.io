@@ -8,8 +8,8 @@ const summary = JSON.parse(readFileSync(new URL("../live-text-summary.json", imp
 test("current ten models retain exact scores and both tasks' validity", () => {
   validateTextSummary(summary);
   assert.deepEqual(summary.rows.map(r => r.model_id).sort(), [...TEXT_MODELS].sort());
-  assert.equal(summary.metric_policy, "aaai_frozen_common_metric_success_summary");
-  assert.deepEqual(summary.rows.map(r => r.score.toFixed(2)), ["84.68", "82.33", "82.06", "81.68", "81.35", "81.08", "80.20", "80.09", "79.09", "76.28"]);
+  assert.equal(summary.metric_policy, "omit_unavailable_valid_iou_retain_invalid_zero");
+  assert.deepEqual(summary.rows.map(r => r.score.toFixed(2)), ["84.73", "82.38", "82.10", "81.73", "81.40", "81.13", "80.27", "80.13", "79.17", "76.35"]);
   for (const row of summary.rows) assert.equal(row.metrics.split(" ").length, 18);
 });
 
@@ -32,6 +32,8 @@ test("reject missing metrics, duplicates, stale scores, wrong means and costs", 
     s => { s.rows[0].metrics = "0.1"; },
     s => { s.rows[0].score += 1; },
     s => { s.score_revision = "old"; },
+    s => { s.iou_policy = "worst_fill"; },
+    s => { s.geometry_aggregation = "metric_first"; },
     s => { s.geometry_terms.push("f_score_005"); },
     s => { s.topology_in_headline = true; },
     s => { s.rows[0].formats.descriptive.average.valid = 0.8; },
