@@ -41,19 +41,19 @@
       "id": "qwen38max",
       "label": "Qwen3.8-Max",
       "family": "qwen",
-      "color": "#B0C2B8"
+      "color": "#83ADB4"
     },
     {
       "id": "glm53_official",
       "label": "GLM-5.3",
       "family": "zai",
-      "color": "#83ADB4"
+      "color": "#B0C2B8"
     },
     {
       "id": "glm53_flash",
       "label": "GLM-5.3-Flash",
       "family": "zai",
-      "color": "#83ADB4"
+      "color": "#B0C2B8"
     },
     {
       "id": "deepseek41_flash",
@@ -194,9 +194,9 @@
       "gemini": "#4E779E",
       "claude": "#3F5E8B",
       "kimi": "#6993AB",
-      "zai": "#83ADB4",
+      "zai": "#B0C2B8",
       "deepseek": "#E3C49C",
-      "qwen": "#B0C2B8",
+      "qwen": "#83ADB4",
       "grok": "#5B879F",
       "doubao": "#EDD7C0"
     },

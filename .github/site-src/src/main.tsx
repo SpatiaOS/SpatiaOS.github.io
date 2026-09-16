@@ -688,8 +688,8 @@ function MainFigures() {
   return (
     <div className="main-figures">
       <figure className="leaderboard-figure">
-        <a href="./figures/fig_tasks_grouped_bars.pdf?v=paper-fig1-3d9da86edc9c" aria-label="Open leaderboard figure PDF">
-          <img src="./figures/fig_tasks_grouped_bars.svg?v=paper-fig1-3d9da86edc9c" alt="Paper Figure 1: Assembly-3D, Text-to-3D and Image-to-3D scores with separate panel axes" />
+        <a href="./figures/fig_tasks_grouped_bars.pdf?v=paper-fig1-772a68b170a1" aria-label="Open leaderboard figure PDF">
+          <img src="./figures/fig_tasks_grouped_bars.svg?v=paper-fig1-772a68b170a1" alt="Paper Figure 1: Assembly-3D, Text-to-3D and Image-to-3D scores with separate panel axes" />
         </a>
       </figure>
     </div>
