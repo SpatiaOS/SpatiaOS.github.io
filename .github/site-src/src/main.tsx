@@ -139,7 +139,7 @@ const fallbackManifest: Manifest = {
       ? ["Anonymous submission"]
       : ["¹Nanjing University", "²Envision", "*Equal contribution."],
     abstract:
-      "P3D-Bench evaluates parametric 3D generation and structural reasoning across text, image, and assembly conditions."
+      "Multimodal large language models can write code to produce complex programs as well as use programs to do 3D modeling, which opens up a new avenue for 3D generation powered by their priors, world knowledge and reasoning. Yet existing benchmarks rarely evaluate 3D modeling through code. Such modeling demands more than runnable code: from a text or visual specification, a model must generate a parametric 3D program that is geometrically precise, semantically aligned and assembly-consistent. We introduce P3D-Bench, a benchmark for parametric 3D generation. Unlike a 3D mesh, a parametric 3D program exposes explicit dimensions, construction operations and part relations, revealing whether a model recovers a design's structure, not just its appearance. Under a unified protocol, P3D-Bench covers three task families (Text-to-3D, Image-to-3D and Assembly-3D) and scores each output for executability, geometric fidelity, topology, text-grounded constraints, multiview semantic alignment and part-level structure. We construct P3D-Dataset with 400 text cases, 400 image cases and 203 annotated assemblies. Our extensive evaluation yields three findings. First, composing multiple parts into a coherent assembly remains challenging. Second, models can often recover the global shape and semantic identity of the target object, yet fail to reproduce the precise parametric geometry specified by the input. Third, part-level modeling remains weak on assemblies, where models recover neither the geometry of each part nor the right number of parts. These results position P3D-Bench as a benchmark for evaluating precise parametric geometry and part-level structure in parametric 3D generation."
   },
   tasks: [
     { id: "text2cad", label: "Text-to-3D", formats: ["JSON", "OpenSCAD"], status: "interactive" },
@@ -179,7 +179,7 @@ function App() {
   const [code, setCode] = useState("");
 
   useEffect(() => {
-    fetch(asset("manifest.json?v=5323111f16f4"))
+    fetch(asset("manifest.json?v=abstract-903c394b8ca9"))
       .then((res) => (res.ok ? res.json() : fallbackManifest))
       .then(async (data) => {
         try {
