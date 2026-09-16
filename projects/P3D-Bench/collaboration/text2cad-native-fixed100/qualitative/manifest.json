@@ -293,8 +293,8 @@
       "sha256": "f1cf3289f8ed36488dc4b471622e4af55fbcabe9bb858e26d441bfb7b6b2a482"
     },
     "cases/0015_00155951/parametric/json/scorecard.json": {
-      "bytes": 1147,
-      "sha256": "38096902b9a6d50488075ceeddc002fba245a7d0bcb7691426b8220b0ba64928"
+      "bytes": 1134,
+      "sha256": "7f75da12281f982c88521675633be2ced664873c8d84bddb723cae2f6316133f"
     },
     "cases/0046_00460772/parametric/json/condition.txt": {
       "bytes": 1469,
@@ -306,7 +306,7 @@
     },
     "cases/0046_00460772/parametric/json/scorecard.json": {
       "bytes": 1108,
-      "sha256": "eaf7cbb86439939b88b175c5453c87a1bafdaa0493135d9ad1e21394879d9f80"
+      "sha256": "0c19a536dd653ca7abdafdd91295e934bcbf35ad9ec5325245fe8eaf0c2ffc5b"
     },
     "cases/0062_00621494/parametric/json/condition.txt": {
       "bytes": 1901,
@@ -318,7 +318,7 @@
     },
     "cases/0062_00621494/parametric/json/scorecard.json": {
       "bytes": 1122,
-      "sha256": "d3ab438cfeb84093d5d161dbe3d995fecdf5e46e9d13eca6f96c6ba31008454f"
+      "sha256": "d1e62011989e99e50663fe6e77bb6d13cf9b5d674fc56207ecb0d95acecbf30b"
     },
     "cases/0085_00852511/descriptive/json/condition.txt": {
       "bytes": 546,
@@ -353,8 +353,8 @@
       "sha256": "067efac2ec23a7dd989a981be0301b3bfbf8c1b5e969eae86cf3bbfd23cf16fa"
     },
     "cases/0093_00934405/parametric/json/scorecard.json": {
-      "bytes": 1088,
-      "sha256": "f09d14a65d82592570e9a2a127f879eebac200feb484234ee4c0ba3bd6e93b0e"
+      "bytes": 1089,
+      "sha256": "808e3f731cc50d581356827a43d5c66ebfce6fd5da403f407bd605e08a0450cb"
     },
     "invalid/descriptive/0009_00099014.json": {
       "bytes": 767,

@@ -1169,8 +1169,8 @@
       "sha256": "276eed3169c800efa3b9df5f6be5fbaafefe4a71c90722584ae6a2712054fa2e"
     },
     "cases/0015_00155951/parametric/json/claude_opus5/scorecard.json": {
-      "bytes": 7155,
-      "sha256": "998fddb95cc0715acd889c14fe3d61209bba5dc5214e92b9b41f6548f45c92b6"
+      "bytes": 7157,
+      "sha256": "f92178ce5e51d4878b57b73ab952b9549988dfab3fbe3025bf17753103de6b04"
     },
     "cases/0015_00155951/parametric/json/deepseek_v41flash/condition.txt": {
       "bytes": 1520,
@@ -1182,7 +1182,7 @@
     },
     "cases/0015_00155951/parametric/json/deepseek_v41flash/scorecard.json": {
       "bytes": 7182,
-      "sha256": "45a90a92ad9b86ce42e7463a56fcae983bda607a3b11e0d23bd6cb83e7d16500"
+      "sha256": "6c30631a204866384edeecb049b5efc9e49e7ea43055ada71a6308263cc9c79c"
     },
     "cases/0015_00155951/parametric/json/doubao21/condition.txt": {
       "bytes": 1520,
@@ -1193,8 +1193,8 @@
       "sha256": "25d297aa90ded7f33fcea433b4df527efbad27eba3a7728dcb84effe250d9d54"
     },
     "cases/0015_00155951/parametric/json/doubao21/scorecard.json": {
-      "bytes": 7088,
-      "sha256": "5470d19f465fbe5525857792bc73d8b214b457b702bb5ddfa71e8de874e035ff"
+      "bytes": 7077,
+      "sha256": "57668c6af3d2b9116835b85d4bb3c8635af056f172e2bb20bf8911c8f2b281d1"
     },
     "cases/0015_00155951/parametric/json/gemini38_flash/condition.txt": {
       "bytes": 1520,
@@ -1205,8 +1205,8 @@
       "sha256": "ec2f49fedb6b00f5ec592c612dfaed0df09d88a56c00bafb158d1cf64f3679ee"
     },
     "cases/0015_00155951/parametric/json/gemini38_flash/scorecard.json": {
-      "bytes": 7472,
-      "sha256": "db9147dbb3cbd6bdfc661c48fb7d87504124a4dc291564f28e5f31a115b52196"
+      "bytes": 7473,
+      "sha256": "5b15938e474c21db6a2f42d7d67abca224ffa6241565e91ac8b8652c926bc415"
     },
     "cases/0015_00155951/parametric/json/glm53_official/condition.txt": {
       "bytes": 1520,
@@ -1217,8 +1217,8 @@
       "sha256": "bbc5e7f2fb7557f4b72714f6a659264dba41745f4d0f374983475d8d4bdca406"
     },
     "cases/0015_00155951/parametric/json/glm53_official/scorecard.json": {
-      "bytes": 7118,
-      "sha256": "18c6fe0f8bd52476951974c7097eb02f1ffb4ab15c9f16e5bdceee13417c2e8b"
+      "bytes": 7119,
+      "sha256": "595c902bc3819b8bf14a47bc2312a5c6de0b59889f2cb02c08d28f7b13ee14d0"
     },
     "cases/0015_00155951/parametric/json/glm53flash/condition.txt": {
       "bytes": 1520,
@@ -1229,8 +1229,8 @@
       "sha256": "787744469f05ac3557e0528d51bc623a067c6e1b236c226c7cfa0e5ee989983c"
     },
     "cases/0015_00155951/parametric/json/glm53flash/scorecard.json": {
-      "bytes": 7528,
-      "sha256": "39267cb427e797f47c1bd4c34f6649f066c17bf829dcbd2f47898ff5e3e3e615"
+      "bytes": 7527,
+      "sha256": "9c6b3a49fe89cb3637af9a7d432db1d4ea4f9c411b16f529d5a53b46d6ed152f"
     },
     "cases/0015_00155951/parametric/json/gpt6_probe/condition.txt": {
       "bytes": 1520,
@@ -1242,7 +1242,7 @@
     },
     "cases/0015_00155951/parametric/json/gpt6_probe/scorecard.json": {
       "bytes": 7392,
-      "sha256": "4706349b4871909f6cf45d96f490c3eb97da4e4756640c91edcac012c3fe8e43"
+      "sha256": "3dff8012fa73bfef1dfd2582a2cd82ec9b9e5840c7d15aadbc16114bcc55f893"
     },
     "cases/0015_00155951/parametric/json/grok46/condition.txt": {
       "bytes": 1520,
@@ -1253,8 +1253,8 @@
       "sha256": "2d89fed8983f5378a61d724ef9ab3088847af55c83f25cd7a5cecf2ca605f037"
     },
     "cases/0015_00155951/parametric/json/grok46/scorecard.json": {
-      "bytes": 7056,
-      "sha256": "af92179b5d44b4f51431d0e3bf6881a5e6845bf47c5c6528b01e75edd639e7ad"
+      "bytes": 7057,
+      "sha256": "c2dbb766d3a817021a4dbbd5ce043a071707b7ff46bff3358693d35cc2720016"
     },
     "cases/0015_00155951/parametric/json/kimi_k3/condition.txt": {
       "bytes": 1520,
@@ -1266,7 +1266,7 @@
     },
     "cases/0015_00155951/parametric/json/kimi_k3/scorecard.json": {
       "bytes": 7027,
-      "sha256": "f353948423a5d1b415284e15120d2525c6297c915c3286713fc467fee82c63c6"
+      "sha256": "9dd096bbbb20e6fe94353a655bcc5142c6b661694a4a8112aef49b331f565345"
     },
     "cases/0015_00155951/parametric/json/qwen38max/condition.txt": {
       "bytes": 1520,
@@ -1277,16 +1277,16 @@
       "sha256": "f058e7ae888f89da816a3aa25fb7281d83ac483ed7490f543b99b296ea040d00"
     },
     "cases/0015_00155951/parametric/json/qwen38max/scorecard.json": {
-      "bytes": 7034,
-      "sha256": "41ad8205f66c08188c8a62dc54db9a187a1257d31fe8650e6ed1795c60904562"
+      "bytes": 7035,
+      "sha256": "24168c98a95f1d71295d6c75f7967b79d7fff4a5963df1c453c8c0caa926ece9"
     },
     "cases/0046_00460772/parametric/openscad/claude_opus5/condition.txt": {
       "bytes": 1469,
       "sha256": "f84bd37f25698d91cb1dafca9ccecf8894e085661eea50d05d889045c3036ab1"
     },
     "cases/0046_00460772/parametric/openscad/claude_opus5/scorecard.json": {
-      "bytes": 7067,
-      "sha256": "41cb0727490f26c24a203a07a76034b4a83a71f06f309963159d56a39c4b6498"
+      "bytes": 7068,
+      "sha256": "a80e03b17c131c42d95bb23f8eff7042c3f4fe134f31533b078aeee6f758b4d5"
     },
     "cases/0046_00460772/parametric/openscad/deepseek_v41flash/condition.txt": {
       "bytes": 1469,
@@ -1294,7 +1294,7 @@
     },
     "cases/0046_00460772/parametric/openscad/deepseek_v41flash/scorecard.json": {
       "bytes": 6994,
-      "sha256": "6f2aad10c6d411b37dee6a4b09539ba18fdaf5acdf221d90bbb565a92798b8a3"
+      "sha256": "f62ddc46a4db8125c9edf5bfa688a7ec317ac59c2f3d7b8e9a17e74a346fd2ef"
     },
     "cases/0046_00460772/parametric/openscad/doubao21/condition.txt": {
       "bytes": 1469,
@@ -1302,55 +1302,55 @@
     },
     "cases/0046_00460772/parametric/openscad/doubao21/scorecard.json": {
       "bytes": 6935,
-      "sha256": "adb8a9142e8c91b9c3c4e1f6e753c2f38b21dba167b5e222c9426b47d7bf579f"
+      "sha256": "e1c85ba138b3b376ec379b0245944fd08961884604d08d5ac922d2289edd3c9f"
     },
     "cases/0046_00460772/parametric/openscad/gemini38_flash/condition.txt": {
       "bytes": 1469,
       "sha256": "f84bd37f25698d91cb1dafca9ccecf8894e085661eea50d05d889045c3036ab1"
     },
     "cases/0046_00460772/parametric/openscad/gemini38_flash/scorecard.json": {
-      "bytes": 6959,
-      "sha256": "7fccaaba7a72b31aef54fea8ebe5fc56ea2bdfe9f36d80d79bbbbb16cc7e4026"
+      "bytes": 6949,
+      "sha256": "d45e4c8ed601b684a947a76f1e46a64ada09bf26a1dbae5966ac28d46d76d15c"
     },
     "cases/0046_00460772/parametric/openscad/glm53_official/condition.txt": {
       "bytes": 1469,
       "sha256": "f84bd37f25698d91cb1dafca9ccecf8894e085661eea50d05d889045c3036ab1"
     },
     "cases/0046_00460772/parametric/openscad/glm53_official/scorecard.json": {
-      "bytes": 6955,
-      "sha256": "e7c382b68ad82166bdc74d161e9839d0a076d5f36feb127e54f58c1bb33d1516"
+      "bytes": 6944,
+      "sha256": "bdad525b20d95247b46cfcdb6b10a71724b949aa1258231f5454f3b50830c3dc"
     },
     "cases/0046_00460772/parametric/openscad/glm53flash/condition.txt": {
       "bytes": 1469,
       "sha256": "f84bd37f25698d91cb1dafca9ccecf8894e085661eea50d05d889045c3036ab1"
     },
     "cases/0046_00460772/parametric/openscad/glm53flash/scorecard.json": {
-      "bytes": 7038,
-      "sha256": "d736b5572f1cd6f7a753573a270c57aff8646facb68a5e95d4c03e2a2f514fe4"
+      "bytes": 7039,
+      "sha256": "32e2e3e5c65a2d4a0f41a079dccc41ce7adf6118e8e0c974f48f5184e8c71af4"
     },
     "cases/0046_00460772/parametric/openscad/gpt6_probe/condition.txt": {
       "bytes": 1469,
       "sha256": "f84bd37f25698d91cb1dafca9ccecf8894e085661eea50d05d889045c3036ab1"
     },
     "cases/0046_00460772/parametric/openscad/gpt6_probe/scorecard.json": {
-      "bytes": 6763,
-      "sha256": "2f1ceccdd99ea065adb0c7b766a9faebfff7a5593a0dcab10787208e71cd3fa6"
+      "bytes": 6775,
+      "sha256": "51597d48d2f3f73cc445985784a416545a069c4c2b2bd9329543af2c689b3813"
     },
     "cases/0046_00460772/parametric/openscad/grok46/condition.txt": {
       "bytes": 1469,
       "sha256": "f84bd37f25698d91cb1dafca9ccecf8894e085661eea50d05d889045c3036ab1"
     },
     "cases/0046_00460772/parametric/openscad/grok46/scorecard.json": {
-      "bytes": 6902,
-      "sha256": "a430a51173c24bc9deecab14cadead0d868350e0728128f746bb87671ee15e83"
+      "bytes": 6892,
+      "sha256": "6e17c550edc36fba8d6b7da52e66b94f20f51444aafc5b0e2f5371b50fb89ee9"
     },
     "cases/0046_00460772/parametric/openscad/kimi_k3/condition.txt": {
       "bytes": 1469,
       "sha256": "f84bd37f25698d91cb1dafca9ccecf8894e085661eea50d05d889045c3036ab1"
     },
     "cases/0046_00460772/parametric/openscad/kimi_k3/scorecard.json": {
-      "bytes": 6969,
-      "sha256": "b5047bfc55f35abc5894e16fab62909db0aa275f0626853b1428fcd63f2c8b65"
+      "bytes": 6968,
+      "sha256": "12c97fd685c7d04ebb5843a78cef82f0ab028c141f1ca75aebff1ea5d9f439d1"
     },
     "cases/0046_00460772/parametric/openscad/qwen38max/condition.txt": {
       "bytes": 1469,
@@ -1358,87 +1358,87 @@
     },
     "cases/0046_00460772/parametric/openscad/qwen38max/scorecard.json": {
       "bytes": 7051,
-      "sha256": "06ec41b3f22ef1780aec2729fd4d6b517ae8fd8e3dbed5bf20ccc2ae620513a3"
+      "sha256": "27bfcc8f7e30e6b7dc0ab463dbffba5ded29dd365517f66f8774dc1b81f8e161"
     },
     "cases/0062_00621494/parametric/openscad/claude_opus5/condition.txt": {
       "bytes": 1901,
       "sha256": "cc787d58d6f12210ab468a8fb9e627cac54101b0309bfdae41e4f89d363d84f3"
     },
     "cases/0062_00621494/parametric/openscad/claude_opus5/scorecard.json": {
-      "bytes": 6951,
-      "sha256": "ce9161c79ed486f326bba68e5396d5bbe7c5a275180018311ced0d5299696353"
+      "bytes": 6966,
+      "sha256": "aa958a3dfaeac68779b51687413e196f08df190cfb5084b28bf101753736fc5d"
     },
     "cases/0062_00621494/parametric/openscad/deepseek_v41flash/condition.txt": {
       "bytes": 1901,
       "sha256": "cc787d58d6f12210ab468a8fb9e627cac54101b0309bfdae41e4f89d363d84f3"
     },
     "cases/0062_00621494/parametric/openscad/deepseek_v41flash/scorecard.json": {
-      "bytes": 7181,
-      "sha256": "e9e62e7fcf83fb353ce72d2de05a9101bdbcb8de28631eb3550517b18b1fcc6d"
+      "bytes": 7171,
+      "sha256": "339cfcd4d6214fcd76f3094709929843460a531a5eda84405368de7125016714"
     },
     "cases/0062_00621494/parametric/openscad/doubao21/condition.txt": {
       "bytes": 1901,
       "sha256": "cc787d58d6f12210ab468a8fb9e627cac54101b0309bfdae41e4f89d363d84f3"
     },
     "cases/0062_00621494/parametric/openscad/doubao21/scorecard.json": {
-      "bytes": 6796,
-      "sha256": "85b4928d834b20a4d478d5bd6c8c17fd34a90b0323da0281b5279cf3c374a072"
+      "bytes": 6786,
+      "sha256": "7093ee3de4e5734aae4badf8fbf9c6c3b8a2a21e2d48b896381107579d9269a9"
     },
     "cases/0062_00621494/parametric/openscad/gemini38_flash/condition.txt": {
       "bytes": 1901,
       "sha256": "cc787d58d6f12210ab468a8fb9e627cac54101b0309bfdae41e4f89d363d84f3"
     },
     "cases/0062_00621494/parametric/openscad/gemini38_flash/scorecard.json": {
-      "bytes": 6918,
-      "sha256": "fa49611bf70aef120497f78ec9fd2ce33e43e238fdb764194602c0aced1c8ead"
+      "bytes": 6908,
+      "sha256": "6dac43b63280f8bfb6defcde2b954f146c207d6516d1b04238093258d487a1d3"
     },
     "cases/0062_00621494/parametric/openscad/glm53_official/condition.txt": {
       "bytes": 1901,
       "sha256": "cc787d58d6f12210ab468a8fb9e627cac54101b0309bfdae41e4f89d363d84f3"
     },
     "cases/0062_00621494/parametric/openscad/glm53_official/scorecard.json": {
-      "bytes": 7180,
-      "sha256": "a09d6bccc0a363404aa281a1f7fa9e2ead52dc274fbc09f8d5048b585c53c069"
+      "bytes": 7179,
+      "sha256": "63f48c8e6679270e44c325b13bb5bec3d002d5744b6e2c1f44c774b48484153f"
     },
     "cases/0062_00621494/parametric/openscad/glm53flash/condition.txt": {
       "bytes": 1901,
       "sha256": "cc787d58d6f12210ab468a8fb9e627cac54101b0309bfdae41e4f89d363d84f3"
     },
     "cases/0062_00621494/parametric/openscad/glm53flash/scorecard.json": {
-      "bytes": 7154,
-      "sha256": "46d5531c3c486606a528f70eb1a6338576e2350fa27d771fdc916109999b5143"
+      "bytes": 7143,
+      "sha256": "12017dbdb3bdf6a09dfe12378b54a7938a2b0104ca86c0597d8f94d2854ebdde"
     },
     "cases/0062_00621494/parametric/openscad/gpt6_probe/condition.txt": {
       "bytes": 1901,
       "sha256": "cc787d58d6f12210ab468a8fb9e627cac54101b0309bfdae41e4f89d363d84f3"
     },
     "cases/0062_00621494/parametric/openscad/gpt6_probe/scorecard.json": {
-      "bytes": 7037,
-      "sha256": "beafd609ab9f37f41c6707cbdd57a47a83230b885feb003f08e91da05ace8a17"
+      "bytes": 7038,
+      "sha256": "75c27b8bfb01e0da958deb103a36713e7fd42200fd7387fc4e4963ef608f5558"
     },
     "cases/0062_00621494/parametric/openscad/grok46/condition.txt": {
       "bytes": 1901,
       "sha256": "cc787d58d6f12210ab468a8fb9e627cac54101b0309bfdae41e4f89d363d84f3"
     },
     "cases/0062_00621494/parametric/openscad/grok46/scorecard.json": {
-      "bytes": 7610,
-      "sha256": "38cb5f2f7abc74ad7854e35d64ee0e3bbcc7843aac25995e29e6c0e9f308cde3"
+      "bytes": 7611,
+      "sha256": "8b1500279229dd9dada8556fd133cdbe2d4a4c939b54273c851b6acb5cd25c29"
     },
     "cases/0062_00621494/parametric/openscad/kimi_k3/condition.txt": {
       "bytes": 1901,
       "sha256": "cc787d58d6f12210ab468a8fb9e627cac54101b0309bfdae41e4f89d363d84f3"
     },
     "cases/0062_00621494/parametric/openscad/kimi_k3/scorecard.json": {
-      "bytes": 6819,
-      "sha256": "86494b9a4befa67da7175145442d1a617aa6a8eb3bab725a53efff983619d0e7"
+      "bytes": 6809,
+      "sha256": "ab5cef5cbf2938263277ee23fafeec49d5ae4d5eece9a1153227a662e0e80062"
     },
     "cases/0062_00621494/parametric/openscad/qwen38max/condition.txt": {
       "bytes": 1901,
       "sha256": "cc787d58d6f12210ab468a8fb9e627cac54101b0309bfdae41e4f89d363d84f3"
     },
     "cases/0062_00621494/parametric/openscad/qwen38max/scorecard.json": {
-      "bytes": 7021,
-      "sha256": "6bdd963e60bc4f34eb28df8a5b564341f204e59ef670615e8c32b50e1fa97172"
+      "bytes": 7022,
+      "sha256": "e17626b948eb8eb91b49bb98da3936de519bf979b340dadd824bf79653415ffb"
     },
     "cases/0085_00852511/descriptive/json/claude_opus5/condition.txt": {
       "bytes": 546,
@@ -1645,16 +1645,16 @@
       "sha256": "f4ba3fa32ee929db547ecc9ebed4c9acb2ab778ac7b9a4b95f05d940bdc77524"
     },
     "cases/0093_00934405/parametric/openscad/claude_opus5/scorecard.json": {
-      "bytes": 6824,
-      "sha256": "99ba1d2b6a10098f0ac7156ed7eaeafb2edfc631b7fb809842e0f6d69d4d5bbf"
+      "bytes": 6813,
+      "sha256": "fe6c5f1327965df5f07521a0cfca408e2af14c8832cfe38e9e8c376547ef5eb9"
     },
     "cases/0093_00934405/parametric/openscad/deepseek_v41flash/condition.txt": {
       "bytes": 2152,
       "sha256": "f4ba3fa32ee929db547ecc9ebed4c9acb2ab778ac7b9a4b95f05d940bdc77524"
     },
     "cases/0093_00934405/parametric/openscad/deepseek_v41flash/scorecard.json": {
-      "bytes": 6819,
-      "sha256": "0e0a4821710af8e87bece69efb6cdd2b3e34f6b271c5b19b1fdaa8a8a8a30c78"
+      "bytes": 6820,
+      "sha256": "72df6a2c1f182de5a89a212043d9a92690b07b56019876f8fc7f020e7fc9b63b"
     },
     "cases/0093_00934405/parametric/openscad/doubao21/condition.txt": {
       "bytes": 2152,
@@ -1662,63 +1662,63 @@
     },
     "cases/0093_00934405/parametric/openscad/doubao21/scorecard.json": {
       "bytes": 7284,
-      "sha256": "7540bea0329145f2d978f5dad08adb5d35cbf497d69164b8e4c8b7def5101b26"
+      "sha256": "661d4816175a5761cab68adabb8771f119ebdcf017b09b53051098ccfd4d1df9"
     },
     "cases/0093_00934405/parametric/openscad/gemini38_flash/condition.txt": {
       "bytes": 2152,
       "sha256": "f4ba3fa32ee929db547ecc9ebed4c9acb2ab778ac7b9a4b95f05d940bdc77524"
     },
     "cases/0093_00934405/parametric/openscad/gemini38_flash/scorecard.json": {
-      "bytes": 6914,
-      "sha256": "7297d4b20e82bdcf0fac8dd109771723d32d088bd9ca054282885446ddbc1edb"
+      "bytes": 6916,
+      "sha256": "e4327e932a0ef15f5e488017d259a1b9719c55800ca62929e08a47061122d46c"
     },
     "cases/0093_00934405/parametric/openscad/glm53_official/condition.txt": {
       "bytes": 2152,
       "sha256": "f4ba3fa32ee929db547ecc9ebed4c9acb2ab778ac7b9a4b95f05d940bdc77524"
     },
     "cases/0093_00934405/parametric/openscad/glm53_official/scorecard.json": {
-      "bytes": 6812,
-      "sha256": "ba644866d0d687a376bf1f14652b880dd85bde2846003a04c6624fbb613559cf"
+      "bytes": 6798,
+      "sha256": "de83cd8bc4c028e577059ed134eabd7055835c02809cfd202ca6f88c6ec638af"
     },
     "cases/0093_00934405/parametric/openscad/glm53flash/condition.txt": {
       "bytes": 2152,
       "sha256": "f4ba3fa32ee929db547ecc9ebed4c9acb2ab778ac7b9a4b95f05d940bdc77524"
     },
     "cases/0093_00934405/parametric/openscad/glm53flash/scorecard.json": {
-      "bytes": 6915,
-      "sha256": "728643a6ecd800bac9e8bbf6c81e2cbbc47dc10805ab32d26fc4d10486a6c46c"
+      "bytes": 6914,
+      "sha256": "c66d95d9d409b6bcb0a0d51792810b0074fa0231a3c1941cb7f72133bb1ae7fa"
     },
     "cases/0093_00934405/parametric/openscad/gpt6_probe/condition.txt": {
       "bytes": 2152,
       "sha256": "f4ba3fa32ee929db547ecc9ebed4c9acb2ab778ac7b9a4b95f05d940bdc77524"
     },
     "cases/0093_00934405/parametric/openscad/gpt6_probe/scorecard.json": {
-      "bytes": 7177,
-      "sha256": "6bcca2de8686b7d481fc3998ba7356fbdcb7f97faed5194350d543f9891c67ca"
+      "bytes": 7178,
+      "sha256": "85eef06519f893c6b3b7caad3707dae9e019498d98cfefae7486e1a3a9429519"
     },
     "cases/0093_00934405/parametric/openscad/grok46/condition.txt": {
       "bytes": 2152,
       "sha256": "f4ba3fa32ee929db547ecc9ebed4c9acb2ab778ac7b9a4b95f05d940bdc77524"
     },
     "cases/0093_00934405/parametric/openscad/grok46/scorecard.json": {
-      "bytes": 6863,
-      "sha256": "750a073e1f19891c4191a8b77160df8b41c279ff74ab42a71eb7c11bf10a4148"
+      "bytes": 6862,
+      "sha256": "cb673fcf9052a39262de10e510b6729ea833f10abd1ca7e08f6fa82c5db1b03c"
     },
     "cases/0093_00934405/parametric/openscad/kimi_k3/condition.txt": {
       "bytes": 2152,
       "sha256": "f4ba3fa32ee929db547ecc9ebed4c9acb2ab778ac7b9a4b95f05d940bdc77524"
     },
     "cases/0093_00934405/parametric/openscad/kimi_k3/scorecard.json": {
-      "bytes": 6942,
-      "sha256": "861d8cb73da257851abb6e129abd1ab0db6f562a7d40c04a06eac0b7c0435860"
+      "bytes": 6943,
+      "sha256": "ef551bf3b0b2ce7212b7c23293756f33cfcb44027ae7eb4c2699d62fa7c5bcd5"
     },
     "cases/0093_00934405/parametric/openscad/qwen38max/condition.txt": {
       "bytes": 2152,
       "sha256": "f4ba3fa32ee929db547ecc9ebed4c9acb2ab778ac7b9a4b95f05d940bdc77524"
     },
     "cases/0093_00934405/parametric/openscad/qwen38max/scorecard.json": {
-      "bytes": 6998,
-      "sha256": "31e86778b337c34051dc0796827418bdd033916c91bdae700cd91d04629a2cd1"
+      "bytes": 7010,
+      "sha256": "fd481142dc6abffe8ad974e022a02780dd464bc9c4a9912b8e25732e3b2383da"
     },
     "comparison_compatibility.json": {
       "bytes": 22576,

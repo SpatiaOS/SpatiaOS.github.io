@@ -3,6 +3,9 @@
   "cost_policy": "Local checkpoint inference; hosted-model API-equivalent generation cost is not applicable.",
   "dataset_size": 400,
   "denominator_per_cell": 100,
+  "diagnostic_only_terms": [
+    "f_score_005"
+  ],
   "evaluation_subset_size": 100,
   "experiments": {
     "new_generation": 0,
@@ -14,9 +17,13 @@
   "geometry_terms": [
     "chamfer_distance_score",
     "iou_csg",
-    "f_score_005",
     "f_score_001",
     "normal_consistency"
+  ],
+  "headline_terms": [
+    "desc_judge",
+    "geometry",
+    "param_judge"
   ],
   "iou_policy": "aaai_native_baseline_exclude_valid_inapplicable_retain_invalid",
   "judge_aggregation": "Original Text2CAD native success-only QA/J-Sem means; not the general-model fixed-N Judge aggregation.",
@@ -25,17 +32,19 @@
   "model_ids": [
     "text2cad"
   ],
-  "per_case_policy": "Diagnostic rows retain all100 outcomes; native aggregate Judge excludes invalid outputs and aggregate Geometry is metric-first. Use the per-format table for model comparisons.",
+  "per_case_policy": "Per-case Geometry uses four diagnostic terms. Aggregate Geometry retains the original metric-first statistics; all primitive metric policies are unchanged.",
   "retained_current_model_count": 10,
   "retained_current_model_values_changed": 0,
   "schema": "p3d-native-baseline-fixed100-v1",
   "scope": "Native JSON-only baseline; not a JSON/OpenSCAD two-format average.",
+  "score_revision": "text_geo4_score3_v1",
   "selected_case_contributions": 200,
   "semantic_profile": "gemini38_category_v1",
   "supported_formats": [
     "json"
   ],
-  "text_score": "100 * mean(descriptive Judge, parametric Geometry, Topology, Judge), JSON only.",
+  "text_score": "100 * mean(descriptive Judge, parametric Geometry, parametric Judge); Topology reported separately.",
+  "topology_in_headline": false,
   "topology_terms": [
     "no_open_edge",
     "inverted_normal_score",

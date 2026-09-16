@@ -1,2 +1,2 @@
-model_id,model,formats,denominator_per_cell,desc_valid,param_valid,desc_judge,geometry,topology,param_judge,text_p3d_score
-text2cad,Text2CAD,json,100,91.0,98.0,14.148361111111113,29.278119999999998,97.7395,13.690466666666664,38.71411194444445
+denominator_per_cell,desc_judge,desc_valid,formats,geometry,model,model_id,param_judge,param_valid,text_p3d_score,topology
+100,14.148361111111113,91.0,json,25.70515,Text2CAD,text2cad,13.690466666666664,98.0,17.847992592592593,97.7395

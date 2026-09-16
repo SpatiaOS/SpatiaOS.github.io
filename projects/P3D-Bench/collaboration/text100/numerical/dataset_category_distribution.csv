@@ -1,0 +1,7 @@
+category,count,percent,denominator,category_order
+conduit_cavity,0,0,100,0
+connector_interface,5,5,100,1
+housing_enclosure,13,13,100,2
+other_mechanical_unclear,2,2,100,3
+support_mounting,70,70,100,4
+transmission_motion,10,10,100,5

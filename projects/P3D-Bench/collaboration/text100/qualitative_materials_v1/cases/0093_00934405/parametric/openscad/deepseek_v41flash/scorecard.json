@@ -10,7 +10,7 @@
     "chamfer_distance_score": 0.8684000000000001,
     "f_score_001": 0.1627,
     "f_score_005": 0.7811,
-    "geometry": 0.57504,
+    "geometry": 0.523525,
     "inverted_normal_score": 1.0,
     "iou_csg": 0.4379,
     "iou_inapplicable": false,

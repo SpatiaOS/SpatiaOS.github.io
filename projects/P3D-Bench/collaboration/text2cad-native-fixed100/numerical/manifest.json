@@ -1,28 +1,28 @@
 {
   "files": {
     "README.md": {
-      "bytes": 1144,
-      "sha256": "49668a0524eb19a7f5efd5f4aa6cba7aca57ff6069235809c89e74737dff2fae"
+      "bytes": 1416,
+      "sha256": "12bc72bd21e5a4ab543c752509d129149e62052e8736df86c3cc74d4694ac6d7"
     },
     "definitions.json": {
-      "bytes": 1720,
-      "sha256": "92909dd599831d2e49c15242f222a82f00b6e1e90ce2fb8c9744bbb724f8b978"
+      "bytes": 1908,
+      "sha256": "85c529864ec050e365c0e21d88df27988ad3936b9d23845a94458921f902f785"
     },
     "model_summary.csv": {
-      "bytes": 243,
-      "sha256": "3d3d1acf947c7f853264419e88f625b12135eefd5d8a6f2590c232f05fcd67b1"
+      "bytes": 234,
+      "sha256": "8d0d1ed825dbc8ea4bd6ae7f27f9816bb9daa99d2c438931205d292ec25ed2e8"
     },
     "model_summary.json": {
-      "bytes": 318,
-      "sha256": "eb95acd22df2fb5485221e75e633401ea5cda1763e538d23154525430ac0011c"
+      "bytes": 309,
+      "sha256": "3618fa45539e60a76040caac65d64330bb7b829a6c2bbf00771d6bc417c27521"
     },
     "per_case_metrics.csv": {
-      "bytes": 28471,
-      "sha256": "b883ff5c2d0bb133d6cbcd9470d39a0b6bd095785b7ede36ce6a5813956310e6"
+      "bytes": 28515,
+      "sha256": "81329f48fe5f31b91d41a1e122e594de69eee40724c72c6042fca78ce00b359a"
     },
     "per_format_metrics.csv": {
-      "bytes": 734,
-      "sha256": "aca0c3c4df1d0c54cdbbf3f7efce9b6128098ab1a1b2a2b4838d5f0d679643dd"
+      "bytes": 724,
+      "sha256": "fcc7dbd946b7e3155d5fddb011ad381c4069c7bc31619697ad48b7bd4c8b60b1"
     },
     "selected_uids.txt": {
       "bytes": 1400,
@@ -34,11 +34,11 @@
     },
     "text2cad_main_row.tex": {
       "bytes": 150,
-      "sha256": "f0f7f649b43d32f70ab74d0e0ec184f504ed95bf232f07c86193353d9ca4e4da"
+      "sha256": "fca05dd459f1976b590f3f639d399765dc1d423412548a38f59f9354b08dc564"
     },
     "text2cad_parametric_json_row.tex": {
-      "bytes": 103,
-      "sha256": "d19abe23646aa39d05fe672babc4c327f883c19ba08cd400fe1f2aa6c95ef1dc"
+      "bytes": 95,
+      "sha256": "b4246dfb9bae1616185beb21e9cc8ff3acb04d204eeec2e45c56edd791dd7989"
     }
   },
   "private_payloads_exported": false,

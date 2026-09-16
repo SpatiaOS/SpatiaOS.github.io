@@ -1,0 +1,109 @@
+{
+  "aggregation_policy": "aaai_frozen_common_metric_success_summary",
+  "files": {
+    "all_format_metrics.csv": {
+      "bytes": 9227,
+      "sha256": "282c9b0935192dac664abea686665a0dec2677d980e8768d0eefa0823fb442cc"
+    },
+    "dataset_category_distribution.csv": {
+      "bytes": 231,
+      "sha256": "9b4b3aa06f9909ae5d3ceb1d1e9f2b92c11d8764d4e073c3b28a55e6c03dc457"
+    },
+    "dataset_difficulty_distribution.csv": {
+      "bytes": 84,
+      "sha256": "61706e8920b2cb467211343bdbd242ea72be0c064008b1aadc339f392171976f"
+    },
+    "dataset_distribution_rows.tex": {
+      "bytes": 199,
+      "sha256": "0dcd25c867a6df25a5173cce06d6e67625915e133d3632b7f866e60430a0b108"
+    },
+    "dataset_fixed100_labels.csv": {
+      "bytes": 3729,
+      "sha256": "b3c853e106ec2b6892eb9e2c7b43c040892f99b7436a3bee0ccd3fa2e3fea6df"
+    },
+    "definitions.json": {
+      "bytes": 2970,
+      "sha256": "ad556577e3941eb3e068b84f37d23307a3e3dead77009647ae0afb8131bc3398"
+    },
+    "format_deltas.csv": {
+      "bytes": 7654,
+      "sha256": "1abd05dd8de873a270cc98a3c2932e9575bf71a99c1cb28aba18cf37860c30ed"
+    },
+    "gemini_four_format_comparison.csv": {
+      "bytes": 2011,
+      "sha256": "9b6d025c06acfd17dccede26fc55e3af999debbcc53dc8cfe54d30ae07ee43d8"
+    },
+    "gemini_four_format_rows.tex": {
+      "bytes": 466,
+      "sha256": "723a3b6cef5da72866964fcee4fd6f008309af92329006e390bfb2d6671d708e"
+    },
+    "generation_cost_usage.csv": {
+      "bytes": 1201,
+      "sha256": "393266916d8848816e9327f9201c6f75001f3e7d9cb89ba430c30c3845fbdb81"
+    },
+    "invalid_case_inventory.csv": {
+      "bytes": 6035,
+      "sha256": "37a82392843512c7b92ca6c4c43c45d9cb3dcb89d4ae9e9c1da67ee9c2b5b095"
+    },
+    "judge_bucket_details.csv": {
+      "bytes": 2257,
+      "sha256": "c6e632b881c705cdda9625e965503960b207a6ea1445d35567359c3729b11b3f"
+    },
+    "model_score_cost.csv": {
+      "bytes": 1874,
+      "sha256": "285705f0dd18fa797c57af2dfce51132fa6e6c7c960b5a634b85cadb0be1093f"
+    },
+    "per_case_plot_values.csv": {
+      "bytes": 591735,
+      "sha256": "3666174896d43d0fd0bc9e018a9ef52fa163b4fc892dcdccfc53603946ec1db2"
+    },
+    "selected_uids.txt": {
+      "bytes": 1400,
+      "sha256": "fac7d9b2950d98b3e10b3bc966a9b76f3674407c2a18e4a3d541b2c5f5a10593"
+    },
+    "text100_api_rows.tex": {
+      "bytes": 1260,
+      "sha256": "d19f3ed7e1f2815f6e0279a1493ffc8e9c2a6a088649054a90c025706655c1fd"
+    },
+    "text100_cost_rows.tex": {
+      "bytes": 406,
+      "sha256": "8f99283be4ce0ca40951d6eff4520cda27edcec8a75be4a0e9a92f4743ce3898"
+    },
+    "text100_descriptive_both_rows.tex": {
+      "bytes": 832,
+      "sha256": "9ae59b1f155143ace33d1d2bab89691191ea18ec317f1a2dd319df412e70c761"
+    },
+    "text100_main_rows.tex": {
+      "bytes": 918,
+      "sha256": "0102a7d7c33910a450a90d81ae10afb8561d9c956b29854c6f9b576b826e9a05"
+    },
+    "text100_parametric_json_rows.tex": {
+      "bytes": 1277,
+      "sha256": "79bff52d163c11f8ed0f424239f61849ff8389c3f9daf5205567639b4dfcb33b"
+    },
+    "text100_parametric_openscad_rows.tex": {
+      "bytes": 1329,
+      "sha256": "a4baefc300ca9569783268bbeb77d2858b7e58dc6dcce6aaa12a307e97c20161"
+    },
+    "valid_invalid_counts.csv": {
+      "bytes": 2418,
+      "sha256": "3c7788edc60fd4d720b3e16218384ff7498f17ae78b5b7c59a34b3544f8c7751"
+    }
+  },
+  "model_ids": [
+    "gpt6_probe",
+    "qwen38max",
+    "gemini38_flash",
+    "kimi_k3",
+    "grok46",
+    "claude_opus5",
+    "glm53_official",
+    "deepseek_v41flash",
+    "doubao21",
+    "glm53flash"
+  ],
+  "private_payloads_exported": false,
+  "schema": "p3d-text100-collaboration-manifest-v1",
+  "score_revision": "text_geo4_score3_v1",
+  "snapshot_role": "numeric inputs for the collaboration manuscript, not finished plots"
+}

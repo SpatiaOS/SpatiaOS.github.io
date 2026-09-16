@@ -1,0 +1,75 @@
+{
+  "chamfer_policy": "Clamp each case to [0,0.01], use 0.01 for invalid, then average; score = 1 - CD / 0.01.",
+  "cost_policy": "Saved list-price equivalent for four selected generations per UID; full task USD = USD/UID * 100. No retries/Judge/local evaluation. Kimi is the retained tokenizer estimate.",
+  "dataset_graphs": "Keep complete dataset diagrams and statistics unchanged; the distribution files here describe only the evaluation subset.",
+  "dataset_size": 400,
+  "denominator_per_cell": 100,
+  "diagnostic_only_terms": [
+    "f_score_005"
+  ],
+  "evaluation_subset_size": 100,
+  "fixed_uid_sha256": "fac7d9b2950d98b3e10b3bc966a9b76f3674407c2a18e4a3d541b2c5f5a10593",
+  "geometry_terms": [
+    "chamfer_distance_score",
+    "iou_csg",
+    "f_score_001",
+    "normal_consistency"
+  ],
+  "headline_terms": [
+    "desc_judge",
+    "geometry",
+    "param_judge"
+  ],
+  "invalid_policy": "Retain selected original outcomes and fixed denominator; do not infer a new failure taxonomy.",
+  "iou_aggregation": "Observed valid IoU mean times common metric-success count divided by evaluation N, matching the saved AAAI table implementation.",
+  "iou_policy": "aaai_frozen_common_metric_success_summary",
+  "main_cells": 40,
+  "model_ids": [
+    "gpt6_probe",
+    "qwen38max",
+    "gemini38_flash",
+    "kimi_k3",
+    "grok46",
+    "claude_opus5",
+    "glm53_official",
+    "deepseek_v41flash",
+    "doubao21",
+    "glm53flash"
+  ],
+  "model_response_records_main_per_model": 400,
+  "parametric_qa_questions": {
+    "parametric": 8,
+    "semantic": 4,
+    "total_per_cell": 1200
+  },
+  "per_case_policy": "Per-case Geometry uses four diagnostic terms. Aggregate Geometry retains the original metric-first statistics; all primitive metric policies are unchanged.",
+  "reference_commit": "1bf9e2f7cb7ef05008c901f48df6e9f2918c5767",
+  "reference_manuscript": "p3d-aaai-overleaf-6a4b5bb7087b1cdc6262985f",
+  "schema": "p3d-text100-collaboration-inputs-v1",
+  "score_revision": "text_geo4_score3_v1",
+  "score_scale": {
+    "format_and_case": "0-1",
+    "headline": "0-100",
+    "native_jsem": "1-10"
+  },
+  "selected_case_contributions": 4400,
+  "selection": "ordered first 100 UIDs of the existing ranked Text400 list; no new sampling",
+  "source_cost_manifest_sha256": "d3133a7e1a8e118b6d5da9c9d4f1dbfe937a8db3c356fd7699e3dfd6ca1ec186",
+  "source_material_manifest_sha256": "bc762bc8fd0b9d201d3fd2a79c5afa2c10f4d9b687164d35f4ea200de903136b",
+  "source_selection_sha256": "e8e5a811bf9c740485dfd0e2ed36d16dfd851ccee8e797cea6cea45c67c790b8",
+  "supplemental_cells": 4,
+  "text_score": "100 * mean(descriptive Judge, parametric Geometry, parametric Judge); Topology reported separately.",
+  "topology_in_headline": false,
+  "topology_terms": [
+    "no_open_edge",
+    "inverted_normal_score",
+    "non_manifold_edge_score"
+  ],
+  "validation": {
+    "aggregate_checks": 352,
+    "mismatches": 0,
+    "new_experiments": 0,
+    "new_plots": 0,
+    "validity_checks": 44
+  }
+}

@@ -22,6 +22,7 @@ const textTable: ResultSubtable = {
   "title": "Text-to-3D",
   "accent": "var(--blue)",
   "superGroups": [
+    { "label": "Score / Cost", "span": 2 },
     {
       "label": "Descriptive",
       "span": 6
@@ -29,13 +30,10 @@ const textTable: ResultSubtable = {
     {
       "label": "Parametric",
       "span": 12
-    },
-    {
-      "label": "Score / Cost",
-      "span": 2
     }
   ],
   "groups": [
+    { "label": "Fixed 100", "span": 2 },
     {
       "label": "JSON",
       "span": 2
@@ -59,33 +57,29 @@ const textTable: ResultSubtable = {
     {
       "label": "Average",
       "span": 4
-    },
-    {
-      "label": "Fixed 100",
-      "span": 2
     }
   ],
   "metrics": [
-    "Judge",
-    "Valid",
-    "Judge",
-    "Valid",
-    "Judge",
-    "Valid",
-    "Geo",
-    "Topo",
-    "Judge",
-    "Valid",
-    "Geo",
-    "Topo",
-    "Judge",
-    "Valid",
-    "Geo",
-    "Topo",
-    "Judge",
-    "Valid",
     "Score",
-    "USD / case"
+    "USD / case",
+    "Judge",
+    "Valid",
+    "Judge",
+    "Valid",
+    "Judge",
+    "Valid",
+    "Geo",
+    "Topo",
+    "Judge",
+    "Valid",
+    "Geo",
+    "Topo",
+    "Judge",
+    "Valid",
+    "Geo",
+    "Topo",
+    "Judge",
+    "Valid"
   ],
   "rows": [],
   "note": ""
@@ -121,7 +115,7 @@ export const liveResultTables: ResultSubtable[] = [
       model: row.model,
       model_id: row.model_id,
       family: row.family,
-      cells: `${row.metrics} ${row.score.toFixed(2)} ${textCost(row)}`,
+  cells: `${row.score.toFixed(2)} ${textCost(row)} ${row.metrics}`,
     })),
     domainRows: textNativeRows(liveTextSummary),
   },

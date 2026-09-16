@@ -9,6 +9,11 @@ function close(a, b, label) {
 }
 
 export function validateTextSummary(summary) {
+  if (summary.score_revision !== "text_geo4_score3_v1" || summary.topology_in_headline !== false
+      || summary.geometry_terms?.join() !== "chamfer_distance_score,iou_csg,f_score_001,normal_consistency"
+      || summary.headline_terms?.join() !== "desc_judge,geometry,param_judge") {
+    throw new Error("expected four-term Geometry and three-bucket Text score");
+  }
   if (summary.schema_version !== "p3d-live-text-summary-v2" || summary.fixed_denominator !== 100) {
     throw new Error("expected fixed100 Text v2 summary");
   }
@@ -36,7 +41,7 @@ export function validateTextSummary(summary) {
       }
     }
     const p = row.formats.parametric.average;
-    close(row.score, (row.formats.descriptive.average.judge + p.geometry + p.topology + p.judge) * 25, "total score");
+    close(row.score, (row.formats.descriptive.average.judge + p.geometry + p.judge) * 100 / 3, "total score");
     if (index && summary.rows[index-1].score < row.score) throw new Error("Text rows must be score-descending");
     for (const field of ["cost_usd", "estimated_cost_usd"]) {
       if (row[field] !== null && (!Number.isFinite(row[field]) || row[field] <= 0)) throw new Error("invalid cost");
@@ -67,12 +72,12 @@ export function textNativeRows(summary) {
     if (values.some(v => !Number.isFinite(v) || v < 0 || v > 1)) throw new Error("invalid native metric");
     close(d.valid, .91, "native descriptive Valid");
     close(p.valid, .98, "native parametric Valid");
-    close(row.score, (d.judge + p.geometry + p.topology + p.judge) * 25, "native score");
+    close(row.score, (d.judge + p.geometry + p.judge) * 100 / 3, "native score");
     const metrics = [d.judge.toFixed(3), d.valid.toFixed(3), "-", "-", "-", "-",
       ...[p.geometry, p.topology, p.judge, p.valid].map(v => v.toFixed(3)), ...Array(8).fill("-")].join(" ");
     if (metrics !== row.metrics) throw new Error("native formatted cells differ");
     return { model: row.model, model_id: row.model_id, family: row.family,
-      cells: `${metrics} ${row.score.toFixed(2)} -` };
+      cells: `${row.score.toFixed(2)} - ${metrics}` };
   });
 }
 

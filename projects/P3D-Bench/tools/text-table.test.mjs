@@ -9,7 +9,7 @@ test("current ten models retain exact scores and both tasks' validity", () => {
   validateTextSummary(summary);
   assert.deepEqual(summary.rows.map(r => r.model_id).sort(), [...TEXT_MODELS].sort());
   assert.equal(summary.metric_policy, "aaai_frozen_common_metric_success_summary");
-  assert.deepEqual(summary.rows.map(r => r.score.toFixed(2)), ["89.30", "87.45", "87.34", "86.92", "86.85", "86.63", "86.01", "85.59", "84.98", "82.65"]);
+  assert.deepEqual(summary.rows.map(r => r.score.toFixed(2)), ["84.68", "82.33", "82.06", "81.68", "81.35", "81.08", "80.20", "80.09", "79.09", "76.28"]);
   for (const row of summary.rows) assert.equal(row.metrics.split(" ").length, 18);
 });
 
@@ -31,6 +31,9 @@ test("reject missing metrics, duplicates, stale scores, wrong means and costs", 
     s => { s.rows[1].model_id = s.rows[0].model_id; },
     s => { s.rows[0].metrics = "0.1"; },
     s => { s.rows[0].score += 1; },
+    s => { s.score_revision = "old"; },
+    s => { s.geometry_terms.push("f_score_005"); },
+    s => { s.topology_in_headline = true; },
     s => { s.rows[0].formats.descriptive.average.valid = 0.8; },
     s => { s.rows[0].cost_usd = 0; },
     s => { s.rows[0].cost_usd = null; s.rows[0].estimated_cost_usd = null; s.rows[0].usd_per_case = null; },
@@ -45,12 +48,12 @@ test("reject missing metrics, duplicates, stale scores, wrong means and costs", 
 
 test("native JSON baseline never invents OpenSCAD, averages or an API price", () => {
   const native = { model_id: "text2cad", model: "Text2CAD (JSON only)", family: "text2cad",
-    scope: "native_json_only", cost_kind: "local_checkpoint_not_api_priced", score: 40,
+    scope: "native_json_only", cost_kind: "local_checkpoint_not_api_priced", score: 70 / 3,
     formats: {descriptive: {json: {judge: .2, valid: .91}},
       parametric: {json: {geometry: .3, topology: .9, judge: .2, valid: .98}}},
     metrics: "0.200 0.910 - - - - 0.300 0.900 0.200 0.980 - - - - - - - -" };
   const input = {native_baselines: [native]};
-  assert.equal(textNativeRows(input)[0].cells, native.metrics + " 40.00 -");
+  assert.equal(textNativeRows(input)[0].cells, "23.33 - " + native.metrics);
   for (const mutate of [r => r.formats.descriptive.openscad = {judge: .2, valid: .91},
     r => r.score++, r => r.metrics = r.metrics.replace("-", "0.000")]) {
     const copy = structuredClone(native); mutate(copy);

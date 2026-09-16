@@ -5,7 +5,7 @@
     "f_score_001": "0.0537",
     "f_score_005": "0.5914",
     "format": "json",
-    "geometry": "0.43192",
+    "geometry": "0.39205",
     "inverted_normal_score": "1.0",
     "iou_csg": "0.2763",
     "iou_inapplicable": "False",

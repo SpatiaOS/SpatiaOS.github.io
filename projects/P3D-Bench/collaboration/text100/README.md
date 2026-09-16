@@ -8,13 +8,16 @@ UIDs for all ten models. Image and Assembly results are outside this handoff.
   60 model-specific records, 286 original assets and 20 complete Judge QA sets.
 - [Selected invalid-output evidence](invalid_materials_v1/README.md): 54 saved
   programs and error records (17 main-format and 37 Gemini supplemental-format).
-- Numerical plot inputs and the per-figure update list are in the paper
-  repository's `data/text100/` and `TEXT_RESULTS_UPDATE.md`.
+- [Numerical plot inputs](numerical/definitions.json) match the paper
+  repository's `data/text100/`; `TEXT_RESULTS_UPDATE.md` lists figure work.
 
 Use the current paper data export, whose definitions identify
-`aaai_frozen_common_metric_success_summary`. It follows the owner-specified
-AAAI table implementation. Earlier fixed-100 aggregate exports are historical;
-the saved per-case diagnostics and qualitative materials have not changed.
+`text_geo4_score3_v1`. Geometry averages CD score, IoU, F@.01 and NC;
+the Text score averages descriptive Judge, parametric Geometry and parametric
+Judge (0–100). Topology is reported separately. The primitive statistics retain
+`aaai_frozen_common_metric_success_summary`; earlier aggregate exports are historical.
+Only derived Geometry fields change in per-case diagnostics and scorecards;
+programs, images, Judge evidence and costs are unchanged.
 Use aggregate CSVs for rankings and cost/radar plots, not the average of the
 per-case diagnostic Geometry column. The paper's original figures and their
 full typesetting are restored; pending Text figure updates remain with the
