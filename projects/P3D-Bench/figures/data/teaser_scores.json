@@ -26,15 +26,15 @@
       "color": "#4E779E"
     },
     {
-      "id": "grok46",
-      "label": "Grok 4.6",
-      "family": "grok",
-      "color": "#5B879F"
-    },
-    {
       "id": "kimi_k3",
       "label": "Kimi K3",
       "family": "kimi",
+      "color": "#5B879F"
+    },
+    {
+      "id": "grok46",
+      "label": "Grok 4.6",
+      "family": "grok",
       "color": "#6993AB"
     },
     {
@@ -76,8 +76,8 @@
         "gpt6_astra_local": 63.22054012345679,
         "claude_opus5": 53.68026234567901,
         "gemini38_flash": 52.54314814814814,
-        "grok46": 49.75635802469135,
         "kimi_k3": 50.02933641975308,
+        "grok46": 49.75635802469135,
         "qwen38max": 49.01050925925926,
         "glm53_flash": 48.23135802469135,
         "deepseek41_flash": 47.029027777777785,
@@ -96,8 +96,8 @@
         "gpt6_astra_local": 84.7271962962963,
         "claude_opus5": 81.1263375,
         "gemini38_flash": 82.10315740740741,
-        "grok46": 81.39750787037036,
         "kimi_k3": 81.72546805555557,
+        "grok46": 81.39750787037036,
         "qwen38max": 82.3836425925926,
         "glm53_official": 80.27487731481482,
         "deepseek41_flash": 80.12996759259259,
@@ -115,8 +115,8 @@
         "gpt6_astra_local": 58.517546296296295,
         "claude_opus5": 50.79597222222222,
         "gemini38_flash": 51.67375,
-        "grok46": 48.34637345679012,
         "kimi_k3": 49.41600308641975,
+        "grok46": 48.34637345679012,
         "qwen38max": 48.49160493827161,
         "glm53_flash": 48.009182098765436,
         "deepseek41_flash": 45.43621913580247,
@@ -167,8 +167,8 @@
       "openai",
       "claude",
       "gemini",
-      "grok",
       "kimi",
+      "grok",
       "qwen",
       "zai",
       "deepseek",
@@ -177,29 +177,29 @@
     "axis_ranges": {
       "assembly": [
         20,
-        70,
+        90,
         10
       ],
       "text": [
-        75,
+        70,
         90,
         5
       ],
       "image": [
-        30,
-        65,
-        5
+        20,
+        90,
+        10
       ]
     },
     "family_colors": {
       "openai": "#304771",
       "gemini": "#4E779E",
       "claude": "#3F5E8B",
-      "kimi": "#6993AB",
+      "kimi": "#5B879F",
       "zai": "#B0C2B8",
       "deepseek": "#E3C49C",
       "qwen": "#83ADB4",
-      "grok": "#5B879F",
+      "grok": "#6993AB",
       "doubao": "#EDD7C0"
     },
     "show_range_labels": false
