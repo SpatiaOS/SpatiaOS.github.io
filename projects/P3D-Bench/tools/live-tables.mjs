@@ -157,7 +157,7 @@ export function buildAssemblyTable(summary) {
         throw new Error(`${row.model}: formats must have equal weight`);
       }
     });
-    const score = ["geom", "topo", "judge", "part"].reduce((sum, metric) => sum + average[metric], 0) * 25;
+    const score = ["geom", "judge", "part"].reduce((sum, metric) => sum + average[metric], 0) * 100 / 3;
     if (!Number.isFinite(score) || Math.abs(score - row.score) > 1e-8) throw new Error(`${row.model}: score does not match unrounded metrics`);
     if (row.cost_usd !== null && (!Number.isFinite(row.cost_usd) || row.cost_usd < 0)) throw new Error("invalid Assembly cost");
     if (row.cost_usd !== null) {

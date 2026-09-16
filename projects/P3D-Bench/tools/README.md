@@ -130,8 +130,10 @@ Text uses `../live-text-summary.json` (`p3d-live-text-summary-v2`): ten current
 models, the same fixed first-100 UIDs, and JSON/OpenSCAD in the main table.
 The full Text dataset remains 400 cases. The selected subset has 98 D4 and 2 D5
 cases and is not a random or balanced sample. Scores preserve the existing
-aggregation, including zero contribution for inapplicable IoU, and display two
-decimals after sorting unrounded values. `text-table.mjs` checks all eighteen
+failure denominators. Unavailable IoU is omitted from the valid case's geometry
+mean, and F@0.05 is excluded from Geo. Scores exclude Topo while keeping it as
+a separate reported column, and display two decimals after sorting unrounded
+values. `text-table.mjs` checks all eighteen
 metric cells, equal format means, scores, model identities and numeric costs.
 
 Text costs cover four selected generation responses per UID and exclude retries;

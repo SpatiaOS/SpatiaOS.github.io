@@ -73,15 +73,15 @@
       "id": "assembly",
       "label": "Assembly-3D",
       "scores": {
-        "gpt6_astra_local": 75.27303425925926,
-        "claude_opus5": 69.9984800925926,
-        "gemini38_flash": 68.53701111111111,
-        "grok46": 67.09998101851852,
-        "kimi_k3": 66.57730231481482,
-        "qwen38max": 65.79946944444444,
-        "glm53_flash": 65.80641435185186,
-        "deepseek41_flash": 64.55025416666666,
-        "doubao_seed21": 42.4458537037037
+        "gpt6_astra_local": 63.22054012345679,
+        "claude_opus5": 53.68026234567901,
+        "gemini38_flash": 52.54314814814814,
+        "grok46": 49.75635802469135,
+        "kimi_k3": 50.02933641975308,
+        "qwen38max": 49.01050925925926,
+        "glm53_flash": 48.23135802469135,
+        "deepseek41_flash": 47.029027777777785,
+        "doubao_seed21": 29.135632716049386
       },
       "result_version": "Current models",
       "source_kind": "release_snapshot_three_axis_judge",
@@ -93,15 +93,15 @@
       "id": "text",
       "label": "Text-to-3D",
       "scores": {
-        "gpt6_astra_local": 89.33569101388889,
-        "claude_opus5": 86.67078154166667,
-        "gemini38_flash": 87.37741943055556,
-        "grok46": 86.88181277777778,
-        "kimi_k3": 86.96837916666667,
-        "qwen38max": 87.50188486111111,
-        "glm53_official": 86.07652502777779,
-        "deepseek41_flash": 85.62471011111111,
-        "doubao_seed21": 85.05521169444444
+        "gpt6_astra_local": 84.7271962962963,
+        "claude_opus5": 81.1263375,
+        "gemini38_flash": 82.10315740740741,
+        "grok46": 81.39750787037036,
+        "kimi_k3": 81.72546805555557,
+        "qwen38max": 82.3836425925926,
+        "glm53_official": 80.27487731481482,
+        "deepseek41_flash": 80.12996759259259,
+        "doubao_seed21": 79.16908703703703
       },
       "result_version": "Current models",
       "source_kind": "fixed100_recomputed",
@@ -112,15 +112,15 @@
       "id": "image",
       "label": "Image-to-3D",
       "scores": {
-        "gpt6_astra_local": 72.08431975308643,
-        "claude_opus5": 66.99395555555556,
-        "gemini38_flash": 66.44887407407407,
-        "grok46": 64.67326008230451,
-        "kimi_k3": 66.0267205761317,
-        "qwen38max": 66.04777736625515,
-        "glm53_flash": 64.93369547325103,
-        "deepseek41_flash": 62.835760905349794,
-        "doubao_seed21": 52.68205843621399
+        "gpt6_astra_local": 58.517546296296295,
+        "claude_opus5": 50.79597222222222,
+        "gemini38_flash": 51.67375,
+        "grok46": 48.34637345679012,
+        "kimi_k3": 49.41600308641975,
+        "qwen38max": 48.49160493827161,
+        "glm53_flash": 48.009182098765436,
+        "deepseek41_flash": 45.43621913580247,
+        "doubao_seed21": 37.92362654320988
       },
       "result_version": "Current models",
       "source_kind": "release_snapshot_three_axis_judge",
@@ -176,18 +176,18 @@
     ],
     "axis_ranges": {
       "assembly": [
-        40,
-        80,
+        20,
+        70,
         10
       ],
       "text": [
-        80,
+        75,
         90,
-        2
+        5
       ],
       "image": [
-        50,
-        75,
+        30,
+        65,
         5
       ]
     },
@@ -203,5 +203,26 @@
       "doubao": "#EDD7C0"
     },
     "show_range_labels": false
+  },
+  "scoring_revision": {
+    "id": "p3d-scoring-20260916",
+    "geometry": "Mean of F@0.01, NC, normalized CD and applicable IoU; F@0.05 is auxiliary only.",
+    "text_iou": "Omit unavailable IoU from the valid case geometry mean; retain generation-invalid cases as failures.",
+    "part_tau_fraction": 0.03,
+    "part_sample_points": 2048,
+    "part_acceptance_fscore": 0.7,
+    "part": "Mean of match F1 and F-score mean over all Hungarian pairs; no normalized part mean.",
+    "score_excludes": [
+      "topo",
+      "valid"
+    ],
+    "reported_separately": [
+      "topo",
+      "valid"
+    ],
+    "part_sampling_seed": 42,
+    "part_sampling_rng": "MT19937 legacy uniform sequence with explicit Generator",
+    "text_raw_audit_sha256": "a8273fe0e41bcac4672743c9d46e7e37061c1e29562ac4e387818ce8fb7b6c75",
+    "part_rescore_sha256": "c2708213d4311dc9389c58a01cc1dc27de6b9164da8fa3bf4c9d91611f77f361"
   }
 }

@@ -1,5 +1,5 @@
 // Text-only fixed100 validation; no Assembly data or renderer changes.
-export const TEXT_MODELS = ["gpt6_probe", "gemini38_flash", "qwen38max", "grok46", "kimi_k3",
+export const TEXT_MODELS = ["gpt6_probe", "qwen38max", "gemini38_flash", "kimi_k3", "grok46",
   "claude_opus5", "glm53_official", "deepseek_v41flash", "doubao21", "glm53flash"];
 
 function close(a, b, label) {
@@ -36,7 +36,7 @@ export function validateTextSummary(summary) {
       }
     }
     const p = row.formats.parametric.average;
-    close(row.score, (row.formats.descriptive.average.judge + p.geometry + p.topology + p.judge) * 25, "total score");
+    close(row.score, (row.formats.descriptive.average.judge + p.geometry + p.judge) * 100 / 3, "total score");
     if (index && summary.rows[index-1].score < row.score) throw new Error("Text rows must be score-descending");
     for (const field of ["cost_usd", "estimated_cost_usd"]) {
       if (row[field] !== null && (!Number.isFinite(row[field]) || row[field] <= 0)) throw new Error("invalid cost");

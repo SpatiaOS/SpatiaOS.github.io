@@ -13,10 +13,10 @@ const fixture = `${prefix}[${textRaw},${oldAssembly}]${suffix}`;
 
 test("preserve the measured models and audited costs with three-axis Judge scores", () => {
   const original = assembly.rows.filter((row) => !["doubao_seed21", "mimo25", "deepseek41_flash"].includes(row.model_id));
-  assert.deepEqual(original.map((row) => row.model), ["GPT-6 Astra", "Claude Opus 5", "Gemini 3.8 Flash", "Grok 4.6", "Kimi K3", "GLM 5.3 Flash", "Qwen 3.8 Max"]);
-  assert.deepEqual(original.map((row) => row.cells.split(" ").at(-2)), ["75.27", "70.00", "68.54", "67.10", "66.58", "65.81", "65.80"]);
+  assert.deepEqual(original.map((row) => row.model), ["GPT-6 Astra", "Claude Opus 5", "Gemini 3.8 Flash", "Kimi K3", "Grok 4.6", "Qwen 3.8 Max", "GLM 5.3 Flash"]);
+  assert.deepEqual(original.map((row) => row.cells.split(" ").at(-2)), ["63.22", "53.68", "52.54", "50.03", "49.76", "49.01", "48.23"]);
   assert(assembly.rows.every((row) => row.cells.split(" ").length === 17));
-  assert.deepEqual(original.map((row) => row.cells.split(" ").at(-1)), ["$1.315", "$0.995", "$0.158", "$0.305", "$0.575", "$0.034", "$0.121"]);
+  assert.deepEqual(original.map((row) => row.cells.split(" ").at(-1)), ["$1.315", "$0.995", "$0.158", "$0.575", "$0.305", "$0.121", "$0.034"]);
   assert.deepEqual(summary.rows.find((row) => row.model_id === "gpt6_astra_local").coverage, { total: 200, tested: 183, valid: 182, invalid: 1, api_unrun: 17 });
 });
 

@@ -8,8 +8,21 @@ const summary = JSON.parse(readFileSync(new URL("../live-text-summary.json", imp
 test("current ten models retain exact scores and both tasks' validity", () => {
   validateTextSummary(summary);
   assert.deepEqual(summary.rows.map(r => r.model_id), TEXT_MODELS);
-  assert.deepEqual(summary.rows.map(r => r.score.toFixed(2)), ["89.14", "87.18", "87.13", "86.70", "86.57", "86.49", "85.70", "85.44", "84.66", "82.34"]);
+  assert.deepEqual(summary.rows.map(r => r.score.toFixed(2)), ["84.73", "82.38", "82.10", "81.73", "81.40", "81.13", "80.27", "80.13", "79.17", "76.35"]);
   for (const row of summary.rows) assert.equal(row.metrics.split(" ").length, 18);
+});
+
+test("Topo is displayed independently and unavailable IoU is omitted", () => {
+  assert.match(summary.metric_policy, /omit_unavailable_iou/);
+  assert.equal(summary.raw_iou_audit.main_counts.unavailable, 156);
+  const copy = structuredClone(summary), row = copy.rows[0];
+  for (const fmt of ["json", "openscad", "average"]) row.formats.parametric[fmt].topology = 0;
+  const cells = row.metrics.split(" ");
+  for (const index of [7, 11, 15]) cells[index] = "0.000";
+  row.metrics = cells.join(" ");
+  validateTextSummary(copy);
+  row.score = row.score_with_topology;
+  assert.throws(() => validateTextSummary(copy), /total score/);
 });
 
 test("every current cost is numeric and estimates remain in provenance", () => {

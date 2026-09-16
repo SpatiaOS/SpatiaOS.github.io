@@ -4,13 +4,13 @@
   "cost_supplement_sha256": "e536d9de66ecf2c6f8b1fb10bb842e78f5686f88312b0e60c471e7c09290bbc9",
   "fixed_denominator": 100,
   "fixed_uid_sha256": "fac7d9b2950d98b3e10b3bc966a9b76f3674407c2a18e4a3d541b2c5f5a10593",
-  "metric_policy": "existing_fixed100_zero_inapplicable_iou_unchanged",
+  "metric_policy": "omit_unavailable_iou_per_valid_case; invalid_cases_zero; geometry_excludes_f005",
   "model_ids": [
     "gpt6_probe",
-    "gemini38_flash",
     "qwen38max",
-    "grok46",
+    "gemini38_flash",
     "kimi_k3",
+    "grok46",
     "claude_opus5",
     "glm53_official",
     "deepseek_v41flash",
@@ -34,85 +34,38 @@
             "valid": 1.0
           },
           "openscad": {
-            "judge": 0.9256944444444444,
+            "judge": 0.9256944444444445,
             "valid": 1.0
           }
         },
         "parametric": {
           "average": {
-            "geometry": 0.7183436999999999,
+            "geometry": 0.687927,
+            "topology": 0.9932691766666667,
             "judge": 0.9275,
-            "topology": 0.9932691766666666,
             "valid": 1.0
           },
           "json": {
-            "geometry": 0.6939418,
-            "judge": 0.9108333333333333,
+            "geometry": 0.6653548333333333,
             "topology": 0.9865497033333334,
+            "judge": 0.9108333333333333,
             "valid": 1.0
           },
           "openscad": {
-            "geometry": 0.7427455999999999,
+            "geometry": 0.7104991666666667,
+            "topology": 0.99998865,
             "judge": 0.9441666666666667,
-            "topology": 0.9999886499999999,
             "valid": 1.0
           }
         }
       },
-      "metrics": "0.927 1.000 0.926 1.000 0.926 1.000 0.694 0.987 0.911 1.000 0.743 1.000 0.944 1.000 0.718 0.993 0.927 1.000",
+      "metrics": "0.927 1.000 0.926 1.000 0.926 1.000 0.665 0.987 0.911 1.000 0.710 1.000 0.944 1.000 0.688 0.993 0.927 1.000",
       "model": "GPT-6 (xhigh)",
       "model_id": "gpt6_probe",
-      "score": 89.13754413888888,
+      "score": 84.7271962962963,
       "usage_kind": "selected_response_usage",
-      "usd_per_case": 0.59202018
-    },
-    {
-      "cost_basis": "Saved standard-rate equivalent for four selected generations per UID; retries excluded; not an invoice",
-      "cost_usd": 31.527327,
-      "estimated_cost_usd": null,
-      "family": "gemini",
-      "formats": {
-        "descriptive": {
-          "average": {
-            "judge": 0.8659722222222221,
-            "valid": 1.0
-          },
-          "json": {
-            "judge": 0.8555555555555554,
-            "valid": 1.0
-          },
-          "openscad": {
-            "judge": 0.8763888888888889,
-            "valid": 1.0
-          }
-        },
-        "parametric": {
-          "average": {
-            "geometry": 0.7226079999999999,
-            "judge": 0.9054166666666668,
-            "topology": 0.9931829633333333,
-            "valid": 1.0
-          },
-          "json": {
-            "geometry": 0.7065014,
-            "judge": 0.8808333333333334,
-            "topology": 0.9863895366666666,
-            "valid": 1.0
-          },
-          "openscad": {
-            "geometry": 0.7387146,
-            "judge": 0.93,
-            "topology": 0.99997639,
-            "valid": 1.0
-          }
-        }
-      },
-      "metrics": "0.856 1.000 0.876 1.000 0.866 1.000 0.707 0.986 0.881 1.000 0.739 1.000 0.930 1.000 0.723 0.993 0.905 1.000",
-      "model": "Gemini 3.8 Flash (high)",
-      "model_id": "gemini38_flash",
-      "score": 87.17949630555555,
-      "usage_kind": "selected_response_usage",
-      "usd_per_case": 0.31527327
+      "usd_per_case": 0.59202018,
+      "score_with_topology": 88.3771266388889
     },
     {
       "cost_basis": "Saved standard-rate equivalent for four selected generations per UID; retries excluded; not an invoice",
@@ -136,79 +89,81 @@
         },
         "parametric": {
           "average": {
-            "geometry": 0.7026831,
-            "judge": 0.9066666666666667,
+            "geometry": 0.6787315,
             "topology": 0.9897347416666666,
+            "judge": 0.9066666666666667,
             "valid": 1.0
           },
           "json": {
-            "geometry": 0.6937612,
-            "judge": 0.8958333333333334,
+            "geometry": 0.6701033333333334,
             "topology": 0.9794807933333334,
+            "judge": 0.8958333333333334,
             "valid": 1.0
           },
           "openscad": {
-            "geometry": 0.711605,
-            "judge": 0.9175,
+            "geometry": 0.6873596666666667,
             "topology": 0.99998869,
+            "judge": 0.9175,
             "valid": 1.0
           }
         }
       },
-      "metrics": "0.867 1.000 0.905 1.000 0.886 1.000 0.694 0.979 0.896 1.000 0.712 1.000 0.917 1.000 0.703 0.990 0.907 1.000",
+      "metrics": "0.867 1.000 0.905 1.000 0.886 1.000 0.670 0.979 0.896 1.000 0.687 1.000 0.917 1.000 0.679 0.990 0.907 1.000",
       "model": "Qwen3.8-Max (xhigh)",
       "model_id": "qwen38max",
-      "score": 87.12989048611112,
+      "score": 82.3836425925926,
       "usage_kind": "selected_response_usage",
-      "usd_per_case": 0.41022307971
+      "usd_per_case": 0.41022307971,
+      "score_with_topology": 86.53110048611111
     },
     {
       "cost_basis": "Saved standard-rate equivalent for four selected generations per UID; retries excluded; not an invoice",
-      "cost_usd": 31.256292,
+      "cost_usd": 31.527327,
       "estimated_cost_usd": null,
-      "family": "grok",
+      "family": "gemini",
       "formats": {
         "descriptive": {
           "average": {
-            "judge": 0.8590277777777778,
+            "judge": 0.8659722222222221,
             "valid": 1.0
           },
           "json": {
-            "judge": 0.8427777777777778,
+            "judge": 0.8555555555555555,
             "valid": 1.0
           },
           "openscad": {
-            "judge": 0.8752777777777778,
+            "judge": 0.8763888888888889,
             "valid": 1.0
           }
         },
         "parametric": {
           "average": {
-            "geometry": 0.7184527,
-            "judge": 0.8958333333333333,
-            "topology": 0.994820775,
+            "geometry": 0.6917058333333334,
+            "topology": 0.9931829633333333,
+            "judge": 0.9054166666666668,
             "valid": 1.0
           },
           "json": {
-            "geometry": 0.7110916,
-            "judge": 0.8775000000000001,
-            "topology": 0.98971166,
+            "geometry": 0.67806275,
+            "topology": 0.9863895366666666,
+            "judge": 0.8808333333333334,
             "valid": 1.0
           },
           "openscad": {
-            "geometry": 0.7258138,
-            "judge": 0.9141666666666666,
-            "topology": 0.99992989,
+            "geometry": 0.7053489166666667,
+            "topology": 0.99997639,
+            "judge": 0.93,
             "valid": 1.0
           }
         }
       },
-      "metrics": "0.843 1.000 0.875 1.000 0.859 1.000 0.711 0.990 0.878 1.000 0.726 1.000 0.914 1.000 0.718 0.995 0.896 1.000",
-      "model": "Grok 4.6 (high)",
-      "model_id": "grok46",
-      "score": 86.70336465277776,
+      "metrics": "0.856 1.000 0.876 1.000 0.866 1.000 0.678 0.986 0.881 1.000 0.705 1.000 0.930 1.000 0.692 0.993 0.905 1.000",
+      "model": "Gemini 3.8 Flash (high)",
+      "model_id": "gemini38_flash",
+      "score": 82.10315740740741,
       "usage_kind": "selected_response_usage",
-      "usd_per_case": 0.31256292
+      "usd_per_case": 0.31527327,
+      "score_with_topology": 86.4069421388889
     },
     {
       "cost_basis": "Saved standard-rate equivalent for four selected generations per UID; retries excluded; not an invoice; historical official-tokenizer estimate, not observed usage",
@@ -226,37 +181,87 @@
             "valid": 0.97
           },
           "openscad": {
-            "judge": 0.9077777777777777,
+            "judge": 0.9077777777777778,
             "valid": 1.0
           }
         },
         "parametric": {
           "average": {
-            "geometry": 0.6929795000000001,
-            "judge": 0.9125000000000001,
+            "geometry": 0.6698890416666667,
             "topology": 0.9879654666666666,
+            "judge": 0.9125,
             "valid": 0.995
           },
           "json": {
-            "geometry": 0.676048,
-            "judge": 0.8850000000000001,
-            "topology": 0.9761123533333332,
+            "geometry": 0.6556504166666667,
+            "topology": 0.9761123533333333,
+            "judge": 0.885,
             "valid": 0.99
           },
           "openscad": {
-            "geometry": 0.7099110000000001,
-            "judge": 0.94,
+            "geometry": 0.6841276666666667,
             "topology": 0.99981858,
+            "judge": 0.94,
             "valid": 1.0
           }
         }
       },
-      "metrics": "0.831 0.970 0.908 1.000 0.869 0.985 0.676 0.976 0.885 0.990 0.710 1.000 0.940 1.000 0.693 0.988 0.913 0.995",
+      "metrics": "0.831 0.970 0.908 1.000 0.869 0.985 0.656 0.976 0.885 0.990 0.684 1.000 0.940 1.000 0.670 0.988 0.912 0.995",
       "model": "Kimi K3 (max)",
       "model_id": "kimi_k3",
-      "score": 86.57049916666666,
+      "score": 81.72546805555557,
       "usage_kind": "official_tokenizer_estimate",
-      "usd_per_case": 0.48601371
+      "usd_per_case": 0.48601371,
+      "score_with_topology": 85.99323770833334
+    },
+    {
+      "cost_basis": "Saved standard-rate equivalent for four selected generations per UID; retries excluded; not an invoice",
+      "cost_usd": 31.256292,
+      "estimated_cost_usd": null,
+      "family": "grok",
+      "formats": {
+        "descriptive": {
+          "average": {
+            "judge": 0.8590277777777777,
+            "valid": 1.0
+          },
+          "json": {
+            "judge": 0.8427777777777777,
+            "valid": 1.0
+          },
+          "openscad": {
+            "judge": 0.8752777777777777,
+            "valid": 1.0
+          }
+        },
+        "parametric": {
+          "average": {
+            "geometry": 0.687064125,
+            "topology": 0.994820775,
+            "judge": 0.8958333333333333,
+            "valid": 1.0
+          },
+          "json": {
+            "geometry": 0.6807449166666667,
+            "topology": 0.98971166,
+            "judge": 0.8775,
+            "valid": 1.0
+          },
+          "openscad": {
+            "geometry": 0.6933833333333334,
+            "topology": 0.99992989,
+            "judge": 0.9141666666666667,
+            "valid": 1.0
+          }
+        }
+      },
+      "metrics": "0.843 1.000 0.875 1.000 0.859 1.000 0.681 0.990 0.877 1.000 0.693 1.000 0.914 1.000 0.687 0.995 0.896 1.000",
+      "model": "Grok 4.6 (high)",
+      "model_id": "grok46",
+      "score": 81.39750787037036,
+      "usage_kind": "selected_response_usage",
+      "usd_per_case": 0.31256292,
+      "score_with_topology": 85.91865027777777
     },
     {
       "cost_basis": "Saved standard-rate equivalent for four selected generations per UID; retries excluded; not an invoice",
@@ -266,7 +271,7 @@
       "formats": {
         "descriptive": {
           "average": {
-            "judge": 0.8460416666666666,
+            "judge": 0.8460416666666667,
             "valid": 1.0
           },
           "json": {
@@ -274,37 +279,38 @@
             "valid": 1.0
           },
           "openscad": {
-            "judge": 0.8630555555555555,
+            "judge": 0.8630555555555556,
             "valid": 1.0
           }
         },
         "parametric": {
           "average": {
-            "geometry": 0.7072438999999999,
-            "judge": 0.9116666666666666,
+            "geometry": 0.6760817916666666,
             "topology": 0.9947821283333333,
+            "judge": 0.9116666666666666,
             "valid": 1.0
           },
           "json": {
-            "geometry": 0.6888538,
-            "judge": 0.8858333333333334,
+            "geometry": 0.658679,
             "topology": 0.9898354333333333,
+            "judge": 0.8858333333333334,
             "valid": 1.0
           },
           "openscad": {
-            "geometry": 0.725634,
-            "judge": 0.9375,
+            "geometry": 0.6934845833333333,
             "topology": 0.9997288233333333,
+            "judge": 0.9375,
             "valid": 1.0
           }
         }
       },
-      "metrics": "0.829 1.000 0.863 1.000 0.846 1.000 0.689 0.990 0.886 1.000 0.726 1.000 0.938 1.000 0.707 0.995 0.912 1.000",
+      "metrics": "0.829 1.000 0.863 1.000 0.846 1.000 0.659 0.990 0.886 1.000 0.693 1.000 0.938 1.000 0.676 0.995 0.912 1.000",
       "model": "Claude Opus 5 (max)",
       "model_id": "claude_opus5",
-      "score": 86.49335904166666,
+      "score": 81.1263375,
       "usage_kind": "selected_response_usage",
-      "usd_per_case": 0.47622545
+      "usd_per_case": 0.47622545,
+      "score_with_topology": 85.71430633333334
     },
     {
       "cost_basis": "Saved standard-rate equivalent for four selected generations per UID; retries excluded; not an invoice",
@@ -328,31 +334,32 @@
         },
         "parametric": {
           "average": {
-            "geometry": 0.6807676,
+            "geometry": 0.6558852083333333,
+            "topology": 0.994676915,
             "judge": 0.9,
-            "topology": 0.9946769149999999,
             "valid": 1.0
           },
           "json": {
-            "geometry": 0.6658452,
+            "geometry": 0.64243575,
+            "topology": 0.9895863766666667,
             "judge": 0.87,
-            "topology": 0.9895863766666666,
             "valid": 1.0
           },
           "openscad": {
-            "geometry": 0.69569,
-            "judge": 0.93,
+            "geometry": 0.6693346666666666,
             "topology": 0.9997674533333333,
+            "judge": 0.93,
             "valid": 1.0
           }
         }
       },
-      "metrics": "0.846 1.000 0.859 0.990 0.852 0.995 0.666 0.990 0.870 1.000 0.696 1.000 0.930 1.000 0.681 0.995 0.900 1.000",
+      "metrics": "0.846 1.000 0.859 0.990 0.852 0.995 0.642 0.990 0.870 1.000 0.669 1.000 0.930 1.000 0.656 0.995 0.900 1.000",
       "model": "GLM-5.3 (high)",
       "model_id": "glm53_official",
-      "score": 85.69514065277778,
+      "score": 80.27487731481482,
       "usage_kind": "selected_response_usage",
-      "usd_per_case": 0.1088919736
+      "usd_per_case": 0.1088919736,
+      "score_with_topology": 85.07308086111112
     },
     {
       "cost_basis": "Saved standard-rate equivalent for four selected generations per UID; retries excluded; not an invoice",
@@ -366,41 +373,42 @@
             "valid": 1.0
           },
           "json": {
-            "judge": 0.8405555555555556,
+            "judge": 0.8405555555555555,
             "valid": 1.0
           },
           "openscad": {
-            "judge": 0.8841666666666668,
+            "judge": 0.8841666666666667,
             "valid": 1.0
           }
         },
         "parametric": {
           "average": {
-            "geometry": 0.6861575,
+            "geometry": 0.6552879166666666,
+            "topology": 0.9827880683333333,
             "judge": 0.88625,
-            "topology": 0.9827880683333334,
             "valid": 0.99
           },
           "json": {
-            "geometry": 0.6779124,
+            "geometry": 0.6493245,
+            "topology": 0.97605311,
             "judge": 0.8641666666666666,
-            "topology": 0.9760531100000001,
             "valid": 0.99
           },
           "openscad": {
-            "geometry": 0.6944026,
-            "judge": 0.9083333333333332,
+            "geometry": 0.6612513333333333,
             "topology": 0.9895230266666667,
+            "judge": 0.9083333333333333,
             "valid": 0.99
           }
         }
       },
-      "metrics": "0.841 1.000 0.884 1.000 0.862 1.000 0.678 0.976 0.864 0.990 0.694 0.990 0.908 0.990 0.686 0.983 0.886 0.990",
+      "metrics": "0.841 1.000 0.884 1.000 0.862 1.000 0.649 0.976 0.864 0.990 0.661 0.990 0.908 0.990 0.655 0.983 0.886 0.990",
       "model": "DeepSeek V4.1 Flash (high)",
       "model_id": "deepseek_v41flash",
-      "score": 85.43891698611111,
+      "score": 80.12996759259259,
       "usage_kind": "selected_response_usage",
-      "usd_per_case": 0.05901147744
+      "usd_per_case": 0.05901147744,
+      "score_with_topology": 84.66717740277778
     },
     {
       "cost_basis": "Saved standard-rate equivalent for four selected generations per UID; retries excluded; not an invoice",
@@ -418,37 +426,38 @@
             "valid": 0.99
           },
           "openscad": {
-            "judge": 0.8587499999999999,
+            "judge": 0.85875,
             "valid": 1.0
           }
         },
         "parametric": {
           "average": {
-            "geometry": 0.6695515000000001,
-            "judge": 0.8866666666666667,
+            "geometry": 0.6462531666666667,
             "topology": 0.9880923733333333,
+            "judge": 0.8866666666666667,
             "valid": 0.995
           },
           "json": {
-            "geometry": 0.6597708,
-            "judge": 0.8633333333333333,
+            "geometry": 0.63958925,
             "topology": 0.9762890533333334,
+            "judge": 0.8633333333333333,
             "valid": 0.99
           },
           "openscad": {
-            "geometry": 0.6793322,
+            "geometry": 0.6529170833333333,
+            "topology": 0.9998956933333333,
             "judge": 0.91,
-            "topology": 0.9998956933333334,
             "valid": 1.0
           }
         }
       },
-      "metrics": "0.826 0.990 0.859 1.000 0.842 0.995 0.660 0.976 0.863 0.990 0.679 1.000 0.910 1.000 0.670 0.988 0.887 0.995",
+      "metrics": "0.826 0.990 0.859 1.000 0.842 0.995 0.640 0.976 0.863 0.990 0.653 1.000 0.910 1.000 0.646 0.988 0.887 0.995",
       "model": "Doubao Seed 2.1 Pro (Thinking)",
       "model_id": "doubao21",
-      "score": 84.66158294444445,
+      "score": 79.16908703703703,
       "usage_kind": "selected_response_usage",
-      "usd_per_case": 0.63759342
+      "usd_per_case": 0.63759342,
+      "score_with_topology": 84.07912461111111
     },
     {
       "cost_basis": "Saved standard-rate equivalent for four selected generations per UID; retries excluded; not an invoice",
@@ -472,36 +481,37 @@
         },
         "parametric": {
           "average": {
-            "geometry": 0.6341619000000001,
-            "judge": 0.8720833333333333,
+            "geometry": 0.6075105833333334,
             "topology": 0.9763950016666667,
+            "judge": 0.8720833333333333,
             "valid": 0.985
           },
           "json": {
-            "geometry": 0.6354102,
-            "judge": 0.8574999999999999,
+            "geometry": 0.6119320833333334,
             "topology": 0.9629565966666667,
+            "judge": 0.8575,
             "valid": 0.98
           },
           "openscad": {
-            "geometry": 0.6329136,
-            "judge": 0.8866666666666667,
+            "geometry": 0.6030890833333333,
             "topology": 0.9898334066666666,
+            "judge": 0.8866666666666667,
             "valid": 0.99
           }
         }
       },
-      "metrics": "0.831 0.980 0.791 0.970 0.811 0.975 0.635 0.963 0.857 0.980 0.633 0.990 0.887 0.990 0.634 0.976 0.872 0.985",
+      "metrics": "0.831 0.980 0.791 0.970 0.811 0.975 0.612 0.963 0.858 0.980 0.603 0.990 0.887 0.990 0.608 0.976 0.872 0.985",
       "model": "GLM-5.3-Flash (high)",
       "model_id": "glm53flash",
-      "score": 82.34031143055556,
+      "score": 76.35220462962963,
       "usage_kind": "selected_response_usage",
-      "usd_per_case": 0.0032635956
+      "usd_per_case": 0.0032635956,
+      "score_with_topology": 81.6740285138889
     }
   ],
   "schema_version": "p3d-live-text-summary-v2",
   "scope": "Text fixed100: ten current models; JSON/OpenSCAD",
-  "score_definition": "mean(Desc-Judge, Param-Geo, Param-Topo, Param-Judge)*100",
+  "score_definition": "100 * mean(Desc-Judge, Param-Geo, Param-Judge); Topo and Valid separately reported.",
   "score_source": {
     "id": "text-live100-ten-model-review-20260915",
     "sha256": "e8e5a811bf9c740485dfd0e2ed36d16dfd851ccee8e797cea6cea45c67c790b8"
@@ -509,5 +519,44 @@
   "stage": "project_page",
   "uniform_evaluator_claim": false,
   "upstream_judge_identity_verified": false,
-  "validity_source_sha256": "ded78c529cf73d0f0520325df60b743adc4df10f33ab082b03cc74c545bd2cfb"
+  "validity_source_sha256": "ded78c529cf73d0f0520325df60b743adc4df10f33ab082b03cc74c545bd2cfb",
+  "scoring_revision": {
+    "id": "p3d-scoring-20260916",
+    "geometry": "Mean of F@0.01, NC, normalized CD and applicable IoU; F@0.05 is auxiliary only.",
+    "text_iou": "Omit unavailable IoU from the valid case geometry mean; retain generation-invalid cases as failures.",
+    "part_tau_fraction": 0.03,
+    "part_sample_points": 2048,
+    "part_acceptance_fscore": 0.7,
+    "part": "Mean of match F1 and F-score mean over all Hungarian pairs; no normalized part mean.",
+    "score_excludes": [
+      "topo",
+      "valid"
+    ],
+    "reported_separately": [
+      "topo",
+      "valid"
+    ],
+    "part_sampling_seed": 42,
+    "part_sampling_rng": "MT19937 legacy uniform sequence with explicit Generator",
+    "text_raw_audit_sha256": "a8273fe0e41bcac4672743c9d46e7e37061c1e29562ac4e387818ce8fb7b6c75",
+    "part_rescore_sha256": "c2708213d4311dc9389c58a01cc1dc27de6b9164da8fa3bf4c9d91611f77f361"
+  },
+  "raw_iou_audit": {
+    "scope": "22 parametric cells, including main 20 JSON/OpenSCAD cells and Gemini extra formats",
+    "sudo_read": true,
+    "raw_and_export_case_metrics_exact": true,
+    "private_export_matches_manuscript_copy": true,
+    "source_csv_sha256": "ccb853a6022dcdb5f7f12c66d0a83c196da656a331a0b88f1029942c96ca249d",
+    "counts": {
+      "measured": 1995,
+      "unavailable": 182,
+      "generation_invalid": 20,
+      "measured_zero": 3
+    },
+    "main_counts": {
+      "measured": 1837,
+      "unavailable": 156,
+      "generation_invalid": 7
+    }
+  }
 }

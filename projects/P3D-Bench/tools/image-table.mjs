@@ -1,5 +1,5 @@
-export const IMAGE_MODELS = ["gpt6_astra_local", "claude_opus5", "gemini38_flash", "qwen38max",
-  "kimi_k3", "glm53_flash", "grok46", "deepseek41_flash", "doubao_seed21"];
+export const IMAGE_MODELS = ["gpt6_astra_local", "gemini38_flash", "claude_opus5", "kimi_k3",
+  "qwen38max", "grok46", "glm53_flash", "deepseek41_flash", "doubao_seed21"];
 const FORMATS = ["cadquery", "openscad", "threejs"];
 const AXES = ["geom", "topo", "judge"];
 
@@ -31,6 +31,7 @@ function cost(value, counts) {
 export function buildAdditionalFormatTables(rows = [], task) {
   if (!rows.length) return [];
   const axes = task === "assembly" ? [...AXES, "part"] : AXES;
+  const scoreAxes = task === "assembly" ? ["geom", "judge", "part"] : ["geom", "judge"];
   const names = task === "assembly" ? ["Geo", "Topo", "Judge", "Part", "Valid"] : ["Geo", "Topo", "Judge", "Valid"];
   const seen = new Set();
   for (const row of rows) {
@@ -42,7 +43,7 @@ export function buildAdditionalFormatTables(rows = [], task) {
     coverage(row.coverage, 100);
     for (const axis of [...axes, "valid"]) normalized(row.metrics[axis]);
     close(row.metrics.valid, row.coverage.valid / row.coverage.tested, "format validity");
-    close(row.score, axes.reduce((sum, axis) => sum + row.metrics[axis], 0) * 100 / axes.length, "format score");
+    close(row.score, scoreAxes.reduce((sum, axis) => sum + row.metrics[axis], 0) * 100 / scoreAxes.length, "format score");
   }
   return [{
     key: `${task}formats`, title: "Gemini 3.8 Flash · Additional formats",
@@ -83,7 +84,7 @@ export function buildImageTable(summary) {
     }
     coverage(row.counts, 300);
     for (const key of Object.keys(row.counts)) close(row.counts[key], FORMATS.reduce((sum, f) => sum + row.format_detail[f].counts[key], 0), "coverage total");
-    close(row.score, AXES.reduce((sum, axis) => sum + row.average[axis], 0) * 100 / 3, "Image score");
+    close(row.score, (row.average.geom + row.average.judge) * 50, "Image score");
     if (row.provisional !== Boolean(row.counts.api_failed || row.counts.judge_missing || row.counts.local_evaluation_gap)) throw new Error("missing provisional status");
     cost(row.cost_usd_per_case, row.counts);
   }
