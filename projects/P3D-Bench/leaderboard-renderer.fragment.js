@@ -9,11 +9,11 @@ function m2(groups) {
 }
 
 function parseSortableValue(token) {
-  const value = Number(token.replace(/[$,!^]/g, ""));
+  const value = Number(token.replace(/[$,!^≈]/g, ""));
   return Number.isFinite(value) ? value : Number.POSITIVE_INFINITY;
 }
 
-function rankDisplayedRows(rows, metricCount) {
+function rankDisplayedRows(rows, metricCount, excluded = []) {
   const tokens = rows.map((row) => row.cells.trim().split(/\s+/).map((token) => token.replace(/[!^]$/, "")));
   const ranks = Array.from({ length: metricCount }, (_, column) => {
     const values = Array.from(new Set(tokens.map((row) => Number(row[column])).filter(Number.isFinite))).sort((a, b) => b - a);
@@ -22,7 +22,7 @@ function rankDisplayedRows(rows, metricCount) {
   return rows.map((row, rowIndex) => ({
     ...row,
     cells: tokens[rowIndex].map((token, column) => {
-      if (column >= metricCount) return token;
+      if (column >= metricCount || excluded.includes(column)) return token;
       const value = Number(token);
       if (!Number.isFinite(value)) return token;
       if (value === ranks[column].best) return `${token}!`;
@@ -56,7 +56,8 @@ function x2({ sub }) {
   const headerRows = sub.superGroups ? 3 : 2;
   const scoreIndex = sub.metrics.indexOf("Score");
   const costIndex = sub.metrics.findIndex((metric) => metric.startsWith("USD"));
-  const rankedRows = scoreIndex >= 0 ? rankDisplayedRows(sub.rows, scoreIndex) : sub.rows;
+  const excluded = sub.key === "text" ? sub.metrics.flatMap((metric, index) => ["Topo", "Valid", "Score"].includes(metric) || metric.startsWith("USD") ? [index] : []) : [];
+  const rankedRows = scoreIndex >= 0 ? rankDisplayedRows(sub.rows, sub.key === "text" ? sub.metrics.length : scoreIndex, excluded) : sub.rows;
   const [sort, setSort] = Ze.useState(scoreIndex >= 0 ? "score-desc" : "default");
   const sortIndex = sort.startsWith("score") ? scoreIndex : sort.startsWith("cost") ? costIndex : -1;
   const rows = sortIndex < 0 ? rankedRows : [...rankedRows]
@@ -64,6 +65,7 @@ function x2({ sub }) {
     .sort((left, right) => {
       const leftValue = parseSortableValue(left.row.cells.trim().split(/\s+/)[sortIndex]);
       const rightValue = parseSortableValue(right.row.cells.trim().split(/\s+/)[sortIndex]);
+      if (!Number.isFinite(leftValue) || !Number.isFinite(rightValue)) return Number.isFinite(leftValue) ? -1 : Number.isFinite(rightValue) ? 1 : left.index - right.index;
       const difference = sort.endsWith("asc") ? leftValue - rightValue : rightValue - leftValue;
       return difference || left.index - right.index;
     })
@@ -136,14 +138,14 @@ function x2({ sub }) {
                   className: "rt-superrow",
                   children: [
                     D.jsx("th", { rowSpan: headerRows, className: "rt-model-col rt-corner", children: "Model" }),
-                    sub.superGroups.map((group, index) => D.jsx("th", { colSpan: group.span, className: ["rt-super", index > 0 ? "group-start" : "", scoreIndex >= 0 && index === sub.superGroups.length - 1 ? "rt-summary-group" : ""].filter(Boolean).join(" "), children: group.label }, index)),
+                    sub.superGroups.map((group, index) => D.jsx("th", { colSpan: group.span, className: ["rt-super", index > 0 ? "group-start" : "", scoreIndex >= 0 && index === (sub.key === "text" ? 0 : sub.superGroups.length - 1) ? "rt-summary-group" : ""].filter(Boolean).join(" "), children: group.label }, index)),
                   ],
                 }) : null,
                 D.jsxs("tr", {
                   className: "rt-grouprow",
                   children: [
                     sub.superGroups ? null : D.jsx("th", { rowSpan: 2, className: "rt-model-col rt-corner", children: "Model" }),
-                    sub.groups.map((group, index) => D.jsx("th", { colSpan: group.span, className: ["rt-group", index > 0 ? "group-start" : "", scoreIndex >= 0 && index === sub.groups.length - 1 ? "rt-summary-group" : ""].filter(Boolean).join(" "), children: group.label }, index)),
+                    sub.groups.map((group, index) => D.jsx("th", { colSpan: group.span, className: ["rt-group", index > 0 ? "group-start" : "", scoreIndex >= 0 && index === (sub.key === "text" ? 0 : sub.groups.length - 1) ? "rt-summary-group" : ""].filter(Boolean).join(" "), children: group.label }, index)),
                   ],
                 }),
                 D.jsx("tr", {

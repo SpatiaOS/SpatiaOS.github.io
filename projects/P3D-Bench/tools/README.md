@@ -136,13 +136,19 @@ a separate reported column, and display two decimals after sorting unrounded
 values. `text-table.mjs` checks all eighteen
 metric cells, equal format means, scores, model identities and numeric costs.
 
-Text costs cover four selected generation responses per UID and exclude retries;
-they are standard-rate equivalents, not invoices or Assembly's cost convention.
-Kimi displays `$0.486` from its official-tokenizer estimate, stored separately
-from actual cost. Qwen `$0.410` and Doubao `$0.638` use saved official-price
-equivalents for 400 selected responses. Doubao keeps the comparison conversion
-of 7 CNY/USD. GLM-5.3 and GLM-5.3-Flash also use selected responses, not all saved
-attempts. `cost_usd` and `estimated_cost_usd` store USD/UID multiplied by 100.
+Text uses the same fixed-100 score formula for the ten general-purpose models
+and the JSON-only Text2CAD baseline. Text2CAD's unsupported OpenSCAD and average
+cells remain empty; its JSON metrics and headline score stay in the same table.
+Reasoning settings are provenance rather than model-name suffixes.
+
+Text costs are displayed per single generation across the 400 selected responses
+(100 UIDs × two specifications × two formats) and exclude retries; they are
+standard-rate equivalents, not invoices or Assembly's cost convention. Kimi's
+value comes from its official-tokenizer estimate and remains separate from actual
+cost. Qwen and Doubao use saved official-price equivalents. Doubao keeps the
+comparison conversion of 7 CNY/USD. GLM-5.3 and GLM-5.3-Flash also use selected
+responses, not all saved attempts. `cost_usd` and `estimated_cost_usd` retain the
+full selected-response total; `usd_per_generation` is that total divided by 400.
 Source hashes and cost bases remain in the summary; private audits stay outside
 this repository. The imported results retain their historical evaluator routes;
 publishing the page does not imply a new uniform reevaluation or verified
@@ -166,6 +172,8 @@ showcase uses each model's own parametric OpenSCAD output with the same input.
 The 481 files in `../demo/text_live_fixed100_v1/assets/` are original saved assets
 named by SHA256; this update does not rerun generation, CAD evaluation or renders.
 All Image/Assembly records and metadata are preserved by `text-demo.mjs`.
+The displayed Text Geometry excludes F@0.05, and Text demo metric cards omit
+F@0.05 while retaining the raw value in saved evidence.
 
 ```bash
 node projects/P3D-Bench/tools/update-live-text-demo.mjs

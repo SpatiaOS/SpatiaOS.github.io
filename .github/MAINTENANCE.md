@@ -66,7 +66,7 @@
 
 两个数值更新器按表格 key 定位当前 active bundle，保留未更新表格和非榜单内容的字节，并将 JSON 同步到源码快照。Assembly 排在 Text 前；后续更新 Text 不会重排 Assembly。数值更新不以源码开发构建覆盖线上 Paper、demo 等后续维护内容。
 
-2026-09-15 的项目页采用十模型 Text fixed-100 榜单与四案例展示，保留原计分方法，总分显示两位小数。Text 覆盖层包含 160 条记录，其中 159 条完整可用；481 个素材保留原始字节。Image／Assembly 的数据、展示和原有图表不变。完整 Text 数据集仍为 400，100 是其原排序的前 100 个案例。费用口径和来源说明见 `tools/README.md`。
+2026-09-17 的项目页采用十个通用模型和 Text2CAD JSON-only 基线的 Text fixed-100 榜单；所有行使用同一套 Geometry、Judge 和总分公式，Text2CAD 不支持的 OpenSCAD／双格式平均列留空。模型显示名不附带 reasoning 档位。Score 与单次生成费用 `USD/gen.` 位于表格前两列；费用为 400 份选中响应的总成本除以 400。Text Geometry 不含 F@0.05，案例卡也不再展示 F@0.05，但原始证据字段保留。Text 覆盖层包含 160 条记录，其中 159 条完整可用；481 个素材保留原始字节。Image／Assembly 的数据、展示和原有图表不变。完整 Text 数据集仍为 400，100 是其原排序的前 100 个案例。费用口径和来源说明见 `tools/README.md`。
 
 论文作图交接材料不属于本项目页发布范围，`collaboration/text100/` 不合入 main；协作预览横幅和旧图遮挡也不进入正式页面。旧榜单和 manifest 可从 Git 历史查阅。
 

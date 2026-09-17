@@ -183,7 +183,7 @@ function App() {
       .then((res) => (res.ok ? res.json() : fallbackManifest))
       .then(async (data) => {
         try {
-          const response = await fetch(asset("text-live-fixed100.json?v=e462b1f817e4"));
+          const response = await fetch(asset("text-live-fixed100.json?v=229dc7c77776"));
           if (!response.ok) throw new Error("Text live data unavailable");
           data = mergeLiveTextManifest(data, await response.json());
         } catch { /* The base manifest remains available when Text cannot load. */ }
@@ -706,7 +706,7 @@ function metricGroupStarts(groups: ResultSubtable["groups"]) {
   return starts;
 }
 
-function rankMetricRows(rows: ResultTableRow[], metricCount: number) {
+function rankMetricRows(rows: ResultTableRow[], metricCount: number, excluded: number[] = []) {
   const tokens = rows.map((row) => row.cells.trim().split(/\s+/).map((token) => token.replace(/[!^]$/, "")));
   const ranks = Array.from({ length: metricCount }, (_, column) => {
     const values = Array.from(new Set(tokens.map((row) => Number(row[column])).filter(Number.isFinite))).sort((a, b) => b - a);
@@ -715,7 +715,7 @@ function rankMetricRows(rows: ResultTableRow[], metricCount: number) {
   return rows.map((row, rowIndex) => ({
     ...row,
     cells: tokens[rowIndex].map((token, column) => {
-      if (column >= metricCount) return token;
+      if (column >= metricCount || excluded.includes(column)) return token;
       const value = Number(token);
       if (!Number.isFinite(value)) return token;
       if (value === ranks[column].best) return `${token}!`;
@@ -777,7 +777,11 @@ function ResultsSubtableTable({ subtable }: { subtable: ResultSubtable }) {
   const headerRows = subtable.superGroups ? 3 : 2;
   const scoreIndex = subtable.metrics.indexOf("Score");
   const costIndex = subtable.metrics.findIndex((metric) => metric.startsWith("USD"));
-  const rankedRows = scoreIndex >= 0 ? rankMetricRows(subtable.rows, scoreIndex) : subtable.rows;
+  const excluded = subtable.key === "text" ? subtable.metrics.flatMap((metric, index) =>
+    ["Topo", "Valid", "Score"].includes(metric) || metric.startsWith("USD") ? [index] : []) : [];
+  const rankedRows = scoreIndex >= 0
+    ? rankMetricRows(subtable.rows, subtable.key === "text" ? subtable.metrics.length : scoreIndex, excluded)
+    : subtable.rows;
   const [sort, setSort] = useState(scoreIndex >= 0 ? "score-desc" : "default");
   const sortIndex = sort.startsWith("score") ? scoreIndex : sort.startsWith("cost") ? costIndex : -1;
   const rows = sortIndex < 0 ? rankedRows : [...rankedRows]
@@ -848,7 +852,7 @@ function ResultsSubtableTable({ subtable }: { subtable: ResultSubtable }) {
                 {subtable.superGroups.map((group, index) => (
                   <th
                     colSpan={group.span}
-                    className={["rt-super", index > 0 ? "group-start" : "", scoreIndex >= 0 && index === subtable.superGroups!.length - 1 ? "rt-summary-group" : ""].filter(Boolean).join(" ")}
+                    className={["rt-super", index > 0 ? "group-start" : "", scoreIndex >= 0 && index === (subtable.key === "text" ? 0 : subtable.superGroups!.length - 1) ? "rt-summary-group" : ""].filter(Boolean).join(" ")}
                     key={group.label}
                   >
                     {group.label}
@@ -861,7 +865,7 @@ function ResultsSubtableTable({ subtable }: { subtable: ResultSubtable }) {
               {subtable.groups.map((group, index) => (
                 <th
                   colSpan={group.span}
-                  className={["rt-group", index > 0 ? "group-start" : "", scoreIndex >= 0 && index === subtable.groups.length - 1 ? "rt-summary-group" : ""].filter(Boolean).join(" ")}
+                  className={["rt-group", index > 0 ? "group-start" : "", scoreIndex >= 0 && index === (subtable.key === "text" ? 0 : subtable.groups.length - 1) ? "rt-summary-group" : ""].filter(Boolean).join(" ")}
                   key={`${group.label}-${index}`}
                 >
                   {group.label}
@@ -1609,6 +1613,7 @@ function getMetricEntries(run?: Run) {
 
 function isVisibleMetric(key: string, value: unknown, run: Run) {
   if (!hasMetricValue(value)) return false;
+  if (run.task === "text2cad" && key === "f_score_005") return false;
   if (key === "qa_parametric" && run.spec !== "parametric") return false;
   if (key === "qa_parametric" && typeof value === "number" && value <= 0) return false;
   return true;

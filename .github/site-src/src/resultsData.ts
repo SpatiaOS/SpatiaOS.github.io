@@ -2,7 +2,7 @@ import liveTextSummary from "./liveTextSummary.json";
 import liveAssemblySummary from "./liveAssemblySummary.json";
 import liveImageSummary from "./liveImageSummary.json";
 import { buildImageTable } from "../../../projects/P3D-Bench/tools/image-table.mjs";
-import { textCost } from "../../../projects/P3D-Bench/tools/text-table.mjs";
+import { textBaselineRows, textCost } from "../../../projects/P3D-Bench/tools/text-table.mjs";
 
 export type ResultTableRow = { model: string; model_id?: string; family?: string; cells: string };
 
@@ -25,69 +25,69 @@ const textTable: ResultSubtable = {
   "accent": "var(--blue)",
   "superGroups": [
     {
+      "label": "Score / Cost",
+      "span": 2
+    },
+    {
       "label": "Descriptive",
       "span": 6
     },
     {
       "label": "Parametric",
       "span": 12
-    },
-    {
-      "label": "Score / Cost",
-      "span": 2
     }
   ],
   "groups": [
     {
-      "label": "JSON",
-      "span": 2
-    },
-    {
-      "label": "OpenSCAD",
-      "span": 2
-    },
-    {
-      "label": "Average",
-      "span": 2
-    },
-    {
-      "label": "JSON",
-      "span": 4
-    },
-    {
-      "label": "OpenSCAD",
-      "span": 4
-    },
-    {
-      "label": "Average",
-      "span": 4
-    },
-    {
       "label": "Fixed 100",
       "span": 2
+    },
+    {
+      "label": "JSON",
+      "span": 2
+    },
+    {
+      "label": "OpenSCAD",
+      "span": 2
+    },
+    {
+      "label": "Average",
+      "span": 2
+    },
+    {
+      "label": "JSON",
+      "span": 4
+    },
+    {
+      "label": "OpenSCAD",
+      "span": 4
+    },
+    {
+      "label": "Average",
+      "span": 4
     }
   ],
   "metrics": [
-    "Judge",
-    "Valid",
-    "Judge",
-    "Valid",
-    "Judge",
-    "Valid",
-    "Geo",
-    "Topo",
-    "Judge",
-    "Valid",
-    "Geo",
-    "Topo",
-    "Judge",
-    "Valid",
-    "Geo",
-    "Topo",
-    "Judge",
-    "Valid",
     "Score",
-    "USD / case"
+    "USD/gen.",
+    "Judge",
+    "Valid",
+    "Judge",
+    "Valid",
+    "Judge",
+    "Valid",
+    "Geo",
+    "Topo",
+    "Judge",
+    "Valid",
+    "Geo",
+    "Topo",
+    "Judge",
+    "Valid",
+    "Geo",
+    "Topo",
+    "Judge",
+    "Valid"
   ],
   "rows": [],
   "note": ""
@@ -119,12 +119,15 @@ export const liveResultTables: ResultSubtable[] = [
   },
   {
     ...textTable,
-    rows: liveTextSummary.rows.map((row) => ({
-      model: row.model,
-      model_id: row.model_id,
-      family: row.family,
-      cells: `${row.metrics} ${row.score.toFixed(2)} ${textCost(row)}`,
-    })),
+    rows: [
+      ...liveTextSummary.rows.map((row) => ({
+        model: row.model,
+        model_id: row.model_id,
+        family: row.family,
+        cells: `${row.score.toFixed(2)} ${textCost(row)} ${row.metrics}`,
+      })),
+      ...textBaselineRows(liveTextSummary),
+    ],
   },
   buildImageTable(liveImageSummary),
 ];

@@ -27,8 +27,22 @@ const prefix = `/* text-fixed100-data-adapter-v1 */\n${validateLiveTextDemo.toSt
 const withSpatial = afterFetch.replace('e(mergeLiveTextManifest(K,await R.json()))}catch{e(K)}}',
   'e(await loadSpatialDemo(mergeLiveTextManifest(K,await R.json())))}catch{e(await loadSpatialDemo(K))}}');
 const withSpatialShow = afterShow.replace('return s.text_showcase;', 'return s.text_showcase;if(s.spatial_showcases?.[p])return s.spatial_showcases[p];');
-if (original.input.includes(prefix) && (original.input.includes(afterFetch) || original.input.includes(withSpatial)) && (original.input.includes(afterShow) || original.input.includes(withSpatialShow)) && original.input.includes(afterAbstract) && original.input.includes(afterProtocol)) {
-  console.log(`Text demo already current: ${original.name}`);
+const writeSourceMirrors = () => {
+  writeFileSync(join(root, "../../.github/site-src/src/textLiveDemo.json"), raw);
+  const sourcePath = join(root, "../../.github/site-src/src/main.tsx");
+  const source = readFileSync(sourcePath, "utf8")
+    .replace(/fetch\(asset\("text-live-fixed100\.json\?v=[^"]+"\)\)/, `fetch(asset("text-live-fixed100.json?v=${version}"))`)
+    .replace(beforeAbstract, afterAbstract);
+  writeFileSync(sourcePath, source);
+};
+if (original.input.includes(prefix) && (original.input.includes(afterShow) || original.input.includes(withSpatialShow))) {
+  const pattern = /text-live-fixed100\.json\?v=[0-9a-f]{12}/g;
+  const matches = [...original.input.matchAll(pattern)];
+  if (matches.length !== 1) throw new Error("ambiguous Text demo cache key");
+  const patched = original.input.replace(pattern, `text-live-fixed100.json?v=${version}`);
+  const name = patched === original.input ? original.name : writeActiveBundle(root, original, patched, "text-demo");
+  writeSourceMirrors();
+  console.log(patched === original.input ? `Text demo already current: ${name}` : `refreshed Text demo data: ${original.name} -> ${name}`);
   process.exit(0);
 }
 if (original.input.split(beforeFetch).length !== 2 || original.input.split(beforeShow).length !== 2
@@ -40,11 +54,5 @@ if (patched.slice(prefix.length).replace(afterFetch, beforeFetch).replace(afterS
 const a = readLiveTables(original.input), b = readLiveTables(patched);
 if (JSON.stringify(a.entries) !== JSON.stringify(b.entries)) throw new Error("leaderboard data changed");
 const name = writeActiveBundle(root, original, patched, "text-demo");
-writeFileSync(join(root, "../../.github/site-src/src/textLiveDemo.json"), raw);
-const sourcePath = join(root, "../../.github/site-src/src/main.tsx");
-const source = readFileSync(sourcePath, "utf8")
-  .replace(/fetch\(asset\("manifest\.json(?:\?v=[^"]+)?"\)\)/, `fetch(asset("manifest.json?v=${manifestVersion}"))`)
-  .replace(/fetch\(asset\("text-live-fixed100\.json\?v=[^"]+"\)\)/, `fetch(asset("text-live-fixed100.json?v=${version}"))`)
-  .replace(beforeAbstract, afterAbstract);
-writeFileSync(sourcePath, source);
+writeSourceMirrors();
 console.log(`updated Text demo data only: ${original.name} -> ${name}`);
