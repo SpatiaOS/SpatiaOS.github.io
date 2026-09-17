@@ -777,10 +777,10 @@ function ResultsSubtableTable({ subtable }: { subtable: ResultSubtable }) {
   const headerRows = subtable.superGroups ? 3 : 2;
   const scoreIndex = subtable.metrics.indexOf("Score");
   const costIndex = subtable.metrics.findIndex((metric) => metric.startsWith("USD"));
-  const excluded = subtable.key === "text" ? subtable.metrics.flatMap((metric, index) =>
-    ["Topo", "Valid", "Score"].includes(metric) || metric.startsWith("USD") ? [index] : []) : [];
+  const highlightedMetrics = new Set(["Geo", "Judge", "Part"]);
+  const excluded = subtable.metrics.flatMap((metric, index) => highlightedMetrics.has(metric) ? [] : [index]);
   const rankedRows = scoreIndex >= 0
-    ? rankMetricRows(subtable.rows, subtable.key === "text" ? subtable.metrics.length : scoreIndex, excluded)
+    ? rankMetricRows(subtable.rows, subtable.metrics.length, excluded)
     : subtable.rows;
   const [sort, setSort] = useState(scoreIndex >= 0 ? "score-desc" : "default");
   const sortIndex = sort.startsWith("score") ? scoreIndex : sort.startsWith("cost") ? costIndex : -1;
@@ -852,7 +852,7 @@ function ResultsSubtableTable({ subtable }: { subtable: ResultSubtable }) {
                 {subtable.superGroups.map((group, index) => (
                   <th
                     colSpan={group.span}
-                    className={["rt-super", index > 0 ? "group-start" : "", scoreIndex >= 0 && index === (subtable.key === "text" ? 0 : subtable.superGroups!.length - 1) ? "rt-summary-group" : ""].filter(Boolean).join(" ")}
+                    className={["rt-super", index > 0 ? "group-start" : "", scoreIndex >= 0 && index === 0 ? "rt-summary-group" : ""].filter(Boolean).join(" ")}
                     key={group.label}
                   >
                     {group.label}
@@ -865,7 +865,7 @@ function ResultsSubtableTable({ subtable }: { subtable: ResultSubtable }) {
               {subtable.groups.map((group, index) => (
                 <th
                   colSpan={group.span}
-                  className={["rt-group", index > 0 ? "group-start" : "", scoreIndex >= 0 && index === (subtable.key === "text" ? 0 : subtable.groups.length - 1) ? "rt-summary-group" : ""].filter(Boolean).join(" ")}
+                  className={["rt-group", index > 0 ? "group-start" : "", scoreIndex >= 0 && index === 0 ? "rt-summary-group" : ""].filter(Boolean).join(" ")}
                   key={`${group.label}-${index}`}
                 >
                   {group.label}
@@ -1613,7 +1613,7 @@ function getMetricEntries(run?: Run) {
 
 function isVisibleMetric(key: string, value: unknown, run: Run) {
   if (!hasMetricValue(value)) return false;
-  if (run.task === "text2cad" && key === "f_score_005") return false;
+  if (key === "f_score_005") return false;
   if (key === "qa_parametric" && run.spec !== "parametric") return false;
   if (key === "qa_parametric" && typeof value === "number" && value <= 0) return false;
   return true;

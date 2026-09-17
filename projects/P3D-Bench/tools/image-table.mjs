@@ -90,12 +90,14 @@ export function buildImageTable(summary) {
   }
   return {
     key: "image", title: "Image-to-3D", accent: "var(--teal)",
-    groups: ["CadQuery", "OpenSCAD", "Three.js", "Average"].map(label => ({ label, span: 4 }))
-      .concat([{ label: "Coverage", span: 2 }, { label: "Score / Cost", span: 2 }]),
-    metrics: Array.from({ length: 4 }, () => ["Geo", "Topo", "Judge", "Valid"]).flat().concat(["Tested", "Judged", "Score", "USD / case"]),
+    groups: [{ label: "Score / Cost", span: 2 }]
+      .concat(["CadQuery", "OpenSCAD", "Three.js", "Average"].map(label => ({ label, span: 4 })))
+      .concat([{ label: "Coverage", span: 2 }]),
+    metrics: ["Score", "USD / case"]
+      .concat(Array.from({ length: 4 }, () => ["Geo", "Topo", "Judge", "Valid"]).flat(), ["Tested", "Judged"]),
     rows: [...summary.rows].sort((a, b) => b.score - a.score).map(row => ({ model: row.model,
       model_id: row.model_id, family: row.family,
-      cells: `${row.metrics} ${row.counts.tested}/300 ${row.counts.judge_ok}/${row.counts.valid} ${row.score.toFixed(2)} ${cost(row.cost_usd_per_case, row.counts)}` })),
+      cells: `${row.score.toFixed(2)} ${cost(row.cost_usd_per_case, row.counts)} ${row.metrics} ${row.counts.tested}/300 ${row.counts.judge_ok}/${row.counts.valid}` })),
     note: "",
   };
 }

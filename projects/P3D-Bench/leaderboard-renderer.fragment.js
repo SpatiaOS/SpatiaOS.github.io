@@ -56,8 +56,9 @@ function x2({ sub }) {
   const headerRows = sub.superGroups ? 3 : 2;
   const scoreIndex = sub.metrics.indexOf("Score");
   const costIndex = sub.metrics.findIndex((metric) => metric.startsWith("USD"));
-  const excluded = sub.key === "text" ? sub.metrics.flatMap((metric, index) => ["Topo", "Valid", "Score"].includes(metric) || metric.startsWith("USD") ? [index] : []) : [];
-  const rankedRows = scoreIndex >= 0 ? rankDisplayedRows(sub.rows, sub.key === "text" ? sub.metrics.length : scoreIndex, excluded) : sub.rows;
+  const highlightedMetrics = new Set(["Geo", "Judge", "Part"]);
+  const excluded = sub.metrics.flatMap((metric, index) => highlightedMetrics.has(metric) ? [] : [index]);
+  const rankedRows = scoreIndex >= 0 ? rankDisplayedRows(sub.rows, sub.metrics.length, excluded) : sub.rows;
   const [sort, setSort] = Ze.useState(scoreIndex >= 0 ? "score-desc" : "default");
   const sortIndex = sort.startsWith("score") ? scoreIndex : sort.startsWith("cost") ? costIndex : -1;
   const rows = sortIndex < 0 ? rankedRows : [...rankedRows]
@@ -138,14 +139,14 @@ function x2({ sub }) {
                   className: "rt-superrow",
                   children: [
                     D.jsx("th", { rowSpan: headerRows, className: "rt-model-col rt-corner", children: "Model" }),
-                    sub.superGroups.map((group, index) => D.jsx("th", { colSpan: group.span, className: ["rt-super", index > 0 ? "group-start" : "", scoreIndex >= 0 && index === (sub.key === "text" ? 0 : sub.superGroups.length - 1) ? "rt-summary-group" : ""].filter(Boolean).join(" "), children: group.label }, index)),
+                    sub.superGroups.map((group, index) => D.jsx("th", { colSpan: group.span, className: ["rt-super", index > 0 ? "group-start" : "", scoreIndex >= 0 && index === 0 ? "rt-summary-group" : ""].filter(Boolean).join(" "), children: group.label }, index)),
                   ],
                 }) : null,
                 D.jsxs("tr", {
                   className: "rt-grouprow",
                   children: [
                     sub.superGroups ? null : D.jsx("th", { rowSpan: 2, className: "rt-model-col rt-corner", children: "Model" }),
-                    sub.groups.map((group, index) => D.jsx("th", { colSpan: group.span, className: ["rt-group", index > 0 ? "group-start" : "", scoreIndex >= 0 && index === (sub.key === "text" ? 0 : sub.groups.length - 1) ? "rt-summary-group" : ""].filter(Boolean).join(" "), children: group.label }, index)),
+                    sub.groups.map((group, index) => D.jsx("th", { colSpan: group.span, className: ["rt-group", index > 0 ? "group-start" : "", scoreIndex >= 0 && index === 0 ? "rt-summary-group" : ""].filter(Boolean).join(" "), children: group.label }, index)),
                   ],
                 }),
                 D.jsx("tr", {

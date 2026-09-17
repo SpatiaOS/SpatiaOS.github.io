@@ -198,15 +198,19 @@ export function buildAssemblyTable(summary) {
     }
   }
   if ([...expected].some((model) => !seen.has(model))) throw new Error("missing original Assembly model");
+  const metricGroups = summary.table.groups.filter((group) => group.label !== "Score / Cost");
+  const metricColumns = summary.table.metrics.filter((metric) => metric !== "Score" && !metric.startsWith("USD"));
   return {
     ...summary.table,
+    groups: [{ label: "Score / Cost", span: 2 }, ...metricGroups],
+    metrics: ["Score", "USD / case", ...metricColumns],
     // The live Assembly table has no methodology footer; audits stay in JSON.
     note: "",
     rows: [...summary.rows].sort((a, b) => b.score - a.score).map((row) => ({
       model: row.model,
       model_id: row.model_id,
       family: row.family,
-      cells: `${row.metrics} ${row.score.toFixed(2)} ${row.cost_usd !== null ? `$${(row.cost_usd / 100).toFixed(3)}` : row.estimated_cost_usd != null ? `$${(row.estimated_cost_usd / 100).toFixed(3)}` : "-"}`,
+      cells: `${row.score.toFixed(2)} ${row.cost_usd !== null ? `$${(row.cost_usd / 100).toFixed(3)}` : row.estimated_cost_usd != null ? `$${(row.estimated_cost_usd / 100).toFixed(3)}` : "-"} ${row.metrics}`,
     })),
   };
 }

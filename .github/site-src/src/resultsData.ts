@@ -106,15 +106,20 @@ if (liveAssemblySummary.schema_version !== "p3d-live-assembly-summary-v1"
   throw new Error("Invalid Assembly-3D live leaderboard summary");
 }
 
+const assemblyGroups = liveAssemblySummary.table.groups.filter((group) => group.label !== "Score / Cost");
+const assemblyMetrics = liveAssemblySummary.table.metrics.filter((metric) => metric !== "Score" && !metric.startsWith("USD"));
+
 export const liveResultTables: ResultSubtable[] = [
   {
     ...liveAssemblySummary.table,
+    groups: [{ label: "Score / Cost", span: 2 }, ...assemblyGroups],
+    metrics: ["Score", "USD / case", ...assemblyMetrics],
     note: "",
     rows: [...liveAssemblySummary.rows].sort((a, b) => b.score - a.score).map((row) => ({
       model: row.model,
       model_id: row.model_id,
       family: row.family,
-      cells: `${row.metrics} ${row.score.toFixed(2)} ${row.cost_usd !== null ? "$" + (row.cost_usd / 100).toFixed(3) : row.estimated_cost_usd != null ? "$" + (row.estimated_cost_usd / 100).toFixed(3) : "-"}`,
+      cells: `${row.score.toFixed(2)} ${row.cost_usd !== null ? "$" + (row.cost_usd / 100).toFixed(3) : row.estimated_cost_usd != null ? "$" + (row.estimated_cost_usd / 100).toFixed(3) : "-"} ${row.metrics}`,
     })),
   },
   {

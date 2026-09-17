@@ -61,12 +61,14 @@ if (start < 0 || end < start || patched.indexOf("function m2(", start + 1) >= 0
 }
 const renderer = readFileSync(join(root, "leaderboard-renderer.fragment.js"), "utf8").trimEnd();
 patched = patched.slice(0, start) + renderer + patched.slice(end);
-// Retain F@0.05 in saved evidence, but omit it from Text demo metric cards.
+// Retain F@0.05 in saved evidence, but omit it from all demo metric cards.
 const oldMetricFilter = 'function Ox(s,e,i){return!(!jr(e)||s==="qa_parametric"';
-const newMetricFilter = 'function Ox(s,e,i){return!(!jr(e)||i.task==="text2cad"&&s==="f_score_005"||s==="qa_parametric"';
-if (!patched.includes(newMetricFilter)) {
-  if (patched.split(oldMetricFilter).length !== 2) throw new Error("demo metric filter changed; inspect first");
-  patched = patched.replace(oldMetricFilter, newMetricFilter);
+const scopedMetricFilter = 'function Ox(s,e,i){return!(!jr(e)||i.task==="text2cad"&&s==="f_score_005"||s==="qa_parametric"';
+const globalMetricFilter = 'function Ox(s,e,i){return!(!jr(e)||s==="f_score_005"||s==="qa_parametric"';
+if (!patched.includes(globalMetricFilter)) {
+  const current = patched.includes(scopedMetricFilter) ? scopedMetricFilter : oldMetricFilter;
+  if (patched.split(current).length !== 2) throw new Error("demo metric filter changed; inspect first");
+  patched = patched.replace(current, globalMetricFilter);
 }
 writeFileSync(join(root, "../../.github/site-src/src/liveTextSummary.json"), readFileSync(summaryPath, "utf8"));
 if (patched === original.input) {

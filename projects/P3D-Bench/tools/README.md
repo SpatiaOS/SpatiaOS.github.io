@@ -174,8 +174,10 @@ showcase uses each model's own parametric OpenSCAD output with the same input.
 The 481 files in `../demo/text_live_fixed100_v1/assets/` are original saved assets
 named by SHA256; this update does not rerun generation, CAD evaluation or renders.
 All Image/Assembly records and metadata are preserved by `text-demo.mjs`.
-The displayed Text Geometry excludes F@0.05, and Text demo metric cards omit
-F@0.05 while retaining the raw value in saved evidence.
+Displayed Geometry excludes F@0.05, and all task demo metric cards omit F@0.05
+while retaining the raw value in saved evidence. Every main leaderboard places
+Score and Cost immediately after Model. Best/second styling applies only to Geo,
+Judge and, where present, Part; Topo, Valid and coverage columns remain unmarked.
 
 ```bash
 node projects/P3D-Bench/tools/update-live-text-demo.mjs
