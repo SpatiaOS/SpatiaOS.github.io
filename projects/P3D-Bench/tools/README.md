@@ -136,9 +136,11 @@ a separate reported column, and display two decimals after sorting unrounded
 values. `text-table.mjs` checks all eighteen
 metric cells, equal format means, scores, model identities and numeric costs.
 
-Text uses the same fixed-100 score formula for the ten general-purpose models
-and the JSON-only Text2CAD baseline. Text2CAD's unsupported OpenSCAD and average
-cells remain empty; its JSON metrics and headline score stay in the same table.
+Text uses the same fixed-100 score formula and aggregation for the ten general-purpose
+models and the JSON-only Text2CAD baseline. Text2CAD's unsupported OpenSCAD and average
+cells remain empty; its JSON metrics and **18.30** headline score stay in the same table.
+Its Judge averages include all 100 cases with invalid outputs at zero, and Geometry
+is aggregated case-first with unavailable valid IoU omitted, matching the other rows.
 Reasoning settings are provenance rather than model-name suffixes.
 
 Text costs are displayed per single generation across the 400 selected responses
