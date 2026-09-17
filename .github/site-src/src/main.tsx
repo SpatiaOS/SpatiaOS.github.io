@@ -183,7 +183,7 @@ function App() {
       .then((res) => (res.ok ? res.json() : fallbackManifest))
       .then(async (data) => {
         try {
-          const response = await fetch(asset("text-live-fixed100.json?v=229dc7c77776"));
+          const response = await fetch(asset("text-live-fixed100.json?v=0748da758a79"));
           if (!response.ok) throw new Error("Text live data unavailable");
           data = mergeLiveTextManifest(data, await response.json());
         } catch { /* The base manifest remains available when Text cannot load. */ }

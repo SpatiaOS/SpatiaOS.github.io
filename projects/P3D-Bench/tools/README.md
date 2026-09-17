@@ -136,25 +136,23 @@ a separate reported column, and display two decimals after sorting unrounded
 values. `text-table.mjs` checks all eighteen
 metric cells, equal format means, scores, model identities and numeric costs.
 
-Text uses the same fixed-100 score formula and aggregation for the ten general-purpose
-models and the JSON-only Text2CAD baseline. Text2CAD's unsupported OpenSCAD and average
-cells remain empty; its JSON metrics and **18.30** headline score stay in the same table.
-Its Judge averages include all 100 cases with invalid outputs at zero, and Geometry
-is aggregated case-first with unavailable valid IoU omitted, matching the other rows.
+The ten general-purpose models use the common fixed-100 aggregation. The JSON-only
+Text2CAD baseline retains the accepted paper aggregate and **17.85** headline score:
+its native Judge averages valid predictions, CD is averaged before normalization,
+and IoU omits valid cases where unavailable while retaining invalid penalties.
+Its unsupported OpenSCAD and average cells remain empty. Import accepted values;
+do not recompute a different baseline policy in the frontend.
 Reasoning settings are provenance rather than model-name suffixes.
 
 Text costs are displayed per single generation across the 400 selected responses
 (100 UIDs × two specifications × two formats) and exclude retries; they are
-standard-rate equivalents, not invoices or Assembly's cost convention. Kimi's
-value comes from its official-tokenizer estimate and remains separate from actual
-cost. Qwen and Doubao use saved official-price equivalents. Doubao keeps the
-comparison conversion of 7 CNY/USD. GLM-5.3 and GLM-5.3-Flash also use selected
-responses, not all saved attempts. `cost_usd` and `estimated_cost_usd` retain the
+standard-rate equivalents, not invoices or Assembly's cost convention.
+Detailed token accounting, conversions and estimates stay in the workbench.
+`cost_usd` and `estimated_cost_usd` retain the
 full selected-response total; `usd_per_generation` is that total divided by 400.
 Source hashes and cost bases remain in the summary; private audits stay outside
-this repository. The imported results retain their historical evaluator routes;
-publishing the page does not imply a new uniform reevaluation or verified
-upstream Judge identity. The old seventeen-row table remains in Git history.
+this repository. Publishing display assets does not constitute reevaluation.
+The old seventeen-row table remains in Git history.
 
 Updating Text preserves Assembly's data and position. Both updaters locate
 tables by key, guard the surrounding bundle bytes,
@@ -171,8 +169,12 @@ and both formats: 160 records, of which 159 are complete valid outputs. The
 original invalid JSON record remains saved and is excluded by the completeness
 filter. Never replace its output with another model's mesh. The mounting-bracket
 showcase uses each model's own parametric OpenSCAD output with the same input.
-The 481 files in `../demo/text_live_fixed100_v1/assets/` are original saved assets
-named by SHA256; this update does not rerun generation, CAD evaluation or renders.
+The 481 original files in `../demo/text_live_fixed100_v1/assets/` remain unchanged.
+An additional 244 content-addressed display files serve 79 valid descriptive cases:
+GT and prediction meshes are scale-normalized and aligned, with matching cameras.
+Only the four display references change; programs, scores, 80 parametric records,
+the invalid record and the parametric showcase are unchanged. These images are
+presentation derivatives, not replacement evidence for historical Judge inputs.
 All Image/Assembly records and metadata are preserved by `text-demo.mjs`.
 Displayed Geometry excludes F@0.05, and all task demo metric cards omit F@0.05
 while retaining the raw value in saved evidence. Every main leaderboard places
@@ -194,9 +196,16 @@ payload requires a reviewed update to the runtime matching boundaries.
 Switching the Text input protocol retains the current output format whenever
 that model has a complete result for it; other tasks keep their existing behavior.
 
-Only project-page data and display assets are published. Paper-figure handoff
-packages under `collaboration/text100/`, collaboration banners and chart masks
-are excluded from main. Existing figure assets and links remain unchanged.
+Only project-page data and referenced display assets are published. Research
+evidence, paper-figure handoffs, local history, private records and preview-only
+materials belong to the research workbench, not this repository. The workbench
+owns score aggregation and exports; site tools validate and display the selected
+values. Source mirrors and active bundles must be updated together. Keep obsolete
+local builds outside the site; do not copy a legacy worktree over main.
+
+Run `node projects/P3D-Bench/tools/check-publication.mjs` before committing.
+The Pages workflow also rejects research-only directories and private files.
+Existing figure assets and links remain unchanged.
 
 Structural source development uses `.github/site-src/`. A development build is
 not a replacement for the deployed Paper results; compare every page section

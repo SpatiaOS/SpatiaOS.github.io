@@ -65,15 +65,17 @@ test("reject missing metrics, duplicates, stale scores, wrong means and costs", 
   }
 });
 
-test("Text2CAD is a comparable JSON-only row with the same headline formula", () => {
+test("Text2CAD retains the accepted native JSON-only aggregate", () => {
   const [baseline] = textBaselineRows(summary);
   assert.equal(baseline.model, "Text2CAD");
-  assert.equal(baseline.cells, "18.30 - 0.129 0.910 - - - - 0.286 0.977 0.134 0.980 - - - - - - - -");
+  assert.equal(baseline.cells, "17.85 - 0.141 0.910 - - - - 0.257 0.977 0.137 0.980 - - - - - - - -");
   assert.equal(baseline.cells.split(" ").length, 20);
   for (const mutate of [
     row => { row.formats.descriptive.openscad = { judge: .2, valid: .91 }; },
     row => { row.score += 1; },
-    row => { row.judge_aggregation = "valid_only"; },
+    row => { row.judge_aggregation = "fixed100_invalid_zero"; },
+    row => { row.metric_policy = summary.metric_policy; },
+    row => { row.geometry_aggregation = summary.geometry_aggregation; },
     row => { row.metrics = row.metrics.replace("-", "0.000"); },
   ]) {
     const copy = structuredClone(summary);

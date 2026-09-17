@@ -91,10 +91,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/9557cd332b2fd90cc2fbdfbd2506cea00fb3dea6b2ca6cff25605a8c3d50ab1b.scad",
-        "gt_mesh": "text_live_fixed100_v1/assets/317fa48e5b537eb36391791f4b21633392bb0889718a8b4cc8477c309715bc01.stl",
-        "gt_render": "text_live_fixed100_v1/assets/adf51e9004b27e0cd3ce3e05d50636a403e9d7f4d757e0676bd179e893f0fb65.png",
-        "mesh": "text_live_fixed100_v1/assets/477e76ef97589876d90b969ae09a53afb642f262355f6b623f727d9e2c99b7a5.stl",
-        "pred_render": "text_live_fixed100_v1/assets/a065b5018445e6cabce77277498ff96a2d5ca47eae50b86d4ad2a1e821d8335b.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/7343e66796b3a4167ce211901aab41ca4ef81249e4475cc9c9cf53d843004536.stl",
+        "gt_render": "text_live_fixed100_v1/assets/348dcad043e6d9d05e9f2cb22908b6368662a231b24222934a3c9f20b38245e9.png",
+        "mesh": "text_live_fixed100_v1/assets/f37b38bbd13a513ad7e881e3e6d30847b2ebc801dfbd12c3ef1a459c2a4f4523.stl",
+        "pred_render": "text_live_fixed100_v1/assets/07a7d3c25bec504079edaac223ed09e7793733ba1c9095a2b35ecabaa964e9db.png"
       },
       "case_id": "0005/00051572",
       "condition": "The model has a flat rectangular base with raised long side walls, leaving an open channel rather than a filled block. A short rectangular added wall or tab sits at one end inside the side-wall outline and is lower than the tallest raised portions. Inside the channel is a centered row of annular cylindrical posts; these are added ring-shaped solids with real central openings, not floor cutouts. The posts and the taller rectangular build rise from the upper face of the base, while another rectangular addition stops at a lower level, so the top heights are stepped.",
@@ -113,10 +113,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/c8b734965aa51d58ba923acb19efa4e82fb85672f803477b559365fd164a6564.json",
-        "gt_mesh": "text_live_fixed100_v1/assets/317fa48e5b537eb36391791f4b21633392bb0889718a8b4cc8477c309715bc01.stl",
-        "gt_render": "text_live_fixed100_v1/assets/adf51e9004b27e0cd3ce3e05d50636a403e9d7f4d757e0676bd179e893f0fb65.png",
-        "mesh": "text_live_fixed100_v1/assets/9d8eb94430cdd4ceebb5f805ded159fe19416de25edc50e82a91c5e3a57abf16.stl",
-        "pred_render": "text_live_fixed100_v1/assets/8e014fa645569c65487fc2475b82270bc3525fd6672f077b42884285fe461b96.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/7343e66796b3a4167ce211901aab41ca4ef81249e4475cc9c9cf53d843004536.stl",
+        "gt_render": "text_live_fixed100_v1/assets/ddf1236055b500a667156318a10fcea74d001e7eb05c07539936660fd3d3f663.png",
+        "mesh": "text_live_fixed100_v1/assets/580cced6f4bb18fcf264ec4d56c5b7d518ef84e14adddbda4f780408f7acb264.stl",
+        "pred_render": "text_live_fixed100_v1/assets/a408df5228d6e6a6e0ae92d8a7c864c4426d49d60c96eb253bbce283ea1d1673.png"
       },
       "case_id": "0005/00051572",
       "condition": "The model has a flat rectangular base with raised long side walls, leaving an open channel rather than a filled block. A short rectangular added wall or tab sits at one end inside the side-wall outline and is lower than the tallest raised portions. Inside the channel is a centered row of annular cylindrical posts; these are added ring-shaped solids with real central openings, not floor cutouts. The posts and the taller rectangular build rise from the upper face of the base, while another rectangular addition stops at a lower level, so the top heights are stepped.",
@@ -193,10 +193,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/a2fa4af7561174ebc652c48e3f281b59aeb7c8fea1b1d3c7ca0f4e958397ba55.scad",
-        "gt_mesh": "text_live_fixed100_v1/assets/317fa48e5b537eb36391791f4b21633392bb0889718a8b4cc8477c309715bc01.stl",
-        "gt_render": "text_live_fixed100_v1/assets/3cbbd837a5b03e4f8872708922c0e06e4d5035adf02698cd33aebf3610541e7d.png",
-        "mesh": "text_live_fixed100_v1/assets/c84bf1f6092a92c743d4fac923c01d5c23dcd5e18afe94d54a2303320bf81cd1.stl",
-        "pred_render": "text_live_fixed100_v1/assets/d600e8a2937386078c9bb14502a42f4d4b5c8d737b35b6d253619e872fbdbd8f.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/7343e66796b3a4167ce211901aab41ca4ef81249e4475cc9c9cf53d843004536.stl",
+        "gt_render": "text_live_fixed100_v1/assets/423b6ce43f1a5ff236c60fa9a163cce886c19b8072d733b687ecafada43e165c.png",
+        "mesh": "text_live_fixed100_v1/assets/6f4d7198a81786876ea1c9b4ca7e460cc7f84c00ae18a28966086b7c3edac7c8.stl",
+        "pred_render": "text_live_fixed100_v1/assets/8fd3fa5ec9decaf7eb3586ccc4e0c181c5675253d38d0cf1f2edba4541626baa.png"
       },
       "case_id": "0005/00051572",
       "condition": "The model has a flat rectangular base with raised long side walls, leaving an open channel rather than a filled block. A short rectangular added wall or tab sits at one end inside the side-wall outline and is lower than the tallest raised portions. Inside the channel is a centered row of annular cylindrical posts; these are added ring-shaped solids with real central openings, not floor cutouts. The posts and the taller rectangular build rise from the upper face of the base, while another rectangular addition stops at a lower level, so the top heights are stepped.",
@@ -215,10 +215,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/4e7f70c8823273b13b8b3a34e358d3b0c29ef1cda6f29c511e10008cb9ac4e5e.json",
-        "gt_mesh": "text_live_fixed100_v1/assets/317fa48e5b537eb36391791f4b21633392bb0889718a8b4cc8477c309715bc01.stl",
-        "gt_render": "text_live_fixed100_v1/assets/3cbbd837a5b03e4f8872708922c0e06e4d5035adf02698cd33aebf3610541e7d.png",
-        "mesh": "text_live_fixed100_v1/assets/43789720b221d518ebd9f72f1f28f2e15d709fe32175024598b17ee1742ca1e7.stl",
-        "pred_render": "text_live_fixed100_v1/assets/27a4ff6f0d28266d8149a4137afe6922c3c47a7333263dfa866256625cda5cca.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/7343e66796b3a4167ce211901aab41ca4ef81249e4475cc9c9cf53d843004536.stl",
+        "gt_render": "text_live_fixed100_v1/assets/d75b6f046bfd669cbf01ee88526eb53c87380106e083c554b3068a9182a69140.png",
+        "mesh": "text_live_fixed100_v1/assets/d86962ba172c7cbc58ca122de3cb615acdcb821385fe339a806fa0663a5e1111.stl",
+        "pred_render": "text_live_fixed100_v1/assets/0b1b961af0d6002f052f05cd1f794db152f884dbf01a1aefeb7d729ab96391b9.png"
       },
       "case_id": "0005/00051572",
       "condition": "The model has a flat rectangular base with raised long side walls, leaving an open channel rather than a filled block. A short rectangular added wall or tab sits at one end inside the side-wall outline and is lower than the tallest raised portions. Inside the channel is a centered row of annular cylindrical posts; these are added ring-shaped solids with real central openings, not floor cutouts. The posts and the taller rectangular build rise from the upper face of the base, while another rectangular addition stops at a lower level, so the top heights are stepped.",
@@ -295,10 +295,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/0c02f58082b46ec3e373ffc48ce10fa1275094649f90742aa2d95c0d11bac2d2.scad",
-        "gt_mesh": "text_live_fixed100_v1/assets/317fa48e5b537eb36391791f4b21633392bb0889718a8b4cc8477c309715bc01.stl",
-        "gt_render": "text_live_fixed100_v1/assets/3cbbd837a5b03e4f8872708922c0e06e4d5035adf02698cd33aebf3610541e7d.png",
-        "mesh": "text_live_fixed100_v1/assets/698226309571a516a8b12f532211ac429dd6a00840dfa0f2aeebf2abb9086dec.stl",
-        "pred_render": "text_live_fixed100_v1/assets/223f8f166477ae7a772b809dd361d7b599dea966fbeee8f3d4864846b54300c5.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/7343e66796b3a4167ce211901aab41ca4ef81249e4475cc9c9cf53d843004536.stl",
+        "gt_render": "text_live_fixed100_v1/assets/dc93f094a4a1eba1a071f021efe73e31a1e069786bb0f30e68ccbd060b045a76.png",
+        "mesh": "text_live_fixed100_v1/assets/98406988e4efaac2f00f28bdc43617094f2fe6333e1e38a282173a0db2b24302.stl",
+        "pred_render": "text_live_fixed100_v1/assets/d7cf8e4548c7a543b62ef3782cff91536057136592456937f7985b84d7119862.png"
       },
       "case_id": "0005/00051572",
       "condition": "The model has a flat rectangular base with raised long side walls, leaving an open channel rather than a filled block. A short rectangular added wall or tab sits at one end inside the side-wall outline and is lower than the tallest raised portions. Inside the channel is a centered row of annular cylindrical posts; these are added ring-shaped solids with real central openings, not floor cutouts. The posts and the taller rectangular build rise from the upper face of the base, while another rectangular addition stops at a lower level, so the top heights are stepped.",
@@ -317,10 +317,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/285d722eba2f34d5f6c8a451dbc73e0ff1ccbc08c960edf1291b937fe96c64b9.json",
-        "gt_mesh": "text_live_fixed100_v1/assets/317fa48e5b537eb36391791f4b21633392bb0889718a8b4cc8477c309715bc01.stl",
-        "gt_render": "text_live_fixed100_v1/assets/3cbbd837a5b03e4f8872708922c0e06e4d5035adf02698cd33aebf3610541e7d.png",
-        "mesh": "text_live_fixed100_v1/assets/5498bae970da693850722a194216363ba87b464cf575c5a2da2c188daf8e58f8.stl",
-        "pred_render": "text_live_fixed100_v1/assets/5e102bd09c13bd345394174cc2b0d08bb17c38b9668369e8c14dadbee01ac77e.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/7343e66796b3a4167ce211901aab41ca4ef81249e4475cc9c9cf53d843004536.stl",
+        "gt_render": "text_live_fixed100_v1/assets/eae7615bc46c49774dadda70e55bdec20cd47d069ab94989f5f9aba26b8160d0.png",
+        "mesh": "text_live_fixed100_v1/assets/91a824596b0b20b6fc83b057269c5fcea00ffec335128679c07c83abfb611d0e.stl",
+        "pred_render": "text_live_fixed100_v1/assets/c03946b8806f4f0df7c66781c1e44f19101e1c06af9cc3ef10f4c7a48682eabd.png"
       },
       "case_id": "0005/00051572",
       "condition": "The model has a flat rectangular base with raised long side walls, leaving an open channel rather than a filled block. A short rectangular added wall or tab sits at one end inside the side-wall outline and is lower than the tallest raised portions. Inside the channel is a centered row of annular cylindrical posts; these are added ring-shaped solids with real central openings, not floor cutouts. The posts and the taller rectangular build rise from the upper face of the base, while another rectangular addition stops at a lower level, so the top heights are stepped.",
@@ -397,10 +397,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/af08bb711e2878d4e51b891b409b5c00b11300cd068722c7b77f117266ed4a07.scad",
-        "gt_mesh": "text_live_fixed100_v1/assets/317fa48e5b537eb36391791f4b21633392bb0889718a8b4cc8477c309715bc01.stl",
-        "gt_render": "text_live_fixed100_v1/assets/3cbbd837a5b03e4f8872708922c0e06e4d5035adf02698cd33aebf3610541e7d.png",
-        "mesh": "text_live_fixed100_v1/assets/8d350e2e7bcd99751896a509db3a227f9f789c9000327993fc07c738aa01e834.stl",
-        "pred_render": "text_live_fixed100_v1/assets/16d6e06c5e4752dfc8973b68b10ef3cfdee9d2f4cdc1924b94ecd99521c9313c.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/7343e66796b3a4167ce211901aab41ca4ef81249e4475cc9c9cf53d843004536.stl",
+        "gt_render": "text_live_fixed100_v1/assets/933ad0d957a9bdb76b176a57d7ffef4d2a4791b1fac11a09a69d8a119d11861f.png",
+        "mesh": "text_live_fixed100_v1/assets/10ee37c6c08730fcf66b80bb1e71956db244ea33f99c04aba6fa6b253815e689.stl",
+        "pred_render": "text_live_fixed100_v1/assets/3c199bacaa18d67bf447c9ce7efeb53fee6e500797c71e5d2bcd26350895099c.png"
       },
       "case_id": "0005/00051572",
       "condition": "The model has a flat rectangular base with raised long side walls, leaving an open channel rather than a filled block. A short rectangular added wall or tab sits at one end inside the side-wall outline and is lower than the tallest raised portions. Inside the channel is a centered row of annular cylindrical posts; these are added ring-shaped solids with real central openings, not floor cutouts. The posts and the taller rectangular build rise from the upper face of the base, while another rectangular addition stops at a lower level, so the top heights are stepped.",
@@ -419,10 +419,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/5fbe0b063f30143856eb706c2bff5175235ded542faafc252956f5d03d49b15e.json",
-        "gt_mesh": "text_live_fixed100_v1/assets/317fa48e5b537eb36391791f4b21633392bb0889718a8b4cc8477c309715bc01.stl",
-        "gt_render": "text_live_fixed100_v1/assets/3cbbd837a5b03e4f8872708922c0e06e4d5035adf02698cd33aebf3610541e7d.png",
-        "mesh": "text_live_fixed100_v1/assets/50bbf5243331b12b9f7e7ff7f5e3925378bfacdfb596a02b584da9e3dcc184d9.stl",
-        "pred_render": "text_live_fixed100_v1/assets/e2d1f8cda50f307b0dcbcb336c0125a5c20109a252492d979422c9ff6d203801.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/7343e66796b3a4167ce211901aab41ca4ef81249e4475cc9c9cf53d843004536.stl",
+        "gt_render": "text_live_fixed100_v1/assets/6b27598ba4212e5059713e9bce01f12ba60fa0ba3f6a6d0bd2de5a9284c40f33.png",
+        "mesh": "text_live_fixed100_v1/assets/b5a0a71738140a6f22a545cd2317d60158e08c8eaff6285a89b7c1379ebb9523.stl",
+        "pred_render": "text_live_fixed100_v1/assets/a2530596acd44d0958159fcd968ef8c291a5b3e8e265c8d93a9fcdbd6ef87624.png"
       },
       "case_id": "0005/00051572",
       "condition": "The model has a flat rectangular base with raised long side walls, leaving an open channel rather than a filled block. A short rectangular added wall or tab sits at one end inside the side-wall outline and is lower than the tallest raised portions. Inside the channel is a centered row of annular cylindrical posts; these are added ring-shaped solids with real central openings, not floor cutouts. The posts and the taller rectangular build rise from the upper face of the base, while another rectangular addition stops at a lower level, so the top heights are stepped.",
@@ -499,10 +499,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/a738b0f85659cc7c5b7898ac909c24a9872f1b81853724ee7ebe2d2f887eb4c8.scad",
-        "gt_mesh": "text_live_fixed100_v1/assets/317fa48e5b537eb36391791f4b21633392bb0889718a8b4cc8477c309715bc01.stl",
-        "gt_render": "text_live_fixed100_v1/assets/3cbbd837a5b03e4f8872708922c0e06e4d5035adf02698cd33aebf3610541e7d.png",
-        "mesh": "text_live_fixed100_v1/assets/fda9d0ec6e8f2f3ddba8a6364aa045ffef4bf0fa438ea544814c864d9886ab8d.stl",
-        "pred_render": "text_live_fixed100_v1/assets/af29c208c9ccaa4d8de24a06271be028083ae02d2963d997ce9f0eee02b49a8c.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/7343e66796b3a4167ce211901aab41ca4ef81249e4475cc9c9cf53d843004536.stl",
+        "gt_render": "text_live_fixed100_v1/assets/f1dec4567f60a8f67a47c3e29635dca14840853036b7585831ea06cd28badf8b.png",
+        "mesh": "text_live_fixed100_v1/assets/24efe22a8732722fd8dedcc74a29446002f64ec38350a3ed40f5de92457a418a.stl",
+        "pred_render": "text_live_fixed100_v1/assets/48689660750999bed74b6661ef6c9dea2b9025ea4279b90f6b597b7a2734bc16.png"
       },
       "case_id": "0005/00051572",
       "condition": "The model has a flat rectangular base with raised long side walls, leaving an open channel rather than a filled block. A short rectangular added wall or tab sits at one end inside the side-wall outline and is lower than the tallest raised portions. Inside the channel is a centered row of annular cylindrical posts; these are added ring-shaped solids with real central openings, not floor cutouts. The posts and the taller rectangular build rise from the upper face of the base, while another rectangular addition stops at a lower level, so the top heights are stepped.",
@@ -521,10 +521,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/4b03ec34585b754b24e005a2517e84c6934cad30c47a24f129d606cc4829a426.json",
-        "gt_mesh": "text_live_fixed100_v1/assets/317fa48e5b537eb36391791f4b21633392bb0889718a8b4cc8477c309715bc01.stl",
-        "gt_render": "text_live_fixed100_v1/assets/3cbbd837a5b03e4f8872708922c0e06e4d5035adf02698cd33aebf3610541e7d.png",
-        "mesh": "text_live_fixed100_v1/assets/90e078993bbd6a6955ae1e9bfbe25973b5823aaca51b4c9c8c62a1ce8b97b4d7.stl",
-        "pred_render": "text_live_fixed100_v1/assets/3f65c49a4e17f084aecb1f773666e8e839161be53aa2eac49f97f15c90423521.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/7343e66796b3a4167ce211901aab41ca4ef81249e4475cc9c9cf53d843004536.stl",
+        "gt_render": "text_live_fixed100_v1/assets/43691e381376b932d6667c71a379ae1ec86121502a6dd07c55899053131daa28.png",
+        "mesh": "text_live_fixed100_v1/assets/150d085810303d52e55c351b7fb0602c0ec8d6b39bf8f2850b8ae82b6a6eb916.stl",
+        "pred_render": "text_live_fixed100_v1/assets/e26cc59e314982e20d530b6464d6c1b1559b90493501dde4be48bb5f6bb6770e.png"
       },
       "case_id": "0005/00051572",
       "condition": "The model has a flat rectangular base with raised long side walls, leaving an open channel rather than a filled block. A short rectangular added wall or tab sits at one end inside the side-wall outline and is lower than the tallest raised portions. Inside the channel is a centered row of annular cylindrical posts; these are added ring-shaped solids with real central openings, not floor cutouts. The posts and the taller rectangular build rise from the upper face of the base, while another rectangular addition stops at a lower level, so the top heights are stepped.",
@@ -601,10 +601,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/664c2145cc173569a63b693368e4c3d126362b78d351f7de012b46f10b8bb181.scad",
-        "gt_mesh": "text_live_fixed100_v1/assets/317fa48e5b537eb36391791f4b21633392bb0889718a8b4cc8477c309715bc01.stl",
-        "gt_render": "text_live_fixed100_v1/assets/3cbbd837a5b03e4f8872708922c0e06e4d5035adf02698cd33aebf3610541e7d.png",
-        "mesh": "text_live_fixed100_v1/assets/fae0387c529889548d1e320c0b070c4082f4e63c3c3c1e6706dc4d4c5ac84672.stl",
-        "pred_render": "text_live_fixed100_v1/assets/8541b39edf618837cc86d588b053aa65fcd1006256f2b4c36f5b821c3339783b.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/7343e66796b3a4167ce211901aab41ca4ef81249e4475cc9c9cf53d843004536.stl",
+        "gt_render": "text_live_fixed100_v1/assets/eb11560bff08c575bc87394c7f482e6874260c16812042ab5f8d9581988a3be8.png",
+        "mesh": "text_live_fixed100_v1/assets/a91f73c6439fa1f9a88cf2a79ecff762cf9843eafef37e773962cb9dce4e9e50.stl",
+        "pred_render": "text_live_fixed100_v1/assets/df59be74daf4c6d6d2da9968491b165535e1b8871d12e7f8ec87b416855ff84a.png"
       },
       "case_id": "0005/00051572",
       "condition": "The model has a flat rectangular base with raised long side walls, leaving an open channel rather than a filled block. A short rectangular added wall or tab sits at one end inside the side-wall outline and is lower than the tallest raised portions. Inside the channel is a centered row of annular cylindrical posts; these are added ring-shaped solids with real central openings, not floor cutouts. The posts and the taller rectangular build rise from the upper face of the base, while another rectangular addition stops at a lower level, so the top heights are stepped.",
@@ -623,10 +623,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/622abd6f3077c7bfc136502324abb71b4ce05ce9f91c2441fdf30c51890b76c3.json",
-        "gt_mesh": "text_live_fixed100_v1/assets/317fa48e5b537eb36391791f4b21633392bb0889718a8b4cc8477c309715bc01.stl",
-        "gt_render": "text_live_fixed100_v1/assets/3cbbd837a5b03e4f8872708922c0e06e4d5035adf02698cd33aebf3610541e7d.png",
-        "mesh": "text_live_fixed100_v1/assets/726a5796bdf96ce4f6f874f9db93da60ed87446aaf30ff8c3f0e2c74643b141c.stl",
-        "pred_render": "text_live_fixed100_v1/assets/e83075915863ef69a60751d47a6ba46316164648621f12322dc86a6e0a5b2671.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/7343e66796b3a4167ce211901aab41ca4ef81249e4475cc9c9cf53d843004536.stl",
+        "gt_render": "text_live_fixed100_v1/assets/c39262d24fc7db677c8099651a893b7fb949ccd4a3ad9459af270254e041108d.png",
+        "mesh": "text_live_fixed100_v1/assets/acae14234e8d1414503007209613658e0909cf91aa9eee4a5d9941a3b000088a.stl",
+        "pred_render": "text_live_fixed100_v1/assets/a96179aa65e398aef943f9e32202411113130a369cbdd5beb2bde2fa3ed85fd2.png"
       },
       "case_id": "0005/00051572",
       "condition": "The model has a flat rectangular base with raised long side walls, leaving an open channel rather than a filled block. A short rectangular added wall or tab sits at one end inside the side-wall outline and is lower than the tallest raised portions. Inside the channel is a centered row of annular cylindrical posts; these are added ring-shaped solids with real central openings, not floor cutouts. The posts and the taller rectangular build rise from the upper face of the base, while another rectangular addition stops at a lower level, so the top heights are stepped.",
@@ -703,10 +703,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/decb205a9c8d7871475a1ba236bfdfa9adac65c32716f394db2acc4625ddc1fe.scad",
-        "gt_mesh": "text_live_fixed100_v1/assets/317fa48e5b537eb36391791f4b21633392bb0889718a8b4cc8477c309715bc01.stl",
-        "gt_render": "text_live_fixed100_v1/assets/3cbbd837a5b03e4f8872708922c0e06e4d5035adf02698cd33aebf3610541e7d.png",
-        "mesh": "text_live_fixed100_v1/assets/e2237fccb1ac0d90ebbf2a4656daa8da7a61ca810952ea8f61981185adb60081.stl",
-        "pred_render": "text_live_fixed100_v1/assets/c051d4c9cc701d87a06419588fce1766858d9ae99adcdd0ba27489f01cd1f71d.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/7343e66796b3a4167ce211901aab41ca4ef81249e4475cc9c9cf53d843004536.stl",
+        "gt_render": "text_live_fixed100_v1/assets/e83d5c7d9d314cd3e0abc1f6936a7990a1a254abfdd4af3585fd3c6a3d44370d.png",
+        "mesh": "text_live_fixed100_v1/assets/d2659678bc9b97517762281170d89c13a84cd8b4df12b0548be9ddba4d542b2c.stl",
+        "pred_render": "text_live_fixed100_v1/assets/87780f6e71852f136fdac51f57d2104e3b122a62dfeeb43897819ff599f23293.png"
       },
       "case_id": "0005/00051572",
       "condition": "The model has a flat rectangular base with raised long side walls, leaving an open channel rather than a filled block. A short rectangular added wall or tab sits at one end inside the side-wall outline and is lower than the tallest raised portions. Inside the channel is a centered row of annular cylindrical posts; these are added ring-shaped solids with real central openings, not floor cutouts. The posts and the taller rectangular build rise from the upper face of the base, while another rectangular addition stops at a lower level, so the top heights are stepped.",
@@ -725,10 +725,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/27c990ced96f976e5720e6f0cbff8ac6128220860bd4322a47a9555886fe8cc1.json",
-        "gt_mesh": "text_live_fixed100_v1/assets/317fa48e5b537eb36391791f4b21633392bb0889718a8b4cc8477c309715bc01.stl",
-        "gt_render": "text_live_fixed100_v1/assets/3cbbd837a5b03e4f8872708922c0e06e4d5035adf02698cd33aebf3610541e7d.png",
-        "mesh": "text_live_fixed100_v1/assets/fcfad142ae9275a8310b4a96732772dbe58c5b09437244a52a480b6f74a0b54e.stl",
-        "pred_render": "text_live_fixed100_v1/assets/2e82f32dad95f2261884ea0da92a3248a9749b9bf7e93f659adb5b5f10705d12.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/7343e66796b3a4167ce211901aab41ca4ef81249e4475cc9c9cf53d843004536.stl",
+        "gt_render": "text_live_fixed100_v1/assets/edae078878aef971eeca22e026b8a70d445f7999260bb4ca369441302c9cf20b.png",
+        "mesh": "text_live_fixed100_v1/assets/efad5c588536d7681d2c94b56605ea04d6219097a514030a583bb802e9c628a4.stl",
+        "pred_render": "text_live_fixed100_v1/assets/0fb94ccf3e16b3bf367aadf2e1f77227f6543198349e2fafcde61abebdfd3ef9.png"
       },
       "case_id": "0005/00051572",
       "condition": "The model has a flat rectangular base with raised long side walls, leaving an open channel rather than a filled block. A short rectangular added wall or tab sits at one end inside the side-wall outline and is lower than the tallest raised portions. Inside the channel is a centered row of annular cylindrical posts; these are added ring-shaped solids with real central openings, not floor cutouts. The posts and the taller rectangular build rise from the upper face of the base, while another rectangular addition stops at a lower level, so the top heights are stepped.",
@@ -805,10 +805,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/5718652297aa2e17923f11d55fba5dffa3ce8c6667bbf9c577887103898618d9.scad",
-        "gt_mesh": "text_live_fixed100_v1/assets/317fa48e5b537eb36391791f4b21633392bb0889718a8b4cc8477c309715bc01.stl",
-        "gt_render": "text_live_fixed100_v1/assets/2acb79de3668afdf4ac723d4f8f302b6b33ce8b7ebeb49ba3c53cff28cc06a5d.png",
-        "mesh": "text_live_fixed100_v1/assets/24b2d112fb6915e96e7ed84fad13439f350626ef60d33d5f312186544a618fbd.stl",
-        "pred_render": "text_live_fixed100_v1/assets/6f47f33a0117c021eaee75137bcd9bbb9162d553389e7ecde59b2195af877057.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/7343e66796b3a4167ce211901aab41ca4ef81249e4475cc9c9cf53d843004536.stl",
+        "gt_render": "text_live_fixed100_v1/assets/0b964b8ffad422b1591c09d62e82af53c6fd859fe41e3d1a6221b33a91148964.png",
+        "mesh": "text_live_fixed100_v1/assets/a822599c3974ce127be741e4acc802bbab72c71f680bc9188672d18222848ffe.stl",
+        "pred_render": "text_live_fixed100_v1/assets/7b32cfd1fd76c7febf59f812345ce9997e96639cf777e241774dd8a3f509bbb5.png"
       },
       "case_id": "0005/00051572",
       "condition": "The model has a flat rectangular base with raised long side walls, leaving an open channel rather than a filled block. A short rectangular added wall or tab sits at one end inside the side-wall outline and is lower than the tallest raised portions. Inside the channel is a centered row of annular cylindrical posts; these are added ring-shaped solids with real central openings, not floor cutouts. The posts and the taller rectangular build rise from the upper face of the base, while another rectangular addition stops at a lower level, so the top heights are stepped.",
@@ -827,10 +827,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/6d9c541627c287b987b9fbc02a625c3adf3b7d86ad4122e37dec0176a0a5a721.json",
-        "gt_mesh": "text_live_fixed100_v1/assets/317fa48e5b537eb36391791f4b21633392bb0889718a8b4cc8477c309715bc01.stl",
-        "gt_render": "text_live_fixed100_v1/assets/2acb79de3668afdf4ac723d4f8f302b6b33ce8b7ebeb49ba3c53cff28cc06a5d.png",
-        "mesh": "text_live_fixed100_v1/assets/595a54962ccb3ccd802ea1507b51e19bb33ba36cb009c458d4c482c31ec45c92.stl",
-        "pred_render": "text_live_fixed100_v1/assets/bb381e051ad11982b76e4a110f8889d195170ea59893688e699ab9bb73d6a362.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/7343e66796b3a4167ce211901aab41ca4ef81249e4475cc9c9cf53d843004536.stl",
+        "gt_render": "text_live_fixed100_v1/assets/0d83eef6a365d88314ba1dbfd78111dbea066c1bfdb189908a4e65cd67ad0f2b.png",
+        "mesh": "text_live_fixed100_v1/assets/38ed14d8e1c5f650811b008a83bb5203f583d0eb0c3d87bcc75d805124b47f00.stl",
+        "pred_render": "text_live_fixed100_v1/assets/733cbd094eedc8052c2ced0c09f282cfb96eed6e134767535200e2f83adf19e3.png"
       },
       "case_id": "0005/00051572",
       "condition": "The model has a flat rectangular base with raised long side walls, leaving an open channel rather than a filled block. A short rectangular added wall or tab sits at one end inside the side-wall outline and is lower than the tallest raised portions. Inside the channel is a centered row of annular cylindrical posts; these are added ring-shaped solids with real central openings, not floor cutouts. The posts and the taller rectangular build rise from the upper face of the base, while another rectangular addition stops at a lower level, so the top heights are stepped.",
@@ -907,10 +907,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/c031a6748216f5fcbe8d7add576d40d2c63cf6cb66539b6cf5fb834b1d4b30c1.scad",
-        "gt_mesh": "text_live_fixed100_v1/assets/317fa48e5b537eb36391791f4b21633392bb0889718a8b4cc8477c309715bc01.stl",
-        "gt_render": "text_live_fixed100_v1/assets/3cbbd837a5b03e4f8872708922c0e06e4d5035adf02698cd33aebf3610541e7d.png",
-        "mesh": "text_live_fixed100_v1/assets/4db83b2fb1007fef2a6bc73de2138a2a9ab41bbbcad159adc3f46cf96f372a23.stl",
-        "pred_render": "text_live_fixed100_v1/assets/addc5610ef684946bbf27c06fd07317a511d2f394495a02e45cfd7ce8b6f582c.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/7343e66796b3a4167ce211901aab41ca4ef81249e4475cc9c9cf53d843004536.stl",
+        "gt_render": "text_live_fixed100_v1/assets/83dbe4824c8ae6a450972a75e9bd7063c882b7e11fecbb2e5353996896ddd5c0.png",
+        "mesh": "text_live_fixed100_v1/assets/863aa776d6cf8306800c000e175cb67be3a2ff1e546f18a3812a2c0b541bf06d.stl",
+        "pred_render": "text_live_fixed100_v1/assets/98ba16682347a049acc6e821c0112394405b004fe8bc91d76c3fe496df19163d.png"
       },
       "case_id": "0005/00051572",
       "condition": "The model has a flat rectangular base with raised long side walls, leaving an open channel rather than a filled block. A short rectangular added wall or tab sits at one end inside the side-wall outline and is lower than the tallest raised portions. Inside the channel is a centered row of annular cylindrical posts; these are added ring-shaped solids with real central openings, not floor cutouts. The posts and the taller rectangular build rise from the upper face of the base, while another rectangular addition stops at a lower level, so the top heights are stepped.",
@@ -929,10 +929,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/facbf9863cca8edcf5e500925d365108354e12ba9100e1101246085064f04a82.json",
-        "gt_mesh": "text_live_fixed100_v1/assets/317fa48e5b537eb36391791f4b21633392bb0889718a8b4cc8477c309715bc01.stl",
-        "gt_render": "text_live_fixed100_v1/assets/3cbbd837a5b03e4f8872708922c0e06e4d5035adf02698cd33aebf3610541e7d.png",
-        "mesh": "text_live_fixed100_v1/assets/3fdc459f503db37b0ffec254a36286fb0b68ea75266adfc01241c70a37ffad52.stl",
-        "pred_render": "text_live_fixed100_v1/assets/9cef04dc4ea943c7819ea4df05660c5085a3e709270ce6ef55f3a4ddb13e82dd.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/7343e66796b3a4167ce211901aab41ca4ef81249e4475cc9c9cf53d843004536.stl",
+        "gt_render": "text_live_fixed100_v1/assets/76a9a37a6b7ce32644da52d6dcee96ea657a3cd228c1c643243f54f76eff3796.png",
+        "mesh": "text_live_fixed100_v1/assets/68cfbfbbeb483a0c0688c34c4c01fb43e87c567ad820338e4f6f40ac01e08631.stl",
+        "pred_render": "text_live_fixed100_v1/assets/25bc3b31dbf25d48a3b0dd795e8aae193462f8829b1477fddf89c644d6294300.png"
       },
       "case_id": "0005/00051572",
       "condition": "The model has a flat rectangular base with raised long side walls, leaving an open channel rather than a filled block. A short rectangular added wall or tab sits at one end inside the side-wall outline and is lower than the tallest raised portions. Inside the channel is a centered row of annular cylindrical posts; these are added ring-shaped solids with real central openings, not floor cutouts. The posts and the taller rectangular build rise from the upper face of the base, while another rectangular addition stops at a lower level, so the top heights are stepped.",
@@ -1009,10 +1009,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/01d7eb0a17b27766d60925f88f05865a9488475a0e7e2aef1c1a8b2c345978ac.scad",
-        "gt_mesh": "text_live_fixed100_v1/assets/317fa48e5b537eb36391791f4b21633392bb0889718a8b4cc8477c309715bc01.stl",
-        "gt_render": "text_live_fixed100_v1/assets/3cbbd837a5b03e4f8872708922c0e06e4d5035adf02698cd33aebf3610541e7d.png",
-        "mesh": "text_live_fixed100_v1/assets/2ddee80b7f2d30c4f5f83019e006c9f2b587a0abfd8923c70e924820dc41657a.stl",
-        "pred_render": "text_live_fixed100_v1/assets/ab1b4a34308aac755080cd5a7ee1d2d0609101421c1da39b56c397bcde03edef.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/7343e66796b3a4167ce211901aab41ca4ef81249e4475cc9c9cf53d843004536.stl",
+        "gt_render": "text_live_fixed100_v1/assets/b30c6d61a4f35b6a713d127e1049e02e2130348667cdd551a4b7f5fce0cddf1a.png",
+        "mesh": "text_live_fixed100_v1/assets/9fb0105af14df8b180a62e6a3ba4999e7982fdfa764c9818e480d2c6587e4118.stl",
+        "pred_render": "text_live_fixed100_v1/assets/9bfeaee37af254e6085bc82d6baeaf25ef1de58f7beacab88295ee7416a8e4de.png"
       },
       "case_id": "0005/00051572",
       "condition": "The model has a flat rectangular base with raised long side walls, leaving an open channel rather than a filled block. A short rectangular added wall or tab sits at one end inside the side-wall outline and is lower than the tallest raised portions. Inside the channel is a centered row of annular cylindrical posts; these are added ring-shaped solids with real central openings, not floor cutouts. The posts and the taller rectangular build rise from the upper face of the base, while another rectangular addition stops at a lower level, so the top heights are stepped.",
@@ -1031,10 +1031,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/a7dd2731a155af8dc1e01eddfe9efc3bfca475f61301da52b6ae08f51703c95a.json",
-        "gt_mesh": "text_live_fixed100_v1/assets/317fa48e5b537eb36391791f4b21633392bb0889718a8b4cc8477c309715bc01.stl",
-        "gt_render": "text_live_fixed100_v1/assets/3cbbd837a5b03e4f8872708922c0e06e4d5035adf02698cd33aebf3610541e7d.png",
-        "mesh": "text_live_fixed100_v1/assets/55be4d241fa82768498d09b09ac60c75edae29395d6a5f5463d3a532da94859d.stl",
-        "pred_render": "text_live_fixed100_v1/assets/f5b50709e94a8ed50de9c1df7569e165ea5fd29788e55a2969e8a58746c67fed.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/7343e66796b3a4167ce211901aab41ca4ef81249e4475cc9c9cf53d843004536.stl",
+        "gt_render": "text_live_fixed100_v1/assets/ac9f16d643199577bc430f44b66c7246c0cb7461b3d005e0a0696582f8603747.png",
+        "mesh": "text_live_fixed100_v1/assets/fe178b7fc4d65c80b501868b8da0b359e9ea37492df3278b40fe6774d8ef8ce1.stl",
+        "pred_render": "text_live_fixed100_v1/assets/ac8460aef7ecfbbc1ea937653c847f7ad681e491197476677343945dd6ad96f8.png"
       },
       "case_id": "0005/00051572",
       "condition": "The model has a flat rectangular base with raised long side walls, leaving an open channel rather than a filled block. A short rectangular added wall or tab sits at one end inside the side-wall outline and is lower than the tallest raised portions. Inside the channel is a centered row of annular cylindrical posts; these are added ring-shaped solids with real central openings, not floor cutouts. The posts and the taller rectangular build rise from the upper face of the base, while another rectangular addition stops at a lower level, so the top heights are stepped.",
@@ -1111,10 +1111,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/fde51401a33b1a1067c483ab302706d366e16c6feabc3701f806b457790fcf91.scad",
-        "gt_mesh": "text_live_fixed100_v1/assets/41e308a29dd07404fd3567d21bac0b03aaaa207e95c638091784b38f0bd12bd8.stl",
-        "gt_render": "text_live_fixed100_v1/assets/184c3252b69452c8ddd97a2e5519e6d816871c4ddfb8ff6834583ec6bbeb052b.png",
-        "mesh": "text_live_fixed100_v1/assets/09786cc1eea10afae2984c6055b4e12ba7c85a8e0ae1d64c84ec30e021c58401.stl",
-        "pred_render": "text_live_fixed100_v1/assets/8a7b819660bc3209b6438290f871fe86b2185bc93c2ac9d3bab91e6451e03f82.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/dd6c3d23ca9505d59abcf07eb28fdbf0fab90e2cd485ae68ffa70c531ed09aec.stl",
+        "gt_render": "text_live_fixed100_v1/assets/9066e5059b8895c6304b6ed0d39f04619f352437178a99388d5096158335ee49.png",
+        "mesh": "text_live_fixed100_v1/assets/647e6f1da254b3988320727285cbba981a43586e33e739f02b80e23a8a836057.stl",
+        "pred_render": "text_live_fixed100_v1/assets/918c282dd6bf70e733231c9c43cb99c0353465cda3b03cc833b5a3fcd98bb8c7.png"
       },
       "case_id": "0015/00155951",
       "condition": "The main body is a solid, shallow plate with an arc-based outline and a real through opening at its center. A shallow annular collar is added on the underside around that central opening, so it should be treated as a hollow ring rather than a filled disk or rectangular pad. Tall solid rounded tabs rise from the upper side at the two ends of the plate, and each tab has a through opening passing through its thickness. The added end sections are much taller than the base, while the underside collar is only a shallow lower tier, creating a clear stepped-depth relationship.",
@@ -1133,10 +1133,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/195513be581470dad708fc91ebedf03f94c7a41b85a36b2e62da1cbbaec28d70.json",
-        "gt_mesh": "text_live_fixed100_v1/assets/41e308a29dd07404fd3567d21bac0b03aaaa207e95c638091784b38f0bd12bd8.stl",
-        "gt_render": "text_live_fixed100_v1/assets/184c3252b69452c8ddd97a2e5519e6d816871c4ddfb8ff6834583ec6bbeb052b.png",
-        "mesh": "text_live_fixed100_v1/assets/f7e6c3ccf682afcbd0b3a243c5b7826fc00786dbad1633369a88635b42d82a15.stl",
-        "pred_render": "text_live_fixed100_v1/assets/3d5c132137a6d501ef5b3abcbc70a4275df14a2b291491f0f3e6d7df43b09325.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/dd6c3d23ca9505d59abcf07eb28fdbf0fab90e2cd485ae68ffa70c531ed09aec.stl",
+        "gt_render": "text_live_fixed100_v1/assets/58d650049934e59b94d6f8f5606cd5f0a1d67043586a2a80f68196a80f7d16eb.png",
+        "mesh": "text_live_fixed100_v1/assets/da521300744bf67fffcb7d8c3acc97efa24f5b0b67d31afc4917fe1845a096f8.stl",
+        "pred_render": "text_live_fixed100_v1/assets/9d53616f256c49258a39c2183cfadbc9000ba5c4784149512da54424eb72b8b9.png"
       },
       "case_id": "0015/00155951",
       "condition": "The main body is a solid, shallow plate with an arc-based outline and a real through opening at its center. A shallow annular collar is added on the underside around that central opening, so it should be treated as a hollow ring rather than a filled disk or rectangular pad. Tall solid rounded tabs rise from the upper side at the two ends of the plate, and each tab has a through opening passing through its thickness. The added end sections are much taller than the base, while the underside collar is only a shallow lower tier, creating a clear stepped-depth relationship.",
@@ -1213,10 +1213,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/5cc8a1bf5841721002fbb7d8656c1ecca2440464af5cac962f36ca4458ca5e01.scad",
-        "gt_mesh": "text_live_fixed100_v1/assets/41e308a29dd07404fd3567d21bac0b03aaaa207e95c638091784b38f0bd12bd8.stl",
-        "gt_render": "text_live_fixed100_v1/assets/184c3252b69452c8ddd97a2e5519e6d816871c4ddfb8ff6834583ec6bbeb052b.png",
-        "mesh": "text_live_fixed100_v1/assets/51e2d44a2f1fb05978479191d47ef99b62bda38e04fd8a8beabbce589c2c687a.stl",
-        "pred_render": "text_live_fixed100_v1/assets/def007d27502fd35bd2f4927f422bcb5aedc4bcc13e133e2a741c724ad9bdb97.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/dd6c3d23ca9505d59abcf07eb28fdbf0fab90e2cd485ae68ffa70c531ed09aec.stl",
+        "gt_render": "text_live_fixed100_v1/assets/ee2c798a5a55c5d17c5d262400c815b8f6719a857b41160434a15b850aba4e96.png",
+        "mesh": "text_live_fixed100_v1/assets/e6952a15fcf3e9249e7e2069a9eab95214ee909a8e97eef997bde7a13a2e15c0.stl",
+        "pred_render": "text_live_fixed100_v1/assets/341daa90a238278c02d1b43afb5e6b1742a28e031de3a06e72d1f1d4ea3751d6.png"
       },
       "case_id": "0015/00155951",
       "condition": "The main body is a solid, shallow plate with an arc-based outline and a real through opening at its center. A shallow annular collar is added on the underside around that central opening, so it should be treated as a hollow ring rather than a filled disk or rectangular pad. Tall solid rounded tabs rise from the upper side at the two ends of the plate, and each tab has a through opening passing through its thickness. The added end sections are much taller than the base, while the underside collar is only a shallow lower tier, creating a clear stepped-depth relationship.",
@@ -1235,10 +1235,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/46cf4564449ae0e0e63d9ccbcef75a1da07ade55111bee9b55c18ebef1c12ee6.json",
-        "gt_mesh": "text_live_fixed100_v1/assets/41e308a29dd07404fd3567d21bac0b03aaaa207e95c638091784b38f0bd12bd8.stl",
-        "gt_render": "text_live_fixed100_v1/assets/184c3252b69452c8ddd97a2e5519e6d816871c4ddfb8ff6834583ec6bbeb052b.png",
-        "mesh": "text_live_fixed100_v1/assets/361c7aadbc8f2bd4aab9735c8e5fe585a856c9611706a621e66928e572b1a1e0.stl",
-        "pred_render": "text_live_fixed100_v1/assets/c22e027c25b0579720326e4dfa96664f7020c6ee469a92fd94c72e876819c1e8.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/dd6c3d23ca9505d59abcf07eb28fdbf0fab90e2cd485ae68ffa70c531ed09aec.stl",
+        "gt_render": "text_live_fixed100_v1/assets/a35779f352ca55115ab649fed665ee908c91592ee0526dcb3a3c78ae475ab857.png",
+        "mesh": "text_live_fixed100_v1/assets/e6b489db6e053a537ce2f24d7447e98eb35e62b79dae8913aab4616b0aa8ba1b.stl",
+        "pred_render": "text_live_fixed100_v1/assets/342a855ac34c8f04fccae0db7b545376efb7c533b5e18c1e04bcfe894a54c632.png"
       },
       "case_id": "0015/00155951",
       "condition": "The main body is a solid, shallow plate with an arc-based outline and a real through opening at its center. A shallow annular collar is added on the underside around that central opening, so it should be treated as a hollow ring rather than a filled disk or rectangular pad. Tall solid rounded tabs rise from the upper side at the two ends of the plate, and each tab has a through opening passing through its thickness. The added end sections are much taller than the base, while the underside collar is only a shallow lower tier, creating a clear stepped-depth relationship.",
@@ -1315,10 +1315,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/db59b789214dbf6c58e092fd4d9be8b1a448b17a3a2941f670307e8d0ceec0ad.scad",
-        "gt_mesh": "text_live_fixed100_v1/assets/41e308a29dd07404fd3567d21bac0b03aaaa207e95c638091784b38f0bd12bd8.stl",
-        "gt_render": "text_live_fixed100_v1/assets/184c3252b69452c8ddd97a2e5519e6d816871c4ddfb8ff6834583ec6bbeb052b.png",
-        "mesh": "text_live_fixed100_v1/assets/9a1a0aa4d0693cc42ed4821c610ac6c1190f43587d282a47ed52bb2becca1c40.stl",
-        "pred_render": "text_live_fixed100_v1/assets/1641d5a2951cbf6a6242f6b696822d41a538a94edbf2201b030c412e00fd8076.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/dd6c3d23ca9505d59abcf07eb28fdbf0fab90e2cd485ae68ffa70c531ed09aec.stl",
+        "gt_render": "text_live_fixed100_v1/assets/afe638614ad8cd525839c40998bd390b4f6af79aa1db2decbdb03f17e605b70a.png",
+        "mesh": "text_live_fixed100_v1/assets/f2f8502fc13028d2b85dcbc87ccfde70aabb3642bd4605def5f32762f4716c9e.stl",
+        "pred_render": "text_live_fixed100_v1/assets/2b1ba4b6aaab12a8484e3ad3b4a35b7a2a81be2e6af88e0d69a8f93823c9cbd1.png"
       },
       "case_id": "0015/00155951",
       "condition": "The main body is a solid, shallow plate with an arc-based outline and a real through opening at its center. A shallow annular collar is added on the underside around that central opening, so it should be treated as a hollow ring rather than a filled disk or rectangular pad. Tall solid rounded tabs rise from the upper side at the two ends of the plate, and each tab has a through opening passing through its thickness. The added end sections are much taller than the base, while the underside collar is only a shallow lower tier, creating a clear stepped-depth relationship.",
@@ -1337,10 +1337,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/9468f6d0bba00505055f02fd8fe6d5e89ec76b492aeb48af2657c4548ccc5f26.json",
-        "gt_mesh": "text_live_fixed100_v1/assets/41e308a29dd07404fd3567d21bac0b03aaaa207e95c638091784b38f0bd12bd8.stl",
-        "gt_render": "text_live_fixed100_v1/assets/184c3252b69452c8ddd97a2e5519e6d816871c4ddfb8ff6834583ec6bbeb052b.png",
-        "mesh": "text_live_fixed100_v1/assets/846d32324afea96ad9f6c01173bece75cd59630a2846b0603a9b07aedf97cd48.stl",
-        "pred_render": "text_live_fixed100_v1/assets/3c699570eaf8c0fb6f4f2def65cbf3180e2f9dadfc79906883f5672ae16a82a3.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/dd6c3d23ca9505d59abcf07eb28fdbf0fab90e2cd485ae68ffa70c531ed09aec.stl",
+        "gt_render": "text_live_fixed100_v1/assets/1bd7353e1802257f670e09287f2d9b52f7b9967f5667f0ca89d4aa7718c5583f.png",
+        "mesh": "text_live_fixed100_v1/assets/f3c4ee5c2d03ced0986c061eb9f43964312b1f0b4c5f5461d15318ff16a6992b.stl",
+        "pred_render": "text_live_fixed100_v1/assets/d52e41f18ed430de35558c90f70ae67c92b591a69d1308e81b78f3af2944e435.png"
       },
       "case_id": "0015/00155951",
       "condition": "The main body is a solid, shallow plate with an arc-based outline and a real through opening at its center. A shallow annular collar is added on the underside around that central opening, so it should be treated as a hollow ring rather than a filled disk or rectangular pad. Tall solid rounded tabs rise from the upper side at the two ends of the plate, and each tab has a through opening passing through its thickness. The added end sections are much taller than the base, while the underside collar is only a shallow lower tier, creating a clear stepped-depth relationship.",
@@ -1417,10 +1417,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/eb04d945ce17f8a407f7ebae0528baeb52de861e1828dec2cfd1f566d69589c3.scad",
-        "gt_mesh": "text_live_fixed100_v1/assets/41e308a29dd07404fd3567d21bac0b03aaaa207e95c638091784b38f0bd12bd8.stl",
-        "gt_render": "text_live_fixed100_v1/assets/184c3252b69452c8ddd97a2e5519e6d816871c4ddfb8ff6834583ec6bbeb052b.png",
-        "mesh": "text_live_fixed100_v1/assets/12a3b92a300778f3c6467ae5edee488dd0c853dc7990edb39901e900b57bc173.stl",
-        "pred_render": "text_live_fixed100_v1/assets/780668d3eff357c73ee0caab88a8f93963c79f2c7aefe868370ccdc992f31b9e.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/dd6c3d23ca9505d59abcf07eb28fdbf0fab90e2cd485ae68ffa70c531ed09aec.stl",
+        "gt_render": "text_live_fixed100_v1/assets/c137face1c80b361e44651a94efb2949eba9b9078c730a5aca7ecea1577f245d.png",
+        "mesh": "text_live_fixed100_v1/assets/db0f77897b10a60451f7b52d1037dc48e7f72c0861e08448fc06539678fd5f9d.stl",
+        "pred_render": "text_live_fixed100_v1/assets/7b8bf741420e25d13ff091910b6d404e0e8352d4aa16da32085667a060c58104.png"
       },
       "case_id": "0015/00155951",
       "condition": "The main body is a solid, shallow plate with an arc-based outline and a real through opening at its center. A shallow annular collar is added on the underside around that central opening, so it should be treated as a hollow ring rather than a filled disk or rectangular pad. Tall solid rounded tabs rise from the upper side at the two ends of the plate, and each tab has a through opening passing through its thickness. The added end sections are much taller than the base, while the underside collar is only a shallow lower tier, creating a clear stepped-depth relationship.",
@@ -1439,10 +1439,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/ce3d21a905a6059b333401c6cc02462122353853592b648448cf5da7a4dad1be.json",
-        "gt_mesh": "text_live_fixed100_v1/assets/41e308a29dd07404fd3567d21bac0b03aaaa207e95c638091784b38f0bd12bd8.stl",
-        "gt_render": "text_live_fixed100_v1/assets/184c3252b69452c8ddd97a2e5519e6d816871c4ddfb8ff6834583ec6bbeb052b.png",
-        "mesh": "text_live_fixed100_v1/assets/ae572f7ad87ed43dbf293a9da69f310f1883a0fe90e6cbffae912b669b9e47f5.stl",
-        "pred_render": "text_live_fixed100_v1/assets/c3cf998d4d288ea527a13a2a147e0b73bc7bf42ed75d9d6b19d224f99d10c762.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/dd6c3d23ca9505d59abcf07eb28fdbf0fab90e2cd485ae68ffa70c531ed09aec.stl",
+        "gt_render": "text_live_fixed100_v1/assets/37b9e2a9ecaae318bc9e0f2179459dc1a395395c1594b328c2f2d0e3aecfa0d8.png",
+        "mesh": "text_live_fixed100_v1/assets/55924c7dc20a9c79338655ded6d4892e817b23552d1ce816ab9d72eb74ec7c45.stl",
+        "pred_render": "text_live_fixed100_v1/assets/9059e4ea876ed768f6ecf71458e7822a09336f2cac5b7f84d22a53c457faa3a7.png"
       },
       "case_id": "0015/00155951",
       "condition": "The main body is a solid, shallow plate with an arc-based outline and a real through opening at its center. A shallow annular collar is added on the underside around that central opening, so it should be treated as a hollow ring rather than a filled disk or rectangular pad. Tall solid rounded tabs rise from the upper side at the two ends of the plate, and each tab has a through opening passing through its thickness. The added end sections are much taller than the base, while the underside collar is only a shallow lower tier, creating a clear stepped-depth relationship.",
@@ -1519,10 +1519,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/4c0ca7f9abda2c10a25a39077278f338e355cd5b929a00dae8401bb8b4921004.scad",
-        "gt_mesh": "text_live_fixed100_v1/assets/41e308a29dd07404fd3567d21bac0b03aaaa207e95c638091784b38f0bd12bd8.stl",
-        "gt_render": "text_live_fixed100_v1/assets/184c3252b69452c8ddd97a2e5519e6d816871c4ddfb8ff6834583ec6bbeb052b.png",
-        "mesh": "text_live_fixed100_v1/assets/415b054b325ce60000a475e3a04bd86a5fe9f6d0497553ab084f51bf62f6ac3f.stl",
-        "pred_render": "text_live_fixed100_v1/assets/67901ba1b418b6f63f53d3d87073fed3cca3fb50f4df3ee85dc1e9b4fad17b3e.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/dd6c3d23ca9505d59abcf07eb28fdbf0fab90e2cd485ae68ffa70c531ed09aec.stl",
+        "gt_render": "text_live_fixed100_v1/assets/686abc9968d78c6b4071f9b1d84bcaad0b2c7283561612e8ac0ddf57c260e9b1.png",
+        "mesh": "text_live_fixed100_v1/assets/d05ae248891e0636a9a66a3646be05874405ae3cf7e2c6bb23251362d4976694.stl",
+        "pred_render": "text_live_fixed100_v1/assets/0695f9cffb3e99aaf9bf18e2ccb39528c306e8111004f25a0d6a642ad58f3cd3.png"
       },
       "case_id": "0015/00155951",
       "condition": "The main body is a solid, shallow plate with an arc-based outline and a real through opening at its center. A shallow annular collar is added on the underside around that central opening, so it should be treated as a hollow ring rather than a filled disk or rectangular pad. Tall solid rounded tabs rise from the upper side at the two ends of the plate, and each tab has a through opening passing through its thickness. The added end sections are much taller than the base, while the underside collar is only a shallow lower tier, creating a clear stepped-depth relationship.",
@@ -1617,10 +1617,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/585ede031fefe3613c1af43bee5dc254ad42d0b3855a57f7e9e718994dd04de9.scad",
-        "gt_mesh": "text_live_fixed100_v1/assets/41e308a29dd07404fd3567d21bac0b03aaaa207e95c638091784b38f0bd12bd8.stl",
-        "gt_render": "text_live_fixed100_v1/assets/184c3252b69452c8ddd97a2e5519e6d816871c4ddfb8ff6834583ec6bbeb052b.png",
-        "mesh": "text_live_fixed100_v1/assets/acb892f4cfe2a76df5bd50cfd11258e0fffa7c92afcc15bdae24c244a251ce67.stl",
-        "pred_render": "text_live_fixed100_v1/assets/97f2b0772c5a7eef9db3ffda238f5526a9f1e97dcab523d48a296ec50195b73f.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/dd6c3d23ca9505d59abcf07eb28fdbf0fab90e2cd485ae68ffa70c531ed09aec.stl",
+        "gt_render": "text_live_fixed100_v1/assets/a6eeb87b16054bf3324c478d22b40f591049455a5afe7bce44c15378e4491750.png",
+        "mesh": "text_live_fixed100_v1/assets/77fe3ca04e5d1f4e57e7ca30cc389ed738cc5d1fcaa515fdb729cb1fcb33018a.stl",
+        "pred_render": "text_live_fixed100_v1/assets/400b0c927e2c9e92a864292b26b6df434178fb4e79e946f338be60e1ef738668.png"
       },
       "case_id": "0015/00155951",
       "condition": "The main body is a solid, shallow plate with an arc-based outline and a real through opening at its center. A shallow annular collar is added on the underside around that central opening, so it should be treated as a hollow ring rather than a filled disk or rectangular pad. Tall solid rounded tabs rise from the upper side at the two ends of the plate, and each tab has a through opening passing through its thickness. The added end sections are much taller than the base, while the underside collar is only a shallow lower tier, creating a clear stepped-depth relationship.",
@@ -1639,10 +1639,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/f826349925986ebf68fc7f181f6067f2928b5bf322cdfbacbed028d2d319a738.json",
-        "gt_mesh": "text_live_fixed100_v1/assets/41e308a29dd07404fd3567d21bac0b03aaaa207e95c638091784b38f0bd12bd8.stl",
-        "gt_render": "text_live_fixed100_v1/assets/184c3252b69452c8ddd97a2e5519e6d816871c4ddfb8ff6834583ec6bbeb052b.png",
-        "mesh": "text_live_fixed100_v1/assets/31588c2c19c36d41d2bdd55fc97cda82a2facce4fc526e43470bf775a749d5e0.stl",
-        "pred_render": "text_live_fixed100_v1/assets/ef50f0c0235437e610a62c0b9ed2c264f6e965af2efe0a0abd8264f9c3928230.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/dd6c3d23ca9505d59abcf07eb28fdbf0fab90e2cd485ae68ffa70c531ed09aec.stl",
+        "gt_render": "text_live_fixed100_v1/assets/d150176093f838d0b0ce69d4579158033b483a78fcef510d25a0d372034d7b8e.png",
+        "mesh": "text_live_fixed100_v1/assets/be7745e143ae3617aa8146b4af97bd57ba091013e39bfb459a079d7a2cd9a96c.stl",
+        "pred_render": "text_live_fixed100_v1/assets/939fe1a43073de887d7e5b683c929fc603bea0df8784c034932c9566494fd695.png"
       },
       "case_id": "0015/00155951",
       "condition": "The main body is a solid, shallow plate with an arc-based outline and a real through opening at its center. A shallow annular collar is added on the underside around that central opening, so it should be treated as a hollow ring rather than a filled disk or rectangular pad. Tall solid rounded tabs rise from the upper side at the two ends of the plate, and each tab has a through opening passing through its thickness. The added end sections are much taller than the base, while the underside collar is only a shallow lower tier, creating a clear stepped-depth relationship.",
@@ -1719,10 +1719,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/f0e8af9e02a8e59a28f57a211152dfebd78e8e0b7527187ee01522f95cbcfcb8.scad",
-        "gt_mesh": "text_live_fixed100_v1/assets/41e308a29dd07404fd3567d21bac0b03aaaa207e95c638091784b38f0bd12bd8.stl",
-        "gt_render": "text_live_fixed100_v1/assets/184c3252b69452c8ddd97a2e5519e6d816871c4ddfb8ff6834583ec6bbeb052b.png",
-        "mesh": "text_live_fixed100_v1/assets/86d608aaf9b2343f0443f1f2a580445c3b1b3044f2bc384ee467a0b26972a254.stl",
-        "pred_render": "text_live_fixed100_v1/assets/fbf048368e17c0cfdfa43eb4544526d8d6c71683d0999a219663ad45e36c75eb.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/dd6c3d23ca9505d59abcf07eb28fdbf0fab90e2cd485ae68ffa70c531ed09aec.stl",
+        "gt_render": "text_live_fixed100_v1/assets/10daf1d274007191429da3321d589ae6ce4becddd67438a37d3fa8be4853d892.png",
+        "mesh": "text_live_fixed100_v1/assets/0d977d4cd6ab2b94a1e241eb5c2c4cbf3ddcf14e0ce86cfc3ee6108a4cfae0ce.stl",
+        "pred_render": "text_live_fixed100_v1/assets/12c51b9ef0813b73f4a655344e868f29d4e54af510cd9353fdaaccac6a5a2183.png"
       },
       "case_id": "0015/00155951",
       "condition": "The main body is a solid, shallow plate with an arc-based outline and a real through opening at its center. A shallow annular collar is added on the underside around that central opening, so it should be treated as a hollow ring rather than a filled disk or rectangular pad. Tall solid rounded tabs rise from the upper side at the two ends of the plate, and each tab has a through opening passing through its thickness. The added end sections are much taller than the base, while the underside collar is only a shallow lower tier, creating a clear stepped-depth relationship.",
@@ -1741,10 +1741,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/d5b2a8721dd511c2e108b72fe5784244651766f31f20c2ca6ef4d98612d87717.json",
-        "gt_mesh": "text_live_fixed100_v1/assets/41e308a29dd07404fd3567d21bac0b03aaaa207e95c638091784b38f0bd12bd8.stl",
-        "gt_render": "text_live_fixed100_v1/assets/184c3252b69452c8ddd97a2e5519e6d816871c4ddfb8ff6834583ec6bbeb052b.png",
-        "mesh": "text_live_fixed100_v1/assets/cca686c21ae312b3ae1f0a363bded23a36154a2e95dd6dd26d21c2d158c846fe.stl",
-        "pred_render": "text_live_fixed100_v1/assets/83a85ceeb0336492038c5f01d403eec3829a05891c3b19e189ae330b3c756c76.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/dd6c3d23ca9505d59abcf07eb28fdbf0fab90e2cd485ae68ffa70c531ed09aec.stl",
+        "gt_render": "text_live_fixed100_v1/assets/1f6017760f9bb03b702fd27a9e5e7db2cec9c4b707bd822ab2c98bb7bb540838.png",
+        "mesh": "text_live_fixed100_v1/assets/87e3ffe07662e4de4c4068b0a572a5563002000e34df6712ac7a08e8f172842f.stl",
+        "pred_render": "text_live_fixed100_v1/assets/50ff2fa4195f71d85d63645b8ae3b40508017e9b5a84a94280688aad9ff1e17b.png"
       },
       "case_id": "0015/00155951",
       "condition": "The main body is a solid, shallow plate with an arc-based outline and a real through opening at its center. A shallow annular collar is added on the underside around that central opening, so it should be treated as a hollow ring rather than a filled disk or rectangular pad. Tall solid rounded tabs rise from the upper side at the two ends of the plate, and each tab has a through opening passing through its thickness. The added end sections are much taller than the base, while the underside collar is only a shallow lower tier, creating a clear stepped-depth relationship.",
@@ -1821,10 +1821,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/ec8fbc31a39773305a1c6a6118de2aee6ef23acd46482c76c3d26a597dfabe62.scad",
-        "gt_mesh": "text_live_fixed100_v1/assets/41e308a29dd07404fd3567d21bac0b03aaaa207e95c638091784b38f0bd12bd8.stl",
-        "gt_render": "text_live_fixed100_v1/assets/44d1bd18c65347d9fa3b61954d7cdaf4790732a66f12b9a5e72c893b174bcef1.png",
-        "mesh": "text_live_fixed100_v1/assets/bac78e1d4f5f99cf2ae8b5789bc374ff2d5d68f40f0a22f08aaba524d748b4c8.stl",
-        "pred_render": "text_live_fixed100_v1/assets/ce53c2a5d6404def2ccb1c329cdbb52fb5074b2de90fbff13a5f8c5633141d0a.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/dd6c3d23ca9505d59abcf07eb28fdbf0fab90e2cd485ae68ffa70c531ed09aec.stl",
+        "gt_render": "text_live_fixed100_v1/assets/e16fbe21072ab2ba59d0bcb74d8b8ef022f1f78ea706a03525df4ab5368ee5fc.png",
+        "mesh": "text_live_fixed100_v1/assets/b1fc839bc5e07db8f4f098df3bf50e4bce0fe153981fa52f19ff060850f0135d.stl",
+        "pred_render": "text_live_fixed100_v1/assets/a86bac9e8435e27b7e1fae49d65bcadf580817c30269a62b6dcd559cc6b7fe59.png"
       },
       "case_id": "0015/00155951",
       "condition": "The main body is a solid, shallow plate with an arc-based outline and a real through opening at its center. A shallow annular collar is added on the underside around that central opening, so it should be treated as a hollow ring rather than a filled disk or rectangular pad. Tall solid rounded tabs rise from the upper side at the two ends of the plate, and each tab has a through opening passing through its thickness. The added end sections are much taller than the base, while the underside collar is only a shallow lower tier, creating a clear stepped-depth relationship.",
@@ -1843,10 +1843,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/1d7fcbe6100380bc24ff2624a0acfc91192f8a4b4ec3d6b669fe9c7fb7792b0d.json",
-        "gt_mesh": "text_live_fixed100_v1/assets/41e308a29dd07404fd3567d21bac0b03aaaa207e95c638091784b38f0bd12bd8.stl",
-        "gt_render": "text_live_fixed100_v1/assets/44d1bd18c65347d9fa3b61954d7cdaf4790732a66f12b9a5e72c893b174bcef1.png",
-        "mesh": "text_live_fixed100_v1/assets/e7acd1ab79418455f4f9075f7c3d9db9b9d0646a7115e09fed97d15f3f540b94.stl",
-        "pred_render": "text_live_fixed100_v1/assets/ed14582db29ee3c2b660071086c8a33ca3dbaf84312d3cb04c10ce67451ef575.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/dd6c3d23ca9505d59abcf07eb28fdbf0fab90e2cd485ae68ffa70c531ed09aec.stl",
+        "gt_render": "text_live_fixed100_v1/assets/2a11b5dd29ed0ab28ec9fcd5c51222da79db8550ce13215ca34929a96ce1ad99.png",
+        "mesh": "text_live_fixed100_v1/assets/bde3deabfd679b5ab52f6a16eac7f0c5ac981b6f2589d80caab857aa3e17e7eb.stl",
+        "pred_render": "text_live_fixed100_v1/assets/49f097e55df5282df990bc1feb0fcbaf2aa2aa65b28e1d0f72727e87bac78800.png"
       },
       "case_id": "0015/00155951",
       "condition": "The main body is a solid, shallow plate with an arc-based outline and a real through opening at its center. A shallow annular collar is added on the underside around that central opening, so it should be treated as a hollow ring rather than a filled disk or rectangular pad. Tall solid rounded tabs rise from the upper side at the two ends of the plate, and each tab has a through opening passing through its thickness. The added end sections are much taller than the base, while the underside collar is only a shallow lower tier, creating a clear stepped-depth relationship.",
@@ -1923,10 +1923,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/0f003b6ad1793dce379c22b72e1854891e83d9246b967d4045e529d4fcb9970f.scad",
-        "gt_mesh": "text_live_fixed100_v1/assets/41e308a29dd07404fd3567d21bac0b03aaaa207e95c638091784b38f0bd12bd8.stl",
-        "gt_render": "text_live_fixed100_v1/assets/184c3252b69452c8ddd97a2e5519e6d816871c4ddfb8ff6834583ec6bbeb052b.png",
-        "mesh": "text_live_fixed100_v1/assets/ead9dee0e2dc04e4c280f2303df9f944fc02811a71d129c2d40663ac2b01ee48.stl",
-        "pred_render": "text_live_fixed100_v1/assets/ec47700b70f5fef057621fe11171cce9a9d8f71ad6697d0c23937a6c3e7223cf.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/dd6c3d23ca9505d59abcf07eb28fdbf0fab90e2cd485ae68ffa70c531ed09aec.stl",
+        "gt_render": "text_live_fixed100_v1/assets/dd95055cb634fb4d18691afa9762582b8ec7228642f32d2c9ddc2be08c0ca0f8.png",
+        "mesh": "text_live_fixed100_v1/assets/6f81e32c7c9a9148b2c48e2b3b0e85ad18cab283cad579e72139e74ab16e9b5b.stl",
+        "pred_render": "text_live_fixed100_v1/assets/a881617489b1cf3d728c1ea784b513852017d242f59f10b58962529ae95a204f.png"
       },
       "case_id": "0015/00155951",
       "condition": "The main body is a solid, shallow plate with an arc-based outline and a real through opening at its center. A shallow annular collar is added on the underside around that central opening, so it should be treated as a hollow ring rather than a filled disk or rectangular pad. Tall solid rounded tabs rise from the upper side at the two ends of the plate, and each tab has a through opening passing through its thickness. The added end sections are much taller than the base, while the underside collar is only a shallow lower tier, creating a clear stepped-depth relationship.",
@@ -1945,10 +1945,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/276327891032ea86aa7d940b37cb8c03f6f337fe34e1e947a68961f3a895ef25.json",
-        "gt_mesh": "text_live_fixed100_v1/assets/41e308a29dd07404fd3567d21bac0b03aaaa207e95c638091784b38f0bd12bd8.stl",
-        "gt_render": "text_live_fixed100_v1/assets/184c3252b69452c8ddd97a2e5519e6d816871c4ddfb8ff6834583ec6bbeb052b.png",
-        "mesh": "text_live_fixed100_v1/assets/31c9acdb5ad73721fe606c4ca54821d3d6b64311146381be1ddc89cc39c2e798.stl",
-        "pred_render": "text_live_fixed100_v1/assets/6b11c48454db9368a2e5ede8901b6890997f72c4cd9110143071867c3ea814c5.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/dd6c3d23ca9505d59abcf07eb28fdbf0fab90e2cd485ae68ffa70c531ed09aec.stl",
+        "gt_render": "text_live_fixed100_v1/assets/ffb075206e9abd12da53bfd7a7f738062a2379de8ae178b1a7d873926c9d7eb6.png",
+        "mesh": "text_live_fixed100_v1/assets/25433247cd9a1ebc7f17f9a30a08320f4f25c20e741694b994342acf79be0d46.stl",
+        "pred_render": "text_live_fixed100_v1/assets/afb977348bde22d005502cbb47a9c5b038effaf81bbe02e131f344934c3b87f3.png"
       },
       "case_id": "0015/00155951",
       "condition": "The main body is a solid, shallow plate with an arc-based outline and a real through opening at its center. A shallow annular collar is added on the underside around that central opening, so it should be treated as a hollow ring rather than a filled disk or rectangular pad. Tall solid rounded tabs rise from the upper side at the two ends of the plate, and each tab has a through opening passing through its thickness. The added end sections are much taller than the base, while the underside collar is only a shallow lower tier, creating a clear stepped-depth relationship.",
@@ -2025,10 +2025,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/a3cc1e1cd7ef33ba20d6d561b92e4c6ba306c6b5d63dab384a10da7d5313bd90.scad",
-        "gt_mesh": "text_live_fixed100_v1/assets/41e308a29dd07404fd3567d21bac0b03aaaa207e95c638091784b38f0bd12bd8.stl",
-        "gt_render": "text_live_fixed100_v1/assets/184c3252b69452c8ddd97a2e5519e6d816871c4ddfb8ff6834583ec6bbeb052b.png",
-        "mesh": "text_live_fixed100_v1/assets/e263b2ae9206eed4bb015f040e2950020903ef2dd6986c787fe61060ec48dab0.stl",
-        "pred_render": "text_live_fixed100_v1/assets/bcd889a34905e86c13ad7ca27c609f5f6f61f8d438d6569422a0cea57e45374c.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/dd6c3d23ca9505d59abcf07eb28fdbf0fab90e2cd485ae68ffa70c531ed09aec.stl",
+        "gt_render": "text_live_fixed100_v1/assets/62f79176b7e2adc894dd773fd12aee4869aecc894ffbe11ad3aff8713f34e61c.png",
+        "mesh": "text_live_fixed100_v1/assets/2a88101c943b2a9a351b25617b6f33fca94f05cecbaacf04c48d5d509227d1dc.stl",
+        "pred_render": "text_live_fixed100_v1/assets/4226935b1dba3e7f84ee29d86c497becdfa2e363f30df9f83afc7334fcacf100.png"
       },
       "case_id": "0015/00155951",
       "condition": "The main body is a solid, shallow plate with an arc-based outline and a real through opening at its center. A shallow annular collar is added on the underside around that central opening, so it should be treated as a hollow ring rather than a filled disk or rectangular pad. Tall solid rounded tabs rise from the upper side at the two ends of the plate, and each tab has a through opening passing through its thickness. The added end sections are much taller than the base, while the underside collar is only a shallow lower tier, creating a clear stepped-depth relationship.",
@@ -2047,10 +2047,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/2a931321f801c8816dde81499f28d2acb9fb7fe983d2042fbedd1c7fbc27412c.json",
-        "gt_mesh": "text_live_fixed100_v1/assets/41e308a29dd07404fd3567d21bac0b03aaaa207e95c638091784b38f0bd12bd8.stl",
-        "gt_render": "text_live_fixed100_v1/assets/184c3252b69452c8ddd97a2e5519e6d816871c4ddfb8ff6834583ec6bbeb052b.png",
-        "mesh": "text_live_fixed100_v1/assets/5183cdfca67a7ea7a883a532032bb6e960ef013aa450263f6ce0067ee0b5edb0.stl",
-        "pred_render": "text_live_fixed100_v1/assets/143a34c410f170144cbfa78835b261bd499500849c8dfab7e9d40948c694432a.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/dd6c3d23ca9505d59abcf07eb28fdbf0fab90e2cd485ae68ffa70c531ed09aec.stl",
+        "gt_render": "text_live_fixed100_v1/assets/41ca2fb3d68c488d094392aee598d42faa64b4582b9440b0a9b8eec62ab43d5b.png",
+        "mesh": "text_live_fixed100_v1/assets/ec16014d1c7e1d2a3674ab2300f1efc7094c000154295387fd48497fdb3cf3cd.stl",
+        "pred_render": "text_live_fixed100_v1/assets/63cf89ec142d7ecd76d3be35e70bd247be9a14ba89c17dbc9cc1d87a091f821f.png"
       },
       "case_id": "0015/00155951",
       "condition": "The main body is a solid, shallow plate with an arc-based outline and a real through opening at its center. A shallow annular collar is added on the underside around that central opening, so it should be treated as a hollow ring rather than a filled disk or rectangular pad. Tall solid rounded tabs rise from the upper side at the two ends of the plate, and each tab has a through opening passing through its thickness. The added end sections are much taller than the base, while the underside collar is only a shallow lower tier, creating a clear stepped-depth relationship.",
@@ -2127,10 +2127,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/d09232c600f19fd0a70043841a42cba16b3adb453b907bf564ccfd26c695c6a4.scad",
-        "gt_mesh": "text_live_fixed100_v1/assets/b69563788ce355c352a96b2169989946dc512209d3b476efb799d85861b7c871.stl",
-        "gt_render": "text_live_fixed100_v1/assets/6955a69e1c5799005e0f068752b07051a4c4b0b4ff0a5a871d50e60d0a141901.png",
-        "mesh": "text_live_fixed100_v1/assets/17de9e640e78c41da6e61b86dd25c8b65aee2fb2e344cf9e3507d5511ccac55a.stl",
-        "pred_render": "text_live_fixed100_v1/assets/570027af920a6d578cd0a9838175a256db3b052f4d7e79978d15fa964da741d4.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/c74e689ef010ccac11df147588ada16af7d129ae50a003a35355fcd4c4a43389.stl",
+        "gt_render": "text_live_fixed100_v1/assets/66640220707e1933e552517dcd4924ee4a606035f42e137c683c485c279fcb47.png",
+        "mesh": "text_live_fixed100_v1/assets/61fab72f56dee61559dd73df29aa455badf39ba1cba8cc6142b5d7cf0fc7d0d3.stl",
+        "pred_render": "text_live_fixed100_v1/assets/d0a54be9c5bb3a018263545384b2495800490300fe001351334d38d0d4398126.png"
       },
       "case_id": "0047/00478097",
       "condition": "The main body is a rectangular solid opened from the top into a nested stepped cavity, so the interior areas are cut away rather than added. A thin rim surrounds a broader upper recess, then the pocket continues downward through smaller inset rectangular cuts, leaving a solid bottom rather than a through opening. The deepest rectangular pocket is shifted to one side compared with the upper recesses, creating uneven interior ledges. There is a single added rectangular solid projection along one side, with a related side recess above it that creates another stepped depth tier.",
@@ -2149,10 +2149,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/82834813b287d350849c39a17f943d870d0d0a47a6c33ab282973829221923d6.json",
-        "gt_mesh": "text_live_fixed100_v1/assets/b69563788ce355c352a96b2169989946dc512209d3b476efb799d85861b7c871.stl",
-        "gt_render": "text_live_fixed100_v1/assets/6955a69e1c5799005e0f068752b07051a4c4b0b4ff0a5a871d50e60d0a141901.png",
-        "mesh": "text_live_fixed100_v1/assets/4b41639aa35993cc6f11526d406d839952951860216d4eb886c993a35cee3b02.stl",
-        "pred_render": "text_live_fixed100_v1/assets/d7d3c0330308743200c8111007c7250f9f3277e880a333c0ad3a2f2899d81cf8.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/c74e689ef010ccac11df147588ada16af7d129ae50a003a35355fcd4c4a43389.stl",
+        "gt_render": "text_live_fixed100_v1/assets/4a4f796981b32f4b7d23d5da3eb204e14ab9bd69417cefb6eb8ed5f8d20c11ab.png",
+        "mesh": "text_live_fixed100_v1/assets/f3cad24e876e1b10a6a41383ed1dad3ccb6e52f33ffaa55f7460eb1ca83983b0.stl",
+        "pred_render": "text_live_fixed100_v1/assets/439e04b6233c0a904769cfa6b5170c7b1dfb8927b4114716a385703bf74d9495.png"
       },
       "case_id": "0047/00478097",
       "condition": "The main body is a rectangular solid opened from the top into a nested stepped cavity, so the interior areas are cut away rather than added. A thin rim surrounds a broader upper recess, then the pocket continues downward through smaller inset rectangular cuts, leaving a solid bottom rather than a through opening. The deepest rectangular pocket is shifted to one side compared with the upper recesses, creating uneven interior ledges. There is a single added rectangular solid projection along one side, with a related side recess above it that creates another stepped depth tier.",
@@ -2229,10 +2229,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/36cfd616390fdd88c1494f97216677603f5376fafe4088d9050c37d71900692a.scad",
-        "gt_mesh": "text_live_fixed100_v1/assets/b69563788ce355c352a96b2169989946dc512209d3b476efb799d85861b7c871.stl",
-        "gt_render": "text_live_fixed100_v1/assets/fbcaddca753af2399ae20764c46df24003fa713d91d11a2f3b91eb46161cc735.png",
-        "mesh": "text_live_fixed100_v1/assets/28e3f463163fcd89b6b0ea5c5ea8ea1cb5f4b96bf5ce20373a092641533c7184.stl",
-        "pred_render": "text_live_fixed100_v1/assets/94f3d5d0ac349a79718062e2655d46026647435b49ae52b40b71f39b5183569b.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/c74e689ef010ccac11df147588ada16af7d129ae50a003a35355fcd4c4a43389.stl",
+        "gt_render": "text_live_fixed100_v1/assets/5f945b6d0d2bd3efe13efff7c2b19bae5951d39f2457ee89c677fa8b7f867eea.png",
+        "mesh": "text_live_fixed100_v1/assets/db45df7338813adc6c92e31dc81611a02d6f7ddc59f07bc87c1383a31366a993.stl",
+        "pred_render": "text_live_fixed100_v1/assets/49d697d89bf384216e8f297323b6dbab114098911c2d13d17e3c777d763d04c9.png"
       },
       "case_id": "0047/00478097",
       "condition": "The main body is a rectangular solid opened from the top into a nested stepped cavity, so the interior areas are cut away rather than added. A thin rim surrounds a broader upper recess, then the pocket continues downward through smaller inset rectangular cuts, leaving a solid bottom rather than a through opening. The deepest rectangular pocket is shifted to one side compared with the upper recesses, creating uneven interior ledges. There is a single added rectangular solid projection along one side, with a related side recess above it that creates another stepped depth tier.",
@@ -2251,10 +2251,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/3d911a295f0e83e980eabdf46844dcd73c5d6e9cb8ade81affb0997d466f627f.json",
-        "gt_mesh": "text_live_fixed100_v1/assets/b69563788ce355c352a96b2169989946dc512209d3b476efb799d85861b7c871.stl",
-        "gt_render": "text_live_fixed100_v1/assets/fbcaddca753af2399ae20764c46df24003fa713d91d11a2f3b91eb46161cc735.png",
-        "mesh": "text_live_fixed100_v1/assets/dcf5dae30d12be8f5e366e1be90cc18c309d70f1e8fe38dabcf29194246a6fe3.stl",
-        "pred_render": "text_live_fixed100_v1/assets/5022062e7b6cfc60656441ed444ef59d960774b8043e45ae490c492e38695509.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/c74e689ef010ccac11df147588ada16af7d129ae50a003a35355fcd4c4a43389.stl",
+        "gt_render": "text_live_fixed100_v1/assets/7f22ac19b2f626fe80683bc1d49b678ae5bd25e2ac729842a497e860d4a5d9b6.png",
+        "mesh": "text_live_fixed100_v1/assets/38434109e5008efb3afad3ba68c70cc311da2c869a9664102a45a1cd9772bf9e.stl",
+        "pred_render": "text_live_fixed100_v1/assets/d89425b78149ad1b6670854d20f69ad45ba52550d14c3ffa23ca95878a9091d7.png"
       },
       "case_id": "0047/00478097",
       "condition": "The main body is a rectangular solid opened from the top into a nested stepped cavity, so the interior areas are cut away rather than added. A thin rim surrounds a broader upper recess, then the pocket continues downward through smaller inset rectangular cuts, leaving a solid bottom rather than a through opening. The deepest rectangular pocket is shifted to one side compared with the upper recesses, creating uneven interior ledges. There is a single added rectangular solid projection along one side, with a related side recess above it that creates another stepped depth tier.",
@@ -2331,10 +2331,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/cc1a883820ca7ec3de6124e1f89f3dd794b088c7f7d897127490d2e528b52c95.scad",
-        "gt_mesh": "text_live_fixed100_v1/assets/b69563788ce355c352a96b2169989946dc512209d3b476efb799d85861b7c871.stl",
-        "gt_render": "text_live_fixed100_v1/assets/fbcaddca753af2399ae20764c46df24003fa713d91d11a2f3b91eb46161cc735.png",
-        "mesh": "text_live_fixed100_v1/assets/87a4abd0b1c8098132541b21b5c7e00ab2ca4ed7df13f4012d1c34e233423468.stl",
-        "pred_render": "text_live_fixed100_v1/assets/0f6042e9ca68e8c6a1cdee1def5d3b22f909aa42365e3146394c76b47e9e7c98.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/c74e689ef010ccac11df147588ada16af7d129ae50a003a35355fcd4c4a43389.stl",
+        "gt_render": "text_live_fixed100_v1/assets/de352940f47a1dec7bade30f60d54c1fa6276bcf7bfa6bec834188b3e8638a8c.png",
+        "mesh": "text_live_fixed100_v1/assets/cd90fbc92cd79aac4fd75b7e438a5c9d657de91d227637338790f0b9623f641c.stl",
+        "pred_render": "text_live_fixed100_v1/assets/98a5321eefbee523d29fca377b585ae6cd3b0d9e2f263df7d49bbe05febe12a2.png"
       },
       "case_id": "0047/00478097",
       "condition": "The main body is a rectangular solid opened from the top into a nested stepped cavity, so the interior areas are cut away rather than added. A thin rim surrounds a broader upper recess, then the pocket continues downward through smaller inset rectangular cuts, leaving a solid bottom rather than a through opening. The deepest rectangular pocket is shifted to one side compared with the upper recesses, creating uneven interior ledges. There is a single added rectangular solid projection along one side, with a related side recess above it that creates another stepped depth tier.",
@@ -2353,10 +2353,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/a6d56242b8607089b065d50154f8fbc8a5d52d61bba6136e62428b5faa4be264.json",
-        "gt_mesh": "text_live_fixed100_v1/assets/b69563788ce355c352a96b2169989946dc512209d3b476efb799d85861b7c871.stl",
-        "gt_render": "text_live_fixed100_v1/assets/fbcaddca753af2399ae20764c46df24003fa713d91d11a2f3b91eb46161cc735.png",
-        "mesh": "text_live_fixed100_v1/assets/c0221ff051c00d77939680e487e17706929cdc3bd07111f407f275437566556d.stl",
-        "pred_render": "text_live_fixed100_v1/assets/4a8cd754dd38f09a68087c05bfecb088ccbf989edbb0ba8b4db0c5fb5c94d60a.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/c74e689ef010ccac11df147588ada16af7d129ae50a003a35355fcd4c4a43389.stl",
+        "gt_render": "text_live_fixed100_v1/assets/237927639720a8c154835f1fd5c9beb2061fafbe16dd5df51a84c4102e7460b6.png",
+        "mesh": "text_live_fixed100_v1/assets/b19bd191590825a4c136d48a810fa0032df2e2d8720d3fa322e3e24a90c2c09a.stl",
+        "pred_render": "text_live_fixed100_v1/assets/c06b796e5dc4b3e1937303338a453113c6d18b2a2e5cf2c97eabbc09fa246375.png"
       },
       "case_id": "0047/00478097",
       "condition": "The main body is a rectangular solid opened from the top into a nested stepped cavity, so the interior areas are cut away rather than added. A thin rim surrounds a broader upper recess, then the pocket continues downward through smaller inset rectangular cuts, leaving a solid bottom rather than a through opening. The deepest rectangular pocket is shifted to one side compared with the upper recesses, creating uneven interior ledges. There is a single added rectangular solid projection along one side, with a related side recess above it that creates another stepped depth tier.",
@@ -2433,10 +2433,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/48fe1b6ffeb77084208fdcf40497a0a3b077756b1af4a28acbcba03ae34b307d.scad",
-        "gt_mesh": "text_live_fixed100_v1/assets/b69563788ce355c352a96b2169989946dc512209d3b476efb799d85861b7c871.stl",
-        "gt_render": "text_live_fixed100_v1/assets/fbcaddca753af2399ae20764c46df24003fa713d91d11a2f3b91eb46161cc735.png",
-        "mesh": "text_live_fixed100_v1/assets/974df35b924c923d6ec802241164b2aab9b0120df2a2be3d7061a6948c77d382.stl",
-        "pred_render": "text_live_fixed100_v1/assets/f865de760729c2f9ffece811b4c648368d839d96f6b58f142f6f016f199cd8c8.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/c74e689ef010ccac11df147588ada16af7d129ae50a003a35355fcd4c4a43389.stl",
+        "gt_render": "text_live_fixed100_v1/assets/aec69d893dbc95a5caf76a0c3ac4f86cefdbf6bf9929e220e3dcda78ece26868.png",
+        "mesh": "text_live_fixed100_v1/assets/1aee4f63af630f05ea8e14858160b773d361ef28ef51c652b3a920739970a155.stl",
+        "pred_render": "text_live_fixed100_v1/assets/71e6b435c31919784c9e5b29845da8861780c90003976cd019ce6d2ad4e4fc6a.png"
       },
       "case_id": "0047/00478097",
       "condition": "The main body is a rectangular solid opened from the top into a nested stepped cavity, so the interior areas are cut away rather than added. A thin rim surrounds a broader upper recess, then the pocket continues downward through smaller inset rectangular cuts, leaving a solid bottom rather than a through opening. The deepest rectangular pocket is shifted to one side compared with the upper recesses, creating uneven interior ledges. There is a single added rectangular solid projection along one side, with a related side recess above it that creates another stepped depth tier.",
@@ -2455,10 +2455,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/968aa4871dabdd14b0733b28b8082efbd7d99961b5a268cd2e8bb70feac7b54d.json",
-        "gt_mesh": "text_live_fixed100_v1/assets/b69563788ce355c352a96b2169989946dc512209d3b476efb799d85861b7c871.stl",
-        "gt_render": "text_live_fixed100_v1/assets/fbcaddca753af2399ae20764c46df24003fa713d91d11a2f3b91eb46161cc735.png",
-        "mesh": "text_live_fixed100_v1/assets/316bd7164e93e73b20ac6aebfb24f25b6f07ea6210b29b2ee658834491c728e2.stl",
-        "pred_render": "text_live_fixed100_v1/assets/443d607d6da22f8b4f1c39b65638883abb3e5579386535ef32efdcf3cc1b3b6b.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/c74e689ef010ccac11df147588ada16af7d129ae50a003a35355fcd4c4a43389.stl",
+        "gt_render": "text_live_fixed100_v1/assets/e7c032621c86df077eebbfb8c1186f8fbdefe6b7ec9d144faa4382a407dae3b4.png",
+        "mesh": "text_live_fixed100_v1/assets/4f1e20132befa78e7f58a9a6355e5cb07b9221cebc3eed96c3c3046ffe411c72.stl",
+        "pred_render": "text_live_fixed100_v1/assets/0530438d79985a8a46a61f25e7251d7d78d050483ac79dcfbcfb71bdf625808e.png"
       },
       "case_id": "0047/00478097",
       "condition": "The main body is a rectangular solid opened from the top into a nested stepped cavity, so the interior areas are cut away rather than added. A thin rim surrounds a broader upper recess, then the pocket continues downward through smaller inset rectangular cuts, leaving a solid bottom rather than a through opening. The deepest rectangular pocket is shifted to one side compared with the upper recesses, creating uneven interior ledges. There is a single added rectangular solid projection along one side, with a related side recess above it that creates another stepped depth tier.",
@@ -2535,10 +2535,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/e48bb5347ee8c3e59a7f1fa4a8381c53b30a760f7ba829a4ce392ea06a75a9b4.scad",
-        "gt_mesh": "text_live_fixed100_v1/assets/b69563788ce355c352a96b2169989946dc512209d3b476efb799d85861b7c871.stl",
-        "gt_render": "text_live_fixed100_v1/assets/fbcaddca753af2399ae20764c46df24003fa713d91d11a2f3b91eb46161cc735.png",
-        "mesh": "text_live_fixed100_v1/assets/ec89df563affde7dc3a69e52a1ed8bb24dff76fe6872290f8859a78866cd209b.stl",
-        "pred_render": "text_live_fixed100_v1/assets/0368b22f08306a5cd6462151fa3d9d574307637a337824d7eb12d7f79db0fe65.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/c74e689ef010ccac11df147588ada16af7d129ae50a003a35355fcd4c4a43389.stl",
+        "gt_render": "text_live_fixed100_v1/assets/527c3e10deaeb182c905fef8f0ef95081b13839a3f8bf16cd227ee46bc1dfcaa.png",
+        "mesh": "text_live_fixed100_v1/assets/7cf9644c74f409fb0a70754c2cd80b8b340c3bc8aabc878470b39ce154b8e95c.stl",
+        "pred_render": "text_live_fixed100_v1/assets/176139224c3a2b516c5d8bac40a2a2033bc94fb19dea99b2262feb91f66e1a83.png"
       },
       "case_id": "0047/00478097",
       "condition": "The main body is a rectangular solid opened from the top into a nested stepped cavity, so the interior areas are cut away rather than added. A thin rim surrounds a broader upper recess, then the pocket continues downward through smaller inset rectangular cuts, leaving a solid bottom rather than a through opening. The deepest rectangular pocket is shifted to one side compared with the upper recesses, creating uneven interior ledges. There is a single added rectangular solid projection along one side, with a related side recess above it that creates another stepped depth tier.",
@@ -2557,10 +2557,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/a84e43881cbac0dfddb8d42dd5bda09d5eaa484975a90bb87eed1542c4137e21.json",
-        "gt_mesh": "text_live_fixed100_v1/assets/b69563788ce355c352a96b2169989946dc512209d3b476efb799d85861b7c871.stl",
-        "gt_render": "text_live_fixed100_v1/assets/fbcaddca753af2399ae20764c46df24003fa713d91d11a2f3b91eb46161cc735.png",
-        "mesh": "text_live_fixed100_v1/assets/589d35489239039a6f1caf50eeef864a417ea1e1cd330351ab78a1e167790b38.stl",
-        "pred_render": "text_live_fixed100_v1/assets/29e2efd962f315448ee12a0efa656d01f5fdf1f202dbf0df1c4ceb3ae6d17941.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/c74e689ef010ccac11df147588ada16af7d129ae50a003a35355fcd4c4a43389.stl",
+        "gt_render": "text_live_fixed100_v1/assets/f056c37ab2ec06830ee4630fa3f591375c8ca088242bc6b362f82bdf32b0b03f.png",
+        "mesh": "text_live_fixed100_v1/assets/04498f6c2457aafe177590b21927e30579807d4d3d6918b872dd7a1c47b7d300.stl",
+        "pred_render": "text_live_fixed100_v1/assets/fa05b8dcc47ef30ffedc70f8d0851b1e362fa527e764fef02af860c1afab8d67.png"
       },
       "case_id": "0047/00478097",
       "condition": "The main body is a rectangular solid opened from the top into a nested stepped cavity, so the interior areas are cut away rather than added. A thin rim surrounds a broader upper recess, then the pocket continues downward through smaller inset rectangular cuts, leaving a solid bottom rather than a through opening. The deepest rectangular pocket is shifted to one side compared with the upper recesses, creating uneven interior ledges. There is a single added rectangular solid projection along one side, with a related side recess above it that creates another stepped depth tier.",
@@ -2637,10 +2637,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/efdc902be786f1680cdd68b8e2873c15033be0a6e0c16e25da0b9471eb7bffa3.scad",
-        "gt_mesh": "text_live_fixed100_v1/assets/b69563788ce355c352a96b2169989946dc512209d3b476efb799d85861b7c871.stl",
-        "gt_render": "text_live_fixed100_v1/assets/fbcaddca753af2399ae20764c46df24003fa713d91d11a2f3b91eb46161cc735.png",
-        "mesh": "text_live_fixed100_v1/assets/7da5dda91ae6c0409ba0000350c33fb80fbf6694cc724d730c1a002249f20a09.stl",
-        "pred_render": "text_live_fixed100_v1/assets/37f9305cd3077e502699ae8e575cf5973ae731abb2980b47b772ff3da3edc4cb.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/c74e689ef010ccac11df147588ada16af7d129ae50a003a35355fcd4c4a43389.stl",
+        "gt_render": "text_live_fixed100_v1/assets/dcaf9c8848271b871457b55f15b1fa20bb0b5e176876f1fc45fc6084c13a3cf5.png",
+        "mesh": "text_live_fixed100_v1/assets/82add07180a520163eddad321747469d01da6e2905818bafc55398bea76990ec.stl",
+        "pred_render": "text_live_fixed100_v1/assets/f302bc109bc352cb5ab1f5ca8a39afefc58369babedea6e595ac11275edeb75d.png"
       },
       "case_id": "0047/00478097",
       "condition": "The main body is a rectangular solid opened from the top into a nested stepped cavity, so the interior areas are cut away rather than added. A thin rim surrounds a broader upper recess, then the pocket continues downward through smaller inset rectangular cuts, leaving a solid bottom rather than a through opening. The deepest rectangular pocket is shifted to one side compared with the upper recesses, creating uneven interior ledges. There is a single added rectangular solid projection along one side, with a related side recess above it that creates another stepped depth tier.",
@@ -2659,10 +2659,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/4ff0c11494695b842bc12641eac68965190aa3480f80bd1fabf47bd24492fbd7.json",
-        "gt_mesh": "text_live_fixed100_v1/assets/b69563788ce355c352a96b2169989946dc512209d3b476efb799d85861b7c871.stl",
-        "gt_render": "text_live_fixed100_v1/assets/fbcaddca753af2399ae20764c46df24003fa713d91d11a2f3b91eb46161cc735.png",
-        "mesh": "text_live_fixed100_v1/assets/fabd84eb276ff056904bace775c5d02d963ef22e4c6846a74df8a0a7d3362bf7.stl",
-        "pred_render": "text_live_fixed100_v1/assets/685302357a068fb1c83db32ad2842abcbcae3306a71077b9eacd9a33c0586e89.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/c74e689ef010ccac11df147588ada16af7d129ae50a003a35355fcd4c4a43389.stl",
+        "gt_render": "text_live_fixed100_v1/assets/2f2700cef32ca64a32d6c47ef0267f5fb9db3a1ecfa43d1f6e3c8867858952dd.png",
+        "mesh": "text_live_fixed100_v1/assets/c3b2663300eb89b3e307a91da8f076b913e84091221e68ad2bc990b7a08b1454.stl",
+        "pred_render": "text_live_fixed100_v1/assets/3b1e9afdc5987de4004b23823e8b6fdb0fa732f0d375e862214eaf1c2170aa22.png"
       },
       "case_id": "0047/00478097",
       "condition": "The main body is a rectangular solid opened from the top into a nested stepped cavity, so the interior areas are cut away rather than added. A thin rim surrounds a broader upper recess, then the pocket continues downward through smaller inset rectangular cuts, leaving a solid bottom rather than a through opening. The deepest rectangular pocket is shifted to one side compared with the upper recesses, creating uneven interior ledges. There is a single added rectangular solid projection along one side, with a related side recess above it that creates another stepped depth tier.",
@@ -2739,10 +2739,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/414c34676c6881acfb333962f7a8093fbfae7c7bd67176bd71bdd3223727248e.scad",
-        "gt_mesh": "text_live_fixed100_v1/assets/b69563788ce355c352a96b2169989946dc512209d3b476efb799d85861b7c871.stl",
-        "gt_render": "text_live_fixed100_v1/assets/fbcaddca753af2399ae20764c46df24003fa713d91d11a2f3b91eb46161cc735.png",
-        "mesh": "text_live_fixed100_v1/assets/886bec340cb64deea5ade0e4ae43e395366c088173e1ac75e468a78a61260688.stl",
-        "pred_render": "text_live_fixed100_v1/assets/37c9b1d6d802d2ca36cf8fc8d0222721edfab98ba7a11c5c631bcc9a2b778b32.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/c74e689ef010ccac11df147588ada16af7d129ae50a003a35355fcd4c4a43389.stl",
+        "gt_render": "text_live_fixed100_v1/assets/86e380f1d9b9fa3277cc98097197a670f9dfa5563b4f76406712e1c3751c6a0c.png",
+        "mesh": "text_live_fixed100_v1/assets/eb09dc93fd7cf28477e37eab50c4427ff4198574b8d0e5b8d4b79f2f4d0fe48e.stl",
+        "pred_render": "text_live_fixed100_v1/assets/24b4c5ffa68b640997b33169eff42bfad19bdf4a6d08ca6a2585e0f04aad5d6d.png"
       },
       "case_id": "0047/00478097",
       "condition": "The main body is a rectangular solid opened from the top into a nested stepped cavity, so the interior areas are cut away rather than added. A thin rim surrounds a broader upper recess, then the pocket continues downward through smaller inset rectangular cuts, leaving a solid bottom rather than a through opening. The deepest rectangular pocket is shifted to one side compared with the upper recesses, creating uneven interior ledges. There is a single added rectangular solid projection along one side, with a related side recess above it that creates another stepped depth tier.",
@@ -2761,10 +2761,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/a64f566062746dd59eea1c4248fdbc43b32e288477a91b408793da8c54d7a163.json",
-        "gt_mesh": "text_live_fixed100_v1/assets/b69563788ce355c352a96b2169989946dc512209d3b476efb799d85861b7c871.stl",
-        "gt_render": "text_live_fixed100_v1/assets/fbcaddca753af2399ae20764c46df24003fa713d91d11a2f3b91eb46161cc735.png",
-        "mesh": "text_live_fixed100_v1/assets/fc59fec6435cab726882f3828930b12aa0bff7f745bc03a8ac986858f7af2ae1.stl",
-        "pred_render": "text_live_fixed100_v1/assets/483e34fbe01d3311a48a11edfdae84f9961503903ee79bdd2818611a59401751.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/c74e689ef010ccac11df147588ada16af7d129ae50a003a35355fcd4c4a43389.stl",
+        "gt_render": "text_live_fixed100_v1/assets/4c4bfecee8f3da934fee1f603b089d7b66a21f44eadbbd9646474e87a9204a0b.png",
+        "mesh": "text_live_fixed100_v1/assets/75c7b8daa62808a4b1feef8fccf2cd35f23b6a101b7d7147636edfc03ea64d78.stl",
+        "pred_render": "text_live_fixed100_v1/assets/af9c12b4d78c51fc9c29d8c0bc17e6faac9eb43a156998f0f07fdf12b4628948.png"
       },
       "case_id": "0047/00478097",
       "condition": "The main body is a rectangular solid opened from the top into a nested stepped cavity, so the interior areas are cut away rather than added. A thin rim surrounds a broader upper recess, then the pocket continues downward through smaller inset rectangular cuts, leaving a solid bottom rather than a through opening. The deepest rectangular pocket is shifted to one side compared with the upper recesses, creating uneven interior ledges. There is a single added rectangular solid projection along one side, with a related side recess above it that creates another stepped depth tier.",
@@ -2841,10 +2841,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/8731af79f7f22681cf0cbf8895e61665d60aa6136c26a12e7fd6627249ee22e8.scad",
-        "gt_mesh": "text_live_fixed100_v1/assets/b69563788ce355c352a96b2169989946dc512209d3b476efb799d85861b7c871.stl",
-        "gt_render": "text_live_fixed100_v1/assets/6f221cc9f0e9c79ae8360da0c287b17f94be0a31bc3211dc1513ca8a5fbeab92.png",
-        "mesh": "text_live_fixed100_v1/assets/415fa15af24e2c79570cd025d31ceac22f838c34988889c58b238836ab4e8648.stl",
-        "pred_render": "text_live_fixed100_v1/assets/0877310ed81bbca69fb6fda872809963c02c0600e23fc238adab37190b1c80c3.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/c74e689ef010ccac11df147588ada16af7d129ae50a003a35355fcd4c4a43389.stl",
+        "gt_render": "text_live_fixed100_v1/assets/d2f1faed9d2d7fb6700bc4fe0ce70c9eb11578b33021cf5e0d0ef0a18ab4790d.png",
+        "mesh": "text_live_fixed100_v1/assets/81f85f3891d060275a03db40e0d66c698f0243a9216a308e27b7eba10e79e9e4.stl",
+        "pred_render": "text_live_fixed100_v1/assets/6189342090f851f2f6f290193a2dd559cf2dc74b6c3e714f113d0e864950364b.png"
       },
       "case_id": "0047/00478097",
       "condition": "The main body is a rectangular solid opened from the top into a nested stepped cavity, so the interior areas are cut away rather than added. A thin rim surrounds a broader upper recess, then the pocket continues downward through smaller inset rectangular cuts, leaving a solid bottom rather than a through opening. The deepest rectangular pocket is shifted to one side compared with the upper recesses, creating uneven interior ledges. There is a single added rectangular solid projection along one side, with a related side recess above it that creates another stepped depth tier.",
@@ -2863,10 +2863,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/ed34957bd262c982352521f45afa0be9819d1227b0e09e2383598095da15070b.json",
-        "gt_mesh": "text_live_fixed100_v1/assets/b69563788ce355c352a96b2169989946dc512209d3b476efb799d85861b7c871.stl",
-        "gt_render": "text_live_fixed100_v1/assets/6f221cc9f0e9c79ae8360da0c287b17f94be0a31bc3211dc1513ca8a5fbeab92.png",
-        "mesh": "text_live_fixed100_v1/assets/d76699c6580eea1a5535b92d816e8a54a43612c96a2cc0712122ae10b7ddeee5.stl",
-        "pred_render": "text_live_fixed100_v1/assets/95b06b43dcbacf5f353d19c42612b8499c1f06bc4dc8e5eb1ab36dac11d086d3.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/c74e689ef010ccac11df147588ada16af7d129ae50a003a35355fcd4c4a43389.stl",
+        "gt_render": "text_live_fixed100_v1/assets/5a2bd7b5c01abf2149c93084b0372e6718990c07b11ec358abf9b5272b5d73a9.png",
+        "mesh": "text_live_fixed100_v1/assets/5c1b4a6095a83aa48d2ca005e9aebf7849eb4d336f8456c7b560a23acdd47ded.stl",
+        "pred_render": "text_live_fixed100_v1/assets/f3783af97a8efe5e879dfdfc4d4fd532e89469e2780f5d50c0ef8ec0edc52bc5.png"
       },
       "case_id": "0047/00478097",
       "condition": "The main body is a rectangular solid opened from the top into a nested stepped cavity, so the interior areas are cut away rather than added. A thin rim surrounds a broader upper recess, then the pocket continues downward through smaller inset rectangular cuts, leaving a solid bottom rather than a through opening. The deepest rectangular pocket is shifted to one side compared with the upper recesses, creating uneven interior ledges. There is a single added rectangular solid projection along one side, with a related side recess above it that creates another stepped depth tier.",
@@ -2943,10 +2943,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/c1a13cf62f3016c68ffdd0144c0bb07fd4d497bbf610c345d79ddba4b0f1a288.scad",
-        "gt_mesh": "text_live_fixed100_v1/assets/b69563788ce355c352a96b2169989946dc512209d3b476efb799d85861b7c871.stl",
-        "gt_render": "text_live_fixed100_v1/assets/fbcaddca753af2399ae20764c46df24003fa713d91d11a2f3b91eb46161cc735.png",
-        "mesh": "text_live_fixed100_v1/assets/bd98666062c7f89ac88443d1bf7b70653cf4f89266b027b68ef353bec6c3e96c.stl",
-        "pred_render": "text_live_fixed100_v1/assets/60c09fed69db0f85464a7d8092b0402eb9141ea912a7e2631492042b8d0de343.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/c74e689ef010ccac11df147588ada16af7d129ae50a003a35355fcd4c4a43389.stl",
+        "gt_render": "text_live_fixed100_v1/assets/f3cb4f3ee52f872ed576efc45686fb114a2e40bb16d682b5aaa15b35eab69865.png",
+        "mesh": "text_live_fixed100_v1/assets/767f5006d8d99bbc52aa2d1f8789c3f1755c2926de9c780b254f6df9364fdc30.stl",
+        "pred_render": "text_live_fixed100_v1/assets/6248932e3c6bcbf306006c4ac8c3579cfe609c3821eda5976dac9e21c34bed92.png"
       },
       "case_id": "0047/00478097",
       "condition": "The main body is a rectangular solid opened from the top into a nested stepped cavity, so the interior areas are cut away rather than added. A thin rim surrounds a broader upper recess, then the pocket continues downward through smaller inset rectangular cuts, leaving a solid bottom rather than a through opening. The deepest rectangular pocket is shifted to one side compared with the upper recesses, creating uneven interior ledges. There is a single added rectangular solid projection along one side, with a related side recess above it that creates another stepped depth tier.",
@@ -2965,10 +2965,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/69a64d15b09ffac6ca73f9eee4139fb7125a53419f5bab4366dbea74c32afcb8.json",
-        "gt_mesh": "text_live_fixed100_v1/assets/b69563788ce355c352a96b2169989946dc512209d3b476efb799d85861b7c871.stl",
-        "gt_render": "text_live_fixed100_v1/assets/fbcaddca753af2399ae20764c46df24003fa713d91d11a2f3b91eb46161cc735.png",
-        "mesh": "text_live_fixed100_v1/assets/4daa0445fb069da7090b1bef8a04fd53ff79f43533c62b05019598b4fcf99c2f.stl",
-        "pred_render": "text_live_fixed100_v1/assets/de379a1a460aa2ff0ea654c97568af90499ed7f9cdb67ae3790ad0d838d39d52.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/c74e689ef010ccac11df147588ada16af7d129ae50a003a35355fcd4c4a43389.stl",
+        "gt_render": "text_live_fixed100_v1/assets/12b95eedde34a5c3ca29bdcf0bc3db544dd9940d5a9329cd225520d2a15c3e83.png",
+        "mesh": "text_live_fixed100_v1/assets/29f539a102e222d76e155fd4c13f9f88bc55f7b4b3fa5b59e90b47df16243bdb.stl",
+        "pred_render": "text_live_fixed100_v1/assets/94d558cbb0c036f37d218ab7639665ddc52213b19cb1a817de964da0dce09d78.png"
       },
       "case_id": "0047/00478097",
       "condition": "The main body is a rectangular solid opened from the top into a nested stepped cavity, so the interior areas are cut away rather than added. A thin rim surrounds a broader upper recess, then the pocket continues downward through smaller inset rectangular cuts, leaving a solid bottom rather than a through opening. The deepest rectangular pocket is shifted to one side compared with the upper recesses, creating uneven interior ledges. There is a single added rectangular solid projection along one side, with a related side recess above it that creates another stepped depth tier.",
@@ -3045,10 +3045,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/d843264e9e25c99c69c72d51844d98462795ae2c316e42f3ad33a30d44b23f8a.scad",
-        "gt_mesh": "text_live_fixed100_v1/assets/b69563788ce355c352a96b2169989946dc512209d3b476efb799d85861b7c871.stl",
-        "gt_render": "text_live_fixed100_v1/assets/fbcaddca753af2399ae20764c46df24003fa713d91d11a2f3b91eb46161cc735.png",
-        "mesh": "text_live_fixed100_v1/assets/c437ddd9c0665691d05f1ad33b47b8e05cd634580aa6790d2067e7e72f69300f.stl",
-        "pred_render": "text_live_fixed100_v1/assets/dcff338f22fe4b7e968fffe234887439531593316b756e2c8a2600ff7bbdad4c.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/c74e689ef010ccac11df147588ada16af7d129ae50a003a35355fcd4c4a43389.stl",
+        "gt_render": "text_live_fixed100_v1/assets/46ec1c8535e895e536ebb962031144cd4398cad99c633281f4d266a4550396a8.png",
+        "mesh": "text_live_fixed100_v1/assets/5b7fd80d2579a78d16c55fcbcba170acf429bf26e2e180e74f87d929e79e4c4c.stl",
+        "pred_render": "text_live_fixed100_v1/assets/6ad5306806b283654112adb4254e06b885a33c59245713c88dce17e75d143838.png"
       },
       "case_id": "0047/00478097",
       "condition": "The main body is a rectangular solid opened from the top into a nested stepped cavity, so the interior areas are cut away rather than added. A thin rim surrounds a broader upper recess, then the pocket continues downward through smaller inset rectangular cuts, leaving a solid bottom rather than a through opening. The deepest rectangular pocket is shifted to one side compared with the upper recesses, creating uneven interior ledges. There is a single added rectangular solid projection along one side, with a related side recess above it that creates another stepped depth tier.",
@@ -3067,10 +3067,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/b9c5093d2e09012f6ba9457ee867243fffefefe8a2f5e9ea168a7fdcc4f80f68.json",
-        "gt_mesh": "text_live_fixed100_v1/assets/b69563788ce355c352a96b2169989946dc512209d3b476efb799d85861b7c871.stl",
-        "gt_render": "text_live_fixed100_v1/assets/fbcaddca753af2399ae20764c46df24003fa713d91d11a2f3b91eb46161cc735.png",
-        "mesh": "text_live_fixed100_v1/assets/228b4310e3a2dc8a8d1006ed368825998ff19b620a247154505d9439482bba74.stl",
-        "pred_render": "text_live_fixed100_v1/assets/720f8180a17799f5360f33af7d4bb12339b21bf16cb91418ffceb15b8178a5d0.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/c74e689ef010ccac11df147588ada16af7d129ae50a003a35355fcd4c4a43389.stl",
+        "gt_render": "text_live_fixed100_v1/assets/25e872d86754a3cf0f0821229b7522b084d692b876d0fd06bcf6e86cded38887.png",
+        "mesh": "text_live_fixed100_v1/assets/f9bb75d3999b7cd25014fad9fb38059dbba9d2fbf89c82e8aaa3ab88a41defcc.stl",
+        "pred_render": "text_live_fixed100_v1/assets/ab860734a297554242cc8638ffddc8bf0f93c750bc27a51abe6e359fb6f05339.png"
       },
       "case_id": "0047/00478097",
       "condition": "The main body is a rectangular solid opened from the top into a nested stepped cavity, so the interior areas are cut away rather than added. A thin rim surrounds a broader upper recess, then the pocket continues downward through smaller inset rectangular cuts, leaving a solid bottom rather than a through opening. The deepest rectangular pocket is shifted to one side compared with the upper recesses, creating uneven interior ledges. There is a single added rectangular solid projection along one side, with a related side recess above it that creates another stepped depth tier.",
@@ -3147,10 +3147,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/83796b4b6abb156a30de11a4f5292dd00f58a918b44e012ceec15b24e5ecdf3c.scad",
-        "gt_mesh": "text_live_fixed100_v1/assets/e92422107cd1b93c27350d33562bbbaaaea086f29192769e7ac8e88a3cf2c835.stl",
-        "gt_render": "text_live_fixed100_v1/assets/56eca16e8847b312b2db8db5973c244c67507eeefc962daac8dcfb5f267522e5.png",
-        "mesh": "text_live_fixed100_v1/assets/7bfd1cb8924d2b151ac2770da7add1e9813223c7fef22bfaddf27089654d8500.stl",
-        "pred_render": "text_live_fixed100_v1/assets/de7508b7ee24daf1804de09821c0906374a696989a8579ee5bce3d42f02211d2.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/337a3d5fad2590641294f0aab3af219e2dd382b4e026b2252156f6c6f3284c26.stl",
+        "gt_render": "text_live_fixed100_v1/assets/ca9410a95cbf270c6f8fe23bb2c84bd7a7cfe96330cccf17d5239c6da4ac4eff.png",
+        "mesh": "text_live_fixed100_v1/assets/6aa36b1f530c1bc0255907578d8affa51c86b9ac97949f0ec631b4f6dd45ced4.stl",
+        "pred_render": "text_live_fixed100_v1/assets/dec1aa32eda4544284748d0989a966edef147e1df68eaeeec1da8dc53b2e4666.png"
       },
       "case_id": "0046/00460772",
       "condition": "The model combines a low rounded base section, a tall annular sleeve, a projecting side arm, and a thin triangular rib on top. The upright sleeve is hollow, with the central bore continuing through the stepped circular portions rather than stopping as a shallow depression. The projecting arm has a stepped underside formed by a lower cutaway, so the visible outer portion sits on a higher tier instead of being full depth all the way down. The smaller rounded end includes a real rounded opening, and the thin rib runs from that end toward the sleeve as a raised web.",
@@ -3169,10 +3169,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/52357662fe52826fc18cd8f176dcb9871732e825cc503a782c031c4ed46fb56d.json",
-        "gt_mesh": "text_live_fixed100_v1/assets/94db7ca3780785e712ab6b29b93426c4c6fdd316d0e3ebfe2bc401394bd42dea.stl",
-        "gt_render": "text_live_fixed100_v1/assets/f5c313260cb2bb77729cbc84354a7ec91012e0fdf86e216026efcdaaed4e43dc.png",
-        "mesh": "text_live_fixed100_v1/assets/a6f72eca82d7cde7398de1a6a5e52bfea4eddf0ef53f47e9d4f332492339f857.stl",
-        "pred_render": "text_live_fixed100_v1/assets/606f0eb0e019a3a7344028902aa30fbcc158e48d5e079d8392a618a0ed852552.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/a976693cf6bf6304bf98bcbd052a8108203118ea819851024be5d536c1c11ee6.stl",
+        "gt_render": "text_live_fixed100_v1/assets/f9112b46b5a52af996b468605575fc58d0f698234591cdc7f1d544dfaef606c1.png",
+        "mesh": "text_live_fixed100_v1/assets/315b9fae42e409a9e55551dc702c56dee4f0fe2f4648a38cab4f725dc772706b.stl",
+        "pred_render": "text_live_fixed100_v1/assets/62f7369e3a6a233882a360f00db352848b2bbb6d098296388a422b1377093602.png"
       },
       "case_id": "0046/00460772",
       "condition": "The model combines a low rounded base section, a tall annular sleeve, a projecting side arm, and a thin triangular rib on top. The upright sleeve is hollow, with the central bore continuing through the stepped circular portions rather than stopping as a shallow depression. The projecting arm has a stepped underside formed by a lower cutaway, so the visible outer portion sits on a higher tier instead of being full depth all the way down. The smaller rounded end includes a real rounded opening, and the thin rib runs from that end toward the sleeve as a raised web.",
@@ -3249,10 +3249,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/69c0a4d9abb6fe98c2ef6ad456c8792fcd0d20afe37c24bdc7780fa0aa2335d1.scad",
-        "gt_mesh": "text_live_fixed100_v1/assets/d7c39b6fc839a64f9b85bfa9aa87da56ac552f75fb9b2a5e59efd9f32ae5242c.stl",
-        "gt_render": "text_live_fixed100_v1/assets/3b88c5fcf84d62958e996ebdbdc4cb9182481cbed827489239bbe31fa0aa1637.png",
-        "mesh": "text_live_fixed100_v1/assets/b32e7919ca401caeb3846a481c8490e7390d29af3cb620efdac9670c7d82ace7.stl",
-        "pred_render": "text_live_fixed100_v1/assets/cdb1c05164ca04e1d0c28c88e8951edd242c613ef6bcc8c580c673ad4c2d4813.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/cfc1c15d933cfc63fae1d6f330cf3e3ef66f2f4aa7e80260d45dba9cd545fff4.stl",
+        "gt_render": "text_live_fixed100_v1/assets/20cd054e42ef07ac71b346b2250df4f58fb3713a0fcdc209ce78bc117c52d45d.png",
+        "mesh": "text_live_fixed100_v1/assets/2353fe7af636a1337e9f612c14586923a6e430dfe22f2c8fb446972e9eabb1d5.stl",
+        "pred_render": "text_live_fixed100_v1/assets/c6719e95ed84534f40a59f18e619e788265bfcaa48ac133e79600744749ab8c8.png"
       },
       "case_id": "0046/00460772",
       "condition": "The model combines a low rounded base section, a tall annular sleeve, a projecting side arm, and a thin triangular rib on top. The upright sleeve is hollow, with the central bore continuing through the stepped circular portions rather than stopping as a shallow depression. The projecting arm has a stepped underside formed by a lower cutaway, so the visible outer portion sits on a higher tier instead of being full depth all the way down. The smaller rounded end includes a real rounded opening, and the thin rib runs from that end toward the sleeve as a raised web.",
@@ -3271,10 +3271,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/3b9ffdab4698d09d620ab45aa212136748ffb140bc29047f544dc700f0acfd2a.json",
-        "gt_mesh": "text_live_fixed100_v1/assets/d7c39b6fc839a64f9b85bfa9aa87da56ac552f75fb9b2a5e59efd9f32ae5242c.stl",
-        "gt_render": "text_live_fixed100_v1/assets/3b88c5fcf84d62958e996ebdbdc4cb9182481cbed827489239bbe31fa0aa1637.png",
-        "mesh": "text_live_fixed100_v1/assets/a18efe557a090c47bc940f3bff2fd839201b2da0da40a6ed9f2a8d274169d9dc.stl",
-        "pred_render": "text_live_fixed100_v1/assets/a9fb51c170646f45cd693916fc3ed4599ae62f6835459923633640b5bf18e973.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/cfc1c15d933cfc63fae1d6f330cf3e3ef66f2f4aa7e80260d45dba9cd545fff4.stl",
+        "gt_render": "text_live_fixed100_v1/assets/2e624cceeff5696bd24a8e360689031fdd92653c958a071f566410e95d1a80d1.png",
+        "mesh": "text_live_fixed100_v1/assets/e579becadd45d7b7ba92ec85bfa02178beccca20e7d0b9ef53c9609808000e38.stl",
+        "pred_render": "text_live_fixed100_v1/assets/046ac24beb0b3e558ea2f054f59b464c4cfb84263ad9919bfc4cdb17ca9a1e74.png"
       },
       "case_id": "0046/00460772",
       "condition": "The model combines a low rounded base section, a tall annular sleeve, a projecting side arm, and a thin triangular rib on top. The upright sleeve is hollow, with the central bore continuing through the stepped circular portions rather than stopping as a shallow depression. The projecting arm has a stepped underside formed by a lower cutaway, so the visible outer portion sits on a higher tier instead of being full depth all the way down. The smaller rounded end includes a real rounded opening, and the thin rib runs from that end toward the sleeve as a raised web.",
@@ -3351,10 +3351,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/3252129348d263fe2d73722a2de91021ab3d9346b3a8dbcb03e44be0d1e495c2.scad",
-        "gt_mesh": "text_live_fixed100_v1/assets/1b86f97d7da6ca7b90880cb46af3feb40104179f44ea1bdfdc037a293794ebf8.stl",
-        "gt_render": "text_live_fixed100_v1/assets/e97520f29d29f12210459d449bacc2aab71ee005185109471580c85340bb5559.png",
-        "mesh": "text_live_fixed100_v1/assets/7099be5415b597b3d57434b9e52d0e2b3e9547d443ee3f80c5496dadd16839c7.stl",
-        "pred_render": "text_live_fixed100_v1/assets/911d334ae91a5711e258eb2124729d3427eefc246271f8faecb6ca458a1ee45d.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/d4fc13450aea83b84fa8db1daddab3988ce5144e06085a6f913ced8efec81d32.stl",
+        "gt_render": "text_live_fixed100_v1/assets/f572806fe51323029f5c49ab73c54a1700c46118842d69c74f204e780b97a275.png",
+        "mesh": "text_live_fixed100_v1/assets/f4c045debc8bc05790306d1603fa619c11102ed09dd808a3783413c680ee6b91.stl",
+        "pred_render": "text_live_fixed100_v1/assets/78d39275c19074d20f9a6dec87696cd5968ca7b77bbf6d9228d623ffb9cfe71f.png"
       },
       "case_id": "0046/00460772",
       "condition": "The model combines a low rounded base section, a tall annular sleeve, a projecting side arm, and a thin triangular rib on top. The upright sleeve is hollow, with the central bore continuing through the stepped circular portions rather than stopping as a shallow depression. The projecting arm has a stepped underside formed by a lower cutaway, so the visible outer portion sits on a higher tier instead of being full depth all the way down. The smaller rounded end includes a real rounded opening, and the thin rib runs from that end toward the sleeve as a raised web.",
@@ -3373,10 +3373,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/80bc98d6b4cdd2f8a46f65578729a64949efd0d99344ceefcc672a50c8380dd8.json",
-        "gt_mesh": "text_live_fixed100_v1/assets/1b86f97d7da6ca7b90880cb46af3feb40104179f44ea1bdfdc037a293794ebf8.stl",
-        "gt_render": "text_live_fixed100_v1/assets/e97520f29d29f12210459d449bacc2aab71ee005185109471580c85340bb5559.png",
-        "mesh": "text_live_fixed100_v1/assets/12bdef84109b7292e3aa0b59094d748604a7cfb13d38465e5b39831bf787fa77.stl",
-        "pred_render": "text_live_fixed100_v1/assets/7fcdc5b6a83690647cf5205e8efe34310a71e6dedbdecf449c628b079dbc2aab.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/d4fc13450aea83b84fa8db1daddab3988ce5144e06085a6f913ced8efec81d32.stl",
+        "gt_render": "text_live_fixed100_v1/assets/2ea880dc0296379a1bcacf77a8c620639961794b47b35692eafa99741d9a76f1.png",
+        "mesh": "text_live_fixed100_v1/assets/2ddfd797c5ef4f41fd02e8583c8b119623fdeedb506c99d6b6ecd34fdab57988.stl",
+        "pred_render": "text_live_fixed100_v1/assets/3741c8c2ebf5fcb562272d67c97b6a16b0e83e4591050bdc97c22ee277d1d821.png"
       },
       "case_id": "0046/00460772",
       "condition": "The model combines a low rounded base section, a tall annular sleeve, a projecting side arm, and a thin triangular rib on top. The upright sleeve is hollow, with the central bore continuing through the stepped circular portions rather than stopping as a shallow depression. The projecting arm has a stepped underside formed by a lower cutaway, so the visible outer portion sits on a higher tier instead of being full depth all the way down. The smaller rounded end includes a real rounded opening, and the thin rib runs from that end toward the sleeve as a raised web.",
@@ -3453,10 +3453,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/084951e062e796973a9b69ed300b6f1c7396a350285cc8656b21d203be8194bb.scad",
-        "gt_mesh": "text_live_fixed100_v1/assets/d7c39b6fc839a64f9b85bfa9aa87da56ac552f75fb9b2a5e59efd9f32ae5242c.stl",
-        "gt_render": "text_live_fixed100_v1/assets/3b88c5fcf84d62958e996ebdbdc4cb9182481cbed827489239bbe31fa0aa1637.png",
-        "mesh": "text_live_fixed100_v1/assets/f28595310875c3b01bea3d2dc982dc025526d3ee6bebd5c5fb230202d9e1bc6d.stl",
-        "pred_render": "text_live_fixed100_v1/assets/90c2a7971bd90873e0bf8706dce0fc2ea8a934866e3045d4a7fe67e35c2a7d42.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/cfc1c15d933cfc63fae1d6f330cf3e3ef66f2f4aa7e80260d45dba9cd545fff4.stl",
+        "gt_render": "text_live_fixed100_v1/assets/f4a6ddd04fb2d59977cfbfdbd0f2377df75cf7d5c8f84e57b56e886505dac23a.png",
+        "mesh": "text_live_fixed100_v1/assets/b19cdad79ec2365c7b38bccfdb67597ff474b85037fed17cf89ab042f6e47fa9.stl",
+        "pred_render": "text_live_fixed100_v1/assets/fc73c0139941c00cc1591573edf299d545b056a762aabeb71d9bc2d2c29b9688.png"
       },
       "case_id": "0046/00460772",
       "condition": "The model combines a low rounded base section, a tall annular sleeve, a projecting side arm, and a thin triangular rib on top. The upright sleeve is hollow, with the central bore continuing through the stepped circular portions rather than stopping as a shallow depression. The projecting arm has a stepped underside formed by a lower cutaway, so the visible outer portion sits on a higher tier instead of being full depth all the way down. The smaller rounded end includes a real rounded opening, and the thin rib runs from that end toward the sleeve as a raised web.",
@@ -3475,10 +3475,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/8c2835d9a2edd446fd3b26388e6a7add5537e7804bfb5bd53f3ec9e1aa4fe61c.json",
-        "gt_mesh": "text_live_fixed100_v1/assets/d7c39b6fc839a64f9b85bfa9aa87da56ac552f75fb9b2a5e59efd9f32ae5242c.stl",
-        "gt_render": "text_live_fixed100_v1/assets/3b88c5fcf84d62958e996ebdbdc4cb9182481cbed827489239bbe31fa0aa1637.png",
-        "mesh": "text_live_fixed100_v1/assets/c3bd2169d030e630093bb4c0d2ec9a36e9dbfaac3e0696d2a4d5998b8332e964.stl",
-        "pred_render": "text_live_fixed100_v1/assets/2a0faf95897f0c9fe8c7337ed24cbc27e02af4583fbd7e7cedf75236605510f5.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/cfc1c15d933cfc63fae1d6f330cf3e3ef66f2f4aa7e80260d45dba9cd545fff4.stl",
+        "gt_render": "text_live_fixed100_v1/assets/37b598d8196a8690a42e88969e7bd10011646658db0d0264abd04787329d0c2e.png",
+        "mesh": "text_live_fixed100_v1/assets/33d203778132309ad69c99f0cc3120f4a893d00d17865b772617557798ac295e.stl",
+        "pred_render": "text_live_fixed100_v1/assets/a50b5d72619903d7b6669d6c1140e85f49518f1b2aaaf869c2faeb0a798aa3e9.png"
       },
       "case_id": "0046/00460772",
       "condition": "The model combines a low rounded base section, a tall annular sleeve, a projecting side arm, and a thin triangular rib on top. The upright sleeve is hollow, with the central bore continuing through the stepped circular portions rather than stopping as a shallow depression. The projecting arm has a stepped underside formed by a lower cutaway, so the visible outer portion sits on a higher tier instead of being full depth all the way down. The smaller rounded end includes a real rounded opening, and the thin rib runs from that end toward the sleeve as a raised web.",
@@ -3555,10 +3555,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/7a57aabf80c26da68f1297f3b205f2cee5e5713eba743c6465b0faa04471535b.scad",
-        "gt_mesh": "text_live_fixed100_v1/assets/1b86f97d7da6ca7b90880cb46af3feb40104179f44ea1bdfdc037a293794ebf8.stl",
-        "gt_render": "text_live_fixed100_v1/assets/e97520f29d29f12210459d449bacc2aab71ee005185109471580c85340bb5559.png",
-        "mesh": "text_live_fixed100_v1/assets/acee8db5e5362de0268f3cf78a2c27666291681a3e359c21825f0a27bc5a2536.stl",
-        "pred_render": "text_live_fixed100_v1/assets/a729f557b210f0f7632ecf9f1189fd10bb55ce380429cd491e05450068bf01e4.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/d4fc13450aea83b84fa8db1daddab3988ce5144e06085a6f913ced8efec81d32.stl",
+        "gt_render": "text_live_fixed100_v1/assets/7bbe0105c65489b2bf936ff745c5efd59544c663db0059924844663f2660e9a9.png",
+        "mesh": "text_live_fixed100_v1/assets/3c1c402a1dc72835a6c8bf0db39ee6d4c35915738129be1797cc56419e2c52f7.stl",
+        "pred_render": "text_live_fixed100_v1/assets/cf1ca64870aa8c93aa03e802f27f4e5629d25501764c5079d713ebebd82cc8cc.png"
       },
       "case_id": "0046/00460772",
       "condition": "The model combines a low rounded base section, a tall annular sleeve, a projecting side arm, and a thin triangular rib on top. The upright sleeve is hollow, with the central bore continuing through the stepped circular portions rather than stopping as a shallow depression. The projecting arm has a stepped underside formed by a lower cutaway, so the visible outer portion sits on a higher tier instead of being full depth all the way down. The smaller rounded end includes a real rounded opening, and the thin rib runs from that end toward the sleeve as a raised web.",
@@ -3577,10 +3577,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/b7f05ee52e2aa4ecfff03ce18da6bd8fe21efdb76726967d34ec239c17ab81c0.json",
-        "gt_mesh": "text_live_fixed100_v1/assets/1b86f97d7da6ca7b90880cb46af3feb40104179f44ea1bdfdc037a293794ebf8.stl",
-        "gt_render": "text_live_fixed100_v1/assets/e97520f29d29f12210459d449bacc2aab71ee005185109471580c85340bb5559.png",
-        "mesh": "text_live_fixed100_v1/assets/a65f7666a0a6a87bba03994f111cc0643974a9dbad3e39537031d2c482e5e48d.stl",
-        "pred_render": "text_live_fixed100_v1/assets/4aa527651a29e6ad68f9917ab77dd7fbd1e06f559032d262366bea80fe40dab6.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/d4fc13450aea83b84fa8db1daddab3988ce5144e06085a6f913ced8efec81d32.stl",
+        "gt_render": "text_live_fixed100_v1/assets/f037cc36eebac206f937ae3f9f0122198c88cc396f5630d58e22edf8f18588b1.png",
+        "mesh": "text_live_fixed100_v1/assets/6c9011f65cbcbb15e8a521d012584e31a98c6f1cde1123bd0792c185677d90a9.stl",
+        "pred_render": "text_live_fixed100_v1/assets/f67ef867d86843a5da817c139a45b5e8fb59cb5582b96eab00812a5d967b5f06.png"
       },
       "case_id": "0046/00460772",
       "condition": "The model combines a low rounded base section, a tall annular sleeve, a projecting side arm, and a thin triangular rib on top. The upright sleeve is hollow, with the central bore continuing through the stepped circular portions rather than stopping as a shallow depression. The projecting arm has a stepped underside formed by a lower cutaway, so the visible outer portion sits on a higher tier instead of being full depth all the way down. The smaller rounded end includes a real rounded opening, and the thin rib runs from that end toward the sleeve as a raised web.",
@@ -3656,10 +3656,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/8e50cb568d40f4fcf52e8d561bed301892cf3e3221538b8cd2b2dd3c5a1197a6.scad",
-        "gt_mesh": "text_live_fixed100_v1/assets/d7c39b6fc839a64f9b85bfa9aa87da56ac552f75fb9b2a5e59efd9f32ae5242c.stl",
-        "gt_render": "text_live_fixed100_v1/assets/3b88c5fcf84d62958e996ebdbdc4cb9182481cbed827489239bbe31fa0aa1637.png",
-        "mesh": "text_live_fixed100_v1/assets/f52132e0e3855a8496681afcee432f04e1f5dfdbbcb302417f692edc363c156a.stl",
-        "pred_render": "text_live_fixed100_v1/assets/87d1306d4cff3612f498856bebf08a5d9796e905ed02c9cd16775b646fbc6e9a.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/cfc1c15d933cfc63fae1d6f330cf3e3ef66f2f4aa7e80260d45dba9cd545fff4.stl",
+        "gt_render": "text_live_fixed100_v1/assets/9e3a704f87b6cf834be56252545d21420dbe1cc46e7bbd3bd558290b330038ee.png",
+        "mesh": "text_live_fixed100_v1/assets/06c9465c1da96b412b7ab0e88a8203ef3143f4a6feb824bc021575574520b8e1.stl",
+        "pred_render": "text_live_fixed100_v1/assets/69a24c6316e3142486823005940d34c735a8d5348d626bcd35043e8d34ba3f73.png"
       },
       "case_id": "0046/00460772",
       "condition": "The model combines a low rounded base section, a tall annular sleeve, a projecting side arm, and a thin triangular rib on top. The upright sleeve is hollow, with the central bore continuing through the stepped circular portions rather than stopping as a shallow depression. The projecting arm has a stepped underside formed by a lower cutaway, so the visible outer portion sits on a higher tier instead of being full depth all the way down. The smaller rounded end includes a real rounded opening, and the thin rib runs from that end toward the sleeve as a raised web.",
@@ -3678,10 +3678,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/d2ac66282c9d26ee24518be681b28edfa5e9d7d26a8736b6cc0407b003ecb651.json",
-        "gt_mesh": "text_live_fixed100_v1/assets/d7c39b6fc839a64f9b85bfa9aa87da56ac552f75fb9b2a5e59efd9f32ae5242c.stl",
-        "gt_render": "text_live_fixed100_v1/assets/3b88c5fcf84d62958e996ebdbdc4cb9182481cbed827489239bbe31fa0aa1637.png",
-        "mesh": "text_live_fixed100_v1/assets/7c93bc8bc60f361ed5c77d7fe9c331041608a1efb5edb086b538cbfe99f0765b.stl",
-        "pred_render": "text_live_fixed100_v1/assets/b57e334ab5f5aaeec15ac5b09b4e39511965cc78c477ffe354eae6bbc315fe18.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/cfc1c15d933cfc63fae1d6f330cf3e3ef66f2f4aa7e80260d45dba9cd545fff4.stl",
+        "gt_render": "text_live_fixed100_v1/assets/12cee7ef9b449808cd7b566509ac159cb6aac9f1ef754bab68660f81f96018b8.png",
+        "mesh": "text_live_fixed100_v1/assets/336f93040d188163cf3663fffaa89879e73453139c29069756f7df38c232cd24.stl",
+        "pred_render": "text_live_fixed100_v1/assets/17fa5b022ba2b56ad9c87714a8be84fd2ed5d7afa626d05c1a21c6d39fb965dc.png"
       },
       "case_id": "0046/00460772",
       "condition": "The model combines a low rounded base section, a tall annular sleeve, a projecting side arm, and a thin triangular rib on top. The upright sleeve is hollow, with the central bore continuing through the stepped circular portions rather than stopping as a shallow depression. The projecting arm has a stepped underside formed by a lower cutaway, so the visible outer portion sits on a higher tier instead of being full depth all the way down. The smaller rounded end includes a real rounded opening, and the thin rib runs from that end toward the sleeve as a raised web.",
@@ -3758,10 +3758,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/8b94e25e88ff4fae70e70547d2ac5e9ebb8106dd56916a13d991fbf9cdb9ecc4.scad",
-        "gt_mesh": "text_live_fixed100_v1/assets/1b86f97d7da6ca7b90880cb46af3feb40104179f44ea1bdfdc037a293794ebf8.stl",
-        "gt_render": "text_live_fixed100_v1/assets/e97520f29d29f12210459d449bacc2aab71ee005185109471580c85340bb5559.png",
-        "mesh": "text_live_fixed100_v1/assets/18eabede2413fb58926101602e08f3b2655474daf3d2235c4a8b1d27a406999d.stl",
-        "pred_render": "text_live_fixed100_v1/assets/a7730eff446ea41180a068287588a38745575f1ab140bfd11a2f697bfb930d07.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/d4fc13450aea83b84fa8db1daddab3988ce5144e06085a6f913ced8efec81d32.stl",
+        "gt_render": "text_live_fixed100_v1/assets/21cd6e9a34605c37e30613a827225ebaa5c1aa7e667950bf3943d63059485855.png",
+        "mesh": "text_live_fixed100_v1/assets/0614291a41cd5a19f6f4828dc52b65c0f53c0fc22aa5a858f567192623180a66.stl",
+        "pred_render": "text_live_fixed100_v1/assets/2ec31b67cab9b35d6d16d5d601c5bf4ae18f4612861b0a880626be01a77c18fd.png"
       },
       "case_id": "0046/00460772",
       "condition": "The model combines a low rounded base section, a tall annular sleeve, a projecting side arm, and a thin triangular rib on top. The upright sleeve is hollow, with the central bore continuing through the stepped circular portions rather than stopping as a shallow depression. The projecting arm has a stepped underside formed by a lower cutaway, so the visible outer portion sits on a higher tier instead of being full depth all the way down. The smaller rounded end includes a real rounded opening, and the thin rib runs from that end toward the sleeve as a raised web.",
@@ -3780,10 +3780,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/5de8479a419ad29039a81cfaf38a041cef096ab2e92364c13edb043e593c9c2d.json",
-        "gt_mesh": "text_live_fixed100_v1/assets/1b86f97d7da6ca7b90880cb46af3feb40104179f44ea1bdfdc037a293794ebf8.stl",
-        "gt_render": "text_live_fixed100_v1/assets/e97520f29d29f12210459d449bacc2aab71ee005185109471580c85340bb5559.png",
-        "mesh": "text_live_fixed100_v1/assets/06db5433e1a05bfef0aec3709dcaa679b0cce479a69a3f7f2ffd17ebc848be1d.stl",
-        "pred_render": "text_live_fixed100_v1/assets/9d213b6fe1b31a5945fad92b64a0119ea1d12eb3bd7453c604bbaf591000cb18.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/d4fc13450aea83b84fa8db1daddab3988ce5144e06085a6f913ced8efec81d32.stl",
+        "gt_render": "text_live_fixed100_v1/assets/0efe3bd17d97ae82d3fc9316c6bed44400a1a81b4b2a40d7598e91264320f2ac.png",
+        "mesh": "text_live_fixed100_v1/assets/7cee6c911aba3020c5e1d8216d62a7825b3a4e1b88020a24fad0ba8f443fd29f.stl",
+        "pred_render": "text_live_fixed100_v1/assets/06b3620518deee44fe50d7aa6e4ec491118eff7e08ac1aea380113b32ccdbf58.png"
       },
       "case_id": "0046/00460772",
       "condition": "The model combines a low rounded base section, a tall annular sleeve, a projecting side arm, and a thin triangular rib on top. The upright sleeve is hollow, with the central bore continuing through the stepped circular portions rather than stopping as a shallow depression. The projecting arm has a stepped underside formed by a lower cutaway, so the visible outer portion sits on a higher tier instead of being full depth all the way down. The smaller rounded end includes a real rounded opening, and the thin rib runs from that end toward the sleeve as a raised web.",
@@ -3860,10 +3860,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/f1ad9bc20653def4da6f9de8112b233513512625be1a630c4f2c0552a7a209b5.scad",
-        "gt_mesh": "text_live_fixed100_v1/assets/e92422107cd1b93c27350d33562bbbaaaea086f29192769e7ac8e88a3cf2c835.stl",
-        "gt_render": "text_live_fixed100_v1/assets/be7ebd26fd33a3209f63e78555de198e17743bd2805db58fd4c699af20407085.png",
-        "mesh": "text_live_fixed100_v1/assets/5b81310b68a3c67cf83f4179c4e1508f9a00b74682e8404e19809c61f62e72d0.stl",
-        "pred_render": "text_live_fixed100_v1/assets/b523ff75f511a1b96cf7e66650cd15e6fca746d1e3e630c61214504dc8d4b13f.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/337a3d5fad2590641294f0aab3af219e2dd382b4e026b2252156f6c6f3284c26.stl",
+        "gt_render": "text_live_fixed100_v1/assets/c8f451331f9563da313142de36fc1fbbaa247e79d5626034de51729830ad5a4a.png",
+        "mesh": "text_live_fixed100_v1/assets/e5f8284ec2e4c02768e907ac6ba26660556d4663956f75977993a81c501e7079.stl",
+        "pred_render": "text_live_fixed100_v1/assets/273d82f3c3daaf98061413fc82c0241a948d5f4c09e6c687f25393252f145adb.png"
       },
       "case_id": "0046/00460772",
       "condition": "The model combines a low rounded base section, a tall annular sleeve, a projecting side arm, and a thin triangular rib on top. The upright sleeve is hollow, with the central bore continuing through the stepped circular portions rather than stopping as a shallow depression. The projecting arm has a stepped underside formed by a lower cutaway, so the visible outer portion sits on a higher tier instead of being full depth all the way down. The smaller rounded end includes a real rounded opening, and the thin rib runs from that end toward the sleeve as a raised web.",
@@ -3882,10 +3882,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/736654e98565ba72125122acd95bc62c9117000cc84284b73a2c0fc54f95c428.json",
-        "gt_mesh": "text_live_fixed100_v1/assets/1b86f97d7da6ca7b90880cb46af3feb40104179f44ea1bdfdc037a293794ebf8.stl",
-        "gt_render": "text_live_fixed100_v1/assets/be7ebd26fd33a3209f63e78555de198e17743bd2805db58fd4c699af20407085.png",
-        "mesh": "text_live_fixed100_v1/assets/bd49c19eea17c5e722e975b906983c56bf2b7eaae433af81d33342293e8f42e9.stl",
-        "pred_render": "text_live_fixed100_v1/assets/07abbbb47f0b7881d2244361fb91720bbab935187e2d09d71a077c3a470c55cf.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/d4fc13450aea83b84fa8db1daddab3988ce5144e06085a6f913ced8efec81d32.stl",
+        "gt_render": "text_live_fixed100_v1/assets/82dd14c244185abf3ee67db065d8f1175609b935c4d727509a3dbc10cfeb566a.png",
+        "mesh": "text_live_fixed100_v1/assets/d8151d50e18f89ca41df98e07c8912dc38fcdd43befc912d411d18dc5c094e7f.stl",
+        "pred_render": "text_live_fixed100_v1/assets/a1077c2cb3475d9d5b0003452e5e80f6863b7a00e7e963d0996c14740fed9e5e.png"
       },
       "case_id": "0046/00460772",
       "condition": "The model combines a low rounded base section, a tall annular sleeve, a projecting side arm, and a thin triangular rib on top. The upright sleeve is hollow, with the central bore continuing through the stepped circular portions rather than stopping as a shallow depression. The projecting arm has a stepped underside formed by a lower cutaway, so the visible outer portion sits on a higher tier instead of being full depth all the way down. The smaller rounded end includes a real rounded opening, and the thin rib runs from that end toward the sleeve as a raised web.",
@@ -3962,10 +3962,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/36778fb8758e0034ef93e00348c325e11d41c903285eca51d5981d1d23c9895a.scad",
-        "gt_mesh": "text_live_fixed100_v1/assets/d7c39b6fc839a64f9b85bfa9aa87da56ac552f75fb9b2a5e59efd9f32ae5242c.stl",
-        "gt_render": "text_live_fixed100_v1/assets/3b88c5fcf84d62958e996ebdbdc4cb9182481cbed827489239bbe31fa0aa1637.png",
-        "mesh": "text_live_fixed100_v1/assets/de7faf85ca0eb3fd4232964b204d40750312da7959475e2b612295b0f6ff8ac7.stl",
-        "pred_render": "text_live_fixed100_v1/assets/9f3a25d63daaa01e6fd11ad6746b807cc48c759c9b4d5e0323158cd2b9c93bed.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/cfc1c15d933cfc63fae1d6f330cf3e3ef66f2f4aa7e80260d45dba9cd545fff4.stl",
+        "gt_render": "text_live_fixed100_v1/assets/2e665b6b2bb90a44c86861cddc2c1938b3bb020db00ef0cb889c4a233425680b.png",
+        "mesh": "text_live_fixed100_v1/assets/185785b8113f5fa91f616a3f52af6a3cacd9db1bb9a7f983893f4fbc054aa2ad.stl",
+        "pred_render": "text_live_fixed100_v1/assets/10a6afb719045ac9b9bc1a4593a40762b48c09d2e7eec30917ad1c830a40e5ef.png"
       },
       "case_id": "0046/00460772",
       "condition": "The model combines a low rounded base section, a tall annular sleeve, a projecting side arm, and a thin triangular rib on top. The upright sleeve is hollow, with the central bore continuing through the stepped circular portions rather than stopping as a shallow depression. The projecting arm has a stepped underside formed by a lower cutaway, so the visible outer portion sits on a higher tier instead of being full depth all the way down. The smaller rounded end includes a real rounded opening, and the thin rib runs from that end toward the sleeve as a raised web.",
@@ -3984,10 +3984,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/525ad3c94c5e150d609fa1b6dd4442e76478eb944e2d08ae12bf5ddee13779df.json",
-        "gt_mesh": "text_live_fixed100_v1/assets/1b86f97d7da6ca7b90880cb46af3feb40104179f44ea1bdfdc037a293794ebf8.stl",
-        "gt_render": "text_live_fixed100_v1/assets/e97520f29d29f12210459d449bacc2aab71ee005185109471580c85340bb5559.png",
-        "mesh": "text_live_fixed100_v1/assets/a25b344b22ae2804731c78d28df45960e0980de6e5430d3f9e4647e5891a6945.stl",
-        "pred_render": "text_live_fixed100_v1/assets/8c1b332e974f881ac69f7e5dfb5ac9ef4953a55da1c59f68937f3b04ae0196fe.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/d4fc13450aea83b84fa8db1daddab3988ce5144e06085a6f913ced8efec81d32.stl",
+        "gt_render": "text_live_fixed100_v1/assets/669ee39a229cfefca6fe80c6374bc971434ac8a258e71b5bdde6963132c7fe97.png",
+        "mesh": "text_live_fixed100_v1/assets/e046426d585fe7e67165a2606052eaf04830327cfa04bd712c165c2fab3a7834.stl",
+        "pred_render": "text_live_fixed100_v1/assets/cbbfc03c4b5b3b2a39ea6d648b279cd06f25c6bc178333504e97d065bcdbcaa4.png"
       },
       "case_id": "0046/00460772",
       "condition": "The model combines a low rounded base section, a tall annular sleeve, a projecting side arm, and a thin triangular rib on top. The upright sleeve is hollow, with the central bore continuing through the stepped circular portions rather than stopping as a shallow depression. The projecting arm has a stepped underside formed by a lower cutaway, so the visible outer portion sits on a higher tier instead of being full depth all the way down. The smaller rounded end includes a real rounded opening, and the thin rib runs from that end toward the sleeve as a raised web.",
@@ -4064,10 +4064,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/5572ea8a5ca66fcc106027e551a168828f96b5f8c87387a1f12f525978694985.scad",
-        "gt_mesh": "text_live_fixed100_v1/assets/1b86f97d7da6ca7b90880cb46af3feb40104179f44ea1bdfdc037a293794ebf8.stl",
-        "gt_render": "text_live_fixed100_v1/assets/e97520f29d29f12210459d449bacc2aab71ee005185109471580c85340bb5559.png",
-        "mesh": "text_live_fixed100_v1/assets/0656ecbde405faa5000c8b23260b04c2b5ee90ad27adf290d189c69747cc9913.stl",
-        "pred_render": "text_live_fixed100_v1/assets/65c118361c4e072bc96b5ed2bb166079fb8cfc9cec93bc0d4e58c1153f6a40ce.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/d4fc13450aea83b84fa8db1daddab3988ce5144e06085a6f913ced8efec81d32.stl",
+        "gt_render": "text_live_fixed100_v1/assets/0f28b9f37de8e7662e43dcf8d3bb40e33dd9c74875b1ecdf2fe8c980553a9bed.png",
+        "mesh": "text_live_fixed100_v1/assets/6afc8c473ba4afe3a6119588273512d71f230f19723263949f3877bb57453766.stl",
+        "pred_render": "text_live_fixed100_v1/assets/403df695b8421150d3b4f8954a2d1b97e95ad4033663589dcc3d008bf23ee181.png"
       },
       "case_id": "0046/00460772",
       "condition": "The model combines a low rounded base section, a tall annular sleeve, a projecting side arm, and a thin triangular rib on top. The upright sleeve is hollow, with the central bore continuing through the stepped circular portions rather than stopping as a shallow depression. The projecting arm has a stepped underside formed by a lower cutaway, so the visible outer portion sits on a higher tier instead of being full depth all the way down. The smaller rounded end includes a real rounded opening, and the thin rib runs from that end toward the sleeve as a raised web.",
@@ -4086,10 +4086,10 @@
     {
       "assets": {
         "generated": "text_live_fixed100_v1/assets/14389d4f31fd67c1f67c6e44f93f48ed37a84fb3e20a065c0257be37e4196ef5.json",
-        "gt_mesh": "text_live_fixed100_v1/assets/1b86f97d7da6ca7b90880cb46af3feb40104179f44ea1bdfdc037a293794ebf8.stl",
-        "gt_render": "text_live_fixed100_v1/assets/e97520f29d29f12210459d449bacc2aab71ee005185109471580c85340bb5559.png",
-        "mesh": "text_live_fixed100_v1/assets/7f4444fc7072794fe140704b4c4cbbb430d2bbc7a6a376d82222006d4d3a55ad.stl",
-        "pred_render": "text_live_fixed100_v1/assets/b4dc5204c908603b4ca3cb1943f627bcb527738b432c55b1ebcfa734aeebc941.png"
+        "gt_mesh": "text_live_fixed100_v1/assets/d4fc13450aea83b84fa8db1daddab3988ce5144e06085a6f913ced8efec81d32.stl",
+        "gt_render": "text_live_fixed100_v1/assets/fe647a827c0ae57dfe1c9ada1569d4cfb4705bd30ed5e171f785f5ac6ea66c95.png",
+        "mesh": "text_live_fixed100_v1/assets/b11ef603b406be5c5e77796befa43391316cf3f6d652edbdb11d2a1c79ddb5da.stl",
+        "pred_render": "text_live_fixed100_v1/assets/8c2fb189e5cbaaa6cd939f5489aef88ae404859af17b3b12dd33b6443bcef932.png"
       },
       "case_id": "0046/00460772",
       "condition": "The model combines a low rounded base section, a tall annular sleeve, a projecting side arm, and a thin triangular rib on top. The upright sleeve is hollow, with the central bore continuing through the stepped circular portions rather than stopping as a shallow depression. The projecting arm has a stepped underside formed by a lower cutaway, so the visible outer portion sits on a higher tier instead of being full depth all the way down. The smaller rounded end includes a real rounded opening, and the thin rib runs from that end toward the sleeve as a raised web.",

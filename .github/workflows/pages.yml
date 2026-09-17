@@ -25,6 +25,8 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
+      - name: Check project publication boundary
+        run: node projects/P3D-Bench/tools/check-publication.mjs
       - name: Drop non-site files
         run: rm -rf .git .github
       - name: Configure Pages

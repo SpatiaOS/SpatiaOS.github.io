@@ -78,16 +78,17 @@ export function validateTextSummary(summary) {
   textBaselineRows(summary);
 }
 
-// Text2CAD uses the same score formula and fixed 100 UIDs, with JSON as its only supported format.
+// Consume the accepted native baseline; do not reaggregate it with MLLM rules.
 export function textBaselineRows(summary) {
   const rows = summary.native_baselines ?? [];
   if (rows.length !== 1) throw new Error("expected the Text2CAD JSON baseline");
   return rows.map((row) => {
     if (row.model_id !== "text2cad" || row.model !== "Text2CAD" || row.scope !== "native_json_only"
         || row.cost_kind !== "local_checkpoint_not_api_priced"
-        || row.score_revision !== summary.score_revision || row.metric_policy !== summary.metric_policy
-        || row.geometry_aggregation !== summary.geometry_aggregation
-        || row.judge_aggregation !== "fixed100_invalid_zero") throw new Error("Text2CAD baseline contract differs");
+        || row.score_revision !== "text_geo4_score3_v1"
+        || row.metric_policy !== "aaai_native_baseline_exclude_valid_inapplicable_retain_invalid"
+        || row.geometry_aggregation !== undefined
+        || row.judge_aggregation !== undefined) throw new Error("Text2CAD baseline contract differs");
     const d = row.formats.descriptive.json;
     const p = row.formats.parametric.json;
     if (Object.keys(row.formats.descriptive).join() !== "json"
