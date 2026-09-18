@@ -1,5 +1,37 @@
 # P3D-Bench static release tools
 
+## Current aggregation revision — September 18
+
+The active Image/Assembly leaderboards and all source mirrors use the accepted
+paper export. Geo normalizes each prediction's metrics, averages CD score,
+F@0.01, NC and available IoU within that prediction, then averages cases and
+finally formats. Unavailable IoU is omitted, never worst-filled. Invalid
+predictions retain zero Geo; recorded API and evaluation gaps are preserved.
+Standalone IoU uses measured values from valid outputs, including measured zeros.
+Headline Score excludes Topo and Valid. Image's Cadrille and CAD-Coder rows use
+native CadQuery only; unsupported format and average cells remain empty.
+
+Assembly's displayed cost now pools total recorded generation cost over the
+actual tested output count, matching the paper's per-case cost figure. Historical
+cost_usd and estimated_cost_usd keep their audited equal-format values for
+provenance; cost_usd_per_case is the current display field. Kimi remains an
+estimate and its actual-cost field remains null.
+
+All 180 spatial examples expose case-wise Geo in their bucket data. The 70
+available Assembly Part evaluations and both part-pair examples use the frozen
+3% / 2048-point results; two unmeasured Part entries stay unmeasured. The two
+showcase assignments are unchanged, so their existing meshes and renders are
+preserved. The source audit records the new score hashes separately from the
+original generation and asset hashes. Text data and its current display assets
+are unchanged by this release.
+
+Import current data with the research workspace's scripts/sync_site_casewise.py,
+then run update-live-image-assembly.mjs and update-spatial-demo.mjs. Sync Figure 1
+SVG/PDF/PNG and its data copy together, and bump their content-based URLs. Sync
+paper abstract, manifest and source/bundle fallbacks together. Historical tools
+and dated release notes below describe their original snapshots; do not use
+metric-wise historical aggregates to overwrite this case-wise revision.
+
 The public page has one leaderboard, showing current Assembly, Text and Image
 results in that order. There is no Paper/Live switch.
 Keep `leaderboard-renderer.fragment.js` and the source `ResultsTables`

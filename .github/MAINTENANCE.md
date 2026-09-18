@@ -5,6 +5,10 @@
 2026-09-11 展示要求：Live Assembly 榜单下方不显示计分、计费、估算或汇率等长段说明。
 相关依据保留在审计 JSON 和 tools/README.md；后续补成本时不要重新加入页面页脚。
 
+## 2026-09-18 当前数据口径
+
+Image/Assembly 已同步论文逐例 Geo：先在每例内平均归一化指标，再平均 case，最后等权平均格式。缺失 IoU 从该例中省略，无效生成的 Geo 仍为零；原始覆盖及评估缺失处理不变。主分排除 Topo/Valid。Image 两项领域基线以原生 CadQuery 单列。Assembly 的 USD/case 显示总生成费用除以实际 tested 输出数，与论文成本图一致；历史费用字段保留审计来源。案例中的 Part 评分同步 3%/2048 点，旧图像、模型与代码不变。摘要、Figure 1、源数据副本和 active bundle 的缓存版本一并更新。下方带日期的发布记录保留历史口径。
+
 ## 唯一来源
 
 站点内容 **只来自本仓库 `main` 分支**。`.github/workflows/pages.yml` 只 checkout 本仓库自身，
@@ -72,7 +76,7 @@
 
 研究工作区负责原始结果、统计计算、验收、审阅、论文交接和本地归档；本仓库只接收已验收的页面数据及实际使用的展示资源。只维护main，不复制旧Text分支的源码或构建目录。每次同步须保留其他任务与当前加载逻辑，并同步源码数据副本和缓存版本。提交前运行 `node projects/P3D-Bench/tools/check-publication.mjs`；部署流水线也会拒绝交接目录、历史快照和私有文件。旧JS只有确认不再被引用后才能归档到工作区，不得递归清空assets。
 
-当前 Assembly 使用 2026-09-10 的七模型评测结果，总分两位小数，API failed 不计入 tested 或 invalid。六个模型成本已按实际生成 token 与官方 API 单价核验，包括所选结果的纠错重试、推理输出、缓存读写；CadQuery/OpenSCAD 各自按 tested 求均值，再等权平均。Kimi 的 196 个 tested case 共 240 次生成（含 44 次纠错）没有 usage；按维护者要求，使用 Kimi 自己的官方分词器对保存文本重计数，按维护者的显示偏好统一写为 **$0.575/case**，脚注保留估算说明。实际成本字段仍为 null，估算存入独立字段，明确假设输入不命中缓存、图片为 1024×1024。细节在 `kimi-cost-estimate.json`，不使用其他模型 token 代替。评测、历史被替代运行、API 失败和订阅费不计入此生成成本。
+2026-09-10 的历史 Assembly 发布使用七模型评测结果，总分两位小数，API failed 不计入 tested 或 invalid。六个模型成本已按实际生成 token 与官方 API 单价核验，包括所选结果的纠错重试、推理输出、缓存读写；CadQuery/OpenSCAD 各自按 tested 求均值，再等权平均。Kimi 的 196 个 tested case 共 240 次生成（含 44 次纠错）没有 usage；按维护者要求，使用 Kimi 自己的官方分词器对保存文本重计数，按维护者的显示偏好统一写为 **$0.575/case**，脚注保留估算说明。实际成本字段仍为 null，估算存入独立字段，明确假设输入不命中缓存、图片为 1024×1024。细节在 `kimi-cost-estimate.json`，不使用其他模型 token 代替。评测、历史被替代运行、API 失败和订阅费不计入此生成成本。
 
 价格来源与日期在 `projects/P3D-Bench/assembly-api-pricing.json`；按格式统计的实际 token 和成本在 `assembly-cost-audit.json`。可用 `tools/calculate-assembly-costs.py` 从冻结分数快照重算，命令见 `tools/README.md`。逐请求私有审计文件包含本地路径，只保存在外部审计目录，不提交到公开仓库。GPT 使用标准 API 等值成本；GLM 使用官网标准价，不能直接拷贝 OpenRouter 折扣结算价。Qwen 使用 Singapore / International 对应快照价格；Gemini 使用截至 2026-12-31 的官方标准促销价。
 

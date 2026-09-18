@@ -111,7 +111,25 @@ export function supportEstimatedCosts(input) {
   return input.replace(before, after);
 }
 
+export function assemblyCostPerCase(row) {
+  const estimated = row.cost_usd === null;
+  const source = estimated ? row.cost_estimate : row.generation_cost;
+  if (!source) return null;
+  const values = ["cadquery", "openscad"].map(format => source.formats[format]);
+  const total = values.reduce((sum, value) => sum + value[estimated ? "total_usd_estimated" : "total_usd"], 0);
+  const tested = values.reduce((sum, value) => sum + value.tested_cases, 0);
+  if (!Number.isFinite(total) || total < 0 || !tested) throw new Error("invalid pooled Assembly cost");
+  const pooled = total / tested;
+  if (row.cost_usd_per_case != null && Math.abs(row.cost_usd_per_case - pooled) > 1e-10) {
+    throw new Error("pooled Assembly cost differs from actual tested-case totals");
+  }
+  return pooled;
+}
+
 export function buildAssemblyTable(summary) {
+  if (summary.scoring_revision?.geometry_aggregation_revision !== "per-case-20260918") {
+    throw new Error("Assembly requires the accepted per-case Geometry export");
+  }
   const expected = new Set(["gpt6_astra_local", "claude_opus5", "gemini38_flash", "grok46", "kimi_k3", "qwen38max", "glm53_flash"]);
   const additions = new Set(["doubao_seed21", "mimo25", "deepseek41_flash"]);
   const seen = new Set();
@@ -140,6 +158,9 @@ export function buildAssemblyTable(summary) {
     const metricNames = ["geom", "topo", "judge", "part", "valid"];
     for (const [index, format] of ["cadquery", "openscad"].entries()) {
       const { metrics, coverage } = row.formats[format];
+      if (Math.abs(metrics.geom - row.formats[format].casewise_geometry.geom) > 1e-10) {
+        throw new Error("Assembly Geometry differs from the case-wise export");
+      }
       if (coverage.total !== 100 || coverage.tested !== 100 - coverage.api_unrun
           || coverage.tested !== coverage.valid + coverage.invalid || coverage.tested <= 0
           || Math.abs(metrics.valid - coverage.valid / coverage.tested) > 1e-8) {
@@ -206,11 +227,10 @@ export function buildAssemblyTable(summary) {
     metrics: ["Score", "USD / case", ...metricColumns],
     // The live Assembly table has no methodology footer; audits stay in JSON.
     note: "",
-    rows: [...summary.rows].sort((a, b) => b.score - a.score).map((row) => ({
-      model: row.model,
-      model_id: row.model_id,
-      family: row.family,
-      cells: `${row.score.toFixed(2)} ${row.cost_usd !== null ? `$${(row.cost_usd / 100).toFixed(3)}` : row.estimated_cost_usd != null ? `$${(row.estimated_cost_usd / 100).toFixed(3)}` : "-"} ${row.metrics}`,
-    })),
+    rows: [...summary.rows].sort((a, b) => b.score - a.score).map((row) => {
+      const cost = assemblyCostPerCase(row);
+      return { model: row.model, model_id: row.model_id, family: row.family,
+        cells: `${row.score.toFixed(2)} ${cost === null ? "-" : `$${cost.toFixed(3)}`} ${row.metrics}` };
+    }),
   };
 }

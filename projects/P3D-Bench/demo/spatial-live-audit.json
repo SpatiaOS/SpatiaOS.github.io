@@ -3148,5 +3148,310 @@
       "bytes": 72284
     }
   },
-  "part_policy": "Stored pair matches and scores; saved assembly transforms plus deterministic rigid visual alignment. No model calls or score recomputation."
+  "part_policy": "Stored 3% / 2048-point part scores and Hungarian assignments. Existing display meshes are preserved because showcase assignments are unchanged; historical display alignment used 1024 points, independently of score sampling.",
+  "metric_revision": {
+    "id": "p3d-scoring-20260916",
+    "geometry": "Normalize per case; average CD score, F@0.01, NC and measured IoU within each valid case, then average case scores within each format.",
+    "text_iou": "Omit unavailable IoU from the valid case geometry mean; retain generation-invalid cases as failures.",
+    "part_tau_fraction": 0.03,
+    "part_sample_points": 2048,
+    "part_acceptance_fscore": 0.7,
+    "part": "Mean of match F1 and F-score mean over all Hungarian pairs; no normalized part mean.",
+    "score_excludes": [
+      "topo",
+      "valid"
+    ],
+    "reported_separately": [
+      "topo",
+      "valid"
+    ],
+    "part_sampling_seed": 42,
+    "part_sampling_rng": "MT19937 legacy uniform sequence with explicit Generator",
+    "text_raw_audit_sha256": "a8273fe0e41bcac4672743c9d46e7e37061c1e29562ac4e387818ce8fb7b6c75",
+    "part_rescore_sha256": "c2708213d4311dc9389c58a01cc1dc27de6b9164da8fa3bf4c9d91611f77f361",
+    "geometry_aggregation_revision": "per-case-20260918",
+    "iou": "Omit unavailable IoU from the valid case mean, never worst-fill it. Standalone IoU averages measured values from valid outputs only, retaining measured zeros."
+  },
+  "metric_sources": [
+    {
+      "run_id": "text_image2cad_107647_af2c0a8b_cadquery_gpt6_astra_local",
+      "part_result_sha256": "025b2bccf0e801b84f1208e3c731124c6ebc7bd7c6d3f0787056f4ec6e38d7aa"
+    },
+    {
+      "run_id": "text_image2cad_107647_af2c0a8b_openscad_gpt6_astra_local",
+      "part_result_sha256": "797accaf0456e2de5fc4d453a69788f6e47369a2d8e5f8871313e5847a262182"
+    },
+    {
+      "run_id": "text_image2cad_107647_af2c0a8b_cadquery_claude_opus5",
+      "part_result_sha256": "0296c251b4adb3059d593cfbde9dfb573b08a3dfdfad96376755fd531ae32801"
+    },
+    {
+      "run_id": "text_image2cad_107647_af2c0a8b_openscad_claude_opus5",
+      "part_result_sha256": "432550e360f51ce625e34a9683b0d62e4775974a55c8eae7eb17a4276582c0a5"
+    },
+    {
+      "run_id": "text_image2cad_107647_af2c0a8b_cadquery_gemini38_flash",
+      "part_result_sha256": "955a623bde88af3795d5ce3191ac01defdef611df13063b435fc98230c327f42"
+    },
+    {
+      "run_id": "text_image2cad_107647_af2c0a8b_openscad_gemini38_flash",
+      "part_result_sha256": "d8d7cf7df2e8698471106885f500cd6cfe334d794bfa258311156d27da0df0c4"
+    },
+    {
+      "run_id": "text_image2cad_107647_af2c0a8b_cadquery_grok46",
+      "part_result_sha256": "569f97c1b48792c2567eac1e054953894f4da8bdadcb9aea669bc3e266ce9957"
+    },
+    {
+      "run_id": "text_image2cad_107647_af2c0a8b_openscad_grok46",
+      "part_result_sha256": "75cc2b8228d298fbb477a092c06485e6cd0c3f7074e253aaa9b4cb7fce0b0acc"
+    },
+    {
+      "run_id": "text_image2cad_107647_af2c0a8b_cadquery_kimi_k3",
+      "part_result_sha256": "a560ee55d5f81996e5f08a7c7468146854da60317b9de7d931aaa39ed5c27d7d"
+    },
+    {
+      "run_id": "text_image2cad_107647_af2c0a8b_cadquery_qwen38max",
+      "part_result_sha256": "466f9c82a9c2195e30c9c650d6bc208d515baa840a82ec5c22b428e3615ea0c4"
+    },
+    {
+      "run_id": "text_image2cad_107647_af2c0a8b_openscad_qwen38max",
+      "part_result_sha256": "f1073b674688fc0067b8f378d0207a70a1f03b435dbb8b5907e771c4076e4934"
+    },
+    {
+      "run_id": "text_image2cad_107647_af2c0a8b_cadquery_glm53_flash",
+      "part_result_sha256": "67c5fc29d1795f5237e246bd4537c7ccd1f8a6844ad5a26b7edd02c73884112d"
+    },
+    {
+      "run_id": "text_image2cad_107647_af2c0a8b_openscad_glm53_flash",
+      "part_result_sha256": "6d6881e683954d04c6f77e82fc8faec16fb49dafbd0e97f1aedb79ade6b13e3a"
+    },
+    {
+      "run_id": "text_image2cad_107647_af2c0a8b_cadquery_deepseek41_flash",
+      "part_result_sha256": "f06b950cedd08f8a2148c2c1ae5f055c5b2365d8e74b3034e324829a1a7c76b1"
+    },
+    {
+      "run_id": "text_image2cad_107647_af2c0a8b_openscad_deepseek41_flash",
+      "part_result_sha256": "d4283810a07b19299ba96117ae6142337f503984c73e4d3f64af8eab040f489d"
+    },
+    {
+      "run_id": "text_image2cad_107647_af2c0a8b_cadquery_doubao_seed21",
+      "part_result_sha256": "1dea858cbf1e29a20ec5a375b937cd80f09a9cec4d79c7b006b04ec3b6ae4419"
+    },
+    {
+      "run_id": "text_image2cad_107647_af2c0a8b_openscad_doubao_seed21",
+      "part_result_sha256": "f9396155f494ce2704a67622f38ed74c3d8d6f78d098cf260375771753d87a3d"
+    },
+    {
+      "run_id": "text_image2cad_132529_cdcc5d1d_cadquery_gpt6_astra_local",
+      "part_result_sha256": "1d4ae36a162384c7e81456b953ea33c7247660f74b3457acdb70d629bd00ef73"
+    },
+    {
+      "run_id": "text_image2cad_132529_cdcc5d1d_openscad_gpt6_astra_local",
+      "part_result_sha256": "3920ce1e5829a6b06a8b5a36017fda0a0a6823660af11559cc3464f062c49129"
+    },
+    {
+      "run_id": "text_image2cad_132529_cdcc5d1d_cadquery_claude_opus5",
+      "part_result_sha256": "708e235f429b0500b83e1e5304a995b7b5729c289538fe74c5b421d7cab2e7c8"
+    },
+    {
+      "run_id": "text_image2cad_132529_cdcc5d1d_openscad_claude_opus5",
+      "part_result_sha256": "12ed7b15f96b7e889f420ea73fbc56d349b23be82f9d66af1b6cbab05a59555c"
+    },
+    {
+      "run_id": "text_image2cad_132529_cdcc5d1d_cadquery_gemini38_flash",
+      "part_result_sha256": "a4f02f4d5a3c10d111bf04e88f955c1919b915f29b51ce22dc033dfc59796e65"
+    },
+    {
+      "run_id": "text_image2cad_132529_cdcc5d1d_openscad_gemini38_flash",
+      "part_result_sha256": "af3fc3389ec1af27f7a3d4891f478ec96ff30f9a5e3fc308aef7a0533d91f63c"
+    },
+    {
+      "run_id": "text_image2cad_132529_cdcc5d1d_cadquery_grok46",
+      "part_result_sha256": "911c08a3ed144a590347c85ac53b3d8eace6cc5d6ee8cb80b00479ec96d55a8f"
+    },
+    {
+      "run_id": "text_image2cad_132529_cdcc5d1d_openscad_grok46",
+      "part_result_sha256": "640386201a685870d99be2dc14740877986b5c7ae1cd6d356031a74b892aa0f2"
+    },
+    {
+      "run_id": "text_image2cad_132529_cdcc5d1d_cadquery_kimi_k3",
+      "part_result_sha256": "6a179e3640921d61a5967cd02863dc9052c7070a077103c39ccf784c2c7c5938"
+    },
+    {
+      "run_id": "text_image2cad_132529_cdcc5d1d_openscad_kimi_k3",
+      "part_result_sha256": "33ef2dacef3b30ee7b46b2c706ebca087f40af76649847f0b9659081cc0ee613"
+    },
+    {
+      "run_id": "text_image2cad_132529_cdcc5d1d_cadquery_qwen38max",
+      "part_result_sha256": "be5bf60ef26ea3e8d9bec9d6f5f2767a4eefd7edb284149f4b69894526000da0"
+    },
+    {
+      "run_id": "text_image2cad_132529_cdcc5d1d_openscad_qwen38max",
+      "part_result_sha256": "a94c6a3c1c18fa007f9ed0caf57e0ca73a377f345f4388c36749b41fbceb7cb8"
+    },
+    {
+      "run_id": "text_image2cad_132529_cdcc5d1d_openscad_glm53_flash",
+      "part_result_sha256": "ab318b52a8f74a102e0dd6f5d480ce094a32501a681afcefa7c4aa7d10f417a9"
+    },
+    {
+      "run_id": "text_image2cad_132529_cdcc5d1d_cadquery_deepseek41_flash",
+      "part_result_sha256": "d3509a82080e2b30856ca8807f1b29b1da0351b7af8e39a2ab410fb7328ead16"
+    },
+    {
+      "run_id": "text_image2cad_132529_cdcc5d1d_openscad_deepseek41_flash",
+      "part_result_sha256": "ddab84aad76f94a500dafc1fa395aae0f44a154950ba90d363f2acc120b63d8f"
+    },
+    {
+      "run_id": "text_image2cad_132529_cdcc5d1d_cadquery_doubao_seed21",
+      "part_result_sha256": "2242f4e9b739a6ca01adf1d3cd39e7bd8ba80d8fa29ac1443cf45ba5ee189e3f"
+    },
+    {
+      "run_id": "text_image2cad_132529_cdcc5d1d_openscad_doubao_seed21",
+      "part_result_sha256": "3119c96c05afe585bcded451f82ec75d88046adc7d9c200dd06a3fb47e17d97a"
+    },
+    {
+      "run_id": "text_image2cad_21805_2ba39d00_cadquery_gpt6_astra_local",
+      "part_result_sha256": "61497de90fe3b0fd2a4c3f170c9f5c2e41339795c8a3f03f8a93c9e848a5f080"
+    },
+    {
+      "run_id": "text_image2cad_21805_2ba39d00_openscad_gpt6_astra_local",
+      "part_result_sha256": "fa050617f2325a1f93a1b3127de4bb14b1240eb46bf60f5bfc23420ff919a298"
+    },
+    {
+      "run_id": "text_image2cad_21805_2ba39d00_cadquery_claude_opus5",
+      "part_result_sha256": "01eff527cf012d830f480e05427abc2ad24258552bf46884b512122b750e7a5f"
+    },
+    {
+      "run_id": "text_image2cad_21805_2ba39d00_openscad_claude_opus5",
+      "part_result_sha256": "69c39839e8a6296e854bd031da3e08f0371752f18b2776b336cdc729454e511a"
+    },
+    {
+      "run_id": "text_image2cad_21805_2ba39d00_cadquery_gemini38_flash",
+      "part_result_sha256": "6937683cd6062adeb83d8dfaec0dc76f445e61cc90e78616ffcf0c044a3146ab"
+    },
+    {
+      "run_id": "text_image2cad_21805_2ba39d00_openscad_gemini38_flash",
+      "part_result_sha256": "5ea48f032839e155018c367861bcbc9755354dd6088281d3206096f724dcb49e"
+    },
+    {
+      "run_id": "text_image2cad_21805_2ba39d00_cadquery_grok46",
+      "part_result_sha256": "784d9c0855bd8f02287689891814b2eaf30a52547692cd089c44556ab5b05771"
+    },
+    {
+      "run_id": "text_image2cad_21805_2ba39d00_openscad_grok46",
+      "part_result_sha256": "53f7c92876fc6f28225a87b27aa623611d3996539d6c64a82e699edad0da676d"
+    },
+    {
+      "run_id": "text_image2cad_21805_2ba39d00_cadquery_kimi_k3",
+      "part_result_sha256": "1073523199022ff6896321508c2ce3e861df3de922de4015d180b8234f330e00"
+    },
+    {
+      "run_id": "text_image2cad_21805_2ba39d00_openscad_kimi_k3",
+      "part_result_sha256": "9ee9dfecf14dc6d64051d1d8cefdbb717ed03e105d2986d3da6fa1e1b7d5321a"
+    },
+    {
+      "run_id": "text_image2cad_21805_2ba39d00_cadquery_qwen38max",
+      "part_result_sha256": "7b35b0740718c1db4ca316729af16293faa9239b16ba3b0dcbc01e73fd6ab967"
+    },
+    {
+      "run_id": "text_image2cad_21805_2ba39d00_openscad_qwen38max",
+      "part_result_sha256": "110b0fed1e80ec0b28cc55dfe3380dff1819981ac2a92aef4cfcc9a239fc4cc1"
+    },
+    {
+      "run_id": "text_image2cad_21805_2ba39d00_cadquery_glm53_flash",
+      "part_result_sha256": "0a5e587bf135236852f81b40dccb959dbab4d6118e9b19959726719c8571d4e8"
+    },
+    {
+      "run_id": "text_image2cad_21805_2ba39d00_openscad_glm53_flash",
+      "part_result_sha256": "74f859e2b9d327b6fe64f9c893873c04fadf12841b4d962efbac666f0dc62f3d"
+    },
+    {
+      "run_id": "text_image2cad_21805_2ba39d00_cadquery_deepseek41_flash",
+      "part_result_sha256": "25139cff4bcfd52fd69346c17cfd9822dbbbc7eada6a7b10cdd23581b537a761"
+    },
+    {
+      "run_id": "text_image2cad_21805_2ba39d00_openscad_deepseek41_flash",
+      "part_result_sha256": "80747c091feece0d061c9e23d5496758be0ad40a5e0c66655ec1874964953f02"
+    },
+    {
+      "run_id": "text_image2cad_21805_2ba39d00_cadquery_doubao_seed21",
+      "part_result_sha256": "be7bd424d0511867016a891bc8c1869a798c2a2971cb9f4d4ed0c59f6657d3ef"
+    },
+    {
+      "run_id": "text_image2cad_21805_2ba39d00_openscad_doubao_seed21",
+      "part_result_sha256": "636e7af74a10ac2e0c9e491e3585e212834cef521d16762fb43d3c3d064b0c0a"
+    },
+    {
+      "run_id": "text_image2cad_136501_56e0a877_cadquery_gpt6_astra_local",
+      "part_result_sha256": "6a6d9eeb1dc8bee5f4e9ccf5e8e7cc87f202496593868725ed58aa824d94e271"
+    },
+    {
+      "run_id": "text_image2cad_136501_56e0a877_openscad_gpt6_astra_local",
+      "part_result_sha256": "100b42b6fb428b89cf87de72df02d50d0c21ce219c3a88ba5ebba476175fc125"
+    },
+    {
+      "run_id": "text_image2cad_136501_56e0a877_cadquery_claude_opus5",
+      "part_result_sha256": "14c5de5cdcbefd10fd5013040dc94e83d149c2a066d6a0ebc23b6aa2d5d6e4ec"
+    },
+    {
+      "run_id": "text_image2cad_136501_56e0a877_openscad_claude_opus5",
+      "part_result_sha256": "4f43fa50153ed329c0798dbdec10f364f1bcfcd14ba6cea2825bca2b6fb67cfb"
+    },
+    {
+      "run_id": "text_image2cad_136501_56e0a877_cadquery_gemini38_flash",
+      "part_result_sha256": "dab0c11f0ae863be8824a0c2d67a3e764c3c5fae0558b2910a321a73671fbb32"
+    },
+    {
+      "run_id": "text_image2cad_136501_56e0a877_openscad_gemini38_flash",
+      "part_result_sha256": "bc4cd1f12e9f6d73237f7b6122e056446dacdc4e4c580d34f49669018ade2341"
+    },
+    {
+      "run_id": "text_image2cad_136501_56e0a877_cadquery_grok46",
+      "part_result_sha256": "7c811a7e0f5a700796ffe4cedebe43262a04c05450c3e938d2874de2a57466c1"
+    },
+    {
+      "run_id": "text_image2cad_136501_56e0a877_openscad_grok46",
+      "part_result_sha256": "9d8e903dade3b5a94fe14ebe90d507e1ea68147014f79c6a237875ac7361e647"
+    },
+    {
+      "run_id": "text_image2cad_136501_56e0a877_cadquery_kimi_k3",
+      "part_result_sha256": "83ad261019abb37fde80b05dfbd2dbcc706b654173e0449bff8ef31a2bd7c56e"
+    },
+    {
+      "run_id": "text_image2cad_136501_56e0a877_openscad_kimi_k3",
+      "part_result_sha256": "bdb4f13fff2b1d7fb409d30134d33fb7769b7fa37a691f156b160a1d0123bea7"
+    },
+    {
+      "run_id": "text_image2cad_136501_56e0a877_cadquery_qwen38max",
+      "part_result_sha256": "e8d02dd98590f5bd0a8c93ddecdcc20789ca2fb13ca88b27bd83d2c8249b4e52"
+    },
+    {
+      "run_id": "text_image2cad_136501_56e0a877_openscad_qwen38max",
+      "part_result_sha256": "75f406b89a5ebb08027d584a065181f6cc9ccdb0eb9ab1c73d30606da820f11e"
+    },
+    {
+      "run_id": "text_image2cad_136501_56e0a877_cadquery_glm53_flash",
+      "part_result_sha256": "4cc93afea2d8d899c13b6b5becc7d29bfdebd2428e42587d1149b7380c8f28c7"
+    },
+    {
+      "run_id": "text_image2cad_136501_56e0a877_openscad_glm53_flash",
+      "part_result_sha256": "04e92a23b3811fa6131570e007c3a42b66e59b2ad6c49442f524a70c8f0743b0"
+    },
+    {
+      "run_id": "text_image2cad_136501_56e0a877_cadquery_deepseek41_flash",
+      "part_result_sha256": "8c8272699d15870e81c247f12b68dead549e52cd24ccb9ac0fd85eacbfde3b46"
+    },
+    {
+      "run_id": "text_image2cad_136501_56e0a877_openscad_deepseek41_flash",
+      "part_result_sha256": "958049eb28781533f7a9f833a8c7f43cc680330c0b0f4dc28558abb9905448a1"
+    },
+    {
+      "run_id": "text_image2cad_136501_56e0a877_cadquery_doubao_seed21",
+      "part_result_sha256": "2a6f6005dc7676665ee5361a34b8622a9a2709f37b19c2dd5b469134ed7d19df"
+    },
+    {
+      "run_id": "text_image2cad_136501_56e0a877_openscad_doubao_seed21",
+      "part_result_sha256": "dfeaaea3e9a510d455fc3803d7e4684f7201900dadc742170ef473ffca3fdfec"
+    }
+  ]
 }

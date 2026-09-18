@@ -1,5 +1,5 @@
 export const IMAGE_MODELS = ["gpt6_astra_local", "gemini38_flash", "claude_opus5", "kimi_k3",
-  "qwen38max", "grok46", "glm53_flash", "deepseek41_flash", "doubao_seed21"];
+  "grok46", "qwen38max", "glm53_flash", "deepseek41_flash", "doubao_seed21"];
 const FORMATS = ["cadquery", "openscad", "threejs"];
 const AXES = ["geom", "topo", "judge"];
 
@@ -59,6 +59,9 @@ export function buildAdditionalFormatTables(rows = [], task) {
 }
 
 export function buildImageTable(summary) {
+  if (summary.scoring_revision?.geometry_aggregation_revision !== "per-case-20260918") {
+    throw new Error("Image requires the accepted per-case Geometry export");
+  }
   if (summary.schema_version !== "p3d-live-image-summary-v1"
       || summary.format_order?.join() !== FORMATS.join()
       || summary.rows?.length !== IMAGE_MODELS.length) throw new Error("expected Image Hard100 summary");
@@ -80,6 +83,7 @@ export function buildImageTable(summary) {
         const counts = row.format_detail[fmt].counts;
         coverage(counts, 100);
         close(values.valid, counts.valid / counts.tested, "export validity", 0.00005000001);
+        close(values.geom, row.format_detail[fmt].casewise_geometry.geom, "case-wise Geometry export");
       }
     }
     coverage(row.counts, 300);
@@ -97,7 +101,25 @@ export function buildImageTable(summary) {
       .concat(Array.from({ length: 4 }, () => ["Geo", "Topo", "Judge", "Valid"]).flat(), ["Tested", "Judged"]),
     rows: [...summary.rows].sort((a, b) => b.score - a.score).map(row => ({ model: row.model,
       model_id: row.model_id, family: row.family,
-      cells: `${row.score.toFixed(2)} ${cost(row.cost_usd_per_case, row.counts)} ${row.metrics} ${row.counts.tested}/300 ${row.counts.judge_ok}/${row.counts.valid}` })),
+      cells: `${row.score.toFixed(2)} ${cost(row.cost_usd_per_case, row.counts)} ${row.metrics} ${row.counts.tested}/300 ${row.counts.judge_ok}/${row.counts.valid}` }))
+      .concat(imageBaselineRows(summary.domain_baselines)),
     note: "",
   };
+}
+
+export function imageBaselineRows(rows = []) {
+  const seen = new Set();
+  return rows.map(row => {
+    if (!["cadrille", "cadcoder"].includes(row.model_id) || seen.has(row.model_id) || row.format !== "cadquery") {
+      throw new Error("unexpected Image native baseline");
+    }
+    seen.add(row.model_id);
+    for (const key of ["geom", "topo", "judge", "valid"]) normalized(row.metrics[key]);
+    close(row.score, 50 * (row.metrics.geom + row.metrics.judge), "native Image score");
+    close(row.metrics.valid, row.coverage.valid / row.coverage.tested, "native Image validity", 0.00005);
+    const metrics = ["geom", "topo", "judge", "valid"].map(key => row.metrics[key].toFixed(3));
+    return { model: row.model, model_id: row.model_id, family: "domain",
+      cells: [row.score.toFixed(2), "-", ...metrics, ...Array(12).fill("-"),
+        `${row.coverage.tested}/${row.coverage.expected}`, `${row.coverage.judge_ok}/${row.coverage.valid}`].join(" ") };
+  });
 }

@@ -47,13 +47,16 @@
       "id": "glm53_official",
       "label": "GLM-5.3",
       "family": "zai",
-      "color": "#B0C2B8"
+      "color": "#B0C2B8",
+      "icon_family": "zai"
     },
     {
       "id": "glm53_flash",
       "label": "GLM-5.3-Flash",
-      "family": "zai",
-      "color": "#B0C2B8"
+      "family": "zai_flash",
+      "color": "#F0D36F",
+      "icon_family": "zai",
+      "figure_family": "zai"
     },
     {
       "id": "deepseek41_flash",
@@ -73,15 +76,15 @@
       "id": "assembly",
       "label": "Assembly-3D",
       "scores": {
-        "gpt6_astra_local": 63.22054012345679,
-        "claude_opus5": 53.68026234567901,
-        "gemini38_flash": 52.54314814814814,
-        "kimi_k3": 50.02933641975308,
-        "grok46": 49.75635802469135,
-        "qwen38max": 49.01050925925926,
-        "glm53_flash": 48.23135802469135,
-        "deepseek41_flash": 47.029027777777785,
-        "doubao_seed21": 29.135632716049386
+        "gpt6_astra_local": 63.45125472275437,
+        "claude_opus5": 54.201985777578656,
+        "gemini38_flash": 53.156284502672776,
+        "kimi_k3": 50.762165147823254,
+        "grok46": 50.68789440318022,
+        "qwen38max": 49.737854056437385,
+        "glm53_flash": 48.844795074087806,
+        "deepseek41_flash": 47.488879546051535,
+        "doubao_seed21": 29.69894622615039
       },
       "result_version": "Current models",
       "source_kind": "release_snapshot_three_axis_judge",
@@ -94,14 +97,15 @@
       "label": "Text-to-3D",
       "scores": {
         "gpt6_astra_local": 84.7271962962963,
-        "claude_opus5": 81.1263375,
         "gemini38_flash": 82.10315740740741,
-        "kimi_k3": 81.72546805555557,
-        "grok46": 81.39750787037036,
         "qwen38max": 82.3836425925926,
+        "grok46": 81.39750787037036,
+        "kimi_k3": 81.72546805555557,
+        "claude_opus5": 81.1263375,
         "glm53_official": 80.27487731481482,
         "deepseek41_flash": 80.12996759259259,
-        "doubao_seed21": 79.16908703703703
+        "doubao_seed21": 79.16908703703703,
+        "glm53_flash": 76.35220462962963
       },
       "result_version": "Current models",
       "source_kind": "fixed100_recomputed",
@@ -112,15 +116,15 @@
       "id": "image",
       "label": "Image-to-3D",
       "scores": {
-        "gpt6_astra_local": 58.517546296296295,
-        "claude_opus5": 50.79597222222222,
-        "gemini38_flash": 51.67375,
-        "kimi_k3": 49.41600308641975,
-        "grok46": 48.34637345679012,
-        "qwen38max": 48.49160493827161,
-        "glm53_flash": 48.009182098765436,
-        "deepseek41_flash": 45.43621913580247,
-        "doubao_seed21": 37.92362654320988
+        "gpt6_astra_local": 59.90981428133833,
+        "gemini38_flash": 53.7036400462963,
+        "claude_opus5": 52.61410190284521,
+        "kimi_k3": 51.12009018132716,
+        "grok46": 50.30477241631666,
+        "qwen38max": 50.23509389517309,
+        "glm53_flash": 49.76867136291683,
+        "deepseek41_flash": 47.01183917548501,
+        "doubao_seed21": 39.514693813131316
       },
       "result_version": "Current models",
       "source_kind": "release_snapshot_three_axis_judge",
@@ -206,7 +210,7 @@
   },
   "scoring_revision": {
     "id": "p3d-scoring-20260916",
-    "geometry": "Mean of F@0.01, NC, normalized CD and applicable IoU; F@0.05 is auxiliary only.",
+    "geometry": "Normalize per case; average CD score, F@0.01, NC and measured IoU within each valid case, then average case scores within each format.",
     "text_iou": "Omit unavailable IoU from the valid case geometry mean; retain generation-invalid cases as failures.",
     "part_tau_fraction": 0.03,
     "part_sample_points": 2048,

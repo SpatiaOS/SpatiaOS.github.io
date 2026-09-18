@@ -139,6 +139,10 @@
         "judge_geometry": 6,
         "judge_aesthetics": 7,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.58375,
+        "judge": 0.6296296296296297
       }
     },
     {
@@ -171,6 +175,10 @@
         "judge_geometry": 6,
         "judge_aesthetics": 7,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.49735,
+        "judge": 0.6296296296296297
       }
     },
     {
@@ -203,6 +211,10 @@
         "judge_geometry": 6,
         "judge_aesthetics": 7,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.565025,
+        "judge": 0.6296296296296297
       }
     },
     {
@@ -235,6 +247,10 @@
         "judge_geometry": 5,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.48515,
+        "judge": 0.5555555555555556
       }
     },
     {
@@ -267,6 +283,10 @@
         "judge_geometry": 5,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.515325,
+        "judge": 0.5555555555555556
       }
     },
     {
@@ -299,6 +319,10 @@
         "judge_geometry": 5,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.4873,
+        "judge": 0.5555555555555556
       }
     },
     {
@@ -331,6 +355,10 @@
         "judge_geometry": 6,
         "judge_aesthetics": 7,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.377075,
+        "judge": 0.6296296296296297
       }
     },
     {
@@ -363,6 +391,10 @@
         "judge_geometry": 5,
         "judge_aesthetics": 7,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.36935,
+        "judge": 0.5925925925925926
       }
     },
     {
@@ -394,6 +426,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 5,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.5532666666666667,
+        "judge": 0.48148148148148145
       }
     },
     {
@@ -414,7 +450,7 @@
         "input_image": "spatial_live_v1/assets/b7a9becd7ef7490d28469e2d3b114fd2d661e5834e71a8f6efef24f7ea4528b5.png"
       },
       "metrics": {
-        "chamfer_distance": 0.01094,
+        "chamfer_distance": 0.01,
         "hausdorff_distance": 0.408108,
         "f_score_005": 0.4396,
         "f_score_001": 0.092,
@@ -426,6 +462,11 @@
         "judge_geometry": 3,
         "judge_aesthetics": 3,
         "judge_semantic": 3
+      },
+      "raw_chamfer_distance": 0.01094,
+      "buckets": {
+        "geo": 0.160225,
+        "judge": 0.2222222222222222
       }
     },
     {
@@ -458,6 +499,10 @@
         "judge_geometry": 5,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.263525,
+        "judge": 0.5555555555555556
       }
     },
     {
@@ -490,6 +535,10 @@
         "judge_geometry": 5,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.309325,
+        "judge": 0.5555555555555556
       }
     },
     {
@@ -522,6 +571,10 @@
         "judge_geometry": 5,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.36710000000000004,
+        "judge": 0.5555555555555556
       }
     },
     {
@@ -554,6 +607,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.336675,
+        "judge": 0.5185185185185185
       }
     },
     {
@@ -586,6 +643,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.516,
+        "judge": 0.5185185185185185
       }
     },
     {
@@ -618,6 +679,10 @@
         "judge_geometry": 5,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.44722500000000004,
+        "judge": 0.5555555555555556
       }
     },
     {
@@ -650,6 +715,10 @@
         "judge_geometry": 5,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.468025,
+        "judge": 0.5555555555555556
       }
     },
     {
@@ -682,6 +751,10 @@
         "judge_geometry": 5,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.4892,
+        "judge": 0.5555555555555556
       }
     },
     {
@@ -714,6 +787,10 @@
         "judge_geometry": 5,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.25295,
+        "judge": 0.5555555555555556
       }
     },
     {
@@ -746,6 +823,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 5,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.425025,
+        "judge": 0.48148148148148145
       }
     },
     {
@@ -778,6 +859,10 @@
         "judge_geometry": 5,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.4611,
+        "judge": 0.5555555555555556
       }
     },
     {
@@ -810,6 +895,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.307875,
+        "judge": 0.5185185185185185
       }
     },
     {
@@ -842,6 +931,10 @@
         "judge_geometry": 5,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.339825,
+        "judge": 0.5555555555555556
       }
     },
     {
@@ -874,6 +967,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.462025,
+        "judge": 0.5185185185185185
       }
     },
     {
@@ -906,6 +1003,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 5,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.34935,
+        "judge": 0.48148148148148145
       }
     },
     {
@@ -938,6 +1039,10 @@
         "judge_geometry": 3,
         "judge_aesthetics": 4,
         "judge_semantic": 5
+      },
+      "buckets": {
+        "geo": 0.25382499999999997,
+        "judge": 0.3333333333333333
       }
     },
     {
@@ -970,6 +1075,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 5,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.238425,
+        "judge": 0.48148148148148145
       }
     },
     {
@@ -1002,6 +1111,10 @@
         "judge_geometry": 5,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.514825,
+        "judge": 0.5555555555555556
       }
     },
     {
@@ -1034,6 +1147,10 @@
         "judge_geometry": 6,
         "judge_aesthetics": 7,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.4209,
+        "judge": 0.6296296296296297
       }
     },
     {
@@ -1066,6 +1183,10 @@
         "judge_geometry": 6,
         "judge_aesthetics": 7,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.517375,
+        "judge": 0.6296296296296297
       }
     },
     {
@@ -1097,6 +1218,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 5,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.2543666666666667,
+        "judge": 0.48148148148148145
       }
     },
     {
@@ -1129,6 +1254,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.214175,
+        "judge": 0.5185185185185185
       }
     },
     {
@@ -1161,6 +1290,10 @@
         "judge_geometry": 5,
         "judge_aesthetics": 7,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.17435,
+        "judge": 0.5925925925925926
       }
     },
     {
@@ -1193,6 +1326,10 @@
         "judge_geometry": 5,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.47575,
+        "judge": 0.5555555555555556
       }
     },
     {
@@ -1225,6 +1362,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.23915000000000003,
+        "judge": 0.5185185185185185
       }
     },
     {
@@ -1257,6 +1398,10 @@
         "judge_geometry": 5,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.427025,
+        "judge": 0.5555555555555556
       }
     },
     {
@@ -1277,7 +1422,7 @@
         "input_image": "spatial_live_v1/assets/bdb5773bea3a48b6ec0af209f11fac5f1be3497508e25c351266230c80f1a06a.png"
       },
       "metrics": {
-        "chamfer_distance": 0.014247,
+        "chamfer_distance": 0.01,
         "hausdorff_distance": 0.619348,
         "f_score_005": 0.3116,
         "f_score_001": 0.0719,
@@ -1288,6 +1433,11 @@
         "judge_geometry": 3,
         "judge_aesthetics": 3,
         "judge_semantic": 4
+      },
+      "raw_chamfer_distance": 0.014247,
+      "buckets": {
+        "geo": 0.16173333333333334,
+        "judge": 0.25925925925925924
       }
     },
     {
@@ -1320,6 +1470,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.379,
+        "judge": 0.5185185185185185
       }
     },
     {
@@ -1351,6 +1505,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.2589666666666667,
+        "judge": 0.5185185185185185
       }
     },
     {
@@ -1383,6 +1541,10 @@
         "judge_geometry": 5,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.35105,
+        "judge": 0.5555555555555556
       }
     },
     {
@@ -1415,6 +1577,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.2089,
+        "judge": 0.5185185185185185
       }
     },
     {
@@ -1447,6 +1613,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.286925,
+        "judge": 0.5185185185185185
       }
     },
     {
@@ -1479,6 +1649,10 @@
         "judge_geometry": 5,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.409125,
+        "judge": 0.5555555555555556
       }
     },
     {
@@ -1511,6 +1685,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 5,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.35309999999999997,
+        "judge": 0.48148148148148145
       }
     },
     {
@@ -1543,6 +1721,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.45594999999999997,
+        "judge": 0.5185185185185185
       }
     },
     {
@@ -1575,6 +1757,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 5,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.37845,
+        "judge": 0.48148148148148145
       }
     },
     {
@@ -1607,6 +1793,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.33625,
+        "judge": 0.5185185185185185
       }
     },
     {
@@ -1638,6 +1828,10 @@
         "judge_geometry": 5,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.38606666666666667,
+        "judge": 0.5555555555555556
       }
     },
     {
@@ -1670,6 +1864,10 @@
         "judge_geometry": 3,
         "judge_aesthetics": 4,
         "judge_semantic": 5
+      },
+      "buckets": {
+        "geo": 0.22517500000000001,
+        "judge": 0.3333333333333333
       }
     },
     {
@@ -1702,6 +1900,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.39732500000000004,
+        "judge": 0.5185185185185185
       }
     },
     {
@@ -1734,6 +1936,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 6,
         "judge_semantic": 6
+      },
+      "buckets": {
+        "geo": 0.255575,
+        "judge": 0.4814814814814815
       }
     },
     {
@@ -1766,6 +1972,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 4,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.288725,
+        "judge": 0.4444444444444444
       }
     },
     {
@@ -1798,6 +2008,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.168375,
+        "judge": 0.5185185185185185
       }
     },
     {
@@ -1830,6 +2044,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 5,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.170425,
+        "judge": 0.48148148148148145
       }
     },
     {
@@ -1861,6 +2079,10 @@
         "judge_geometry": 5,
         "judge_aesthetics": 7,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.4783,
+        "judge": 0.5925925925925926
       }
     },
     {
@@ -1892,6 +2114,10 @@
         "judge_geometry": 5,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.5,
+        "judge": 0.5555555555555556
       }
     },
     {
@@ -1923,6 +2149,10 @@
         "judge_geometry": 6,
         "judge_aesthetics": 7,
         "judge_semantic": 8
+      },
+      "buckets": {
+        "geo": 0.5128333333333334,
+        "judge": 0.6666666666666666
       }
     },
     {
@@ -1954,6 +2184,10 @@
         "judge_geometry": 5,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.49420000000000003,
+        "judge": 0.5555555555555556
       }
     },
     {
@@ -1985,6 +2219,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.44303333333333333,
+        "judge": 0.5185185185185185
       }
     },
     {
@@ -2016,6 +2254,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.44936666666666664,
+        "judge": 0.5185185185185185
       }
     },
     {
@@ -2047,6 +2289,10 @@
         "judge_geometry": 5,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.47673333333333334,
+        "judge": 0.5555555555555556
       }
     },
     {
@@ -2078,6 +2324,10 @@
         "judge_geometry": 5,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.47576666666666667,
+        "judge": 0.5555555555555556
       }
     },
     {
@@ -2109,6 +2359,10 @@
         "judge_geometry": 5,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.47676666666666667,
+        "judge": 0.5555555555555556
       }
     },
     {
@@ -2140,6 +2394,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 5,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.4643666666666667,
+        "judge": 0.48148148148148145
       }
     },
     {
@@ -2171,6 +2429,10 @@
         "judge_geometry": 5,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.4892666666666667,
+        "judge": 0.5555555555555556
       }
     },
     {
@@ -2202,6 +2464,10 @@
         "judge_geometry": 5,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.4779,
+        "judge": 0.5555555555555556
       }
     },
     {
@@ -2233,6 +2499,10 @@
         "judge_geometry": 5,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.4862333333333333,
+        "judge": 0.5555555555555556
       }
     },
     {
@@ -2264,6 +2534,10 @@
         "judge_geometry": 5,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.4834333333333333,
+        "judge": 0.5555555555555556
       }
     },
     {
@@ -2295,6 +2569,10 @@
         "judge_geometry": 5,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.47533333333333333,
+        "judge": 0.5555555555555556
       }
     },
     {
@@ -2315,7 +2593,7 @@
         "input_image": "spatial_live_v1/assets/4f6c08b26a321ff4f852d2d90bd360557e3eef4b60324c4b23561d0b8ff880c3.png"
       },
       "metrics": {
-        "chamfer_distance": 0.032679,
+        "chamfer_distance": 0.01,
         "hausdorff_distance": 0.443355,
         "f_score_005": 0.0901,
         "f_score_001": 0.0111,
@@ -2326,6 +2604,11 @@
         "judge_geometry": 3,
         "judge_aesthetics": 3,
         "judge_semantic": 3
+      },
+      "raw_chamfer_distance": 0.032679,
+      "buckets": {
+        "geo": 0.16916666666666666,
+        "judge": 0.2222222222222222
       }
     },
     {
@@ -2357,6 +2640,10 @@
         "judge_geometry": 5,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.4423,
+        "judge": 0.5555555555555556
       }
     },
     {
@@ -2388,6 +2675,10 @@
         "judge_geometry": 5,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.40576666666666666,
+        "judge": 0.5555555555555556
       }
     },
     {
@@ -2419,6 +2710,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.5118,
+        "judge": 0.5185185185185185
       }
     },
     {
@@ -2450,6 +2745,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.45743333333333336,
+        "judge": 0.5185185185185185
       }
     },
     {
@@ -2481,6 +2780,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.5065666666666667,
+        "judge": 0.5185185185185185
       }
     },
     {
@@ -2512,6 +2815,10 @@
         "judge_geometry": 5,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.4437333333333333,
+        "judge": 0.5555555555555556
       }
     },
     {
@@ -2543,6 +2850,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.5149666666666667,
+        "judge": 0.5185185185185185
       }
     },
     {
@@ -2574,6 +2885,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.4497333333333333,
+        "judge": 0.5185185185185185
       }
     },
     {
@@ -2605,6 +2920,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.4517333333333333,
+        "judge": 0.5185185185185185
       }
     },
     {
@@ -2636,6 +2955,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 5,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.44193333333333334,
+        "judge": 0.48148148148148145
       }
     },
     {
@@ -2667,6 +2990,10 @@
         "judge_geometry": 5,
         "judge_aesthetics": 5,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.4582,
+        "judge": 0.5185185185185185
       }
     },
     {
@@ -2698,6 +3025,10 @@
         "judge_geometry": 6,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.559,
+        "judge": 0.5925925925925926
       }
     },
     {
@@ -2729,6 +3060,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.46309999999999996,
+        "judge": 0.5185185185185185
       }
     },
     {
@@ -2760,6 +3095,10 @@
         "judge_geometry": 6,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.5187666666666667,
+        "judge": 0.5925925925925926
       }
     },
     {
@@ -2780,7 +3119,7 @@
         "input_image": "spatial_live_v1/assets/a61e90eb4035fbf1c3847d1847f673aa20d2a30a0e9d89ac63a0aabc6a8cceae.png"
       },
       "metrics": {
-        "chamfer_distance": 0.010948,
+        "chamfer_distance": 0.01,
         "hausdorff_distance": 0.297735,
         "f_score_005": 0.3652,
         "f_score_001": 0.0737,
@@ -2791,6 +3130,11 @@
         "judge_geometry": 3,
         "judge_aesthetics": 3,
         "judge_semantic": 3
+      },
+      "raw_chamfer_distance": 0.010948,
+      "buckets": {
+        "geo": 0.17123333333333335,
+        "judge": 0.2222222222222222
       }
     },
     {
@@ -2822,6 +3166,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 5,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.46963333333333335,
+        "judge": 0.48148148148148145
       }
     },
     {
@@ -2853,6 +3201,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.5168333333333334,
+        "judge": 0.5185185185185185
       }
     },
     {
@@ -2884,6 +3236,10 @@
         "judge_geometry": 5,
         "judge_aesthetics": 5,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.46373333333333333,
+        "judge": 0.5185185185185185
       }
     },
     {
@@ -2915,6 +3271,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 5,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.43333333333333335,
+        "judge": 0.48148148148148145
       }
     },
     {
@@ -2946,6 +3306,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 4,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.3762666666666667,
+        "judge": 0.4444444444444444
       }
     },
     {
@@ -2977,6 +3341,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 5,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.4835,
+        "judge": 0.48148148148148145
       }
     },
     {
@@ -3008,6 +3376,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 5,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.4697,
+        "judge": 0.48148148148148145
       }
     },
     {
@@ -3039,6 +3411,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 5,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.4961333333333333,
+        "judge": 0.48148148148148145
       }
     },
     {
@@ -3070,6 +3446,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.46090000000000003,
+        "judge": 0.5185185185185185
       }
     },
     {
@@ -3101,6 +3481,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.45786666666666664,
+        "judge": 0.5185185185185185
       }
     },
     {
@@ -3132,6 +3516,10 @@
         "judge_geometry": 3,
         "judge_aesthetics": 3,
         "judge_semantic": 3
+      },
+      "buckets": {
+        "geo": 0.25383333333333336,
+        "judge": 0.2222222222222222
       }
     },
     {
@@ -3163,6 +3551,10 @@
         "judge_geometry": 5,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.4206,
+        "judge": 0.5555555555555556
       }
     },
     {
@@ -3194,6 +3586,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 5,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.4108333333333334,
+        "judge": 0.48148148148148145
       }
     },
     {
@@ -3225,6 +3621,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 5,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.46726666666666666,
+        "judge": 0.48148148148148145
       }
     },
     {
@@ -3256,6 +3656,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.45766666666666667,
+        "judge": 0.5185185185185185
       }
     },
     {
@@ -3287,6 +3691,10 @@
         "judge_geometry": 5,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.4663,
+        "judge": 0.5555555555555556
       }
     },
     {
@@ -3318,6 +3726,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.4528,
+        "judge": 0.5185185185185185
       }
     },
     {
@@ -3349,6 +3761,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 5,
         "judge_semantic": 6
+      },
+      "buckets": {
+        "geo": 0.42083333333333334,
+        "judge": 0.4444444444444444
       }
     },
     {
@@ -3380,6 +3796,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.47753333333333337,
+        "judge": 0.5185185185185185
       }
     },
     {
@@ -3411,6 +3831,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.4630666666666667,
+        "judge": 0.5185185185185185
       }
     },
     {
@@ -3442,6 +3866,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 5,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.4664666666666667,
+        "judge": 0.48148148148148145
       }
     },
     {
@@ -3473,6 +3901,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 5,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.4623,
+        "judge": 0.48148148148148145
       }
     },
     {
@@ -3504,6 +3936,10 @@
         "judge_geometry": 4,
         "judge_aesthetics": 5,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.4685,
+        "judge": 0.48148148148148145
       }
     },
     {
@@ -3536,8 +3972,13 @@
         "judge_geometry": 6,
         "judge_aesthetics": 7,
         "judge_semantic": 7,
-        "part_match_f1": 0.8889,
-        "part_fscore_mean": 0.8869951173122573
+        "part_match_f1": 0.6667,
+        "part_fscore_mean": 0.7709132267997897
+      },
+      "buckets": {
+        "geo": 0.8377749999999999,
+        "judge": 0.6296296296296297,
+        "part": 0.7188066133998948
       }
     },
     {
@@ -3570,8 +4011,13 @@
         "judge_geometry": 7,
         "judge_aesthetics": 7,
         "judge_semantic": 7,
-        "part_match_f1": 0.8,
-        "part_fscore_mean": 0.7625386138139361
+        "part_match_f1": 0.6,
+        "part_fscore_mean": 0.6603406886194905
+      },
+      "buckets": {
+        "geo": 0.8209,
+        "judge": 0.6666666666666666,
+        "part": 0.6301703443097453
       }
     },
     {
@@ -3604,8 +4050,13 @@
         "judge_geometry": 6,
         "judge_aesthetics": 6,
         "judge_semantic": 7,
-        "part_match_f1": 0.8889,
-        "part_fscore_mean": 0.9238899155648751
+        "part_match_f1": 0.6667,
+        "part_fscore_mean": 0.7449143517062903
+      },
+      "buckets": {
+        "geo": 0.492575,
+        "judge": 0.5925925925925926,
+        "part": 0.7058071758531451
       }
     },
     {
@@ -3638,8 +4089,13 @@
         "judge_geometry": 5,
         "judge_aesthetics": 6,
         "judge_semantic": 7,
-        "part_match_f1": 1.0,
-        "part_fscore_mean": 0.9325265385915438
+        "part_match_f1": 0.8,
+        "part_fscore_mean": 0.785817816172271
+      },
+      "buckets": {
+        "geo": 0.521975,
+        "judge": 0.5555555555555556,
+        "part": 0.7929089080861356
       }
     },
     {
@@ -3672,8 +4128,13 @@
         "judge_geometry": 4,
         "judge_aesthetics": 5,
         "judge_semantic": 6,
-        "part_match_f1": 0.9091,
-        "part_fscore_mean": 0.9031183198498061
+        "part_match_f1": 0.3636,
+        "part_fscore_mean": 0.7122551379364791
+      },
+      "buckets": {
+        "geo": 0.51135,
+        "judge": 0.4444444444444444,
+        "part": 0.5379275689682396
       }
     },
     {
@@ -3707,7 +4168,12 @@
         "judge_aesthetics": 6,
         "judge_semantic": 7,
         "part_match_f1": 0.7273,
-        "part_fscore_mean": 0.8825445387977645
+        "part_fscore_mean": 0.7747529880151109
+      },
+      "buckets": {
+        "geo": 0.428575,
+        "judge": 0.5555555555555556,
+        "part": 0.7510264940075555
       }
     },
     {
@@ -3740,8 +4206,13 @@
         "judge_geometry": 4,
         "judge_aesthetics": 5,
         "judge_semantic": 7,
-        "part_match_f1": 1.0,
-        "part_fscore_mean": 0.89257364309519
+        "part_match_f1": 0.2,
+        "part_fscore_mean": 0.5674304324651934
+      },
+      "buckets": {
+        "geo": 0.5248499999999999,
+        "judge": 0.48148148148148145,
+        "part": 0.38371521623259675
       }
     },
     {
@@ -3774,8 +4245,13 @@
         "judge_geometry": 4,
         "judge_aesthetics": 5,
         "judge_semantic": 6,
-        "part_match_f1": 0.1538,
-        "part_fscore_mean": 0.4358215242916887
+        "part_match_f1": 0.0,
+        "part_fscore_mean": 0.32552565219300433
+      },
+      "buckets": {
+        "geo": 0.30012500000000003,
+        "judge": 0.4444444444444444,
+        "part": 0.16276282609650217
       }
     },
     {
@@ -3808,8 +4284,13 @@
         "judge_geometry": 5,
         "judge_aesthetics": 6,
         "judge_semantic": 7,
-        "part_match_f1": 0.7273,
-        "part_fscore_mean": 0.8182136424764591
+        "part_match_f1": 0.3636,
+        "part_fscore_mean": 0.656907875734868
+      },
+      "buckets": {
+        "geo": 0.471875,
+        "judge": 0.5555555555555556,
+        "part": 0.510253937867434
       }
     },
     {
@@ -3842,6 +4323,11 @@
         "judge_geometry": 4,
         "judge_aesthetics": 6,
         "judge_semantic": 7
+      },
+      "buckets": {
+        "geo": 0.479375,
+        "judge": 0.5185185185185185,
+        "part": null
       }
     },
     {
@@ -3874,8 +4360,13 @@
         "judge_geometry": 4,
         "judge_aesthetics": 5,
         "judge_semantic": 6,
-        "part_match_f1": 1.0,
-        "part_fscore_mean": 0.9439698007115265
+        "part_match_f1": 0.6,
+        "part_fscore_mean": 0.6916886164380394
+      },
+      "buckets": {
+        "geo": 0.439525,
+        "judge": 0.4444444444444444,
+        "part": 0.6458443082190197
       }
     },
     {
@@ -3908,8 +4399,13 @@
         "judge_geometry": 4,
         "judge_aesthetics": 6,
         "judge_semantic": 7,
-        "part_match_f1": 0.8889,
-        "part_fscore_mean": 0.9149425783168963
+        "part_match_f1": 0.4444,
+        "part_fscore_mean": 0.6492830763838693
+      },
+      "buckets": {
+        "geo": 0.475575,
+        "judge": 0.5185185185185185,
+        "part": 0.5468415381919347
       }
     },
     {
@@ -3942,8 +4438,13 @@
         "judge_geometry": 5,
         "judge_aesthetics": 6,
         "judge_semantic": 7,
-        "part_match_f1": 0.9091,
-        "part_fscore_mean": 0.8276123378544424
+        "part_match_f1": 0.0,
+        "part_fscore_mean": 0.5081561407854506
+      },
+      "buckets": {
+        "geo": 0.547525,
+        "judge": 0.5555555555555556,
+        "part": 0.2540780703927253
       }
     },
     {
@@ -3976,8 +4477,13 @@
         "judge_geometry": 5,
         "judge_aesthetics": 6,
         "judge_semantic": 7,
-        "part_match_f1": 1.0,
-        "part_fscore_mean": 0.93344578374922
+        "part_match_f1": 0.8,
+        "part_fscore_mean": 0.8595686357435282
+      },
+      "buckets": {
+        "geo": 0.622475,
+        "judge": 0.5555555555555556,
+        "part": 0.8297843178717641
       }
     },
     {
@@ -4010,8 +4516,13 @@
         "judge_geometry": 4,
         "judge_aesthetics": 6,
         "judge_semantic": 7,
-        "part_match_f1": 0.6667,
-        "part_fscore_mean": 0.8546163762938647
+        "part_match_f1": 0.4444,
+        "part_fscore_mean": 0.6128654647208112
+      },
+      "buckets": {
+        "geo": 0.522925,
+        "judge": 0.5185185185185185,
+        "part": 0.5286327323604056
       }
     },
     {
@@ -4044,8 +4555,13 @@
         "judge_geometry": 4,
         "judge_aesthetics": 5,
         "judge_semantic": 6,
-        "part_match_f1": 0.6667,
-        "part_fscore_mean": 0.8606540895497317
+        "part_match_f1": 0.4444,
+        "part_fscore_mean": 0.5926297149820262
+      },
+      "buckets": {
+        "geo": 0.53785,
+        "judge": 0.4444444444444444,
+        "part": 0.5185148574910131
       }
     },
     {
@@ -4078,8 +4594,13 @@
         "judge_geometry": 3,
         "judge_aesthetics": 4,
         "judge_semantic": 5,
-        "part_match_f1": 0.2,
-        "part_fscore_mean": 0.5255870495990862
+        "part_match_f1": 0.0,
+        "part_fscore_mean": 0.31028329630719553
+      },
+      "buckets": {
+        "geo": 0.445825,
+        "judge": 0.3333333333333333,
+        "part": 0.15514164815359777
       }
     },
     {
@@ -4112,8 +4633,13 @@
         "judge_geometry": 3,
         "judge_aesthetics": 4,
         "judge_semantic": 5,
-        "part_match_f1": 0.6,
-        "part_fscore_mean": 0.7689309340132519
+        "part_match_f1": 0.2,
+        "part_fscore_mean": 0.5401336158784986
+      },
+      "buckets": {
+        "geo": 0.467425,
+        "judge": 0.3333333333333333,
+        "part": 0.3700668079392493
       }
     },
     {
@@ -4147,7 +4673,12 @@
         "judge_aesthetics": 6,
         "judge_semantic": 7,
         "part_match_f1": 0.4,
-        "part_fscore_mean": 1.0
+        "part_fscore_mean": 0.9991046384128927
+      },
+      "buckets": {
+        "geo": 0.946325,
+        "judge": 0.6296296296296297,
+        "part": 0.6995523192064463
       }
     },
     {
@@ -4181,7 +4712,12 @@
         "judge_aesthetics": 5,
         "judge_semantic": 7,
         "part_match_f1": 0.375,
-        "part_fscore_mean": 0.7746104277575742
+        "part_fscore_mean": 0.7678574839183135
+      },
+      "buckets": {
+        "geo": 0.94355,
+        "judge": 0.48148148148148145,
+        "part": 0.5714287419591568
       }
     },
     {
@@ -4215,7 +4751,12 @@
         "judge_aesthetics": 5,
         "judge_semantic": 7,
         "part_match_f1": 0.6667,
-        "part_fscore_mean": 0.9999185800358248
+        "part_fscore_mean": 0.9994302391131845
+      },
+      "buckets": {
+        "geo": 0.94315,
+        "judge": 0.5185185185185185,
+        "part": 0.8330651195565922
       }
     },
     {
@@ -4249,7 +4790,12 @@
         "judge_aesthetics": 6,
         "judge_semantic": 7,
         "part_match_f1": 0.4444,
-        "part_fscore_mean": 0.7929282333404376
+        "part_fscore_mean": 0.7528488004221473
+      },
+      "buckets": {
+        "geo": 0.946225,
+        "judge": 0.5555555555555556,
+        "part": 0.5986244002110737
       }
     },
     {
@@ -4283,7 +4829,12 @@
         "judge_aesthetics": 6,
         "judge_semantic": 7,
         "part_match_f1": 0.7368,
-        "part_fscore_mean": 0.9848557380449424
+        "part_fscore_mean": 0.9704427354627049
+      },
+      "buckets": {
+        "geo": 0.944275,
+        "judge": 0.5555555555555556,
+        "part": 0.8536213677313524
       }
     },
     {
@@ -4317,7 +4868,12 @@
         "judge_aesthetics": 7,
         "judge_semantic": 7,
         "part_match_f1": 0.375,
-        "part_fscore_mean": 0.7715883608217593
+        "part_fscore_mean": 0.7715567981902627
+      },
+      "buckets": {
+        "geo": 0.9467,
+        "judge": 0.6296296296296297,
+        "part": 0.5732783990951313
       }
     },
     {
@@ -4351,7 +4907,12 @@
         "judge_aesthetics": 4,
         "judge_semantic": 6,
         "part_match_f1": 0.0741,
-        "part_fscore_mean": 0.5238358553305048
+        "part_fscore_mean": 0.4527021526440132
+      },
+      "buckets": {
+        "geo": 0.933325,
+        "judge": 0.4074074074074074,
+        "part": 0.2634010763220066
       }
     },
     {
@@ -4385,7 +4946,12 @@
         "judge_aesthetics": 6,
         "judge_semantic": 7,
         "part_match_f1": 0.375,
-        "part_fscore_mean": 0.7778137966804979
+        "part_fscore_mean": 0.7703868582490108
+      },
+      "buckets": {
+        "geo": 0.944325,
+        "judge": 0.5555555555555556,
+        "part": 0.5726934291245054
       }
     },
     {
@@ -4419,7 +4985,12 @@
         "judge_aesthetics": 6,
         "judge_semantic": 7,
         "part_match_f1": 0.9091,
-        "part_fscore_mean": 0.9764647567819482
+        "part_fscore_mean": 0.9578811058614423
+      },
+      "buckets": {
+        "geo": 0.944225,
+        "judge": 0.5555555555555556,
+        "part": 0.9334905529307211
       }
     },
     {
@@ -4453,7 +5024,12 @@
         "judge_aesthetics": 5,
         "judge_semantic": 7,
         "part_match_f1": 0.375,
-        "part_fscore_mean": 0.7843110582026989
+        "part_fscore_mean": 0.7730915760622921
+      },
+      "buckets": {
+        "geo": 0.94285,
+        "judge": 0.5185185185185185,
+        "part": 0.574045788031146
       }
     },
     {
@@ -4487,7 +5063,12 @@
         "judge_aesthetics": 4,
         "judge_semantic": 6,
         "part_match_f1": 0.9565,
-        "part_fscore_mean": 0.9997334475405659
+        "part_fscore_mean": 0.9958830908454706
+      },
+      "buckets": {
+        "geo": 0.9436,
+        "judge": 0.4074074074074074,
+        "part": 0.9761915454227352
       }
     },
     {
@@ -4521,7 +5102,12 @@
         "judge_aesthetics": 4,
         "judge_semantic": 7,
         "part_match_f1": 0.4706,
-        "part_fscore_mean": 0.820144174473068
+        "part_fscore_mean": 0.8181259464552525
+      },
+      "buckets": {
+        "geo": 0.9434,
+        "judge": 0.4444444444444444,
+        "part": 0.6443629732276263
       }
     },
     {
@@ -4555,6 +5141,11 @@
         "judge_aesthetics": 4,
         "judge_semantic": 5,
         "part_match_f1": 0.0
+      },
+      "buckets": {
+        "geo": 0.9427,
+        "judge": 0.37037037037037035,
+        "part": null
       }
     },
     {
@@ -4588,7 +5179,12 @@
         "judge_aesthetics": 4,
         "judge_semantic": 7,
         "part_match_f1": 0.25,
-        "part_fscore_mean": 0.5649347288995726
+        "part_fscore_mean": 0.5476051742088107
+      },
+      "buckets": {
+        "geo": 0.9415,
+        "judge": 0.4444444444444444,
+        "part": 0.39880258710440536
       }
     },
     {
@@ -4622,7 +5218,12 @@
         "judge_aesthetics": 4,
         "judge_semantic": 7,
         "part_match_f1": 0.375,
-        "part_fscore_mean": 0.7708042093394515
+        "part_fscore_mean": 0.7686689125615248
+      },
+      "buckets": {
+        "geo": 0.9438500000000001,
+        "judge": 0.4444444444444444,
+        "part": 0.5718344562807625
       }
     },
     {
@@ -4656,7 +5257,12 @@
         "judge_aesthetics": 5,
         "judge_semantic": 7,
         "part_match_f1": 0.3529,
-        "part_fscore_mean": 0.7336173046482732
+        "part_fscore_mean": 0.651540340221387
+      },
+      "buckets": {
+        "geo": 0.636625,
+        "judge": 0.48148148148148145,
+        "part": 0.5022201701106934
       }
     },
     {
@@ -4690,7 +5296,12 @@
         "judge_aesthetics": 4,
         "judge_semantic": 7,
         "part_match_f1": 0.2667,
-        "part_fscore_mean": 0.7329226166797081
+        "part_fscore_mean": 0.6764532739841778
+      },
+      "buckets": {
+        "geo": 0.760575,
+        "judge": 0.4444444444444444,
+        "part": 0.47157663699208885
       }
     },
     {
@@ -4724,7 +5335,12 @@
         "judge_aesthetics": 5,
         "judge_semantic": 7,
         "part_match_f1": 0.375,
-        "part_fscore_mean": 0.7919965507036466
+        "part_fscore_mean": 0.7839038426922349
+      },
+      "buckets": {
+        "geo": 0.94425,
+        "judge": 0.48148148148148145,
+        "part": 0.5794519213461174
       }
     },
     {
@@ -4757,8 +5373,13 @@
         "judge_geometry": 6,
         "judge_aesthetics": 7,
         "judge_semantic": 7,
-        "part_match_f1": 0.3636,
-        "part_fscore_mean": 0.685004486854102
+        "part_match_f1": 0.1818,
+        "part_fscore_mean": 0.513665450889162
+      },
+      "buckets": {
+        "geo": 0.536925,
+        "judge": 0.6296296296296297,
+        "part": 0.347732725444581
       }
     },
     {
@@ -4791,8 +5412,13 @@
         "judge_geometry": 5,
         "judge_aesthetics": 6,
         "judge_semantic": 7,
-        "part_match_f1": 0.1667,
-        "part_fscore_mean": 0.5999297189508148
+        "part_match_f1": 0.0,
+        "part_fscore_mean": 0.4302492900841153
+      },
+      "buckets": {
+        "geo": 0.51925,
+        "judge": 0.5555555555555556,
+        "part": 0.21512464504205764
       }
     },
     {
@@ -4825,8 +5451,13 @@
         "judge_geometry": 4,
         "judge_aesthetics": 6,
         "judge_semantic": 7,
-        "part_match_f1": 0.7692,
-        "part_fscore_mean": 0.7342632190727617
+        "part_match_f1": 0.3077,
+        "part_fscore_mean": 0.5840083119514615
+      },
+      "buckets": {
+        "geo": 0.53965,
+        "judge": 0.5185185185185185,
+        "part": 0.44585415597573075
       }
     },
     {
@@ -4859,8 +5490,13 @@
         "judge_geometry": 4,
         "judge_aesthetics": 5,
         "judge_semantic": 7,
-        "part_match_f1": 0.4286,
-        "part_fscore_mean": 0.5919737532159153
+        "part_match_f1": 0.0,
+        "part_fscore_mean": 0.41407439153584585
+      },
+      "buckets": {
+        "geo": 0.506475,
+        "judge": 0.48148148148148145,
+        "part": 0.20703719576792293
       }
     },
     {
@@ -4893,8 +5529,13 @@
         "judge_geometry": 4,
         "judge_aesthetics": 5,
         "judge_semantic": 7,
-        "part_match_f1": 0.5455,
-        "part_fscore_mean": 0.7914043472749823
+        "part_match_f1": 0.1818,
+        "part_fscore_mean": 0.6250705736241595
+      },
+      "buckets": {
+        "geo": 0.543125,
+        "judge": 0.48148148148148145,
+        "part": 0.40343528681207974
       }
     },
     {
@@ -4927,8 +5568,13 @@
         "judge_geometry": 5,
         "judge_aesthetics": 6,
         "judge_semantic": 7,
-        "part_match_f1": 0.6154,
-        "part_fscore_mean": 0.836442355455833
+        "part_match_f1": 0.3077,
+        "part_fscore_mean": 0.6648835353062308
+      },
+      "buckets": {
+        "geo": 0.532275,
+        "judge": 0.5555555555555556,
+        "part": 0.4862917676531154
       }
     },
     {
@@ -4961,8 +5607,13 @@
         "judge_geometry": 5,
         "judge_aesthetics": 6,
         "judge_semantic": 7,
-        "part_match_f1": 0.5455,
-        "part_fscore_mean": 0.7439565447969654
+        "part_match_f1": 0.1818,
+        "part_fscore_mean": 0.5693377030357445
+      },
+      "buckets": {
+        "geo": 0.573975,
+        "judge": 0.5555555555555556,
+        "part": 0.3755688515178722
       }
     },
     {
@@ -4995,8 +5646,13 @@
         "judge_geometry": 5,
         "judge_aesthetics": 6,
         "judge_semantic": 7,
-        "part_match_f1": 0.5455,
-        "part_fscore_mean": 0.7461829909762188
+        "part_match_f1": 0.1818,
+        "part_fscore_mean": 0.5815890434568695
+      },
+      "buckets": {
+        "geo": 0.5231,
+        "judge": 0.5555555555555556,
+        "part": 0.3816945217284347
       }
     },
     {
@@ -5029,8 +5685,13 @@
         "judge_geometry": 4,
         "judge_aesthetics": 5,
         "judge_semantic": 7,
-        "part_match_f1": 0.4615,
-        "part_fscore_mean": 0.6319909017606865
+        "part_match_f1": 0.1538,
+        "part_fscore_mean": 0.4812724959537373
+      },
+      "buckets": {
+        "geo": 0.5819,
+        "judge": 0.48148148148148145,
+        "part": 0.31753624797686864
       }
     },
     {
@@ -5063,8 +5724,13 @@
         "judge_geometry": 4,
         "judge_aesthetics": 6,
         "judge_semantic": 7,
-        "part_match_f1": 0.2667,
-        "part_fscore_mean": 0.6021144988968521
+        "part_match_f1": 0.1333,
+        "part_fscore_mean": 0.4858801879974588
+      },
+      "buckets": {
+        "geo": 0.55185,
+        "judge": 0.5185185185185185,
+        "part": 0.3095900939987294
       }
     },
     {
@@ -5097,8 +5763,13 @@
         "judge_geometry": 4,
         "judge_aesthetics": 5,
         "judge_semantic": 7,
-        "part_match_f1": 0.5714,
-        "part_fscore_mean": 0.6385727602601495
+        "part_match_f1": 0.2857,
+        "part_fscore_mean": 0.5065758150738853
+      },
+      "buckets": {
+        "geo": 0.5607,
+        "judge": 0.48148148148148145,
+        "part": 0.39613790753694267
       }
     },
     {
@@ -5131,8 +5802,13 @@
         "judge_geometry": 5,
         "judge_aesthetics": 5,
         "judge_semantic": 7,
-        "part_match_f1": 0.5333,
-        "part_fscore_mean": 0.7003164318994641
+        "part_match_f1": 0.2667,
+        "part_fscore_mean": 0.564514341920046
+      },
+      "buckets": {
+        "geo": 0.5427500000000001,
+        "judge": 0.5185185185185185,
+        "part": 0.415607170960023
       }
     },
     {
@@ -5165,8 +5841,13 @@
         "judge_geometry": 3,
         "judge_aesthetics": 4,
         "judge_semantic": 5,
-        "part_match_f1": 0.6154,
-        "part_fscore_mean": 0.5697092674021641
+        "part_match_f1": 0.1538,
+        "part_fscore_mean": 0.42362422874946365
+      },
+      "buckets": {
+        "geo": 0.41362499999999996,
+        "judge": 0.3333333333333333,
+        "part": 0.2887121143747318
       }
     },
     {
@@ -5199,8 +5880,13 @@
         "judge_geometry": 4,
         "judge_aesthetics": 5,
         "judge_semantic": 7,
-        "part_match_f1": 0.3077,
-        "part_fscore_mean": 0.5978270428586735
+        "part_match_f1": 0.0,
+        "part_fscore_mean": 0.44588239471383284
+      },
+      "buckets": {
+        "geo": 0.4637,
+        "judge": 0.48148148148148145,
+        "part": 0.22294119735691642
       }
     },
     {
@@ -5233,8 +5919,13 @@
         "judge_geometry": 4,
         "judge_aesthetics": 6,
         "judge_semantic": 7,
-        "part_match_f1": 0.6667,
-        "part_fscore_mean": 0.6637910036124618
+        "part_match_f1": 0.1667,
+        "part_fscore_mean": 0.5168837716429803
+      },
+      "buckets": {
+        "geo": 0.516175,
+        "judge": 0.5185185185185185,
+        "part": 0.3417918858214901
       }
     },
     {
@@ -5267,8 +5958,13 @@
         "judge_geometry": 3,
         "judge_aesthetics": 3,
         "judge_semantic": 3,
-        "part_match_f1": 0.5333,
-        "part_fscore_mean": 0.6104777490562859
+        "part_match_f1": 0.1333,
+        "part_fscore_mean": 0.46087317038763964
+      },
+      "buckets": {
+        "geo": 0.468325,
+        "judge": 0.2222222222222222,
+        "part": 0.2970865851938198
       }
     },
     {
@@ -5301,8 +5997,13 @@
         "judge_geometry": 4,
         "judge_aesthetics": 5,
         "judge_semantic": 6,
-        "part_match_f1": 0.2667,
-        "part_fscore_mean": 0.5784422033563043
+        "part_match_f1": 0.1333,
+        "part_fscore_mean": 0.4716194731483041
+      },
+      "buckets": {
+        "geo": 0.522,
+        "judge": 0.4444444444444444,
+        "part": 0.30245973657415204
       }
     },
     {
@@ -5335,8 +6036,13 @@
         "judge_geometry": 4,
         "judge_aesthetics": 5,
         "judge_semantic": 6,
-        "part_match_f1": 0.3333,
-        "part_fscore_mean": 0.58594484762453
+        "part_match_f1": 0.0,
+        "part_fscore_mean": 0.4181682638344039
+      },
+      "buckets": {
+        "geo": 0.5682,
+        "judge": 0.4444444444444444,
+        "part": 0.20908413191720196
       }
     },
     {
@@ -5369,8 +6075,13 @@
         "judge_geometry": 6,
         "judge_aesthetics": 6,
         "judge_semantic": 7,
-        "part_match_f1": 1.0,
-        "part_fscore_mean": 0.9037048283296184
+        "part_match_f1": 0.3333,
+        "part_fscore_mean": 0.7212834134236316
+      },
+      "buckets": {
+        "geo": 0.652,
+        "judge": 0.5925925925925926,
+        "part": 0.5272917067118158
       }
     },
     {
@@ -5403,8 +6114,13 @@
         "judge_geometry": 6,
         "judge_aesthetics": 7,
         "judge_semantic": 7,
-        "part_match_f1": 1.0,
-        "part_fscore_mean": 0.9277614887471076
+        "part_match_f1": 0.6667,
+        "part_fscore_mean": 0.7709145299768737
+      },
+      "buckets": {
+        "geo": 0.7013,
+        "judge": 0.6296296296296297,
+        "part": 0.7188072649884368
       }
     },
     {
@@ -5438,7 +6154,12 @@
         "judge_aesthetics": 6,
         "judge_semantic": 7,
         "part_match_f1": 1.0,
-        "part_fscore_mean": 0.9777400305811431
+        "part_fscore_mean": 0.894050416332748
+      },
+      "buckets": {
+        "geo": 0.606225,
+        "judge": 0.5555555555555556,
+        "part": 0.9470252081663739
       }
     },
     {
@@ -5472,7 +6193,12 @@
         "judge_aesthetics": 5,
         "judge_semantic": 7,
         "part_match_f1": 0.6667,
-        "part_fscore_mean": 0.7950248175741707
+        "part_fscore_mean": 0.7028737597156357
+      },
+      "buckets": {
+        "geo": 0.53645,
+        "judge": 0.48148148148148145,
+        "part": 0.6847868798578178
       }
     },
     {
@@ -5505,8 +6231,13 @@
         "judge_geometry": 5,
         "judge_aesthetics": 5,
         "judge_semantic": 7,
-        "part_match_f1": 1.0,
-        "part_fscore_mean": 0.843287724254682
+        "part_match_f1": 0.3333,
+        "part_fscore_mean": 0.6722215057685814
+      },
+      "buckets": {
+        "geo": 0.561125,
+        "judge": 0.5185185185185185,
+        "part": 0.5027607528842907
       }
     },
     {
@@ -5540,7 +6271,12 @@
         "judge_aesthetics": 6,
         "judge_semantic": 7,
         "part_match_f1": 0.6667,
-        "part_fscore_mean": 0.889323019453396
+        "part_fscore_mean": 0.7701043256991607
+      },
+      "buckets": {
+        "geo": 0.71055,
+        "judge": 0.5555555555555556,
+        "part": 0.7184021628495803
       }
     },
     {
@@ -5573,8 +6309,13 @@
         "judge_geometry": 5,
         "judge_aesthetics": 5,
         "judge_semantic": 7,
-        "part_match_f1": 1.0,
-        "part_fscore_mean": 0.8877445930865703
+        "part_match_f1": 0.6667,
+        "part_fscore_mean": 0.7669277534448151
+      },
+      "buckets": {
+        "geo": 0.6325,
+        "judge": 0.5185185185185185,
+        "part": 0.7168138767224075
       }
     },
     {
@@ -5607,8 +6348,13 @@
         "judge_geometry": 5,
         "judge_aesthetics": 5,
         "judge_semantic": 7,
-        "part_match_f1": 1.0,
-        "part_fscore_mean": 0.8810482015179076
+        "part_match_f1": 0.3333,
+        "part_fscore_mean": 0.6733223606149417
+      },
+      "buckets": {
+        "geo": 0.535325,
+        "judge": 0.5185185185185185,
+        "part": 0.5033111803074708
       }
     },
     {
@@ -5641,8 +6387,13 @@
         "judge_geometry": 4,
         "judge_aesthetics": 4,
         "judge_semantic": 7,
-        "part_match_f1": 1.0,
-        "part_fscore_mean": 0.8890476535677005
+        "part_match_f1": 0.3333,
+        "part_fscore_mean": 0.7302948136795272
+      },
+      "buckets": {
+        "geo": 0.52325,
+        "judge": 0.4444444444444444,
+        "part": 0.5317974068397636
       }
     },
     {
@@ -5675,8 +6426,13 @@
         "judge_geometry": 4,
         "judge_aesthetics": 4,
         "judge_semantic": 7,
-        "part_match_f1": 1.0,
-        "part_fscore_mean": 0.8526523912447895
+        "part_match_f1": 0.6667,
+        "part_fscore_mean": 0.6756529328195798
+      },
+      "buckets": {
+        "geo": 0.61885,
+        "judge": 0.4444444444444444,
+        "part": 0.6711764664097899
       }
     },
     {
@@ -5709,8 +6465,13 @@
         "judge_geometry": 4,
         "judge_aesthetics": 4,
         "judge_semantic": 7,
-        "part_match_f1": 1.0,
-        "part_fscore_mean": 0.8663377437932724
+        "part_match_f1": 0.6667,
+        "part_fscore_mean": 0.6596866215968263
+      },
+      "buckets": {
+        "geo": 0.5209,
+        "judge": 0.4444444444444444,
+        "part": 0.6631933107984131
       }
     },
     {
@@ -5743,8 +6504,13 @@
         "judge_geometry": 4,
         "judge_aesthetics": 5,
         "judge_semantic": 7,
-        "part_match_f1": 1.0,
-        "part_fscore_mean": 0.8312592898210173
+        "part_match_f1": 0.3333,
+        "part_fscore_mean": 0.6682163863623076
+      },
+      "buckets": {
+        "geo": 0.6542,
+        "judge": 0.48148148148148145,
+        "part": 0.5007581931811538
       }
     },
     {
@@ -5777,8 +6543,13 @@
         "judge_geometry": 4,
         "judge_aesthetics": 4,
         "judge_semantic": 7,
-        "part_match_f1": 1.0,
-        "part_fscore_mean": 0.8526548388484354
+        "part_match_f1": 0.3333,
+        "part_fscore_mean": 0.6191580319365894
+      },
+      "buckets": {
+        "geo": 0.53525,
+        "judge": 0.4444444444444444,
+        "part": 0.4762290159682947
       }
     },
     {
@@ -5811,8 +6582,13 @@
         "judge_geometry": 4,
         "judge_aesthetics": 5,
         "judge_semantic": 7,
-        "part_match_f1": 0.6667,
-        "part_fscore_mean": 0.8090775564511684
+        "part_match_f1": 0.3333,
+        "part_fscore_mean": 0.6631066312817545
+      },
+      "buckets": {
+        "geo": 0.5883999999999999,
+        "judge": 0.48148148148148145,
+        "part": 0.4982033156408773
       }
     },
     {
@@ -5845,8 +6621,13 @@
         "judge_geometry": 4,
         "judge_aesthetics": 4,
         "judge_semantic": 7,
-        "part_match_f1": 1.0,
-        "part_fscore_mean": 0.8934845110868989
+        "part_match_f1": 0.3333,
+        "part_fscore_mean": 0.7458963808896837
+      },
+      "buckets": {
+        "geo": 0.58,
+        "judge": 0.4444444444444444,
+        "part": 0.5395981904448418
       }
     },
     {
@@ -5879,8 +6660,13 @@
         "judge_geometry": 5,
         "judge_aesthetics": 5,
         "judge_semantic": 7,
-        "part_match_f1": 0.6667,
-        "part_fscore_mean": 0.796905564968364
+        "part_match_f1": 0.3333,
+        "part_fscore_mean": 0.6150809540396011
+      },
+      "buckets": {
+        "geo": 0.580575,
+        "judge": 0.5185185185185185,
+        "part": 0.47419047701980055
       }
     },
     {
@@ -5913,8 +6699,13 @@
         "judge_geometry": 3,
         "judge_aesthetics": 4,
         "judge_semantic": 6,
-        "part_match_f1": 0.6667,
-        "part_fscore_mean": 0.7738471535924031
+        "part_match_f1": 0.3333,
+        "part_fscore_mean": 0.6289658995341193
+      },
+      "buckets": {
+        "geo": 0.37495,
+        "judge": 0.37037037037037035,
+        "part": 0.48113294976705967
       }
     },
     {
@@ -5935,7 +6726,7 @@
         "input_image": "spatial_live_v1/assets/4bab266b4c6e16c7e78872a4c6538a302c2f971ff9d2dbae4c55f6d4fa03fc59.png"
       },
       "metrics": {
-        "chamfer_distance": 0.015196,
+        "chamfer_distance": 0.01,
         "hausdorff_distance": 0.301797,
         "f_score_005": 0.2232,
         "f_score_001": 0.0442,
@@ -5948,7 +6739,13 @@
         "judge_aesthetics": 3,
         "judge_semantic": 3,
         "part_match_f1": 0.0,
-        "part_fscore_mean": 0.13632917789757412
+        "part_fscore_mean": 0.07752537541713014
+      },
+      "raw_chamfer_distance": 0.015196,
+      "buckets": {
+        "geo": 0.107575,
+        "judge": 0.2222222222222222,
+        "part": 0.03876268770856507
       }
     }
   ],
@@ -6180,5 +6977,35 @@
       ]
     }
   },
-  "source_selection_sha256": "4556fa2a977e97ef23e27cbec6a876abd53698bb176a88514e1a9fbb28c7b2c3"
+  "source_selection_sha256": "4556fa2a977e97ef23e27cbec6a876abd53698bb176a88514e1a9fbb28c7b2c3",
+  "scoring_revision": {
+    "id": "p3d-scoring-20260916",
+    "geometry": "Normalize per case; average CD score, F@0.01, NC and measured IoU within each valid case, then average case scores within each format.",
+    "text_iou": "Omit unavailable IoU from the valid case geometry mean; retain generation-invalid cases as failures.",
+    "part_tau_fraction": 0.03,
+    "part_sample_points": 2048,
+    "part_acceptance_fscore": 0.7,
+    "part": "Mean of match F1 and F-score mean over all Hungarian pairs; no normalized part mean.",
+    "score_excludes": [
+      "topo",
+      "valid"
+    ],
+    "reported_separately": [
+      "topo",
+      "valid"
+    ],
+    "part_sampling_seed": 42,
+    "part_sampling_rng": "MT19937 legacy uniform sequence with explicit Generator",
+    "text_raw_audit_sha256": "a8273fe0e41bcac4672743c9d46e7e37061c1e29562ac4e387818ce8fb7b6c75",
+    "part_rescore_sha256": "c2708213d4311dc9389c58a01cc1dc27de6b9164da8fa3bf4c9d91611f77f361",
+    "geometry_aggregation_revision": "per-case-20260918",
+    "iou": "Omit unavailable IoU from the valid case mean, never worst-fill it. Standalone IoU averages measured values from valid outputs only, retaining measured zeros."
+  },
+  "casewise_geometry_policy": {
+    "geometry": "Normalize per case; average CD score, F@0.01, NC and measured IoU within each valid case, then average case scores within each format.",
+    "invalid": "Generation-invalid outputs contribute zero Geo. Preserve released API-unrun exclusions and missing-evaluation exclusions.",
+    "iou": "Omit unavailable IoU from the valid case mean, never worst-fill it. Standalone IoU averages measured values from valid outputs only, retaining measured zeros.",
+    "cd": "Cap each measured CD at 0.01 before normalization and reporting; invalid outputs receive CD=0.01.",
+    "formats": "Average task-supported formats equally after averaging cases."
+  }
 }

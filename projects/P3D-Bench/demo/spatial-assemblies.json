@@ -32,8 +32,8 @@
         "judge_geometry": 6,
         "judge_aesthetics": 7,
         "judge_semantic": 7,
-        "part_match_f1": 0.8889,
-        "part_fscore_mean": 0.8869951173122573
+        "part_match_f1": 0.6667,
+        "part_fscore_mean": 0.7709132267997897
       },
       "judge_reason": "PRED closely replicates the overall geometry, part count, and arrangement of the GT assembly. Across all views, the shaft, disc bosses, connecting rods, and piston placement match well. Key differences include the wrist-pin holes, which are through-holes in GT but modeled as shallow blind bosses in PRED, and the piston crown rings, which are slightly more pronounced in PRED. Semantic function is identical.",
       "parts": [
@@ -69,7 +69,7 @@
       "aligned_pairs": [
         {
           "slot": 0,
-          "f_score": 0.9955937346738597,
+          "f_score": 0.8168872347579199,
           "accepted": true,
           "gt": {
             "name": "shaft bar with disc bosses",
@@ -80,11 +80,13 @@
             "name": "crankshaft",
             "semantic": "Multi-throw crankshaft with five main journals, eight slotted webs, and four crank discs",
             "mesh": "spatial_live_v1/assets/39450ddd42777526879fec4eb9f475b43a4e86c67bad4849b6374193b8bb430d.stl"
-          }
+          },
+          "gt_idx": 0,
+          "pred_idx": 0
         },
         {
           "slot": 1,
-          "f_score": 0.8605046512450482,
+          "f_score": 0.7586230060671809,
           "accepted": true,
           "gt": {
             "name": "piston",
@@ -95,12 +97,14 @@
             "name": "piston 1",
             "semantic": "Trunk piston with crown pocket, skirt reliefs, and spacer band for cylinder 1",
             "mesh": "spatial_live_v1/assets/777b4e69bd05e03a37392781cb386eade0f20c756e8823020d644db7a4680f38.stl"
-          }
+          },
+          "gt_idx": 1,
+          "pred_idx": 3
         },
         {
           "slot": 2,
-          "f_score": 0.70213623046875,
-          "accepted": true,
+          "f_score": 0.542110851710171,
+          "accepted": false,
           "gt": {
             "name": "part",
             "semantic": "",
@@ -110,11 +114,13 @@
             "name": "connecting rod 1",
             "semantic": "H-beam connecting rod with integral wrist pin for cylinder 1",
             "mesh": "spatial_live_v1/assets/bb0e3b6d7d0cb81157fd46b3c0377265c59d2bf342f5c66c91f512580a9e384c.stl"
-          }
+          },
+          "gt_idx": 2,
+          "pred_idx": 2
         },
         {
           "slot": 3,
-          "f_score": 0.9897458528613715,
+          "f_score": 0.9660318146638868,
           "accepted": true,
           "gt": {
             "name": "bushing",
@@ -125,9 +131,12 @@
             "name": "crankshaft end bushing",
             "semantic": "Cylindrical sleeve bushing mounted near the end of the crankshaft",
             "mesh": "spatial_live_v1/assets/9f8b2cf5e427314114d44969f639acb61092aca662278ff2da2d0e31f1d21e80.stl"
-          }
+          },
+          "gt_idx": 4,
+          "pred_idx": 1
         }
-      ]
+      ],
+      "scoring_source_sha256": "025b2bccf0e801b84f1208e3c731124c6ebc7bd7c6d3f0787056f4ec6e38d7aa"
     },
     {
       "id": "text_image2cad_21805_2ba39d00_cadquery_claude_opus5_parts",
@@ -160,8 +169,8 @@
         "judge_geometry": 4,
         "judge_aesthetics": 6,
         "judge_semantic": 7,
-        "part_match_f1": 0.7692,
-        "part_fscore_mean": 0.7342632190727617
+        "part_match_f1": 0.3077,
+        "part_fscore_mean": 0.5840083119514615
       },
       "judge_reason": "Across all views, the primary discrepancy is configuration and geometry: PRED models the driveshaft fully straightened and collinear, whereas GT has both universal joints articulated at realistic angles. Additionally, PRED simplifies the yoke bodies into blocky, rectangular clevises rather than the contoured, pinch-clamp yokes with countersunk bores seen in GT. Semantically, both models correctly represent a dual universal-joint driveshaft assembly with a splined shaft and end stubs. PRED demonstrates good mechanical detailing on pins and splines, though its overall joint shapes remain somewhat simplified.",
       "parts": [
@@ -218,8 +227,8 @@
       "aligned_pairs": [
         {
           "slot": 0,
-          "f_score": 0.779245541301627,
-          "accepted": true,
+          "f_score": 0.5658863111850579,
+          "accepted": false,
           "gt": {
             "name": "serrated angle joint",
             "semantic": "A moderately elongated body (aspect ratio ≈ 2.82, ≈ 72 × 42 × 26 mm) combining a rectangular clevis at one end—carrying a ∅19.5 mm countersunk through-hole—with a semi-circular fork at the other end, connected by a serrated cylindrical zone (38 + 37 tooth-face strips at radii 8.62 and 8.24 mm). The fork features two ∅8 mm through-holes in its cheeks and a ∅6.78 mm/∅17.37 mm counterbore through-hole in its web. All 38 assembly contact pairs are cylinder-on-cylinder, matching the serration teeth, confirming a meshing toothed interface with an adjacent part. This part likely serves as a serrated angle-adjustment joint, permitting indexed angular positioning when clamped by fasteners through its multiple through-holes.",
@@ -229,7 +238,9 @@
             "name": "serrated clamp yoke",
             "semantic": "Slotted angle joint yoke with serrated bore and pinch collar",
             "mesh": "spatial_live_v1/assets/27d3ca66feb0ef02fdf5ccb8400c44d3f01a25db395b2209a039770215016220.stl"
-          }
+          },
+          "gt_idx": 0,
+          "pred_idx": 1
         },
         {
           "slot": 1,
@@ -244,11 +255,13 @@
             "name": "clamp bolt",
             "semantic": "Pinch clamp bolt and hex nut assembly",
             "mesh": "spatial_live_v1/assets/c8d826143dddd8ea018b2d8058a81de2e33c7424b0b5731462652e2a546bdf22.stl"
-          }
+          },
+          "gt_idx": 1,
+          "pred_idx": 2
         },
         {
           "slot": 2,
-          "f_score": 0.9432404540763674,
+          "f_score": 0.8826152579582875,
           "accepted": true,
           "gt": {
             "name": "splined shaft yoke",
@@ -259,11 +272,13 @@
             "name": "intermediate splined shaft",
             "semantic": "Telescoping male splined shaft with integral cardan yoke",
             "mesh": "spatial_live_v1/assets/4ef483041bf045f3915c740e47047d3a2bee154252ca64f0bee806397591b201.stl"
-          }
+          },
+          "gt_idx": 2,
+          "pred_idx": 5
         },
         {
           "slot": 3,
-          "f_score": 0.9897458528613715,
+          "f_score": 0.7706776360072854,
           "accepted": true,
           "gt": {
             "name": "part",
@@ -274,12 +289,14 @@
             "name": "universal cross 1",
             "semantic": "Four-trunnion Cardan spider cross at input universal joint",
             "mesh": "spatial_live_v1/assets/c18af0e524d2bb98766da7786550eb74d713ff8e945029df5749e38415bb810a.stl"
-          }
+          },
+          "gt_idx": 3,
+          "pred_idx": 3
         },
         {
           "slot": 4,
-          "f_score": 0.8142657274284862,
-          "accepted": true,
+          "f_score": 0.6077366315986056,
+          "accepted": false,
           "gt": {
             "name": "universal joint yoke",
             "semantic": "A compact double-fork body (bbox ~56.8 × 41.4 × 23.4 mm, aspect ratio 2.43) with two pairs of rounded lug ears projecting from a central hub. The hub contains a splined or serrated internal bore formed by approximately 80 cylindrical faces at radii R ≈ 8.62 mm and R ≈ 8.24 mm, clearly visible as a knurled profile in the central pocket. Each pair of fork ears carries through-holes of diameter 8.0 mm that could accept pivot or cross pins. The part participates in 86 cylinder-on-cylinder and 8 plane-on-plane contacts in the assembly, and two instances are present. This part likely serves as a universal-joint yoke or articulating coupling fork, where the splined bore engages a shaft and the fork ears pivot on cross pins.",
@@ -289,12 +306,14 @@
             "name": "universal yoke 1",
             "semantic": "Internal splined universal joint yoke at intermediate shaft input",
             "mesh": "spatial_live_v1/assets/0ea90dfe80442644a02c3aa3f7d9f7e51e036a966eb4792a43cd71f77d22630c.stl"
-          }
+          },
+          "gt_idx": 4,
+          "pred_idx": 4
         },
         {
           "slot": 5,
-          "f_score": 0.8790817387687188,
-          "accepted": true,
+          "f_score": 0.6771340349595324,
+          "accepted": false,
           "gt": {
             "name": "splined pin",
             "semantic": "A cylindrical pin approximately 75 mm long and 20 mm in diameter (aspect ratio 3.75) with a 36-tooth straight spline at one end (root radius 8.62 mm, spanning roughly 21.5 mm) and a smooth cylindrical journal (radius 10.0 mm, spanning about 53.5 mm). Two radial through-holes of 6.0 mm diameter pass fully through the shaft perpendicular to its axis, likely permitting cross-pins for axial retention. The part participates in 82 cylinder-on-cylinder and 8 plane-on-plane assembly contacts, indicating the spline and journal seat coaxially into mating bores. This part appears to function as a splined pin or coupling shaft that could transmit torque through its spline engagement.",
@@ -304,9 +323,35 @@
             "name": "input splined pin",
             "semantic": "Input splined coupling pin with transverse pin holes",
             "mesh": "spatial_live_v1/assets/724f9592228ab44652e3971af05676cad357d8302616c92bf0fff1b9921c154a.stl"
-          }
+          },
+          "gt_idx": 5,
+          "pred_idx": 0
         }
-      ]
+      ],
+      "scoring_source_sha256": "01eff527cf012d830f480e05427abc2ad24258552bf46884b512122b750e7a5f"
     }
-  ]
+  ],
+  "scoring_revision": {
+    "id": "p3d-scoring-20260916",
+    "geometry": "Normalize per case; average CD score, F@0.01, NC and measured IoU within each valid case, then average case scores within each format.",
+    "text_iou": "Omit unavailable IoU from the valid case geometry mean; retain generation-invalid cases as failures.",
+    "part_tau_fraction": 0.03,
+    "part_sample_points": 2048,
+    "part_acceptance_fscore": 0.7,
+    "part": "Mean of match F1 and F-score mean over all Hungarian pairs; no normalized part mean.",
+    "score_excludes": [
+      "topo",
+      "valid"
+    ],
+    "reported_separately": [
+      "topo",
+      "valid"
+    ],
+    "part_sampling_seed": 42,
+    "part_sampling_rng": "MT19937 legacy uniform sequence with explicit Generator",
+    "text_raw_audit_sha256": "a8273fe0e41bcac4672743c9d46e7e37061c1e29562ac4e387818ce8fb7b6c75",
+    "part_rescore_sha256": "c2708213d4311dc9389c58a01cc1dc27de6b9164da8fa3bf4c9d91611f77f361",
+    "geometry_aggregation_revision": "per-case-20260918",
+    "iou": "Omit unavailable IoU from the valid case mean, never worst-fill it. Standalone IoU averages measured values from valid outputs only, retaining measured zeros."
+  }
 }

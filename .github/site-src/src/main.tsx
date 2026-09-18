@@ -139,7 +139,7 @@ const fallbackManifest: Manifest = {
       ? ["Anonymous submission"]
       : ["¹Nanjing University", "²Envision", "*Equal contribution."],
     abstract:
-      "Multimodal large language models can write code to produce complex programs as well as use programs to do 3D modeling, which opens up a new avenue for 3D generation powered by their priors, world knowledge and reasoning. Yet existing benchmarks rarely evaluate 3D modeling through code. Such modeling demands more than runnable code: from a text or visual specification, a model must generate a parametric 3D program that is geometrically precise, semantically aligned and assembly-consistent. We introduce P3D-Bench, a benchmark for parametric 3D generation. Unlike a 3D mesh, a parametric 3D program exposes explicit dimensions, construction operations and part relations, revealing whether a model recovers a design's structure, not just its appearance. Under a unified protocol, P3D-Bench covers three task families (Text-to-3D, Image-to-3D and Assembly-3D) and scores each output for executability, geometric fidelity, topology, text-grounded constraints, multiview semantic alignment and part-level structure. We construct P3D-Dataset with 400 text cases, 400 image cases and 203 annotated assemblies. Our extensive evaluation yields three findings. First, composing multiple parts into a coherent assembly remains challenging. Second, models can often recover the global shape and semantic identity of the target object, yet fail to reproduce the precise parametric geometry specified by the input. Third, part-level modeling remains weak on assemblies, where models recover neither the geometry of each part nor the right number of parts. These results position P3D-Bench as a benchmark for evaluating precise parametric geometry and part-level structure in parametric 3D generation."
+      "Multimodal large language models can write code to produce complex programs as well as use programs to do 3D modeling, which opens up a new avenue for 3D generation powered by their priors, world knowledge and reasoning. Yet existing benchmarks rarely evaluate 3D modeling through code. Such modeling demands more than runnable code: from a text or visual specification, a model must generate a parametric 3D program that is geometrically precise, semantically aligned and assembly-consistent. We introduce P3D-Bench, a benchmark for parametric 3D generation. Unlike a 3D mesh, a parametric 3D program exposes explicit dimensions, construction operations and part relations, revealing whether a model recovers a design's structure, not just its appearance. Under a unified protocol, P3D-Bench covers three task families (Text-to-3D, Image-to-3D and Assembly-3D) and scores each output for executability, geometric fidelity, topology, text-grounded constraints, multiview semantic alignment and part-level structure. We construct P3D-Dataset, comprising 400 text cases, 400 image cases, and 203 annotated assemblies. Our evaluation on 100 cases from each task family yields three key findings. First, multi-part generation is substantially more challenging than single-part modeling, with models struggling to compose individual parts into a coherent structure. Second, models can often recover the global shape and semantic identity of the target object, yet fail to reproduce the precise parametric geometry specified by the input. Third, part-level modeling remains weak on assemblies, where models recover neither the geometry of each part nor the right number of parts. These results position P3D-Bench as a benchmark for evaluating precise parametric geometry and part-level structure in parametric 3D generation."
   },
   tasks: [
     { id: "text2cad", label: "Text-to-3D", formats: ["JSON", "OpenSCAD"], status: "interactive" },
@@ -179,7 +179,7 @@ function App() {
   const [code, setCode] = useState("");
 
   useEffect(() => {
-    fetch(asset("manifest.json?v=abstract-903c394b8ca9"))
+    fetch(asset("manifest.json?v=abstract-d9c685c58490"))
       .then((res) => (res.ok ? res.json() : fallbackManifest))
       .then(async (data) => {
         try {
@@ -188,7 +188,7 @@ function App() {
           data = mergeLiveTextManifest(data, await response.json());
         } catch { /* The base manifest remains available when Text cannot load. */ }
         try {
-          const response = await fetch(asset("spatial-live.json?v=ae456b0c9ddb"));
+          const response = await fetch(asset("spatial-live.json?v=392f98b97085"));
           if (!response.ok) throw new Error("Spatial demo unavailable");
           data = mergeSpatialManifest(data, await response.json());
         } catch { /* Preserve the already loaded data if this overlay cannot load. */ }
@@ -202,7 +202,7 @@ function App() {
       setComplexAssemblies([]);
       return;
     }
-    fetch(asset("spatial-assemblies.json?v=909fc492f542"))
+    fetch(asset("spatial-assemblies.json?v=43a6bc60c321"))
       .then((res) => (res.ok ? res.json() : { items: [] }))
       .then((data: ComplexAssemblyData) => setComplexAssemblies(Array.isArray(data.items) ? data.items : []))
       .catch(() => setComplexAssemblies([]));
@@ -688,8 +688,8 @@ function MainFigures() {
   return (
     <div className="main-figures">
       <figure className="leaderboard-figure">
-        <a href="./figures/fig_tasks_grouped_bars.pdf?v=layout-0ece24a76b79" aria-label="Open leaderboard figure PDF">
-          <img src="./figures/fig_tasks_grouped_bars.svg?v=layout-0ece24a76b79" alt="Paper Figure 1: Assembly-3D, Text-to-3D and Image-to-3D scores with separate panel axes" />
+        <a href="./figures/fig_tasks_grouped_bars.pdf?v=casewise-5650705abb4f" aria-label="Open leaderboard figure PDF">
+          <img src="./figures/fig_tasks_grouped_bars.svg?v=casewise-5650705abb4f" alt="Paper Figure 1: Assembly-3D, Text-to-3D and Image-to-3D scores with separate panel axes" />
         </a>
       </figure>
     </div>
