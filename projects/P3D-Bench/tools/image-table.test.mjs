@@ -10,17 +10,18 @@ const assembly = JSON.parse(readFileSync(new URL("../live-assembly-summary.json"
 
 test("Image uses current nine-model Hard100 data and records all coverage gaps", () => {
   const table = buildImageTable(summary);
-  assert.deepEqual(table.rows.slice(0, 9).map(r => r.model_id), IMAGE_MODELS);
-  assert.deepEqual(table.rows.slice(0, 9).map(r => r.cells.split(" ")[0]), ["59.91", "53.70", "52.61", "51.12", "50.30", "50.24", "49.77", "47.01", "39.51"]);
-  assert.equal(table.metrics.length, 20);
-  assert.equal(table.groups.reduce((n, g) => n + g.span, 0), 20);
-  assert(table.rows.every(r => r.cells.split(" ").length === 20));
+  assert.deepEqual(table.rows.map(r => r.model_id), IMAGE_MODELS);
+  assert.deepEqual(table.rows.map(r => r.cells.split(" ")[0]), ["59.91", "53.70", "52.61", "51.12", "50.30", "50.24", "49.77", "47.01", "39.51"]);
+  assert.equal(table.metrics.length, 18);
+  assert.equal(table.groups.reduce((n, g) => n + g.span, 0), 18);
+  assert(table.rows.every(r => r.cells.split(" ").length === 18));
   assert.deepEqual(table.metrics.slice(0, 2), ["Score", "USD / case"]);
+  assert.deepEqual(table.metrics.slice(2, 6), ["Geo", "Judge", "Topo", "Valid"]);
+  assert.deepEqual(table.rows[0].cells.split(" ").slice(2, 6), ["0.581", "0.599", "0.929", "0.988"]);
   assert.equal(table.groups[0].label, "Score / Cost");
-  assert.equal(table.rows[0].cells.split(" ")[18], "257/300");
-  assert.equal(table.rows.find(r => r.model_id === "gemini38_flash").cells.split(" ")[19], "285/297");
-  assert.equal(table.rows[8].cells.split(" ")[18], "299/300");
-  assert.equal(table.rows[8].cells.split(" ")[19], "253/253");
+  assert(!table.groups.some(group => group.label === "Coverage"));
+  assert(!table.metrics.includes("Tested"));
+  assert(!table.metrics.includes("Judged"));
   assert(summary.rows.every(r => r.provisional));
   assert.equal(table.title, "Image-to-3D");
   assert.equal(table.note, "");
@@ -28,11 +29,12 @@ test("Image uses current nine-model Hard100 data and records all coverage gaps",
 });
 
 test("native Image baselines retain their CadQuery-only contract", () => {
-  const rows = buildImageTable(summary).rows.slice(9);
+  const rows = buildImageTable(summary).domainRows;
   assert.deepEqual(rows.map(r => r.model_id), ["cadrille", "cadcoder"]);
   assert.deepEqual(rows.map(r => r.cells.split(" ")[0]), ["19.13", "5.67"]);
+  assert.deepEqual(rows[0].cells.split(" ").slice(2, 6), ["0.217", "0.166", "0.745", "0.770"]);
   assert(rows.every(r => r.cells.split(" ").slice(6, 18).every(v => v === "-")));
-  assert.equal(rows[1].cells.split(" ")[18], "87/100");
+  assert(rows.every(r => r.cells.split(" ").length === 18));
   const bad = structuredClone(summary);
   bad.domain_baselines[0].score += 1;
   assert.throws(() => buildImageTable(bad), /native Image score/);

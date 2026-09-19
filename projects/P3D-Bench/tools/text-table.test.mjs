@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { validateTextSummary, textBaselineRows, textCost, TEXT_MODELS, TEXT_MODEL_LABELS } from "./text-table.mjs";
+import { validateTextSummary, textBaselineRows, textCost, textMetricsForDisplay, TEXT_MODELS, TEXT_MODEL_LABELS } from "./text-table.mjs";
 
 const summary = JSON.parse(readFileSync(new URL("../live-text-summary.json", import.meta.url)));
 
@@ -24,6 +24,12 @@ test("Topo is displayed independently and unavailable IoU is omitted", () => {
   validateTextSummary(copy);
   row.score = row.score_with_topology;
   assert.throws(() => validateTextSummary(copy), /total score/);
+});
+
+test("display order puts Geo and Judge before Topo and Valid", () => {
+  const cells = textMetricsForDisplay(summary.rows[0]).split(" ");
+  assert.deepEqual(cells.slice(6, 10), ["0.665", "0.911", "0.987", "1.000"]);
+  assert.equal(cells.length, 18);
 });
 
 test("every current cost is numeric and estimates remain in provenance", () => {
@@ -68,7 +74,7 @@ test("reject missing metrics, duplicates, stale scores, wrong means and costs", 
 test("Text2CAD retains the accepted native JSON-only aggregate", () => {
   const [baseline] = textBaselineRows(summary);
   assert.equal(baseline.model, "Text2CAD");
-  assert.equal(baseline.cells, "17.85 - 0.141 0.910 - - - - 0.257 0.977 0.137 0.980 - - - - - - - -");
+  assert.equal(baseline.cells, "17.85 - 0.141 0.910 - - - - 0.257 0.137 0.977 0.980 - - - - - - - -");
   assert.equal(baseline.cells.split(" ").length, 20);
   for (const mutate of [
     row => { row.formats.descriptive.openscad = { judge: .2, valid: .91 }; },

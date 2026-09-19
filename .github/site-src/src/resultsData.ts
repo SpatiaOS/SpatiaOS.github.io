@@ -3,7 +3,7 @@ import liveAssemblySummary from "./liveAssemblySummary.json";
 import liveImageSummary from "./liveImageSummary.json";
 import { buildImageTable } from "../../../projects/P3D-Bench/tools/image-table.mjs";
 import { buildAssemblyTable } from "../../../projects/P3D-Bench/tools/live-tables.mjs";
-import { textBaselineRows, textCost } from "../../../projects/P3D-Bench/tools/text-table.mjs";
+import { textBaselineRows, textCost, textMetricsForDisplay } from "../../../projects/P3D-Bench/tools/text-table.mjs";
 
 export type ResultTableRow = { model: string; model_id?: string; family?: string; cells: string };
 
@@ -78,16 +78,16 @@ const textTable: ResultSubtable = {
     "Judge",
     "Valid",
     "Geo",
-    "Topo",
     "Judge",
+    "Topo",
     "Valid",
     "Geo",
-    "Topo",
     "Judge",
+    "Topo",
     "Valid",
     "Geo",
-    "Topo",
     "Judge",
+    "Topo",
     "Valid"
   ],
   "rows": [],
@@ -116,7 +116,7 @@ export const liveResultTables: ResultSubtable[] = [
         model: row.model,
         model_id: row.model_id,
         family: row.family,
-        cells: `${row.score.toFixed(2)} ${textCost(row)} ${row.metrics}`,
+        cells: `${row.score.toFixed(2)} ${textCost(row)} ${textMetricsForDisplay(row)}`,
       })),
       ...textBaselineRows(liveTextSummary),
     ],

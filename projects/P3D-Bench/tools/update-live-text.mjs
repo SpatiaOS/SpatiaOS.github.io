@@ -6,7 +6,7 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { readActiveBundle, replaceLiveTable, writeActiveBundle } from "./live-tables.mjs";
-import { validateTextSummary, textBaselineRows, textCost } from "./text-table.mjs";
+import { validateTextSummary, textBaselineRows, textCost, textMetricsForDisplay } from "./text-table.mjs";
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const summaryPath = join(root, "live-text-summary.json");
@@ -36,15 +36,15 @@ const textTable = {
   metrics: [
     "Score", "USD/gen.",
     "Judge", "Valid", "Judge", "Valid", "Judge", "Valid",
-    "Geo", "Topo", "Judge", "Valid", "Geo", "Topo", "Judge", "Valid",
-    "Geo", "Topo", "Judge", "Valid",
+    "Geo", "Judge", "Topo", "Valid", "Geo", "Judge", "Topo", "Valid",
+    "Geo", "Judge", "Topo", "Valid",
   ],
   rows: [
     ...summary.rows.map((row) => ({
       model: row.model,
       model_id: row.model_id,
       family: row.family,
-      cells: `${row.score.toFixed(2)} ${textCost(row)} ${row.metrics}`,
+      cells: `${row.score.toFixed(2)} ${textCost(row)} ${textMetricsForDisplay(row)}`,
     })),
     ...textBaselineRows(summary),
   ],

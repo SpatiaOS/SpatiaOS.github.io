@@ -2,6 +2,7 @@ export const IMAGE_MODELS = ["gpt6_astra_local", "gemini38_flash", "claude_opus5
   "grok46", "qwen38max", "glm53_flash", "deepseek41_flash", "doubao_seed21"];
 const FORMATS = ["cadquery", "openscad", "threejs"];
 const AXES = ["geom", "topo", "judge"];
+const DISPLAY_AXES = ["geom", "judge", "topo", "valid"];
 
 function close(actual, expected, label, tolerance = 1e-10) {
   if (!Number.isFinite(actual) || !Number.isFinite(expected) || Math.abs(actual - expected) > tolerance) {
@@ -95,14 +96,15 @@ export function buildImageTable(summary) {
   return {
     key: "image", title: "Image-to-3D", accent: "var(--teal)",
     groups: [{ label: "Score / Cost", span: 2 }]
-      .concat(["CadQuery", "OpenSCAD", "Three.js", "Average"].map(label => ({ label, span: 4 })))
-      .concat([{ label: "Coverage", span: 2 }]),
+      .concat(["CadQuery", "OpenSCAD", "Three.js", "Average"].map(label => ({ label, span: 4 }))),
     metrics: ["Score", "USD / case"]
-      .concat(Array.from({ length: 4 }, () => ["Geo", "Topo", "Judge", "Valid"]).flat(), ["Tested", "Judged"]),
+      .concat(Array.from({ length: 4 }, () => ["Geo", "Judge", "Topo", "Valid"]).flat()),
     rows: [...summary.rows].sort((a, b) => b.score - a.score).map(row => ({ model: row.model,
       model_id: row.model_id, family: row.family,
-      cells: `${row.score.toFixed(2)} ${cost(row.cost_usd_per_case, row.counts)} ${row.metrics} ${row.counts.tested}/300 ${row.counts.judge_ok}/${row.counts.valid}` }))
-      .concat(imageBaselineRows(summary.domain_baselines)),
+      cells: `${row.score.toFixed(2)} ${cost(row.cost_usd_per_case, row.counts)} ${[...FORMATS, "average"]
+        .flatMap(format => DISPLAY_AXES.map(axis => (format === "average" ? row.average : row.formats[format])[axis].toFixed(3)))
+        .join(" ")}` })),
+    domainRows: imageBaselineRows(summary.domain_baselines),
     note: "",
   };
 }
@@ -117,9 +119,8 @@ export function imageBaselineRows(rows = []) {
     for (const key of ["geom", "topo", "judge", "valid"]) normalized(row.metrics[key]);
     close(row.score, 50 * (row.metrics.geom + row.metrics.judge), "native Image score");
     close(row.metrics.valid, row.coverage.valid / row.coverage.tested, "native Image validity", 0.00005);
-    const metrics = ["geom", "topo", "judge", "valid"].map(key => row.metrics[key].toFixed(3));
+    const metrics = DISPLAY_AXES.map(key => row.metrics[key].toFixed(3));
     return { model: row.model, model_id: row.model_id, family: "domain",
-      cells: [row.score.toFixed(2), "-", ...metrics, ...Array(12).fill("-"),
-        `${row.coverage.tested}/${row.coverage.expected}`, `${row.coverage.judge_ok}/${row.coverage.valid}`].join(" ") };
+      cells: [row.score.toFixed(2), "-", ...metrics, ...Array(12).fill("-")].join(" ") };
   });
 }

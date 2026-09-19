@@ -730,8 +730,8 @@ function parseSortableValue(token: string) {
   return Number.isFinite(value) ? value : Number.POSITIVE_INFINITY;
 }
 
-function ResultCell({ token, groupStart, summary }: { token: string; groupStart: boolean; summary?: "score" | "cost" }) {
-  const className = ["rt-cell", groupStart ? "group-start" : "", summary ? `rt-summary-${summary}` : ""].filter(Boolean).join(" ");
+function ResultCell({ token, groupStart, summary, primary }: { token: string; groupStart: boolean; summary?: "score" | "cost"; primary?: boolean }) {
+  const className = ["rt-cell", groupStart ? "group-start" : "", summary ? `rt-summary-${summary}` : "", primary ? "rt-primary-metric" : ""].filter(Boolean).join(" ");
   if (token === "-") return <td className={`${className} na`}>—</td>;
   if (token.endsWith("!")) return <td className={`${className} best`}>{token.slice(0, -1)}</td>;
   if (token.endsWith("^")) return <td className={`${className} second`}>{token.slice(0, -1)}</td>;
@@ -834,6 +834,7 @@ function ResultsSubtableTable({ subtable }: { subtable: ResultSubtable }) {
             token={token}
             groupStart={groupStarts.has(column)}
             summary={column === scoreIndex ? "score" : column === costIndex ? "cost" : undefined}
+            primary={highlightedMetrics.has(subtable.metrics[column])}
             key={column}
           />
         ))}
@@ -877,7 +878,7 @@ function ResultsSubtableTable({ subtable }: { subtable: ResultSubtable }) {
                 const summary = index === scoreIndex ? "score" : index === costIndex ? "cost" : undefined;
                 return (
                   <th
-                    className={["rt-metric", groupStarts.has(index) ? "group-start" : "", summary ? `rt-summary-${summary}` : ""].filter(Boolean).join(" ")}
+                    className={["rt-metric", groupStarts.has(index) ? "group-start" : "", summary ? `rt-summary-${summary}` : "", highlightedMetrics.has(metric) ? "rt-primary-metric" : ""].filter(Boolean).join(" ")}
                     aria-sort={sortState(index)}
                     key={`${metric}-${index}`}
                   >

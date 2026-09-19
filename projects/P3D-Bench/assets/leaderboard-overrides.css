@@ -36,7 +36,7 @@
 .results-table .rt-summary-cost {
   position: static;
   box-sizing: border-box;
-  background: #fff;
+  background: color-mix(in srgb, var(--rt-accent) 10%, #fff);
   border-left: 1px solid color-mix(in srgb, var(--rt-accent) 24%, var(--line));
   font-variant-numeric: tabular-nums;
 }
@@ -55,12 +55,12 @@
 
 .results-table thead .rt-summary-score,
 .results-table thead .rt-summary-cost {
-  background: color-mix(in srgb, var(--rt-accent) 5%, #fff);
+  background: color-mix(in srgb, var(--rt-accent) 18%, #fff);
 }
 
 .results-table tbody tr:hover .rt-summary-score,
 .results-table tbody tr:hover .rt-summary-cost {
-  background: color-mix(in srgb, var(--rt-accent) 6%, #fff);
+  background: color-mix(in srgb, var(--rt-accent) 15%, #fff);
 }
 
 .results-table .rt-summary-group {
@@ -69,8 +69,28 @@
   width: 134px;
   min-width: 134px;
   max-width: 134px;
-  background: color-mix(in srgb, var(--rt-accent) 5%, #fff);
+  background: color-mix(in srgb, var(--rt-accent) 18%, #fff);
   border-left: 1px solid color-mix(in srgb, var(--rt-accent) 24%, var(--line));
+}
+
+/* Match the paper table: headline metric columns lead and receive a light
+   lavender band, while Topo and Valid remain neutral diagnostics. */
+.results-table .rt-metric.rt-primary-metric {
+  color: var(--ink);
+  background: color-mix(in srgb, var(--violet) 14%, #fff);
+  box-shadow: inset 0 2px 0 color-mix(in srgb, var(--violet) 38%, transparent);
+}
+
+.results-table .rt-cell.rt-primary-metric {
+  background: color-mix(in srgb, var(--violet) 6%, #fff);
+}
+
+.results-table tbody tr:hover .rt-cell.rt-primary-metric {
+  background: color-mix(in srgb, var(--violet) 11%, #fff);
+}
+
+.results-table .rt-domain .rt-cell.rt-primary-metric {
+  background: color-mix(in srgb, var(--violet) 9%, #f6f7f8);
 }
 
 .rt-summary-sort {

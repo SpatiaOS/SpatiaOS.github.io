@@ -96,12 +96,25 @@ export function textBaselineRows(summary) {
     const values = [d.judge, d.valid, p.geometry, p.topology, p.judge, p.valid];
     if (values.some((value) => !Number.isFinite(value) || value < 0 || value > 1)) throw new Error("invalid Text2CAD metric");
     close(row.score, (d.judge + p.geometry + p.judge) * 100 / 3, "Text2CAD total score");
-    const metrics = [d.judge.toFixed(3), d.valid.toFixed(3), "-", "-", "-", "-",
+    const sourceMetrics = [d.judge.toFixed(3), d.valid.toFixed(3), "-", "-", "-", "-",
       ...[p.geometry, p.topology, p.judge, p.valid].map((value) => value.toFixed(3)), ...Array(8).fill("-")].join(" ");
-    if (metrics !== row.metrics) throw new Error("Text2CAD formatted cells differ");
+    if (sourceMetrics !== row.metrics) throw new Error("Text2CAD formatted cells differ");
+    const displayMetrics = [d.judge.toFixed(3), d.valid.toFixed(3), "-", "-", "-", "-",
+      ...[p.geometry, p.judge, p.topology, p.valid].map((value) => value.toFixed(3)), ...Array(8).fill("-")].join(" ");
     return { model: row.model, model_id: row.model_id, family: row.family,
-      cells: `${row.score.toFixed(2)} - ${metrics}` };
+      cells: `${row.score.toFixed(2)} - ${displayMetrics}` };
   });
+}
+
+export function textMetricsForDisplay(row) {
+  const values = [];
+  for (const format of ["json", "openscad", "average"]) {
+    values.push(...["judge", "valid"].map(metric => row.formats.descriptive[format][metric].toFixed(3)));
+  }
+  for (const format of ["json", "openscad", "average"]) {
+    values.push(...["geometry", "judge", "topology", "valid"].map(metric => row.formats.parametric[format][metric].toFixed(3)));
+  }
+  return values.join(" ");
 }
 
 export function textCost(row) {

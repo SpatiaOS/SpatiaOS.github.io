@@ -220,17 +220,21 @@ export function buildAssemblyTable(summary) {
   }
   if ([...expected].some((model) => !seen.has(model))) throw new Error("missing original Assembly model");
   const metricGroups = summary.table.groups.filter((group) => group.label !== "Score / Cost");
-  const metricColumns = summary.table.metrics.filter((metric) => metric !== "Score" && !metric.startsWith("USD"));
+  const displayMetrics = ["Geo", "Judge", "Part", "Topo", "Valid"];
+  const displayAxes = ["geom", "judge", "part", "topo", "valid"];
   return {
     ...summary.table,
     groups: [{ label: "Score / Cost", span: 2 }, ...metricGroups],
-    metrics: ["Score", "USD / case", ...metricColumns],
+    metrics: ["Score", "USD / case", ...Array.from({ length: 3 }, () => displayMetrics).flat()],
     // The live Assembly table has no methodology footer; audits stay in JSON.
     note: "",
     rows: [...summary.rows].sort((a, b) => b.score - a.score).map((row) => {
       const cost = assemblyCostPerCase(row);
+      const metrics = [row.formats.cadquery.metrics, row.formats.openscad.metrics, row.average]
+        .flatMap(values => displayAxes.map(metric => values[metric].toFixed(3)))
+        .join(" ");
       return { model: row.model, model_id: row.model_id, family: row.family,
-        cells: `${row.score.toFixed(2)} ${cost === null ? "-" : `$${cost.toFixed(3)}`} ${row.metrics}` };
+        cells: `${row.score.toFixed(2)} ${cost === null ? "-" : `$${cost.toFixed(3)}`} ${metrics}` };
     }),
   };
 }

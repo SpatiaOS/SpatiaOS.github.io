@@ -19,6 +19,8 @@ test("preserve the measured models and audited costs with three-axis Judge score
   assert(assembly.rows.every((row) => row.cells.split(" ").length === 17));
   assert.deepEqual(original.map((row) => row.cells.split(" ")[1]), ["$1.292", "$0.978", "$0.158", "$0.571", "$0.302", "$0.120", "$0.034"]);
   assert.deepEqual(assembly.metrics.slice(0, 2), ["Score", "USD / case"]);
+  assert.deepEqual(assembly.metrics.slice(2, 7), ["Geo", "Judge", "Part", "Topo", "Valid"]);
+  assert.deepEqual(assembly.rows[0].cells.split(" ").slice(2, 7), ["0.689", "0.591", "0.640", "0.916", "0.989"]);
   assert.equal(assembly.groups[0].label, "Score / Cost");
   assert.deepEqual(summary.rows.find((row) => row.model_id === "gpt6_astra_local").coverage, { total: 200, tested: 183, valid: 182, invalid: 1, api_unrun: 17 });
 });
@@ -124,6 +126,7 @@ test("active renderer highlights only Geo, Judge and Part and hides F@0.05", () 
   const root = fileURLToPath(new URL("../", import.meta.url));
   const input = readActiveBundle(root).input;
   assert.match(input, /new Set\(\["Geo", "Judge", "Part"\]\)/);
+  assert.match(input, /rt-primary-metric/);
   assert.match(input, /s==="f_score_005"\|\|s==="qa_parametric"/);
   assert.doesNotMatch(input, /i\.task==="text2cad"&&s==="f_score_005"/);
 });

@@ -32,8 +32,8 @@ function rankDisplayedRows(rows, metricCount, excluded = []) {
   }));
 }
 
-function _2({ token, groupStart, summary }) {
-  const className = ["rt-cell", groupStart ? "group-start" : "", summary ? `rt-summary-${summary}` : ""].filter(Boolean).join(" ");
+function _2({ token, groupStart, summary, primary }) {
+  const className = ["rt-cell", groupStart ? "group-start" : "", summary ? `rt-summary-${summary}` : "", primary ? "rt-primary-metric" : ""].filter(Boolean).join(" ");
   if (token === "-") return D.jsx("td", { className: `${className} na`, children: "—" });
   if (token.endsWith("!")) return D.jsx("td", { className: `${className} best`, children: token.slice(0, -1) });
   if (token.endsWith("^")) return D.jsx("td", { className: `${className} second`, children: token.slice(0, -1) });
@@ -118,6 +118,7 @@ function x2({ sub }) {
           token,
           groupStart: groupStarts.has(column),
           summary: column === scoreIndex ? "score" : column === costIndex ? "cost" : undefined,
+          primary: highlightedMetrics.has(sub.metrics[column]),
         }, column)),
       ],
     }, row.model);
@@ -153,7 +154,7 @@ function x2({ sub }) {
                   className: "rt-metricrow",
                   children: sub.metrics.map((metric, index) => {
                     const summary = index === scoreIndex ? "score" : index === costIndex ? "cost" : undefined;
-                    const className = ["rt-metric", groupStarts.has(index) ? "group-start" : "", summary ? `rt-summary-${summary}` : ""].filter(Boolean).join(" ");
+                    const className = ["rt-metric", groupStarts.has(index) ? "group-start" : "", summary ? `rt-summary-${summary}` : "", highlightedMetrics.has(metric) ? "rt-primary-metric" : ""].filter(Boolean).join(" ");
                     return D.jsx("th", {
                       className,
                       "aria-sort": sortState(index),
