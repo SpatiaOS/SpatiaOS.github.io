@@ -168,12 +168,12 @@ a separate reported column, and display two decimals after sorting unrounded
 values. `text-table.mjs` checks all eighteen
 metric cells, equal format means, scores, model identities and numeric costs.
 
-The ten general-purpose models use the common fixed-100 aggregation. The JSON-only
-Text2CAD baseline retains the accepted paper aggregate and **17.85** headline score:
-its native Judge averages valid predictions, CD is averaged before normalization,
-and IoU omits valid cases where unavailable while retaining invalid penalties.
-Its unsupported OpenSCAD and average cells remain empty. Import accepted values;
-do not recompute a different baseline policy in the frontend.
+All Text models use the common fixed-100 per-case aggregation. The JSON-only
+Text2CAD baseline scores **18.57**: Judge retains all100 cases, CD is capped per
+case, and Geometry omits unavailable valid IoU before averaging the case scores.
+Invalid outputs contribute zero. Its unsupported OpenSCAD and average cells
+remain empty. Import the validated workbench aggregate; do not infer a second
+format or change the statistical policy in the frontend.
 Reasoning settings are provenance rather than model-name suffixes.
 
 Text costs are displayed per single generation across the 400 selected responses

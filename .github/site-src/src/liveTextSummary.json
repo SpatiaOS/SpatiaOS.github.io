@@ -586,8 +586,8 @@
     "param_judge"
   ],
   "iou_policy": "omit_unavailable_valid_iou_retain_invalid_zero",
-  "native_baseline_source_sha256": "9e7bc31d38d3012ff8853307e78c1e0c958019523267dc22e34c5304acd82a40",
-  "product_version": "text_fixed100_geo4_score3_iou_omit_v5",
+  "native_baseline_source_sha256": "785363f3cdb878c197353c5f1a98f75ad1c575401cc41ddad0d3ff84c24a203c",
+  "product_version": "text_fixed100_native_shared_aggregation_v7",
   "score_revision": "text_geo4_score3_iou_omit_v2",
   "score_source_sha256": "52ebcaa7edace66ededc3cb6e2af523e4f54a0266e6d48b7c7c4fa85ca4256f4",
   "topology_in_headline": false,
@@ -598,26 +598,27 @@
       "formats": {
         "descriptive": {
           "json": {
-            "judge": 0.14148361111111113,
+            "judge": 0.12875,
             "valid": 0.91
           }
         },
         "parametric": {
           "json": {
-            "geometry": 0.2570515,
-            "judge": 0.13690466666666665,
-            "topology": 0.977395,
+            "geometry": 0.29410675000000003,
+            "judge": 0.13416666666666666,
+            "topology": 0.9773948566666667,
             "valid": 0.98
           }
         }
       },
-      "metric_policy": "aaai_native_baseline_exclude_valid_inapplicable_retain_invalid",
-      "metrics": "0.141 0.910 - - - - 0.257 0.977 0.137 0.980 - - - - - - - -",
+      "metric_policy": "omit_unavailable_valid_iou_retain_invalid_zero",
+      "metrics": "0.129 0.910 - - - - 0.294 0.977 0.134 0.980 - - - - - - - -",
       "model": "Text2CAD",
       "model_id": "text2cad",
       "scope": "native_json_only",
-      "score": 17.847992592592593,
-      "score_revision": "text_geo4_score3_v1"
+      "score": 18.567447222222224,
+      "score_revision": "text_geo4_score3_iou_omit_v2",
+      "aggregation_policy": "shared_fixed100_casewise_v1"
     }
   ]
 }
