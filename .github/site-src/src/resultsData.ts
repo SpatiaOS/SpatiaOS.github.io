@@ -2,7 +2,7 @@ import liveTextSummary from "./liveTextSummary.json";
 import liveAssemblySummary from "./liveAssemblySummary.json";
 import liveImageSummary from "./liveImageSummary.json";
 import { buildImageTable } from "../../../projects/P3D-Bench/tools/image-table.mjs";
-import { buildAssemblyTable } from "../../../projects/P3D-Bench/tools/live-tables.mjs";
+import { buildAssemblyTable } from "../../../projects/P3D-Bench/tools/assembly-table.mjs";
 import { textBaselineRows, textCost, textMetricsForDisplay } from "../../../projects/P3D-Bench/tools/text-table.mjs";
 
 export type ResultTableRow = { model: string; model_id?: string; family?: string; cells: string };
@@ -70,25 +70,25 @@ const textTable: ResultSubtable = {
   ],
   "metrics": [
     "Score",
-    "USD/gen.",
+    "USD / generation",
     "Judge",
-    "Valid",
+    "Valid (%)",
     "Judge",
-    "Valid",
+    "Valid (%)",
     "Judge",
-    "Valid",
+    "Valid (%)",
     "Geo",
     "Judge",
     "Topo",
-    "Valid",
+    "Valid (%)",
     "Geo",
     "Judge",
     "Topo",
-    "Valid",
+    "Valid (%)",
     "Geo",
     "Judge",
     "Topo",
-    "Valid"
+    "Valid (%)"
   ],
   "rows": [],
   "note": ""

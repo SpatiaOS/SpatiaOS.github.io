@@ -1,6 +1,6 @@
 {
   "schema_version": "p3d-live-assembly-summary-v1",
-  "updated_at": "2026-09-18T23:11:22+08:00",
+  "updated_at": "2026-09-20T23:47:41+08:00",
   "scope": "100 assemblies × CadQuery/OpenSCAD, 200 planned cases per model",
   "score_definition": "100 * mean(Geo, Judge, Part); Topo and Valid are separate diagnostics.",
   "api_failure_policy": "Generation API failures are unrun and excluded; non-API invalid outputs receive worst scores. Missing evaluations retain the existing per-metric denominators.",
@@ -158,9 +158,9 @@
             "hausdorff_distance_mean_filled": 0.095862,
             "hausdorff_distance_n_real": 86,
             "hausdorff_distance_n_filled": 1,
-            "iou_voxel_mean_filled": 0.6430660714285714,
+            "iou_voxel_mean_filled": 0.6317842105263158,
             "iou_voxel_n_real": 56,
-            "iou_voxel_n_filled": 0,
+            "iou_voxel_n_filled": 1,
             "pred_open_edge_ratio_mean_filled": 0.01205,
             "pred_open_edge_ratio_n_real": 86,
             "pred_open_edge_ratio_n_filled": 1,
@@ -283,12 +283,15 @@
             "invalid": 1,
             "geometry_denominator": 87,
             "missing_geometry": 0,
-            "iou_denominator": 56,
-            "iou_mean": 0.6430660714285714,
+            "iou_denominator": 57,
+            "iou_mean": 0.6317842105263158,
             "valid_scored_without_iou": 30,
             "cd_mean": 0.0009169655172413793,
             "cd_denominator": 87,
-            "cd_capped_cases": 2
+            "cd_capped_cases": 2,
+            "iou_measured_cases": 56,
+            "iou_invalid_cases": 1,
+            "unavailable_iou_cases": 30
           },
           "decomposition": {
             "valid": 0.9885057471264368,
@@ -523,7 +526,10 @@
             "valid_scored_without_iou": 21,
             "cd_mean": 0.0007430625,
             "cd_denominator": 96,
-            "cd_capped_cases": 1
+            "cd_capped_cases": 1,
+            "iou_measured_cases": 75,
+            "iou_invalid_cases": 0,
+            "unavailable_iou_cases": 21
           },
           "decomposition": {
             "valid": 1.0,
@@ -833,7 +839,10 @@
             "valid_scored_without_iou": 25,
             "cd_mean": 0.001669236559139785,
             "cd_denominator": 93,
-            "cd_capped_cases": 2
+            "cd_capped_cases": 2,
+            "iou_measured_cases": 68,
+            "iou_invalid_cases": 0,
+            "unavailable_iou_cases": 25
           },
           "decomposition": {
             "valid": 1.0,
@@ -1068,7 +1077,10 @@
             "valid_scored_without_iou": 23,
             "cd_mean": 0.00189717,
             "cd_denominator": 100,
-            "cd_capped_cases": 4
+            "cd_capped_cases": 4,
+            "iou_measured_cases": 77,
+            "iou_invalid_cases": 0,
+            "unavailable_iou_cases": 23
           },
           "decomposition": {
             "valid": 1.0,
@@ -1246,9 +1258,9 @@
             "hausdorff_distance_mean_filled": 0.17198,
             "hausdorff_distance_n_real": 95,
             "hausdorff_distance_n_filled": 2,
-            "iou_voxel_mean_filled": 0.44169411764705885,
+            "iou_voxel_mean_filled": 0.42907428571428574,
             "iou_voxel_n_real": 68,
-            "iou_voxel_n_filled": 0,
+            "iou_voxel_n_filled": 2,
             "pred_open_edge_ratio_mean_filled": 0.02126,
             "pred_open_edge_ratio_n_real": 95,
             "pred_open_edge_ratio_n_filled": 2,
@@ -1371,12 +1383,15 @@
             "invalid": 2,
             "geometry_denominator": 97,
             "missing_geometry": 0,
-            "iou_denominator": 68,
-            "iou_mean": 0.44169411764705885,
+            "iou_denominator": 70,
+            "iou_mean": 0.42907428571428574,
             "valid_scored_without_iou": 27,
             "cd_mean": 0.001996494845360825,
             "cd_denominator": 97,
-            "cd_capped_cases": 5
+            "cd_capped_cases": 5,
+            "iou_measured_cases": 68,
+            "iou_invalid_cases": 2,
+            "unavailable_iou_cases": 27
           },
           "decomposition": {
             "valid": 0.979381443298969,
@@ -1611,7 +1626,10 @@
             "valid_scored_without_iou": 23,
             "cd_mean": 0.00182947,
             "cd_denominator": 100,
-            "cd_capped_cases": 3
+            "cd_capped_cases": 3,
+            "iou_measured_cases": 77,
+            "iou_invalid_cases": 0,
+            "unavailable_iou_cases": 23
           },
           "decomposition": {
             "valid": 1.0,
@@ -1789,9 +1807,9 @@
             "hausdorff_distance_mean_filled": 0.190037,
             "hausdorff_distance_n_real": 93,
             "hausdorff_distance_n_filled": 2,
-            "iou_voxel_mean_filled": 0.3710733333333333,
+            "iou_voxel_mean_filled": 0.3591032258064516,
             "iou_voxel_n_real": 60,
-            "iou_voxel_n_filled": 0,
+            "iou_voxel_n_filled": 2,
             "pred_open_edge_ratio_mean_filled": 0.022599,
             "pred_open_edge_ratio_n_real": 93,
             "pred_open_edge_ratio_n_filled": 2,
@@ -1914,12 +1932,15 @@
             "invalid": 2,
             "geometry_denominator": 95,
             "missing_geometry": 1,
-            "iou_denominator": 60,
-            "iou_mean": 0.3710733333333333,
+            "iou_denominator": 62,
+            "iou_mean": 0.3591032258064516,
             "valid_scored_without_iou": 33,
             "cd_mean": 0.0024783473684210524,
             "cd_denominator": 95,
-            "cd_capped_cases": 5
+            "cd_capped_cases": 5,
+            "iou_measured_cases": 60,
+            "iou_invalid_cases": 2,
+            "unavailable_iou_cases": 34
           },
           "decomposition": {
             "valid": 0.9791666666666666,
@@ -2156,7 +2177,10 @@
             "valid_scored_without_iou": 23,
             "cd_mean": 0.00205652,
             "cd_denominator": 100,
-            "cd_capped_cases": 4
+            "cd_capped_cases": 4,
+            "iou_measured_cases": 77,
+            "iou_invalid_cases": 0,
+            "unavailable_iou_cases": 23
           },
           "decomposition": {
             "valid": 1.0,
@@ -2541,7 +2565,10 @@
             "valid_scored_without_iou": 28,
             "cd_mean": 0.0022663975903614458,
             "cd_denominator": 83,
-            "cd_capped_cases": 7
+            "cd_capped_cases": 7,
+            "iou_measured_cases": 55,
+            "iou_invalid_cases": 0,
+            "unavailable_iou_cases": 28
           },
           "decomposition": {
             "valid": 1.0,
@@ -2776,7 +2803,10 @@
             "valid_scored_without_iou": 21,
             "cd_mean": 0.0016558817204301076,
             "cd_denominator": 93,
-            "cd_capped_cases": 4
+            "cd_capped_cases": 4,
+            "iou_measured_cases": 72,
+            "iou_invalid_cases": 0,
+            "unavailable_iou_cases": 21
           },
           "decomposition": {
             "valid": 1.0,
@@ -2851,7 +2881,7 @@
       "cost_usd_per_case": 0.3016331022727272
     },
     {
-      "model": "Qwen 3.8 Max",
+      "model": "Qwen3.8-Max",
       "model_id": "qwen38max",
       "family": "qwen",
       "metrics": "0.499 0.918 0.454 0.472 0.978 0.547 1.000 0.492 0.521 1.000 0.523 0.959 0.473 0.496 0.989",
@@ -2954,9 +2984,9 @@
             "hausdorff_distance_mean_filled": 0.201861,
             "hausdorff_distance_n_real": 88,
             "hausdorff_distance_n_filled": 2,
-            "iou_voxel_mean_filled": 0.3483543859649123,
+            "iou_voxel_mean_filled": 0.3365457627118644,
             "iou_voxel_n_real": 57,
-            "iou_voxel_n_filled": 0,
+            "iou_voxel_n_filled": 2,
             "pred_open_edge_ratio_mean_filled": 0.023119,
             "pred_open_edge_ratio_n_real": 88,
             "pred_open_edge_ratio_n_filled": 2,
@@ -3079,12 +3109,15 @@
             "invalid": 2,
             "geometry_denominator": 90,
             "missing_geometry": 0,
-            "iou_denominator": 57,
-            "iou_mean": 0.3483543859649123,
+            "iou_denominator": 59,
+            "iou_mean": 0.3365457627118644,
             "valid_scored_without_iou": 31,
             "cd_mean": 0.0028893555555555557,
             "cd_denominator": 90,
-            "cd_capped_cases": 7
+            "cd_capped_cases": 7,
+            "iou_measured_cases": 57,
+            "iou_invalid_cases": 2,
+            "unavailable_iou_cases": 31
           },
           "decomposition": {
             "valid": 0.9777777777777777,
@@ -3319,7 +3352,10 @@
             "valid_scored_without_iou": 22,
             "cd_mean": 0.0018715000000000001,
             "cd_denominator": 98,
-            "cd_capped_cases": 1
+            "cd_capped_cases": 1,
+            "iou_measured_cases": 76,
+            "iou_invalid_cases": 0,
+            "unavailable_iou_cases": 22
           },
           "decomposition": {
             "valid": 1.0,
@@ -3394,7 +3430,7 @@
       "cost_usd_per_case": 0.1200615425531915
     },
     {
-      "model": "GLM 5.3 Flash",
+      "model": "GLM-5.3-Flash",
       "model_id": "glm53_flash",
       "family": "zai",
       "metrics": "0.521 0.923 0.465 0.454 0.977 0.530 1.000 0.496 0.464 1.000 0.526 0.962 0.481 0.459 0.989",
@@ -3497,9 +3533,9 @@
             "hausdorff_distance_mean_filled": 0.174553,
             "hausdorff_distance_n_real": 85,
             "hausdorff_distance_n_filled": 2,
-            "iou_voxel_mean_filled": 0.3869553571428571,
+            "iou_voxel_mean_filled": 0.37361206896551724,
             "iou_voxel_n_real": 56,
-            "iou_voxel_n_filled": 0,
+            "iou_voxel_n_filled": 2,
             "pred_open_edge_ratio_mean_filled": 0.028989,
             "pred_open_edge_ratio_n_real": 85,
             "pred_open_edge_ratio_n_filled": 2,
@@ -3622,12 +3658,15 @@
             "invalid": 2,
             "geometry_denominator": 87,
             "missing_geometry": 0,
-            "iou_denominator": 56,
-            "iou_mean": 0.3869553571428571,
+            "iou_denominator": 58,
+            "iou_mean": 0.37361206896551724,
             "valid_scored_without_iou": 29,
             "cd_mean": 0.002267183908045977,
             "cd_denominator": 87,
-            "cd_capped_cases": 2
+            "cd_capped_cases": 2,
+            "iou_measured_cases": 56,
+            "iou_invalid_cases": 2,
+            "unavailable_iou_cases": 29
           },
           "decomposition": {
             "valid": 0.9770114942528736,
@@ -3862,7 +3901,10 @@
             "valid_scored_without_iou": 22,
             "cd_mean": 0.002244774193548387,
             "cd_denominator": 93,
-            "cd_capped_cases": 5
+            "cd_capped_cases": 5,
+            "iou_measured_cases": 71,
+            "iou_invalid_cases": 0,
+            "unavailable_iou_cases": 22
           },
           "decomposition": {
             "valid": 1.0,
@@ -4041,9 +4083,9 @@
             "hausdorff_distance_mean_filled": 0.195613,
             "hausdorff_distance_n_real": 91,
             "hausdorff_distance_n_filled": 3,
-            "iou_voxel_mean_filled": 0.4017,
+            "iou_voxel_mean_filled": 0.38257142857142856,
             "iou_voxel_n_real": 60,
-            "iou_voxel_n_filled": 0,
+            "iou_voxel_n_filled": 3,
             "pred_open_edge_ratio_mean_filled": 0.039582,
             "pred_open_edge_ratio_n_real": 91,
             "pred_open_edge_ratio_n_filled": 3,
@@ -4167,12 +4209,15 @@
             "invalid": 3,
             "geometry_denominator": 94,
             "missing_geometry": 0,
-            "iou_denominator": 60,
-            "iou_mean": 0.4017,
+            "iou_denominator": 63,
+            "iou_mean": 0.38257142857142856,
             "valid_scored_without_iou": 31,
             "cd_mean": 0.0028741808510638297,
             "cd_denominator": 94,
-            "cd_capped_cases": 8
+            "cd_capped_cases": 8,
+            "iou_measured_cases": 60,
+            "iou_invalid_cases": 3,
+            "unavailable_iou_cases": 31
           },
           "decomposition": {
             "valid": 0.9680851063829787,
@@ -4277,9 +4322,9 @@
             "hausdorff_distance_mean_filled": 0.183853,
             "hausdorff_distance_n_real": 98,
             "hausdorff_distance_n_filled": 1,
-            "iou_voxel_mean_filled": 0.35937368421052635,
+            "iou_voxel_mean_filled": 0.3547064935064935,
             "iou_voxel_n_real": 76,
-            "iou_voxel_n_filled": 0,
+            "iou_voxel_n_filled": 1,
             "pred_open_edge_ratio_mean_filled": 0.010101,
             "pred_open_edge_ratio_n_real": 98,
             "pred_open_edge_ratio_n_filled": 1,
@@ -4402,12 +4447,15 @@
             "invalid": 1,
             "geometry_denominator": 99,
             "missing_geometry": 0,
-            "iou_denominator": 76,
-            "iou_mean": 0.35937368421052635,
+            "iou_denominator": 77,
+            "iou_mean": 0.3547064935064935,
             "valid_scored_without_iou": 22,
             "cd_mean": 0.002308363636363636,
             "cd_denominator": 99,
-            "cd_capped_cases": 4
+            "cd_capped_cases": 4,
+            "iou_measured_cases": 76,
+            "iou_invalid_cases": 1,
+            "unavailable_iou_cases": 22
           },
           "decomposition": {
             "valid": 0.98989898989899,
@@ -4599,9 +4647,9 @@
             "hausdorff_distance_mean_filled": 0.437353,
             "hausdorff_distance_n_real": 40,
             "hausdorff_distance_n_filled": 59,
-            "iou_voxel_mean_filled": 0.3311,
+            "iou_voxel_mean_filled": 0.11876413043478261,
             "iou_voxel_n_real": 33,
-            "iou_voxel_n_filled": 0,
+            "iou_voxel_n_filled": 59,
             "pred_open_edge_ratio_mean_filled": 0.596166,
             "pred_open_edge_ratio_n_real": 40,
             "pred_open_edge_ratio_n_filled": 59,
@@ -4725,12 +4773,15 @@
             "invalid": 59,
             "geometry_denominator": 99,
             "missing_geometry": 1,
-            "iou_denominator": 33,
-            "iou_mean": 0.3311,
+            "iou_denominator": 92,
+            "iou_mean": 0.11876413043478261,
             "valid_scored_without_iou": 7,
             "cd_mean": 0.007194070707070707,
             "cd_denominator": 99,
-            "cd_capped_cases": 1
+            "cd_capped_cases": 1,
+            "iou_measured_cases": 33,
+            "iou_invalid_cases": 59,
+            "unavailable_iou_cases": 8
           },
           "decomposition": {
             "valid": 0.41,
@@ -4836,9 +4887,9 @@
             "hausdorff_distance_mean_filled": 0.226821,
             "hausdorff_distance_n_real": 98,
             "hausdorff_distance_n_filled": 2,
-            "iou_voxel_mean_filled": 0.31580526315789476,
+            "iou_voxel_mean_filled": 0.3077076923076923,
             "iou_voxel_n_real": 76,
-            "iou_voxel_n_filled": 0,
+            "iou_voxel_n_filled": 2,
             "pred_open_edge_ratio_mean_filled": 0.02,
             "pred_open_edge_ratio_n_real": 98,
             "pred_open_edge_ratio_n_filled": 2,
@@ -4962,12 +5013,15 @@
             "invalid": 2,
             "geometry_denominator": 100,
             "missing_geometry": 0,
-            "iou_denominator": 76,
-            "iou_mean": 0.31580526315789476,
+            "iou_denominator": 78,
+            "iou_mean": 0.3077076923076923,
             "valid_scored_without_iou": 22,
             "cd_mean": 0.00331187,
             "cd_denominator": 100,
-            "cd_capped_cases": 6
+            "cd_capped_cases": 6,
+            "iou_measured_cases": 76,
+            "iou_invalid_cases": 2,
+            "unavailable_iou_cases": 22
           },
           "decomposition": {
             "valid": 0.98,
@@ -5275,10 +5329,8 @@
         "iou_voxel_n": 74,
         "iou_voxel_std": 0.2592,
         "iou_voxel_mean_filled": 0.3294121621621622,
-        "iou_voxel_median_filled": 0.2193,
         "iou_voxel_n_real": 74,
         "iou_voxel_n_filled": 0,
-        "iou_voxel_std_filled": 0.2592,
         "pred_open_edge_ratio_mean": 0.00303,
         "pred_open_edge_ratio_median": 0.0,
         "pred_open_edge_ratio_n": 100,
@@ -5560,7 +5612,10 @@
         "valid_scored_without_iou": 26,
         "cd_mean": 0.00299288,
         "cd_denominator": 100,
-        "cd_capped_cases": 6
+        "cd_capped_cases": 6,
+        "iou_measured_cases": 74,
+        "iou_invalid_cases": 0,
+        "unavailable_iou_cases": 26
       }
     },
     {
@@ -5644,10 +5699,8 @@
         "iou_voxel_n": 22,
         "iou_voxel_std": 0.2682,
         "iou_voxel_mean_filled": 0.4904636363636364,
-        "iou_voxel_median_filled": 0.5088,
         "iou_voxel_n_real": 22,
         "iou_voxel_n_filled": 0,
-        "iou_voxel_std_filled": 0.2682,
         "pred_open_edge_ratio_mean": 0.012718,
         "pred_open_edge_ratio_median": 0.005101,
         "pred_open_edge_ratio_n": 97,
@@ -5929,7 +5982,10 @@
         "valid_scored_without_iou": 75,
         "cd_mean": 0.0015018556701030929,
         "cd_denominator": 97,
-        "cd_capped_cases": 2
+        "cd_capped_cases": 2,
+        "iou_measured_cases": 22,
+        "iou_invalid_cases": 0,
+        "unavailable_iou_cases": 75
       }
     }
   ],
@@ -5965,17 +6021,18 @@
     "text_raw_audit_sha256": "a8273fe0e41bcac4672743c9d46e7e37061c1e29562ac4e387818ce8fb7b6c75",
     "part_rescore_sha256": "c2708213d4311dc9389c58a01cc1dc27de6b9164da8fa3bf4c9d91611f77f361",
     "geometry_aggregation_revision": "per-case-20260918",
-    "iou": "Omit unavailable IoU from the valid case mean, never worst-fill it. Standalone IoU averages measured values from valid outputs only, retaining measured zeros."
+    "iou": "Omit unavailable IoU from a valid case Geo mean. Standalone IoU averages measured values from valid outputs plus zero contributions from invalid outputs; only valid-but-unavailable measurements are omitted, and measured zeros are retained.",
+    "reported_iou_revision": "invalid-zero-20260920"
   },
   "casewise_geometry_policy": {
     "geometry": "Normalize per case; average CD score, F@0.01, NC and measured IoU within each valid case, then average case scores within each format.",
     "invalid": "Generation-invalid outputs contribute zero Geo. Preserve released API-unrun exclusions and missing-evaluation exclusions.",
-    "iou": "Omit unavailable IoU from the valid case mean, never worst-fill it. Standalone IoU averages measured values from valid outputs only, retaining measured zeros.",
+    "iou": "Omit unavailable IoU from a valid case Geo mean. Standalone IoU averages measured values from valid outputs plus zero contributions from invalid outputs; only valid-but-unavailable measurements are omitted, and measured zeros are retained.",
     "cd": "Cap each measured CD at 0.01 before normalization and reporting; invalid outputs receive CD=0.01.",
     "formats": "Average task-supported formats equally after averaging cases."
   },
   "aggregation_source": {
-    "paper_release_sha256": "478d92cb3731d83aaf281698f5d414397270d26b22d85b40af9960b78126eead",
+    "paper_release_sha256": "a53bfcb717fd9e800453beb39db7522b05ae4f73bc3a113fc612eefc09f2abb7",
     "per_case_input_sha256": "20631c2735234df27c359e54d9fa50edfc1bfaff5559e43ed7fb9f4e4055ec2d"
   }
 }

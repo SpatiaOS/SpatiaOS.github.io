@@ -39,12 +39,12 @@
     },
     {
       "id": "qwen38max-reason",
-      "label": "Qwen 3.8 Max",
+      "label": "Qwen3.8-Max",
       "family": "qwen"
     },
     {
       "id": "glm53_flash-reason",
-      "label": "GLM 5.3 Flash",
+      "label": "GLM-5.3-Flash",
       "family": "zai"
     },
     {
@@ -6821,7 +6821,7 @@
           "id": "image2cad_33970_c040ca8f_cadquery_qwen38max",
           "task": "image2cad",
           "model": "qwen38max-reason",
-          "modelLabel": "Qwen 3.8 Max",
+          "modelLabel": "Qwen3.8-Max",
           "family": "qwen",
           "formatLabel": "CadQuery",
           "specLabel": "Image input",
@@ -6832,7 +6832,7 @@
           "id": "image2cad_33970_c040ca8f_cadquery_glm53_flash",
           "task": "image2cad",
           "model": "glm53_flash-reason",
-          "modelLabel": "GLM 5.3 Flash",
+          "modelLabel": "GLM-5.3-Flash",
           "family": "zai",
           "formatLabel": "CadQuery",
           "specLabel": "Image input",
@@ -6934,7 +6934,7 @@
           "id": "text_image2cad_107647_af2c0a8b_cadquery_qwen38max",
           "task": "text_image2cad",
           "model": "qwen38max-reason",
-          "modelLabel": "Qwen 3.8 Max",
+          "modelLabel": "Qwen3.8-Max",
           "family": "qwen",
           "formatLabel": "CadQuery",
           "specLabel": "Text + image input",
@@ -6945,7 +6945,7 @@
           "id": "text_image2cad_107647_af2c0a8b_cadquery_glm53_flash",
           "task": "text_image2cad",
           "model": "glm53_flash-reason",
-          "modelLabel": "GLM 5.3 Flash",
+          "modelLabel": "GLM-5.3-Flash",
           "family": "zai",
           "formatLabel": "CadQuery",
           "specLabel": "Text + image input",
@@ -6999,12 +6999,13 @@
     "text_raw_audit_sha256": "a8273fe0e41bcac4672743c9d46e7e37061c1e29562ac4e387818ce8fb7b6c75",
     "part_rescore_sha256": "c2708213d4311dc9389c58a01cc1dc27de6b9164da8fa3bf4c9d91611f77f361",
     "geometry_aggregation_revision": "per-case-20260918",
-    "iou": "Omit unavailable IoU from the valid case mean, never worst-fill it. Standalone IoU averages measured values from valid outputs only, retaining measured zeros."
+    "iou": "Omit unavailable IoU from the valid case mean, never worst-fill it. Standalone IoU averages measured values from valid outputs only, retaining measured zeros.",
+    "reported_iou_revision": "invalid-zero-20260920"
   },
   "casewise_geometry_policy": {
     "geometry": "Normalize per case; average CD score, F@0.01, NC and measured IoU within each valid case, then average case scores within each format.",
     "invalid": "Generation-invalid outputs contribute zero Geo. Preserve released API-unrun exclusions and missing-evaluation exclusions.",
-    "iou": "Omit unavailable IoU from the valid case mean, never worst-fill it. Standalone IoU averages measured values from valid outputs only, retaining measured zeros.",
+    "iou": "Omit unavailable IoU from a valid case Geo mean. Standalone IoU averages measured values from valid outputs plus zero contributions from invalid outputs; only valid-but-unavailable measurements are omitted, and measured zeros are retained.",
     "cd": "Cap each measured CD at 0.01 before normalization and reporting; invalid outputs receive CD=0.01.",
     "formats": "Average task-supported formats equally after averaging cases."
   }

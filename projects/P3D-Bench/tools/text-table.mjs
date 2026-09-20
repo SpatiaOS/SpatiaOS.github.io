@@ -3,7 +3,7 @@ export const TEXT_MODELS = ["gpt6_probe", "gemini38_flash", "qwen38max", "grok46
   "claude_opus5", "glm53_official", "deepseek_v41flash", "doubao21", "glm53flash"];
 
 export const TEXT_MODEL_LABELS = {
-  gpt6_probe: "GPT-6",
+  gpt6_probe: "GPT-6 Astra",
   gemini38_flash: "Gemini 3.8 Flash",
   qwen38max: "Qwen3.8-Max",
   grok46: "Grok 4.6",
@@ -100,8 +100,8 @@ export function textBaselineRows(summary) {
     const sourceMetrics = [d.judge.toFixed(3), d.valid.toFixed(3), "-", "-", "-", "-",
       ...[p.geometry, p.topology, p.judge, p.valid].map((value) => value.toFixed(3)), ...Array(8).fill("-")].join(" ");
     if (sourceMetrics !== row.metrics) throw new Error("Text2CAD formatted cells differ");
-    const displayMetrics = [d.judge.toFixed(3), d.valid.toFixed(3), "-", "-", "-", "-",
-      ...[p.geometry, p.judge, p.topology, p.valid].map((value) => value.toFixed(3)), ...Array(8).fill("-")].join(" ");
+    const displayMetrics = [(d.judge * 100).toFixed(1), (d.valid * 100).toFixed(1), "-", "-", "-", "-",
+      ...[p.geometry, p.judge, p.topology, p.valid].map((value) => (value * 100).toFixed(1)), ...Array(8).fill("-")].join(" ");
     return { model: row.model, model_id: row.model_id, family: row.family,
       cells: `${row.score.toFixed(2)} - ${displayMetrics}` };
   });
@@ -110,10 +110,10 @@ export function textBaselineRows(summary) {
 export function textMetricsForDisplay(row) {
   const values = [];
   for (const format of ["json", "openscad", "average"]) {
-    values.push(...["judge", "valid"].map(metric => row.formats.descriptive[format][metric].toFixed(3)));
+    values.push(...["judge", "valid"].map(metric => (row.formats.descriptive[format][metric] * 100).toFixed(1)));
   }
   for (const format of ["json", "openscad", "average"]) {
-    values.push(...["geometry", "judge", "topology", "valid"].map(metric => row.formats.parametric[format][metric].toFixed(3)));
+    values.push(...["geometry", "judge", "topology", "valid"].map(metric => (row.formats.parametric[format][metric] * 100).toFixed(1)));
   }
   return values.join(" ");
 }

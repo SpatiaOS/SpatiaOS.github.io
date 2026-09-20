@@ -1,5 +1,36 @@
 # P3D-Bench static release tools
 
+## Paper display alignment — September 20
+
+Figure 1 SVG/PDF/PNG and its score-data copy match the local paper, including
+both Text GLM variants and a/b markers. Figure 2 is rendered from the updated
+paper PDF; source hashes and versioned paths are in `../figures/paper-assets.json`.
+All displayed buckets use 0–100 with one decimal; Valid and NoOE use a (%)
+column/metric label. Raw submetrics retain their native units. Costs are labelled
+USD / generation. Model display names are consistent across tables and demos.
+
+Standalone IoU includes invalid-output zero contributions and excludes only
+valid-but-unavailable measurements. The revised denominators are included in
+all three summaries. This does not change bucket scores or model rankings.
+
+`demo-metrics.mjs` is the shared source for interactive scores. Geo excludes
+F@0.05; visual Judge uses (s-1)/9; parametric Text Judge weights QA-S:QA-P 1:2.
+Saved Part gate exclusions remain null and measured zero QA-P stays visible.
+`assembly-table.mjs` contains browser-safe table construction; Node-only bundle
+I/O stays in `live-tables.mjs`.
+
+After refreshing the summaries and figure assets, regenerate in this order:
+
+```bash
+node projects/P3D-Bench/tools/update-live-image-assembly.mjs
+node projects/P3D-Bench/tools/update-live-text.mjs
+node projects/P3D-Bench/tools/update-paper-display.mjs
+node --test projects/P3D-Bench/tools/*.test.mjs
+```
+
+The last updater synchronizes figure/data/CSS cache versions and the demo scoring
+function in the active bundle. Do not deploy intermediate generated bundles.
+
 ## Current aggregation revision — September 18
 
 The active Image/Assembly leaderboards and all source mirrors use the accepted
@@ -7,7 +38,7 @@ paper export. Geo normalizes each prediction's metrics, averages CD score,
 F@0.01, NC and available IoU within that prediction, then averages cases and
 finally formats. Unavailable IoU is omitted, never worst-filled. Invalid
 predictions retain zero Geo; recorded API and evaluation gaps are preserved.
-Standalone IoU uses measured values from valid outputs, including measured zeros.
+Standalone IoU uses measured valid values and invalid-output zeros; see the September 20 update.
 Headline Score excludes Topo and Valid. Image's Cadrille and CAD-Coder rows use
 native CadQuery only; unsupported format and average cells remain empty.
 
@@ -44,9 +75,9 @@ and PDF URLs versioned whenever that figure changes. Use the Doubao icon
 (`demo/icons/src/doubao-color.svg`) for the Doubao family.
 
 The evaluation overview uses Figure 2 from the ICLR 2027 paper's
-`figures/fig2_leaderboard.pdf` (SHA256 `5410596bd1448b4b0f28db1cc7c7958a98de3d3e22eb9fcdb76bbef738154207`).
+`figures/fig2_leaderboard.pdf` (SHA256 `d9b0aecbdb056d85bedde199c8e6605396e335264021f86245211744f2de755e`).
 Render the PDF with `pdftoppm -scale-to 2800 -png -singlefile` and use
-`figures/fig2_leaderboard-5410596bd144.png` in both the source overview and active bundle.
+`figures/fig2_leaderboard-d9b0aecbdb05.png` in both the source overview and active bundle.
 Version the image and bundle filenames when the paper figure changes.
 
 Run the updater for the leaderboard being changed:

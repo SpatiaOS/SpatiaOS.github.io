@@ -14,13 +14,13 @@ const fixture = `${prefix}[${textRaw},${oldAssembly}]${suffix}`;
 
 test("preserve the measured models and audited costs with three-axis Judge scores", () => {
   const original = assembly.rows.filter((row) => !["doubao_seed21", "mimo25", "deepseek41_flash"].includes(row.model_id));
-  assert.deepEqual(original.map((row) => row.model), ["GPT-6 Astra", "Claude Opus 5", "Gemini 3.8 Flash", "Kimi K3", "Grok 4.6", "Qwen 3.8 Max", "GLM 5.3 Flash"]);
+  assert.deepEqual(original.map((row) => row.model), ["GPT-6 Astra", "Claude Opus 5", "Gemini 3.8 Flash", "Kimi K3", "Grok 4.6", "Qwen3.8-Max", "GLM-5.3-Flash"]);
   assert.deepEqual(original.map((row) => row.cells.split(" ")[0]), ["63.45", "54.20", "53.16", "50.76", "50.69", "49.74", "48.84"]);
   assert(assembly.rows.every((row) => row.cells.split(" ").length === 17));
   assert.deepEqual(original.map((row) => row.cells.split(" ")[1]), ["$1.292", "$0.978", "$0.158", "$0.571", "$0.302", "$0.120", "$0.034"]);
-  assert.deepEqual(assembly.metrics.slice(0, 2), ["Score", "USD / case"]);
-  assert.deepEqual(assembly.metrics.slice(2, 7), ["Geo", "Judge", "Part", "Topo", "Valid"]);
-  assert.deepEqual(assembly.rows[0].cells.split(" ").slice(2, 7), ["0.689", "0.591", "0.640", "0.916", "0.989"]);
+  assert.deepEqual(assembly.metrics.slice(0, 2), ["Score", "USD / generation"]);
+  assert.deepEqual(assembly.metrics.slice(2, 7), ["Geo", "Judge", "Part", "Topo", "Valid (%)"]);
+  assert.deepEqual(assembly.rows[0].cells.split(" ").slice(2, 7), ["68.9", "59.1", "64.0", "91.6", "98.9"]);
   assert.equal(assembly.groups[0].label, "Score / Cost");
   assert.deepEqual(summary.rows.find((row) => row.model_id === "gpt6_astra_local").coverage, { total: 200, tested: 183, valid: 182, invalid: 1, api_unrun: 17 });
 });

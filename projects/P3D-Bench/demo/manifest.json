@@ -2663,7 +2663,7 @@
         "iou_voxel": 0.1813,
         "pred_open_edge_ratio": 0,
         "pred_inverted_normal_ratio": 0,
-        "pred_non_manifold_edge_ratio": 0.000025,
+        "pred_non_manifold_edge_ratio": 2.5e-05,
         "judge_geometry": 2,
         "judge_aesthetics": 3,
         "judge_semantic": 7,
@@ -2802,7 +2802,7 @@
         "iou_voxel": 0.0776,
         "pred_open_edge_ratio": 0,
         "pred_inverted_normal_ratio": 0,
-        "pred_non_manifold_edge_ratio": 0.000013,
+        "pred_non_manifold_edge_ratio": 1.3e-05,
         "judge_geometry": 2,
         "judge_aesthetics": 3,
         "judge_semantic": 2,
@@ -3045,7 +3045,7 @@
         "iou_voxel": 0.0228,
         "pred_open_edge_ratio": 0,
         "pred_inverted_normal_ratio": 0,
-        "pred_non_manifold_edge_ratio": 0.000032,
+        "pred_non_manifold_edge_ratio": 3.2e-05,
         "judge_geometry": 1,
         "judge_aesthetics": 2,
         "judge_semantic": 1,
@@ -3427,7 +3427,7 @@
         "iou_voxel": 0.2475,
         "pred_open_edge_ratio": 0,
         "pred_inverted_normal_ratio": 0,
-        "pred_non_manifold_edge_ratio": 0.000088,
+        "pred_non_manifold_edge_ratio": 8.8e-05,
         "judge_geometry": 2,
         "judge_aesthetics": 4,
         "judge_semantic": 5,
@@ -3695,7 +3695,7 @@
         "normal_consistency": 0.5158,
         "pred_open_edge_ratio": 0,
         "pred_inverted_normal_ratio": 0,
-        "pred_non_manifold_edge_ratio": 0.000039,
+        "pred_non_manifold_edge_ratio": 3.9e-05,
         "judge_geometry": 3,
         "judge_aesthetics": 4,
         "judge_semantic": 10
@@ -3727,7 +3727,7 @@
         "normal_consistency": 0.5035,
         "pred_open_edge_ratio": 0,
         "pred_inverted_normal_ratio": 0,
-        "pred_non_manifold_edge_ratio": 0.000086,
+        "pred_non_manifold_edge_ratio": 8.6e-05,
         "judge_geometry": 2,
         "judge_aesthetics": 4,
         "judge_semantic": 8
@@ -4047,7 +4047,7 @@
         "normal_consistency": 0.5763,
         "pred_open_edge_ratio": 0,
         "pred_inverted_normal_ratio": 0,
-        "pred_non_manifold_edge_ratio": 0.000032,
+        "pred_non_manifold_edge_ratio": 3.2e-05,
         "judge_geometry": 2,
         "judge_aesthetics": 4,
         "judge_semantic": 4
@@ -5689,7 +5689,7 @@
         "iou_voxel": 0.116,
         "pred_open_edge_ratio": 0,
         "pred_inverted_normal_ratio": 0,
-        "pred_non_manifold_edge_ratio": 0.000075,
+        "pred_non_manifold_edge_ratio": 7.5e-05,
         "judge_geometry": 1,
         "judge_aesthetics": 3,
         "judge_semantic": 2
@@ -7262,7 +7262,7 @@
         "judge_aesthetics": 4,
         "judge_semantic": 9,
         "pred_inverted_normal_ratio": 0,
-        "pred_non_manifold_edge_ratio": 0.000054
+        "pred_non_manifold_edge_ratio": 5.4e-05
       }
     },
     {
@@ -7324,7 +7324,7 @@
         "judge_aesthetics": 3,
         "judge_semantic": 2,
         "pred_inverted_normal_ratio": 0,
-        "pred_non_manifold_edge_ratio": 0.000032
+        "pred_non_manifold_edge_ratio": 3.2e-05
       }
     },
     {
@@ -7812,7 +7812,7 @@
         "generated_json": "runs/text2cad_0047_00478097_parametric_json_gpt55-reason/generated.json"
       },
       "metrics": {
-        "chamfer_distance": 0.000031,
+        "chamfer_distance": 3.1e-05,
         "hausdorff_distance": 0.052933,
         "f_score_005": 0.9987,
         "f_score_001": 0.8343,
@@ -7843,7 +7843,7 @@
         "generated_json": "runs/text2cad_0047_00478097_parametric_json_gemini-reason/generated.json"
       },
       "metrics": {
-        "chamfer_distance": 0.000023,
+        "chamfer_distance": 2.3e-05,
         "hausdorff_distance": 0.053106,
         "f_score_005": 0.9977,
         "f_score_001": 0.8933,
@@ -7874,7 +7874,7 @@
         "generated_json": "runs/text2cad_0047_00478097_parametric_json_claude-reason/generated.json"
       },
       "metrics": {
-        "chamfer_distance": 0.000032,
+        "chamfer_distance": 3.2e-05,
         "hausdorff_distance": 0.052761,
         "f_score_005": 0.9989,
         "f_score_001": 0.8204,
@@ -7905,7 +7905,7 @@
         "generated_json": "runs/text2cad_0047_00478097_parametric_json_kimi_k26-reason/generated.json"
       },
       "metrics": {
-        "chamfer_distance": 0.000029,
+        "chamfer_distance": 2.9e-05,
         "hausdorff_distance": 0.053105,
         "f_score_005": 0.9977,
         "f_score_001": 0.8631,
@@ -7936,7 +7936,7 @@
         "generated_json": "runs/text2cad_0047_00478097_parametric_json_glm-reason/generated.json"
       },
       "metrics": {
-        "chamfer_distance": 0.000024,
+        "chamfer_distance": 2.4e-05,
         "hausdorff_distance": 0.053131,
         "f_score_005": 0.9977,
         "f_score_001": 0.8934,
@@ -7967,7 +7967,7 @@
         "generated_json": "runs/text2cad_0047_00478097_parametric_json_doubao-reason/generated.json"
       },
       "metrics": {
-        "chamfer_distance": 0.000024,
+        "chamfer_distance": 2.4e-05,
         "hausdorff_distance": 0.053124,
         "f_score_005": 0.9977,
         "f_score_001": 0.8936,
@@ -7998,7 +7998,7 @@
         "generated_json": "runs/text2cad_0047_00478097_parametric_json_deepseek_v4pro-reason/generated.json"
       },
       "metrics": {
-        "chamfer_distance": 0.000035,
+        "chamfer_distance": 3.5e-05,
         "hausdorff_distance": 0.048908,
         "f_score_005": 0.999,
         "f_score_001": 0.808,
@@ -8029,7 +8029,7 @@
         "generated_json": "runs/text2cad_0047_00478097_parametric_json_qwen-reason/generated.json"
       },
       "metrics": {
-        "chamfer_distance": 0.000032,
+        "chamfer_distance": 3.2e-05,
         "hausdorff_distance": 0.053167,
         "f_score_005": 0.9977,
         "f_score_001": 0.8372,
@@ -8060,7 +8060,7 @@
         "generated_json": "runs/text2cad_0047_00478097_parametric_json_mimo_v25-reason/generated.json"
       },
       "metrics": {
-        "chamfer_distance": 0.000032,
+        "chamfer_distance": 3.2e-05,
         "hausdorff_distance": 0.053167,
         "f_score_005": 0.9977,
         "f_score_001": 0.8372,
@@ -8090,7 +8090,7 @@
         "gt_render": "gt_renders/text2cad_0047_00478097.png"
       },
       "metrics": {
-        "chamfer_distance": 0.000066,
+        "chamfer_distance": 6.6e-05,
         "hausdorff_distance": 0.054553,
         "f_score_005": 0.9976,
         "f_score_001": 0.6113,
@@ -8120,7 +8120,7 @@
         "gt_render": "gt_renders/text2cad_0047_00478097.png"
       },
       "metrics": {
-        "chamfer_distance": 0.000069,
+        "chamfer_distance": 6.9e-05,
         "hausdorff_distance": 0.054789,
         "f_score_005": 0.9973,
         "f_score_001": 0.6065,
@@ -8150,7 +8150,7 @@
         "gt_render": "gt_renders/text2cad_0047_00478097.png"
       },
       "metrics": {
-        "chamfer_distance": 0.000066,
+        "chamfer_distance": 6.6e-05,
         "hausdorff_distance": 0.052763,
         "f_score_005": 0.9975,
         "f_score_001": 0.6149,
@@ -8180,7 +8180,7 @@
         "gt_render": "gt_renders/text2cad_0047_00478097.png"
       },
       "metrics": {
-        "chamfer_distance": 0.000068,
+        "chamfer_distance": 6.8e-05,
         "hausdorff_distance": 0.055025,
         "f_score_005": 0.9973,
         "f_score_001": 0.6088,
@@ -8210,7 +8210,7 @@
         "gt_render": "gt_renders/text2cad_0047_00478097.png"
       },
       "metrics": {
-        "chamfer_distance": 0.000068,
+        "chamfer_distance": 6.8e-05,
         "hausdorff_distance": 0.05241,
         "f_score_005": 0.9977,
         "f_score_001": 0.6049,
@@ -8240,7 +8240,7 @@
         "gt_render": "gt_renders/text2cad_0047_00478097.png"
       },
       "metrics": {
-        "chamfer_distance": 0.000068,
+        "chamfer_distance": 6.8e-05,
         "hausdorff_distance": 0.052112,
         "f_score_005": 0.9978,
         "f_score_001": 0.6071,
@@ -8270,7 +8270,7 @@
         "gt_render": "gt_renders/text2cad_0047_00478097.png"
       },
       "metrics": {
-        "chamfer_distance": 0.000068,
+        "chamfer_distance": 6.8e-05,
         "hausdorff_distance": 0.052109,
         "f_score_005": 0.9978,
         "f_score_001": 0.6051,
@@ -8300,7 +8300,7 @@
         "gt_render": "gt_renders/text2cad_0047_00478097.png"
       },
       "metrics": {
-        "chamfer_distance": 0.000068,
+        "chamfer_distance": 6.8e-05,
         "hausdorff_distance": 0.052242,
         "f_score_005": 0.9977,
         "f_score_001": 0.6033,
@@ -8330,7 +8330,7 @@
         "gt_render": "gt_renders/text2cad_0047_00478097.png"
       },
       "metrics": {
-        "chamfer_distance": 0.000063,
+        "chamfer_distance": 6.3e-05,
         "hausdorff_distance": 0.050275,
         "f_score_005": 0.9993,
         "f_score_001": 0.6107,
@@ -9307,7 +9307,7 @@
       "valid": true,
       "condition": "Use the main base as the first reference with length 0.341352, width 0.199422, height 0.065029, and main extrusion depth 0.065. Form this low rounded annular section on the upper side from concentric circular profiles centered 0.2416 from the left edge and 0.0997 from the front edge, with outer radius 0.0997 and inner radius 0.0434; keep the inner profile open through the 0.065 thickness. Add the taller hollow sleeve as a concentric annular cylinder with a 0.2602 by 0.2602 circular span, edge offsets left -0.2135, right 0.2946, front -0.0303, and back -0.0305; its center is offset -0.0834 from the left reference and 0.0998 from the front reference, with outer radius 0.1301, inner radius 0.0867, and upward reach 0.2601 from the base datum. Add the projecting straight-sided arm section with length 0.325145, width 0.260116, height 0.130058, edge offsets left -0.4086, right 0.4248, front -0.0303, and back -0.0304, extending upward 0.1301 from the base datum. In that same arm footprint, cut away the lower band from the underside over the vertical range 0 to 0.065 relative to the base underside, leaving the arm as a raised stepped tier rather than a full-depth solid. Add the narrow triangular web on the upper side with a plan run of 0.108382 and material thickness 0.0217, placed between left offsets 0.0466 and 0.1863 and front/back offsets 0.0781 and 0.0996; its side profile rises across a 0.195087 span and reaches toward the 0.2601 upper sleeve tier.",
       "metrics": {
-        "chamfer_distance": 0.000047,
+        "chamfer_distance": 4.7e-05,
         "hausdorff_distance": 0.041216,
         "f_score_005": 0.9996,
         "f_score_001": 0.804,
@@ -9906,7 +9906,7 @@
         "generated_json": "runs/text2cad_0005_00051572_parametric_json_gpt55-reason/generated.json"
       },
       "metrics": {
-        "chamfer_distance": 0.000006,
+        "chamfer_distance": 6e-06,
         "hausdorff_distance": 0.020542,
         "f_score_005": 1,
         "f_score_001": 0.9606,
@@ -9937,7 +9937,7 @@
         "generated_json": "runs/text2cad_0005_00051572_parametric_json_gemini-reason/generated.json"
       },
       "metrics": {
-        "chamfer_distance": 0.000006,
+        "chamfer_distance": 6e-06,
         "hausdorff_distance": 0.020542,
         "f_score_005": 1,
         "f_score_001": 0.9606,
@@ -9968,7 +9968,7 @@
         "generated_json": "runs/text2cad_0005_00051572_parametric_json_claude-reason/generated.json"
       },
       "metrics": {
-        "chamfer_distance": 0.000096,
+        "chamfer_distance": 9.6e-05,
         "hausdorff_distance": 0.093076,
         "f_score_005": 0.9854,
         "f_score_001": 0.775,
@@ -10030,7 +10030,7 @@
         "generated_json": "runs/text2cad_0005_00051572_parametric_json_glm-reason/generated.json"
       },
       "metrics": {
-        "chamfer_distance": 0.000096,
+        "chamfer_distance": 9.6e-05,
         "hausdorff_distance": 0.093076,
         "f_score_005": 0.9854,
         "f_score_001": 0.775,
@@ -10184,7 +10184,7 @@
         "gt_render": "gt_renders/text2cad_0005_00051572.png"
       },
       "metrics": {
-        "chamfer_distance": 0.000042,
+        "chamfer_distance": 4.2e-05,
         "hausdorff_distance": 0.021591,
         "f_score_005": 1,
         "f_score_001": 0.7339,
@@ -10214,7 +10214,7 @@
         "gt_render": "gt_renders/text2cad_0005_00051572.png"
       },
       "metrics": {
-        "chamfer_distance": 0.000046,
+        "chamfer_distance": 4.6e-05,
         "hausdorff_distance": 0.020794,
         "f_score_005": 1,
         "f_score_001": 0.7096,
@@ -10274,7 +10274,7 @@
         "gt_render": "gt_renders/text2cad_0005_00051572.png"
       },
       "metrics": {
-        "chamfer_distance": 0.000046,
+        "chamfer_distance": 4.6e-05,
         "hausdorff_distance": 0.02222,
         "f_score_005": 1,
         "f_score_001": 0.7096,
@@ -10304,7 +10304,7 @@
         "gt_render": "gt_renders/text2cad_0005_00051572.png"
       },
       "metrics": {
-        "chamfer_distance": 0.000087,
+        "chamfer_distance": 8.7e-05,
         "hausdorff_distance": 0.056672,
         "f_score_005": 0.9928,
         "f_score_001": 0.6012,
@@ -10334,7 +10334,7 @@
         "gt_render": "gt_renders/text2cad_0005_00051572.png"
       },
       "metrics": {
-        "chamfer_distance": 0.000085,
+        "chamfer_distance": 8.5e-05,
         "hausdorff_distance": 0.055854,
         "f_score_005": 0.9938,
         "f_score_001": 0.6107,

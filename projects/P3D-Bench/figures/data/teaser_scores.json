@@ -46,6 +46,7 @@
     {
       "id": "glm53_official",
       "label": "GLM-5.3",
+      "variant_marker": "a",
       "family": "zai",
       "color": "#B0C2B8",
       "icon_family": "zai"
@@ -53,6 +54,7 @@
     {
       "id": "glm53_flash",
       "label": "GLM-5.3-Flash",
+      "variant_marker": "b",
       "family": "zai_flash",
       "color": "#F0D36F",
       "icon_family": "zai",
@@ -141,16 +143,12 @@
       "rows": 2,
       "labels": {
         "openai": "GPT-6 Astra",
-        "zai": "GLM-5.3 / GLM-5.3-Flash"
+        "zai": "GLM-5.3ᵃ / GLM-5.3-Flashᵇ"
       }
     }
   },
   "display_preferences": {
-    "exclude_models_by_task": {
-      "text": [
-        "glm53_flash"
-      ]
-    },
+    "exclude_models_by_task": {},
     "model_aliases": {
       "gpt6_probe": "gpt6_astra_local"
     },
@@ -162,7 +160,7 @@
         "rows": 2,
         "labels": {
           "openai": "GPT-6 Astra",
-          "zai": "GLM-5.3 / GLM-5.3-Flash"
+          "zai": "GLM-5.3ᵃ / GLM-5.3-Flashᵇ"
         }
       }
     },

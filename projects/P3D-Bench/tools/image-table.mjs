@@ -33,7 +33,7 @@ export function buildAdditionalFormatTables(rows = [], task) {
   if (!rows.length) return [];
   const axes = task === "assembly" ? [...AXES, "part"] : AXES;
   const scoreAxes = task === "assembly" ? ["geom", "judge", "part"] : ["geom", "judge"];
-  const names = task === "assembly" ? ["Geo", "Topo", "Judge", "Part", "Valid"] : ["Geo", "Topo", "Judge", "Valid"];
+  const names = task === "assembly" ? ["Geo", "Topo", "Judge", "Part", "Valid (%)"] : ["Geo", "Topo", "Judge", "Valid (%)"];
   const seen = new Set();
   for (const row of rows) {
     const key = `${row.model_id}/${row.format}`;
@@ -50,10 +50,10 @@ export function buildAdditionalFormatTables(rows = [], task) {
     key: `${task}formats`, title: "Gemini 3.8 Flash · Additional formats",
     accent: task === "assembly" ? "var(--coral)" : "var(--teal)",
     groups: [{ label: "Per-format metrics", span: names.length }, { label: "Coverage", span: 2 }, { label: "Score / Cost", span: 2 }],
-    metrics: [...names, "Tested", "Judged", "Score", "USD / case"],
+    metrics: [...names, "Tested", "Judged", "Score", "USD / generation"],
     rows: rows.map(row => ({ model: `${row.model} · ${row.format === "json" ? "JSON" : "Three.js"}`,
       model_id: `${row.model_id}/${row.format}`, family: row.family,
-      cells: [...axes, "valid"].map(k => row.metrics[k].toFixed(3)).join(" ")
+      cells: [...axes, "valid"].map(k => (row.metrics[k] * 100).toFixed(1)).join(" ")
         + ` ${row.coverage.tested}/100 ${row.coverage.judge_ok}/${row.coverage.valid} ${row.score.toFixed(2)} ${cost(row.cost_usd_per_case, row.coverage)}` })),
     note: "Each row reports one output format on the same 100 cases. These formats do not enter the main leaderboard average. Tested excludes API failures; Judged counts scored valid outputs. Scores with incomplete coverage are provisional. Costs use saved generation tokens at the frozen September 10/11 API rates.",
   }];
@@ -97,12 +97,12 @@ export function buildImageTable(summary) {
     key: "image", title: "Image-to-3D", accent: "var(--teal)",
     groups: [{ label: "Score / Cost", span: 2 }]
       .concat(["CadQuery", "OpenSCAD", "Three.js", "Average"].map(label => ({ label, span: 4 }))),
-    metrics: ["Score", "USD / case"]
-      .concat(Array.from({ length: 4 }, () => ["Geo", "Judge", "Topo", "Valid"]).flat()),
+    metrics: ["Score", "USD / generation"]
+      .concat(Array.from({ length: 4 }, () => ["Geo", "Judge", "Topo", "Valid (%)"]).flat()),
     rows: [...summary.rows].sort((a, b) => b.score - a.score).map(row => ({ model: row.model,
       model_id: row.model_id, family: row.family,
       cells: `${row.score.toFixed(2)} ${cost(row.cost_usd_per_case, row.counts)} ${[...FORMATS, "average"]
-        .flatMap(format => DISPLAY_AXES.map(axis => (format === "average" ? row.average : row.formats[format])[axis].toFixed(3)))
+        .flatMap(format => DISPLAY_AXES.map(axis => ((format === "average" ? row.average : row.formats[format])[axis] * 100).toFixed(1)))
         .join(" ")}` })),
     domainRows: imageBaselineRows(summary.domain_baselines),
     note: "",
@@ -119,7 +119,7 @@ export function imageBaselineRows(rows = []) {
     for (const key of ["geom", "topo", "judge", "valid"]) normalized(row.metrics[key]);
     close(row.score, 50 * (row.metrics.geom + row.metrics.judge), "native Image score");
     close(row.metrics.valid, row.coverage.valid / row.coverage.tested, "native Image validity", 0.00005);
-    const metrics = DISPLAY_AXES.map(key => row.metrics[key].toFixed(3));
+    const metrics = DISPLAY_AXES.map(key => (row.metrics[key] * 100).toFixed(1));
     return { model: row.model, model_id: row.model_id, family: "domain",
       cells: [row.score.toFixed(2), "-", ...metrics, ...Array(12).fill("-")].join(" ") };
   });

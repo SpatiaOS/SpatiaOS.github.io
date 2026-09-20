@@ -1,0 +1,12 @@
+{
+  "overview": {
+    "png": "figures/fig2_leaderboard-d9b0aecbdb05.png",
+    "pdf": "figures/fig2_leaderboard-d9b0aecbdb05.pdf",
+    "source_sha256": "d9b0aecbdb056d85bedde199c8e6605396e335264021f86245211744f2de755e"
+  },
+  "score_figure": {
+    "svg": "figures/fig_tasks_grouped_bars.svg",
+    "pdf": "figures/fig_tasks_grouped_bars.pdf",
+    "png": "figures/fig_tasks_grouped_bars.png"
+  }
+}

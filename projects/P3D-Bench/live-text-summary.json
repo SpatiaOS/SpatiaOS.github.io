@@ -49,18 +49,32 @@
             "geometry": 0.6653548333333333,
             "judge": 0.9108333333333333,
             "topology": 0.9865497033333334,
-            "valid": 1
+            "valid": 1,
+            "reported_iou": {
+              "iou_csg": 0.6179851063829788,
+              "iou_denominator": 94,
+              "iou_measured_cases": 94,
+              "iou_invalid_cases": 0,
+              "unavailable_iou_cases": 6
+            }
           },
           "openscad": {
             "geometry": 0.7104991666666666,
             "judge": 0.9441666666666667,
             "topology": 0.9999886499999999,
-            "valid": 1
+            "valid": 1,
+            "reported_iou": {
+              "iou_csg": 0.6762322916666667,
+              "iou_denominator": 96,
+              "iou_measured_cases": 96,
+              "iou_invalid_cases": 0,
+              "unavailable_iou_cases": 4
+            }
           }
         }
       },
       "metrics": "0.927 1.000 0.926 1.000 0.926 1.000 0.665 0.987 0.911 1.000 0.710 1.000 0.944 1.000 0.688 0.993 0.927 1.000",
-      "model": "GPT-6",
+      "model": "GPT-6 Astra",
       "model_id": "gpt6_probe",
       "score": 84.7271962962963,
       "usage_kind": "selected_response_usage",
@@ -99,13 +113,27 @@
             "geometry": 0.6701033333333334,
             "judge": 0.8958333333333334,
             "topology": 0.9794807933333334,
-            "valid": 1
+            "valid": 1,
+            "reported_iou": {
+              "iou_csg": 0.6102922222222222,
+              "iou_denominator": 90,
+              "iou_measured_cases": 90,
+              "iou_invalid_cases": 0,
+              "unavailable_iou_cases": 10
+            }
           },
           "openscad": {
             "geometry": 0.6873596666666667,
             "judge": 0.9175,
             "topology": 0.99998869,
-            "valid": 1
+            "valid": 1,
+            "reported_iou": {
+              "iou_csg": 0.6503,
+              "iou_denominator": 90,
+              "iou_measured_cases": 90,
+              "iou_invalid_cases": 0,
+              "unavailable_iou_cases": 10
+            }
           }
         }
       },
@@ -149,13 +177,27 @@
             "geometry": 0.67806275,
             "judge": 0.8808333333333334,
             "topology": 0.9863895366666666,
-            "valid": 1
+            "valid": 1,
+            "reported_iou": {
+              "iou_csg": 0.6204436170212766,
+              "iou_denominator": 94,
+              "iou_measured_cases": 94,
+              "iou_invalid_cases": 0,
+              "unavailable_iou_cases": 6
+            }
           },
           "openscad": {
             "geometry": 0.7053489166666667,
             "judge": 0.93,
             "topology": 0.99997639,
-            "valid": 1
+            "valid": 1,
+            "reported_iou": {
+              "iou_csg": 0.6706520833333334,
+              "iou_denominator": 96,
+              "iou_measured_cases": 96,
+              "iou_invalid_cases": 0,
+              "unavailable_iou_cases": 4
+            }
           }
         }
       },
@@ -199,13 +241,27 @@
             "geometry": 0.6556504166666667,
             "judge": 0.8850000000000001,
             "topology": 0.9761123533333332,
-            "valid": 0.99
+            "valid": 0.99,
+            "reported_iou": {
+              "iou_csg": 0.6023409090909091,
+              "iou_denominator": 88,
+              "iou_measured_cases": 87,
+              "iou_invalid_cases": 1,
+              "unavailable_iou_cases": 12
+            }
           },
           "openscad": {
             "geometry": 0.6841276666666667,
             "judge": 0.94,
             "topology": 0.99981858,
-            "valid": 1
+            "valid": 1,
+            "reported_iou": {
+              "iou_csg": 0.6471422222222222,
+              "iou_denominator": 90,
+              "iou_measured_cases": 90,
+              "iou_invalid_cases": 0,
+              "unavailable_iou_cases": 10
+            }
           }
         }
       },
@@ -249,13 +305,27 @@
             "geometry": 0.6807449166666666,
             "judge": 0.8775000000000001,
             "topology": 0.98971166,
-            "valid": 1
+            "valid": 1,
+            "reported_iou": {
+              "iou_csg": 0.6227431578947369,
+              "iou_denominator": 95,
+              "iou_measured_cases": 95,
+              "iou_invalid_cases": 0,
+              "unavailable_iou_cases": 5
+            }
           },
           "openscad": {
             "geometry": 0.6933833333333334,
             "judge": 0.9141666666666666,
             "topology": 0.99992989,
-            "valid": 1
+            "valid": 1,
+            "reported_iou": {
+              "iou_csg": 0.652421875,
+              "iou_denominator": 96,
+              "iou_measured_cases": 96,
+              "iou_invalid_cases": 0,
+              "unavailable_iou_cases": 4
+            }
           }
         }
       },
@@ -299,13 +369,27 @@
             "geometry": 0.658679,
             "judge": 0.8858333333333334,
             "topology": 0.9898354333333333,
-            "valid": 1
+            "valid": 1,
+            "reported_iou": {
+              "iou_csg": 0.6025157894736842,
+              "iou_denominator": 95,
+              "iou_measured_cases": 95,
+              "iou_invalid_cases": 0,
+              "unavailable_iou_cases": 5
+            }
           },
           "openscad": {
             "geometry": 0.6934845833333334,
             "judge": 0.9375,
             "topology": 0.9997288233333333,
-            "valid": 1
+            "valid": 1,
+            "reported_iou": {
+              "iou_csg": 0.6525125,
+              "iou_denominator": 96,
+              "iou_measured_cases": 96,
+              "iou_invalid_cases": 0,
+              "unavailable_iou_cases": 4
+            }
           }
         }
       },
@@ -349,13 +433,27 @@
             "geometry": 0.6424357500000001,
             "judge": 0.87,
             "topology": 0.9895863766666666,
-            "valid": 1
+            "valid": 1,
+            "reported_iou": {
+              "iou_csg": 0.5736292134831461,
+              "iou_denominator": 89,
+              "iou_measured_cases": 89,
+              "iou_invalid_cases": 0,
+              "unavailable_iou_cases": 11
+            }
           },
           "openscad": {
             "geometry": 0.6693346666666666,
             "judge": 0.93,
             "topology": 0.9997674533333333,
-            "valid": 1
+            "valid": 1,
+            "reported_iou": {
+              "iou_csg": 0.6216244444444444,
+              "iou_denominator": 90,
+              "iou_measured_cases": 90,
+              "iou_invalid_cases": 0,
+              "unavailable_iou_cases": 10
+            }
           }
         }
       },
@@ -399,13 +497,27 @@
             "geometry": 0.6493245000000001,
             "judge": 0.8641666666666666,
             "topology": 0.9760531100000001,
-            "valid": 0.99
+            "valid": 0.99,
+            "reported_iou": {
+              "iou_csg": 0.5879574468085106,
+              "iou_denominator": 94,
+              "iou_measured_cases": 93,
+              "iou_invalid_cases": 1,
+              "unavailable_iou_cases": 6
+            }
           },
           "openscad": {
             "geometry": 0.6612513333333334,
             "judge": 0.9083333333333332,
             "topology": 0.9895230266666667,
-            "valid": 0.99
+            "valid": 0.99,
+            "reported_iou": {
+              "iou_csg": 0.6096354166666667,
+              "iou_denominator": 96,
+              "iou_measured_cases": 95,
+              "iou_invalid_cases": 1,
+              "unavailable_iou_cases": 4
+            }
           }
         }
       },
@@ -449,13 +561,27 @@
             "geometry": 0.63958925,
             "judge": 0.8633333333333333,
             "topology": 0.9762890533333334,
-            "valid": 0.99
+            "valid": 0.99,
+            "reported_iou": {
+              "iou_csg": 0.5722602272727273,
+              "iou_denominator": 88,
+              "iou_measured_cases": 87,
+              "iou_invalid_cases": 1,
+              "unavailable_iou_cases": 12
+            }
           },
           "openscad": {
             "geometry": 0.6529170833333333,
             "judge": 0.91,
             "topology": 0.9998956933333334,
-            "valid": 1
+            "valid": 1,
+            "reported_iou": {
+              "iou_csg": 0.5931511111111111,
+              "iou_denominator": 90,
+              "iou_measured_cases": 90,
+              "iou_invalid_cases": 0,
+              "unavailable_iou_cases": 10
+            }
           }
         }
       },
@@ -499,13 +625,27 @@
             "geometry": 0.6119320833333333,
             "judge": 0.8574999999999999,
             "topology": 0.9629565966666667,
-            "valid": 0.98
+            "valid": 0.98,
+            "reported_iou": {
+              "iou_csg": 0.518148275862069,
+              "iou_denominator": 87,
+              "iou_measured_cases": 85,
+              "iou_invalid_cases": 2,
+              "unavailable_iou_cases": 13
+            }
           },
           "openscad": {
             "geometry": 0.6030890833333333,
             "judge": 0.8866666666666667,
             "topology": 0.9898334066666666,
-            "valid": 0.99
+            "valid": 0.99,
+            "reported_iou": {
+              "iou_csg": 0.5425855555555555,
+              "iou_denominator": 90,
+              "iou_measured_cases": 89,
+              "iou_invalid_cases": 1,
+              "unavailable_iou_cases": 10
+            }
           }
         }
       },
@@ -607,7 +747,14 @@
             "geometry": 0.29410675000000003,
             "judge": 0.13416666666666666,
             "topology": 0.9773948566666667,
-            "valid": 0.98
+            "valid": 0.98,
+            "reported_iou": {
+              "iou_csg": 0.1728752808988764,
+              "iou_denominator": 89,
+              "iou_measured_cases": 87,
+              "iou_invalid_cases": 2,
+              "unavailable_iou_cases": 11
+            }
           }
         }
       },
@@ -620,5 +767,6 @@
       "score_revision": "text_geo4_score3_iou_omit_v2",
       "aggregation_policy": "shared_fixed100_casewise_v1"
     }
-  ]
+  ],
+  "reported_iou_policy": "Omit unavailable IoU from a valid case Geo mean. Standalone IoU averages measured values from valid outputs plus zero contributions from invalid outputs; only valid-but-unavailable measurements are omitted, and measured zeros are retained."
 }

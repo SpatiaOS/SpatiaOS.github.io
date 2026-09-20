@@ -161,3 +161,21 @@
     font-size: 11px;
   }
 }
+
+/* Paper-aligned units and full model names on every viewport. */
+.results-table.has-summary { min-width: 1160px; }
+.results-table.has-summary .rt-model-col { width: 210px; min-width: 210px; max-width: 210px; }
+.results-table.has-summary .rt-model strong { white-space: normal; overflow: visible; text-overflow: clip; line-height: 1.35; }
+.results-table .rt-summary-cost { width: 105px; min-width: 105px; max-width: 105px; }
+.results-table .rt-summary-group { width: 169px; min-width: 169px; max-width: 169px; }
+.results-table .rt-summary-sort span:first-child { white-space: normal; }
+
+/* Shared grouped metric-card styles for source builds and static releases. */
+.metrics-panel{display:grid;gap:14px}
+.metric-valid{display:flex;align-items:baseline;justify-content:space-between;gap:10px;padding:10px 14px;border-radius:8px;border:1px solid rgba(51,118,101,.18);background:var(--paper-2)}
+.metric-valid span{color:var(--muted);font:700 10.5px var(--font-code);text-transform:uppercase}
+.metric-valid strong{font-size:15px;font-weight:800;letter-spacing:.02em;text-transform:uppercase}
+.metric-valid.is-valid strong{color:var(--teal)}
+.metric-valid.is-invalid strong{color:var(--coral)}
+.metric-bucket{display:grid;gap:8px}
+.metric-bucket-label{padding-left:9px;border-left:3px solid var(--bucket-accent);color:var(--ink);font:800 12.5px/1.1 var(--font-display)}

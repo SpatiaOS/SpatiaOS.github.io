@@ -28,7 +28,7 @@ test("Topo is displayed independently and unavailable IoU is omitted", () => {
 
 test("display order puts Geo and Judge before Topo and Valid", () => {
   const cells = textMetricsForDisplay(summary.rows[0]).split(" ");
-  assert.deepEqual(cells.slice(6, 10), ["0.665", "0.911", "0.987", "1.000"]);
+  assert.deepEqual(cells.slice(6, 10), ["66.5", "91.1", "98.7", "100.0"]);
   assert.equal(cells.length, 18);
 });
 
@@ -74,7 +74,7 @@ test("reject missing metrics, duplicates, stale scores, wrong means and costs", 
 test("Text2CAD shares the fixed100 policy and retains JSON-only coverage", () => {
   const [baseline] = textBaselineRows(summary);
   assert.equal(baseline.model, "Text2CAD");
-  assert.equal(baseline.cells, "18.57 - 0.129 0.910 - - - - 0.294 0.134 0.977 0.980 - - - - - - - -");
+  assert.equal(baseline.cells, "18.57 - 12.9 91.0 - - - - 29.4 13.4 97.7 98.0 - - - - - - - -");
   assert.equal(baseline.cells.split(" ").length, 20);
   for (const mutate of [
     row => { row.formats.descriptive.openscad = { judge: .2, valid: .91 }; },

@@ -15,9 +15,9 @@ test("Image uses current nine-model Hard100 data and records all coverage gaps",
   assert.equal(table.metrics.length, 18);
   assert.equal(table.groups.reduce((n, g) => n + g.span, 0), 18);
   assert(table.rows.every(r => r.cells.split(" ").length === 18));
-  assert.deepEqual(table.metrics.slice(0, 2), ["Score", "USD / case"]);
-  assert.deepEqual(table.metrics.slice(2, 6), ["Geo", "Judge", "Topo", "Valid"]);
-  assert.deepEqual(table.rows[0].cells.split(" ").slice(2, 6), ["0.581", "0.599", "0.929", "0.988"]);
+  assert.deepEqual(table.metrics.slice(0, 2), ["Score", "USD / generation"]);
+  assert.deepEqual(table.metrics.slice(2, 6), ["Geo", "Judge", "Topo", "Valid (%)"]);
+  assert.deepEqual(table.rows[0].cells.split(" ").slice(2, 6), ["58.1", "59.9", "92.9", "98.8"]);
   assert.equal(table.groups[0].label, "Score / Cost");
   assert(!table.groups.some(group => group.label === "Coverage"));
   assert(!table.metrics.includes("Tested"));
@@ -32,7 +32,7 @@ test("native Image baselines retain their CadQuery-only contract", () => {
   const rows = buildImageTable(summary).domainRows;
   assert.deepEqual(rows.map(r => r.model_id), ["cadrille", "cadcoder"]);
   assert.deepEqual(rows.map(r => r.cells.split(" ")[0]), ["19.13", "5.67"]);
-  assert.deepEqual(rows[0].cells.split(" ").slice(2, 6), ["0.217", "0.166", "0.745", "0.770"]);
+  assert.deepEqual(rows[0].cells.split(" ").slice(2, 6), ["21.7", "16.6", "74.5", "77.0"]);
   assert(rows.every(r => r.cells.split(" ").slice(6, 18).every(v => v === "-")));
   assert(rows.every(r => r.cells.split(" ").length === 18));
   const bad = structuredClone(summary);

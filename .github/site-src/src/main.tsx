@@ -1,3 +1,4 @@
+import { demoBucketScore } from "../../../projects/P3D-Bench/tools/demo-metrics.mjs";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { mergeLiveTextManifest } from "../../../projects/P3D-Bench/tools/text-demo.mjs";
 import { mergeSpatialManifest } from "../../../projects/P3D-Bench/tools/spatial-demo.mjs";
@@ -9,6 +10,7 @@ import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { STLLoader } from "three/examples/jsm/loaders/STLLoader.js";
 import "./styles.css";
+import "../../../projects/P3D-Bench/assets/leaderboard-overrides.css";
 import type { ResultSubtable, ResultTableRow } from "./resultsData";
 import { loadPaperResultTables } from "./paperSnapshot";
 
@@ -40,6 +42,7 @@ type Run = {
   condition: string;
   assets: AssetMap;
   metrics: Record<string, number | string | null>;
+  buckets?: Record<string, number | null>;
 };
 
 type Manifest = {
@@ -123,6 +126,7 @@ type ComplexAssemblyItem = {
   condition: string;
   assets: { gt_render?: string; pred_render?: string; mesh?: string; stage2_mesh?: string };
   metrics: Record<string, number | string | null>;
+  buckets?: Record<string, number | null>;
   judge_reason?: string;
   parts: ComplexAssemblyPart[];
 };
@@ -179,16 +183,16 @@ function App() {
   const [code, setCode] = useState("");
 
   useEffect(() => {
-    fetch(asset("manifest.json?v=abstract-d9c685c58490"))
+    fetch(asset("manifest.json?v=b387519a6bf5"))
       .then((res) => (res.ok ? res.json() : fallbackManifest))
       .then(async (data) => {
         try {
-          const response = await fetch(asset("text-live-fixed100.json?v=0748da758a79"));
+          const response = await fetch(asset("text-live-fixed100.json?v=da01f3f7ee83"));
           if (!response.ok) throw new Error("Text live data unavailable");
           data = mergeLiveTextManifest(data, await response.json());
         } catch { /* The base manifest remains available when Text cannot load. */ }
         try {
-          const response = await fetch(asset("spatial-live.json?v=392f98b97085"));
+          const response = await fetch(asset("spatial-live.json?v=61d8e42e5c23"));
           if (!response.ok) throw new Error("Spatial demo unavailable");
           data = mergeSpatialManifest(data, await response.json());
         } catch { /* Preserve the already loaded data if this overlay cannot load. */ }
@@ -322,7 +326,7 @@ function App() {
 
       <section id="overview" className="section overview-section">
         <figure className="overview-figure-block">
-          <img src="./figures/fig2_leaderboard-5410596bd144.png" alt="P3D-Bench overview: tasks, evaluated models and output formats, and evaluation metrics" />
+          <img src="./figures/fig2_leaderboard-d9b0aecbdb05.png" alt="P3D-Bench overview: tasks, evaluated models and output formats, and evaluation metrics" />
           <figcaption>
             P3D-Bench evaluates MLLMs and domain-specific models on three parametric-CAD tasks — Text-to-3D, Image-to-3D and Assembly-3D — across four code formats (JSON, OpenSCAD, CadQuery, Three.js), scoring geometric fidelity, mesh topology, an MLLM judge and part-level structure.
           </figcaption>
@@ -688,8 +692,8 @@ function MainFigures() {
   return (
     <div className="main-figures">
       <figure className="leaderboard-figure">
-        <a href="./figures/fig_tasks_grouped_bars.pdf?v=axis-423ab70c5401" aria-label="Open leaderboard figure PDF">
-          <img src="./figures/fig_tasks_grouped_bars.svg?v=axis-423ab70c5401" alt="Paper Figure 1: Assembly-3D, Text-to-3D and Image-to-3D scores with separate panel axes" />
+        <a href="./figures/fig_tasks_grouped_bars.pdf?v=97ea71c0c6b2" aria-label="Open leaderboard figure PDF">
+          <img src="./figures/fig_tasks_grouped_bars.svg?v=97ea71c0c6b2" alt="Paper Figure 1: Assembly-3D, Text-to-3D and Image-to-3D scores with separate panel axes" />
         </a>
       </figure>
     </div>
@@ -1539,19 +1543,25 @@ function Collapsible({ title, icon, defaultOpen = false, children }: { title: st
   );
 }
 
+const metricBuckets = [
+  {key: "geometry", label: "Geometry", accent: "var(--blue)", metrics: [["f_score_001", "F@0.01"], ["normal_consistency", "NC"], ["chamfer_distance", "CD"], ["iou_csg", "IoU"], ["iou_voxel", "IoU"]]},
+  {key: "topology", label: "Topology", accent: "var(--teal)", metrics: [["pred_open_edge_ratio", "NoOE (%)"], ["pred_inverted_normal_ratio", "InvN"], ["pred_non_manifold_edge_ratio", "NM"]]},
+  {key: "judge", label: "Judge", accent: "var(--violet)", metrics: [["judge_geometry", "J-Geo"], ["judge_aesthetics", "J-Aes"], ["judge_semantic", "J-Sem"], ["qa_semantic", "QA-S"], ["qa_parametric", "QA-P"]]},
+  {key: "part", label: "Part", accent: "var(--coral)", metrics: [["part_match_f1", "PartMatchF1"], ["part_fscore_mean", "PartFS"]]},
+];
 function MetricStrip({ run }: { run?: Run }) {
-  const entries = getMetricEntries(run);
-  if (!entries.length) return null;
-  return (
-    <div className="metrics">
-      {entries.length ? entries.map((entry) => (
-        <div className="metric" key={entry.key}>
-          <span>{entry.label}</span>
-          <strong>{entry.value}</strong>
-        </div>
-      )) : null}
-    </div>
-  );
+  if (!run) return null;
+  const buckets = metricBuckets.map(bucket => ({...bucket,
+    score: demoBucketScore(run, bucket.key),
+    items: bucket.metrics.filter(([key]) => isVisibleMetric(key, run.metrics[key], run)),
+  })).filter(bucket => bucket.items.length || bucket.score !== null);
+  return <div className="metrics-panel">
+    {run.valid !== null && run.valid !== undefined ? <div className={`metric-valid ${run.valid ? "is-valid" : "is-invalid"}`}><span>Executable</span><strong>{run.valid ? "yes" : "no"}</strong></div> : null}
+    {buckets.map(bucket => <div className="metric-bucket" key={bucket.key} style={{"--bucket-accent": bucket.accent} as React.CSSProperties}>
+      <span className="metric-bucket-label"><span>{bucket.label}</span>{bucket.score !== null ? <strong className="metric-bucket-score">{(bucket.score * 100).toFixed(1)}</strong> : null}</span>
+      <div className="metrics">{bucket.items.map(([key,label]) => <div className="metric" key={key}><span>{label}</span><strong>{formatMetricValue(key,run.metrics[key])}</strong></div>)}</div>
+    </div>)}
+  </div>;
 }
 
 const metricOrder = [
@@ -1616,7 +1626,6 @@ function isVisibleMetric(key: string, value: unknown, run: Run) {
   if (!hasMetricValue(value)) return false;
   if (key === "f_score_005") return false;
   if (key === "qa_parametric" && run.spec !== "parametric") return false;
-  if (key === "qa_parametric" && typeof value === "number" && value <= 0) return false;
   return true;
 }
 
@@ -1626,8 +1635,8 @@ function hasMetricValue(value: unknown) {
 
 function formatMetricValue(key: string, value: number | string | null) {
   if (typeof value !== "number") return String(value);
-  if (key.startsWith("judge_") && Number.isInteger(value)) return String(value);
-  if (key === "pred_open_edge_ratio") return value.toFixed(3);
+  if (key.startsWith("judge_")) return `${Number.isInteger(value) ? value : value.toFixed(1)}/10`;
+  if (key === "pred_open_edge_ratio") return (value === 0 ? 100 : 0).toFixed(1);
   if (key.includes("chamfer") || key.includes("hausdorff")) {
     if (value === 0) return "0";
     return value < 0.01 ? value.toFixed(4) : value.toFixed(3);

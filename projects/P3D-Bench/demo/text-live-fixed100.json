@@ -39,7 +39,7 @@
     {
       "family": "openai",
       "id": "gpt6_probe",
-      "label": "GPT-6"
+      "label": "GPT-6 Astra"
     },
     {
       "family": "gemini",
@@ -4184,7 +4184,7 @@
         "id": "text2cad_0046_00460772_parametric_openscad_gpt6_probe",
         "mesh": "text_live_fixed100_v1/assets/9f1124bf382f0f25c0d39918d2fa59361a66f4136b880ad275ff704826cbf2ce.stl",
         "model": "gpt6_probe",
-        "modelLabel": "GPT-6",
+        "modelLabel": "GPT-6 Astra",
         "specLabel": "Parametric",
         "src": "text_live_fixed100_v1/assets/bb86ca23f5d55d765242f74a9bae45e07f54d8de91b2f387787fc731f6e36cf2.png",
         "task": "text2cad"

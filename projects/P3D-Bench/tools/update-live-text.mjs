@@ -34,10 +34,10 @@ const textTable = {
     { label: "Average", span: 4 },
   ],
   metrics: [
-    "Score", "USD/gen.",
-    "Judge", "Valid", "Judge", "Valid", "Judge", "Valid",
-    "Geo", "Judge", "Topo", "Valid", "Geo", "Judge", "Topo", "Valid",
-    "Geo", "Judge", "Topo", "Valid",
+    "Score", "USD / generation",
+    "Judge", "Valid (%)", "Judge", "Valid (%)", "Judge", "Valid (%)",
+    "Geo", "Judge", "Topo", "Valid (%)", "Geo", "Judge", "Topo", "Valid (%)",
+    "Geo", "Judge", "Topo", "Valid (%)",
   ],
   rows: [
     ...summary.rows.map((row) => ({

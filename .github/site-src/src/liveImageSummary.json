@@ -272,11 +272,9 @@
             "iou_voxel_median": 0.3993,
             "iou_voxel_n": 39,
             "iou_voxel_std": 0.2182,
-            "iou_voxel_mean_filled": 0.4246153846153846,
-            "iou_voxel_median_filled": 0.3982,
+            "iou_voxel_mean_filled": 0.414,
             "iou_voxel_n_real": 39,
-            "iou_voxel_n_filled": 0,
-            "iou_voxel_std_filled": 0.2254,
+            "iou_voxel_n_filled": 1,
             "pred_open_edge_ratio_mean": 0.000409,
             "pred_open_edge_ratio_median": 0.0,
             "pred_open_edge_ratio_n": 85,
@@ -493,12 +491,15 @@
             "invalid": 1,
             "geometry_denominator": 86,
             "missing_geometry": 0,
-            "iou_denominator": 39,
-            "iou_mean": 0.4246153846153846,
+            "iou_denominator": 40,
+            "iou_mean": 0.414,
             "valid_scored_without_iou": 46,
             "cd_mean": 0.0011542790697674418,
             "cd_denominator": 86,
-            "cd_capped_cases": 1
+            "cd_capped_cases": 1,
+            "iou_measured_cases": 39,
+            "iou_invalid_cases": 1,
+            "unavailable_iou_cases": 46
           },
           "bucket_coverage_definition": "Measured valid cases per bucket; casewise_geometry separately records the denominator including invalid-zero contributions."
         },
@@ -570,10 +571,8 @@
             "iou_voxel_n": 51,
             "iou_voxel_std": 0.1829,
             "iou_voxel_mean_filled": 0.4014843137254902,
-            "iou_voxel_median_filled": 0.3939,
             "iou_voxel_n_real": 51,
             "iou_voxel_n_filled": 0,
-            "iou_voxel_std_filled": 0.1829,
             "pred_open_edge_ratio_mean": 0.0,
             "pred_open_edge_ratio_median": 0.0,
             "pred_open_edge_ratio_n": 100,
@@ -795,7 +794,10 @@
             "valid_scored_without_iou": 49,
             "cd_mean": 0.00107028,
             "cd_denominator": 100,
-            "cd_capped_cases": 0
+            "cd_capped_cases": 0,
+            "iou_measured_cases": 51,
+            "iou_invalid_cases": 0,
+            "unavailable_iou_cases": 49
           },
           "bucket_coverage_definition": "Measured valid cases per bucket; casewise_geometry separately records the denominator including invalid-zero contributions."
         },
@@ -867,10 +869,8 @@
             "iou_voxel_n": 25,
             "iou_voxel_std": 0.1952,
             "iou_voxel_mean_filled": 0.464772,
-            "iou_voxel_median_filled": 0.424,
             "iou_voxel_n_real": 25,
             "iou_voxel_n_filled": 0,
-            "iou_voxel_std_filled": 0.1952,
             "pred_open_edge_ratio_mean": 0.000534,
             "pred_open_edge_ratio_median": 0.0,
             "pred_open_edge_ratio_n": 71,
@@ -1092,7 +1092,10 @@
             "valid_scored_without_iou": 46,
             "cd_mean": 0.0007273661971830986,
             "cd_denominator": 71,
-            "cd_capped_cases": 0
+            "cd_capped_cases": 0,
+            "iou_measured_cases": 25,
+            "iou_invalid_cases": 0,
+            "unavailable_iou_cases": 46
           },
           "bucket_coverage_definition": "Measured valid cases per bucket; casewise_geometry separately records the denominator including invalid-zero contributions."
         }
@@ -1217,11 +1220,9 @@
             "iou_voxel_median": 0.3283,
             "iou_voxel_n": 47,
             "iou_voxel_std": 0.1876,
-            "iou_voxel_mean_filled": 0.365936170212766,
-            "iou_voxel_median_filled": 0.326,
+            "iou_voxel_mean_filled": 0.351,
             "iou_voxel_n_real": 47,
-            "iou_voxel_n_filled": 0,
-            "iou_voxel_std_filled": 0.1975,
+            "iou_voxel_n_filled": 2,
             "pred_open_edge_ratio_mean": 0.000141,
             "pred_open_edge_ratio_median": 0.0,
             "pred_open_edge_ratio_n": 94,
@@ -1438,12 +1439,15 @@
             "invalid": 2,
             "geometry_denominator": 96,
             "missing_geometry": 4,
-            "iou_denominator": 47,
-            "iou_mean": 0.365936170212766,
+            "iou_denominator": 49,
+            "iou_mean": 0.351,
             "valid_scored_without_iou": 47,
             "cd_mean": 0.00168715625,
             "cd_denominator": 96,
-            "cd_capped_cases": 1
+            "cd_capped_cases": 1,
+            "iou_measured_cases": 47,
+            "iou_invalid_cases": 2,
+            "unavailable_iou_cases": 51
           },
           "bucket_coverage_definition": "Measured valid cases per bucket; casewise_geometry separately records the denominator including invalid-zero contributions."
         },
@@ -1519,10 +1523,8 @@
             "iou_voxel_n": 49,
             "iou_voxel_std": 0.1855,
             "iou_voxel_mean_filled": 0.3584081632653061,
-            "iou_voxel_median_filled": 0.3487,
             "iou_voxel_n_real": 49,
             "iou_voxel_n_filled": 0,
-            "iou_voxel_std_filled": 0.1855,
             "pred_open_edge_ratio_mean": 0.0,
             "pred_open_edge_ratio_median": 0.0,
             "pred_open_edge_ratio_n": 96,
@@ -1744,7 +1746,10 @@
             "valid_scored_without_iou": 47,
             "cd_mean": 0.0017704166666666667,
             "cd_denominator": 96,
-            "cd_capped_cases": 1
+            "cd_capped_cases": 1,
+            "iou_measured_cases": 49,
+            "iou_invalid_cases": 0,
+            "unavailable_iou_cases": 51
           },
           "bucket_coverage_definition": "Measured valid cases per bucket; casewise_geometry separately records the denominator including invalid-zero contributions."
         },
@@ -1819,11 +1824,9 @@
             "iou_voxel_median": 0.3251,
             "iou_voxel_n": 9,
             "iou_voxel_std": 0.1372,
-            "iou_voxel_mean_filled": 0.2999222222222222,
-            "iou_voxel_median_filled": 0.2798,
+            "iou_voxel_mean_filled": 0.26993,
             "iou_voxel_n_real": 9,
-            "iou_voxel_n_filled": 0,
-            "iou_voxel_std_filled": 0.1582,
+            "iou_voxel_n_filled": 1,
             "pred_open_edge_ratio_mean": 0.011875,
             "pred_open_edge_ratio_median": 0.006796,
             "pred_open_edge_ratio_n": 95,
@@ -2040,12 +2043,15 @@
             "invalid": 1,
             "geometry_denominator": 96,
             "missing_geometry": 4,
-            "iou_denominator": 9,
-            "iou_mean": 0.2999222222222222,
+            "iou_denominator": 10,
+            "iou_mean": 0.26993,
             "valid_scored_without_iou": 86,
             "cd_mean": 0.0018232604166666666,
             "cd_denominator": 96,
-            "cd_capped_cases": 1
+            "cd_capped_cases": 1,
+            "iou_measured_cases": 9,
+            "iou_invalid_cases": 1,
+            "unavailable_iou_cases": 90
           },
           "bucket_coverage_definition": "Measured valid cases per bucket; casewise_geometry separately records the denominator including invalid-zero contributions."
         }
@@ -2172,10 +2178,8 @@
             "iou_voxel_n": 41,
             "iou_voxel_std": 0.1704,
             "iou_voxel_mean_filled": 0.3159707317073171,
-            "iou_voxel_median_filled": 0.3182,
             "iou_voxel_n_real": 41,
             "iou_voxel_n_filled": 0,
-            "iou_voxel_std_filled": 0.1704,
             "pred_open_edge_ratio_mean": 0.001488,
             "pred_open_edge_ratio_median": 0.0,
             "pred_open_edge_ratio_n": 86,
@@ -2397,7 +2401,10 @@
             "valid_scored_without_iou": 45,
             "cd_mean": 0.002083906976744186,
             "cd_denominator": 86,
-            "cd_capped_cases": 3
+            "cd_capped_cases": 3,
+            "iou_measured_cases": 41,
+            "iou_invalid_cases": 0,
+            "unavailable_iou_cases": 45
           },
           "bucket_coverage_definition": "Measured valid cases per bucket; casewise_geometry separately records the denominator including invalid-zero contributions."
         },
@@ -2474,10 +2481,8 @@
             "iou_voxel_n": 50,
             "iou_voxel_std": 0.1613,
             "iou_voxel_mean_filled": 0.327112,
-            "iou_voxel_median_filled": 0.2946,
             "iou_voxel_n_real": 50,
             "iou_voxel_n_filled": 0,
-            "iou_voxel_std_filled": 0.1613,
             "pred_open_edge_ratio_mean": 0.0,
             "pred_open_edge_ratio_median": 0.0,
             "pred_open_edge_ratio_n": 100,
@@ -2699,7 +2704,10 @@
             "valid_scored_without_iou": 50,
             "cd_mean": 0.00177832,
             "cd_denominator": 100,
-            "cd_capped_cases": 1
+            "cd_capped_cases": 1,
+            "iou_measured_cases": 50,
+            "iou_invalid_cases": 0,
+            "unavailable_iou_cases": 50
           },
           "bucket_coverage_definition": "Measured valid cases per bucket; casewise_geometry separately records the denominator including invalid-zero contributions."
         },
@@ -2776,10 +2784,8 @@
             "iou_voxel_n": 24,
             "iou_voxel_std": 0.1956,
             "iou_voxel_mean_filled": 0.37821666666666665,
-            "iou_voxel_median_filled": 0.3581,
             "iou_voxel_n_real": 24,
             "iou_voxel_n_filled": 0,
-            "iou_voxel_std_filled": 0.1956,
             "pred_open_edge_ratio_mean": 0.002427,
             "pred_open_edge_ratio_median": 0.000683,
             "pred_open_edge_ratio_n": 91,
@@ -3001,7 +3007,10 @@
             "valid_scored_without_iou": 67,
             "cd_mean": 0.0015447802197802198,
             "cd_denominator": 91,
-            "cd_capped_cases": 1
+            "cd_capped_cases": 1,
+            "iou_measured_cases": 24,
+            "iou_invalid_cases": 0,
+            "unavailable_iou_cases": 67
           },
           "bucket_coverage_definition": "Measured valid cases per bucket; casewise_geometry separately records the denominator including invalid-zero contributions."
         }
@@ -3127,10 +3136,8 @@
             "iou_voxel_n": 45,
             "iou_voxel_std": 0.154,
             "iou_voxel_mean_filled": 0.3065311111111111,
-            "iou_voxel_median_filled": 0.2981,
             "iou_voxel_n_real": 45,
             "iou_voxel_n_filled": 0,
-            "iou_voxel_std_filled": 0.154,
             "pred_open_edge_ratio_mean": 0.000115,
             "pred_open_edge_ratio_median": 0.0,
             "pred_open_edge_ratio_n": 96,
@@ -3352,7 +3359,10 @@
             "valid_scored_without_iou": 51,
             "cd_mean": 0.0020738645833333334,
             "cd_denominator": 96,
-            "cd_capped_cases": 1
+            "cd_capped_cases": 1,
+            "iou_measured_cases": 45,
+            "iou_invalid_cases": 0,
+            "unavailable_iou_cases": 55
           },
           "bucket_coverage_definition": "Measured valid cases per bucket; casewise_geometry separately records the denominator including invalid-zero contributions."
         },
@@ -3428,10 +3438,8 @@
             "iou_voxel_n": 49,
             "iou_voxel_std": 0.1577,
             "iou_voxel_mean_filled": 0.3148959183673469,
-            "iou_voxel_median_filled": 0.2906,
             "iou_voxel_n_real": 49,
             "iou_voxel_n_filled": 0,
-            "iou_voxel_std_filled": 0.1577,
             "pred_open_edge_ratio_mean": 0.0,
             "pred_open_edge_ratio_median": 0.0,
             "pred_open_edge_ratio_n": 96,
@@ -3653,7 +3661,10 @@
             "valid_scored_without_iou": 47,
             "cd_mean": 0.0019836770833333334,
             "cd_denominator": 96,
-            "cd_capped_cases": 0
+            "cd_capped_cases": 0,
+            "iou_measured_cases": 49,
+            "iou_invalid_cases": 0,
+            "unavailable_iou_cases": 51
           },
           "bucket_coverage_definition": "Measured valid cases per bucket; casewise_geometry separately records the denominator including invalid-zero contributions."
         },
@@ -3729,10 +3740,8 @@
             "iou_voxel_n": 25,
             "iou_voxel_std": 0.1638,
             "iou_voxel_mean_filled": 0.33074,
-            "iou_voxel_median_filled": 0.2878,
             "iou_voxel_n_real": 25,
             "iou_voxel_n_filled": 0,
-            "iou_voxel_std_filled": 0.1638,
             "pred_open_edge_ratio_mean": 0.004459,
             "pred_open_edge_ratio_median": 0.001496,
             "pred_open_edge_ratio_n": 96,
@@ -3954,7 +3963,10 @@
             "valid_scored_without_iou": 71,
             "cd_mean": 0.0019974270833333333,
             "cd_denominator": 96,
-            "cd_capped_cases": 1
+            "cd_capped_cases": 1,
+            "iou_measured_cases": 25,
+            "iou_invalid_cases": 0,
+            "unavailable_iou_cases": 75
           },
           "bucket_coverage_definition": "Measured valid cases per bucket; casewise_geometry separately records the denominator including invalid-zero contributions."
         }
@@ -4080,11 +4092,9 @@
             "iou_voxel_median": 0.2612,
             "iou_voxel_n": 43,
             "iou_voxel_std": 0.1722,
-            "iou_voxel_mean_filled": 0.2929372093023256,
-            "iou_voxel_median_filled": 0.2563,
+            "iou_voxel_mean_filled": 0.2738326086956522,
             "iou_voxel_n_real": 43,
-            "iou_voxel_n_filled": 0,
-            "iou_voxel_std_filled": 0.1815,
+            "iou_voxel_n_filled": 3,
             "pred_open_edge_ratio_mean": 0.000158,
             "pred_open_edge_ratio_median": 0.0,
             "pred_open_edge_ratio_n": 94,
@@ -4301,12 +4311,15 @@
             "invalid": 3,
             "geometry_denominator": 97,
             "missing_geometry": 3,
-            "iou_denominator": 43,
-            "iou_mean": 0.2929372093023256,
+            "iou_denominator": 46,
+            "iou_mean": 0.2738326086956522,
             "valid_scored_without_iou": 51,
             "cd_mean": 0.002701618556701031,
             "cd_denominator": 97,
-            "cd_capped_cases": 4
+            "cd_capped_cases": 4,
+            "iou_measured_cases": 43,
+            "iou_invalid_cases": 3,
+            "unavailable_iou_cases": 54
           },
           "bucket_coverage_definition": "Measured valid cases per bucket; casewise_geometry separately records the denominator including invalid-zero contributions."
         },
@@ -4383,10 +4396,8 @@
             "iou_voxel_n": 50,
             "iou_voxel_std": 0.1582,
             "iou_voxel_mean_filled": 0.312346,
-            "iou_voxel_median_filled": 0.2818,
             "iou_voxel_n_real": 50,
             "iou_voxel_n_filled": 0,
-            "iou_voxel_std_filled": 0.1582,
             "pred_open_edge_ratio_mean": 0.0,
             "pred_open_edge_ratio_median": 0.0,
             "pred_open_edge_ratio_n": 97,
@@ -4608,7 +4619,10 @@
             "valid_scored_without_iou": 47,
             "cd_mean": 0.0020099278350515465,
             "cd_denominator": 97,
-            "cd_capped_cases": 1
+            "cd_capped_cases": 1,
+            "iou_measured_cases": 50,
+            "iou_invalid_cases": 0,
+            "unavailable_iou_cases": 50
           },
           "bucket_coverage_definition": "Measured valid cases per bucket; casewise_geometry separately records the denominator including invalid-zero contributions."
         },
@@ -4684,10 +4698,8 @@
             "iou_voxel_n": 14,
             "iou_voxel_std": 0.1918,
             "iou_voxel_mean_filled": 0.34577857142857144,
-            "iou_voxel_median_filled": 0.2678,
             "iou_voxel_n_real": 14,
             "iou_voxel_n_filled": 0,
-            "iou_voxel_std_filled": 0.1918,
             "pred_open_edge_ratio_mean": 0.00561,
             "pred_open_edge_ratio_median": 0.001845,
             "pred_open_edge_ratio_n": 96,
@@ -4909,7 +4921,10 @@
             "valid_scored_without_iou": 82,
             "cd_mean": 0.0018649895833333333,
             "cd_denominator": 96,
-            "cd_capped_cases": 2
+            "cd_capped_cases": 2,
+            "iou_measured_cases": 14,
+            "iou_invalid_cases": 0,
+            "unavailable_iou_cases": 86
           },
           "bucket_coverage_definition": "Measured valid cases per bucket; casewise_geometry separately records the denominator including invalid-zero contributions."
         }
@@ -4960,7 +4975,7 @@
       "cost_usd_per_case": 0.07997936000000011,
       "provisional": true,
       "model_id": "qwen38max",
-      "model": "Qwen 3.8 Max",
+      "model": "Qwen3.8-Max",
       "family": "qwen",
       "format_detail": {
         "cadquery": {
@@ -5034,11 +5049,9 @@
             "iou_voxel_median": 0.3074,
             "iou_voxel_n": 45,
             "iou_voxel_std": 0.1616,
-            "iou_voxel_mean_filled": 0.3184355555555556,
-            "iou_voxel_median_filled": 0.299,
+            "iou_voxel_mean_filled": 0.31151304347826086,
             "iou_voxel_n_real": 45,
-            "iou_voxel_n_filled": 0,
-            "iou_voxel_std_filled": 0.1664,
+            "iou_voxel_n_filled": 1,
             "pred_open_edge_ratio_mean": 0.000197,
             "pred_open_edge_ratio_median": 0.0,
             "pred_open_edge_ratio_n": 95,
@@ -5255,12 +5268,15 @@
             "invalid": 1,
             "geometry_denominator": 96,
             "missing_geometry": 4,
-            "iou_denominator": 45,
-            "iou_mean": 0.3184355555555556,
+            "iou_denominator": 46,
+            "iou_mean": 0.31151304347826086,
             "valid_scored_without_iou": 50,
             "cd_mean": 0.002098416666666667,
             "cd_denominator": 96,
-            "cd_capped_cases": 2
+            "cd_capped_cases": 2,
+            "iou_measured_cases": 45,
+            "iou_invalid_cases": 1,
+            "unavailable_iou_cases": 54
           },
           "bucket_coverage_definition": "Measured valid cases per bucket; casewise_geometry separately records the denominator including invalid-zero contributions."
         },
@@ -5336,10 +5352,8 @@
             "iou_voxel_n": 49,
             "iou_voxel_std": 0.1698,
             "iou_voxel_mean_filled": 0.31163469387755105,
-            "iou_voxel_median_filled": 0.296,
             "iou_voxel_n_real": 49,
             "iou_voxel_n_filled": 0,
-            "iou_voxel_std_filled": 0.1698,
             "pred_open_edge_ratio_mean": 0.0,
             "pred_open_edge_ratio_median": 0.0,
             "pred_open_edge_ratio_n": 96,
@@ -5561,7 +5575,10 @@
             "valid_scored_without_iou": 47,
             "cd_mean": 0.002124364583333333,
             "cd_denominator": 96,
-            "cd_capped_cases": 3
+            "cd_capped_cases": 3,
+            "iou_measured_cases": 49,
+            "iou_invalid_cases": 0,
+            "unavailable_iou_cases": 51
           },
           "bucket_coverage_definition": "Measured valid cases per bucket; casewise_geometry separately records the denominator including invalid-zero contributions."
         },
@@ -5638,10 +5655,8 @@
             "iou_voxel_n": 33,
             "iou_voxel_std": 0.1594,
             "iou_voxel_mean_filled": 0.3226272727272727,
-            "iou_voxel_median_filled": 0.286,
             "iou_voxel_n_real": 33,
             "iou_voxel_n_filled": 0,
-            "iou_voxel_std_filled": 0.1594,
             "pred_open_edge_ratio_mean": 0.004141,
             "pred_open_edge_ratio_median": 0.0,
             "pred_open_edge_ratio_n": 97,
@@ -5863,7 +5878,10 @@
             "valid_scored_without_iou": 64,
             "cd_mean": 0.0017896082474226805,
             "cd_denominator": 97,
-            "cd_capped_cases": 0
+            "cd_capped_cases": 0,
+            "iou_measured_cases": 33,
+            "iou_invalid_cases": 0,
+            "unavailable_iou_cases": 67
           },
           "bucket_coverage_definition": "Measured valid cases per bucket; casewise_geometry separately records the denominator including invalid-zero contributions."
         }
@@ -5914,7 +5932,7 @@
       "cost_usd_per_case": 0.019659647533333328,
       "provisional": true,
       "model_id": "glm53_flash",
-      "model": "GLM 5.3 Flash",
+      "model": "GLM-5.3-Flash",
       "family": "zai",
       "format_detail": {
         "cadquery": {
@@ -5990,10 +6008,8 @@
             "iou_voxel_n": 47,
             "iou_voxel_std": 0.1674,
             "iou_voxel_mean_filled": 0.30134893617021274,
-            "iou_voxel_median_filled": 0.2667,
             "iou_voxel_n_real": 47,
             "iou_voxel_n_filled": 0,
-            "iou_voxel_std_filled": 0.1674,
             "pred_open_edge_ratio_mean": 0.005604,
             "pred_open_edge_ratio_median": 0.0,
             "pred_open_edge_ratio_n": 97,
@@ -6215,7 +6231,10 @@
             "valid_scored_without_iou": 50,
             "cd_mean": 0.002069742268041237,
             "cd_denominator": 97,
-            "cd_capped_cases": 1
+            "cd_capped_cases": 1,
+            "iou_measured_cases": 47,
+            "iou_invalid_cases": 0,
+            "unavailable_iou_cases": 53
           },
           "bucket_coverage_definition": "Measured valid cases per bucket; casewise_geometry separately records the denominator including invalid-zero contributions."
         },
@@ -6290,11 +6309,9 @@
             "iou_voxel_median": 0.283,
             "iou_voxel_n": 49,
             "iou_voxel_std": 0.1349,
-            "iou_voxel_mean_filled": 0.30332857142857145,
-            "iou_voxel_median_filled": 0.276,
+            "iou_voxel_mean_filled": 0.2914333333333333,
             "iou_voxel_n_real": 49,
-            "iou_voxel_n_filled": 0,
-            "iou_voxel_std_filled": 0.1447,
+            "iou_voxel_n_filled": 2,
             "pred_open_edge_ratio_mean": 0.0,
             "pred_open_edge_ratio_median": 0.0,
             "pred_open_edge_ratio_n": 94,
@@ -6511,12 +6528,15 @@
             "invalid": 2,
             "geometry_denominator": 96,
             "missing_geometry": 4,
-            "iou_denominator": 49,
-            "iou_mean": 0.30332857142857145,
+            "iou_denominator": 51,
+            "iou_mean": 0.2914333333333333,
             "valid_scored_without_iou": 45,
             "cd_mean": 0.002214166666666667,
             "cd_denominator": 96,
-            "cd_capped_cases": 1
+            "cd_capped_cases": 1,
+            "iou_measured_cases": 49,
+            "iou_invalid_cases": 2,
+            "unavailable_iou_cases": 49
           },
           "bucket_coverage_definition": "Measured valid cases per bucket; casewise_geometry separately records the denominator including invalid-zero contributions."
         },
@@ -6593,10 +6613,8 @@
             "iou_voxel_n": 23,
             "iou_voxel_std": 0.1619,
             "iou_voxel_mean_filled": 0.3144086956521739,
-            "iou_voxel_median_filled": 0.305,
             "iou_voxel_n_real": 23,
             "iou_voxel_n_filled": 0,
-            "iou_voxel_std_filled": 0.1619,
             "pred_open_edge_ratio_mean": 0.004974,
             "pred_open_edge_ratio_median": 0.001057,
             "pred_open_edge_ratio_n": 96,
@@ -6818,7 +6836,10 @@
             "valid_scored_without_iou": 73,
             "cd_mean": 0.0019998645833333335,
             "cd_denominator": 96,
-            "cd_capped_cases": 2
+            "cd_capped_cases": 2,
+            "iou_measured_cases": 23,
+            "iou_invalid_cases": 0,
+            "unavailable_iou_cases": 77
           },
           "bucket_coverage_definition": "Measured valid cases per bucket; casewise_geometry separately records the denominator including invalid-zero contributions."
         }
@@ -6944,11 +6965,9 @@
             "iou_voxel_median": 0.2639,
             "iou_voxel_n": 46,
             "iou_voxel_std": 0.1852,
-            "iou_voxel_mean_filled": 0.2967304347826087,
-            "iou_voxel_median_filled": 0.2182,
+            "iou_voxel_mean_filled": 0.24817454545454545,
             "iou_voxel_n_real": 46,
-            "iou_voxel_n_filled": 0,
-            "iou_voxel_std_filled": 0.2018,
+            "iou_voxel_n_filled": 9,
             "pred_open_edge_ratio_mean": 5.7e-05,
             "pred_open_edge_ratio_median": 0.0,
             "pred_open_edge_ratio_n": 89,
@@ -7165,12 +7184,15 @@
             "invalid": 9,
             "geometry_denominator": 98,
             "missing_geometry": 2,
-            "iou_denominator": 46,
-            "iou_mean": 0.2967304347826087,
+            "iou_denominator": 55,
+            "iou_mean": 0.24817454545454545,
             "valid_scored_without_iou": 43,
             "cd_mean": 0.0033438061224489797,
             "cd_denominator": 98,
-            "cd_capped_cases": 1
+            "cd_capped_cases": 1,
+            "iou_measured_cases": 46,
+            "iou_invalid_cases": 9,
+            "unavailable_iou_cases": 45
           },
           "bucket_coverage_definition": "Measured valid cases per bucket; casewise_geometry separately records the denominator including invalid-zero contributions."
         },
@@ -7247,10 +7269,8 @@
             "iou_voxel_n": 49,
             "iou_voxel_std": 0.1588,
             "iou_voxel_mean_filled": 0.3001,
-            "iou_voxel_median_filled": 0.2763,
             "iou_voxel_n_real": 49,
             "iou_voxel_n_filled": 0,
-            "iou_voxel_std_filled": 0.1588,
             "pred_open_edge_ratio_mean": 0.0,
             "pred_open_edge_ratio_median": 0.0,
             "pred_open_edge_ratio_n": 96,
@@ -7472,7 +7492,10 @@
             "valid_scored_without_iou": 47,
             "cd_mean": 0.0022689166666666665,
             "cd_denominator": 96,
-            "cd_capped_cases": 1
+            "cd_capped_cases": 1,
+            "iou_measured_cases": 49,
+            "iou_invalid_cases": 0,
+            "unavailable_iou_cases": 51
           },
           "bucket_coverage_definition": "Measured valid cases per bucket; casewise_geometry separately records the denominator including invalid-zero contributions."
         },
@@ -7549,10 +7572,8 @@
             "iou_voxel_n": 31,
             "iou_voxel_std": 0.1701,
             "iou_voxel_mean_filled": 0.3324967741935484,
-            "iou_voxel_median_filled": 0.3115,
             "iou_voxel_n_real": 31,
             "iou_voxel_n_filled": 0,
-            "iou_voxel_std_filled": 0.1701,
             "pred_open_edge_ratio_mean": 0.007266,
             "pred_open_edge_ratio_median": 0.0,
             "pred_open_edge_ratio_n": 96,
@@ -7774,7 +7795,10 @@
             "valid_scored_without_iou": 65,
             "cd_mean": 0.0020593958333333332,
             "cd_denominator": 96,
-            "cd_capped_cases": 0
+            "cd_capped_cases": 0,
+            "iou_measured_cases": 31,
+            "iou_invalid_cases": 0,
+            "unavailable_iou_cases": 69
           },
           "bucket_coverage_definition": "Measured valid cases per bucket; casewise_geometry separately records the denominator including invalid-zero contributions."
         }
@@ -7895,11 +7919,9 @@
             "iou_voxel_median": 0.2199,
             "iou_voxel_n": 31,
             "iou_voxel_std": 0.2087,
-            "iou_voxel_mean_filled": 0.28537741935483874,
-            "iou_voxel_median_filled": 0.0,
+            "iou_voxel_mean_filled": 0.11640394736842105,
             "iou_voxel_n_real": 31,
-            "iou_voxel_n_filled": 0,
-            "iou_voxel_std_filled": 0.1935,
+            "iou_voxel_n_filled": 45,
             "pred_open_edge_ratio_mean": 0.005386,
             "pred_open_edge_ratio_median": 0.0,
             "pred_open_edge_ratio_n": 55,
@@ -8116,12 +8138,15 @@
             "invalid": 45,
             "geometry_denominator": 100,
             "missing_geometry": 0,
-            "iou_denominator": 31,
-            "iou_mean": 0.28537741935483874,
+            "iou_denominator": 76,
+            "iou_mean": 0.11640394736842105,
             "valid_scored_without_iou": 24,
             "cd_mean": 0.00608827,
             "cd_denominator": 100,
-            "cd_capped_cases": 4
+            "cd_capped_cases": 4,
+            "iou_measured_cases": 31,
+            "iou_invalid_cases": 45,
+            "unavailable_iou_cases": 24
           },
           "bucket_coverage_definition": "Measured valid cases per bucket; casewise_geometry separately records the denominator including invalid-zero contributions."
         },
@@ -8192,11 +8217,9 @@
             "iou_voxel_median": 0.2741,
             "iou_voxel_n": 51,
             "iou_voxel_std": 0.1714,
-            "iou_voxel_mean_filled": 0.29893725490196077,
-            "iou_voxel_median_filled": 0.2732,
+            "iou_voxel_mean_filled": 0.29318846153846156,
             "iou_voxel_n_real": 51,
-            "iou_voxel_n_filled": 0,
-            "iou_voxel_std_filled": 0.1746,
+            "iou_voxel_n_filled": 1,
             "pred_open_edge_ratio_mean": 0.0,
             "pred_open_edge_ratio_median": 0.0,
             "pred_open_edge_ratio_n": 99,
@@ -8413,12 +8436,15 @@
             "invalid": 1,
             "geometry_denominator": 100,
             "missing_geometry": 0,
-            "iou_denominator": 51,
-            "iou_mean": 0.29893725490196077,
+            "iou_denominator": 52,
+            "iou_mean": 0.29318846153846156,
             "valid_scored_without_iou": 48,
             "cd_mean": 0.00272639,
             "cd_denominator": 100,
-            "cd_capped_cases": 2
+            "cd_capped_cases": 2,
+            "iou_measured_cases": 51,
+            "iou_invalid_cases": 1,
+            "unavailable_iou_cases": 48
           },
           "bucket_coverage_definition": "Measured valid cases per bucket; casewise_geometry separately records the denominator including invalid-zero contributions."
         },
@@ -8490,10 +8516,8 @@
             "iou_voxel_n": 17,
             "iou_voxel_std": 0.1927,
             "iou_voxel_mean_filled": 0.32438235294117646,
-            "iou_voxel_median_filled": 0.3042,
             "iou_voxel_n_real": 17,
             "iou_voxel_n_filled": 0,
-            "iou_voxel_std_filled": 0.1927,
             "pred_open_edge_ratio_mean": 0.009439,
             "pred_open_edge_ratio_median": 0.002373,
             "pred_open_edge_ratio_n": 99,
@@ -8715,7 +8739,10 @@
             "valid_scored_without_iou": 82,
             "cd_mean": 0.0021499090909090908,
             "cd_denominator": 99,
-            "cd_capped_cases": 1
+            "cd_capped_cases": 1,
+            "iou_measured_cases": 17,
+            "iou_invalid_cases": 0,
+            "unavailable_iou_cases": 82
           },
           "bucket_coverage_definition": "Measured valid cases per bucket; casewise_geometry separately records the denominator including invalid-zero contributions."
         }
@@ -8803,10 +8830,8 @@
         "iou_voxel_n": 51,
         "iou_voxel_std": 0.1833,
         "iou_voxel_mean_filled": 0.2921392156862745,
-        "iou_voxel_median_filled": 0.2522,
         "iou_voxel_n_real": 51,
         "iou_voxel_n_filled": 0,
-        "iou_voxel_std_filled": 0.1833,
         "pred_open_edge_ratio_mean": 0.0,
         "pred_open_edge_ratio_median": 0.0,
         "pred_open_edge_ratio_n": 100,
@@ -9026,7 +9051,10 @@
         "valid_scored_without_iou": 49,
         "cd_mean": 0.00274633,
         "cd_denominator": 100,
-        "cd_capped_cases": 4
+        "cd_capped_cases": 4,
+        "iou_measured_cases": 51,
+        "iou_invalid_cases": 0,
+        "unavailable_iou_cases": 49
       }
     }
   ],
@@ -9061,18 +9089,19 @@
     "text_raw_audit_sha256": "a8273fe0e41bcac4672743c9d46e7e37061c1e29562ac4e387818ce8fb7b6c75",
     "part_rescore_sha256": "c2708213d4311dc9389c58a01cc1dc27de6b9164da8fa3bf4c9d91611f77f361",
     "geometry_aggregation_revision": "per-case-20260918",
-    "iou": "Omit unavailable IoU from the valid case mean, never worst-fill it. Standalone IoU averages measured values from valid outputs only, retaining measured zeros."
+    "iou": "Omit unavailable IoU from a valid case Geo mean. Standalone IoU averages measured values from valid outputs plus zero contributions from invalid outputs; only valid-but-unavailable measurements are omitted, and measured zeros are retained.",
+    "reported_iou_revision": "invalid-zero-20260920"
   },
-  "updated_at": "2026-09-18T23:11:22+08:00",
+  "updated_at": "2026-09-20T23:47:41+08:00",
   "casewise_geometry_policy": {
     "geometry": "Normalize per case; average CD score, F@0.01, NC and measured IoU within each valid case, then average case scores within each format.",
     "invalid": "Generation-invalid outputs contribute zero Geo. Preserve released API-unrun exclusions and missing-evaluation exclusions.",
-    "iou": "Omit unavailable IoU from the valid case mean, never worst-fill it. Standalone IoU averages measured values from valid outputs only, retaining measured zeros.",
+    "iou": "Omit unavailable IoU from a valid case Geo mean. Standalone IoU averages measured values from valid outputs plus zero contributions from invalid outputs; only valid-but-unavailable measurements are omitted, and measured zeros are retained.",
     "cd": "Cap each measured CD at 0.01 before normalization and reporting; invalid outputs receive CD=0.01.",
     "formats": "Average task-supported formats equally after averaging cases."
   },
   "aggregation_source": {
-    "paper_release_sha256": "478d92cb3731d83aaf281698f5d414397270d26b22d85b40af9960b78126eead",
+    "paper_release_sha256": "a53bfcb717fd9e800453beb39db7522b05ae4f73bc3a113fc612eefc09f2abb7",
     "per_case_input_sha256": "20631c2735234df27c359e54d9fa50edfc1bfaff5559e43ed7fb9f4e4055ec2d"
   },
   "domain_baselines": [
@@ -9101,9 +9130,9 @@
         "chamfer_distance_mean_filled": 0.007399443298969072,
         "chamfer_distance_n_real": 74,
         "chamfer_distance_n_filled": 23,
-        "iou_voxel_mean_filled": 0.09320588235294118,
+        "iou_voxel_mean_filled": 0.05559649122807017,
         "iou_voxel_n_real": 34,
-        "iou_voxel_n_filled": 0,
+        "iou_voxel_n_filled": 23,
         "f_score_001_mean_filled": 0.0761,
         "f_score_001_n_real": 74,
         "f_score_001_n_filled": 23,
@@ -9130,12 +9159,15 @@
         "invalid": 23,
         "geometry_denominator": 97,
         "missing_geometry": 3,
-        "iou_denominator": 34,
-        "iou_mean": 0.09320588235294118,
+        "iou_denominator": 57,
+        "iou_mean": 0.05559649122807017,
         "valid_scored_without_iou": 40,
         "cd_mean": 0.007399443298969072,
         "cd_denominator": 97,
-        "cd_capped_cases": 16
+        "cd_capped_cases": 16,
+        "iou_measured_cases": 34,
+        "iou_invalid_cases": 23,
+        "unavailable_iou_cases": 43
       },
       "family": "domain"
     },
@@ -9164,9 +9196,9 @@
         "chamfer_distance_mean_filled": 0.009096850574712644,
         "chamfer_distance_n_real": 18,
         "chamfer_distance_n_filled": 69,
-        "iou_voxel_mean_filled": 0.1939142857142857,
+        "iou_voxel_mean_filled": 0.017860526315789473,
         "iou_voxel_n_real": 7,
-        "iou_voxel_n_filled": 0,
+        "iou_voxel_n_filled": 69,
         "f_score_001_mean_filled": 0.024,
         "f_score_001_n_real": 18,
         "f_score_001_n_filled": 69,
@@ -9193,12 +9225,15 @@
         "invalid": 69,
         "geometry_denominator": 87,
         "missing_geometry": 0,
-        "iou_denominator": 7,
-        "iou_mean": 0.1939142857142857,
+        "iou_denominator": 76,
+        "iou_mean": 0.017860526315789473,
         "valid_scored_without_iou": 11,
         "cd_mean": 0.009096850574712644,
         "cd_denominator": 87,
-        "cd_capped_cases": 4
+        "cd_capped_cases": 4,
+        "iou_measured_cases": 7,
+        "iou_invalid_cases": 69,
+        "unavailable_iou_cases": 11
       },
       "family": "domain"
     }
