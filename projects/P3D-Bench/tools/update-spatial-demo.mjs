@@ -18,7 +18,7 @@ const loader = `async function loadSpatialDemo(base){try{const response=await fe
 const swaps = [
   ['e(mergeLiveTextManifest(K,await R.json()))}catch{e(K)}}', 'e(await loadSpatialDemo(mergeLiveTextManifest(K,await R.json())))}catch{e(await loadSpatialDemo(K))}}'],
   ['fetch(Vn("complex_assemblies.json"))', `fetch(Vn("spatial-assemblies.json?v=${partsVersion}"))`],
-  ['function i2(s){const e=["text2cad","image2cad"]', 'function i2(s){const e=["text2cad","image2cad","text_image2cad"]'],
+  ['function i2(s){const e=["text2cad","image2cad"]', 'function i2(s){const e=["text_image2cad","text2cad","image2cad"]'],
   ['if(p==="text2cad"&&s.text_showcase)return s.text_showcase;', 'if(p==="text2cad"&&s.text_showcase)return s.text_showcase;if(s.spatial_showcases?.[p])return s.spatial_showcases[p];'],
 ];
 if (original.input.startsWith(prefix + loader) && swaps.every(([, after]) => original.input.includes(after))) {

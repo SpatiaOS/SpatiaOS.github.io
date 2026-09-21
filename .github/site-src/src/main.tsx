@@ -20,6 +20,7 @@ const INCLUDE_LIVE = RELEASE_PROFILE === "development"
   ? true
   : import.meta.env.VITE_P3D_INCLUDE_LIVE === "true";
 const HAS_PAPER_SNAPSHOT = Boolean(import.meta.env.VITE_P3D_SNAPSHOT_SHA256);
+const DEMO_TASK_ORDER = ["text_image2cad", "text2cad", "image2cad"];
 
 type AssetMap = {
   gt_render?: string;
@@ -175,7 +176,7 @@ function releaseAsset(path: string) {
 function App() {
   const [manifest, setManifest] = useState<Manifest>(fallbackManifest);
   const [complexAssemblies, setComplexAssemblies] = useState<ComplexAssemblyItem[]>([]);
-  const [task, setTask] = useState("text2cad");
+  const [task, setTask] = useState(DEMO_TASK_ORDER[0]);
   const [caseId, setCaseId] = useState("");
   const [model, setModel] = useState("");
   const [spec, setSpec] = useState("descriptive");
@@ -247,7 +248,9 @@ function App() {
   const selectedModel = manifest.models.find((item) => item.id === activeModel);
   const selectedTask = manifest.tasks.find((item) => item.id === selectedRun?.task);
   const showcaseComparisons = useMemo(() => buildShowcaseComparisons(manifest), [manifest]);
-  const visibleTasks = useMemo(() => manifest.tasks.filter((item) => item.status === "interactive"), [manifest]);
+  const visibleTasks = useMemo(() => manifest.tasks
+    .filter((item) => item.status === "interactive")
+    .sort((a, b) => DEMO_TASK_ORDER.indexOf(a.id) - DEMO_TASK_ORDER.indexOf(b.id)), [manifest]);
   const caseUsesImagePicker = cases.some((item) => item.thumbnail);
   const selectedInput = selectedRun?.condition || selectedCase?.title || "No input.";
   const selectedInputItem = selectedRun ? {
@@ -418,8 +421,7 @@ function App() {
           <div className="section-heading">
             <h2>Render Showcase</h2>
           </div>
-          <RenderShowcase comparisons={showcaseComparisons} />
-          <GalleryPartShowcase items={complexAssemblies} />
+          <RenderShowcase comparisons={showcaseComparisons} assemblies={complexAssemblies} />
         </section>
       ) : null}
 
@@ -440,7 +442,7 @@ function App() {
 }
 
 function buildShowcaseComparisons(manifest: Manifest): ShowcaseComparison[] {
-  const taskOrder = ["text2cad", "image2cad", "text_image2cad"];
+  const taskOrder = DEMO_TASK_ORDER;
   const formatPreference: Record<string, string[]> = {
     text2cad: ["openscad", "json"],
     image2cad: ["cadquery", "openscad", "threejs"],
@@ -940,7 +942,7 @@ function countVisibleMetricValues(run: Run) {
   return Object.entries(run.metrics || {}).filter(([key, value]) => isVisibleMetric(key, value, run)).length;
 }
 
-function RenderShowcase({ comparisons }: { comparisons: ShowcaseComparison[] }) {
+function RenderShowcase({ comparisons, assemblies }: { comparisons: ShowcaseComparison[]; assemblies: ComplexAssemblyItem[] }) {
   const [expandedItem, setExpandedItem] = useState<InputModalItem | null>(null);
 
   if (!comparisons.length) {
@@ -960,7 +962,7 @@ function RenderShowcase({ comparisons }: { comparisons: ShowcaseComparison[] }) 
           subtitle: `${comparison.formatLabel} comparison`,
         };
 
-        return (
+        return [
           <article
             className="comparison-panel"
             key={comparison.id}
@@ -1046,8 +1048,9 @@ function RenderShowcase({ comparisons }: { comparisons: ShowcaseComparison[] }) 
                 })}
               </div>
             </div>
-          </article>
-        );
+          </article>,
+          comparison.task === "text_image2cad" ? <GalleryPartShowcase key={`${comparison.id}-parts`} items={assemblies} /> : null
+        ];
       })}
       {expandedItem ? <InputModal item={expandedItem} onClose={() => setExpandedItem(null)} /> : null}
     </div>
