@@ -506,7 +506,8 @@ function buildShowcaseComparisons(manifest: Manifest): ShowcaseComparison[] {
         }),
       };
     })
-    .filter((item): item is ShowcaseComparison => Boolean(item));
+    // The piston assembly comparison has an incorrect render.
+    .filter((item): item is ShowcaseComparison => item !== null && item.id !== "text_image2cad-107647_af2c0a8b");
 }
 
 function displayShowcaseTitle(task: string, caseId: string, title?: string) {
