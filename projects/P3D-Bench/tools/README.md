@@ -50,11 +50,8 @@ estimate and its actual-cost field remains null.
 
 All 180 spatial examples expose case-wise Geo in their bucket data. The 70
 available Assembly Part evaluations and both part-pair examples use the frozen
-3% / 2048-point results; two unmeasured Part entries stay unmeasured. The two
-showcase assignments are unchanged, so their existing meshes and renders are
-preserved. The source audit records the new score hashes separately from the
-original generation and asset hashes. Text data and its current display assets
-are unchanged by this release.
+3% / 2048-point results; two unmeasured Part entries stay unmeasured. The source
+audit records score hashes separately from generation and asset hashes.
 
 Import current data with the research workspace's scripts/sync_site_casewise.py,
 then run update-live-image-assembly.mjs and update-spatial-demo.mjs. Sync Figure 1
@@ -112,9 +109,8 @@ generation API failures remain excluded. New rows display `-` for cost until
 their generation usage is audited. Adding rows preserves the original seven
 rows and their existing cost audits.
 
-Per the maintainer's September 11 display preference, the live Assembly table
-has no methodology footer. Keep explanations and source details in the audit
-JSON and maintenance documentation; do not add them back below the table.
+Methodology and source details are documented in the audit JSON and these
+maintenance notes; the live Assembly table displays aggregate results.
 
 DeepSeek V4.1 Flash has complete recorded usage for 193 tested outputs (94
 CadQuery, 99 OpenSCAD), comprising 237 successful initial/correction requests.
@@ -161,8 +157,7 @@ python projects/P3D-Bench/tools/estimate-kimi-cost.py \
   --private-ledger /absolute/private/path/to/kimi-estimate-ledger.json
 ```
 
-Per the maintainer's display preference, the cost cell uses the same currency
-format as the other models, without an approximation marker. The table footnote
+The cost cell uses the same currency format as the other models. The table footnote
 and separate estimated-value fields retain its provenance. Estimated values
 cannot be written into the audited actual-cost field.
 
@@ -220,7 +215,7 @@ The old seventeen-row table remains in Git history.
 Updating Text preserves Assembly's data and position. Both updaters locate
 tables by key, guard the surrounding bundle bytes,
 write a content-hashed asset, and synchronize their source JSON mirrors under
-`.github/site-src/src/`. Paper results, demo data, and styles are preserved.
+`.github/site-src/src/`.
 The Assembly updater also registers the Grok model icon and keeps missing costs
 last for both ascending and descending sorting.
 
@@ -232,11 +227,10 @@ and both formats: 160 records, of which 159 are complete valid outputs. The
 original invalid JSON record remains saved and is excluded by the completeness
 filter. Never replace its output with another model's mesh. The mounting-bracket
 showcase uses each model's own parametric OpenSCAD output with the same input.
-The 481 original files in `../demo/text_live_fixed100_v1/assets/` remain unchanged.
-An additional 244 content-addressed display files serve 79 valid descriptive cases:
+`../demo/text_live_fixed100_v1/assets/` contains 481 original files and
+244 content-addressed display files serving 79 valid descriptive cases:
 GT and prediction meshes are scale-normalized and aligned, with matching cameras.
-Only the four display references change; programs, scores, 80 parametric records,
-the invalid record and the parametric showcase are unchanged. These images are
+These images are
 presentation derivatives, not replacement evidence for historical Judge inputs.
 All Image/Assembly records and metadata are preserved by `text-demo.mjs`.
 Displayed Geometry excludes F@0.05, and all task demo metric cards omit F@0.05
@@ -268,7 +262,6 @@ local builds outside the site; do not copy a legacy worktree over main.
 
 Run `node projects/P3D-Bench/tools/check-publication.mjs` before committing.
 The Pages workflow also rejects research-only directories and private files.
-Existing figure assets and links remain unchanged.
 
 Structural source development uses `.github/site-src/`. A development build is
 not a replacement for the deployed Paper results; compare every page section
@@ -294,7 +287,6 @@ benchmark's worst-fill penalties, and missing evaluations remain unmeasured.
 Successful exports backed by their saved attempt and mesh are counted as valid
 even if later local evaluation failed. The public summary retains raw/export
 validity counters, aggregate metric denominators and checkpoint hashes.
-Publishing does not rerun evaluation or claim a uniform evaluator route.
 
 Image costs are saved-generation API equivalents at the frozen September 10/11
 rates in `image-api-pricing.json`, including recorded corrections. They use total
@@ -310,11 +302,9 @@ remains intact. Gemini's imported JSON and Three.js results are retained
 in the summary JSON: **61.96** (100/100 tested) and
 **63.82** (97/100 tested, 96/97 judged). Image's additional Gemini JSON result is
 **61.80** with all 100 tested and judged. Each extra row has a single-format
-score and does not enter the main leaderboard average. Per the maintainer's
-display preference, the page uses the title “Image-to-3D”, with no snapshot
-footer, Hard100 suffix or Additional formats section. MiMo remains paused and
-is not included. Figure assets are unchanged; the subsequent demo refresh is
-documented below.
+score and does not enter the main leaderboard average. The page uses the title
+“Image-to-3D” and displays the main-format comparison. Additional formats are
+available in the summary JSON. MiMo is not included in this comparison.
 
 To reproduce, use the benchmark environment to freeze Image and Assembly reports
 under a private `AUDIT/image` and `AUDIT/assembly` directory. Then run:
@@ -356,8 +346,7 @@ universal joint shaft and scissors for Assembly. All nine models have complete
 saved outputs, renders and judge scores in all three Image or both Assembly
 formats: 180 runs in total. Each case uses identical input image bytes, input
 text (Assembly), and GT mesh bytes across models. These are curated examples,
-not the sample used to estimate leaderboard performance. No leaderboard rows,
-Text examples, or page methodology labels are changed by this update.
+not the sample used to estimate leaderboard performance.
 
 The showcase uses one fixed CadQuery case per task and includes all nine models
 in its existing carousel. `demo/spatial-assemblies.json` supplies two new part
@@ -399,6 +388,4 @@ The final saved Image snapshot updates Doubao from 53.08 to 52.68, with 299/300
 tested and 253/253 successful exports judged. All eight other displayed rows
 remain unchanged. The summary retains 67 API failures and 66 historical local
 evaluation gaps; this is not a claim of complete fixed-denominator coverage.
-Figure 1 SVG/PDF/PNG and its data mirror use the same updated Image score,
-preserving the paper's Assembly and Text scores, styling, axes and model order.
-No generation or evaluator calls were made by this publication.
+Figure 1 SVG/PDF/PNG and its data mirror use the same updated Image score.

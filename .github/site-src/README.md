@@ -123,9 +123,8 @@ If those variables are not set, the script looks for ignored local symlinks at
 `local/text_parametric_openscad`, `local/text_descriptive_json`,
 `local/articraft_all_models`, and `local/textimage2cad_all_models`.
 
-Text demo sources must each be a complete approved export containing every
-listed model. The builder no longer splices a one-off canary directory into an
-otherwise frozen result tree.
+Text demo sources must each be a complete validated export containing every
+listed model.
 
 The bundle intentionally keeps only page-facing artifacts: generated CAD
 programs, STL meshes, thumbnails, input images, and compact public metrics. It
